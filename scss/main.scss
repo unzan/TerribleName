@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixins";
+@import "buttons";
+@import "form";
+@import "header";
+@import "list";
+@import "markdown";
+@import "sidebar";
+@import "icons";
+@import "res";
+
+body {
+   background: $main-bg url($main-bg-image) left top repeat;
+   color: $main-fg;
+}
+
+a, .thing .title {
+   color: $link-fg;
+
+   &:visited {
+      color: $link-fg-visited;
+   }
+
+   &:active,
+   &:focus {
+      outline: none;
+   }
+}
+
+.content {
+   overflow: hidden;
+}

@@ -1,0 +1,63 @@
+// fuck reddit enhancement suite!
+.res,
+.res-nightmode {
+   #header-bottom-right.res-navTop {
+      top: auto !important;
+      bottom: 0px !important;
+
+      #userbarToggle {
+         background: none !important;
+         border: none !important;
+         color: inherit !important;
+         padding: 0px !important;
+
+         &.userbarShow {
+            bottom: 4px !important;
+            top: auto !important;
+         }
+      }
+   }
+
+   .RES-keyNav-activeElement,
+   .commentarea .RES-keyNav-activeElement .md,
+   .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
+      background: none !important;
+      position: relative;
+   }
+
+   .RES-keyNav-activeElement {
+      &::after {
+         content: 'current';
+         background: $res-active-element-bg;
+         color: $res-active-element-fg;
+         position: absolute;
+         right: 0px;
+         top: 0px;
+         padding: 2px 5px;
+         @include rounded(3px);
+      }
+   }
+
+   .subButtons {
+      padding: 1em 0em !important;
+   }
+
+   .RESshortcutside,
+   .RESDashboardToggle {
+      @extend .tn-button;
+      font-size: 13px !important;
+      display: inline-block !important;
+   }
+
+   .expando-button.toggleImage.image {
+      @extend .expando-button;
+      &.collapsedExpando {
+         @extend .expando-button.selftext.collapsed;
+      }
+
+      // wtf is this shit?
+      &.collapsed.expanded {
+         @extend .expando-button.selftext.expanded;
+      }
+   }
+}
