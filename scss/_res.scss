@@ -1,6 +1,5 @@
 // fuck reddit enhancement suite!
-.res,
-.res-nightmode {
+.res {
    #header-bottom-right.res-navTop {
       top: auto !important;
       bottom: 0px !important;
@@ -26,16 +25,7 @@
    }
 
    .RES-keyNav-activeElement {
-      &::after {
-         content: 'current';
-         background: $res-active-element-bg;
-         color: $res-active-element-fg;
-         position: absolute;
-         right: 0px;
-         top: 0px;
-         padding: 2px 5px;
-         @include rounded(3px);
-      }
+      border-right: solid 4px $res-active-element-bg;
    }
 
    .subButtons {
@@ -47,6 +37,24 @@
       @extend .tn-button;
       font-size: 13px !important;
       display: inline-block !important;
+   }
+
+   #RESShortcutsEditContainer,
+   #RESShortcutsSort,
+   #RESShortcutsAdd,
+   #RESShortcutsRight,
+   #RESShortcutsLeft,
+   #RESShortcutsTrash {
+      background: transparent !important;
+   }
+
+   #RESShortcutsSort,
+   #RESShortcutsAdd,
+   #RESShortcutsRight,
+   #RESShortcutsLeft,
+   #RESShortcutsTrash {
+      color: $sr-header-fg;
+      font-size: 13px;
    }
 
    .expando-button.toggleImage.image {

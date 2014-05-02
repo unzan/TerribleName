@@ -45,8 +45,14 @@
 
    .usertext {
       .md {
-         background: none;
-         border: none;
+         background: $text-bg;
+         color: $text-fg;
+         padding: 5px 20px;
+         border-left: solid 3px $text-border-color;
+         border-right: none;
+         border-bottom: none;
+         border-top: none;
+         @include rounded(0px);
       }
    }
 }
@@ -130,8 +136,20 @@
       width: 70px;
    }
 
-   &.self::before {
-      content: 'T';
+   &.may-blank {
+      &.default::before {
+         content: '?';
+      }
+
+      &.self::before {
+         content: 'T';
+         background: $default-text-thumb-bg;
+      }
+
+      &.nsfw::before {
+         content: 'X';
+         background: $default-nsfw-thumb-bg;
+      }
    }
 
    img {
@@ -192,6 +210,7 @@
       .thumbnail.self {
          &::before {
             content: 'M';
+            background: $default-modpost-thumb-bg;
          }
       }
    }

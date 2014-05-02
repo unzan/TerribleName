@@ -31,6 +31,10 @@ $icon-image: '%%icons%%';
 $main-bg: $gray;
 $main-fg: $black;
 
+$text-bg: $white;
+$text-fg: $main-fg;
+$text-border-color: darken($gray, 20%);
+
 $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);
 $sticky-link-fg: darken($green, 10%);
@@ -43,6 +47,10 @@ $menu-bar-bg: $dark-brown;
 $menu-bar-fg: darken($gray, 30%);
 $sr-header-fg: darken($gray, 50%);
 $sr-header-bg: rgba(0, 0, 0, 0.5);
+$sr-dropdown-bg: $black;
+$sr-dropdown-fg: lighten($gray, 30%);
+$sr-dropdown-selected-bg: $orange;
+$sr-dropdown-selected-fg: $white;
 
 $sidebar-fg: darken($gray, 60%);
 $nsfw-tag-bg: $orange;
@@ -51,6 +59,11 @@ $sticky-tag-bg: $green;
 $sticky-tag-fg: $white;
 $mod-tag-fg: darken($green, 9%);
 $score-fg: darken($gray, 40%);
+$default-nsfw-thumb-bg: rgba($magenta, 0.5);
+$default-modpost-thumb-bg: rgba($green, 0.5);
+$default-text-thumb-bg: rgba($blue, 0.5);
+$default-flair-bg: rgba(0, 0, 0, 0.2);
+$default-flair-fg: $black;
 
 $list-entry-fg: darken($gray, 50%);
 

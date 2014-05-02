@@ -1,0 +1,22 @@
+// these are just for example
+.linkflairlabel {
+   background: $default-flair-bg;
+   color: $default-flair-fg;
+   border: none;
+   padding: 2px 4px;
+   vertical-align: middle;
+}
+
+.linkflair-soda {
+   .linkflairlabel {
+      background: $violet;
+      color: $white;
+   }
+}
+
+.linkflair-osha {
+   .linkflairlabel {
+      background: $red;
+      color: $white;
+   }
+}
