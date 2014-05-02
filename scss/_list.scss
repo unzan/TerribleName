@@ -2,6 +2,24 @@
    overflow: hidden;
 }
 
+.flat-list.buttons {
+   margin-top: 9px;
+
+   > li {
+      display: inline-block;
+      padding: 0px;
+
+      a {
+         padding: 2px 5px !important;
+         @include rounded(3px);
+         &:hover {
+            text-decoration: none;
+            background: rgba(0,0, 0, 0.1);
+         }
+      }
+   }
+}
+
 .link {
    padding: 1.3em 0em;
    margin: 0px;
@@ -42,6 +60,31 @@
       display: none;
    }
 
+   .flat-list.buttons {
+      > li {
+         display: none;
+
+         &.option  {
+            display: none;
+            &.active {
+               display: inline-block;
+            }
+         }
+
+         &.nsfw-stamp,
+         &.first {
+            display: inline-block !important;
+         }
+      }
+   }
+
+   &:hover {
+      .flat-list.buttons {
+         > li {
+            display: inline-block;
+         }
+      }
+   }
 
    .usertext {
       .md {
@@ -56,48 +99,6 @@
       }
    }
 }
-
-.entry {
-   .flat-list.buttons {
-      margin-top: 9px;
-
-      > li {
-         display: none;
-         padding: 0px;
-         &.nsfw-stamp,
-         &.first {
-            display: inline-block !important;
-         }
-
-         a {
-            &.option  {
-               display: none;
-            }
-
-            &,
-            &.option.active {
-               display: inline-block;
-            }
-
-            padding: 2px 5px !important;
-            @include rounded(3px);
-            &:hover {
-               text-decoration: none;
-               background: rgba(0,0, 0, 0.1);
-            }
-         }
-      }
-   }
-
-   &:hover {
-      .flat-list.buttons {
-         > li {
-            display: inline-block;
-         }
-      }
-   }
-}
-
 
 
 .thing.stickied {

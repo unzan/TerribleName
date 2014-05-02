@@ -34,9 +34,12 @@
 
    .RESshortcutside,
    .RESDashboardToggle {
-      @extend .tn-button;
-      font-size: 13px !important;
-      display: inline-block !important;
+      &,
+      &.remove {
+         @extend .tn-button;
+         font-size: 13px !important;
+         display: inline-block !important;
+      }
    }
 
    #RESShortcutsEditContainer,

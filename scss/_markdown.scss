@@ -1,4 +1,6 @@
 .md {
+   line-height: 1.5em;
+
    h1, h2 {
       padding: 0.2em 0em;
       font-weight: bold;
@@ -21,7 +23,7 @@
    }
 
    blockquote {
-      background: $white;
+      background: darken($text-bg, 5%);
       border-left: solid 4px rgba(0, 0, 0, 0.4);
       padding: 0.2em 0.5em;
       margin: 0.4em;
@@ -29,6 +31,10 @@
 
    ul {
       list-style-type: square;
+   }
+
+   a:hover {
+      text-decoration: underline;
    }
 
 }
