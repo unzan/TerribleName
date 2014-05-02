@@ -16,13 +16,13 @@ $blue:            #268bd2;
 $cyan:            #2aa198;
 $green:           #859900;
 
-// ---------------------------------------------------------
-
+// --- these images are for local test
 $main-bg-image: '../image/noise.png';
 $header-bg-image: '../image/banner.png';
 $logo-image: '../image/logo.png';
 $icon-image: '../image/icons.png';
 
+// --- and these are for reddit css
 $main-bg-image: '%%noise%%';
 $header-bg-image: '%%banner%%';
 $logo-image: '%%logo%%';
@@ -42,7 +42,7 @@ $page-title-fg: darken($gray, 20%);
 $menu-bar-bg: $dark-brown;
 $menu-bar-fg: darken($gray, 30%);
 $sr-header-fg: darken($gray, 50%);
-$sr-header-bg: rgba(0, 0, 0, 0.3);
+$sr-header-bg: rgba(0, 0, 0, 0.5);
 
 $sidebar-fg: darken($gray, 60%);
 $nsfw-tag-bg: $orange;
