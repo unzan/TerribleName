@@ -3,6 +3,8 @@ Terrible Name
 
 A custom subreddit theme. Requires [SCSS][].
 
+See [/r/TerribleName](https://pay.reddit.com/r/TerribleName/) for a demo.
+
 How to use
 ----------
 
