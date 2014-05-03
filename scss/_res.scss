@@ -9,6 +9,7 @@
          border: none !important;
          color: inherit !important;
          padding: 0px !important;
+         line-height: 20px !important;
 
          &.userbarShow {
             bottom: 4px !important;
@@ -27,6 +28,7 @@
    .RES-keyNav-activeElement {
       border-right: solid 4px $res-active-element-bg;
    }
+
 
    .subButtons {
       padding: 1em 0em !important;
@@ -69,6 +71,82 @@
       // wtf is this shit?
       &.collapsed.expanded {
          @extend .expando-button.selftext.expanded;
+      }
+   }
+}
+
+.res-nightmode {
+   body {
+      background: $res-night-bg !important;
+      color: $res-night-fg;
+
+      .content {
+         background: $res-night-bg !important;
+      }
+   }
+
+   #header {
+      background: $header-bg url($header-bg-image) top left no-repeat !important;
+
+      #sr-header-area {
+         background: $sr-header-bg !important;
+         color: $sr-header-fg;
+      }
+
+      #header-bottom-left {
+         background: none !important;
+         .tabmenu {
+            .selected {
+               a {
+                  padding-bottom: 8px !important;
+               }
+            }
+         }
+      }
+
+      #header-bottom-right {
+         background: none !important;
+      }
+   }
+
+   .side {
+      background: none !important;
+      margin: 1em 1em 1em 2em !important;
+
+      .sidebox {
+         border: none !important;
+         overflow: visible !important;
+         @include rounded(0px);
+      }
+
+      .morelink {
+         a {
+            color: $button-fg;
+            &:focus {
+               outline: none !important;
+            }
+
+            &:active {
+               @include shadow(inset 0px 2px 2px darken($button-bg, 20%), 0px 1px 1px lighten($res-night-bg, 13%));
+            }
+         }
+      }
+   }
+
+   .entry.RES-keyNav-activeElement {
+      background: none !important;
+   }
+
+   .listing-page {
+      .sitetable {
+         .link {
+            background: $res-night-bg !important;
+
+            &:not(:first-child) {
+               border-top: solid 1px darken($res-night-bg, 9%) !important;
+               @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%));
+            }
+         }
       }
    }
 }

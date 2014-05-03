@@ -23,10 +23,33 @@
    }
 
    blockquote {
-      background: darken($text-bg, 5%);
       border-left: solid 4px rgba(0, 0, 0, 0.4);
       padding: 0.2em 0.5em;
+      background: $quote-bg;
+      color: $quote-fg;
       margin: 0.4em;
+   }
+
+   pre,
+   code {
+      color: $code-fg;
+      background: $code-bg;
+   }
+
+   code {
+      @include rounded(3px);
+      display: inline-block;
+      padding: 0em 0.5em;
+      border: solid 1px rgba(0, 0, 0, 0.3);
+   }
+
+   pre {
+      margin: 1em 0em;
+      code {
+         padding: 0.4em 1em;
+         display: block;
+         border-left-width: 4px;
+      }
    }
 
    ul {
