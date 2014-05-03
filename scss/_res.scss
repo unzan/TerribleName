@@ -9,7 +9,6 @@
          border: none !important;
          color: inherit !important;
          padding: 0px !important;
-         line-height: 20px !important;
 
          &.userbarShow {
             bottom: 4px !important;
@@ -77,16 +76,99 @@
 
 .res-nightmode {
    body {
-      background: $res-night-bg !important;
       color: $res-night-fg;
 
+      &,
       .content {
-         background: $res-night-bg !important;
+         background: $res-night-bg url($res-night-bg-image) left top repeat !important;
       }
    }
 
+
+   body > .content {
+      position: relative;
+      padding-top: 5em;
+      margin-top: 0px;
+      &::before {
+         position: absolute;
+         content: 'This theme is still far from usable in RES NightMode. Please uncheck "Use subreddit style" at the sidebar.';
+         left: 10px;
+         right: 10px;
+         top: 10px;
+         background: rgba($orange, 0.2);
+         padding: 4px;
+         @include rounded(3px);
+         font-size: 1.3em;
+      }
+   }
+
+   .md {
+      pre,
+      code,
+      blockquote {
+         background: lighten($res-night-bg, 6%);
+      }
+   }
+
+   .RES-keyNav-activeElement .usertext-body .md p {
+      background-color: transparent !important;
+   }
+
+   // yay! selector racing!!!
+   // why the fuck do i have to do this shit?!
+   &.res {
+      > #header {
+         background: $header-bg url($header-bg-image) left top no-repeat !important;
+         > #header-bottom-left {
+            background: none !important;
+         }
+      }
+   }
+
+   .thing {
+      .expando-button {
+         &.collapsed,
+         &.expanded {
+            &,
+            &:hover {
+               background: lighten($res-night-bg, 10%) !important;
+            }
+         }
+
+         &.expanded {
+            @include shadow(none);
+         }
+      }
+   }
+
+   .infobar,
+   .linkinfo,
+   .content.submit,
+   .subscribers,
+   .users-online,
+   .info-notice {
+      background: lighten($res-night-bg, 10%);
+      border: solid 1px lighten($res-night-bg, 20%);
+      @include shadow(none);
+   }
+
+   .subscribers,
+   .users-online {
+      width: 137px;
+   }
+
+   .side .spacer > #search input,
+   .roundfield-content > input#url,
+   textarea,
+   input[type=text],
+   input[type=password] {
+      background: $res-night-bg;
+      color: darken($res-night-fg, 40%) !important;
+      border: solid 1px lighten($res-night-bg, 17%) !important;
+      @include shadow(none);
+   }
+
    #header {
-      background: $header-bg url($header-bg-image) top left no-repeat !important;
 
       #sr-header-area {
          background: $sr-header-bg !important;
@@ -113,6 +195,14 @@
       background: none !important;
       margin: 1em 1em 1em 2em !important;
 
+      .titlebox,
+      .sidebox,
+      .sidebox .spacer,
+      .leavemoderator,
+      .titlebox form.flairtoggle {
+         background: none !important;
+      }
+
       .sidebox {
          border: none !important;
          overflow: visible !important;
@@ -131,6 +221,16 @@
             }
          }
       }
+
+      .icon-menu {
+         a {
+            background-color: transparent;
+
+            &:hover {
+               @include linear-gradient(top, lighten($res-night-bg, 10%), lighten($res-night-bg, 5%));
+            }
+         }
+      }
    }
 
    .entry.RES-keyNav-activeElement {
@@ -140,10 +240,10 @@
    .listing-page {
       .sitetable {
          .link {
-            background: $res-night-bg !important;
+            background: none !important;
 
             &:not(:first-child) {
-               border-top: solid 1px darken($res-night-bg, 9%) !important;
+               border-top: solid 1px darken($res-night-bg, 4%) !important;
                @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%));
             }
          }
