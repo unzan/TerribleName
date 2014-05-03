@@ -4,7 +4,7 @@ Terrible Name
 [![index][index-thumb]][index-orig] [![submit][submit-thumb]][submit-orig]
 
 Terrible Name is a custom theme for subreddits written in [SCSS][].
-See [/r/TerribleName](https://pay.reddit.com/r/TerribleName/) for a demo.
+See [/r/TerribleName](http://www.reddit.com/r/TerribleName/) for a demo.
 
 How to use
 ----------
