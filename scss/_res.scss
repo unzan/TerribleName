@@ -84,34 +84,12 @@
       }
    }
 
-
-   body > .content {
-      position: relative;
-      padding-top: 5em;
-      margin-top: 0px;
-      &::before {
-         position: absolute;
-         content: 'This theme is still far from usable in RES NightMode. Please uncheck "Use subreddit style" at the sidebar.';
-         left: 10px;
-         right: 10px;
-         top: 10px;
-         background: rgba($orange, 0.2);
-         padding: 4px;
-         @include rounded(3px);
-         font-size: 1.3em;
-      }
-   }
-
    .md {
       pre,
       code,
       blockquote {
          background: lighten($res-night-bg, 6%);
       }
-   }
-
-   .RES-keyNav-activeElement .usertext-body .md p {
-      background-color: transparent !important;
    }
 
    // yay! selector racing!!!
@@ -125,30 +103,14 @@
       }
    }
 
-   .thing {
-      .expando-button {
-         &.collapsed,
-         &.expanded {
-            &,
-            &:hover {
-               background: lighten($res-night-bg, 10%) !important;
-            }
-         }
-
-         &.expanded {
-            @include shadow(none);
-         }
-      }
-   }
-
    .infobar,
    .linkinfo,
    .content.submit,
    .subscribers,
    .users-online,
    .info-notice {
-      background: lighten($res-night-bg, 10%);
-      border: solid 1px lighten($res-night-bg, 20%);
+      background: lighten($res-night-bg, 10%) !important;
+      border: solid 1px lighten($res-night-bg, 20%) !important;
       @include shadow(none);
    }
 
@@ -158,12 +120,16 @@
    }
 
    .side .spacer > #search input,
-   .roundfield-content > input#url,
+   #newlink.submit .formtabs-content .roundfield-content textarea,
+   #newlink.submit .formtabs-content .roundfield-content input#url,
+   #newlink.submit .formtabs-content .roundfield-content input#sr-autocomplete,
    textarea,
    input[type=text],
+   .usertext > .usertext-edit > div > textarea,
+   .usertext-edit.viewSource > div > textarea,
    input[type=password] {
-      background: $res-night-bg;
-      color: darken($res-night-fg, 40%) !important;
+      background: $res-night-bg !important;
+      color: darken($res-night-fg, 30%) !important;
       border: solid 1px lighten($res-night-bg, 17%) !important;
       @include shadow(none);
    }
@@ -225,7 +191,6 @@
       .icon-menu {
          a {
             background-color: transparent;
-
             &:hover {
                @include linear-gradient(top, lighten($res-night-bg, 10%), lighten($res-night-bg, 5%));
             }
@@ -233,19 +198,114 @@
       }
    }
 
-   .entry.RES-keyNav-activeElement {
-      background: none !important;
+   #siteTable.linklisting {
+      .thing {
+         background: none !important;
+
+         &:not(:first-child) {
+            border-top: solid 1px darken($res-night-bg, 4%) !important;
+            @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%));
+         }
+
+         .entry {
+            > .title {
+               > a.title {
+                  &,
+                  &.loggedin {
+                     color: $link-fg !important;
+                  }
+               }
+
+               > .domain > a {
+                  color: darken($res-night-fg, 30%) !important;
+               }
+            }
+
+            .expando-button {
+               &.collapsed,
+               &.expanded {
+                  &,
+                  &:hover {
+                     background: lighten($res-night-bg, 10%) !important;
+                  }
+               }
+
+               &.toggleImage.image.collapsed.expanded
+               &.expanded {
+                  @include shadow(none);
+               }
+            }
+
+            &.RES-keyNav-activeElement {
+               background: none !important;
+               .usertext > .usertext-body .md p {
+                  background: none !important;
+               }
+            }
+         }
+
+         &.stickied .RES-keyNav-activeElement.entry > .title > a,
+         &.stickied .entry > .title > a {
+            &,
+            &.loggedin {
+               color: $sticky-link-fg !important;
+            }
+         }
+
+         .stickied-tagline {
+            background: darken($sticky-tag-bg, 15%);
+         }
+
+         .thumbnail {
+            &::before {
+               color: rgba(255, 255, 255, 0.3);
+               text-shadow: none;
+            }
+
+            &.default::before {
+               background-color: lighten($res-night-bg, 10%);
+            }
+
+            img {
+               background-color: lighten($res-night-bg, 20%);
+            }
+         }
+      }
    }
 
-   .listing-page {
-      .sitetable {
-         .link {
-            background: none !important;
 
-            &:not(:first-child) {
-               border-top: solid 1px darken($res-night-bg, 4%) !important;
-               @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%));
+   .submit-page {
+      .tabmenu.formtab {
+         > li {
+            > a {
+               background: lighten($res-night-bg, 10%);
+               color: darken($res-night-fg, 30%) !important;
+               border: none !important;
+               @include rounded(3px);
             }
+
+            &.selected {
+               > a {
+                  background: lighten($res-night-bg, 20%);
+                  color: $res-night-fg !important;
+                  border: none !important;
+                  @include shadow(none);
+
+                  &::after {
+                     display: none;
+                  }
+               }
+            }
+         }
+      }
+
+      #newlink.submit.content {
+         background: lighten($res-night-bg, 3%) !important;
+         .formtabs-content,
+         .roundfield {
+            background: none;
+            border: none !important;
+            @include shadow(none);
          }
       }
    }

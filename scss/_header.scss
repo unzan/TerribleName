@@ -1,9 +1,5 @@
 #header {
-   //background: $header-bg url($header-bg-image) top left no-repeat;
-   background-color: $header-bg;
-   background-image: url($header-bg-image);
-   background-position: 0px 0px;
-   background-repeat: no-repeat;
+   background: $header-bg url($header-bg-image) 0px 0px no-repeat;
    color: $header-fg;
    border-bottom: none;
    height: 140px;
