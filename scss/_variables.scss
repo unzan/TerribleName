@@ -23,10 +23,10 @@ $logo-image: 'image/logo.png';
 $icon-image: 'image/icons.png';
 
 // --- and these are for reddit css
-$main-bg-image: '%%noise%%';
-$header-bg-image: '%%banner%%';
-$logo-image: '%%logo%%';
-$icon-image: '%%icons%%';
+//$main-bg-image: '%%noise%%';
+//$header-bg-image: '%%banner%%';
+//$logo-image: '%%logo%%';
+//$icon-image: '%%icons%%';
 
 $main-bg: $gray;
 $main-fg: $black;
@@ -55,6 +55,8 @@ $sr-dropdown-bg: $black;
 $sr-dropdown-fg: lighten($gray, 30%);
 $sr-dropdown-selected-bg: $orange;
 $sr-dropdown-selected-fg: $white;
+$dropdown-selected-bg: $orange;
+$dropdown-selected-fg: $white;
 
 $sidebar-fg: darken($gray, 60%);
 $nsfw-tag-bg: $orange;
@@ -71,6 +73,9 @@ $default-flair-fg: $black;
 
 $list-entry-fg: darken($gray, 50%);
 $comment-entry-bg: transparent;
+
+$upvote-color: lighten($orange, 10%);
+$downvote-color: $violet;
 
 $button-fg: $white;
 $button-bg: $orange;
@@ -98,3 +103,4 @@ $res-night-bg-image: '%%dark-noise%%';
 $res-night-bg: lighten($black, 5%);
 $res-night-bg: $black;
 $res-night-fg: $gray;
+

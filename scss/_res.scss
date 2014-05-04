@@ -17,6 +17,30 @@
       }
    }
 
+   #RESAccountSwitcherIcon {
+      @extend .tn-icon;
+      background-position: -80px -64px;
+   }
+
+   #REScommentNavToggle {
+      clear: both;
+      display: block;
+      margin-top: 1em;
+
+   }
+
+   .RESBigEditorPop {
+      float: right;
+      margin-left: 1em;
+   }
+
+   .RESSubscriptionButton {
+      @extend .tn-small-button;
+      &.unsubscribe {
+         color: $small-button-fg !important;
+      }
+   }
+
    .RES-keyNav-activeElement,
    .commentarea .RES-keyNav-activeElement .md,
    .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
@@ -72,6 +96,40 @@
          @extend .expando-button.selftext.expanded;
       }
    }
+
+   .markdownEditor {
+      overflow: hidden;
+      padding: 2px;
+      > a {
+         @extend .tn-small-button;
+         width: 16px;
+         height: 16px;
+         display: block;
+         float: left;
+         overflow: hidden;
+         text-indent: 50px;
+         position: relative;
+         margin-right: 2px;
+
+         &::before {
+            @extend .tn-icon;
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 2px;
+         }
+
+         &:nth-child(1)::before { background-position: -80px -32px; }
+         &:nth-child(2)::before { background-position: -64px -64px; }
+         &:nth-child(3)::before { background-position: -16px -64px; }
+         &:nth-child(4)::before { background-position:   0px -64px; }
+         &:nth-child(5)::before { background-position:   0px -80px; }
+         &:nth-child(6)::before { background-position: -32px -64px; }
+         &:nth-child(7)::before { background-position: -80px -16px; }
+         &:nth-child(8)::before { background-position: -64px -48px; }
+         &:nth-child(9)::before { background-position: -48px -64px; }
+      }
+   }
 }
 
 .res-nightmode {
@@ -82,6 +140,10 @@
       .content {
          background: $res-night-bg url($res-night-bg-image) left top repeat !important;
       }
+   }
+
+   .thing .midcol > .arrow {
+      @extend .arrow;
    }
 
    .md {

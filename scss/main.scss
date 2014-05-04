@@ -5,11 +5,13 @@
 @import "header";
 @import "list";
 @import "markdown";
+@import "comments";
 @import "sidebar";
 @import "footer";
 @import "icons";
 @import "flairs";
 @import "res";
+//@import "extra";
 
 body {
    background: $main-bg url($main-bg-image) left top repeat;
@@ -27,6 +29,10 @@ a, .thing .title {
    &:focus {
       outline: none;
    }
+}
+
+.error {
+   color: $main-fg;
 }
 
 .content {

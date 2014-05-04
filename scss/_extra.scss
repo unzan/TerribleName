@@ -1,0 +1,36 @@
+$glow-color: darken($orange, 10%);
+
+@-moz-keyframes glow {
+   0% { box-shadow: 0px 0px 0px $glow-color; }
+   100% {
+      box-shadow:
+         0px -4px 4px $glow-color,
+         0px 4px 4px $glow-color,
+         0px 0px 4px $glow-color,
+         4px 0px 4px $glow-color;
+   }
+}
+
+@-moz-keyframes bounce {
+   0% { margin-bottom: 0px; }
+   100% { margin-bottom: 5px; }
+}
+
+.havemail {
+   position: relative;
+   &::after {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      top: 5px;
+      left: 5px;
+      background: rgba($glow-color, 0.3);
+      content: '';
+      @include rounded(100%);
+      z-index: 5000;
+      -moz-animation-name: glow;
+      -moz-animation-duration: 0.6s;
+      -moz-animation-direction: alternate;
+      -moz-animation-iteration-count: infinite;
+   }
+}

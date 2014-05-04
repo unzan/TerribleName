@@ -18,6 +18,13 @@
       color: inherit;
    }
 
+   h5 > a {
+      @extend .tn-button;
+      display: block;
+      font-size: 1.4em;
+      margin: 1em 0.3em;
+   }
+
    p {
       margin-bottom: 1em;
    }

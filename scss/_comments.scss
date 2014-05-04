@@ -1,0 +1,124 @@
+.commentarea {
+   border-top: solid 1px rgba(0, 0, 0, 0.2);
+   @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
+
+   .panestack-title {
+      border-bottom: none;
+   }
+
+   .usertext {
+      clear: both;
+
+      > .usertext-edit {
+         width: 660px;
+         textarea {
+            width: 650px;
+         }
+      }
+
+      .bottom-area {
+         > .help-toggle,
+         > .reddiquette {
+            margin-top: 1.3em;
+         }
+      }
+   }
+
+   .menuarea {
+      color: $main-fg;
+      overflow: visible;
+      margin-top: 1em;
+
+      .spacer {
+         position: relative;
+         display: inline-block;
+
+         .toggle .togglebutton,
+         .dropdown.lightdrop {
+            @extend .tn-small-button;
+            display: inline-block;
+            font-size: 1em;
+         }
+
+         > form.toggle {
+            margin: 0px !important;
+         }
+
+         .dropdown.lightdrop {
+            > .selected {
+               text-decoration: none;
+               color: inherit;
+               padding-right: 0px;
+               background: none;
+
+               &::after {
+                  content: '';
+                  width: 0px;
+                  height: 0px;
+                  margin-left: 4px;
+                  display: inline-block;
+                  vertical-align: middle;
+                  border-left: solid 4px transparent;
+                  border-right: solid 4px transparent;
+                  border-top: solid 4px $small-button-fg;
+               }
+            }
+         }
+
+         > .help-hoverable {
+            display: none;
+            position: absolute;
+            background: $info-box-bg;
+            border: solid 1px rgba(0, 0, 0, 0.3);
+            padding: 3px 6px;
+            left: 0px;
+            top: 140%;
+            max-width: 30em;
+            color: $info-box-bg;
+            @include shadow(0px 1px 3px rgba(0, 0, 0, 0.2));
+            @include rounded(3px);
+
+            &::before {
+               color: $main-fg;
+               content: attr(title);
+            }
+
+            &:nth-child(2) {
+               left: -25%;
+            }
+         }
+
+         > .toggle:hover + .help-hoverable {
+            display: block;
+         }
+      }
+
+      .drop-choices.lightdrop {
+         z-index: 90000;
+         @extend .tn-small-button-default;
+         padding: 4px;
+         margin-top: 6px;
+         @include shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+
+         a.choice {
+            color: inherit;
+            vertical-align: middle;
+            padding: 2px 4px;
+            @include rounded(3px);
+
+            &:hover {
+               background: $dropdown-selected-bg;
+               color: $dropdown-selected-fg;
+            }
+         }
+      }
+   }
+}
+
+.comment {
+   .entry {
+      background: $comment-entry-bg;
+      padding: 0.5em 1em;
+      @include rounded(4px);
+   }
+}
