@@ -110,8 +110,9 @@
 
 #header-bottom-right {
    background: none;
-   bottom: 6px;
-   right: 10px;
+   bottom: 10px;
+   right: 20px;
+   padding: 0px !important;
    color: $header-fg;
 
    .user {
