@@ -6,6 +6,13 @@
    position: relative;
    @include shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
 
+   #header-img-a {
+      display: inline-block;
+      vertical-align: middle;
+      height: 89px;
+      margin: 7px 10px 0 20px;
+   }
+
    #header-bottom-left > .pagename:last-child::after {
       content: '';
       height: 32px;
@@ -60,14 +67,6 @@
 
       }
    }
-}
-
-#header-img.default-header {
-   background: url($logo-image) center center no-repeat;
-   width: 82px;
-   height: 89px;
-   vertical-align: middle;
-   margin: 0px 10px 0px 20px;
 }
 
 #sr-header-area {

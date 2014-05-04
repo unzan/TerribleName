@@ -9,9 +9,13 @@ See [/r/TerribleName][subreddit] for a demo.
 How to use
 ----------
 
-1. Upload all images inside `images/` directory to your subreddit
+1. Go to your subreddit settings and scroll to section **look and feel**.
+   Upload file `images/logo.png` using the **upload header image** form.
 
-2. If you rename the images before uploading, edit file `scss/_variables.scss`
+2. Click **edit the stylesheet** to go to stylesheet settings and upload the
+   other files inside `images/` directory using the upload form in that page.
+
+   If you renamed the images before uploading, edit file `scss/_variables.scss`
    and replace all image variables with the correct image name (the `%%name%%`
    ones not `name.ext` ones).
 
