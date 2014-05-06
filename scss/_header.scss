@@ -109,10 +109,23 @@
 
 #header-bottom-right {
    background: none;
-   bottom: 10px;
+   bottom: 7px;
    right: 20px;
    padding: 0px !important;
    color: $header-fg;
+   line-height: 16px !important;
+
+
+   .nohavemail {
+      opacity: 0.6;
+   }
+
+   > .user,
+   > .flat-list,
+   > .logout {
+      vertical-align: middle;
+      display: inline-block;
+   }
 
    .user {
       color: inherit;

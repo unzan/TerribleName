@@ -45,15 +45,12 @@
 
 .subscribers,
 .users-online {
+   @extend .tn-engraved-box;
    width: 139px;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
-   padding: 5px;
-   background: rgba(0, 0, 0, 0.14);
    text-align: center;
-   @include shadow(0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 1px 1px rgba(0, 0, 0, 0.2));
-
    .number {
       font-size: 1.3em;
       font-weight: bold;

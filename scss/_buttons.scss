@@ -2,9 +2,15 @@
    color: $button-fg;
    padding: 2px 8px;
    width: auto;
+   min-width: 4em;
+   height: auto;
+   line-height: 1.5em;
+   vertical-align: middle;
    text-shadow: 0px 1px 1px darken($button-bg, 20%);
    text-decoration: none;
    border: none;
+   text-align: center;
+   margin-right: 3px;
    @include linear-gradient(top, $button-bg, darken($button-bg, 6%));
    @include rounded(4px);
    @include shadow(0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3));
@@ -16,6 +22,7 @@
    &:hover,
    &:focus {
       color: $button-fg;
+      text-decoration: none !important;
       @include linear-gradient(top, lighten($button-bg, 5%), darken($button-bg, 5%));
    }
 
@@ -30,6 +37,13 @@
    }
 }
 
+.tn-small-button-default,
+.tn-small-button {
+   @include shadow(0px 1px 1px rgba(0, 0, 0, 0.12));
+}
+
+.tn-small-button-default,
+.tn-small-button-shadowless,
 .tn-small-button {
    color: $small-button-fg;
    text-decoration: none;
@@ -37,12 +51,19 @@
    border: solid 1px darken($small-button-bg, 30%);
    @include linear-gradient(top, $small-button-bg, darken($small-button-bg, 6%));
    @include rounded(3px);
-   @include shadow(0px 1px 1px rgba(0, 0, 0, 0.14));
 
-   &:active {
-      @include linear-gradient(top, darken($small-button-bg, 3%), darken($small-button-bg, 9%));
-      @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7));
+   &:hover,
+   &:focus {
+      text-decoration: none;
    }
+}
+
+
+.tn-small-button-pressed,
+.tn-small-button-shadowless:active,
+.tn-small-button:active {
+   @include linear-gradient(top, darken($small-button-bg, 3%), darken($small-button-bg, 9%));
+   @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7));
 }
 
 .fancy-toggle-button {
@@ -84,6 +105,8 @@
    a {
       @extend .tn-button;
       letter-spacing: 0px;
+      margin-right: 0px;
+      padding: 5px 8px;
    }
 }
 

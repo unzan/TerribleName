@@ -53,6 +53,8 @@ $sr-dropdown-bg: $black;
 $sr-dropdown-fg: lighten($gray, 30%);
 $sr-dropdown-selected-bg: $orange;
 $sr-dropdown-selected-fg: $white;
+$dropdown-selected-bg: $orange;
+$dropdown-selected-fg: $white;
 
 $sidebar-fg: darken($gray, 60%);
 $nsfw-tag-bg: $orange;
@@ -68,7 +70,12 @@ $default-flair-bg: rgba(0, 0, 0, 0.2);
 $default-flair-fg: $black;
 
 $list-entry-fg: darken($gray, 50%);
-$comment-entry-bg: transparent;
+$comment-bg: rgba(255, 255, 255, 0.5);
+$comment-bg: $white;
+$deleted-comment-bg: none;
+
+$upvote-color: lighten($orange, 10%);
+$downvote-color: $violet;
 
 $button-fg: $white;
 $button-bg: $orange;
@@ -87,6 +94,7 @@ $box-bg: lighten($main-bg, 2%);
 $info-box-bg: $bright-yellow;
 $form-tab-bg: $box-bg;
 $form-tab-fg: lighten($main-fg, 20%);
+$tooltip-bg: darken($bright-yellow, 10%);
 
 $res-active-element-bg: $green;
 $res-active-element-fg: $white;
@@ -96,3 +104,4 @@ $res-night-bg-image: '%%dark-noise%%';
 $res-night-bg: lighten($black, 5%);
 $res-night-bg: $black;
 $res-night-fg: $gray;
+
