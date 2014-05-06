@@ -39,17 +39,28 @@
 
 .tn-small-button-default,
 .tn-small-button {
+   @include shadow(0px 1px 1px rgba(0, 0, 0, 0.12));
+}
+
+.tn-small-button-default,
+.tn-small-button-shadowless,
+.tn-small-button {
    color: $small-button-fg;
    text-decoration: none;
    padding: 2px 6px;
    border: solid 1px darken($small-button-bg, 30%);
    @include linear-gradient(top, $small-button-bg, darken($small-button-bg, 6%));
    @include rounded(3px);
-   @include shadow(0px 1px 1px rgba(0, 0, 0, 0.12));
+
+   &:hover,
+   &:focus {
+      text-decoration: none;
+   }
 }
 
 
 .tn-small-button-pressed,
+.tn-small-button-shadowless:active,
 .tn-small-button:active {
    @include linear-gradient(top, darken($small-button-bg, 3%), darken($small-button-bg, 9%));
    @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7));

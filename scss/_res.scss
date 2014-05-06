@@ -18,20 +18,28 @@
    }
 
    #RESAccountSwitcherIcon {
-      @extend .tn-icon;
-      background-position: -80px -64px;
+      background: none;
+      margin-right: 8px;
+      &::after {
+         content: '';
+         position: absolute;
+         top: 8px;
+         border-left: solid 4px transparent;
+         border-right: solid 4px transparent;
+         border-top: solid 4px $header-fg;
+      }
+      //@extend .tn-icon;
+      //background-position: -80px -64px;
+   }
+
+   #REScommentNavBox {
+      z-index: 9000;
    }
 
    #REScommentNavToggle {
       clear: both;
       display: block;
-      margin-top: 1em;
-
-   }
-
-   .RESBigEditorPop {
-      float: right;
-      margin-left: 1em;
+      margin-top: 5px;
    }
 
    .RESSubscriptionButton {
@@ -67,6 +75,42 @@
       }
    }
 
+   #REScommentNavToggle > span:not(:first-child) {
+      display: none;
+   }
+
+   .commentNavSortType {
+      @extend .tn-small-button-shadowless;
+      margin: 0px;
+      @include rounded(0px);
+      border-right-style: none;
+
+      &:nth-child(2) {
+         @include rounded(3px 0px 0px 3px);
+      }
+
+      &:last-child {
+         @include rounded(0px 3px 3px 0px);
+         border-right-style: solid;
+      }
+
+   }
+
+   .menuarea {
+      > .spacer > .dropdown-title,
+      #REScommentNavToggle > span:first-child {
+         width: 6em;
+         float: left;
+         margin: 3px 5px 0px 5px;
+         display: inline-block;
+         text-align: right;
+      }
+
+      .dropdown.lightdrop {
+         margin-right: 10px;
+      }
+   }
+
    #RESShortcutsEditContainer,
    #RESShortcutsSort,
    #RESShortcutsAdd,
@@ -97,28 +141,75 @@
       }
    }
 
+   button.RESBigEditorPop,
+   .markdownEditor > a {
+      @extend .tn-small-button;
+      width: 16px;
+      height: 16px;
+      display: block;
+      overflow: hidden;
+      text-indent: 50px;
+      position: relative;
+      margin-right: 2px;
+
+      &::before {
+         @extend .tn-icon;
+         content: '';
+         position: absolute;
+         left: 5px;
+         top: 2px;
+      }
+   }
+
+   button.RESBigEditorPop {
+      float: right;
+      margin-left: 1em;
+      width: 16px !important;
+      height: 16px !important;
+      min-width: 16px !important;
+      padding: 4px !important;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      &::before {
+         top: 4px;
+         left: 4px;
+         background-position: -80px -80px;
+      }
+   }
+
+   .commentarea {
+      .comment {
+         .tagline {
+            display: block !important;
+         }
+
+         .child,
+         .showreplies {
+            border-left: none !important;
+         }
+
+         .expando-button {
+            float: none;
+            display: inline-block;
+            padding: 0px !important;
+            margin: 0em 0.3em;
+            &:hover {
+               text-decoration: none !important;
+            }
+         }
+
+      }
+
+      .usertext > .usertext-edit textarea {
+         width: 660px;
+      }
+   }
+
    .markdownEditor {
       overflow: hidden;
       padding: 2px;
       > a {
-         @extend .tn-small-button;
-         width: 16px;
-         height: 16px;
-         display: block;
          float: left;
-         overflow: hidden;
-         text-indent: 50px;
-         position: relative;
-         margin-right: 2px;
-
-         &::before {
-            @extend .tn-icon;
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 2px;
-         }
-
          &:nth-child(1)::before { background-position: -80px -32px; }
          &:nth-child(2)::before { background-position: -64px -64px; }
          &:nth-child(3)::before { background-position: -16px -64px; }
@@ -128,6 +219,36 @@
          &:nth-child(7)::before { background-position: -80px -16px; }
          &:nth-child(8)::before { background-position: -64px -48px; }
          &:nth-child(9)::before { background-position: -48px -64px; }
+      }
+   }
+
+   &.comments-page {
+      .comment {
+         background: none !important;
+         .comment {
+            background: none !important;
+            .comment {
+               background: none !important;
+               .comment {
+                  background: none !important;
+                  .comment {
+                     background: none !important;
+                     .comment {
+                        background: none !important;
+                        .comment {
+                           background: none !important;
+                           .comment {
+                              background: none !important;
+                              .comment {
+                                 background: none !important;
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
       }
    }
 }
@@ -169,6 +290,7 @@
    .linkinfo,
    .content.submit,
    .subscribers,
+   .commentarea > .menuarea,
    .users-online,
    .info-notice {
       background: lighten($res-night-bg, 10%) !important;
@@ -259,6 +381,20 @@
          }
       }
    }
+   .expando-button {
+      &.collapsed,
+      &.expanded {
+         &,
+         &:hover {
+            background: lighten($res-night-bg, 10%) !important;
+         }
+      }
+
+      &.toggleImage.image.collapsed.expanded
+      &.expanded {
+         @include shadow(none);
+      }
+   }
 
    #siteTable.linklisting {
       .thing {
@@ -283,20 +419,6 @@
                }
             }
 
-            .expando-button {
-               &.collapsed,
-               &.expanded {
-                  &,
-                  &:hover {
-                     background: lighten($res-night-bg, 10%) !important;
-                  }
-               }
-
-               &.toggleImage.image.collapsed.expanded
-               &.expanded {
-                  @include shadow(none);
-               }
-            }
 
             &.RES-keyNav-activeElement {
                background: none !important;
@@ -335,6 +457,19 @@
       }
    }
 
+   .comment {
+      > .entry {
+         .usertext {
+            background: none !important;
+            @include shadow(none);
+            //@include linear-gradient(top, lighten($res-night-bg, 5%), lighten($res-night-bg, 2%));
+            &::before {
+               display: none;
+               //border-bottom-color: lighten($res-night-bg, 5%);
+            }
+         }
+      }
+   }
 
    .submit-page {
       .tabmenu.formtab {
@@ -369,6 +504,35 @@
             border: none !important;
             @include shadow(none);
          }
+      }
+
+   }
+
+   .commentarea > .menuarea {
+      color: $res-night-fg;
+   }
+
+   button.RESBigEditorPop,
+   .markdownEditor > a {
+      border-color: lighten($res-night-bg, 37%);
+      @include linear-gradient(top, lighten($res-night-bg, 30%), lighten($res-night-bg, 25%));
+      &:active {
+         @include linear-gradient(top, lighten($res-night-bg, 20%), lighten($res-night-bg, 15%));
+         @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));
+      }
+   }
+
+   .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
+   .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
+   .commentarea > .menuarea > .spacer .toggle .togglebutton,
+   #REScommentSubToggle,
+   .commentNavSortType {
+      border-color: lighten($res-night-bg, 14%);
+      @include linear-gradient(top, lighten($res-night-bg, 8%), lighten($res-night-bg, 2%));
+
+      &:active {
+         @include linear-gradient(top, lighten($res-night-bg, 6%), $res-night-bg);
+         @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));
       }
    }
 }

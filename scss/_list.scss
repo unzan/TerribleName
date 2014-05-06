@@ -2,19 +2,21 @@
    overflow: hidden;
 }
 
-.flat-list.buttons {
-   margin-top: 9px;
+.link {
+   .flat-list.buttons {
+      margin-top: 9px;
 
-   > li {
-      display: inline-block;
-      padding: 0px;
+      > li {
+         display: inline-block;
+         padding: 0px;
 
-      a {
-         padding: 2px 5px !important;
-         @include rounded(3px);
-         &:hover {
-            text-decoration: none;
-            background: rgba(0,0, 0, 0.1);
+         a {
+            padding: 2px 5px !important;
+            @include rounded(3px);
+            &:hover {
+               text-decoration: none;
+               background: rgba(0,0, 0, 0.1);
+            }
          }
       }
    }
@@ -71,14 +73,17 @@
 
    .usertext {
       .md {
-         background: $text-bg;
+         @include linear-gradient(top, $text-bg, darken($text-bg, 3%));
+         //background: $text-bg;
          color: $text-fg;
          padding: 5px 20px;
-         border-left: solid 3px $text-border-color;
-         border-right: none;
-         border-bottom: none;
-         border-top: none;
-         @include rounded(0px);
+         border: none;
+         //border-left: solid 3px $text-border-color;
+         //border-right: none;
+         //border-bottom: none;
+         //border-top: none;
+         @include shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
+         @include rounded(3px);
       }
    }
 }
