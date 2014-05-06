@@ -23,8 +23,15 @@
       color: $sidebar-fg;
    }
 
-   .leavemoderator {
+   > .bottom,
+   > .usertext,
+   > .flairtoggle,
+   > .leavemoderator {
       clear: both;
+   }
+
+   > .usertext,
+   .leavemoderator {
       padding-top: 10px;
    }
 
