@@ -97,6 +97,11 @@
    }
 
    .menuarea {
+      @extend .tn-engraved-box;
+      display: inline-block;
+      @include rounded(3px);
+      width: 650px;
+
       > .spacer > .dropdown-title,
       #REScommentNavToggle > span:first-child {
          width: 6em;
@@ -202,6 +207,27 @@
 
       .usertext > .usertext-edit textarea {
          width: 660px;
+      }
+   }
+
+
+   .thing {
+      .tagline {
+         .author {
+            &.moderator {
+               &,
+               &:hover {
+                  background-color: $green !important;
+               }
+            }
+
+            &.submitter {
+               &,
+               &:hover {
+                  background-color: $blue !important;
+               }
+            }
+         }
       }
    }
 
@@ -381,18 +407,21 @@
          }
       }
    }
-   .expando-button {
-      &.collapsed,
-      &.expanded {
-         &,
-         &:hover {
-            background: lighten($res-night-bg, 10%) !important;
-         }
-      }
 
-      &.toggleImage.image.collapsed.expanded
-      &.expanded {
-         @include shadow(none);
+   .thing {
+      .expando-button {
+         &.collapsed,
+         &.expanded {
+            &,
+            &:hover {
+               background: lighten($res-night-bg, 10%) !important;
+            }
+         }
+
+         &.toggleImage.image.collapsed.expanded
+         &.expanded {
+            @include shadow(none);
+         }
       }
    }
 
@@ -512,9 +541,11 @@
       color: $res-night-fg;
    }
 
-   button.RESBigEditorPop,
-   .markdownEditor > a {
+   .bottom-area > button.RESBigEditorPop,
+   .markdownEditor > a,
+   .nav-buttons > .nextprev > a {
       border-color: lighten($res-night-bg, 37%);
+      color: $res-night-fg;
       @include linear-gradient(top, lighten($res-night-bg, 30%), lighten($res-night-bg, 25%));
       &:active {
          @include linear-gradient(top, lighten($res-night-bg, 20%), lighten($res-night-bg, 15%));
@@ -533,6 +564,15 @@
       &:active {
          @include linear-gradient(top, lighten($res-night-bg, 6%), $res-night-bg);
          @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));
+      }
+   }
+
+   .nav-buttons {
+      > .nextprev {
+         color: $res-night-fg;
+         > .separator {
+            border-left: none;
+         }
       }
    }
 }

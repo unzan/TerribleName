@@ -25,15 +25,11 @@
    }
 
    .menuarea {
-      @extend .tn-engraved-box;
       color: $main-fg;
       overflow: visible;
       margin-top: 1em;
-      display: inline-block;
-      width: 650px;
+      padding: 5px;
       position: relative;
-
-      @include rounded(3px);
 
       .spacer {
          display: block;
