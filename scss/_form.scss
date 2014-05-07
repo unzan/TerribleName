@@ -7,6 +7,7 @@
 .infobar {
    background: $info-box-bg;
    border: solid 1px rgba(0, 0, 0, 0.3);
+   font-family: $sans-serif;
    @include rounded(3px);
    @include shadow(0px 1px 0px rgba(255, 255, 255, 0.7));
 }
@@ -20,6 +21,7 @@ input[type=password] {
    background: $input-bg;
    color: $input-fg;
    border: solid 1px rgba(0, 0, 0, 0.3) !important;
+   font-family: $sans-serif;
    @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.15), 0px 1px 0px rgba(255, 255, 255, 0.8));
    @include rounded(3px);
 }

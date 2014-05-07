@@ -11,11 +11,11 @@
 @import "icons";
 @import "flairs";
 @import "res";
-//@import "extra";
 
 body {
    background: $main-bg url($main-bg-image) left top repeat;
    color: $main-fg;
+   font-family: $sans-serif;
 }
 
 a, .thing .title {

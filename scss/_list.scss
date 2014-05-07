@@ -132,7 +132,7 @@
       height: 40px;
       background: rgba(0, 0, 0, 0.2);
       color: $main-bg;
-      font: normal 28px serif;
+      font: normal 28px $serif;
       line-height: 1.4em;
       text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
       @include rounded(100%);

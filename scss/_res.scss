@@ -56,10 +56,11 @@
       position: relative;
    }
 
-   .RES-keyNav-activeElement {
-      border-right: solid 4px $res-active-element-bg;
+   .link {
+      .RES-keyNav-activeElement {
+         border-right: solid 4px $res-active-element-color;
+      }
    }
-
 
    .subButtons {
       padding: 1em 0em !important;
@@ -184,6 +185,11 @@
 
    .commentarea {
       .comment {
+
+         .RES-keyNav-activeElement .usertext > .usertext-body {
+            outline: dashed 1px $res-active-element-color;
+         }
+
          .tagline {
             display: block !important;
          }

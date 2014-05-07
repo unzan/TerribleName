@@ -26,6 +26,9 @@ $main-bg-image: '%%noise%%';
 $header-bg-image: '%%banner%%';
 $icon-image: '%%icons%%';
 
+$sans-serif: 'Liberation Sans', Arial, sans-serif;
+$serif: 'Liberation Serif', 'Times New Roman', sans-serif;
+
 $main-bg: $gray;
 $main-fg: $black;
 
@@ -96,12 +99,10 @@ $form-tab-bg: $box-bg;
 $form-tab-fg: lighten($main-fg, 20%);
 $tooltip-bg: darken($bright-yellow, 10%);
 
-$res-active-element-bg: $green;
-$res-active-element-fg: $white;
-
 $res-night-bg-image: 'image/dark-noise.png';
 $res-night-bg-image: '%%dark-noise%%';
 $res-night-bg: lighten($black, 5%);
 $res-night-bg: $black;
 $res-night-fg: $gray;
+$res-active-element-color: rgba($orange, 0.5);
 
