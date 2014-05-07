@@ -111,8 +111,9 @@
    background: none;
    bottom: 7px;
    right: 20px;
+   font-size: larger;
    padding: 0px !important;
-   color: $header-fg;
+   color: $menu-bar-fg;
    line-height: 16px !important;
 
 
@@ -136,19 +137,11 @@
    }
 
    a {
-      color: $header-fg;
+      color: $menu-bar-fg;
    }
 
    .separator {
-      text-indent: -9999999px !important;
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 0.8em;
-      width: 5px;
-      height: 5px;
-      background:  darken($menu-bar-bg, 6%);
-      @include shadow(0px 1px 0px lighten($menu-bar-bg, 10%));
-      @include rounded(100%);
+      visibility: hidden;
    }
 }
 

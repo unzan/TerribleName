@@ -11,14 +11,32 @@
          padding: 0px !important;
 
          &.userbarShow {
-            bottom: 4px !important;
+            bottom: -4px !important;
             top: auto !important;
+            min-height: auto !important;
+
+            ~ #mail,
+            ~ #modmail {
+               display: none !important;
+            }
          }
       }
    }
 
+   .gearIcon {
+      @extend .tn-icon;
+      background-position: -64px -32px;
+      vertical-align: middle;
+      opacity: 0.6;
+      top: auto !important;
+   }
+
    #RESAccountSwitcherIcon {
-      background: none;
+      background: none !important;
+   }
+
+   #RESAccountSwitcherIconOverlay,
+   #RESAccountSwitcherIcon {
       margin-right: 8px;
       &::after {
          content: '';
@@ -26,10 +44,15 @@
          top: 8px;
          border-left: solid 4px transparent;
          border-right: solid 4px transparent;
-         border-top: solid 4px $header-fg;
+         border-top: solid 4px $menu-bar-fg;
       }
-      //@extend .tn-icon;
-      //background-position: -80px -64px;
+   }
+
+   #RESAccountSwitcherIconOverlay {
+      background-image: none !important;
+      &::after {
+         border-top-color: lighten($menu-bar-fg, 20%);
+      }
    }
 
    #REScommentNavBox {
@@ -179,7 +202,7 @@
       &::before {
          top: 4px;
          left: 4px;
-         background-position: -80px -80px;
+         background-position: -96px -16px;
       }
    }
 
@@ -242,15 +265,15 @@
       padding: 2px;
       > a {
          float: left;
-         &:nth-child(1)::before { background-position: -80px -32px; }
-         &:nth-child(2)::before { background-position: -64px -64px; }
-         &:nth-child(3)::before { background-position: -16px -64px; }
-         &:nth-child(4)::before { background-position:   0px -64px; }
-         &:nth-child(5)::before { background-position:   0px -80px; }
-         &:nth-child(6)::before { background-position: -32px -64px; }
-         &:nth-child(7)::before { background-position: -80px -16px; }
-         &:nth-child(8)::before { background-position: -64px -48px; }
-         &:nth-child(9)::before { background-position: -48px -64px; }
+         &:nth-child(1)::before { background-position: -80px -64px; }
+         &:nth-child(2)::before { background-position: -80px -16px; }
+         &:nth-child(3)::before { background-position: -48px -64px; }
+         &:nth-child(4)::before { background-position: -32px -64px; }
+         &:nth-child(5)::before { background-position: -32px -80px; }
+         &:nth-child(6)::before { background-position: -64px -64px; }
+         &:nth-child(7)::before { background-position: -80px -48px; }
+         &:nth-child(8)::before { background-position: -16px -64px; }
+         &:nth-child(9)::before { background-position: -80px   0px; }
       }
    }
 
