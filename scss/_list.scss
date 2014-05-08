@@ -10,8 +10,10 @@
          display: inline-block;
          padding: 0px;
 
-         a {
+         a,
+         .redditSingleClick {
             padding: 2px 5px !important;
+            font-weight: bold;
             @include rounded(3px);
             &:hover {
                text-decoration: none;
@@ -39,6 +41,9 @@
 
    .author {
       color: $link-fg;
+      &.admin {
+         color: $admin-tag-fg;
+      }
    }
 
    .midcol {
@@ -185,6 +190,13 @@
          content: 'od';
       }
    }
+
+   .admin {
+      color: $admin-tag-fg;
+      &::after {
+         content: 'dmin';
+      }
+   }
 }
 
 .nsfw-stamp {
@@ -205,7 +217,8 @@
 
 .tagline,
 .domain a,
-.entry .buttons li a {
+.entry .buttons li a,
+.entry .buttons li .redditSingleClick {
    color: $list-entry-fg;
    font-size: 13px;
 }
@@ -237,3 +250,37 @@
    }
 }
 
+.organic-listing {
+   background-color: transparent !important;
+   border: none !important;
+
+   > .help {
+      display: none;
+   }
+}
+
+
+.link.promotedlink.promoted {
+   position: relative;
+   background-color: $sponsored-bg !important;
+   border: solid 1px rgba(0, 0, 0, 0.2);
+   padding: 1.3em 0.6em 1.3em 0em;
+   margin-bottom: 5px;
+   @include rounded(3px);
+   @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 2px rgba(0, 0, 0, 0.1));
+
+   > .entry {
+      > .sponsored-tagline {
+         bottom: 10px;
+         right: -5px;
+         background: $sponsored-tag-bg;
+         padding: 4px 10px;
+         border: solid 1px rgba(0, 0, 0, 0.3);
+         border-right: none;
+         text-transform: capitalize;
+         color: $sponsored-fg;
+         @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.15), 0px 1px 0px rgba(255, 255, 255, 0.7));
+         @include rounded(3px 0px 0px 3px);
+      }
+   }
+}

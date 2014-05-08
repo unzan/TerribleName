@@ -59,12 +59,16 @@ $sr-dropdown-selected-fg: $white;
 $dropdown-selected-bg: $orange;
 $dropdown-selected-fg: $white;
 
+$sponsored-tag-bg: $bright-yellow;
+$sponsored-bg: rgba($green, 0.1);
+$sponsored-fg: lighten($main-fg, 20%);
 $sidebar-fg: darken($gray, 60%);
 $nsfw-tag-bg: $orange;
 $nsfw-tag-fg: $white;
 $sticky-tag-bg: $green;
 $sticky-tag-fg: $white;
 $mod-tag-fg: darken($green, 9%);
+$admin-tag-fg: $red;
 $score-fg: darken($gray, 40%);
 $default-nsfw-thumb-bg: rgba($magenta, 0.5);
 $default-modpost-thumb-bg: rgba($green, 0.5);

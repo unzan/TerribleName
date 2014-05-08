@@ -246,14 +246,21 @@
             &.moderator {
                &,
                &:hover {
-                  background-color: $green !important;
+                  background-color: $mod-tag-fg !important;
+               }
+            }
+
+            &.admin {
+               &,
+               &:hover {
+                  background-color: $admin-tag-fg !important;
                }
             }
 
             &.submitter {
                &,
                &:hover {
-                  background-color: $blue !important;
+                  background-color: $link-fg !important;
                }
             }
          }
