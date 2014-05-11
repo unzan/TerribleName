@@ -199,11 +199,19 @@
 
    .entry {
       padding: 0px;
-      display: inline-block;
+      .noncollapsed {
+         display: inline-block;
+      }
+
+      .score,
+      .collapsed {
+         font-size: 13px;
+      }
+
       .usertext {
          margin: 8px 2px 0px 2px;
          padding: 3px;
-         min-width: 10em;
+         //min-width: 20em;
          position: relative;
          @include linear-gradient(top, $comment-bg, darken($comment-bg, 3%));
          @include rounded(3px);

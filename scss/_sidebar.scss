@@ -53,6 +53,8 @@
 .subscribers,
 .users-online {
    @extend .tn-engraved-box;
+   display: inline-block;
+   vertical-align: top;
    width: 139px;
    white-space: nowrap;
    overflow: hidden;
@@ -76,7 +78,6 @@
 }
 
 .subscribers {
-   float: left;
    margin-right: 1px;
    @include rounded(5px 0px 0px 5px);
 
@@ -86,7 +87,6 @@
 }
 
 .users-online {
-   float: right;
    @include rounded(0px 5px 5px 0px);
 
    &::before {

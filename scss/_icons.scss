@@ -1,3 +1,4 @@
+// res icons (including markdown editor icons) are set in file _res.scss
 .tn-icon {
    display: inline-block !important;
    background-image: url($icon-image) !important;
@@ -15,10 +16,10 @@
    }
 
    .leavemoderator::before {
-      background-position: -32px -32px;
+      background-position: -48px   0px;
    }
    form.leavecontributor-button::before {
-      background-position: -96px -64px;
+      background-position: 0px -96px;
    }
 }
 
@@ -35,10 +36,10 @@
       }
    }
 
-   &.up, &.up:hover           { background-position: -96px   0px !important; }
-   &.upmod, &.upmod:hover     { background-position: -80px -80px !important; }
-   &.down, &.down:hover       { background-position: -96px -48px !important; }
-   &.downmod, &.downmod:hover { background-position: -96px -32px !important; }
+   &.up, &.up:hover           { background-position: -96px -48px !important; }
+   &.upmod, &.upmod:hover     { background-position: -96px -32px !important; }
+   &.down, &.down:hover       { background-position: -96px -80px !important; }
+   &.downmod, &.downmod:hover { background-position: -96px -64px !important; }
 }
 
 .up,
@@ -54,7 +55,7 @@
       text-indent: -999px;
       background-color: transparent;
       border: none;
-      background-position: -0px -64px;
+      background-position: -48px -64px;
    }
 }
 
@@ -66,13 +67,18 @@
 
 #mail {
    margin-bottom: 2px;
-   &.nohavemail { background-position: -48px -32px; }
-   &.havemail   { background-position:   0px -48px; }
+   &.nohavemail { background-position: -48px -48px; }
+   &.havemail   { background-position: -64px   0px; }
 }
 
 #modmail {
    &.nohavemail { background-position:   0px -32px; }
-   &.havemail   { background-position: -32px -32px; }
+   &.havemail   { background-position: -48px   0px; }
+}
+
+.gilded-icon::before {
+   @extend .tn-icon;
+   background-position: -16px -48px;
 }
 
 .icon-menu {
@@ -96,20 +102,20 @@
    }
 
    .reddit-edit::before          { background-position: -32px -16px; }
-   .reddit-moderators::before    { background-position: -32px -32px; }
-   .reddit-contributors::before  { background-position: -96px -64px; }
+   .reddit-moderators::before    { background-position: -48px   0px; }
+   .reddit-contributors::before  { background-position:   0px -96px; }
    .reddit-traffic::before       { background-position: -16px   0px; }
-   .reddit-modqueue::before      { background-position: -48px   0px; }
+   .reddit-modqueue::before      { background-position: -48px -16px; }
    .reddit-reported::before      { background-position: -16px -32px; }
    .reddit-spam::before          { background-position: -32px   0px; }
-   .reddit-ban::before           { background-position: -64px -80px; }
-   .reddit-flair::before         { background-position: -80px -32px; }
-   .reddit-moderationlog::before { background-position: -48px -48px; }
+   .reddit-ban::before           { background-position: -96px -16px; }
+   .reddit-flair::before         { background-position:   0px -80px; }
+   .reddit-moderationlog::before { background-position:   0px -48px; }
    .reddit-unmoderated::before   { background-position:   0px   0px; }
 
    .moderator-mail::before {
       margin-top: 0;
       margin-left: 0;
-      background-position: -32px -48px;
+      background-position: -48px -32px;
    }
 }

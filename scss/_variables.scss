@@ -28,6 +28,7 @@ $icon-image: '%%icons%%';
 
 $sans-serif: 'Liberation Sans', Arial, sans-serif;
 $serif: 'Liberation Serif', 'Times New Roman', sans-serif;
+$monospace: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Inconsolata', Monaco, monospace;
 
 $main-bg: $gray;
 $main-fg: $black;
@@ -35,22 +36,27 @@ $main-fg: $black;
 $text-bg: $white;
 $text-fg: $main-fg;
 $text-border-color: darken($gray, 20%);
-$quote-bg: darken($text-bg, 5%);
+$quote-bg: darken($text-bg, 6%);
 $quote-fg: $text-fg;
-$code-bg: lighten($bright-yellow, 6%);
-$code-fg: $text-fg;
+$quote-border-color: darken($text-border-color, 10%);
+$codeblock-bg: $quote-bg;
+$codeblock-fg: $text-fg;
+$codeblock-border-color: $quote-border-color;
+$inline-code-fg: darken($orange, 5%);
+$line-num-bg: $codeblock-border-color;
+$line-num-fg: $white;
 
 $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);
 $sticky-link-fg: darken($green, 10%);
 
 $header-bg: $black;
-$header-fg: $gray;
+$header-fg: darken($gray, 14%);
 $page-title-fg: darken($gray, 20%);
 
 $menu-bar-bg: $dark-brown;
 $menu-bar-fg: darken($gray, 30%);
-$sr-header-fg: darken($gray, 50%);
+$sr-header-fg: darken($gray, 40%);
 $sr-header-bg: rgba(0, 0, 0, 0.5);
 $sr-dropdown-bg: $black;
 $sr-dropdown-fg: lighten($gray, 30%);
@@ -67,7 +73,7 @@ $nsfw-tag-bg: $orange;
 $nsfw-tag-fg: $white;
 $sticky-tag-bg: $green;
 $sticky-tag-fg: $white;
-$mod-tag-fg: darken($green, 9%);
+$mod-tag-fg: darken($green, 5%);
 $admin-tag-fg: $red;
 $score-fg: darken($gray, 40%);
 $default-nsfw-thumb-bg: rgba($magenta, 0.5);
@@ -111,3 +117,6 @@ $res-night-fg: $gray;
 $res-active-element-color: rgba($orange, 0.5);
 $res-popup-bg: #5F99CF;
 
+
+// set this to 1 if you want to have line number at the left of codeblock
+$show-line-num-in-codeblock: 0;

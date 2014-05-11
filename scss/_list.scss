@@ -79,14 +79,9 @@
    .usertext {
       .md {
          @include linear-gradient(top, $text-bg, darken($text-bg, 3%));
-         //background: $text-bg;
          color: $text-fg;
          padding: 5px 20px;
          border: none;
-         //border-left: solid 3px $text-border-color;
-         //border-right: none;
-         //border-bottom: none;
-         //border-top: none;
          @include shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
          @include rounded(3px);
       }
@@ -284,3 +279,4 @@
       }
    }
 }
+

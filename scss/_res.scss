@@ -25,7 +25,7 @@
 
    .gearIcon {
       @extend .tn-icon;
-      background-position: -64px -32px;
+      background-position: -16px -64px;
       vertical-align: middle;
       opacity: 0.6;
       top: auto !important;
@@ -202,7 +202,7 @@
       &::before {
          top: 4px;
          left: 4px;
-         background-position: -96px -16px;
+         background-position: -32px -48px;
       }
    }
 
@@ -272,15 +272,15 @@
       padding: 2px;
       > a {
          float: left;
-         &:nth-child(1)::before { background-position: -80px -64px; }
-         &:nth-child(2)::before { background-position: -80px -16px; }
-         &:nth-child(3)::before { background-position: -48px -64px; }
-         &:nth-child(4)::before { background-position: -32px -64px; }
-         &:nth-child(5)::before { background-position: -32px -80px; }
-         &:nth-child(6)::before { background-position: -64px -64px; }
-         &:nth-child(7)::before { background-position: -80px -48px; }
-         &:nth-child(8)::before { background-position: -16px -64px; }
-         &:nth-child(9)::before { background-position: -80px   0px; }
+         &:nth-child(1)::before { background-position: -32px -80px; } // bold
+         &:nth-child(2)::before { background-position: -80px -64px; } // italic
+         &:nth-child(3)::before { background-position: -80px -16px; } // strikethrough
+         &:nth-child(4)::before { background-position: -80px   0px; } // superscript
+         &:nth-child(5)::before { background-position: -80px -80px; } // link
+         &:nth-child(6)::before { background-position: -80px -32px; } // quote
+         &:nth-child(7)::before { background-position: -16px -80px; } // codeblock
+         &:nth-child(8)::before { background-position: -64px -64px; } // ul
+         &:nth-child(9)::before { background-position: -80px -48px; } // ol
       }
    }
 
