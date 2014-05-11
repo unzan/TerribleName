@@ -1,4 +1,3 @@
-// fuck reddit enhancement suite!
 .res {
    #header-bottom-right.res-navTop {
       top: auto !important;
@@ -164,7 +163,6 @@
          @extend .expando-button.selftext.collapsed;
       }
 
-      // wtf is this shit?
       &.collapsed.expanded {
          @extend .expando-button.selftext.expanded;
       }
@@ -197,8 +195,8 @@
       height: 16px !important;
       min-width: 16px !important;
       padding: 4px !important;
-      -moz-box-sizing: content-box;
-      box-sizing: content-box;
+      @include box-sizing(content-box);
+
       &::before {
          top: 4px;
          left: 4px;
@@ -333,12 +331,17 @@
       pre,
       code,
       blockquote {
-         background: lighten($res-night-bg, 6%);
+         background: lighten($res-night-bg, 9%);
+      }
+
+      pre {
+         > code {
+            color: $res-night-code-fg;
+            border-color: lighten($res-night-bg, 17%);
+         }
       }
    }
 
-   // yay! selector racing!!!
-   // why the fuck do i have to do this shit?!
    &.res {
       > #header {
          background: $header-bg url($header-bg-image) left top no-repeat !important;
@@ -527,10 +530,8 @@
          .usertext {
             background: none !important;
             @include shadow(none);
-            //@include linear-gradient(top, lighten($res-night-bg, 5%), lighten($res-night-bg, 2%));
             &::before {
                display: none;
-               //border-bottom-color: lighten($res-night-bg, 5%);
             }
          }
       }

@@ -1,8 +1,6 @@
 Terrible Name
 =============
 
-[![index][index-thumb]][index-orig] [![submit][submit-thumb]][submit-orig]
-
 Terrible Name is a custom theme for subreddits written in [SCSS][].
 See [/r/TerribleName][subreddit] for a demo.
 
@@ -15,18 +13,23 @@ How to use
 2. Click **edit the stylesheet** to go to stylesheet settings and upload the
    other files inside `images/` directory using the upload form in that page.
 
-   If you renamed the images before uploading, edit file `scss/_variables.scss`
-   and replace all image variables with the correct image name (the `%%name%%`
-   ones not `name.ext` ones).
+3. (Skip this step if you don't use the SCSS files) run `build.sh` to recompile
+   the SCSS files into `terriblename.css`.
 
-3. Compile `main.scss`.
-
-4. Copy the content of compiled CSS and put it into your subreddit stylesheet.
+4. Copy the content of `terriblename.css` and put it into your subreddit stylesheet.
 
 5. Click **Save** button to apply.
 
-If you don't understand how to use SCSS you can also copy the
-[already compiled CSS][compiled-css] used by /r/TerribleName.
+Known Issues
+------------
+
+1. The message after you enabled/disabled inbox replies/contest mode is still
+   awful.
+
+2. In Unmoderated Links page, the moderation buttons are still using default
+   style.
+
+3. Theme still looks ugly in RES nightmode.
 
 ***
 
