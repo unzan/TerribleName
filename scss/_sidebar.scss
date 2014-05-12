@@ -5,7 +5,7 @@
 
 .subscribe-button {
    position: absolute;
-   top: 55px;
+   top: ($header-height - 40) / 2;
    right: 10px;
    z-index: 9000;
 }

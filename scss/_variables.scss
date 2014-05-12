@@ -50,8 +50,10 @@ $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);
 $sticky-link-fg: darken($green, 10%);
 
+$header-height: 140px;
 $header-bg: $black;
 $header-fg: darken($gray, 14%);
+$page-title-height: $header-height - 51px;
 $page-title-fg: darken($gray, 20%);
 
 $menu-bar-bg: $dark-brown;

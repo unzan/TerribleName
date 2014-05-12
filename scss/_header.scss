@@ -2,15 +2,14 @@
    background: $header-bg url($header-bg-image) 0px 0px no-repeat;
    color: $header-fg;
    border-bottom: none;
-   height: 140px;
+   height: $header-height;
    position: relative;
    @include shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
 
    #header-img-a {
       display: inline-block;
       vertical-align: middle;
-      height: 89px;
-      margin: 7px 10px 0 20px;
+      margin: 0px 10px 0 20px;
    }
 
    #header-bottom-left > .pagename:last-child::after {
@@ -150,6 +149,14 @@
    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
    font-variant: normal;
    text-transform: lowercase;
+
+   &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: $page-title-height;
+      width: 3px;
+   }
 
    &.redditname {
       font-size: 2.9em;
