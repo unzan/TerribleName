@@ -279,6 +279,7 @@
          &:nth-child(7)::before { background-position: -16px -80px; } // codeblock
          &:nth-child(8)::before { background-position: -64px -64px; } // ul
          &:nth-child(9)::before { background-position: -80px -48px; } // ol
+         &:nth-child(10)::before { background-position: -32px -96px; } // table
       }
    }
 

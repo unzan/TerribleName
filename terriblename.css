@@ -1612,6 +1612,9 @@ input[type=password] {
 .res .markdownEditor > a:nth-child(9)::before {
   background-position: -80px -48px;
 }
+.res .markdownEditor > a:nth-child(10)::before {
+  background-position: -32px -96px;
+}
 .res.comments-page .comment {
   background: none !important;
 }
