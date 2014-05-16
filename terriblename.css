@@ -1408,6 +1408,10 @@ input[type=password] {
   opacity: 0.6;
   top: auto !important;
 }
+.res .gearIcon.newNotification {
+  background-position: -32px -64px;
+  opacity: 1;
+}
 .res #RESAccountSwitcherIcon {
   background: none !important;
 }

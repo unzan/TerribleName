@@ -28,6 +28,11 @@
       vertical-align: middle;
       opacity: 0.6;
       top: auto !important;
+
+      &.newNotification {
+         background-position: -32px -64px;
+         opacity: 1;
+      }
    }
 
    #RESAccountSwitcherIcon {
