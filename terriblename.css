@@ -848,6 +848,10 @@ input[type=password] {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
 }
+.commentarea .menuarea + .nestedlisting {
+  clear: both;
+  padding-top: 20px;
+}
 .commentarea .panestack-title {
   border-bottom: none;
 }
