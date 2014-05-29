@@ -1,0 +1,27 @@
+body {
+   background: $main-bg url($main-bg-image) left top repeat;
+   color: $main-fg;
+   font-family: $sans-serif;
+}
+
+.tn-link,
+a {
+   color: $link-fg;
+
+   &:visited {
+      color: $link-fg-visited;
+   }
+
+   &:active,
+   &:focus {
+      outline: none;
+   }
+}
+
+.error {
+   color: $main-fg;
+}
+
+.content {
+   overflow: hidden;
+}

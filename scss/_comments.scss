@@ -107,18 +107,6 @@
                content: attr(title);
             }
 
-            //&::after {
-               //content: '';
-               //position: absolute;
-               //width: 0px;
-               //height: 0px;
-               //left: 45%;
-               //bottom: -8px;
-               //border-left: solid 8px transparent;
-               //border-right: solid 8px transparent;
-               //border-top: solid 8px $tooltip-bg;
-            //}
-
             &:nth-child(2) {
                left: 10%;
             }
@@ -202,40 +190,40 @@
       width: 16px;
    }
 
-   .entry {
+   > .entry {
       padding: 0px;
-      .noncollapsed {
-         display: inline-block;
-      }
 
       .score,
       .collapsed {
          font-size: 13px;
       }
 
-      .usertext {
-         margin: 8px 2px 0px 2px;
-         padding: 3px;
-         //min-width: 20em;
-         position: relative;
-         @include linear-gradient(top, $comment-bg, darken($comment-bg, 3%));
-         @include rounded(3px);
-         @include shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
+      > .noncollapsed {
+         display: inline-block;
 
-         > .usertext-body {
-            padding: 1px 8px;
-         }
+         > .usertext {
+            margin: 8px 2px 0px 2px;
+            padding: 3px;
+            position: relative;
+            @include linear-gradient(top, $comment-bg, darken($comment-bg, 3%));
+            @include rounded(3px);
+            @include shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
 
-         &::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: -8px;
-            width: 0px;
-            height: 0px;
-            border-left: solid 8px transparent;
-            border-right: solid 8px transparent;
-            border-bottom: solid 8px $comment-bg;
+            > .usertext-body {
+               padding: 1px 8px;
+            }
+
+            &::before {
+               content: '';
+               position: absolute;
+               left: 20px;
+               top: -8px;
+               width: 0px;
+               height: 0px;
+               border-left: solid 8px transparent;
+               border-right: solid 8px transparent;
+               border-bottom: solid 8px $comment-bg;
+            }
          }
       }
 

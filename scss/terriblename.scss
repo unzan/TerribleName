@@ -1,5 +1,8 @@
 @import "variables";
 @import "mixins";
+@import "basic";
+// no custom flair style for now
+//@import "flairs";
 @import "buttons";
 @import "form";
 @import "header";
@@ -9,32 +12,4 @@
 @import "sidebar";
 @import "footer";
 @import "icons";
-@import "flairs";
 @import "res";
-
-body {
-   background: $main-bg url($main-bg-image) left top repeat;
-   color: $main-fg;
-   font-family: $sans-serif;
-}
-
-a, .thing .title {
-   color: $link-fg;
-
-   &:visited {
-      color: $link-fg-visited;
-   }
-
-   &:active,
-   &:focus {
-      outline: none;
-   }
-}
-
-.error {
-   color: $main-fg;
-}
-
-.content {
-   overflow: hidden;
-}

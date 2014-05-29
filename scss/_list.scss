@@ -31,6 +31,7 @@
 
    &.last-clicked {
       border: none;
+      overflow: visible;
    }
 
    &.last-clicked:not(:first-child),
@@ -92,7 +93,13 @@
    .thing {
       .flat-list.buttons {
          > li {
-            display: none;
+            &.save-button > a,
+            > .toggle,
+            > .state-button,
+            > .flairselectbtn,
+            > .redditSingleClick {
+               visibility: hidden;
+            }
 
             &.option  {
                display: none;
@@ -103,9 +110,16 @@
       &:hover {
          .flat-list.buttons {
             > li {
-               display: inline-block;
+               &.save-button > a,
+               > .toggle,
+               > .state-button,
+               > .flairselectbtn,
+               > .redditSingleClick {
+                  visibility: visible;
+               }
             }
          }
+
       }
    }
 }
@@ -199,14 +213,15 @@
    margin: 0px 4px 0px 0px;
 
    acronym {
-      display: block;
-      vertical-align: middle;
+      display: inline-block;
+      font-size: 10px;
+      line-height: 1em;
+      padding: 3px 3px 3px 2px;
+      text-align: center;
+      border: none !important;
       background: $nsfw-tag-bg;
       color: $nsfw-tag-fg;
-      padding: 2px 5px 1px 5px;
-      border: none !important;
-      font-weight: bold;
-      @include rounded(3px);
+      @include rounded(2px);
    }
 }
 
@@ -219,6 +234,19 @@
 }
 
 .thing {
+   .title {
+      @extend .tn-link;
+   }
+
+   .tagline {
+      margin-top: 4px;
+   }
+
+   .title,
+   .domain {
+      vertical-align: middle;
+   }
+
    &.stickied {
       a.title {
          color: $list-entry-fg;
@@ -280,3 +308,29 @@
    }
 }
 
+/*
+ *.big-mod-buttons {
+ *   position: absolute;
+ *   right: 0;
+ *   top: 5px;
+ *   display: none;
+ *
+ *   .pretty-button {
+ *      &.neutral,
+ *      &.negative,
+ *      &.positive {
+ *         @extend .tn-small-button;
+ *      }
+ *      //width: 7em;
+ *      margin: 0px 3px 3px 0px;
+ *      font-size: 13px;
+ *      display: block;
+ *   }
+ *}
+ *
+ *.thing:hover {
+ *   .big-mod-buttons {
+ *      display: block;
+ *   }
+ *}
+ */

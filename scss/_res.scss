@@ -67,6 +67,7 @@
       clear: both;
       display: block;
       margin-top: 5px;
+      white-space: nowrap;
    }
 
    .RESSubscriptionButton {
@@ -80,7 +81,7 @@
    .commentarea .RES-keyNav-activeElement .md,
    .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
       background: none !important;
-      position: relative;
+      //position: relative;
    }
 
    .link {
@@ -110,8 +111,9 @@
    .commentNavSortType {
       @extend .tn-small-button-shadowless;
       margin: 0px;
-      @include rounded(0px);
       border-right-style: none;
+      display: inline-block !important;
+      @include rounded(0px);
 
       &:nth-child(2) {
          @include rounded(3px 0px 0px 3px);
@@ -127,8 +129,8 @@
    .menuarea {
       @extend .tn-engraved-box;
       display: inline-block;
+      min-width: 650px;
       @include rounded(3px);
-      width: 650px;
 
       > .spacer > .dropdown-title,
       #REScommentNavToggle > span:first-child {
@@ -168,7 +170,8 @@
          @extend .expando-button.selftext.collapsed;
       }
 
-      &.collapsed.expanded {
+      &.collapsed.expanded,
+      &.expanded {
          @extend .expando-button.selftext.expanded;
       }
    }
@@ -212,7 +215,7 @@
    .commentarea {
       .comment {
 
-         .RES-keyNav-activeElement .usertext > .usertext-body {
+         > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
             outline: dashed 1px $res-active-element-color;
          }
 
@@ -463,7 +466,7 @@
             }
          }
 
-         &.toggleImage.image.collapsed.expanded
+         &.toggleImage.image.collapsed.expanded,
          &.expanded {
             @include shadow(none);
          }

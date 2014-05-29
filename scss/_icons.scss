@@ -60,8 +60,15 @@
 }
 
 #mail,
-#modmail {
+#modmail,
+.gilded-icon::before {
+//.pretty-button::before {
    @extend .tn-icon;
+}
+
+#mail,
+#modmail {
+//.pretty-button::before {
    vertical-align: middle;
 }
 
@@ -77,9 +84,28 @@
 }
 
 .gilded-icon::before {
-   @extend .tn-icon;
    background-position: -16px -48px;
 }
+
+/*
+ *.pretty-button::before {
+ *   content: '';
+ *   margin-right: 4px;
+ *}
+ *
+ *.big-mod-buttons {
+ *   > span[role=radiogroup]:first-child {
+ *      > .pretty-button {
+ *         &:nth-child(1)::before { background-position: -32px   0px; }
+ *         &:nth-child(2)::before { background-position: -32px -32px; }
+ *         &:nth-child(3)::before { background-position: -16px -96px; }
+ *      }
+ *   }
+ *
+ *   > .pretty-button.neutral::before { background-position: 0px -64px; }
+ *}
+ *
+ */
 
 .icon-menu {
    .reddit-edit,
