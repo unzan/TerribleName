@@ -50,6 +50,9 @@ $table-border-color: darken($main-bg, 20%);
 $inline-code-fg: darken($orange, 5%);
 $line-num-bg: $codeblock-border-color;
 $line-num-fg: $white;
+$diff-bg: $text-bg;
+$diff-add-bg: rgba($green, 0.3);
+$diff-sub-bg: rgba($red, 0.3);
 
 $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);

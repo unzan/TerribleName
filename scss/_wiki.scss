@@ -1,4 +1,19 @@
 .wiki-page {
+
+   .infobar {
+      padding: 3px 8px;
+      display: block;
+      margin: 7px 15px 15px 15px;
+
+      .md {
+         p {
+            padding: 0px;
+            margin: 0px;
+         }
+      }
+
+   }
+
    .wiki-page-content {
       margin: 15px !important;
 
@@ -125,6 +140,84 @@
             }
          }
 
+      }
+   }
+
+   .fancy-settings {
+      .linefield {
+         @extend .formtabs-content;
+         .title {
+            color: $link-fg;
+         }
+
+         .linefield-content {
+            margin-top: 0.5em;
+         }
+
+         input[type=text] {
+            width: 350px !important;
+            vertical-align: middle;
+         }
+
+         button {
+            font-size: 13px !important;
+            margin-left: 8px;
+         }
+      }
+   }
+}
+
+table.diff {
+   width: 100%;
+   background: $diff-bg;
+   border: solid 1px $table-border-color;
+   margin-bottom: 1em;
+
+   tbody,
+   colgroup {
+      border: none;
+   }
+
+   th,
+   td,
+   .diff_header,
+   .diff_next {
+      bordeR: none;
+      padding: 2px 4px;
+   }
+
+   .diff_header,
+   .diff_next {
+      background: $table-heading-bg;
+      color: $table-heading-fg;
+      border: none;
+      border: solid 1px $table-border-color;
+      @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
+   }
+
+   th.diff_header {
+      padding: 4px;
+   }
+
+   td[nowrap] {
+      border: none !important;
+   }
+
+   .diff_sub {
+      background: $diff-sub-bg;
+   }
+
+   .diff_add {
+      background: $diff-add-bg;
+   }
+
+   tbody {
+      .diff_header {
+         text-align: right;
+
+         &:not([id]) {
+            color: rgba(0, 0, 0, 0.3);
+         }
       }
    }
 }

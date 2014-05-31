@@ -405,7 +405,7 @@ input[type=password] {
   background: #efefef;
 }
 
-.formtabs-content {
+.formtabs-content, .wiki-page .fancy-settings .linefield {
   overflow: hidden;
   background: #efefef;
   border: solid 1px rgba(0, 0, 0, 0.3);
@@ -1519,6 +1519,19 @@ input[type=password] {
   background-position: -48px -32px;
 }
 
+.wiki-page .infobar, .wiki-page .linkinfo,
+.wiki-page .content.submit .info-notice,
+.content.submit .wiki-page .info-notice {
+  padding: 3px 8px;
+  display: block;
+  margin: 7px 15px 15px 15px;
+}
+.wiki-page .infobar .md p, .wiki-page .linkinfo .md p,
+.wiki-page .content.submit .info-notice .md p,
+.content.submit .wiki-page .info-notice .md p {
+  padding: 0px;
+  margin: 0px;
+}
 .wiki-page .wiki-page-content {
   margin: 15px !important;
 }
@@ -1630,6 +1643,66 @@ input[type=password] {
 }
 .wiki-page .wikirevisionlisting .generic-table tr:hover > td {
   background-color: cornsilk;
+}
+.wiki-page .fancy-settings .linefield .title {
+  color: #2177b4;
+}
+.wiki-page .fancy-settings .linefield .linefield-content {
+  margin-top: 0.5em;
+}
+.wiki-page .fancy-settings .linefield input[type=text] {
+  width: 350px !important;
+  vertical-align: middle;
+}
+.wiki-page .fancy-settings .linefield button {
+  font-size: 13px !important;
+  margin-left: 8px;
+}
+
+table.diff {
+  width: 100%;
+  background: white;
+  border: solid 1px #b7b7b7;
+  margin-bottom: 1em;
+}
+table.diff tbody,
+table.diff colgroup {
+  border: none;
+}
+table.diff th,
+table.diff td,
+table.diff .diff_header,
+table.diff .diff_next {
+  bordeR: none;
+  padding: 2px 4px;
+}
+table.diff .diff_header,
+table.diff .diff_next {
+  background: #e6e6e6;
+  color: #444444;
+  border: none;
+  border: solid 1px #b7b7b7;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+table.diff th.diff_header {
+  padding: 4px;
+}
+table.diff td[nowrap] {
+  border: none !important;
+}
+table.diff .diff_sub {
+  background: rgba(220, 50, 47, 0.3);
+}
+table.diff .diff_add {
+  background: rgba(133, 153, 0, 0.3);
+}
+table.diff tbody .diff_header {
+  text-align: right;
+}
+table.diff tbody .diff_header:not([id]) {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .res #header-bottom-right.res-navTop {
@@ -1940,8 +2013,14 @@ input[type=password] {
 }
 .res-nightmode .side .spacer > #search input,
 .res-nightmode #newlink.submit .formtabs-content .roundfield-content textarea,
+.res-nightmode #newlink.submit .wiki-page .fancy-settings .linefield .roundfield-content textarea,
+.wiki-page .fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content textarea,
 .res-nightmode #newlink.submit .formtabs-content .roundfield-content input#url,
+.res-nightmode #newlink.submit .wiki-page .fancy-settings .linefield .roundfield-content input#url,
+.wiki-page .fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content input#url,
 .res-nightmode #newlink.submit .formtabs-content .roundfield-content input#sr-autocomplete,
+.res-nightmode #newlink.submit .wiki-page .fancy-settings .linefield .roundfield-content input#sr-autocomplete,
+.wiki-page .fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content input#sr-autocomplete,
 .res-nightmode textarea,
 .res-nightmode input[type=text],
 .res-nightmode .usertext > .usertext-edit > div > textarea,
@@ -2081,7 +2160,7 @@ input[type=password] {
 .res-nightmode .submit-page #newlink.submit.content {
   background: #191919 !important;
 }
-.res-nightmode .submit-page #newlink.submit.content .formtabs-content,
+.res-nightmode .submit-page #newlink.submit.content .formtabs-content, .res-nightmode .submit-page #newlink.submit.content .wiki-page .fancy-settings .linefield, .wiki-page .fancy-settings .res-nightmode .submit-page #newlink.submit.content .linefield,
 .res-nightmode .submit-page #newlink.submit.content .roundfield {
   background: none;
   border: none !important;
