@@ -106,19 +106,25 @@
    }
 
    .wikirevisionlisting {
-      .generic-table {
-         td {
-            border: solid 1px $table-border-color;
-            padding: 3px;
+      margin-bottom: 1em;
 
-            > input[type=radio] {
-               margin: 0px 3px;
+      .generic-table {
+         tr {
+            td {
+               padding: 5px;
+               border: solid 1px $table-border-color;
+               @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
+
+               > input[type=radio] {
+                  margin: 0px 3px;
+               }
+            }
+
+            &:hover > td {
+               background-color: $table-highlight-bg;
             }
          }
 
-         tr:hover > td {
-            background: $table-highlight-bg;
-         }
       }
    }
 }

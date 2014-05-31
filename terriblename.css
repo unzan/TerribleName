@@ -1615,15 +1615,21 @@ input[type=password] {
   -moz-border-radius: 0px 3px 3px 0px;
   border-radius: 0px 3px 3px 0px;
 }
-.wiki-page .wikirevisionlisting .generic-table td {
-  border: solid 1px #b7b7b7;
-  padding: 3px;
+.wiki-page .wikirevisionlisting {
+  margin-bottom: 1em;
 }
-.wiki-page .wikirevisionlisting .generic-table td > input[type=radio] {
+.wiki-page .wikirevisionlisting .generic-table tr td {
+  padding: 5px;
+  border: solid 1px #b7b7b7;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+.wiki-page .wikirevisionlisting .generic-table tr td > input[type=radio] {
   margin: 0px 3px;
 }
 .wiki-page .wikirevisionlisting .generic-table tr:hover > td {
-  background: cornsilk;
+  background-color: cornsilk;
 }
 
 .res #header-bottom-right.res-navTop {
