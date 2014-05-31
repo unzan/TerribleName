@@ -118,7 +118,8 @@
    @include linear-gradient(top, darken($main-bg, 12%), darken($main-bg, 19%));
 }
 
-button {
+button,
+input[type=submit] {
    @extend .tn-button;
    padding-bottom: 3px;
    text-transform: capitalize;

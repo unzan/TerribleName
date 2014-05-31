@@ -4,7 +4,7 @@ $white:           #ffffff;
 $gray:            #eaeaea;
 $black:           #111111;
 $dark-brown:      #2C2928;
-$bright-yellow:   #fff0c6;
+$bright-yellow:   #FFF8DC;
 
 // accents from solarized
 $yellow:          #b58900;
@@ -27,7 +27,7 @@ $header-bg-image: '%%banner%%';
 $icon-image: '%%icons%%';
 
 $sans-serif: 'Liberation Sans', Arial, sans-serif;
-$serif: 'Liberation Serif', 'Times New Roman', sans-serif;
+$serif: 'Liberation Serif', 'Times New Roman', serif;
 $monospace: 'DejaVu Sans Mono', 'Droid Sans Mono', Inconsolata, Monaco, monospace;
 
 $main-bg: $gray;
@@ -35,6 +35,7 @@ $main-fg: $black;
 
 $text-bg: $white;
 $text-fg: $main-fg;
+$toc-bg: $bright-yellow;
 $text-border-color: darken($gray, 20%);
 $quote-bg: darken($text-bg, 6%);
 $quote-fg: $text-fg;
@@ -42,6 +43,10 @@ $quote-border-color: darken($text-border-color, 10%);
 $codeblock-bg: $quote-bg;
 $codeblock-fg: $text-fg;
 $codeblock-border-color: $quote-border-color;
+$table-heading-bg: darken($text-bg, 10%);
+$table-heading-fg: lighten($main-fg, 20%);
+$table-highlight-bg: $bright-yellow;
+$table-border-color: darken($main-bg, 20%);
 $inline-code-fg: darken($orange, 5%);
 $line-num-bg: $codeblock-border-color;
 $line-num-fg: $white;

@@ -119,7 +119,9 @@
    .reddit-ban,
    .reddit-flair,
    .reddit-moderationlog,
-   .reddit-unmoderated {
+   .reddit-unmoderated,
+   .wikiaction-revisions,
+   .wikiaction-pages {
       &::before {
          @extend .tn-icon;
          vertical-align: middle;
@@ -137,7 +139,9 @@
    .reddit-ban::before           { background-position: -96px -16px; }
    .reddit-flair::before         { background-position:   0px -80px; }
    .reddit-moderationlog::before { background-position:   0px -48px; }
-   .reddit-unmoderated::before   { background-position:   0px   0px; }
+   .reddit-unmoderated::before   { background-position: -80px -80px; }
+   .wikiaction-revisions::before { background-position:   0px   0px; }
+   .wikiaction-pages::before     { background-position: -96px   0px; }
 
    .moderator-mail::before {
       margin-top: 0;
