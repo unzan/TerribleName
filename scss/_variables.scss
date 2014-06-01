@@ -53,6 +53,8 @@ $line-num-fg: $white;
 $diff-bg: $text-bg;
 $diff-add-bg: rgba($green, 0.3);
 $diff-sub-bg: rgba($red, 0.3);
+$spoiler-bg: $black;
+$spoiler-fg: $white;
 
 $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);

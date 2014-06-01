@@ -88,18 +88,15 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3);
 }
 .tn-button:visited, .morelink a:visited, button:visited,
-input[type=submit]:visited, .res .RESshortcutside:visited, .res .RESshortcutside.remove:visited,
-.res .RESDashboardToggle:visited,
-.res .RESDashboardToggle.remove:visited {
+input[type=submit]:visited, .res .RESshortcutside:visited,
+.res .RESDashboardToggle:visited {
   color: white;
 }
 .tn-button:hover, .morelink a:hover, button:hover,
-input[type=submit]:hover, .res .RESshortcutside:hover, .res .RESshortcutside.remove:hover,
-.res .RESDashboardToggle:hover,
-.res .RESDashboardToggle.remove:hover, .tn-button:focus, .morelink a:focus, button:focus,
-input[type=submit]:focus, .res .RESshortcutside:focus, .res .RESshortcutside.remove:focus,
-.res .RESDashboardToggle:focus,
-.res .RESDashboardToggle.remove:focus {
+input[type=submit]:hover, .res .RESshortcutside:hover,
+.res .RESDashboardToggle:hover, .tn-button:focus, .morelink a:focus, button:focus,
+input[type=submit]:focus, .res .RESshortcutside:focus,
+.res .RESDashboardToggle:focus {
   color: white;
   text-decoration: none !important;
   background: -webkit-linear-gradient(top, #e25418, #b44214);
@@ -108,18 +105,15 @@ input[type=submit]:focus, .res .RESshortcutside:focus, .res .RESshortcutside.rem
   background: linear-gradient(top, #e25418, #b44214);
 }
 .tn-button:focus, .morelink a:focus, button:focus,
-input[type=submit]:focus, .res .RESshortcutside:focus, .res .RESshortcutside.remove:focus,
-.res .RESDashboardToggle:focus,
-.res .RESDashboardToggle.remove:focus, .tn-button:active, .morelink a:active, button:active,
-input[type=submit]:active, .res .RESshortcutside:active, .res .RESshortcutside.remove:active,
-.res .RESDashboardToggle:active,
-.res .RESDashboardToggle.remove:active {
+input[type=submit]:focus, .res .RESshortcutside:focus,
+.res .RESDashboardToggle:focus, .tn-button:active, .morelink a:active, button:active,
+input[type=submit]:active, .res .RESshortcutside:active,
+.res .RESDashboardToggle:active {
   outline: none !important;
 }
 .tn-button:active, .morelink a:active, button:active,
-input[type=submit]:active, .res .RESshortcutside:active, .res .RESshortcutside.remove:active,
-.res .RESDashboardToggle:active,
-.res .RESDashboardToggle.remove:active {
+input[type=submit]:active, .res .RESshortcutside:active,
+.res .RESDashboardToggle:active {
   background: -webkit-linear-gradient(top, #cb4b16, #9d3a11);
   background: -moz-linear-gradient(top, #cb4b16, #9d3a11);
   background: -o-linear-gradient(top, #cb4b16, #9d3a11);
@@ -289,18 +283,18 @@ input[type=submit] {
   top: 8px;
   background: #848484;
 }
-.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image {
+.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.collapsedExpando.expando-button, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image {
   -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
 }
-.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .res .selftext.collapsed.expando-button.toggleImage.image:hover, .res .toggleImage.image.expando-button.collapsedExpando:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image, .expando-button.video.collapsed:hover, .res .video.collapsed.expando-button.toggleImage.image:hover {
-  background: -webkit-linear-gradient(top, #f7f7f7, lightgrey);
-  background: -moz-linear-gradient(top, #f7f7f7, lightgrey);
-  background: -o-linear-gradient(top, #f7f7f7, lightgrey);
-  background: linear-gradient(top, #f7f7f7, lightgrey);
+.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.collapsedExpando.expando-button, .expando-button.selftext.collapsed:hover, .res .toggleImage.image.collapsedExpando.expando-button:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image, .expando-button.video.collapsed:hover {
+  background: -webkit-linear-gradient(top, #f7f7f7, lightgray);
+  background: -moz-linear-gradient(top, #f7f7f7, lightgray);
+  background: -o-linear-gradient(top, #f7f7f7, lightgray);
+  background: linear-gradient(top, #f7f7f7, lightgray);
 }
-.expando-button.selftext.collapsed::after, .res .selftext.collapsed.expando-button.toggleImage.image::after, .res .toggleImage.image.expando-button.collapsedExpando::after, .expando-button.video.collapsed::after, .res .video.collapsed.expando-button.toggleImage.image::after {
+.expando-button.selftext.collapsed::after, .res .selftext.collapsed.expando-button.toggleImage.image::after, .res .toggleImage.image.collapsedExpando.expando-button::after, .expando-button.video.collapsed::after, .res .video.collapsed.expando-button.toggleImage.image::after {
   content: '';
   position: absolute;
   top: 4px;
@@ -309,12 +303,12 @@ input[type=submit] {
   left: 8px;
   background: #848484;
 }
-.expando-button.selftext.expanded, .res .selftext.expanded.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded, .expando-button.video.expanded, .res .video.expanded.expando-button.toggleImage.image {
+.expando-button.selftext.expanded, .res .toggleImage.image.collapsed.expanded.expando-button, .res .toggleImage.image.expanded.expando-button, .expando-button.video.expanded, .res .video.expanded.expando-button.toggleImage.image {
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
-.expando-button.selftext.expanded, .res .selftext.expanded.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded, .expando-button.selftext.expanded:hover, .res .selftext.expanded.expando-button.toggleImage.image:hover, .res .toggleImage.image.expando-button.collapsed.expanded:hover, .res .toggleImage.image.expando-button.expanded:hover, .expando-button.video.expanded, .res .video.expanded.expando-button.toggleImage.image, .expando-button.video.expanded:hover, .res .video.expanded.expando-button.toggleImage.image:hover {
+.expando-button.selftext.expanded, .res .toggleImage.image.collapsed.expanded.expando-button, .res .toggleImage.image.expanded.expando-button, .expando-button.selftext.expanded:hover, .res .toggleImage.image.expanded.expando-button:hover, .expando-button.video.expanded, .res .video.expanded.expando-button.toggleImage.image, .expando-button.video.expanded:hover {
   background: -webkit-linear-gradient(top, #eaeaea, #c4c4c4);
   background: -moz-linear-gradient(top, #eaeaea, #c4c4c4);
   background: -o-linear-gradient(top, #eaeaea, #c4c4c4);
@@ -956,6 +950,13 @@ input[type=password] {
 .md tbody tr:hover {
   background: cornsilk;
 }
+.md a[href$="/spoiler"] {
+  background: #111111 !important;
+  color: #111111 !important;
+}
+.md a[href$="/spoiler"]:hover {
+  color: white !important;
+}
 
 .commentarea {
   border-top: solid 1px rgba(0, 0, 0, 0.2);
@@ -1115,7 +1116,7 @@ input[type=password] {
   border-radius: 2px;
 }
 .commentarea .menuarea .drop-choices.lightdrop > form .RES-sort-button::before {
-  content: 'temp ';
+  content: 'temp     ';
 }
 
 .comment .midcol {
@@ -1351,7 +1352,7 @@ input[type=password] {
 }
 
 .tn-icon, .titlebox .leavemoderator::before,
-.titlebox form.leavecontributor-button::before, .arrow.up, .res-nightmode .thing .midcol > .up.arrow, .arrow.up:hover, .res-nightmode .thing .midcol > .up.arrow:hover, .arrow.down, .res-nightmode .thing .midcol > .down.arrow, .arrow.down:hover, .res-nightmode .thing .midcol > .down.arrow:hover, .arrow.upmod, .res-nightmode .thing .midcol > .upmod.arrow, .arrow.upmod:hover, .res-nightmode .thing .midcol > .upmod.arrow:hover, .arrow.downmod, .res-nightmode .thing .midcol > .downmod.arrow, .arrow.downmod:hover, .res-nightmode .thing .midcol > .downmod.arrow:hover, .sidecontentbox .collapse-button, #mail,
+.titlebox form.leavecontributor-button::before, .arrow.up, .res-nightmode .thing .midcol > .up.arrow, .arrow.up:hover, .arrow.down, .res-nightmode .thing .midcol > .down.arrow, .arrow.down:hover, .arrow.upmod, .res-nightmode .thing .midcol > .upmod.arrow, .arrow.upmod:hover, .arrow.downmod, .res-nightmode .thing .midcol > .downmod.arrow, .arrow.downmod:hover, .sidecontentbox .collapse-button, #mail,
 #modmail,
 .gilded-icon::before, .icon-menu .reddit-edit::before,
 .icon-menu .moderator-mail::before,
@@ -1376,7 +1377,7 @@ input[type=password] {
 }
 
 .titlebox .leavemoderator::before {
-  background-position: -48px 0px;
+  background-position: -48px   0px;
 }
 .titlebox form.leavecontributor-button::before {
   background-position: 0px -96px;
@@ -1424,14 +1425,14 @@ input[type=password] {
   background-position: -48px -48px;
 }
 #mail.havemail {
-  background-position: -64px 0px;
+  background-position: -64px   0px;
 }
 
 #modmail.nohavemail {
   background-position: 0px -32px;
 }
 #modmail.havemail {
-  background-position: -48px 0px;
+  background-position: -48px   0px;
 }
 
 .gilded-icon::before {
@@ -1478,13 +1479,13 @@ input[type=password] {
   background-position: -32px -16px;
 }
 .icon-menu .reddit-moderators::before {
-  background-position: -48px 0px;
+  background-position: -48px   0px;
 }
 .icon-menu .reddit-contributors::before {
   background-position: 0px -96px;
 }
 .icon-menu .reddit-traffic::before {
-  background-position: -16px 0px;
+  background-position: -16px   0px;
 }
 .icon-menu .reddit-modqueue::before {
   background-position: -48px -16px;
@@ -1493,7 +1494,7 @@ input[type=password] {
   background-position: -16px -32px;
 }
 .icon-menu .reddit-spam::before {
-  background-position: -32px 0px;
+  background-position: -32px   0px;
 }
 .icon-menu .reddit-ban::before {
   background-position: -96px -16px;
@@ -1508,10 +1509,10 @@ input[type=password] {
   background-position: -80px -80px;
 }
 .icon-menu .wikiaction-revisions::before {
-  background-position: 0px 0px;
+  background-position: 0px   0px;
 }
 .icon-menu .wikiaction-pages::before {
-  background-position: -96px 0px;
+  background-position: -96px   0px;
 }
 .icon-menu .moderator-mail::before {
   margin-top: 0;
@@ -1884,13 +1885,13 @@ table.diff tbody .diff_header:not([id]) {
 .res .commentarea .comment .showreplies {
   border-left: none !important;
 }
-.res .commentarea .comment .expando-button, .res .commentarea .comment .expando-button.toggleImage.image {
+.res .commentarea .comment .expando-button {
   float: none;
   display: inline-block;
   padding: 0px !important;
   margin: 0em 0.3em;
 }
-.res .commentarea .comment .expando-button:hover, .res .commentarea .comment .expando-button.toggleImage.image:hover {
+.res .commentarea .comment .expando-button:hover {
   text-decoration: none !important;
 }
 .res .commentarea .usertext > .usertext-edit textarea {
@@ -1922,7 +1923,7 @@ table.diff tbody .diff_header:not([id]) {
   background-position: -80px -16px;
 }
 .res .markdownEditor > a:nth-child(4)::before {
-  background-position: -80px 0px;
+  background-position: -80px   0px;
 }
 .res .markdownEditor > a:nth-child(5)::before {
   background-position: -80px -80px;
@@ -2084,10 +2085,10 @@ table.diff tbody .diff_header:not([id]) {
   background: -o-linear-gradient(top, #2b2b2b, #1e1e1e);
   background: linear-gradient(top, #2b2b2b, #1e1e1e);
 }
-.res-nightmode .thing .expando-button.collapsed, .res-nightmode .thing .res .collapsed.expando-button.toggleImage.image, .res .res-nightmode .thing .collapsed.expando-button.toggleImage.image, .res-nightmode .thing .expando-button.collapsed:hover, .res-nightmode .thing .res .collapsed.expando-button.toggleImage.image:hover, .res .res-nightmode .thing .collapsed.expando-button.toggleImage.image:hover, .res-nightmode .thing .expando-button.expanded, .res-nightmode .thing .res .expanded.expando-button.toggleImage.image, .res .res-nightmode .thing .expanded.expando-button.toggleImage.image, .res-nightmode .thing .expando-button.expanded:hover, .res-nightmode .thing .res .expanded.expando-button.toggleImage.image:hover, .res .res-nightmode .thing .expanded.expando-button.toggleImage.image:hover {
+.res-nightmode .thing .expando-button.collapsed, .res-nightmode .thing .expando-button.collapsed:hover, .res-nightmode .thing .expando-button.expanded, .res-nightmode .thing .expando-button.expanded:hover {
   background: #2b2b2b !important;
 }
-.res-nightmode .thing .expando-button.toggleImage.image.collapsed.expanded, .res-nightmode .thing .res .toggleImage.image.collapsed.expanded.expando-button, .res .res-nightmode .thing .toggleImage.image.collapsed.expanded.expando-button, .res-nightmode .thing .expando-button.expanded, .res-nightmode .thing .res .expanded.expando-button.toggleImage.image, .res .res-nightmode .thing .expanded.expando-button.toggleImage.image {
+.res-nightmode .thing .expando-button.toggleImage.image.collapsed.expanded, .res-nightmode .thing .expando-button.expanded {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
