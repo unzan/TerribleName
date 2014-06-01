@@ -1,624 +1,664 @@
 .res {
-   #header-bottom-right.res-navTop {
-      top: auto !important;
-      bottom: 7px !important;
+  #header-bottom-right.res-navTop {
+    top: auto !important;
+    bottom: 7px !important;
 
-      #userbarToggle {
-         background: none !important;
-         border: none !important;
-         color: inherit !important;
-         padding: 0px !important;
-
-         &.userbarShow {
-            bottom: -4px !important;
-            top: auto !important;
-            min-height: auto !important;
-
-            ~ #mail,
-            ~ #modmail {
-               display: none !important;
-            }
-         }
-      }
-   }
-
-   .gearIcon {
-      @extend .tn-icon;
-      background-position: -16px -64px;
-      vertical-align: middle;
-      opacity: 0.6;
-      top: auto !important;
-
-      &.newNotification {
-         background-position: -32px -64px;
-         opacity: 1;
-      }
-   }
-
-   #RESAccountSwitcherIcon {
+    #userbarToggle {
       background: none !important;
-   }
+      border: none !important;
+      color: inherit !important;
+      padding: 0px !important;
 
-   #RESAccountSwitcherIconOverlay,
-   #RESAccountSwitcherIcon {
-      margin-right: 8px;
-      &::after {
-         content: '';
-         position: absolute;
-         top: 8px;
-         border-left: solid 4px transparent;
-         border-right: solid 4px transparent;
-         border-top: solid 4px $menu-bar-fg;
+      &.userbarShow {
+        bottom: -4px !important;
+        top: auto !important;
+        min-height: auto !important;
+
+        ~ #mail,
+        ~ #modmail {
+          display: none !important;
+        }
       }
-   }
+    }
+  }
 
-   #RESAccountSwitcherIconOverlay {
-      background-image: none !important;
-      &::after {
-         border-top-color: lighten($menu-bar-fg, 20%);
-      }
-   }
+  .gearIcon {
+    @extend .tn-icon;
+    background-position: -16px -64px;
+    vertical-align: middle;
+    opacity: 0.6;
+    top: auto !important;
 
-   #REScommentNavBox {
-      z-index: 9000;
-   }
+    &.newNotification {
+      background-position: -32px -64px;
+      opacity: 1;
+    }
+  }
 
-   #REScommentNavToggle {
-      clear: both;
-      display: block;
-      margin-top: 5px;
-      white-space: nowrap;
-   }
+  #RESAccountSwitcherIcon {
+    background: none !important;
+  }
 
-   .RESSubscriptionButton {
-      @extend .tn-small-button;
-      &.unsubscribe {
-         color: $small-button-fg !important;
-      }
-   }
+  #RESAccountSwitcherIconOverlay,
+  #RESAccountSwitcherIcon {
+    margin-right: 8px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      border-left: solid 4px transparent;
+      border-right: solid 4px transparent;
+      border-top: solid 4px $menu-bar-fg;
+    }
+  }
 
-   .RES-keyNav-activeElement,
-   .commentarea .RES-keyNav-activeElement .md,
-   .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
-      background: none !important;
-      //position: relative;
-   }
+  #RESAccountSwitcherIconOverlay {
+    background-image: none !important;
+    &::after {
+      border-top-color: lighten($menu-bar-fg, 20%);
+    }
+  }
 
-   .link {
-      .RES-keyNav-activeElement {
-         border-right: solid 4px $res-active-element-color;
-      }
-   }
+  #REScommentNavBox {
+    z-index: 9000;
+  }
 
-   .subButtons {
-      padding: 1em 0em !important;
-   }
+  #REScommentNavToggle {
+    clear: both;
+    display: block;
+    margin-top: 5px;
+    white-space: nowrap;
+  }
 
-   .RESshortcutside,
-   .RESDashboardToggle {
-      &,
-      &.remove {
-         @extend .tn-button;
-         font-size: 13px !important;
-         display: inline-block !important;
-      }
-   }
+  .RESSubscriptionButton {
+    @extend .tn-small-button;
+    &.unsubscribe {
+      color: $small-button-fg !important;
+    }
+  }
 
-   #REScommentNavToggle > span:not(:first-child) {
-      display: none;
-   }
+  .RES-keyNav-activeElement,
+  .commentarea .RES-keyNav-activeElement .md,
+  .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
+    background: none !important;
+    //position: relative;
+  }
 
-   .commentNavSortType {
-      @extend .tn-small-button-shadowless;
-      margin: 0px;
-      border-right-style: none;
+  .link {
+    .RES-keyNav-activeElement {
+      border-right: solid 4px $res-active-element-color;
+    }
+  }
+
+  .subButtons {
+    padding: 1em 0em !important;
+  }
+
+  .RESshortcutside,
+  .RESDashboardToggle {
+    &,
+    &.remove {
+      @extend .tn-button;
+      font-size: 13px !important;
       display: inline-block !important;
-      @include rounded(0px);
+    }
+  }
 
-      &:nth-child(2) {
-         @include rounded(3px 0px 0px 3px);
-      }
+  #REScommentNavToggle > span:not(:first-child) {
+    display: none;
+  }
 
-      &:last-child {
-         @include rounded(0px 3px 3px 0px);
-         border-right-style: solid;
-      }
+  .commentNavSortType {
+    @extend .tn-small-button-shadowless;
+    margin: 0px;
+    border-right-style: none;
+    display: inline-block !important;
+    @include rounded(0px);
 
-   }
+    &:nth-child(2) {
+      @include rounded(3px 0px 0px 3px);
+    }
 
-   .menuarea {
-      @extend .tn-engraved-box;
+    &:last-child {
+      @include rounded(0px 3px 3px 0px);
+      border-right-style: solid;
+    }
+
+  }
+
+  .menuarea {
+    @extend .tn-engraved-box;
+    display: inline-block;
+    min-width: 650px;
+    @include rounded(3px);
+
+    > .spacer > .dropdown-title,
+    #REScommentNavToggle > span:first-child {
+      width: 6em;
+      float: left;
+      margin: 3px 5px 0px 5px;
       display: inline-block;
-      min-width: 650px;
-      @include rounded(3px);
+      text-align: right;
+    }
 
-      > .spacer > .dropdown-title,
-      #REScommentNavToggle > span:first-child {
-         width: 6em;
-         float: left;
-         margin: 3px 5px 0px 5px;
-         display: inline-block;
-         text-align: right;
+    .dropdown.lightdrop {
+      margin-right: 10px;
+    }
+  }
+
+  #RESShortcutsEditContainer,
+  #RESShortcutsSort,
+  #RESShortcutsAdd,
+  #RESShortcutsRight,
+  #RESShortcutsLeft,
+  #RESShortcutsTrash {
+    background: transparent !important;
+  }
+
+  #RESShortcutsSort,
+  #RESShortcutsAdd,
+  #RESShortcutsRight,
+  #RESShortcutsLeft,
+  #RESShortcutsTrash {
+    color: $sr-header-fg;
+    font-size: 13px;
+  }
+
+  .expando-button.toggleImage.image {
+    @extend .expando-button;
+    &.collapsedExpando {
+      @extend .expando-button.selftext.collapsed;
+    }
+
+    &.collapsed.expanded,
+    &.expanded {
+      @extend .expando-button.selftext.expanded;
+    }
+  }
+
+  button.RESBigEditorPop,
+  .markdownEditor > a {
+    @extend .tn-small-button;
+    width: 16px;
+    height: 16px;
+    display: block;
+    overflow: hidden;
+    text-indent: 50px;
+    position: relative;
+    margin-right: 2px;
+
+    &::before {
+      @extend .tn-icon;
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 2px;
+    }
+  }
+
+  button.RESBigEditorPop {
+    float: right;
+    margin-left: 1em;
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    padding: 4px !important;
+    @include box-sizing(content-box);
+
+    &::before {
+      top: 4px;
+      left: 4px;
+      background-position: -32px -48px;
+    }
+  }
+
+  .commentarea {
+    .comment {
+
+      > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
+        outline: dashed 1px $res-active-element-color;
       }
 
-      .dropdown.lightdrop {
-         margin-right: 10px;
-      }
-   }
-
-   #RESShortcutsEditContainer,
-   #RESShortcutsSort,
-   #RESShortcutsAdd,
-   #RESShortcutsRight,
-   #RESShortcutsLeft,
-   #RESShortcutsTrash {
-      background: transparent !important;
-   }
-
-   #RESShortcutsSort,
-   #RESShortcutsAdd,
-   #RESShortcutsRight,
-   #RESShortcutsLeft,
-   #RESShortcutsTrash {
-      color: $sr-header-fg;
-      font-size: 13px;
-   }
-
-   .expando-button.toggleImage.image {
-      @extend .expando-button;
-      &.collapsedExpando {
-         @extend .expando-button.selftext.collapsed;
-      }
-
-      &.collapsed.expanded,
-      &.expanded {
-         @extend .expando-button.selftext.expanded;
-      }
-   }
-
-   button.RESBigEditorPop,
-   .markdownEditor > a {
-      @extend .tn-small-button;
-      width: 16px;
-      height: 16px;
-      display: block;
-      overflow: hidden;
-      text-indent: 50px;
-      position: relative;
-      margin-right: 2px;
-
-      &::before {
-         @extend .tn-icon;
-         content: '';
-         position: absolute;
-         left: 5px;
-         top: 2px;
-      }
-   }
-
-   button.RESBigEditorPop {
-      float: right;
-      margin-left: 1em;
-      width: 16px !important;
-      height: 16px !important;
-      min-width: 16px !important;
-      padding: 4px !important;
-      @include box-sizing(content-box);
-
-      &::before {
-         top: 4px;
-         left: 4px;
-         background-position: -32px -48px;
-      }
-   }
-
-   .commentarea {
-      .comment {
-
-         > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
-            outline: dashed 1px $res-active-element-color;
-         }
-
-         .tagline {
-            display: block !important;
-         }
-
-         .child,
-         .showreplies {
-            border-left: none !important;
-         }
-
-         .expando-button {
-            float: none;
-            display: inline-block;
-            padding: 0px !important;
-            margin: 0em 0.3em;
-            &:hover {
-               text-decoration: none !important;
-            }
-         }
-
-      }
-
-      .usertext > .usertext-edit textarea {
-         width: 660px;
-      }
-   }
-
-
-   .thing {
       .tagline {
-         .author {
-            &.moderator {
-               &,
-               &:hover {
-                  background-color: $mod-tag-fg !important;
-               }
-            }
-
-            &.admin {
-               &,
-               &:hover {
-                  background-color: $admin-tag-fg !important;
-               }
-            }
-
-            &.submitter {
-               &,
-               &:hover {
-                  background-color: $link-fg !important;
-               }
-            }
-         }
+        display: block !important;
       }
-   }
 
-   .markdownEditor {
-      overflow: hidden;
-      padding: 2px;
-      > a {
-         float: left;
-         &:nth-child(1)::before { background-position: -32px -80px; } // bold
-         &:nth-child(2)::before { background-position: -80px -64px; } // italic
-         &:nth-child(3)::before { background-position: -80px -16px; } // strikethrough
-         &:nth-child(4)::before { background-position: -80px   0px; } // superscript
-         &:nth-child(5)::before { background-position: -80px -80px; } // link
-         &:nth-child(6)::before { background-position: -80px -32px; } // quote
-         &:nth-child(7)::before { background-position: -16px -80px; } // codeblock
-         &:nth-child(8)::before { background-position: -64px -64px; } // ul
-         &:nth-child(9)::before { background-position: -80px -48px; } // ol
-         &:nth-child(10)::before { background-position: -32px -96px; } // table
+      .child,
+      .showreplies {
+        border-left: none !important;
       }
-   }
 
-   &.comments-page {
+      .expando-button {
+        float: none;
+        display: inline-block;
+        padding: 0px !important;
+        margin: 0em 0.3em;
+        &:hover {
+          text-decoration: none !important;
+        }
+      }
+
+    }
+
+    .usertext > .usertext-edit textarea {
+      width: 660px;
+    }
+  }
+
+
+  .thing {
+    .tagline {
+      .author {
+        &.moderator {
+          &,
+          &:hover {
+            background-color: $mod-tag-fg !important;
+          }
+        }
+
+        &.admin {
+          &,
+          &:hover {
+            background-color: $admin-tag-fg !important;
+          }
+        }
+
+        &.submitter {
+          &,
+          &:hover {
+            background-color: $link-fg !important;
+          }
+        }
+      }
+    }
+  }
+
+  .markdownEditor {
+    overflow: hidden;
+    padding: 2px;
+
+    > a {
+      float: left;
+
+      &:nth-child(1)::before {
+        // bold
+        background-position: -32px -80px;
+      }
+
+      &:nth-child(2)::before {
+        // italic
+        background-position: -80px -64px;
+      }
+
+      &:nth-child(3)::before {
+        // strikethrough
+        background-position: -80px -16px;
+      }
+
+      &:nth-child(4)::before {
+        // superscript
+        background-position: -80px 0px;
+      }
+
+      &:nth-child(5)::before {
+        // link
+        background-position: -80px -80px;
+      }
+
+      &:nth-child(6)::before {
+        // quote
+        background-position: -80px -32px;
+      }
+
+      &:nth-child(7)::before {
+        // codeblock
+        background-position: -16px -80px;
+      }
+      &:nth-child(8)::before {
+        // ul
+        background-position: -64px -64px;
+      }
+
+      &:nth-child(9)::before {
+        // ol
+        background-position: -80px -48px;
+      }
+
+      &:nth-child(10)::before {
+        // table
+        background-position: -32px -96px;
+      }
+    }
+  }
+
+  &.comments-page {
+    .comment {
+      background: none !important;
       .comment {
-         background: none !important;
-         .comment {
+        background: none !important;
+        .comment {
+          background: none !important;
+          .comment {
             background: none !important;
             .comment {
-               background: none !important;
-               .comment {
+              background: none !important;
+              .comment {
+                background: none !important;
+                .comment {
                   background: none !important;
                   .comment {
-                     background: none !important;
-                     .comment {
-                        background: none !important;
-                        .comment {
-                           background: none !important;
-                           .comment {
-                              background: none !important;
-                              .comment {
-                                 background: none !important;
-                              }
-                           }
-                        }
-                     }
+                    background: none !important;
+                    .comment {
+                      background: none !important;
+                    }
                   }
-               }
+                }
+              }
             }
-         }
+          }
+        }
       }
-   }
+    }
+  }
 }
 
 .res-nightmode {
-   body {
-      color: $res-night-fg;
+  body {
+    color: $res-night-fg;
 
-      &,
-      .content {
-         background: $res-night-bg url($res-night-bg-image) left top repeat !important;
+    &,
+    .content {
+      background: $res-night-bg url($res-night-bg-image) left top repeat !important;
+    }
+  }
+
+  .thing .midcol > .arrow {
+    @extend .arrow;
+  }
+
+  .md {
+    pre,
+    code,
+    blockquote {
+      background: lighten($res-night-bg, 9%);
+    }
+
+    pre {
+      > code {
+        color: $res-night-code-fg;
+        border-color: lighten($res-night-bg, 17%);
       }
-   }
+    }
+  }
 
-   .thing .midcol > .arrow {
-      @extend .arrow;
-   }
-
-   .md {
-      pre,
-      code,
-      blockquote {
-         background: lighten($res-night-bg, 9%);
+  &.res {
+    > #header {
+      background: $header-bg url($header-bg-image) left top no-repeat !important;
+      > #header-bottom-left {
+        background: none !important;
       }
+    }
+  }
 
-      pre {
-         > code {
-            color: $res-night-code-fg;
-            border-color: lighten($res-night-bg, 17%);
-         }
-      }
-   }
+  .infobar,
+  .linkinfo,
+  .content.submit,
+  .subscribers,
+  .commentarea > .menuarea,
+  .users-online,
+  .info-notice {
+    background: lighten($res-night-bg, 10%) !important;
+    border: solid 1px lighten($res-night-bg, 20%) !important;
+    @include shadow(none);
+  }
 
-   &.res {
-      > #header {
-         background: $header-bg url($header-bg-image) left top no-repeat !important;
-         > #header-bottom-left {
-            background: none !important;
-         }
-      }
-   }
+  .subscribers,
+  .users-online {
+    width: 137px;
+  }
 
-   .infobar,
-   .linkinfo,
-   .content.submit,
-   .subscribers,
-   .commentarea > .menuarea,
-   .users-online,
-   .info-notice {
-      background: lighten($res-night-bg, 10%) !important;
-      border: solid 1px lighten($res-night-bg, 20%) !important;
-      @include shadow(none);
-   }
+  .side .spacer > #search input,
+  #newlink.submit .formtabs-content .roundfield-content textarea,
+  #newlink.submit .formtabs-content .roundfield-content input#url,
+  #newlink.submit .formtabs-content .roundfield-content input#sr-autocomplete,
+  textarea,
+  input[type=text],
+  .usertext > .usertext-edit > div > textarea,
+  .usertext-edit.viewSource > div > textarea,
+  input[type=password] {
+    background: $res-night-bg !important;
+    color: darken($res-night-fg, 30%) !important;
+    border: solid 1px lighten($res-night-bg, 17%) !important;
+    @include shadow(none);
+  }
 
-   .subscribers,
-   .users-online {
-      width: 137px;
-   }
+  #header {
 
-   .side .spacer > #search input,
-   #newlink.submit .formtabs-content .roundfield-content textarea,
-   #newlink.submit .formtabs-content .roundfield-content input#url,
-   #newlink.submit .formtabs-content .roundfield-content input#sr-autocomplete,
-   textarea,
-   input[type=text],
-   .usertext > .usertext-edit > div > textarea,
-   .usertext-edit.viewSource > div > textarea,
-   input[type=password] {
-      background: $res-night-bg !important;
-      color: darken($res-night-fg, 30%) !important;
-      border: solid 1px lighten($res-night-bg, 17%) !important;
-      @include shadow(none);
-   }
+    #sr-header-area {
+      background: $sr-header-bg !important;
+      color: $sr-header-fg;
+    }
 
-   #header {
-
-      #sr-header-area {
-         background: $sr-header-bg !important;
-         color: $sr-header-fg;
-      }
-
-      #header-bottom-left {
-         background: none !important;
-         .tabmenu {
-            .selected {
-               a {
-                  padding-bottom: 8px !important;
-               }
-            }
-         }
-      }
-
-      #header-bottom-right {
-         background: none !important;
-      }
-   }
-
-   .side {
+    #header-bottom-left {
       background: none !important;
-      margin: 1em 1em 1em 2em !important;
+      .tabmenu {
+        .selected {
+          a {
+            padding-bottom: 8px !important;
+          }
+        }
+      }
+    }
 
-      .titlebox,
-      .sidebox,
-      .sidebox .spacer,
-      .leavemoderator,
-      .titlebox form.flairtoggle {
-         background: none !important;
+    #header-bottom-right {
+      background: none !important;
+    }
+  }
+
+  .side {
+    background: none !important;
+    margin: 1em 1em 1em 2em !important;
+
+    .titlebox,
+    .sidebox,
+    .sidebox .spacer,
+    .leavemoderator,
+    .titlebox form.flairtoggle {
+      background: none !important;
+    }
+
+    .sidebox {
+      border: none !important;
+      overflow: visible !important;
+      @include rounded(0px);
+    }
+
+    .morelink {
+      a {
+        color: $button-fg;
+        &:focus {
+          outline: none !important;
+        }
+
+        &:active {
+          @include shadow(inset 0px 2px 2px darken($button-bg, 20%), 0px 1px 1px lighten($res-night-bg, 13%));
+        }
+      }
+    }
+
+    .icon-menu {
+      a {
+        background-color: transparent;
+        &:hover {
+          @include linear-gradient(top, lighten($res-night-bg, 10%), lighten($res-night-bg, 5%));
+        }
+      }
+    }
+  }
+
+  .thing {
+    .expando-button {
+      &.collapsed,
+      &.expanded {
+        &,
+        &:hover {
+          background: lighten($res-night-bg, 10%) !important;
+        }
       }
 
-      .sidebox {
-         border: none !important;
-         overflow: visible !important;
-         @include rounded(0px);
+      &.toggleImage.image.collapsed.expanded,
+      &.expanded {
+        @include shadow(none);
+      }
+    }
+  }
+
+  #siteTable.linklisting {
+    .thing {
+      background: none !important;
+
+      &:not(:first-child) {
+        border-top: solid 1px darken($res-night-bg, 4%) !important;
+        @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%));
       }
 
-      .morelink {
-         a {
-            color: $button-fg;
-            &:focus {
-               outline: none !important;
-            }
-
-            &:active {
-               @include shadow(inset 0px 2px 2px darken($button-bg, 20%), 0px 1px 1px lighten($res-night-bg, 13%));
-            }
-         }
-      }
-
-      .icon-menu {
-         a {
-            background-color: transparent;
-            &:hover {
-               @include linear-gradient(top, lighten($res-night-bg, 10%), lighten($res-night-bg, 5%));
-            }
-         }
-      }
-   }
-
-   .thing {
-      .expando-button {
-         &.collapsed,
-         &.expanded {
-            &,
-            &:hover {
-               background: lighten($res-night-bg, 10%) !important;
-            }
-         }
-
-         &.toggleImage.image.collapsed.expanded,
-         &.expanded {
-            @include shadow(none);
-         }
-      }
-   }
-
-   #siteTable.linklisting {
-      .thing {
-         background: none !important;
-
-         &:not(:first-child) {
-            border-top: solid 1px darken($res-night-bg, 4%) !important;
-            @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%));
-         }
-
-         .entry {
-            > .title {
-               > a.title {
-                  &,
-                  &.loggedin {
-                     color: $link-fg !important;
-                  }
-               }
-
-               > .domain > a {
-                  color: darken($res-night-fg, 30%) !important;
-               }
-            }
-
-
-            &.RES-keyNav-activeElement {
-               background: none !important;
-               .usertext > .usertext-body .md p {
-                  background: none !important;
-               }
-            }
-         }
-
-         &.stickied .RES-keyNav-activeElement.entry > .title > a,
-         &.stickied .entry > .title > a {
+      .entry {
+        > .title {
+          > a.title {
             &,
             &.loggedin {
-               color: $sticky-link-fg !important;
+              color: $link-fg !important;
             }
-         }
+          }
 
-         .stickied-tagline {
-            background: darken($sticky-tag-bg, 15%);
-         }
+          > .domain > a {
+            color: darken($res-night-fg, 30%) !important;
+          }
+        }
 
-         .thumbnail {
-            &::before {
-               color: rgba(255, 255, 255, 0.3);
-               text-shadow: none;
-            }
 
-            &.default::before {
-               background-color: lighten($res-night-bg, 10%);
-            }
-
-            img {
-               background-color: lighten($res-night-bg, 20%);
-            }
-         }
-      }
-   }
-
-   .comment {
-      > .entry {
-         .usertext {
+        &.RES-keyNav-activeElement {
+          background: none !important;
+          .usertext > .usertext-body .md p {
             background: none !important;
-            @include shadow(none);
-            &::before {
-               display: none;
-            }
-         }
-      }
-   }
-
-   .submit-page {
-      .tabmenu.formtab {
-         > li {
-            > a {
-               background: lighten($res-night-bg, 10%);
-               color: darken($res-night-fg, 30%) !important;
-               border: none !important;
-               @include rounded(3px);
-            }
-
-            &.selected {
-               > a {
-                  background: lighten($res-night-bg, 20%);
-                  color: $res-night-fg !important;
-                  border: none !important;
-                  @include shadow(none);
-
-                  &::after {
-                     display: none;
-                  }
-               }
-            }
-         }
+          }
+        }
       }
 
-      #newlink.submit.content {
-         background: lighten($res-night-bg, 3%) !important;
-         .formtabs-content,
-         .roundfield {
-            background: none;
+      &.stickied .RES-keyNav-activeElement.entry > .title > a,
+      &.stickied .entry > .title > a {
+        &,
+        &.loggedin {
+          color: $sticky-link-fg !important;
+        }
+      }
+
+      .stickied-tagline {
+        background: darken($sticky-tag-bg, 15%);
+      }
+
+      .thumbnail {
+        &::before {
+          color: $res-default-thumbnail-fg;
+          text-shadow: none;
+        }
+
+        &.default::before {
+          background-color: lighten($res-night-bg, 10%);
+        }
+
+        img {
+          background-color: lighten($res-night-bg, 20%);
+        }
+      }
+    }
+  }
+
+  .comment {
+    > .entry {
+      .usertext {
+        background: none !important;
+        @include shadow(none);
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .submit-page {
+    .tabmenu.formtab {
+      > li {
+        > a {
+          background: lighten($res-night-bg, 10%);
+          color: darken($res-night-fg, 30%) !important;
+          border: none !important;
+          @include rounded(3px);
+        }
+
+        &.selected {
+          > a {
+            background: lighten($res-night-bg, 20%);
+            color: $res-night-fg !important;
             border: none !important;
             @include shadow(none);
-         }
+
+            &::after {
+              display: none;
+            }
+          }
+        }
       }
+    }
 
-   }
+    #newlink.submit.content {
+      background: lighten($res-night-bg, 3%) !important;
+      .formtabs-content,
+      .roundfield {
+        background: none;
+        border: none !important;
+        @include shadow(none);
+      }
+    }
 
-   .commentarea > .menuarea {
+  }
+
+  .commentarea > .menuarea {
+    color: $res-night-fg;
+  }
+
+  .bottom-area > button.RESBigEditorPop,
+  .markdownEditor > a,
+  .nav-buttons > .nextprev > a {
+    border-color: lighten($res-night-bg, 37%);
+    color: $res-night-fg;
+    @include linear-gradient(top, lighten($res-night-bg, 30%), lighten($res-night-bg, 25%));
+    &:active {
+      @include linear-gradient(top, lighten($res-night-bg, 20%), lighten($res-night-bg, 15%));
+      @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));
+    }
+  }
+
+  .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
+  .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
+  .commentarea > .menuarea > .spacer .toggle .togglebutton,
+  #REScommentSubToggle,
+  .commentNavSortType {
+    border-color: lighten($res-night-bg, 14%);
+    @include linear-gradient(top, lighten($res-night-bg, 8%), lighten($res-night-bg, 2%));
+
+    &:active {
+      @include linear-gradient(top, lighten($res-night-bg, 6%), $res-night-bg);
+      @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));
+    }
+  }
+
+  .nav-buttons {
+    > .nextprev {
       color: $res-night-fg;
-   }
-
-   .bottom-area > button.RESBigEditorPop,
-   .markdownEditor > a,
-   .nav-buttons > .nextprev > a {
-      border-color: lighten($res-night-bg, 37%);
-      color: $res-night-fg;
-      @include linear-gradient(top, lighten($res-night-bg, 30%), lighten($res-night-bg, 25%));
-      &:active {
-         @include linear-gradient(top, lighten($res-night-bg, 20%), lighten($res-night-bg, 15%));
-         @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));
+      > .separator {
+        border-left: none;
       }
-   }
-
-   .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
-   .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
-   .commentarea > .menuarea > .spacer .toggle .togglebutton,
-   #REScommentSubToggle,
-   .commentNavSortType {
-      border-color: lighten($res-night-bg, 14%);
-      @include linear-gradient(top, lighten($res-night-bg, 8%), lighten($res-night-bg, 2%));
-
-      &:active {
-         @include linear-gradient(top, lighten($res-night-bg, 6%), $res-night-bg);
-         @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));
-      }
-   }
-
-   .nav-buttons {
-      > .nextprev {
-         color: $res-night-fg;
-         > .separator {
-            border-left: none;
-         }
-      }
-   }
+    }
+  }
 }

@@ -1,223 +1,221 @@
 .wiki-page {
+  .infobar {
+    padding: 3px 8px;
+    display: block;
+    margin: 7px 15px 15px 15px;
 
-   .infobar {
-      padding: 3px 8px;
-      display: block;
-      margin: 7px 15px 15px 15px;
-
-      .md {
-         p {
-            padding: 0px;
-            margin: 0px;
-         }
+    .md {
+      p {
+        padding: 0px;
+        margin: 0px;
       }
+    }
+  }
 
-   }
+  .wiki-page-content {
+    margin: 15px !important;
 
-   .wiki-page-content {
-      margin: 15px !important;
+    > .md.wiki {
+      @extend .tn-raised-box;
 
-      > .md.wiki {
-         @extend .tn-raised-box;
+      > .toc {
+        background: $toc-bg;
+        float: right;
+        padding: 8px;
+        margin: 10px 0px 10px 10px;
+        border: solid 1px rgba(0, 0, 0, 0.2);
+        position: relative;
+        @include shadow(inset 0px -9px 3px lighten($toc-bg, 2%));
+        @include rounded(0px);
 
-         > .toc {
-            background: $toc-bg;
-            float: right;
-            padding: 8px;
-            margin: 10px 0px 10px 10px;
-            border: solid 1px rgba(0, 0, 0, 0.2);
-            position: relative;
-            @include shadow(inset 0px -9px 3px lighten($toc-bg, 2%));
-            @include rounded(0px);
+        &::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          background: desaturate(darken($toc-bg, 20%), 20%);
+          bottom: -3px;
+          left: 0px;
+          right: 0px;
+          border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+          border-left: solid 1px rgba(0, 0, 0, 0.2);
+          border-right: solid 1px rgba(0, 0, 0, 0.2);
+          @include shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
+        }
 
-            &::after {
-               content: '';
-               position: absolute;
-               height: 2px;
-               background: desaturate(darken($toc-bg, 20%), 20%);
-               bottom: -3px;
-               left: 0px;
-               right: 0px;
-               border-bottom: solid 1px rgba(0, 0, 0, 0.2);
-               border-left: solid 1px rgba(0, 0, 0, 0.2);
-               border-right: solid 1px rgba(0, 0, 0, 0.2);
-               @include shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
-            }
+        &::before {
+          content: 'CONTENTS';
+          font-weight: bold;
+          display: block;
+          padding-bottom: 3px;
+          border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+        }
 
-            &::before {
-               content: 'CONTENTS';
-               font-weight: bold;
-               display: block;
-               padding-bottom: 3px;
-               border-bottom: solid 2px rgba(0, 0, 0, 0.2);
-            }
+        > ul {
+          border: none;
+          padding: 10px;
+          margin: 0px;
 
-            > ul {
-               border: none;
-               padding: 10px;
-               margin: 0px;
-
-               ul {
-                  border-left-color: rgba(0, 0, 0, 0.2);
-               }
-            }
-         }
+          ul {
+            border-left-color: $toc-level-indicator-color;
+          }
+        }
       }
-   }
+    }
+  }
 
-   .wikititle {
-      display: inline-block;
-      margin: 9px 15px 0px 15px;
-      line-height: 1em;
-      padding: 0px;
-      font-weight: bold;
+  .wikititle {
+    display: inline-block;
+    margin: 9px 15px 0px 15px;
+    line-height: 1em;
+    padding: 0px;
+    font-weight: bold;
 
-      // i'm not sure why i use brackets, but i like it :)
-      &::before {
-         content: '[';
-      }
+    // i'm not sure why i use brackets, but i like it :)
+    &::before {
+      content: '[';
+    }
 
-      &::after {
-         content: ']';
-      }
-   }
+    &::after {
+      content: ']';
+    }
+  }
 
-   // wiki toolbar
-   .pageactions {
-      padding: 0px;
-      border: none;
+  // wiki toolbar
+  .pageactions {
+    padding: 0px;
+    border: none;
+    margin: 0px;
+    float: right;
+    margin: 5px 15px 0px 0px;
+    @include rounded(0px);
+
+    > .wikiaction {
+      @extend .tn-small-button;
+
       margin: 0px;
-      float: right;
-      margin: 5px 15px 0px 0px;
+      border-right-style: none;
+      font-size: 14px !important;
+      text-transform: capitalize;
       @include rounded(0px);
 
-      > .wikiaction {
-         @extend .tn-small-button;
-
-         margin: 0px;
-         border-right-style: none;
-         font-size: 14px !important;
-         text-transform: capitalize;
-         @include rounded(0px);
-
-         &.wikiaction-current {
-            @extend .tn-small-button-pressed;
-            font-weight: bold;
-         }
-
-         &:visited {
-            color: $small-button-fg;
-         }
-
-         &:first-child {
-            @include rounded(3px 0px 0px 3px);
-         }
-
-         &:last-child {
-            border-right-style: solid;
-            @include rounded(0px 3px 3px 0px);
-         }
+      &.wikiaction-current {
+        @extend .tn-small-button-pressed;
+        font-weight: bold;
       }
-   }
 
-   .wikirevisionlisting {
-      margin-bottom: 1em;
-
-      .generic-table {
-         tr {
-            td {
-               padding: 5px;
-               border: solid 1px $table-border-color;
-               @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
-
-               > input[type=radio] {
-                  margin: 0px 3px;
-               }
-            }
-
-            &:hover > td {
-               background-color: $table-highlight-bg;
-            }
-         }
-
+      &:visited {
+        color: $small-button-fg;
       }
-   }
 
-   .fancy-settings {
-      .linefield {
-         @extend .formtabs-content;
-         .title {
-            color: $link-fg;
-         }
-
-         .linefield-content {
-            margin-top: 0.5em;
-         }
-
-         input[type=text] {
-            width: 350px !important;
-            vertical-align: middle;
-         }
-
-         button {
-            font-size: 13px !important;
-            margin-left: 8px;
-         }
+      &:first-child {
+        @include rounded(3px 0px 0px 3px);
       }
-   }
+
+      &:last-child {
+        border-right-style: solid;
+        @include rounded(0px 3px 3px 0px);
+      }
+    }
+  }
+
+  .wikirevisionlisting {
+    margin-bottom: 1em;
+
+    .generic-table {
+      tr {
+        td {
+          padding: 5px;
+          border: solid 1px $table-border-color;
+          @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
+
+          > input[type=radio] {
+            margin: 0px 3px;
+          }
+        }
+
+        &:hover > td {
+          background-color: $table-highlight-bg;
+        }
+      }
+
+    }
+  }
+
+  .fancy-settings {
+    .linefield {
+      @extend .formtabs-content;
+      .title {
+        color: $link-fg;
+      }
+
+      .linefield-content {
+        margin-top: 0.5em;
+      }
+
+      input[type=text] {
+        width: 350px !important;
+        vertical-align: middle;
+      }
+
+      button {
+        font-size: 13px !important;
+        margin-left: 8px;
+      }
+    }
+  }
 }
 
 table.diff {
-   width: 100%;
-   background: $diff-bg;
-   border: solid 1px $table-border-color;
-   margin-bottom: 1em;
+  width: 100%;
+  background: $diff-bg;
+  border: solid 1px $table-border-color;
+  margin-bottom: 1em;
 
-   tbody,
-   colgroup {
-      border: none;
-   }
+  tbody,
+  colgroup {
+    border: none;
+  }
 
-   th,
-   td,
-   .diff_header,
-   .diff_next {
-      bordeR: none;
-      padding: 2px 4px;
-   }
+  th,
+  td,
+  .diff_header,
+  .diff_next {
+    bordeR: none;
+    padding: 2px 4px;
+  }
 
-   .diff_header,
-   .diff_next {
-      background: $table-heading-bg;
-      color: $table-heading-fg;
-      border: none;
-      border: solid 1px $table-border-color;
-      @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
-   }
+  .diff_header,
+  .diff_next {
+    background: $table-heading-bg;
+    color: $table-heading-fg;
+    border: none;
+    border: solid 1px $table-border-color;
+    @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
+  }
 
-   th.diff_header {
-      padding: 4px;
-   }
+  th.diff_header {
+    padding: 4px;
+  }
 
-   td[nowrap] {
-      border: none !important;
-   }
+  td[nowrap] {
+    border: none !important;
+  }
 
-   .diff_sub {
-      background: $diff-sub-bg;
-   }
+  .diff_sub {
+    background: $diff-sub-bg;
+  }
 
-   .diff_add {
-      background: $diff-add-bg;
-   }
+  .diff_add {
+    background: $diff-add-bg;
+  }
 
-   tbody {
-      .diff_header {
-         text-align: right;
+  tbody {
+    .diff_header {
+      text-align: right;
 
-         &:not([id]) {
-            color: rgba(0, 0, 0, 0.3);
-         }
+      &:not([id]) {
+        color: lighten($table-heading-fg, 35%);
       }
-   }
+    }
+  }
 }

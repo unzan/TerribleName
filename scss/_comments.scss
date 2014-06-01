@@ -1,241 +1,239 @@
 .commentarea {
-   border-top: solid 1px rgba(0, 0, 0, 0.2);
-   @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
+  border-top: solid 1px rgba(0, 0, 0, 0.2);
+  @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
 
-   .menuarea + .nestedlisting {
-      clear: both;
-      padding-top: 20px;
-   }
+  .menuarea + .nestedlisting {
+    clear: both;
+    padding-top: 20px;
+  }
 
-   .panestack-title {
-      border-bottom: none;
-   }
+  .panestack-title {
+    border-bottom: none;
+  }
 
-   .usertext {
-      clear: both;
+  .usertext {
+    clear: both;
 
-      > .usertext-edit {
-         width: 660px;
-         textarea {
-            width: 650px;
-         }
+    > .usertext-edit {
+      width: 660px;
+      textarea {
+        width: 650px;
+      }
+    }
+
+    .bottom-area {
+      > .help-toggle,
+      > .reddiquette {
+        margin-top: 1.3em;
+      }
+    }
+  }
+
+  .menuarea {
+    color: $main-fg;
+    overflow: visible;
+    margin-top: 1em;
+    padding: 5px;
+    position: relative;
+
+    .spacer {
+      display: block;
+      float: left;
+      margin: 0px 5px 0px 0px;
+
+      &:first-child {
+        position: relative;
       }
 
-      .bottom-area {
-         > .help-toggle,
-         > .reddiquette {
-            margin-top: 1.3em;
-         }
-      }
-   }
-
-   .menuarea {
-      color: $main-fg;
-      overflow: visible;
-      margin-top: 1em;
-      padding: 5px;
-      position: relative;
-
-      .spacer {
-         display: block;
-         float: left;
-         margin: 0px 5px 0px 0px;
-
-         &:first-child {
-            position: relative;
-         }
-
-         .toggle .togglebutton,
-         .dropdown.lightdrop,
-         .dropdown-title {
-            display: block;
-            float: left;
-         }
-
-         .dropdown-title {
-            margin-right: 5px;
-            margin-top: 3px;
-         }
-
-         .toggle .togglebutton,
-         .dropdown.lightdrop {
-            @extend .tn-small-button-shadowless;
-            font-size: 1em;
-         }
-
-         > form.toggle {
-            margin: 0px !important;
-         }
-
-         .dropdown.lightdrop {
-            > .selected {
-               text-decoration: none;
-               color: inherit;
-               padding-right: 0px;
-               background: none;
-
-               &::after {
-                  content: '';
-                  width: 0px;
-                  height: 0px;
-                  margin-left: 4px;
-                  display: inline-block;
-                  vertical-align: middle;
-                  border-left: solid 4px transparent;
-                  border-right: solid 4px transparent;
-                  border-top: solid 4px $small-button-fg;
-               }
-            }
-         }
-
-         > .help-hoverable {
-            display: none;
-            z-index: 3000;
-            left: 30%;
-            bottom: 110%;
-            width: 30em;
-            color: $tooltip-bg;
-            position: absolute;
-            background: $tooltip-bg;
-            padding: 4px 6px;
-            @include shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
-            @include rounded(3px);
-            //border: solid 1px rgba(0, 0, 0, 0.3);
-
-            &::before {
-               color: $main-fg;
-               content: attr(title);
-            }
-
-            &:nth-child(2) {
-               left: 10%;
-            }
-         }
-
-         > .toggle {
-
-            a {
-               font-size: 1em;
-               color: $link-fg;
-            }
-
-            &:hover + .help-hoverable {
-               display: block;
-            }
-
-            > .option.error.active {
-               @extend .tn-engraved-box;
-               background: darken($main-bg, 14%);
-               position: absolute;
-               z-index: 4000;
-               left: 0;
-               right: 0;
-               top: 0;
-               bottom: 0;
-               text-align: center;
-               font-size: 1em;
-               @include rounded(3px);
-            }
-         }
+      .toggle .togglebutton,
+      .dropdown.lightdrop,
+      .dropdown-title {
+        display: block;
+        float: left;
       }
 
-      .drop-choices.lightdrop {
-         @extend .tn-small-button-default;
-         z-index: 9000;
-         padding: 4px;
-         margin-top: 6px;
-         @include shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+      .dropdown-title {
+        margin-right: 5px;
+        margin-top: 3px;
+      }
 
-         a.choice {
-            color: inherit;
+      .toggle .togglebutton,
+      .dropdown.lightdrop {
+        @extend .tn-small-button-shadowless;
+        font-size: 1em;
+      }
+
+      > form.toggle {
+        margin: 0px !important;
+      }
+
+      .dropdown.lightdrop {
+        > .selected {
+          text-decoration: none;
+          color: inherit;
+          padding-right: 0px;
+          background: none;
+
+          &::after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            margin-left: 4px;
+            display: inline-block;
             vertical-align: middle;
-            padding: 2px 4px;
-            @include rounded(3px);
-
-            &:hover {
-               background: $dropdown-selected-bg;
-               color: $dropdown-selected-fg;
-            }
-         }
-
-         > form {
-            position: relative;
-            min-width: 10em;
-
-            // i'm not sure wtf does this shit for.
-            // it doesn't do anything on ff 32.0a1 (nightly).
-            .RES-sort-button {
-               position: absolute;
-               background: rgba(0, 0, 0, 0.2);
-               float: none;
-               right: 2px;
-               top: 2px;
-               width: 2.3em;
-               padding: 0px 3px;
-               overflow: hidden;
-               @include rounded(2px);
-
-               &::before {
-                  content: 'temp     ';
-               }
-            }
-         }
+            border-left: solid 4px transparent;
+            border-right: solid 4px transparent;
+            border-top: solid 4px $small-button-fg;
+          }
+        }
       }
-   }
+
+      > .help-hoverable {
+        display: none;
+        z-index: 3000;
+        left: 30%;
+        bottom: 110%;
+        width: 30em;
+        color: $tooltip-bg;
+        position: absolute;
+        background: $tooltip-bg;
+        padding: 4px 6px;
+        @include shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+        @include rounded(3px);
+
+        &::before {
+          color: $main-fg;
+          content: attr(title);
+        }
+
+        &:nth-child(2) {
+          left: 10%;
+        }
+      }
+
+      > .toggle {
+        a {
+          font-size: 1em;
+          color: $link-fg;
+        }
+
+        &:hover + .help-hoverable {
+          display: block;
+        }
+
+        > .option.error.active {
+          @extend .tn-engraved-box;
+          background: darken($main-bg, 14%);
+          position: absolute;
+          z-index: 4000;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          text-align: center;
+          font-size: 1em;
+          @include rounded(3px);
+        }
+      }
+    }
+
+    .drop-choices.lightdrop {
+      @extend .tn-small-button-default;
+      z-index: 9000;
+      padding: 4px;
+      margin-top: 6px;
+      @include shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+
+      a.choice {
+        color: inherit;
+        vertical-align: middle;
+        padding: 2px 4px;
+        @include rounded(3px);
+
+        &:hover {
+          background: $dropdown-selected-bg;
+          color: $dropdown-selected-fg;
+        }
+      }
+
+      > form {
+        position: relative;
+        min-width: 10em;
+
+        // FIXME: why is this here?
+        // i'm not sure wtf does this shit for.
+        // it doesn't do anything on ff 32.0a1 (nightly).
+        .RES-sort-button {
+          position: absolute;
+          background: $res-temp-sort-bg;
+          float: none;
+          right: 2px;
+          top: 2px;
+          width: 2.3em;
+          padding: 0px 3px;
+          overflow: hidden;
+          @include rounded(2px);
+
+          &::before {
+            content: 'temp     ';
+          }
+        }
+      }
+    }
+  }
 }
 
 .comment {
+  .midcol {
+    width: 16px;
+  }
 
-   .midcol {
-      width: 16px;
-   }
+  > .entry {
+    padding: 0px;
 
-   > .entry {
-      padding: 0px;
+    .score,
+    .collapsed {
+      font-size: 13px;
+    }
 
-      .score,
-      .collapsed {
-         font-size: 13px;
+    > .noncollapsed {
+      display: inline-block;
+
+      > .usertext {
+        margin: 8px 2px 0px 2px;
+        padding: 3px;
+        position: relative;
+        @include linear-gradient(top, $comment-bg, darken($comment-bg, 3%));
+        @include rounded(3px);
+        @include shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
+
+        > .usertext-body {
+          padding: 1px 8px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 20px;
+          top: -8px;
+          width: 0px;
+          height: 0px;
+          border-left: solid 8px transparent;
+          border-right: solid 8px transparent;
+          border-bottom: solid 8px $comment-bg;
+        }
       }
+    }
 
-      > .noncollapsed {
-         display: inline-block;
-
-         > .usertext {
-            margin: 8px 2px 0px 2px;
-            padding: 3px;
-            position: relative;
-            @include linear-gradient(top, $comment-bg, darken($comment-bg, 3%));
-            @include rounded(3px);
-            @include shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
-
-            > .usertext-body {
-               padding: 1px 8px;
-            }
-
-            &::before {
-               content: '';
-               position: absolute;
-               left: 20px;
-               top: -8px;
-               width: 0px;
-               height: 0px;
-               border-left: solid 8px transparent;
-               border-right: solid 8px transparent;
-               border-bottom: solid 8px $comment-bg;
-            }
-         }
-      }
-
-      .flat-list.buttons {
-         display: block;
-         margin-top: 7px;
-      }
-   }
+    .flat-list.buttons {
+      display: block;
+      margin-top: 7px;
+    }
+  }
 
 
-   &.deleted > .entry > .noncollapsed > .usertext {
-      display: none;
-   }
+  &.deleted > .entry > .noncollapsed > .usertext {
+    display: none;
+  }
 }
 

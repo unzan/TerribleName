@@ -36,6 +36,7 @@ $main-fg: $black;
 $text-bg: $white;
 $text-fg: $main-fg;
 $toc-bg: $bright-yellow;
+$toc-level-indicator-color: rgba(0, 0, 0, 0.2);
 $text-border-color: darken($gray, 20%);
 $quote-bg: darken($text-bg, 6%);
 $quote-fg: $text-fg;
@@ -55,6 +56,11 @@ $diff-add-bg: rgba($green, 0.3);
 $diff-sub-bg: rgba($red, 0.3);
 $spoiler-bg: $black;
 $spoiler-fg: $white;
+$horiz-line-color: rgba(0, 0, 0, 0.2);
+
+$engraved-box-bg: rgba(0, 0, 0, 0.14);
+$raised-box-bg: $white;
+$raised-box-fg: $main-fg;
 
 $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);
@@ -81,6 +87,8 @@ $sponsored-tag-bg: $bright-yellow;
 $sponsored-bg: rgba($green, 0.1);
 $sponsored-fg: lighten($main-fg, 20%);
 $sidebar-fg: darken($gray, 60%);
+$sidebar-toolbox-bg: rgba(255, 255, 255, 0.2);
+$sidebar-toolbox-button-hover-color: rgba(0, 0, 0, 0.3);
 $nsfw-tag-bg: $orange;
 $nsfw-tag-fg: $white;
 $sticky-tag-bg: $green;
@@ -88,9 +96,11 @@ $sticky-tag-fg: $white;
 $mod-tag-fg: darken($green, 5%);
 $admin-tag-fg: $red;
 $score-fg: darken($gray, 40%);
+$default-thumb-bg: rgba(0, 0, 0, 0.2);
 $default-nsfw-thumb-bg: rgba($magenta, 0.5);
 $default-modpost-thumb-bg: rgba($green, 0.5);
 $default-text-thumb-bg: rgba($blue, 0.5);
+$flat-list-hover-bg: rgba(0, 0, 0, 0.1);
 
 $default-link-flair-bg: lighten($blue, 5%);
 $default-link-flair-fg: $white;
@@ -107,6 +117,8 @@ $downvote-color: $violet;
 
 $button-fg: $white;
 $button-bg: $orange;
+$button-disabled-fg: rgba(0, 0, 0, 0.4);
+$button-disabled-bg: darken($main-bg, 12%);
 $input-fg: lighten($black, 20%);
 $input-bg: $white;
 $small-button-bg: lighten($gray, 5%);
@@ -132,6 +144,8 @@ $res-night-fg: $gray;
 $res-night-code-fg: #87CEEB;
 $res-active-element-color: rgba($orange, 0.5);
 $res-popup-bg: #5F99CF;
+$res-temp-sort-bg: rgba(0, 0, 0, 0.2);
+$res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);
 
 
 // set this to 1 if you want to have line number at the left of codeblock

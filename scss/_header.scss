@@ -1,199 +1,199 @@
 #header {
-   background: $header-bg url($header-bg-image) 0px 0px no-repeat;
-   color: $header-fg;
-   border-bottom: none;
-   height: $header-height;
-   position: relative;
-   @include shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
+  background: $header-bg url($header-bg-image) 0px 0px no-repeat;
+  color: $header-fg;
+  border-bottom: none;
+  height: $header-height;
+  position: relative;
+  @include shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
 
-   #header-img-a {
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0px 10px 0 20px;
-   }
+  #header-img-a {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 10px 0 20px;
+  }
 
-   #header-bottom-left > .pagename:last-child::after {
-      content: '';
-      height: 32px;
-   }
+  #header-bottom-left > .pagename:last-child::after {
+    content: '';
+    height: 32px;
+  }
 
-   #header-bottom-left > .pagename:last-child::after,
-   .tabmenu {
+  #header-bottom-left > .pagename:last-child::after,
+  .tabmenu {
+    display: block;
+    margin: 0px;
+    padding-left: 6px;
+    overflow: hidden;
+    text-shadow: 0px 1px 0px darken($menu-bar-bg, 15%);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    @include linear-gradient(top, $menu-bar-bg, darken($menu-bar-bg, 5%));
+    @include shadow(
+    inset 0px 1px 0px lighten($menu-bar-bg, 10%),
+    inset 0px -1px 0px darken($menu-bar-bg, 9%));
+  }
+
+  .tabmenu {
+    > li {
       display: block;
+      float: left;
       margin: 0px;
-      padding-left: 6px;
-      overflow: hidden;
-      text-shadow: 0px 1px 0px darken($menu-bar-bg, 15%);
-      position: absolute;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      @include linear-gradient(top, $menu-bar-bg, darken($menu-bar-bg, 5%));
-      @include shadow(
-         inset 0px 1px 0px lighten($menu-bar-bg, 10%),
-         inset 0px -1px 0px darken($menu-bar-bg, 9%));
-   }
-
-   .tabmenu {
-      > li {
-         display: block;
-         float: left;
-         margin: 0px;
-         padding: 0px;
+      padding: 0px;
 
 
-         > a {
-            background: none;
-            display: block;
-            font-weight: normal;
-            color: $menu-bar-fg;
-            padding: 8px 13px;
+      > a {
+        background: none;
+        display: block;
+        font-weight: normal;
+        color: $menu-bar-fg;
+        padding: 8px 13px;
 
-            &:hover {
-               color: lighten($menu-bar-fg, 20%);
-               @include linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
-            }
-         }
-
-         &.selected {
-            > a {
-               color: lighten($menu-bar-fg, 30%);
-               border: none;
-               @include linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-               @include shadow(0px 1px 1px lighten($menu-bar-bg, 2%), inset 0px -2px 3px rgba(0, 0, 0, 0.2));
-            }
-         }
-
+        &:hover {
+          color: lighten($menu-bar-fg, 20%);
+          @include linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+        }
       }
-   }
+
+      &.selected {
+        > a {
+          color: lighten($menu-bar-fg, 30%);
+          border: none;
+          @include linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+          @include shadow(0px 1px 1px lighten($menu-bar-bg, 2%), inset 0px -2px 3px rgba(0, 0, 0, 0.2));
+        }
+      }
+
+    }
+  }
 }
 
 #sr-header-area {
-   background: $sr-header-bg;
-   border-bottom: none;
+  background: $sr-header-bg;
+  border-bottom: none;
 
-   a {
-      color: $sr-header-fg;
-      &:hover {
-         color: lighten($sr-header-fg, 30%);
-         text-decoration: none;
-      }
-   }
-
-   .selected > a {
+  a {
+    color: $sr-header-fg;
+    &:hover {
       color: lighten($sr-header-fg, 30%);
-   }
+      text-decoration: none;
+    }
+  }
+
+  .selected > a {
+    color: lighten($sr-header-fg, 30%);
+  }
 }
 
 #sr-more-link {
-   background: $sr-header-bg;
+  background: $sr-header-bg;
 }
 
 .dropdown.srdrop .selected {
-   color: $sr-header-fg;
-   background: none;
-   padding-right: 5px;
+  color: $sr-header-fg;
+  background: none;
+  padding-right: 5px;
 
-   &::after {
-      content: '';
-      display: inline-block;
-      margin-left: 5px;
-      width: 0px;
-      height: 0px;
-      border-left: solid 4px transparent;
-      border-right: solid 4px transparent;
-      border-top: solid 4px $sr-header-fg;
-   }
+  &::after {
+    content: '';
+    display: inline-block;
+    margin-left: 5px;
+    width: 0px;
+    height: 0px;
+    border-left: solid 4px transparent;
+    border-right: solid 4px transparent;
+    border-top: solid 4px $sr-header-fg;
+  }
 }
 
 #header-bottom-right {
-   background: none;
-   bottom: 7px;
-   right: 20px;
-   font-size: larger;
-   padding: 0px !important;
-   color: $menu-bar-fg;
-   line-height: 16px !important;
+  background: none;
+  bottom: 7px;
+  right: 20px;
+  font-size: larger;
+  padding: 0px !important;
+  color: $menu-bar-fg;
+  line-height: 16px !important;
 
 
-   .nohavemail {
-      opacity: 0.6;
-   }
+  .nohavemail {
+    opacity: 0.6;
+  }
 
-   > .user,
-   > .flat-list,
-   > .logout {
-      vertical-align: middle;
-      display: inline-block;
-   }
+  > .user,
+  > .flat-list,
+  > .logout {
+    vertical-align: middle;
+    display: inline-block;
+  }
 
-   .user {
-      color: inherit;
-   }
+  .user {
+    color: inherit;
+  }
 
-   .userkarma {
-      border: none;
-   }
+  .userkarma {
+    border: none;
+  }
 
-   a {
-      color: $menu-bar-fg;
-   }
+  a {
+    color: $menu-bar-fg;
+  }
 
-   .separator {
-      visibility: hidden;
-   }
+  .separator {
+    visibility: hidden;
+  }
 }
 
 .pagename {
-   color: $page-title-fg;
-   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-   font-variant: normal;
-   text-transform: lowercase;
+  color: $page-title-fg;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  font-variant: normal;
+  text-transform: lowercase;
 
-   &::before {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      height: $page-title-height;
-      width: 3px;
-   }
+  &::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: $page-title-height;
+    width: 3px;
+  }
 
-   &.redditname {
-      font-size: 2.9em;
-      font-weight: normal;
-      vertical-align: middle;
+  &.redditname {
+    font-size: 2.9em;
+    font-weight: normal;
+    vertical-align: middle;
 
-      > a {
-         display: inline;
-         color: inherit;
+    > a {
+      display: inline;
+      color: inherit;
 
-         &:hover {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-         }
+      &:hover {
+        color: lighten($page-title-fg, 20%);
+        text-decoration: none;
       }
-   }
+    }
+  }
 }
 
 .drop-choices.srdrop {
-   background: $sr-dropdown-bg;
-   border: none;
-   @include shadow(0px 5px 6px rgba(0, 0, 0, 0.3));
+  background: $sr-dropdown-bg;
+  border: none;
+  @include shadow(0px 5px 6px rgba(0, 0, 0, 0.3));
 
-   a {
-      &.choice {
-         color: $sr-dropdown-fg;
-         padding: 3px 8px;
+  a {
+    &.choice {
+      color: $sr-dropdown-fg;
+      padding: 3px 8px;
 
-         &:hover {
-            color: $sr-dropdown-selected-fg !important;
-            background: $sr-dropdown-selected-bg !important;
-         }
-
-         &.bottom-option {
-            border-top: solid 1px lighten($sr-dropdown-bg, 6%);
-         }
-
+      &:hover {
+        color: $sr-dropdown-selected-fg !important;
+        background: $sr-dropdown-selected-bg !important;
       }
-   }
+
+      &.bottom-option {
+        border-top: solid 1px lighten($sr-dropdown-bg, 6%);
+      }
+
+    }
+  }
 }
