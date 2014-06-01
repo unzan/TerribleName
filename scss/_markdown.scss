@@ -129,4 +129,12 @@
          background: $table-highlight-bg;
       }
    }
+
+   a[href$="/spoiler"] {
+      background: $spoiler-bg !important;
+      color: $spoiler-bg !important;
+      &:hover {
+        color: $spoiler-fg !important;
+      }
+   }
 }
