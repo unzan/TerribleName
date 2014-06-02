@@ -141,28 +141,7 @@
     }
   }
 
-  .fancy-settings {
-    .linefield {
-      @extend .formtabs-content;
-      .title {
-        color: $link-fg;
-      }
-
-      .linefield-content {
-        margin-top: 0.5em;
-      }
-
-      input[type=text] {
-        width: 350px !important;
-        vertical-align: middle;
-      }
-
-      button {
-        font-size: 13px !important;
-        margin-left: 8px;
-      }
-    }
-  }
+  
 }
 
 table.diff {

@@ -123,7 +123,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: inset 0px 2px 0px #9d3a11, 0px 2px 2px rgba(255, 255, 255, 0.7);
 }
 
-.tn-small-button-default, .commentarea .menuarea .drop-choices.lightdrop,
+.tn-small-button-default, .flairselector .flairoptionpane ul > li:hover, .commentarea .menuarea .drop-choices.lightdrop,
 .tn-small-button,
 .nav-buttons .nextprev > a,
 .wiki-page .pageactions > .wikiaction,
@@ -136,7 +136,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.tn-small-button-default, .commentarea .menuarea .drop-choices.lightdrop,
+.tn-small-button-default, .flairselector .flairoptionpane ul > li:hover, .commentarea .menuarea .drop-choices.lightdrop,
 .tn-small-button-shadowless,
 .commentarea .menuarea .spacer .toggle .togglebutton,
 .commentarea .menuarea .spacer .dropdown.lightdrop,
@@ -160,7 +160,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.tn-small-button-default:hover, .commentarea .menuarea .drop-choices.lightdrop:hover, .tn-small-button-default:focus, .commentarea .menuarea .drop-choices.lightdrop:focus,
+.tn-small-button-default:hover, .flairselector .flairoptionpane ul > li:hover, .commentarea .menuarea .drop-choices.lightdrop:hover, .tn-small-button-default:focus, .flairselector .flairoptionpane ul > li:focus:hover, .commentarea .menuarea .drop-choices.lightdrop:focus,
 .tn-small-button-shadowless:hover,
 .commentarea .menuarea .spacer .toggle .togglebutton:hover,
 .commentarea .menuarea .spacer .dropdown.lightdrop:hover,
@@ -186,7 +186,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   text-decoration: none;
 }
 
-.tn-small-button-pressed, .wiki-page .pageactions > .wikiaction.wikiaction-current,
+.tn-small-button-pressed, .flairselector .flairoptionpane ul > li:active, .wiki-page .pageactions > .wikiaction.wikiaction-current,
 .tn-small-button-shadowless:active,
 .commentarea .menuarea .spacer .toggle .togglebutton:active,
 .commentarea .menuarea .spacer .dropdown.lightdrop:active,
@@ -361,15 +361,28 @@ input[type=password] {
   width: 520px;
 }
 
+#tab-grant,
+#tab-templates,
+#tab-link_templates {
+  margin: 0px !important;
+}
+
+.fancy-settings + .tabmenu {
+  margin-left: 10px;
+}
+
+.fancy-settings + .tabmenu,
 .formtab.tabmenu {
   padding: 0px;
   font-size: 14px;
 }
+.fancy-settings + .tabmenu > li,
 .formtab.tabmenu > li {
   display: block;
   font-weight: normal;
   float: left;
 }
+.fancy-settings + .tabmenu > li a,
 .formtab.tabmenu > li a {
   display: block;
   padding: 3px 17px;
@@ -387,6 +400,7 @@ input[type=password] {
   -moz-border-radius: 3px 3px 0px 0px;
   border-radius: 3px 3px 0px 0px;
 }
+.fancy-settings + .tabmenu > li.selected a,
 .formtab.tabmenu > li.selected a {
   font-size: 14px;
   background: #efefef;
@@ -394,6 +408,7 @@ input[type=password] {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
 }
+.fancy-settings + .tabmenu > li.selected a::after,
 .formtab.tabmenu > li.selected a::after {
   content: '';
   position: absolute;
@@ -404,7 +419,20 @@ input[type=password] {
   background: #efefef;
 }
 
-.formtabs-content, .wiki-page .fancy-settings .linefield {
+.tabpane-content,
+.formtabs-content,
+.fancy-settings .linefield {
+  clear: both;
+  margin-bottom: 1em;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.14);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.14);
+}
+
+.flairselector,
+.tabpane-content,
+.formtabs-content,
+.fancy-settings .linefield {
   overflow: hidden;
   background: #efefef;
   border: solid 1px rgba(0, 0, 0, 0.3);
@@ -412,11 +440,104 @@ input[type=password] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.14);
-  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.14);
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.14);
-  clear: both;
-  margin-bottom: 1em;
+}
+
+.fancy-settings .linefield .title {
+  color: #2177b4;
+}
+.fancy-settings .linefield .linefield-content {
+  margin-top: 0.5em;
+}
+.fancy-settings .linefield input[type=text] {
+  width: 350px !important;
+  vertical-align: middle;
+}
+.fancy-settings .linefield button {
+  font-size: 13px !important;
+  margin-left: 8px;
+}
+
+.flairselector {
+  padding: 6px !important;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 4px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.flairselector.drop-choices.active {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.flairselector > h2 {
+  background: rgba(0, 0, 0, 0.14);
+  color: #444444;
+  text-transform: capitalize;
+  padding: 4px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.17), 0px 1px 0px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.17), 0px 1px 0px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.17), 0px 1px 0px rgba(255, 255, 255, 0.8);
+}
+.flairselector > form {
+  padding: 4px;
+  border-top-color: rgba(0, 0, 0, 0.3);
+}
+.flairselector .flairoptionpane ul {
+  padding-bottom: 4px;
+}
+.flairselector .flairoptionpane ul > li {
+  padding: 2px 6px !important;
+  border: solid 1px transparent;
+  display: inline-block;
+  line-height: 1.2em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.flairselector .customizer,
+.flairselector button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0em 0.3em;
+}
+
+.flairoptionpane ul > li > .flairremove > a,
+.flairoptionpane ul > li > .flairremove > a.title,
+.flairoptionpane ul > li > .linkflair > a,
+.flairoptionpane ul > li > .linkflair > a.title,
+.flairselection > .flairremove > a,
+.flairselection > .flairremove > a.title,
+.flairselection > .linkflair > a,
+.flairselection > .linkflair > a.title {
+  padding: 0px !important;
+}
+.flairoptionpane ul > li > .flairremove > a:hover,
+.flairoptionpane ul > li > .flairremove > a.title:hover,
+.flairoptionpane ul > li > .linkflair > a:hover,
+.flairoptionpane ul > li > .linkflair > a.title:hover,
+.flairselection > .flairremove > a:hover,
+.flairselection > .flairremove > a.title:hover,
+.flairselection > .linkflair > a:hover,
+.flairselection > .linkflair > a.title:hover {
+  background: none !important;
+}
+
+.flairlist .flairrow .flaircell,
+.flairlist .flairrow .header {
+  margin-right: 2ex;
+}
+.flairlist .flairrow .flaircell.tagline,
+.flairlist .flairrow .header.tagline {
+  width: 30ex;
+}
+
+.flairselection > .flairremove {
+  margin: 1em 0em;
+}
+
+.clearflairtemplates-button {
+  margin: 1em 0.5em;
 }
 
 #header {
@@ -601,7 +722,7 @@ input[type=password] {
   border-top: solid 1px #202020;
 }
 
-.linklisting {
+.listing-page .linklisting {
   overflow: hidden;
 }
 
@@ -1611,20 +1732,6 @@ input[type=password] {
 .wiki-page .wikirevisionlisting .generic-table tr:hover > td {
   background-color: cornsilk;
 }
-.wiki-page .fancy-settings .linefield .title {
-  color: #2177b4;
-}
-.wiki-page .fancy-settings .linefield .linefield-content {
-  margin-top: 0.5em;
-}
-.wiki-page .fancy-settings .linefield input[type=text] {
-  width: 350px !important;
-  vertical-align: middle;
-}
-.wiki-page .fancy-settings .linefield button {
-  font-size: 13px !important;
-  margin-left: 8px;
-}
 
 table.diff {
   width: 100%;
@@ -2013,14 +2120,14 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res-nightmode .side .spacer > #search input,
 .res-nightmode #newlink.submit .formtabs-content .roundfield-content textarea,
-.res-nightmode #newlink.submit .wiki-page .fancy-settings .linefield .roundfield-content textarea,
-.wiki-page .fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content textarea,
+.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content textarea,
+.fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content textarea,
 .res-nightmode #newlink.submit .formtabs-content .roundfield-content input#url,
-.res-nightmode #newlink.submit .wiki-page .fancy-settings .linefield .roundfield-content input#url,
-.wiki-page .fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content input#url,
+.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content input#url,
+.fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content input#url,
 .res-nightmode #newlink.submit .formtabs-content .roundfield-content input#sr-autocomplete,
-.res-nightmode #newlink.submit .wiki-page .fancy-settings .linefield .roundfield-content input#sr-autocomplete,
-.wiki-page .fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content input#sr-autocomplete,
+.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content input#sr-autocomplete,
+.fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content input#sr-autocomplete,
 .res-nightmode textarea,
 .res-nightmode input[type=text],
 .res-nightmode .usertext > .usertext-edit > div > textarea,
@@ -2160,7 +2267,7 @@ table.diff tbody .diff_header:not([id]) {
 .res-nightmode .submit-page #newlink.submit.content {
   background: #191919 !important;
 }
-.res-nightmode .submit-page #newlink.submit.content .formtabs-content, .res-nightmode .submit-page #newlink.submit.content .wiki-page .fancy-settings .linefield, .wiki-page .fancy-settings .res-nightmode .submit-page #newlink.submit.content .linefield,
+.res-nightmode .submit-page #newlink.submit.content .formtabs-content, .res-nightmode .submit-page #newlink.submit.content .fancy-settings .linefield, .fancy-settings .res-nightmode .submit-page #newlink.submit.content .linefield,
 .res-nightmode .submit-page #newlink.submit.content .roundfield {
   background: none;
   border: none !important;

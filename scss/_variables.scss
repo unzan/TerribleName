@@ -59,8 +59,10 @@ $spoiler-fg: $white;
 $horiz-line-color: rgba(0, 0, 0, 0.2);
 
 $engraved-box-bg: rgba(0, 0, 0, 0.14);
+$popup-title-fg: lighten($main-fg, 20%);
 $raised-box-bg: $white;
 $raised-box-fg: $main-fg;
+$flair-selection-hover-bg: none;
 
 $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);

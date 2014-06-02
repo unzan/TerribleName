@@ -30,6 +30,18 @@ input[type=password] {
   }
 }
 
+#tab-grant,
+#tab-templates,
+#tab-link_templates {
+  margin: 0px !important;
+}
+
+.fancy-settings + .tabmenu
+{
+  margin-left: 10px;
+}
+
+.fancy-settings + .tabmenu,
 .formtab.tabmenu {
   padding: 0px;
   font-size: 14px;
@@ -74,13 +86,133 @@ input[type=password] {
   }
 }
 
+.tabpane-content,
+.formtabs-content {
+  clear: both;
+  margin-bottom: 1em;
+  @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.14));
+}
+
+.flairselector,
+.tabpane-content,
 .formtabs-content {
   overflow: hidden;
   background: $box-bg;
   border: solid 1px rgba(0, 0, 0, 0.3);
   padding: 10px;
   @include rounded(3px);
-  @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.14));
-  clear: both;
-  margin-bottom: 1em;
 }
+
+.fancy-settings {
+  .linefield {
+    @extend .formtabs-content;
+    .title {
+      color: $link-fg;
+    }
+
+    .linefield-content {
+      margin-top: 0.5em;
+    }
+
+    input[type=text] {
+      width: 350px !important;
+      vertical-align: middle;
+    }
+
+    button {
+      font-size: 13px !important;
+      margin-left: 8px;
+    }
+  }
+}
+
+
+.flairselector {
+  padding: 6px !important;
+  @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 4px 6px rgba(0, 0, 0, 0.2));
+
+  &.drop-choices.active {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  > h2 {
+    background: $engraved-box-bg;
+    color: $popup-title-fg;
+    text-transform: capitalize;
+    padding: 4px;
+    margin-bottom: 10px;
+    @include rounded(3px);
+    @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.17), 0px 1px 0px rgba(255, 255, 255, 0.8));
+  }
+
+  > form {
+    padding: 4px;
+    border-top-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .flairoptionpane {
+    ul {
+      padding-bottom: 4px;
+      > li {
+        padding: 2px 6px !important;
+        border: solid 1px transparent;
+        display: inline-block;
+        line-height: 1.2em;
+        @include rounded(3px);
+
+        &:hover {
+          @extend .tn-small-button-default;
+        }
+
+        &:active {
+          @extend .tn-small-button-pressed;
+        }
+      }
+    }
+  }
+
+  .customizer,
+  button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0em 0.3em;
+  }
+}
+
+.flairoptionpane ul > li,
+.flairselection {
+  > .flairremove,
+  > .linkflair {
+    > a,
+    > a.title {
+      padding: 0px !important;
+      &:hover {
+        background: none !important;
+      }
+    }
+  }
+}
+
+.flairlist {
+  .flairrow {
+    .flaircell,
+    .header {
+      margin-right: 2ex;
+
+      &.tagline {
+        width: 30ex;
+      }
+    }
+  }
+}
+
+.flairselection {
+  > .flairremove {
+    margin: 1em 0em;
+  }
+}
+
+.clearflairtemplates-button {
+  margin: 1em 0.5em;
+}
+
