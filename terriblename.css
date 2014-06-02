@@ -335,6 +335,9 @@ input[type=submit] {
 
 #search input[type=text],
 .roundfield-content > input#url,
+.pretty-form textarea,
+.pretty-form input[type=text],
+.pretty-form input[type=password],
 textarea,
 input[type=text],
 input[type=password] {
@@ -368,7 +371,7 @@ input[type=password] {
 }
 
 .fancy-settings + .tabmenu {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .fancy-settings + .tabmenu,
@@ -419,6 +422,10 @@ input[type=password] {
   background: #efefef;
 }
 
+.tabpane-content {
+  margin-left: 10px;
+}
+
 .tabpane-content,
 .formtabs-content,
 .fancy-settings .linefield {
@@ -442,16 +449,27 @@ input[type=password] {
   border-radius: 3px;
 }
 
+.fancy-settings {
+  margin: 10px;
+}
+.fancy-settings .linefield {
+  margin-bottom: 0.4em;
+}
+
+.flairgrant .linefield .title,
 .fancy-settings .linefield .title {
   color: #2177b4;
 }
+.flairgrant .linefield .linefield-content,
 .fancy-settings .linefield .linefield-content {
   margin-top: 0.5em;
 }
+.flairgrant .linefield input[type=text],
 .fancy-settings .linefield input[type=text] {
   width: 350px !important;
   vertical-align: middle;
 }
+.flairgrant .linefield button,
 .fancy-settings .linefield button {
   font-size: 13px !important;
   margin-left: 8px;

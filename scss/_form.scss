@@ -8,6 +8,9 @@
 
 #search input[type=text],
 .roundfield-content > input#url,
+.pretty-form textarea,
+.pretty-form input[type=text],
+.pretty-form input[type=password],
 textarea,
 input[type=text],
 input[type=password] {
@@ -36,9 +39,8 @@ input[type=password] {
   margin: 0px !important;
 }
 
-.fancy-settings + .tabmenu
-{
-  margin-left: 10px;
+.fancy-settings + .tabmenu {
+  margin-left: 20px;
 }
 
 .fancy-settings + .tabmenu,
@@ -86,6 +88,10 @@ input[type=password] {
   }
 }
 
+.tabpane-content {
+  margin-left: 10px;
+}
+
 .tabpane-content,
 .formtabs-content {
   clear: both;
@@ -104,8 +110,16 @@ input[type=password] {
 }
 
 .fancy-settings {
+  margin: 10px;
   .linefield {
     @extend .formtabs-content;
+    margin-bottom: 0.4em;
+  }
+}
+
+.flairgrant,
+.fancy-settings {
+  .linefield {
     .title {
       color: $link-fg;
     }
