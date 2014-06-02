@@ -15,50 +15,21 @@
   .wiki-page-content {
     margin: 15px !important;
 
-    > .md.wiki {
+    .morelink {
+      margin: 1em 0em !important;
+      padding: 0px !important;
+      &:hover {
+        border: none !important;
+        background: none !important;
+      }
+    }
+
+    .md.wiki {
       @extend .tn-raised-box;
-
-      > .toc {
-        background: $toc-bg;
-        float: right;
-        padding: 8px;
-        margin: 10px 0px 10px 10px;
-        border: solid 1px rgba(0, 0, 0, 0.2);
-        position: relative;
-        @include shadow(inset 0px -9px 3px lighten($toc-bg, 2%));
-        @include rounded(0px);
-
-        &::after {
-          content: '';
-          position: absolute;
-          height: 2px;
-          background: desaturate(darken($toc-bg, 20%), 20%);
-          bottom: -3px;
-          left: 0px;
-          right: 0px;
-          border-bottom: solid 1px rgba(0, 0, 0, 0.2);
-          border-left: solid 1px rgba(0, 0, 0, 0.2);
-          border-right: solid 1px rgba(0, 0, 0, 0.2);
-          @include shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
-        }
-
-        &::before {
-          content: 'CONTENTS';
-          font-weight: bold;
-          display: block;
-          padding-bottom: 3px;
-          border-bottom: solid 2px rgba(0, 0, 0, 0.2);
-        }
-
-        > ul {
-          border: none;
-          padding: 10px;
-          margin: 0px;
-
-          ul {
-            border-left-color: $toc-level-indicator-color;
-          }
-        }
+      > .toc > ul {
+        border: none;
+        padding: 10px;
+        margin: 0px;
       }
     }
   }
@@ -137,11 +108,47 @@
           background-color: $table-highlight-bg;
         }
       }
-
     }
   }
+}
 
-  
+.md.wiki > .toc {
+  background: $toc-bg;
+  float: right;
+  padding: 8px;
+  margin: 10px 0px 10px 10px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  @include shadow(inset 0px -9px 3px lighten($toc-bg, 2%));
+  @include rounded(0px);
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: desaturate(darken($toc-bg, 20%), 20%);
+    bottom: -3px;
+    left: 0px;
+    right: 0px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+    border-left: solid 1px rgba(0, 0, 0, 0.2);
+    border-right: solid 1px rgba(0, 0, 0, 0.2);
+    @include shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
+  }
+
+  &::before {
+    content: 'CONTENTS';
+    font-weight: bold;
+    display: block;
+    padding-bottom: 3px;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+  }
+
+  > ul {
+    ul {
+      border-left-color: $toc-level-indicator-color;
+    }
+  }
 }
 
 table.diff {
@@ -177,6 +184,7 @@ table.diff {
   }
 
   td[nowrap] {
+    min-width: 35%;
     border: none !important;
   }
 

@@ -43,7 +43,7 @@ hr {
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.tn-raised-box, .link .usertext .md, .wiki-page .wiki-page-content > .md.wiki {
+.tn-raised-box, .link .usertext .md, .wiki-page .wiki-page-content .md.wiki, .res .RESDialogSmall.livePreview {
   background: -webkit-linear-gradient(top, white, #f7f7f7);
   background: -moz-linear-gradient(top, white, #f7f7f7);
   background: -o-linear-gradient(top, white, #f7f7f7);
@@ -804,21 +804,32 @@ input[type=password] {
   display: inline-block !important;
 }
 
-.listing-page .thing .flat-list.buttons > li.save-button > a,
-.listing-page .thing .flat-list.buttons > li > .toggle,
-.listing-page .thing .flat-list.buttons > li > .state-button,
-.listing-page .thing .flat-list.buttons > li > .flairselectbtn,
-.listing-page .thing .flat-list.buttons > li > .redditSingleClick {
+.wiki-page .linklisting .thing .flat-list.buttons > li.save-button > a,
+.wiki-page .linklisting .thing .flat-list.buttons > li > .toggle,
+.wiki-page .linklisting .thing .flat-list.buttons > li > .state-button,
+.wiki-page .linklisting .thing .flat-list.buttons > li > .flairselectbtn,
+.wiki-page .linklisting .thing .flat-list.buttons > li > .redditSingleClick,
+.listing-page .linklisting .thing .flat-list.buttons > li.save-button > a,
+.listing-page .linklisting .thing .flat-list.buttons > li > .toggle,
+.listing-page .linklisting .thing .flat-list.buttons > li > .state-button,
+.listing-page .linklisting .thing .flat-list.buttons > li > .flairselectbtn,
+.listing-page .linklisting .thing .flat-list.buttons > li > .redditSingleClick {
   visibility: hidden;
 }
-.listing-page .thing .flat-list.buttons > li.option {
+.wiki-page .linklisting .thing .flat-list.buttons > li.option,
+.listing-page .linklisting .thing .flat-list.buttons > li.option {
   display: none;
 }
-.listing-page .thing:hover .flat-list.buttons > li.save-button > a,
-.listing-page .thing:hover .flat-list.buttons > li > .toggle,
-.listing-page .thing:hover .flat-list.buttons > li > .state-button,
-.listing-page .thing:hover .flat-list.buttons > li > .flairselectbtn,
-.listing-page .thing:hover .flat-list.buttons > li > .redditSingleClick {
+.wiki-page .linklisting .thing:hover .flat-list.buttons > li.save-button > a,
+.wiki-page .linklisting .thing:hover .flat-list.buttons > li > .toggle,
+.wiki-page .linklisting .thing:hover .flat-list.buttons > li > .state-button,
+.wiki-page .linklisting .thing:hover .flat-list.buttons > li > .flairselectbtn,
+.wiki-page .linklisting .thing:hover .flat-list.buttons > li > .redditSingleClick,
+.listing-page .linklisting .thing:hover .flat-list.buttons > li.save-button > a,
+.listing-page .linklisting .thing:hover .flat-list.buttons > li > .toggle,
+.listing-page .linklisting .thing:hover .flat-list.buttons > li > .state-button,
+.listing-page .linklisting .thing:hover .flat-list.buttons > li > .flairselectbtn,
+.listing-page .linklisting .thing:hover .flat-list.buttons > li > .redditSingleClick {
   visibility: visible;
 }
 
@@ -1641,49 +1652,18 @@ input[type=password] {
 .wiki-page .wiki-page-content {
   margin: 15px !important;
 }
-.wiki-page .wiki-page-content > .md.wiki > .toc {
-  background: cornsilk;
-  float: right;
-  padding: 8px;
-  margin: 10px 0px 10px 10px;
-  border: solid 1px rgba(0, 0, 0, 0.2);
-  position: relative;
-  -webkit-box-shadow: inset 0px -9px 3px #fffae6;
-  -moz-box-shadow: inset 0px -9px 3px #fffae6;
-  box-shadow: inset 0px -9px 3px #fffae6;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
+.wiki-page .wiki-page-content .morelink {
+  margin: 1em 0em !important;
+  padding: 0px !important;
 }
-.wiki-page .wiki-page-content > .md.wiki > .toc::after {
-  content: '';
-  position: absolute;
-  height: 2px;
-  background: #f1db84;
-  bottom: -3px;
-  left: 0px;
-  right: 0px;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
-  border-left: solid 1px rgba(0, 0, 0, 0.2);
-  border-right: solid 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+.wiki-page .wiki-page-content .morelink:hover {
+  border: none !important;
+  background: none !important;
 }
-.wiki-page .wiki-page-content > .md.wiki > .toc::before {
-  content: 'CONTENTS';
-  font-weight: bold;
-  display: block;
-  padding-bottom: 3px;
-  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
-}
-.wiki-page .wiki-page-content > .md.wiki > .toc > ul {
+.wiki-page .wiki-page-content .md.wiki > .toc > ul {
   border: none;
   padding: 10px;
   margin: 0px;
-}
-.wiki-page .wiki-page-content > .md.wiki > .toc > ul ul {
-  border-left-color: rgba(0, 0, 0, 0.2);
 }
 .wiki-page .wikititle {
   display: inline-block;
@@ -1751,6 +1731,46 @@ input[type=password] {
   background-color: cornsilk;
 }
 
+.md.wiki > .toc {
+  background: cornsilk;
+  float: right;
+  padding: 8px;
+  margin: 10px 0px 10px 10px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  -webkit-box-shadow: inset 0px -9px 3px #fffae6;
+  -moz-box-shadow: inset 0px -9px 3px #fffae6;
+  box-shadow: inset 0px -9px 3px #fffae6;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.md.wiki > .toc::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: #f1db84;
+  bottom: -3px;
+  left: 0px;
+  right: 0px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  border-left: solid 1px rgba(0, 0, 0, 0.2);
+  border-right: solid 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.md.wiki > .toc::before {
+  content: 'CONTENTS';
+  font-weight: bold;
+  display: block;
+  padding-bottom: 3px;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+}
+.md.wiki > .toc > ul ul {
+  border-left-color: rgba(0, 0, 0, 0.2);
+}
+
 table.diff {
   width: 100%;
   background: white;
@@ -1782,6 +1802,7 @@ table.diff th.diff_header {
   padding: 4px;
 }
 table.diff td[nowrap] {
+  min-width: 35%;
   border: none !important;
 }
 table.diff .diff_sub {
@@ -2093,6 +2114,80 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
   background: none !important;
+}
+.res .RESDialogSmall.livePreview {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  margin-top: 1em;
+}
+.res .usertext-edit .RESDialogSmall .md.RESDialogContents,
+.res .RESDialogSmall.livePreview {
+  padding: 0px !important;
+}
+.res .usertext-edit .RESDialogSmall .md.RESDialogContents {
+  margin: 0px 10px;
+}
+.res #BigPreview.md,
+.res .usertext-edit .RESDialogSmall .md.RESDialogContents,
+.res .RESDialogSmall.livePreview > .md {
+  background: none !important;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.res #BigEditor > .RESDialogSmall.BERight > h3,
+.res .RESDialogSmall.livePreview > h3 {
+  position: static;
+  color: #444444;
+  background: #e6e6e6;
+  font-weight: bold;
+  margin: 0px;
+  top: 0px;
+  -webkit-border-radius: 3px 3px 0px 0px;
+  -moz-border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0px 0px;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 2px 3px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 2px 3px rgba(0, 0, 0, 0.14);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 2px 3px rgba(0, 0, 0, 0.14);
+}
+.res #BigEditor > .RESDialogSmall {
+  border: none !important;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.res #BigEditor > .RESDialogSmall.BELeft {
+  background: #eaeaea url("%%noise%%") left top repeat;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+.res #BigEditor > .RESDialogSmall.BELeft > h3 {
+  display: none;
+}
+.res #BigEditor > .RESDialogSmall.BELeft > div:not(.RESDialogContents) > .markdownEditor,
+.res #BigEditor > .RESDialogSmall.BELeft > div:not(.RESDialogContents) > .commentingAs {
+  display: none;
+}
+.res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents {
+  top: 10px;
+  right: 8px;
+  padding: 0px;
+  padding-bottom: 100px;
+}
+.res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents .markdownEditor {
+  margin-bottom: 3px;
+}
+.res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents .commentingAs {
+  position: absolute;
+  bottom: 40px;
+  right: 0px;
+}
+.res #BigEditor > .RESDialogSmall.BERight > .RESDialogContents {
+  top: 40px;
+  margin: 0px !important;
 }
 
 .res-nightmode body {

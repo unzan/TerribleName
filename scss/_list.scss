@@ -81,25 +81,10 @@
   }
 }
 
+.wiki-page,
 .listing-page {
-  .thing {
-    .flat-list.buttons {
-      > li {
-        &.save-button > a,
-        > .toggle,
-        > .state-button,
-        > .flairselectbtn,
-        > .redditSingleClick {
-          visibility: hidden;
-        }
-
-        &.option  {
-          display: none;
-        }
-      }
-    }
-
-    &:hover {
+  .linklisting {
+    .thing {
       .flat-list.buttons {
         > li {
           &.save-button > a,
@@ -107,11 +92,28 @@
           > .state-button,
           > .flairselectbtn,
           > .redditSingleClick {
-            visibility: visible;
+            visibility: hidden;
+          }
+
+          &.option  {
+            display: none;
           }
         }
       }
 
+      &:hover {
+        .flat-list.buttons {
+          > li {
+            &.save-button > a,
+            > .toggle,
+            > .state-button,
+            > .flairselectbtn,
+            > .redditSingleClick {
+              visibility: visible;
+            }
+          }
+        }
+      }
     }
   }
 }
