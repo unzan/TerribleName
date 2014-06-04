@@ -1,0 +1,14 @@
+.subButtons {
+  padding: 1em 0em !important;
+}
+
+.RESshortcutside,
+.RESDashboardToggle {
+  &,
+  &.remove {
+    @extend .tn-button;
+    font-size: 13px !important;
+    display: inline-block !important;
+  }
+}
+

@@ -1,0 +1,23 @@
+> #header {
+  background: $header-bg url($header-bg-image) left top no-repeat !important;
+
+  #sr-header-area {
+    background: $sr-header-bg !important;
+    color: $sr-header-fg;
+  }
+
+  #header-bottom-left {
+    background: none !important;
+    .tabmenu {
+      .selected {
+        a {
+          padding-bottom: 8px !important;
+        }
+      }
+    }
+  }
+
+  #header-bottom-right {
+    background: none !important;
+  }
+}

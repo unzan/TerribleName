@@ -1,0 +1,33 @@
+.link {
+  .RES-keyNav-activeElement {
+    background: none !important;
+    border-right: solid 4px $res-active-element-color;
+  }
+}
+
+.thing {
+  .tagline {
+    .author {
+      &.moderator {
+        &,
+        &:hover {
+          background-color: $mod-tag-fg !important;
+        }
+      }
+
+      &.admin {
+        &,
+        &:hover {
+          background-color: $admin-tag-fg !important;
+        }
+      }
+
+      &.submitter {
+        &,
+        &:hover {
+          background-color: $link-fg !important;
+        }
+      }
+    }
+  }
+}

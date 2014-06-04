@@ -1,0 +1,65 @@
+#siteTable.linklisting {
+  .thing {
+    background: none !important;
+
+    &:not(:first-child) {
+      border-top: solid 1px darken($res-night-bg, 4%) !important;
+      @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%));
+    }
+
+    .entry {
+      > .title {
+        > a.title {
+          &,
+          &.loggedin {
+            color: $link-fg !important;
+          }
+        }
+
+        > .domain > a {
+          color: darken($res-night-fg, 30%) !important;
+        }
+      }
+
+
+      &.RES-keyNav-activeElement {
+        background: none !important;
+        .usertext > .usertext-body .md p {
+          background: none !important;
+        }
+      }
+    }
+
+    &.stickied .RES-keyNav-activeElement.entry > .title > a,
+    &.stickied .entry > .title > a {
+      &,
+      &.loggedin {
+        color: $sticky-link-fg !important;
+      }
+    }
+
+    .stickied-tagline {
+      background: darken($sticky-tag-bg, 15%);
+    }
+
+    .thumbnail {
+      &::before {
+        color: $res-default-thumbnail-fg;
+        text-shadow: none;
+      }
+
+      &.default::before {
+        background-color: lighten($res-night-bg, 10%);
+      }
+
+      img {
+        background-color: lighten($res-night-bg, 20%);
+      }
+    }
+  }
+}
+
+.thing .midcol > .arrow {
+  @extend .arrow;
+}
+

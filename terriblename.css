@@ -1486,7 +1486,7 @@ input[type=password] {
 }
 
 .tn-icon, .titlebox .leavemoderator::before,
-.titlebox form.leavecontributor-button::before, .arrow.up, .res-nightmode .thing .midcol > .up.arrow, .arrow.up:hover, .arrow.down, .res-nightmode .thing .midcol > .down.arrow, .arrow.down:hover, .arrow.upmod, .res-nightmode .thing .midcol > .upmod.arrow, .arrow.upmod:hover, .arrow.downmod, .res-nightmode .thing .midcol > .downmod.arrow, .arrow.downmod:hover, .sidecontentbox .collapse-button, #mail,
+.titlebox form.leavecontributor-button::before, .arrow.up, .res.res-nightmode .thing .midcol > .up.arrow, .arrow.up:hover, .arrow.down, .res.res-nightmode .thing .midcol > .down.arrow, .arrow.down:hover, .arrow.upmod, .res.res-nightmode .thing .midcol > .upmod.arrow, .arrow.upmod:hover, .arrow.downmod, .res.res-nightmode .thing .midcol > .downmod.arrow, .arrow.downmod:hover, .sidecontentbox .collapse-button, #mail,
 #modmail,
 .gilded-icon::before, .icon-menu .reddit-edit::before,
 .icon-menu .moderator-mail::before,
@@ -1518,19 +1518,19 @@ input[type=password] {
   background-position: -96px -16px;
 }
 
-.arrow, .res-nightmode .thing .midcol > .arrow {
+.arrow, .res.res-nightmode .thing .midcol > .arrow {
   margin-left: 3px;
 }
-.arrow.up, .res-nightmode .thing .midcol > .up.arrow, .arrow.up:hover, .res-nightmode .thing .midcol > .up.arrow:hover {
+.arrow.up, .res.res-nightmode .thing .midcol > .up.arrow, .arrow.up:hover, .res.res-nightmode .thing .midcol > .up.arrow:hover {
   background-position: -64px -80px !important;
 }
-.arrow.upmod, .res-nightmode .thing .midcol > .upmod.arrow, .arrow.upmod:hover, .res-nightmode .thing .midcol > .upmod.arrow:hover {
+.arrow.upmod, .res.res-nightmode .thing .midcol > .upmod.arrow, .arrow.upmod:hover, .res.res-nightmode .thing .midcol > .upmod.arrow:hover {
   background-position: -48px -80px !important;
 }
-.arrow.down, .res-nightmode .thing .midcol > .down.arrow, .arrow.down:hover, .res-nightmode .thing .midcol > .down.arrow:hover {
+.arrow.down, .res.res-nightmode .thing .midcol > .down.arrow, .arrow.down:hover, .res.res-nightmode .thing .midcol > .down.arrow:hover {
   background-position: -96px 0px !important;
 }
-.arrow.downmod, .res-nightmode .thing .midcol > .downmod.arrow, .arrow.downmod:hover, .res-nightmode .thing .midcol > .downmod.arrow:hover {
+.arrow.downmod, .res.res-nightmode .thing .midcol > .downmod.arrow, .arrow.downmod:hover, .res.res-nightmode .thing .midcol > .downmod.arrow:hover {
   background-position: -80px -80px !important;
 }
 
@@ -1847,8 +1847,9 @@ table.diff tbody .diff_header:not([id]) {
   background-position: -64px -48px;
   opacity: 1;
 }
-.res #RESAccountSwitcherIcon {
-  background: none !important;
+.res #RESMainGearOverlay {
+  border: none !important;
+  margin-top: 1px !important;
 }
 .res #RESAccountSwitcherIconOverlay,
 .res #RESAccountSwitcherIcon {
@@ -1865,29 +1866,92 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res #RESAccountSwitcherIconOverlay {
   background-image: none !important;
+  border: none !important;
+  margin-left: 1px !important;
+  margin-top: 2px !important;
 }
 .res #RESAccountSwitcherIconOverlay::after {
   border-top-color: #d1d1d1;
 }
-.res #REScommentNavBox {
-  z-index: 9000;
-}
-.res #REScommentNavToggle {
-  clear: both;
-  display: block;
-  margin-top: 5px;
-  white-space: nowrap;
-}
-.res .RESSubscriptionButton.unsubscribe {
-  color: #6b6b6b !important;
-}
-.res .RES-keyNav-activeElement,
-.res .commentarea .RES-keyNav-activeElement .md,
-.res .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
+.res #RESAccountSwitcherIconOverlay,
+.res #RESAccountSwitcherIcon,
+.res #RESMainGearOverlay {
   background: none !important;
 }
-.res .link .RES-keyNav-activeElement {
-  border-right: solid 4px rgba(203, 75, 22, 0.5);
+.res #RESShortcutsEditContainer,
+.res #RESShortcutsSort,
+.res #RESShortcutsAdd,
+.res #RESShortcutsRight,
+.res #RESShortcutsLeft,
+.res #RESShortcutsTrash {
+  background: transparent !important;
+}
+.res #RESShortcutsSort,
+.res #RESShortcutsAdd,
+.res #RESShortcutsRight,
+.res #RESShortcutsLeft,
+.res #RESShortcutsTrash {
+  color: #848484;
+  font-size: 13px;
+}
+.res .subbarlink.RESShortcutsCurrentSub {
+  color: #eaeaea !important;
+}
+.res .RESDropdownList {
+  margin-top: 6px;
+  margin-right: 8px;
+  border: none;
+  padding: 6px 0px;
+  text-shadow: 0px 1px 1px black;
+  background: #242221;
+  -webkit-border-radius: 0px 0px 3px 3px;
+  -moz-border-radius: 0px 0px 3px 3px;
+  border-radius: 0px 0px 3px 3px;
+  -webkit-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+}
+.res .RESDropdownList::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 6px;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+}
+.res .RESDropdownList > #RESDropdownOptions > li,
+.res .RESDropdownList > li {
+  border: none;
+  padding: 3px 14px !important;
+  font-weight: normal;
+  color: #9e9e9e;
+}
+.res .RESDropdownList > #RESDropdownOptions > li:not(:first-child),
+.res .RESDropdownList > li:not(:first-child) {
+  border-top: solid 1px #312e2d;
+}
+.res .RESDropdownList > #RESDropdownOptions > li:not(:last-child),
+.res .RESDropdownList > li:not(:last-child) {
+  border-bottom: solid 1px #171515;
+}
+.res .RESDropdownList > #RESDropdownOptions > li:hover,
+.res .RESDropdownList > li:hover {
+  background: #373332;
+  color: #d1d1d1;
+  border-top-color: #474240;
+}
+.res .RESDropdownList > #RESDropdownOptions > li > a,
+.res .RESDropdownList > li > a {
+  color: inherit;
+}
+.res .RESDropdownList > #RESDropdownOptions > li > a:hover,
+.res .RESDropdownList > li > a:hover {
+  color: inherit;
+  background: none;
 }
 .res .subButtons {
   padding: 1em 0em !important;
@@ -1897,6 +1961,28 @@ table.diff tbody .diff_header:not([id]) {
 .res .RESDashboardToggle.remove {
   font-size: 13px !important;
   display: inline-block !important;
+}
+.res .link .RES-keyNav-activeElement {
+  background: none !important;
+  border-right: solid 4px rgba(203, 75, 22, 0.5);
+}
+.res .thing .tagline .author.moderator, .res .thing .tagline .author.moderator:hover {
+  background-color: #6f8000 !important;
+}
+.res .thing .tagline .author.admin, .res .thing .tagline .author.admin:hover {
+  background-color: #dc322f !important;
+}
+.res .thing .tagline .author.submitter, .res .thing .tagline .author.submitter:hover {
+  background-color: #2177b4 !important;
+}
+.res #REScommentNavBox {
+  z-index: 9000;
+}
+.res #REScommentNavToggle {
+  clear: both;
+  display: block;
+  margin-top: 5px;
+  white-space: nowrap;
 }
 .res #REScommentNavToggle > span:not(:first-child) {
   display: none;
@@ -1938,24 +2024,73 @@ table.diff tbody .diff_header:not([id]) {
 .res .menuarea .dropdown.lightdrop {
   margin-right: 10px;
 }
-.res #RESShortcutsEditContainer,
-.res #RESShortcutsSort,
-.res #RESShortcutsAdd,
-.res #RESShortcutsRight,
-.res #RESShortcutsLeft,
-.res #RESShortcutsTrash {
-  background: transparent !important;
+.res .RESSubscriptionButton.unsubscribe {
+  color: #6b6b6b !important;
 }
-.res #RESShortcutsSort,
-.res #RESShortcutsAdd,
-.res #RESShortcutsRight,
-.res #RESShortcutsLeft,
-.res #RESShortcutsTrash {
-  color: #848484;
-  font-size: 13px;
+.res .commentarea .RES-keyNav-activeElement.entry .noncollapsed,
+.res .commentarea .RES-keyNav-activeElement .md {
+  background: none !important;
 }
-.res .subbarlink.RESShortcutsCurrentSub {
-  color: #eaeaea !important;
+.res .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
+  outline: dashed 1px rgba(203, 75, 22, 0.5);
+}
+.res .commentarea .comment .tagline {
+  display: block !important;
+}
+.res .commentarea .comment .child,
+.res .commentarea .comment .showreplies {
+  border-left: none !important;
+}
+.res .commentarea .comment .expando-button {
+  float: none;
+  display: inline-block;
+  padding: 0px !important;
+  margin: 0em 0.3em;
+}
+.res .commentarea .comment .expando-button:hover {
+  text-decoration: none !important;
+}
+.res .commentarea .usertext > .usertext-edit textarea {
+  width: 660px;
+}
+.res.comments-page .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
 }
 .res button.RESBigEditorPop,
 .res .RESMacroDropdownTitle,
@@ -2008,37 +2143,6 @@ table.diff tbody .diff_header:not([id]) {
 .res.wiki-page button.RESBigEditorPop {
   margin: 10px 15px 0px 8px;
 }
-.res .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
-  outline: dashed 1px rgba(203, 75, 22, 0.5);
-}
-.res .commentarea .comment .tagline {
-  display: block !important;
-}
-.res .commentarea .comment .child,
-.res .commentarea .comment .showreplies {
-  border-left: none !important;
-}
-.res .commentarea .comment .expando-button {
-  float: none;
-  display: inline-block;
-  padding: 0px !important;
-  margin: 0em 0.3em;
-}
-.res .commentarea .comment .expando-button:hover {
-  text-decoration: none !important;
-}
-.res .commentarea .usertext > .usertext-edit textarea {
-  width: 660px;
-}
-.res .thing .tagline .author.moderator, .res .thing .tagline .author.moderator:hover {
-  background-color: #6f8000 !important;
-}
-.res .thing .tagline .author.admin, .res .thing .tagline .author.admin:hover {
-  background-color: #dc322f !important;
-}
-.res .thing .tagline .author.submitter, .res .thing .tagline .author.submitter:hover {
-  background-color: #2177b4 !important;
-}
 .res .markdownEditor {
   overflow: hidden;
   padding: 2px;
@@ -2075,45 +2179,6 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res .markdownEditor > a:nth-child(10)::before {
   background-position: 0px 0px;
-}
-.res.comments-page .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
 }
 .res .RESDialogSmall.livePreview {
   border: solid 1px rgba(0, 0, 0, 0.2);
@@ -2189,211 +2254,55 @@ table.diff tbody .diff_header:not([id]) {
   top: 40px;
   margin: 0px !important;
 }
-
-.res-nightmode body {
+.res.res-nightmode body {
   color: #eaeaea;
 }
-.res-nightmode body,
-.res-nightmode body .content {
+.res.res-nightmode body,
+.res.res-nightmode body .content {
   background: #111111 url("%%dark-noise%%") left top repeat !important;
 }
-.res-nightmode .md pre,
-.res-nightmode .md code,
-.res-nightmode .md blockquote {
-  background: #282828;
-}
-.res-nightmode .md pre > code {
-  color: skyblue;
-  border-color: #3c3c3c;
-}
-.res-nightmode.res > #header {
-  background: #111111 url("%%banner%%") left top no-repeat !important;
-}
-.res-nightmode.res > #header > #header-bottom-left {
-  background: none !important;
-}
-.res-nightmode .infobar, .res-nightmode .linkinfo,
-.res-nightmode .content.submit .info-notice,
-.content.submit .res-nightmode .info-notice,
-.res-nightmode .linkinfo,
-.res-nightmode .content.submit,
-.res-nightmode .subscribers,
-.res-nightmode .commentarea > .menuarea,
-.res-nightmode .users-online,
-.res-nightmode .info-notice {
+.res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
+.res.res-nightmode .content.submit .info-notice,
+.content.submit .res.res-nightmode .info-notice,
+.res.res-nightmode .linkinfo,
+.res.res-nightmode .content.submit,
+.res.res-nightmode .subscribers,
+.res.res-nightmode .commentarea > .menuarea,
+.res.res-nightmode .users-online,
+.res.res-nightmode .info-notice {
   background: #2b2b2b !important;
   border: solid 1px #444444 !important;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.res-nightmode .subscribers,
-.res-nightmode .users-online {
-  width: 137px;
+.res.res-nightmode > #header {
+  background: #111111 url("%%banner%%") left top no-repeat !important;
 }
-.res-nightmode .side .spacer > #search input,
-.res-nightmode #newlink.submit .formtabs-content .roundfield-content textarea,
-.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content textarea,
-.fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content textarea,
-.res-nightmode #newlink.submit .formtabs-content .roundfield-content input#url,
-.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content input#url,
-.fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content input#url,
-.res-nightmode #newlink.submit .formtabs-content .roundfield-content input#sr-autocomplete,
-.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content input#sr-autocomplete,
-.fancy-settings .res-nightmode #newlink.submit .linefield .roundfield-content input#sr-autocomplete,
-.res-nightmode textarea,
-.res-nightmode input[type=text],
-.res-nightmode .usertext > .usertext-edit > div > textarea,
-.res-nightmode .usertext-edit.viewSource > div > textarea,
-.res-nightmode input[type=password] {
-  background: #111111 !important;
-  color: #9e9e9e !important;
-  border: solid 1px #3c3c3c !important;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.res-nightmode #header #sr-header-area {
+.res.res-nightmode > #header #sr-header-area {
   background: rgba(0, 0, 0, 0.5) !important;
   color: #848484;
 }
-.res-nightmode #header #header-bottom-left {
+.res.res-nightmode > #header #header-bottom-left {
   background: none !important;
 }
-.res-nightmode #header #header-bottom-left .tabmenu .selected a {
+.res.res-nightmode > #header #header-bottom-left .tabmenu .selected a {
   padding-bottom: 8px !important;
 }
-.res-nightmode #header #header-bottom-right {
+.res.res-nightmode > #header #header-bottom-right {
   background: none !important;
 }
-.res-nightmode .side {
-  background: none !important;
-  margin: 1em 1em 1em 2em !important;
-}
-.res-nightmode .side .titlebox,
-.res-nightmode .side .sidebox,
-.res-nightmode .side .sidebox .spacer,
-.res-nightmode .side .leavemoderator,
-.res-nightmode .side .titlebox form.flairtoggle {
-  background: none !important;
-}
-.res-nightmode .side .sidebox {
-  border: none !important;
-  overflow: visible !important;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-}
-.res-nightmode .side .morelink a {
-  color: white;
-}
-.res-nightmode .side .morelink a:focus {
-  outline: none !important;
-}
-.res-nightmode .side .morelink a:active {
-  -webkit-box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
-  -moz-box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
-  box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
-}
-.res-nightmode .side .icon-menu a {
-  background-color: transparent;
-}
-.res-nightmode .side .icon-menu a:hover {
-  background: -webkit-linear-gradient(top, #2b2b2b, #1e1e1e);
-  background: -moz-linear-gradient(top, #2b2b2b, #1e1e1e);
-  background: -o-linear-gradient(top, #2b2b2b, #1e1e1e);
-  background: linear-gradient(top, #2b2b2b, #1e1e1e);
-}
-.res-nightmode .thing .expando-button.collapsed, .res-nightmode .thing .expando-button.collapsed:hover, .res-nightmode .thing .expando-button.expanded, .res-nightmode .thing .expando-button.expanded:hover {
+.res.res-nightmode .thing .expando-button.collapsed, .res.res-nightmode .thing .expando-button.collapsed:hover, .res.res-nightmode .thing .expando-button.expanded, .res.res-nightmode .thing .expando-button.expanded:hover {
   background: #2b2b2b !important;
 }
-.res-nightmode .thing .expando-button.toggleImage.image.collapsed.expanded, .res-nightmode .thing .expando-button.expanded {
+.res.res-nightmode .thing .toggleImage.image.collapsed.expanded.expando-button, .res.res-nightmode .thing .expando-button.expanded {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.res-nightmode #siteTable.linklisting .thing {
-  background: none !important;
-}
-.res-nightmode #siteTable.linklisting .thing:not(:first-child) {
-  border-top: solid 1px #070707 !important;
-  -webkit-box-shadow: inset 0px 1px 0px #252525;
-  -moz-box-shadow: inset 0px 1px 0px #252525;
-  box-shadow: inset 0px 1px 0px #252525;
-}
-.res-nightmode #siteTable.linklisting .thing .entry > .title > a.title, .res-nightmode #siteTable.linklisting .thing .entry > .title > a.title.loggedin {
-  color: #2177b4 !important;
-}
-.res-nightmode #siteTable.linklisting .thing .entry > .title > .domain > a {
-  color: #9e9e9e !important;
-}
-.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement {
-  background: none !important;
-}
-.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement .usertext > .usertext-body .md p {
-  background: none !important;
-}
-.res-nightmode #siteTable.linklisting .thing.stickied .RES-keyNav-activeElement.entry > .title > a, .res-nightmode #siteTable.linklisting .thing.stickied .RES-keyNav-activeElement.entry > .title > a.loggedin, .res-nightmode #siteTable.linklisting .thing.stickied .entry > .title > a, .res-nightmode #siteTable.linklisting .thing.stickied .entry > .title > a.loggedin {
-  color: #596600 !important;
-}
-.res-nightmode #siteTable.linklisting .thing .stickied-tagline {
-  background: #424d00;
-}
-.res-nightmode #siteTable.linklisting .thing .thumbnail::before {
-  color: rgba(255, 255, 255, 0.3);
-  text-shadow: none;
-}
-.res-nightmode #siteTable.linklisting .thing .thumbnail.default::before {
-  background-color: #2b2b2b;
-}
-.res-nightmode #siteTable.linklisting .thing .thumbnail img {
-  background-color: #444444;
-}
-.res-nightmode .comment > .entry .usertext {
-  background: none !important;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.res-nightmode .comment > .entry .usertext::before {
-  display: none;
-}
-.res-nightmode .submit-page .tabmenu.formtab > li > a {
-  background: #2b2b2b;
-  color: #9e9e9e !important;
-  border: none !important;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-.res-nightmode .submit-page .tabmenu.formtab > li.selected > a {
-  background: #444444;
-  color: #eaeaea !important;
-  border: none !important;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.res-nightmode .submit-page .tabmenu.formtab > li.selected > a::after {
-  display: none;
-}
-.res-nightmode .submit-page #newlink.submit.content {
-  background: #191919 !important;
-}
-.res-nightmode .submit-page #newlink.submit.content .formtabs-content, .res-nightmode .submit-page #newlink.submit.content .fancy-settings .linefield, .fancy-settings .res-nightmode .submit-page #newlink.submit.content .linefield,
-.res-nightmode .submit-page #newlink.submit.content .roundfield {
-  background: none;
-  border: none !important;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.res-nightmode .commentarea > .menuarea {
-  color: #eaeaea;
-}
-.res-nightmode .bottom-area > button.RESBigEditorPop,
-.res-nightmode .markdownEditor > a,
-.res-nightmode .nav-buttons > .nextprev > a {
+.res.res-nightmode .bottom-area > button.RESBigEditorPop,
+.res.res-nightmode .markdownEditor > a,
+.res.res-nightmode .nav-buttons > .nextprev > a {
   border-color: #6f6f6f;
   color: #eaeaea;
   background: -webkit-linear-gradient(top, #5e5e5e, #515151);
@@ -2401,9 +2310,9 @@ table.diff tbody .diff_header:not([id]) {
   background: -o-linear-gradient(top, #5e5e5e, #515151);
   background: linear-gradient(top, #5e5e5e, #515151);
 }
-.res-nightmode .bottom-area > button.RESBigEditorPop:active,
-.res-nightmode .markdownEditor > a:active,
-.res-nightmode .nav-buttons > .nextprev > a:active {
+.res.res-nightmode .bottom-area > button.RESBigEditorPop:active,
+.res.res-nightmode .markdownEditor > a:active,
+.res.res-nightmode .nav-buttons > .nextprev > a:active {
   background: -webkit-linear-gradient(top, #444444, #373737);
   background: -moz-linear-gradient(top, #444444, #373737);
   background: -o-linear-gradient(top, #444444, #373737);
@@ -2412,33 +2321,149 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
-.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
-.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
-.res-nightmode .commentarea > .menuarea > .spacer .toggle .togglebutton,
-.res-nightmode #REScommentSubToggle,
-.res-nightmode .commentNavSortType {
-  border-color: #353535;
-  background: -webkit-linear-gradient(top, #252525, #161616);
-  background: -moz-linear-gradient(top, #252525, #161616);
-  background: -o-linear-gradient(top, #252525, #161616);
-  background: linear-gradient(top, #252525, #161616);
-}
-.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop:active,
-.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse:active,
-.res-nightmode .commentarea > .menuarea > .spacer .toggle .togglebutton:active,
-.res-nightmode #REScommentSubToggle:active,
-.res-nightmode .commentNavSortType:active {
-  background: -webkit-linear-gradient(top, #202020, #111111);
-  background: -moz-linear-gradient(top, #202020, #111111);
-  background: -o-linear-gradient(top, #202020, #111111);
-  background: linear-gradient(top, #202020, #111111);
-  -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
-}
-.res-nightmode .nav-buttons > .nextprev {
+.res.res-nightmode .nav-buttons > .nextprev {
   color: #eaeaea;
 }
-.res-nightmode .nav-buttons > .nextprev > .separator {
+.res.res-nightmode .nav-buttons > .nextprev > .separator {
   border-left: none;
+}
+.res.res-nightmode .subscribers,
+.res.res-nightmode .users-online {
+  width: 137px;
+}
+.res.res-nightmode .side {
+  background: none !important;
+  margin: 1em 1em 1em 2em !important;
+}
+.res.res-nightmode .side .titlebox,
+.res.res-nightmode .side .sidebox,
+.res.res-nightmode .side .sidebox .spacer,
+.res.res-nightmode .side .leavemoderator,
+.res.res-nightmode .side .titlebox form.flairtoggle {
+  background: none !important;
+}
+.res.res-nightmode .side .sidebox {
+  border: none !important;
+  overflow: visible !important;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.res.res-nightmode .side .morelink a {
+  color: white;
+}
+.res.res-nightmode .side .morelink a:focus {
+  outline: none !important;
+}
+.res.res-nightmode .side .morelink a:active {
+  -webkit-box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
+  -moz-box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
+  box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
+}
+.res.res-nightmode .side .icon-menu a {
+  background-color: transparent;
+}
+.res.res-nightmode .side .icon-menu a:hover {
+  background: -webkit-linear-gradient(top, #2b2b2b, #1e1e1e);
+  background: -moz-linear-gradient(top, #2b2b2b, #1e1e1e);
+  background: -o-linear-gradient(top, #2b2b2b, #1e1e1e);
+  background: linear-gradient(top, #2b2b2b, #1e1e1e);
+}
+.res.res-nightmode #siteTable.linklisting .thing {
+  background: none !important;
+}
+.res.res-nightmode #siteTable.linklisting .thing:not(:first-child) {
+  border-top: solid 1px #070707 !important;
+  -webkit-box-shadow: inset 0px 1px 0px #252525;
+  -moz-box-shadow: inset 0px 1px 0px #252525;
+  box-shadow: inset 0px 1px 0px #252525;
+}
+.res.res-nightmode #siteTable.linklisting .thing .entry > .title > a.title, .res.res-nightmode #siteTable.linklisting .thing .entry > .title > a.title.loggedin {
+  color: #2177b4 !important;
+}
+.res.res-nightmode #siteTable.linklisting .thing .entry > .title > .domain > a {
+  color: #9e9e9e !important;
+}
+.res.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement {
+  background: none !important;
+}
+.res.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement .usertext > .usertext-body .md p {
+  background: none !important;
+}
+.res.res-nightmode #siteTable.linklisting .thing.stickied .RES-keyNav-activeElement.entry > .title > a, .res.res-nightmode #siteTable.linklisting .thing.stickied .RES-keyNav-activeElement.entry > .title > a.loggedin, .res.res-nightmode #siteTable.linklisting .thing.stickied .entry > .title > a, .res.res-nightmode #siteTable.linklisting .thing.stickied .entry > .title > a.loggedin {
+  color: #596600 !important;
+}
+.res.res-nightmode #siteTable.linklisting .thing .stickied-tagline {
+  background: #424d00;
+}
+.res.res-nightmode #siteTable.linklisting .thing .thumbnail::before {
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: none;
+}
+.res.res-nightmode #siteTable.linklisting .thing .thumbnail.default::before {
+  background-color: #2b2b2b;
+}
+.res.res-nightmode #siteTable.linklisting .thing .thumbnail img {
+  background-color: #444444;
+}
+.res.res-nightmode .side .spacer > #search input,
+.res.res-nightmode #newlink.submit .formtabs-content .roundfield-content textarea,
+.res.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content textarea,
+.fancy-settings .res.res-nightmode #newlink.submit .linefield .roundfield-content textarea,
+.res.res-nightmode #newlink.submit .formtabs-content .roundfield-content input#url,
+.res.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content input#url,
+.fancy-settings .res.res-nightmode #newlink.submit .linefield .roundfield-content input#url,
+.res.res-nightmode #newlink.submit .formtabs-content .roundfield-content input#sr-autocomplete,
+.res.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content input#sr-autocomplete,
+.fancy-settings .res.res-nightmode #newlink.submit .linefield .roundfield-content input#sr-autocomplete,
+.res.res-nightmode textarea,
+.res.res-nightmode input[type=text],
+.res.res-nightmode .usertext > .usertext-edit > div > textarea,
+.res.res-nightmode .usertext-edit.viewSource > div > textarea,
+.res.res-nightmode input[type=password] {
+  background: #111111 !important;
+  color: #9e9e9e !important;
+  border: solid 1px #3c3c3c !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.res.res-nightmode .submit-page .tabmenu.formtab > li > a {
+  background: #2b2b2b;
+  color: #9e9e9e !important;
+  border: none !important;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.res.res-nightmode .submit-page .tabmenu.formtab > li.selected > a {
+  background: #444444;
+  color: #eaeaea !important;
+  border: none !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.res.res-nightmode .submit-page .tabmenu.formtab > li.selected > a::after {
+  display: none;
+}
+.res.res-nightmode .submit-page #newlink.submit.content {
+  background: #191919 !important;
+}
+.res.res-nightmode .submit-page #newlink.submit.content .formtabs-content, .res.res-nightmode .submit-page #newlink.submit.content .fancy-settings .linefield, .fancy-settings .res.res-nightmode .submit-page #newlink.submit.content .linefield,
+.res.res-nightmode .submit-page #newlink.submit.content .roundfield {
+  background: none;
+  border: none !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.res.res-nightmode .md pre,
+.res.res-nightmode .md code,
+.res.res-nightmode .md blockquote {
+  background: #282828;
+}
+.res.res-nightmode .md pre > code {
+  color: skyblue;
+  border-color: #3c3c3c;
 }

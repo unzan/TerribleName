@@ -29,9 +29,7 @@
     left: 0px;
     right: 0px;
     @include linear-gradient(top, $menu-bar-bg, darken($menu-bar-bg, 5%));
-    @include shadow(
-    inset 0px 1px 0px lighten($menu-bar-bg, 10%),
-    inset 0px -1px 0px darken($menu-bar-bg, 9%));
+    @include shadow(inset 0px 1px 0px lighten($menu-bar-bg, 10%), inset 0px -1px 0px darken($menu-bar-bg, 9%));
   }
 
   .tabmenu {

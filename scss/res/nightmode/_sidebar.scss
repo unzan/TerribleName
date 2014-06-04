@@ -1,0 +1,46 @@
+.subscribers,
+.users-online {
+  width: 137px;
+}
+
+.side {
+  background: none !important;
+  margin: 1em 1em 1em 2em !important;
+
+  .titlebox,
+  .sidebox,
+  .sidebox .spacer,
+  .leavemoderator,
+  .titlebox form.flairtoggle {
+    background: none !important;
+  }
+
+  .sidebox {
+    border: none !important;
+    overflow: visible !important;
+    @include rounded(0px);
+  }
+
+  .morelink {
+    a {
+      color: $button-fg;
+      &:focus {
+        outline: none !important;
+      }
+
+      &:active {
+        @include shadow(inset 0px 2px 2px darken($button-bg, 20%), 0px 1px 1px lighten($res-night-bg, 13%));
+      }
+    }
+  }
+
+  .icon-menu {
+    a {
+      background-color: transparent;
+      &:hover {
+        @include linear-gradient(top, lighten($res-night-bg, 10%), lighten($res-night-bg, 5%));
+      }
+    }
+  }
+}
+

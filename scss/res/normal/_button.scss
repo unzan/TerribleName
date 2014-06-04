@@ -1,0 +1,12 @@
+.expando-button.toggleImage.image {
+  @extend .expando-button;
+  &.collapsedExpando {
+    @extend .expando-button.selftext.collapsed;
+  }
+
+  &.collapsed.expanded,
+  &.expanded {
+    @extend .expando-button.selftext.expanded;
+  }
+}
+

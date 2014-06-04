@@ -1,0 +1,30 @@
+.comment {
+  > .entry {
+    .usertext {
+      background: none !important;
+      @include shadow(none);
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.commentarea > .menuarea {
+  color: $res-night-fg;
+}
+
+.commentarea > .menuarea > .spacer > .dropdown.lightdrop,
+.commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
+.commentarea > .menuarea > .spacer .toggle .togglebutton,
+#REScommentSubToggle,
+.commentNavSortType {
+  border-color: lighten($res-night-bg, 14%);
+  @include linear-gradient(top, lighten($res-night-bg, 8%), lighten($res-night-bg, 2%));
+
+  &:active {
+    @include linear-gradient(top, lighten($res-night-bg, 6%), $res-night-bg);
+    @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));
+  }
+}
+

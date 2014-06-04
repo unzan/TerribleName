@@ -1,0 +1,201 @@
+button.RESBigEditorPop,
+.RESMacroDropdownTitle,
+.markdownEditor > a {
+  @extend .tn-small-button;
+  width: 16px;
+  height: 16px;
+  display: block;
+  overflow: hidden;
+  text-indent: 50px;
+  position: relative;
+  margin-right: 2px;
+
+  &::before {
+    @extend .tn-icon;
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+  }
+}
+
+button.RESBigEditorPop {
+  float: right;
+  margin-left: 1em;
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  padding: 4px !important;
+  clear: both;
+  @include box-sizing(content-box);
+
+  &::before {
+    top: 4px;
+    left: 4px;
+    background-position: -16px -48px;
+  }
+}
+
+.RESMacroDropdownTitle::before {
+  background-position: -48px -32px;
+}
+
+.RESMacroDropdownTitleOverlay {
+  display: none !important;
+}
+
+.RESMacroWrappingSpan {
+  margin-left: 0px !important;
+}
+
+.RESMacroDropdown {
+  margin-top: 25px !important;
+}
+
+&.wiki-page button.RESBigEditorPop {
+  margin: 10px 15px 0px 8px;
+}
+
+.markdownEditor {
+  overflow: hidden;
+  padding: 2px;
+
+  > a {
+    float: left;
+
+    &:nth-child(1)::before {
+      // bold
+      background-position: -80px -64px;
+    }
+
+    &:nth-child(2)::before {
+      // italic
+      background-position: -80px -16px;
+    }
+
+    &:nth-child(3)::before {
+      // strikethrough
+      background-position: -48px -64px;
+    }
+
+    &:nth-child(4)::before {
+      // superscript
+      background-position: -32px -64px;
+    }
+
+    &:nth-child(5)::before {
+      // link
+      background-position: -64px 0px;
+    }
+
+    &:nth-child(6)::before {
+      // quote
+      background-position: -64px -64px;
+    }
+
+    &:nth-child(7)::before {
+      // codeblock
+      background-position: -80px -48px;
+    }
+    &:nth-child(8)::before {
+      // ul
+      background-position: -16px -64px;
+    }
+
+    &:nth-child(9)::before {
+      // ol
+      background-position: -80px 0px;
+    }
+
+    &:nth-child(10)::before {
+      // table
+      background-position: 0px 0px;
+    }
+  }
+}
+
+.RESDialogSmall.livePreview {
+  @extend .tn-raised-box;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  margin-top: 1em;
+}
+
+.usertext-edit .RESDialogSmall .md.RESDialogContents,
+.RESDialogSmall.livePreview {
+  padding: 0px !important;
+}
+
+.usertext-edit .RESDialogSmall .md.RESDialogContents {
+  margin: 0px 10px;
+}
+
+#BigPreview.md,
+.usertext-edit .RESDialogSmall .md.RESDialogContents,
+.RESDialogSmall.livePreview > .md {
+  background: none !important;
+  @include rounded(0px);
+  @include shadow(none);
+}
+
+#BigEditor > .RESDialogSmall.BERight,
+.RESDialogSmall.livePreview {
+  > h3 {
+    position: static;
+    color: $table-heading-fg;
+    background: $table-heading-bg;
+    font-weight: bold;
+    margin: 0px;
+    top: 0px;
+    @include rounded(3px 3px 0px 0px);
+    @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 2px 3px rgba(0, 0, 0, 0.14));
+  }
+}
+
+#BigEditor {
+  > .RESDialogSmall {
+    border: none !important;
+    @include shadow(0px 3px 5px rgba(0, 0, 0, 0.3));
+
+    &.BELeft {
+      background: $main-bg url($main-bg-image) left top repeat;
+      @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
+
+      > h3 {
+        display: none;
+      }
+
+      //why the fuck are there two fucking toolbars?
+      > div:not(.RESDialogContents) {
+        > .markdownEditor,
+        > .commentingAs {
+          display: none;
+        }
+      }
+
+      > .RESDialogContents {
+        top: 10px;
+        right: 8px;
+        padding: 0px;
+        padding-bottom: 100px;
+
+        .markdownEditor {
+          margin-bottom: 3px;
+        }
+
+        .commentingAs {
+          position: absolute;
+          bottom: 40px;
+          right: 0px;
+        }
+      }
+    }
+
+    &.BERight {
+      > .RESDialogContents {
+        top: 40px;
+        margin: 0px !important;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+body {
+  color: $res-night-fg;
+
+  &,
+  .content {
+    background: $res-night-bg url($res-night-bg-image) left top repeat !important;
+  }
+}
+
+.infobar,
+.linkinfo,
+.content.submit,
+.subscribers,
+.commentarea > .menuarea,
+.users-online,
+.info-notice {
+  background: lighten($res-night-bg, 10%) !important;
+  border: solid 1px lighten($res-night-bg, 20%) !important;
+  @include shadow(none);
+}
+

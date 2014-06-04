@@ -1,0 +1,51 @@
+.side .spacer > #search input,
+#newlink.submit .formtabs-content .roundfield-content textarea,
+#newlink.submit .formtabs-content .roundfield-content input#url,
+#newlink.submit .formtabs-content .roundfield-content input#sr-autocomplete,
+textarea,
+input[type=text],
+.usertext > .usertext-edit > div > textarea,
+.usertext-edit.viewSource > div > textarea,
+input[type=password] {
+  background: $res-night-bg !important;
+  color: darken($res-night-fg, 30%) !important;
+  border: solid 1px lighten($res-night-bg, 17%) !important;
+  @include shadow(none);
+}
+
+.submit-page {
+  .tabmenu.formtab {
+    > li {
+      > a {
+        background: lighten($res-night-bg, 10%);
+        color: darken($res-night-fg, 30%) !important;
+        border: none !important;
+        @include rounded(3px);
+      }
+
+      &.selected {
+        > a {
+          background: lighten($res-night-bg, 20%);
+          color: $res-night-fg !important;
+          border: none !important;
+          @include shadow(none);
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  #newlink.submit.content {
+    background: lighten($res-night-bg, 3%) !important;
+    .formtabs-content,
+    .roundfield {
+      background: none;
+      border: none !important;
+      @include shadow(none);
+    }
+  }
+}
+

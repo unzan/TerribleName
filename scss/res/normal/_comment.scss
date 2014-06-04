@@ -1,0 +1,141 @@
+#REScommentNavBox {
+  z-index: 9000;
+}
+
+#REScommentNavToggle {
+  clear: both;
+  display: block;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+#REScommentNavToggle > span:not(:first-child) {
+  display: none;
+}
+
+.commentNavSortType {
+  @extend .tn-small-button-shadowless;
+  margin: 0px;
+  border-right-style: none;
+  display: inline-block !important;
+  @include rounded(0px);
+
+  &:nth-child(2) {
+    @include rounded(3px 0px 0px 3px);
+  }
+
+  &:last-child {
+    @include rounded(0px 3px 3px 0px);
+    border-right-style: solid;
+  }
+
+}
+
+.menuarea {
+  @extend .tn-engraved-box;
+  display: inline-block;
+  min-width: 650px;
+  @include rounded(3px);
+
+  > .spacer > .dropdown-title,
+  #REScommentNavToggle > span:first-child {
+    width: 6em;
+    float: left;
+    margin: 3px 5px 0px 5px;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .dropdown.lightdrop {
+    margin-right: 10px;
+  }
+}
+
+.RESSubscriptionButton {
+  @extend .tn-small-button;
+  &.unsubscribe {
+    color: $small-button-fg !important;
+  }
+}
+
+
+.commentarea {
+  .RES-keyNav-activeElement {
+    &.entry .noncollapsed,
+    .md {
+      background: none !important;
+    }
+  }
+
+  .comment {
+    > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
+      outline: dashed 1px $res-active-element-color;
+    }
+
+    .tagline {
+      display: block !important;
+    }
+
+    .child,
+    .showreplies {
+      border-left: none !important;
+    }
+
+    .expando-button {
+      float: none;
+      display: inline-block;
+      padding: 0px !important;
+      margin: 0em 0.3em;
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+
+  }
+
+  .usertext > .usertext-edit textarea {
+    width: 660px;
+  }
+}
+
+&.comments-page {
+  .comment {
+    background: none !important;
+    .comment {
+      background: none !important;
+      .comment {
+        background: none !important;
+        .comment {
+          background: none !important;
+          .comment {
+            background: none !important;
+            .comment {
+              background: none !important;
+              .comment {
+                background: none !important;
+                .comment {
+                  background: none !important;
+                  .comment {
+                    background: none !important;
+                    .comment {
+                      background: none !important;
+                      .comment {
+                        background: none !important;
+                        .comment {
+                          background: none !important;
+                          .comment {
+                            background: none !important;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
