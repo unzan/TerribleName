@@ -114,7 +114,9 @@ input[type=password] {
 }
 
 .fancy-settings {
-  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+
   .linefield {
     @extend .formtabs-content;
     margin-bottom: 0.4em;

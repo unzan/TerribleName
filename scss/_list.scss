@@ -1,5 +1,9 @@
-.listing-page .linklisting {
-  overflow: hidden;
+.wiki-page,
+.listing-page {
+  > .content {
+    overflow: visible;
+    margin-right: ($sidebar-width + 30px);
+  }
 }
 
 .link {
