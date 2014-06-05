@@ -363,6 +363,10 @@ input[type=password] {
 .linefield.info-notice {
   width: 520px;
 }
+.roundfield .usertext-edit textarea,
+.linefield .usertext-edit textarea {
+  width: 500px;
+}
 
 #tab-grant,
 #tab-templates,
@@ -1111,14 +1115,20 @@ input[type=password] {
 }
 .commentarea .usertext .bottom-area > .help-toggle,
 .commentarea .usertext .bottom-area > .reddiquette {
-  margin-top: 1.3em;
+  margin-top: 9px;
 }
 .commentarea .menuarea {
   color: #111111;
   overflow: visible;
-  margin-top: 1em;
+  margin: 15px 0px 0px 10px;
   padding: 5px;
+  width: 650px;
   position: relative;
+}
+.commentarea .menuarea::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 .commentarea .menuarea .spacer {
   display: block;
@@ -1143,6 +1153,7 @@ input[type=password] {
   font-size: 1em;
 }
 .commentarea .menuarea .spacer > form.toggle {
+  vertical-align: middle;
   margin: 0px !important;
 }
 .commentarea .menuarea .spacer .dropdown.lightdrop > .selected {
@@ -1897,62 +1908,6 @@ table.diff tbody .diff_header:not([id]) {
 .res .subbarlink.RESShortcutsCurrentSub {
   color: #eaeaea !important;
 }
-.res .RESDropdownList {
-  margin-top: 6px;
-  margin-right: 8px;
-  border: none;
-  padding: 6px 0px;
-  text-shadow: 0px 1px 1px black;
-  background: #242221;
-  -webkit-border-radius: 0px 0px 3px 3px;
-  -moz-border-radius: 0px 0px 3px 3px;
-  border-radius: 0px 0px 3px 3px;
-  -webkit-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
-}
-.res .RESDropdownList::before {
-  content: '';
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  height: 6px;
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
-  background: linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
-}
-.res .RESDropdownList > #RESDropdownOptions > li,
-.res .RESDropdownList > li {
-  border: none;
-  padding: 3px 14px !important;
-  font-weight: normal;
-  color: #9e9e9e;
-}
-.res .RESDropdownList > #RESDropdownOptions > li:not(:first-child),
-.res .RESDropdownList > li:not(:first-child) {
-  border-top: solid 1px #312e2d;
-}
-.res .RESDropdownList > #RESDropdownOptions > li:not(:last-child),
-.res .RESDropdownList > li:not(:last-child) {
-  border-bottom: solid 1px #171515;
-}
-.res .RESDropdownList > #RESDropdownOptions > li:hover,
-.res .RESDropdownList > li:hover {
-  background: #373332;
-  color: #d1d1d1;
-  border-top-color: #474240;
-}
-.res .RESDropdownList > #RESDropdownOptions > li > a,
-.res .RESDropdownList > li > a {
-  color: inherit;
-}
-.res .RESDropdownList > #RESDropdownOptions > li > a:hover,
-.res .RESDropdownList > li > a:hover {
-  color: inherit;
-  background: none;
-}
 .res .subButtons {
   padding: 1em 0em !important;
 }
@@ -2026,6 +1981,9 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res .RESSubscriptionButton.unsubscribe {
   color: #6b6b6b !important;
+}
+.res .commentarea .RES-keyNav-activeElement {
+  background: none !important;
 }
 .res .commentarea .RES-keyNav-activeElement.entry .noncollapsed,
 .res .commentarea .RES-keyNav-activeElement .md {
@@ -2117,15 +2075,15 @@ table.diff tbody .diff_header:not([id]) {
   width: 16px !important;
   height: 16px !important;
   min-width: 16px !important;
-  padding: 4px !important;
+  padding: 2px 3px 3px 2px !important;
   clear: both;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 .res button.RESBigEditorPop::before {
-  top: 4px;
-  left: 4px;
+  top: 3px;
+  left: 3px;
   background-position: -16px -48px;
 }
 .res .RESMacroDropdownTitle::before {
@@ -2141,7 +2099,7 @@ table.diff tbody .diff_header:not([id]) {
   margin-top: 25px !important;
 }
 .res.wiki-page button.RESBigEditorPop {
-  margin: 10px 15px 0px 8px;
+  margin: 16px 15px 0px 8px;
 }
 .res .markdownEditor {
   overflow: hidden;
@@ -2253,6 +2211,30 @@ table.diff tbody .diff_header:not([id]) {
 .res #BigEditor > .RESDialogSmall.BERight > .RESDialogContents {
   top: 40px;
   margin: 0px !important;
+}
+.res .RESCharCounter {
+  padding: 2px 8px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0px !important;
+  background: -webkit-linear-gradient(top, #6b6b6b, #515151);
+  background: -moz-linear-gradient(top, #6b6b6b, #515151);
+  background: -o-linear-gradient(top, #6b6b6b, #515151);
+  background: linear-gradient(top, #6b6b6b, #515151);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+.res .RESCharCounter.tooLong {
+  color: white;
+  background: -webkit-linear-gradient(top, #dc322f, #b9221f);
+  background: -moz-linear-gradient(top, #dc322f, #b9221f);
+  background: -o-linear-gradient(top, #dc322f, #b9221f);
+  background: linear-gradient(top, #dc322f, #b9221f);
 }
 .res.res-nightmode body {
   color: #eaeaea;

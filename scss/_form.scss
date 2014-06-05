@@ -31,6 +31,10 @@ input[type=password] {
   &.info-notice {
     width: 520px;
   }
+
+  .usertext-edit textarea {
+    width: 500px;
+  }
 }
 
 #tab-grant,

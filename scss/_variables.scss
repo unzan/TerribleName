@@ -149,7 +149,9 @@ $res-popup-bg: #5F99CF;
 $res-temp-sort-bg: rgba(0, 0, 0, 0.2);
 $res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);
 $res-current-sub-fg: lighten($sr-header-fg, 40%);
-
+$res-char-counter-fg: $white;
+$res-char-counter-bg: darken($main-bg, 50%);
+$res-char-counter-too-long-bg: $red;
 
 // set this to 1 if you want to have line number at the left of codeblock
 $show-line-num-in-codeblock: 0;

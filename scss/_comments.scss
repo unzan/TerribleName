@@ -24,7 +24,7 @@
     .bottom-area {
       > .help-toggle,
       > .reddiquette {
-        margin-top: 1.3em;
+        margin-top: 9px;
       }
     }
   }
@@ -32,9 +32,17 @@
   .menuarea {
     color: $main-fg;
     overflow: visible;
-    margin-top: 1em;
+    margin: 15px 0px 0px 10px;
     padding: 5px;
+    width: 650px;
     position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
 
     .spacer {
       display: block;
@@ -64,6 +72,7 @@
       }
 
       > form.toggle {
+        vertical-align: middle;
         margin: 0px !important;
       }
 
