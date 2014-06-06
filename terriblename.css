@@ -2241,12 +2241,12 @@ table.diff tbody .diff_header:not([id]) {
   background: -o-linear-gradient(top, #dc322f, #b9221f);
   background: linear-gradient(top, #dc322f, #b9221f);
 }
-.res.res-nightmode body {
+.res.res-nightmode {
   color: #eaeaea;
-}
-.res.res-nightmode body,
-.res.res-nightmode body .content {
   background: #111111 url("%%dark-noise%%") left top repeat !important;
+}
+.res.res-nightmode > .content {
+  background: none !important;
 }
 .res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
 .res.res-nightmode .content.submit .info-notice,
