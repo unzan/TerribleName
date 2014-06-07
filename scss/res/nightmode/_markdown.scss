@@ -11,4 +11,8 @@
       border-color: lighten($res-night-bg, 17%);
     }
   }
+
+  hr {
+    background: lighten($res-night-bg, 9%);
+  }
 }

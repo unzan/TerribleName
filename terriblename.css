@@ -34,7 +34,7 @@ hr {
   overflow: hidden;
 }
 
-.tn-engraved-box, .commentarea .menuarea .spacer > .toggle > .option.error.active, .subscribers,
+.tn-engraved-box, .menuarea .spacer > .toggle > .option.error.active, .subscribers,
 .users-online, .res .menuarea {
   padding: 5px;
   background: rgba(0, 0, 0, 0.14);
@@ -123,7 +123,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: inset 0px 2px 0px #9d3a11, 0px 2px 2px rgba(255, 255, 255, 0.7);
 }
 
-.tn-small-button-default, .flairselector .flairoptionpane ul > li:hover, .commentarea .menuarea .drop-choices.lightdrop,
+.tn-small-button-default, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .tn-small-button,
 .nav-buttons .nextprev > a,
 .wiki-page .pageactions > .wikiaction,
@@ -136,10 +136,10 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.tn-small-button-default, .flairselector .flairoptionpane ul > li:hover, .commentarea .menuarea .drop-choices.lightdrop,
+.tn-small-button-default, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .tn-small-button-shadowless,
-.commentarea .menuarea .spacer .toggle .togglebutton,
-.commentarea .menuarea .spacer .dropdown.lightdrop,
+.menuarea .spacer .toggle .togglebutton,
+.menuarea .spacer .dropdown.lightdrop,
 .res .commentNavSortType,
 .tn-small-button,
 .nav-buttons .nextprev > a,
@@ -160,14 +160,14 @@ input[type=submit]:active, .res .RESshortcutside:active,
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.tn-small-button-default:hover, .flairselector .flairoptionpane ul > li:hover, .commentarea .menuarea .drop-choices.lightdrop:hover, .tn-small-button-default:focus, .flairselector .flairoptionpane ul > li:focus:hover, .commentarea .menuarea .drop-choices.lightdrop:focus,
+.tn-small-button-default:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop:hover, .tn-small-button-default:focus, .flairselector .flairoptionpane ul > li:focus:hover, .menuarea .drop-choices.lightdrop:focus,
 .tn-small-button-shadowless:hover,
-.commentarea .menuarea .spacer .toggle .togglebutton:hover,
-.commentarea .menuarea .spacer .dropdown.lightdrop:hover,
+.menuarea .spacer .toggle .togglebutton:hover,
+.menuarea .spacer .dropdown.lightdrop:hover,
 .res .commentNavSortType:hover,
 .tn-small-button-shadowless:focus,
-.commentarea .menuarea .spacer .toggle .togglebutton:focus,
-.commentarea .menuarea .spacer .dropdown.lightdrop:focus,
+.menuarea .spacer .toggle .togglebutton:focus,
+.menuarea .spacer .dropdown.lightdrop:focus,
 .res .commentNavSortType:focus,
 .tn-small-button:hover,
 .nav-buttons .nextprev > a:hover,
@@ -188,8 +188,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 
 .tn-small-button-pressed, .flairselector .flairoptionpane ul > li:active, .wiki-page .pageactions > .wikiaction.wikiaction-current,
 .tn-small-button-shadowless:active,
-.commentarea .menuarea .spacer .toggle .togglebutton:active,
-.commentarea .menuarea .spacer .dropdown.lightdrop:active,
+.menuarea .spacer .toggle .togglebutton:active,
+.menuarea .spacer .dropdown.lightdrop:active,
 .res .commentNavSortType:active,
 .tn-small-button:active,
 .nav-buttons .nextprev > a:active,
@@ -561,6 +561,149 @@ input[type=password] {
 
 .clearflairtemplates-button {
   margin: 1em 0.5em;
+}
+
+.menuarea {
+  color: #111111;
+  overflow: visible;
+  margin: 15px 0px 0px 10px;
+  padding: 5px;
+  width: 650px;
+  position: relative;
+  border: none !important;
+}
+.menuarea::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.menuarea .spacer {
+  display: block;
+  float: left;
+  margin: 0px 5px 0px 0px;
+}
+.menuarea .spacer:first-child {
+  position: relative;
+}
+.menuarea .spacer .toggle .togglebutton,
+.menuarea .spacer .dropdown.lightdrop,
+.menuarea .spacer .dropdown-title {
+  display: block;
+  float: left;
+}
+.menuarea .spacer .dropdown-title {
+  margin-right: 5px;
+  margin-top: 3px;
+}
+.menuarea .spacer .toggle .togglebutton,
+.menuarea .spacer .dropdown.lightdrop {
+  font-size: 1em;
+}
+.menuarea .spacer > form.toggle {
+  vertical-align: middle;
+  margin: 0px !important;
+}
+.menuarea .spacer .dropdown.lightdrop > .selected {
+  text-decoration: none;
+  color: inherit;
+  padding-right: 0px;
+  background: none;
+}
+.menuarea .spacer .dropdown.lightdrop > .selected::after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  margin-left: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  border-left: solid 4px transparent;
+  border-right: solid 4px transparent;
+  border-top: solid 4px #6b6b6b;
+}
+.menuarea .spacer > .help-hoverable {
+  display: none;
+  z-index: 3000;
+  left: 30%;
+  bottom: 110%;
+  width: 30em;
+  color: #ffeea9;
+  position: absolute;
+  background: #ffeea9;
+  padding: 4px 6px;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.menuarea .spacer > .help-hoverable::before {
+  color: #111111;
+  content: attr(title);
+}
+.menuarea .spacer > .help-hoverable:nth-child(2) {
+  left: 10%;
+}
+.menuarea .spacer > .toggle a {
+  font-size: 1em;
+  color: #2177b4;
+}
+.menuarea .spacer > .toggle:hover + .help-hoverable {
+  display: block;
+}
+.menuarea .spacer > .toggle > .option.error.active {
+  background: #c6c6c6;
+  position: absolute;
+  z-index: 4000;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  font-size: 1em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.menuarea .drop-choices.lightdrop {
+  z-index: 9000;
+  padding: 4px;
+  margin-top: 6px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.menuarea .drop-choices.lightdrop a.choice {
+  color: inherit;
+  vertical-align: middle;
+  padding: 2px 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.menuarea .drop-choices.lightdrop a.choice:hover {
+  background: #cb4b16;
+  color: white;
+}
+.menuarea .drop-choices.lightdrop > form {
+  position: relative;
+  min-width: 10em;
+}
+.menuarea .drop-choices.lightdrop > form .RES-sort-button {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  float: none;
+  right: 2px;
+  top: 2px;
+  width: 2.3em;
+  padding: 0px 3px;
+  overflow: hidden;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.menuarea .drop-choices.lightdrop > form .RES-sort-button::before {
+  content: 'temp     ';
 }
 
 #header {
@@ -1095,11 +1238,13 @@ input[type=password] {
 }
 
 .commentarea {
-  overflow: hidden;
   border-top: solid 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+.commentarea .menuarea {
+  color: #111111;
 }
 .commentarea .menuarea + .nestedlisting {
   clear: both;
@@ -1120,147 +1265,6 @@ input[type=password] {
 .commentarea .usertext .bottom-area > .help-toggle,
 .commentarea .usertext .bottom-area > .reddiquette {
   margin-top: 9px;
-}
-.commentarea .menuarea {
-  color: #111111;
-  overflow: visible;
-  margin: 15px 0px 0px 10px;
-  padding: 5px;
-  width: 650px;
-  position: relative;
-}
-.commentarea .menuarea::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-.commentarea .menuarea .spacer {
-  display: block;
-  float: left;
-  margin: 0px 5px 0px 0px;
-}
-.commentarea .menuarea .spacer:first-child {
-  position: relative;
-}
-.commentarea .menuarea .spacer .toggle .togglebutton,
-.commentarea .menuarea .spacer .dropdown.lightdrop,
-.commentarea .menuarea .spacer .dropdown-title {
-  display: block;
-  float: left;
-}
-.commentarea .menuarea .spacer .dropdown-title {
-  margin-right: 5px;
-  margin-top: 3px;
-}
-.commentarea .menuarea .spacer .toggle .togglebutton,
-.commentarea .menuarea .spacer .dropdown.lightdrop {
-  font-size: 1em;
-}
-.commentarea .menuarea .spacer > form.toggle {
-  vertical-align: middle;
-  margin: 0px !important;
-}
-.commentarea .menuarea .spacer .dropdown.lightdrop > .selected {
-  text-decoration: none;
-  color: inherit;
-  padding-right: 0px;
-  background: none;
-}
-.commentarea .menuarea .spacer .dropdown.lightdrop > .selected::after {
-  content: '';
-  width: 0px;
-  height: 0px;
-  margin-left: 4px;
-  display: inline-block;
-  vertical-align: middle;
-  border-left: solid 4px transparent;
-  border-right: solid 4px transparent;
-  border-top: solid 4px #6b6b6b;
-}
-.commentarea .menuarea .spacer > .help-hoverable {
-  display: none;
-  z-index: 3000;
-  left: 30%;
-  bottom: 110%;
-  width: 30em;
-  color: #ffeea9;
-  position: absolute;
-  background: #ffeea9;
-  padding: 4px 6px;
-  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-.commentarea .menuarea .spacer > .help-hoverable::before {
-  color: #111111;
-  content: attr(title);
-}
-.commentarea .menuarea .spacer > .help-hoverable:nth-child(2) {
-  left: 10%;
-}
-.commentarea .menuarea .spacer > .toggle a {
-  font-size: 1em;
-  color: #2177b4;
-}
-.commentarea .menuarea .spacer > .toggle:hover + .help-hoverable {
-  display: block;
-}
-.commentarea .menuarea .spacer > .toggle > .option.error.active {
-  background: #c6c6c6;
-  position: absolute;
-  z-index: 4000;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  text-align: center;
-  font-size: 1em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-.commentarea .menuarea .drop-choices.lightdrop {
-  z-index: 9000;
-  padding: 4px;
-  margin-top: 6px;
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-}
-.commentarea .menuarea .drop-choices.lightdrop a.choice {
-  color: inherit;
-  vertical-align: middle;
-  padding: 2px 4px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-.commentarea .menuarea .drop-choices.lightdrop a.choice:hover {
-  background: #cb4b16;
-  color: white;
-}
-.commentarea .menuarea .drop-choices.lightdrop > form {
-  position: relative;
-  min-width: 10em;
-}
-.commentarea .menuarea .drop-choices.lightdrop > form .RES-sort-button {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.2);
-  float: none;
-  right: 2px;
-  top: 2px;
-  width: 2.3em;
-  padding: 0px 3px;
-  overflow: hidden;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-.commentarea .menuarea .drop-choices.lightdrop > form .RES-sort-button::before {
-  content: 'temp     ';
 }
 
 .comment .midcol {
@@ -2248,20 +2252,28 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode > .content {
   background: none !important;
 }
-.res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
-.res.res-nightmode .content.submit .info-notice,
-.content.submit .res.res-nightmode .info-notice,
-.res.res-nightmode .linkinfo,
-.res.res-nightmode .content.submit,
+.res.res-nightmode .tn-dark-engraved-box, .res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
 .res.res-nightmode .subscribers,
 .res.res-nightmode .commentarea > .menuarea,
 .res.res-nightmode .users-online,
-.res.res-nightmode .info-notice {
-  background: #2b2b2b !important;
-  border: solid 1px #444444 !important;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+.res.res-nightmode .info-notice, .res.res-nightmode .side .sidecontentbox .content {
+  background: -webkit-linear-gradient(top, #252525, #1e1e1e);
+  background: -moz-linear-gradient(top, #252525, #1e1e1e);
+  background: -o-linear-gradient(top, #252525, #1e1e1e);
+  background: linear-gradient(top, #252525, #1e1e1e);
+  -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
+  -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
+}
+.res.res-nightmode .tn-dark-raised-box, .res.res-nightmode .formtabs-content, .res.res-nightmode .fancy-settings .linefield, .fancy-settings .res.res-nightmode .linefield {
+  border: none !important;
+  background: -webkit-linear-gradient(top, #252525, #1e1e1e);
+  background: -moz-linear-gradient(top, #252525, #1e1e1e);
+  background: -o-linear-gradient(top, #252525, #1e1e1e);
+  background: linear-gradient(top, #252525, #1e1e1e);
+  -webkit-box-shadow: inset 0px 1px 0px #3f3f3f, 0px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 1px 0px #3f3f3f, 0px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 0px #3f3f3f, 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
 .res.res-nightmode > #header {
   background: #111111 url("%%banner%%") left top no-repeat !important;
@@ -2322,6 +2334,16 @@ table.diff tbody .diff_header:not([id]) {
   background: none !important;
   margin: 1em 1em 1em 2em !important;
 }
+.res.res-nightmode .side .sidecontentbox .title h1 {
+  border-bottom: none;
+}
+.res.res-nightmode .side .sidecontentbox .content {
+  margin-top: 4px;
+  border: none;
+}
+.res.res-nightmode .side .titlebox > .bottom {
+  border-top-color: #2b2b2b;
+}
 .res.res-nightmode .side .titlebox,
 .res.res-nightmode .side .sidebox,
 .res.res-nightmode .side .sidebox .spacer,
@@ -2348,13 +2370,26 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
 }
 .res.res-nightmode .side .icon-menu a {
+  color: #9e9e9e;
   background-color: transparent;
 }
 .res.res-nightmode .side .icon-menu a:hover {
-  background: -webkit-linear-gradient(top, #2b2b2b, #1e1e1e);
-  background: -moz-linear-gradient(top, #2b2b2b, #1e1e1e);
-  background: -o-linear-gradient(top, #2b2b2b, #1e1e1e);
-  background: linear-gradient(top, #2b2b2b, #1e1e1e);
+  color: #eaeaea;
+  -webkit-box-shadow: inset 0px 1px 0px #3f3f3f, 0px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 1px 0px #3f3f3f, 0px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 0px #3f3f3f, 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.res.res-nightmode .side .icon-menu a:hover, .res.res-nightmode .side .icon-menu a:active {
+  border-color: #191919;
+  background: -webkit-linear-gradient(top, #2b2b2b, #252525);
+  background: -moz-linear-gradient(top, #2b2b2b, #252525);
+  background: -o-linear-gradient(top, #2b2b2b, #252525);
+  background: linear-gradient(top, #2b2b2b, #252525);
+}
+.res.res-nightmode .side .icon-menu a:active {
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px #3f3f3f;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px #3f3f3f;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px #3f3f3f;
 }
 .res.res-nightmode #siteTable.linklisting .thing {
   background: none !important;
@@ -2453,4 +2488,10 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .md pre > code {
   color: skyblue;
   border-color: #3c3c3c;
+}
+.res.res-nightmode .md hr {
+  background: #282828;
+}
+.res #RESConsole {
+  display: none !important;
 }

@@ -7,6 +7,22 @@
   background: none !important;
   margin: 1em 1em 1em 2em !important;
 
+  .sidecontentbox {
+    .title h1 {
+      border-bottom: none;
+    }
+
+    .content {
+      @extend .tn-dark-engraved-box;
+      margin-top: 4px;
+      border: none;
+    }
+  }
+
+  .titlebox > .bottom {
+    border-top-color: lighten($res-night-bg, 10%);
+  }
+
   .titlebox,
   .sidebox,
   .sidebox .spacer,
@@ -36,9 +52,21 @@
 
   .icon-menu {
     a {
+      color: darken($res-night-fg, 30%);
       background-color: transparent;
       &:hover {
-        @include linear-gradient(top, lighten($res-night-bg, 10%), lighten($res-night-bg, 5%));
+        color: $res-night-fg;
+        @include shadow(inset 0px 1px 0px lighten($res-night-bg, 18%), 0px 1px 1px rgba(0, 0, 0, 0.2));
+      }
+
+      &:hover,
+      &:active {
+        border-color: lighten($res-night-bg, 3%);
+        @include linear-gradient(top, lighten($res-night-bg, 10%), lighten($res-night-bg, 8%));
+      }
+
+      &:active {
+        @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px lighten($res-night-bg, 18%));
       }
     }
   }
