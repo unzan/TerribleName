@@ -9,11 +9,13 @@
   &.res-nightmode {
     @import "res/nightmode/basic";
     @import "res/nightmode/header";
+    @import "res/nightmode/form";
     @import "res/nightmode/button";
     @import "res/nightmode/sidebar";
     @import "res/nightmode/list";
-    @import "res/nightmode/form";
+    @import "res/nightmode/comment";
     @import "res/nightmode/markdown";
+    @import "res/nightmode/editor";
   }
 
   #RESConsole {

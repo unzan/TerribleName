@@ -1,3 +1,13 @@
+.tn-dark-button {
+  @extend .tn-dark-raised-box;
+  color: $res-night-fg;
+  @include rounded(3px);
+
+  &:active {
+    @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.3), 0px 1px 0px lighten($res-night-bg, 20%));
+  }
+}
+
 .thing {
   .expando-button {
     &.collapsed,
@@ -15,12 +25,13 @@
   }
 }
 
-.bottom-area > button.RESBigEditorPop,
-.markdownEditor > a,
+//.bottom-area > button.RESBigEditorPop,
+//.markdownEditor > a,
 .nav-buttons > .nextprev > a {
-  border-color: lighten($res-night-bg, 37%);
+  @extend .tn-dark-raised-box;
+  //border-color: lighten($res-night-bg, 37%);
   color: $res-night-fg;
-  @include linear-gradient(top, lighten($res-night-bg, 30%), lighten($res-night-bg, 25%));
+  //@include linear-gradient(top, lighten($res-night-bg, 30%), lighten($res-night-bg, 25%));
   &:active {
     @include linear-gradient(top, lighten($res-night-bg, 20%), lighten($res-night-bg, 15%));
     @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));

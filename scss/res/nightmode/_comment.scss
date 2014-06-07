@@ -1,10 +1,15 @@
 .comment {
   > .entry {
-    .usertext {
-      background: none !important;
-      @include shadow(none);
-      &::before {
-        display: none;
+    > .noncollapsed {
+      > .usertext {
+        @extend .tn-dark-raised-box;
+        //background: none !important;
+        //@include shadow(none);
+        &::before {
+          top: -7px;
+          border-bottom-color: lighten($res-night-bg, 8%);
+          //display: none;
+        }
       }
     }
   }
