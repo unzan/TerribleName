@@ -133,6 +133,7 @@
   a[href$="/spoiler"] {
     background: $spoiler-bg !important;
     color: $spoiler-bg !important;
+    text-decoration: none;
     &:hover {
       color: $spoiler-fg !important;
     }
