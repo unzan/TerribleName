@@ -1239,6 +1239,7 @@ input[type=password] {
 .md a[href$="/spoiler"] {
   background: #111111 !important;
   color: #111111 !important;
+  text-decoration: none;
 }
 .md a[href$="/spoiler"]:hover {
   color: white !important;
