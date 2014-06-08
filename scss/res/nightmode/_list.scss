@@ -28,6 +28,11 @@
           background: none !important;
         }
       }
+
+      .usertext > .usertext-body > .md {
+        @extend .tn-dark-raised-box;
+        color: $res-night-fg;
+      }
     }
 
     &.stickied .RES-keyNav-activeElement.entry > .title > a,

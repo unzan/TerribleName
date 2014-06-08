@@ -17,8 +17,6 @@
     @import "res/nightmode/markdown";
     @import "res/nightmode/editor";
   }
-
-  #RESConsole {
-    display: none !important;
-  }
 }
+
+@import "res/stupid_fixes";

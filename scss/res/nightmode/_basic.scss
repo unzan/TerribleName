@@ -17,15 +17,8 @@
   @include shadow(inset 0px 1px 0px lighten($res-night-bg, 18%), 0px 1px 2px rgba(0, 0, 0, 0.3));
 }
 
-.infobar,
-.linkinfo,
 .subscribers,
-.commentarea > .menuarea,
 .users-online,
 .info-notice {
   @extend .tn-dark-engraved-box;
-}
-
-.formtabs-content {
-  @extend .tn-dark-raised-box;
 }

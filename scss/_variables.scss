@@ -145,6 +145,8 @@ $res-night-bg-image: '%%dark-noise%%';
 $res-night-bg: lighten($black, 5%);
 $res-night-bg: $black;
 $res-night-fg: $gray;
+$res-dark-button-bg: lighten($res-night-bg, 40%);
+$res-dark-button-fg: $res-night-bg;
 $res-night-code-fg: #87CEEB;
 $res-active-element-color: rgba($orange, 0.5);
 $res-popup-bg: #5F99CF;

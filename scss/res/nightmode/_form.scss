@@ -1,3 +1,7 @@
+form.submit.content {
+  background: none !important;
+}
+
 .side .spacer > #search input,
 #newlink.submit .formtabs-content .roundfield-content textarea,
 #newlink.submit .formtabs-content .roundfield-content input#url,
@@ -13,39 +17,38 @@ input[type=password] {
   @include shadow(none);
 }
 
-.submit-page {
-  .tabmenu.formtab {
-    > li {
+.tabmenu.formtab {
+  > li {
+    > a {
+      @extend .tn-dark-button;
+      color: $res-dark-button-fg !important;
+    }
+
+    &.selected {
       > a {
-        background: lighten($res-night-bg, 10%);
-        color: darken($res-night-fg, 30%) !important;
-        border: none !important;
-        @include rounded(3px);
-      }
-
-      &.selected {
-        > a {
-          background: lighten($res-night-bg, 20%);
-          color: $res-night-fg !important;
-          border: none !important;
-          @include shadow(none);
-
-          &::after {
-            display: none;
-          }
+        @extend .tn-dark-button-pressed;
+        &::after {
+          display: none;
         }
       }
     }
   }
+}
 
-  #newlink.submit.content {
-    background: lighten($res-night-bg, 3%) !important;
-    .formtabs-content,
-    .roundfield {
-      background: none;
-      border: none !important;
-      @include shadow(none);
-    }
+.infobar,
+.linkinfo {
+  @extend .tn-dark-raised-box;
+}
+
+.formtabs-content {
+  background: none;
+  border: none;
+  @include shadow(none);
+  .roundfield {
+    background: none !important;
   }
 }
 
+.menuarea {
+  @extend .tn-dark-engraved-box;
+}

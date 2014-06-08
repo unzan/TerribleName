@@ -2,7 +2,8 @@
   pre,
   code,
   blockquote {
-    background: lighten($res-night-bg, 9%);
+    color: $res-night-fg;
+    background: lighten($res-night-bg, 10%);
   }
 
   pre {
@@ -13,6 +14,6 @@
   }
 
   hr {
-    background: lighten($res-night-bg, 9%);
+    background: lighten($res-night-bg, 17%);
   }
 }

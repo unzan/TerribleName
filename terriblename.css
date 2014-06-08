@@ -62,7 +62,8 @@ hr {
 .tn-button, .morelink a, button,
 input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 .res .RESDashboardToggle,
-.res .RESDashboardToggle.remove {
+.res .RESDashboardToggle.remove, .res.res-nightmode button,
+.res.res-nightmode input[type=submit] {
   color: white;
   font-family: "Liberation Sans", Arial, sans-serif;
   padding: 2px 8px;
@@ -89,14 +90,17 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 }
 .tn-button:visited, .morelink a:visited, button:visited,
 input[type=submit]:visited, .res .RESshortcutside:visited,
-.res .RESDashboardToggle:visited {
+.res .RESDashboardToggle:visited, .res.res-nightmode button:visited,
+.res.res-nightmode input[type=submit]:visited {
   color: white;
 }
 .tn-button:hover, .morelink a:hover, button:hover,
 input[type=submit]:hover, .res .RESshortcutside:hover,
-.res .RESDashboardToggle:hover, .tn-button:focus, .morelink a:focus, button:focus,
+.res .RESDashboardToggle:hover, .res.res-nightmode button:hover,
+.res.res-nightmode input[type=submit]:hover, .tn-button:focus, .morelink a:focus, button:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
-.res .RESDashboardToggle:focus {
+.res .RESDashboardToggle:focus, .res.res-nightmode button:focus,
+.res.res-nightmode input[type=submit]:focus {
   color: white;
   text-decoration: none !important;
   background: -webkit-linear-gradient(top, #e25418, #b44214);
@@ -106,14 +110,17 @@ input[type=submit]:focus, .res .RESshortcutside:focus,
 }
 .tn-button:focus, .morelink a:focus, button:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
-.res .RESDashboardToggle:focus, .tn-button:active, .morelink a:active, button:active,
+.res .RESDashboardToggle:focus, .res.res-nightmode button:focus,
+.res.res-nightmode input[type=submit]:focus, .tn-button:active, .morelink a:active, button:active,
 input[type=submit]:active, .res .RESshortcutside:active,
-.res .RESDashboardToggle:active {
+.res .RESDashboardToggle:active, .res.res-nightmode button:active,
+.res.res-nightmode input[type=submit]:active {
   outline: none !important;
 }
 .tn-button:active, .morelink a:active, button:active,
 input[type=submit]:active, .res .RESshortcutside:active,
-.res .RESDashboardToggle:active {
+.res .RESDashboardToggle:active, .res.res-nightmode button:active,
+.res.res-nightmode input[type=submit]:active {
   background: -webkit-linear-gradient(top, #cb4b16, #9d3a11);
   background: -moz-linear-gradient(top, #cb4b16, #9d3a11);
   background: -o-linear-gradient(top, #cb4b16, #9d3a11);
@@ -2020,45 +2027,6 @@ table.diff tbody .diff_header:not([id]) {
 .res .commentarea .usertext > .usertext-edit textarea {
   width: 660px;
 }
-.res.comments-page .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
 .res button.RESBigEditorPop,
 .res .RESMacroDropdownTitle,
 .res .markdownEditor > a {
@@ -2252,11 +2220,9 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode > .content {
   background: none !important;
 }
-.res.res-nightmode .tn-dark-engraved-box, .res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
-.res.res-nightmode .subscribers,
-.res.res-nightmode .commentarea > .menuarea,
+.res.res-nightmode .tn-dark-engraved-box, .res.res-nightmode .subscribers,
 .res.res-nightmode .users-online,
-.res.res-nightmode .info-notice, .res.res-nightmode .side .sidecontentbox .content {
+.res.res-nightmode .info-notice, .res.res-nightmode .menuarea, .res.res-nightmode .side .sidecontentbox .content {
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
   background: -moz-linear-gradient(top, #252525, #1e1e1e);
   background: -o-linear-gradient(top, #252525, #1e1e1e);
@@ -2265,9 +2231,9 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
 }
-.res.res-nightmode .tn-dark-raised-box, .res.res-nightmode .formtabs-content, .res.res-nightmode .fancy-settings .linefield, .fancy-settings .res.res-nightmode .linefield, .res.res-nightmode .tn-dark-button, .res.res-nightmode button.RESBigEditorPop,
-.res.res-nightmode .RESMacroDropdownTitle,
-.res.res-nightmode .markdownEditor > a, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode .comment > .entry > .noncollapsed > .usertext {
+.res.res-nightmode .tn-dark-raised-box, .res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
+.res.res-nightmode .content.submit .info-notice,
+.content.submit .res.res-nightmode .info-notice, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext {
   border: none !important;
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
   background: -moz-linear-gradient(top, #252525, #1e1e1e);
@@ -2293,6 +2259,9 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode > #header #header-bottom-right {
   background: none !important;
 }
+.res.res-nightmode form.submit.content {
+  background: none !important;
+}
 .res.res-nightmode .side .spacer > #search input,
 .res.res-nightmode #newlink.submit .formtabs-content .roundfield-content textarea,
 .res.res-nightmode #newlink.submit .fancy-settings .linefield .roundfield-content textarea,
@@ -2315,50 +2284,60 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.res.res-nightmode .submit-page .tabmenu.formtab > li > a {
-  background: #2b2b2b;
-  color: #9e9e9e !important;
-  border: none !important;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+.res.res-nightmode .tabmenu.formtab > li > a {
+  color: #111111 !important;
 }
-.res.res-nightmode .submit-page .tabmenu.formtab > li.selected > a {
-  background: #444444;
-  color: #eaeaea !important;
-  border: none !important;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.res.res-nightmode .submit-page .tabmenu.formtab > li.selected > a::after {
+.res.res-nightmode .tabmenu.formtab > li.selected > a::after {
   display: none;
 }
-.res.res-nightmode .submit-page #newlink.submit.content {
-  background: #191919 !important;
-}
-.res.res-nightmode .submit-page #newlink.submit.content .formtabs-content, .res.res-nightmode .submit-page #newlink.submit.content .fancy-settings .linefield, .fancy-settings .res.res-nightmode .submit-page #newlink.submit.content .linefield,
-.res.res-nightmode .submit-page #newlink.submit.content .roundfield {
+.res.res-nightmode .formtabs-content, .res.res-nightmode .fancy-settings .linefield, .fancy-settings .res.res-nightmode .linefield {
   background: none;
-  border: none !important;
+  border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.res.res-nightmode .tn-dark-button, .res.res-nightmode button.RESBigEditorPop,
+.res.res-nightmode .formtabs-content .roundfield, .res.res-nightmode .fancy-settings .linefield .roundfield, .fancy-settings .res.res-nightmode .linefield .roundfield {
+  background: none !important;
+}
+.res.res-nightmode .tn-dark-button, .res.res-nightmode .tabmenu.formtab > li > a, .res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
+.res.res-nightmode .commentarea > .menuarea > .spacer > .toggle .togglebutton,
+.res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse, .res.res-nightmode .commentarea .commentNavSortType,
+.res.res-nightmode .commentarea #REScommentSubToggle, .res.res-nightmode button.RESBigEditorPop,
 .res.res-nightmode .RESMacroDropdownTitle,
 .res.res-nightmode .markdownEditor > a {
-  color: #eaeaea;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  color: #111111;
+  border: none;
+  text-shadow: 0px 1px 1px #898989;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: -webkit-linear-gradient(top, #777777, #515151);
+  background: -moz-linear-gradient(top, #777777, #515151);
+  background: -o-linear-gradient(top, #777777, #515151);
+  background: linear-gradient(top, #777777, #515151);
+  -webkit-box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.res.res-nightmode .tn-dark-button:active, .res.res-nightmode button.RESBigEditorPop:active,
+.res.res-nightmode .tn-dark-button-pressed, .res.res-nightmode .tabmenu.formtab > li.selected > a,
+.res.res-nightmode .tn-dark-button:active,
+.res.res-nightmode .tabmenu.formtab > li > a:active,
+.res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop:active,
+.res.res-nightmode .commentarea > .menuarea > .spacer > .toggle .togglebutton:active,
+.res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse:active,
+.res.res-nightmode .commentarea .commentNavSortType:active,
+.res.res-nightmode .commentarea #REScommentSubToggle:active,
+.res.res-nightmode button.RESBigEditorPop:active,
 .res.res-nightmode .RESMacroDropdownTitle:active,
 .res.res-nightmode .markdownEditor > a:active {
-  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3), 0px 1px 0px #444444;
-  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3), 0px 1px 0px #444444;
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3), 0px 1px 0px #444444;
+  background: -webkit-linear-gradient(top, #636363, #444444);
+  background: -moz-linear-gradient(top, #636363, #444444);
+  background: -o-linear-gradient(top, #636363, #444444);
+  background: linear-gradient(top, #636363, #444444);
+  -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .res.res-nightmode .thing .expando-button.collapsed, .res.res-nightmode .thing .expando-button.collapsed:hover, .res.res-nightmode .thing .expando-button.expanded, .res.res-nightmode .thing .expando-button.expanded:hover {
   background: #2b2b2b !important;
@@ -2367,6 +2346,11 @@ table.diff tbody .diff_header:not([id]) {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+}
+.res.res-nightmode button,
+.res.res-nightmode input[type=submit] {
+  padding-bottom: 3px;
+  text-transform: capitalize;
 }
 .res.res-nightmode .nav-buttons > .nextprev > a {
   color: #eaeaea;
@@ -2472,6 +2456,9 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement .usertext > .usertext-body .md p {
   background: none !important;
 }
+.res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md {
+  color: #eaeaea;
+}
 .res.res-nightmode #siteTable.linklisting .thing.stickied .RES-keyNav-activeElement.entry > .title > a, .res.res-nightmode #siteTable.linklisting .thing.stickied .RES-keyNav-activeElement.entry > .title > a.loggedin, .res.res-nightmode #siteTable.linklisting .thing.stickied .entry > .title > a, .res.res-nightmode #siteTable.linklisting .thing.stickied .entry > .title > a.loggedin {
   color: #596600 !important;
 }
@@ -2488,49 +2475,99 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode #siteTable.linklisting .thing .thumbnail img {
   background-color: #444444;
 }
-.res.res-nightmode .comment > .entry > .noncollapsed > .usertext::before {
+.res.res-nightmode .commentarea {
+  border-top-color: #070707;
+  -webkit-box-shadow: inset 0px 1px 0px #252525;
+  -moz-box-shadow: inset 0px 1px 0px #252525;
+  box-shadow: inset 0px 1px 0px #252525;
+}
+.res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext::before {
   top: -7px;
   border-bottom-color: #252525;
+}
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed {
+  background: none !important;
+}
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
+  background: none !important;
+}
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body > .md {
+  background: none !important;
+}
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body > .md p {
+  background: none !important;
 }
 .res.res-nightmode .commentarea > .menuarea {
   color: #eaeaea;
 }
-.res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
-.res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
-.res.res-nightmode .commentarea > .menuarea > .spacer .toggle .togglebutton,
-.res.res-nightmode #REScommentSubToggle,
-.res.res-nightmode .commentNavSortType {
-  border-color: #353535;
-  background: -webkit-linear-gradient(top, #252525, #161616);
-  background: -moz-linear-gradient(top, #252525, #161616);
-  background: -o-linear-gradient(top, #252525, #161616);
-  background: linear-gradient(top, #252525, #161616);
+.res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop > .selected::after {
+  border-top-color: #111111;
 }
-.res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop:active,
-.res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse:active,
-.res.res-nightmode .commentarea > .menuarea > .spacer .toggle .togglebutton:active,
-.res.res-nightmode #REScommentSubToggle:active,
-.res.res-nightmode .commentNavSortType:active {
-  background: -webkit-linear-gradient(top, #202020, #111111);
-  background: -moz-linear-gradient(top, #202020, #111111);
-  background: -o-linear-gradient(top, #202020, #111111);
-  background: linear-gradient(top, #202020, #111111);
-  -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
+.res.res-nightmode .commentarea .commentNavSortType {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.res.res-nightmode .commentarea .commentNavSortType:nth-child(2) {
+  -webkit-border-radius: 3px 0px 0px 3px;
+  -moz-border-radius: 3px 0px 0px 3px;
+  border-radius: 3px 0px 0px 3px;
+}
+.res.res-nightmode .commentarea .commentNavSortType:last-child {
+  -webkit-border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 3px 3px 0px;
 }
 .res.res-nightmode .md pre,
 .res.res-nightmode .md code,
 .res.res-nightmode .md blockquote {
-  background: #282828;
+  color: #eaeaea;
+  background: #2b2b2b;
 }
 .res.res-nightmode .md pre > code {
   color: skyblue;
   border-color: #3c3c3c;
 }
 .res.res-nightmode .md hr {
-  background: #282828;
+  background: #3c3c3c;
 }
-.res #RESConsole {
-  display: none !important;
+
+.res-commentBoxes .res.comments-page .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
+}
+.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background: none !important;
 }

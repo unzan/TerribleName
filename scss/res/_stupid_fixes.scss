@@ -1,0 +1,52 @@
+// look at these stupid selectors
+.res-commentBoxes {
+  &,
+  &.res-nightmode {
+    .res {
+      &,
+      &.res-nightmode {
+        &.comments-page {
+          .comment {
+            background: none !important;
+            .comment {
+              background: none !important;
+              .comment {
+                background: none !important;
+                .comment {
+                  background: none !important;
+                  .comment {
+                    background: none !important;
+                    .comment {
+                      background: none !important;
+                      .comment {
+                        background: none !important;
+                        .comment {
+                          background: none !important;
+                          .comment {
+                            background: none !important;
+                            .comment {
+                              background: none !important;
+                              .comment {
+                                background: none !important;
+                                .comment {
+                                  background: none !important;
+                                  .comment {
+                                    background: none !important;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

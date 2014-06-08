@@ -1,35 +1,68 @@
-.comment {
-  > .entry {
-    > .noncollapsed {
-      > .usertext {
-        @extend .tn-dark-raised-box;
-        //background: none !important;
-        //@include shadow(none);
-        &::before {
-          top: -7px;
-          border-bottom-color: lighten($res-night-bg, 8%);
-          //display: none;
+.commentarea {
+  border-top-color: darken($res-night-bg, 4%);
+  @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%));
+  .comment {
+    > .entry {
+      > .noncollapsed {
+        > .usertext {
+          @extend .tn-dark-raised-box;
+          &::before {
+            top: -7px;
+            border-bottom-color: lighten($res-night-bg, 8%);
+          }
+        }
+      }
+
+      &.RES-keyNav-activeElement {
+        > .noncollapsed {
+          background: none !important;
+          > .usertext {
+            > .usertext-body {
+              background: none !important;
+              > .md {
+                background: none !important;
+                p {
+                  background: none !important;
+                }
+              }
+            }
+          }
         }
       }
     }
   }
-}
 
-.commentarea > .menuarea {
-  color: $res-night-fg;
-}
+  > .menuarea {
+    color: $res-night-fg;
 
-.commentarea > .menuarea > .spacer > .dropdown.lightdrop,
-.commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
-.commentarea > .menuarea > .spacer .toggle .togglebutton,
-#REScommentSubToggle,
-.commentNavSortType {
-  border-color: lighten($res-night-bg, 14%);
-  @include linear-gradient(top, lighten($res-night-bg, 8%), lighten($res-night-bg, 2%));
+    > .spacer {
+      > .dropdown.lightdrop,
+      > .toggle .togglebutton,
+      > .drop-choices.lightdrop.inuse {
+        @extend .tn-dark-button;
+      }
 
-  &:active {
-    @include linear-gradient(top, lighten($res-night-bg, 6%), $res-night-bg);
-    @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.4));
+      > .dropdown.lightdrop > .selected::after {
+        border-top-color: $res-dark-button-fg;
+      }
+    }
+
+  }
+
+  .commentNavSortType,
+  #REScommentSubToggle {
+    @extend .tn-dark-button;
+  }
+
+  .commentNavSortType {
+    @include rounded(0px);
+    &:nth-child(2) {
+      @include rounded(3px 0px 0px 3px);
+    }
+
+    &:last-child {
+      @include rounded(0px 3px 3px 0px);
+    }
   }
 }
 
