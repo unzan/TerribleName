@@ -52,8 +52,18 @@ button.RESBigEditorPop {
   margin-top: 25px !important;
 }
 
-&.wiki-page button.RESBigEditorPop {
-  margin: 16px 15px 0px 8px;
+&.wiki-page {
+  button.RESBigEditorPop {
+    position: absolute;
+    float: none;
+    right: 15px;
+    top: 36px;
+    //margin: 16px 15px 0px 8px;
+  }
+
+  .wiki-page-content > #editform > div > .markdownEditor > .RESCharCounter {
+    margin-right: 30px;
+  }
 }
 
 .markdownEditor {

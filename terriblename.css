@@ -1664,6 +1664,9 @@ input[type=password] {
   background-position: -48px 0px;
 }
 
+.wiki-page > .content {
+  position: relative;
+}
 .wiki-page .infobar, .wiki-page .linkinfo,
 .wiki-page .content.submit .info-notice,
 .content.submit .wiki-page .info-notice {
@@ -2077,7 +2080,13 @@ table.diff tbody .diff_header:not([id]) {
   margin-top: 25px !important;
 }
 .res.wiki-page button.RESBigEditorPop {
-  margin: 16px 15px 0px 8px;
+  position: absolute;
+  float: none;
+  right: 15px;
+  top: 36px;
+}
+.res.wiki-page .wiki-page-content > #editform > div > .markdownEditor > .RESCharCounter {
+  margin-right: 30px;
 }
 .res .markdownEditor {
   overflow: hidden;

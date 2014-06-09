@@ -1,4 +1,8 @@
 .wiki-page {
+  > .content {
+    position: relative;
+  }
+
   .infobar {
     padding: 3px 8px;
     display: block;
