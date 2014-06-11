@@ -2224,7 +2224,7 @@ table.diff tbody .diff_header:not([id]) {
   background: linear-gradient(top, #dc322f, #b9221f);
 }
 .res.res-nightmode {
-  color: #eaeaea;
+  color: #d1d1d1;
   background: #111111 url("%%dark-noise%%") left top repeat !important;
 }
 .res.res-nightmode > .content {
@@ -2232,7 +2232,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .tn-dark-engraved-box, .res.res-nightmode .subscribers,
 .res.res-nightmode .users-online,
-.res.res-nightmode .info-notice, .res.res-nightmode .menuarea, .res.res-nightmode .side .sidecontentbox .content {
+.res.res-nightmode .info-notice, .res.res-nightmode .menuarea, .res.res-nightmode .side .sidecontentbox .content, .res.res-nightmode .RESCharCounter {
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
   background: -moz-linear-gradient(top, #252525, #1e1e1e);
   background: -o-linear-gradient(top, #252525, #1e1e1e);
@@ -2243,7 +2243,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .tn-dark-raised-box, .res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
 .res.res-nightmode .content.submit .info-notice,
-.content.submit .res.res-nightmode .info-notice, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext {
+.content.submit .res.res-nightmode .info-notice, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode .RESDialogSmall.livePreview > h3 {
   border: none !important;
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
   background: -moz-linear-gradient(top, #252525, #1e1e1e);
@@ -2288,7 +2288,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .usertext-edit.viewSource > div > textarea,
 .res.res-nightmode input[type=password] {
   background: #111111 !important;
-  color: #9e9e9e !important;
+  color: #848484 !important;
   border: solid 1px #3c3c3c !important;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -2313,7 +2313,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .tn-dark-button, .res.res-nightmode .tabmenu.formtab > li > a, .res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .toggle .togglebutton,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse, .res.res-nightmode .commentarea .commentNavSortType,
-.res.res-nightmode .commentarea #REScommentSubToggle, .res.res-nightmode button.RESBigEditorPop,
+.res.res-nightmode .commentarea #REScommentSubToggle, .res.res-nightmode.wiki-page .pageactions > .wikiaction, .res.res-nightmode button.RESBigEditorPop,
 .res.res-nightmode .RESMacroDropdownTitle,
 .res.res-nightmode .markdownEditor > a {
   color: #111111;
@@ -2330,7 +2330,7 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.res.res-nightmode .tn-dark-button-pressed, .res.res-nightmode .tabmenu.formtab > li.selected > a,
+.res.res-nightmode .tn-dark-button-pressed, .res.res-nightmode .tabmenu.formtab > li.selected > a, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
 .res.res-nightmode .tn-dark-button:active,
 .res.res-nightmode .tabmenu.formtab > li > a:active,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop:active,
@@ -2338,6 +2338,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse:active,
 .res.res-nightmode .commentarea .commentNavSortType:active,
 .res.res-nightmode .commentarea #REScommentSubToggle:active,
+.res.res-nightmode.wiki-page .pageactions > .wikiaction:active,
 .res.res-nightmode button.RESBigEditorPop:active,
 .res.res-nightmode .RESMacroDropdownTitle:active,
 .res.res-nightmode .markdownEditor > a:active {
@@ -2363,7 +2364,7 @@ table.diff tbody .diff_header:not([id]) {
   text-transform: capitalize;
 }
 .res.res-nightmode .nav-buttons > .nextprev > a {
-  color: #eaeaea;
+  color: #d1d1d1;
 }
 .res.res-nightmode .nav-buttons > .nextprev > a:active {
   background: -webkit-linear-gradient(top, #444444, #373737);
@@ -2375,7 +2376,7 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 .res.res-nightmode .nav-buttons > .nextprev {
-  color: #eaeaea;
+  color: #d1d1d1;
 }
 .res.res-nightmode .nav-buttons > .nextprev > .separator {
   border-left: none;
@@ -2424,11 +2425,11 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
 }
 .res.res-nightmode .side .icon-menu a {
-  color: #9e9e9e;
+  color: #848484;
   background-color: transparent;
 }
 .res.res-nightmode .side .icon-menu a:hover {
-  color: #eaeaea;
+  color: #d1d1d1;
   -webkit-box-shadow: inset 0px 1px 0px #3f3f3f, 0px 1px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0px 1px 0px #3f3f3f, 0px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 0px #3f3f3f, 0px 1px 1px rgba(0, 0, 0, 0.2);
@@ -2458,16 +2459,23 @@ table.diff tbody .diff_header:not([id]) {
   color: #2177b4 !important;
 }
 .res.res-nightmode #siteTable.linklisting .thing .entry > .title > .domain > a {
-  color: #9e9e9e !important;
+  color: #848484 !important;
+}
+.res.res-nightmode #siteTable.linklisting .thing .entry .flat-list.buttons > li a:hover,
+.res.res-nightmode #siteTable.linklisting .thing .entry .flat-list.buttons > li .redditSingleClick:hover {
+  background-color: #1e1e1e;
 }
 .res.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement {
+  background: none !important;
+}
+.res.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement .usertext > .usertext-body {
   background: none !important;
 }
 .res.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement .usertext > .usertext-body .md p {
   background: none !important;
 }
 .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md {
-  color: #eaeaea;
+  color: #d1d1d1;
 }
 .res.res-nightmode #siteTable.linklisting .thing.stickied .RES-keyNav-activeElement.entry > .title > a, .res.res-nightmode #siteTable.linklisting .thing.stickied .RES-keyNav-activeElement.entry > .title > a.loggedin, .res.res-nightmode #siteTable.linklisting .thing.stickied .entry > .title > a, .res.res-nightmode #siteTable.linklisting .thing.stickied .entry > .title > a.loggedin {
   color: #596600 !important;
@@ -2484,6 +2492,15 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode #siteTable.linklisting .thing .thumbnail img {
   background-color: #444444;
+}
+.res.res-nightmode .thing .tagline .author.submitter, .res.res-nightmode .thing .tagline .author.submitter:hover {
+  background-color: #195a89 !important;
+}
+.res.res-nightmode .thing .tagline .author.admin, .res.res-nightmode .thing .tagline .author.admin:hover {
+  background-color: #b9221f !important;
+}
+.res.res-nightmode .thing .tagline .author.moderator, .res.res-nightmode .thing .tagline .author.moderator:hover {
+  background-color: #424d00 !important;
 }
 .res.res-nightmode .commentarea {
   border-top-color: #070707;
@@ -2508,7 +2525,7 @@ table.diff tbody .diff_header:not([id]) {
   background: none !important;
 }
 .res.res-nightmode .commentarea > .menuarea {
-  color: #eaeaea;
+  color: #d1d1d1;
 }
 .res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop > .selected::after {
   border-top-color: #111111;
@@ -2528,18 +2545,126 @@ table.diff tbody .diff_header:not([id]) {
   -moz-border-radius: 0px 3px 3px 0px;
   border-radius: 0px 3px 3px 0px;
 }
+.res.res-nightmode.wiki-page .wiki-page-content .md.wiki {
+  color: #d1d1d1;
+}
+.res.res-nightmode.wiki-page .pageactions > .wikiaction {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.res.res-nightmode.wiki-page .pageactions > .wikiaction:first-child {
+  -webkit-border-radius: 3px 0px 0px 3px;
+  -moz-border-radius: 3px 0px 0px 3px;
+  border-radius: 3px 0px 0px 3px;
+}
+.res.res-nightmode.wiki-page .pageactions > .wikiaction:last-child {
+  -webkit-border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 3px 3px 0px;
+}
+.res.res-nightmode.wiki-page .md.wiki > .toc {
+  background: #2b2b2b;
+  border: solid 1px #444444;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.res.res-nightmode.wiki-page .md.wiki > .toc::before {
+  border-bottom-color: #515151;
+}
+.res.res-nightmode.wiki-page .md.wiki > .toc::after {
+  display: none;
+}
+.res.res-nightmode.wiki-page .md.wiki > .toc > ul {
+  background: none !important;
+}
+.res.res-nightmode.wiki-page .md.wiki > .toc > ul ul {
+  background: none !important;
+  border-left-color: #515151;
+}
+.res.res-nightmode .wiki-page .wiki-page-content .md.wiki,
+.res.res-nightmode .RESDialogSmall.livePreview {
+  border: none;
+  background: #191919 !important;
+  color: #d1d1d1 !important;
+}
+.res.res-nightmode .md a {
+  color: #268bd2;
+}
+.res.res-nightmode .md a:visited {
+  color: #6c71c4;
+}
 .res.res-nightmode .md pre,
 .res.res-nightmode .md code,
 .res.res-nightmode .md blockquote {
-  color: #eaeaea;
+  color: #d1d1d1;
   background: #2b2b2b;
 }
+.res.res-nightmode .md code {
+  color: #eb7443;
+  background: none;
+}
 .res.res-nightmode .md pre > code {
-  color: skyblue;
+  color: #eb7443;
   border-color: #3c3c3c;
 }
 .res.res-nightmode .md hr {
   background: #3c3c3c;
+}
+.res.res-nightmode .md h1,
+.res.res-nightmode .md h2,
+.res.res-nightmode .md h3,
+.res.res-nightmode .md h4,
+.res.res-nightmode .md h5,
+.res.res-nightmode .md h6 {
+  color: inherit !important;
+  background: none !important;
+}
+.res.res-nightmode .md h1,
+.res.res-nightmode .md h2 {
+  border-bottom-color: #848484 !important;
+}
+.res.res-nightmode .md td,
+.res.res-nightmode .md th {
+  border-color: #373737;
+}
+.res.res-nightmode .md th {
+  background: #373737;
+  color: #d1d1d1;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.res.res-nightmode .md tbody tr:hover {
+  background: #232323;
+}
+.res.res-nightmode .md a[href$="/spoiler"] {
+  background: #515151 !important;
+  color: #515151 !important;
+}
+.res.res-nightmode .md a[href$="/spoiler"]:hover {
+  color: #d1d1d1 !important;
+}
+.res.res-nightmode .RESDialogSmall.livePreview > h3 {
+  color: #d1d1d1;
+  border: none;
+}
+.res.res-nightmode .RESDialogSmall.livePreview .md a {
+  color: #2177b4 !important;
+}
+.res.res-nightmode .RESDialogSmall.livePreview .md a:visited {
+  color: #5358ba !important;
+}
+.res.res-nightmode .RESCharCounter {
+  color: #d1d1d1;
+}
+.res.res-nightmode .RESCharCounter.tooLong {
+  background: -webkit-linear-gradient(top, #b9221f, #8d1a18);
+  background: -moz-linear-gradient(top, #b9221f, #8d1a18);
+  background: -o-linear-gradient(top, #b9221f, #8d1a18);
+  background: linear-gradient(top, #b9221f, #8d1a18);
 }
 
 .res-commentBoxes .res.comments-page .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment {

@@ -3,3 +3,29 @@ button.RESBigEditorPop,
 .markdownEditor > a {
   @extend .tn-dark-button;
 }
+
+.RESDialogSmall.livePreview {
+  > h3 {
+    @extend .tn-dark-raised-box;
+    color: $res-night-fg;
+    border: none;
+  }
+
+  .md {
+    a {
+      color: $link-fg !important;
+      &:visited {
+        color: $link-fg-visited !important;
+      }
+    }
+  }
+}
+
+.RESCharCounter {
+  @extend .tn-dark-engraved-box;
+  color: $res-night-fg;
+
+  &.tooLong {
+    @include linear-gradient(top, darken($res-char-counter-too-long-bg, 10%), darken($res-char-counter-too-long-bg, 20%));
+  }
+}

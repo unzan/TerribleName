@@ -8,6 +8,7 @@
     }
 
     .entry {
+
       > .title {
         > a.title {
           &,
@@ -21,11 +22,23 @@
         }
       }
 
+      .flat-list.buttons > li {
+        a,
+        .redditSingleClick {
+          &:hover {
+            background-color: lighten($res-night-bg, 5%);
+          }
+        }
+      }
 
       &.RES-keyNav-activeElement {
         background: none !important;
-        .usertext > .usertext-body .md p {
+        .usertext > .usertext-body {
           background: none !important;
+
+          .md p {
+            background: none !important;
+          }
         }
       }
 
@@ -64,7 +77,33 @@
   }
 }
 
-.thing .midcol > .arrow {
-  @extend .arrow;
-}
+.thing {
+  .midcol > .arrow {
+    @extend .arrow;
+  }
 
+  .tagline {
+    .author {
+      &.submitter {
+        &,
+        &:hover {
+          background-color: darken($submitter-tag-fg, 10%) !important;
+        }
+      }
+
+      &.admin {
+        &,
+        &:hover {
+          background-color: darken($admin-tag-fg, 10%) !important;
+        }
+      }
+
+      &.moderator {
+        &,
+        &:hover {
+          background-color: darken($mod-tag-fg, 10%) !important;
+        }
+      }
+    }
+  }
+}

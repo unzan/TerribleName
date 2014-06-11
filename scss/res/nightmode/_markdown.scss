@@ -1,9 +1,21 @@
 .md {
+  a {
+    color: lighten($link-fg, 7%);
+    &:visited  {
+      color: lighten($link-fg-visited, 7%);
+    }
+  }
+
   pre,
   code,
   blockquote {
     color: $res-night-fg;
     background: lighten($res-night-bg, 10%);
+  }
+
+  code {
+    color: $res-night-code-fg;
+    background: none;
   }
 
   pre {
@@ -15,5 +27,57 @@
 
   hr {
     background: lighten($res-night-bg, 17%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: inherit !important;
+    background: none !important;
+  }
+
+  h1,
+  h2 {
+    border-bottom-color: darken($res-night-fg, 30%) !important;
+  }
+
+  td,
+  th {
+    border-color: lighten($res-night-bg, 15%);
+  }
+
+  th {
+    background: lighten($res-night-bg, 15%);
+    color: $res-night-fg;
+    text-shadow: none;
+    @include shadow(none);
+  }
+
+  @if $show-line-num-in-codeblock == 1 {
+    pre {
+      border-color: lighten($res-night-bg, 20%);
+      background: lighten($res-night-bg, 20%);
+
+      > code {
+        background: $res-night-bg;
+      }
+    }
+  }
+
+  tbody {
+    tr:hover {
+      background: lighten($res-night-bg, 7%);
+    }
+  }
+
+  a[href$="/spoiler"] {
+    background: $res-night-spoiler-bg !important;
+    color: $res-night-spoiler-bg !important;
+    &:hover {
+      color: $res-night-spoiler-fg !important;
+    }
   }
 }

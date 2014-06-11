@@ -1,0 +1,55 @@
+&.wiki-page {
+  .wiki-page-content {
+    .md.wiki {
+      color: $res-night-fg;
+    }
+  }
+
+  .pageactions {
+    > .wikiaction {
+      @extend .tn-dark-button;
+      @include rounded(0px);
+
+      &.wikiaction-current {
+        @extend .tn-dark-button-pressed;
+      }
+
+      &:first-child {
+        @include rounded(3px 0px 0px 3px);
+      }
+
+      &:last-child {
+        @include rounded(0px 3px 3px 0px);
+      }
+    }
+  }
+
+  .md.wiki > .toc {
+    background: lighten($res-night-bg, 10%);
+    border: solid 1px lighten($res-night-bg, 20%);
+    @include shadow(none);
+
+    &::before {
+      border-bottom-color: lighten($res-night-bg, 25%);
+    }
+
+    &::after {
+      display: none;
+    }
+
+    > ul {
+      background: none !important;
+      ul {
+        background: none !important;
+        border-left-color: lighten($res-night-bg, 25%);
+      }
+    }
+  }
+}
+
+.wiki-page .wiki-page-content .md.wiki,
+.RESDialogSmall.livePreview {
+  border: none;
+  background: lighten($res-night-bg, 3%) !important;
+  color: $res-night-fg !important;
+}
