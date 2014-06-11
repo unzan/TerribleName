@@ -7,7 +7,7 @@
   height: auto;
   line-height: 1.5em;
   vertical-align: middle;
-  text-shadow: 0px 1px 1px darken($button-bg, 20%);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
   text-decoration: none;
   border: none;
   text-align: center;
@@ -34,9 +34,10 @@
 
   &:active {
     @include linear-gradient(top, $button-bg, darken($button-bg, 10%));
-    @include shadow(inset 0px 2px 0px darken($button-bg, 10%), 0px 2px 2px rgba(255, 255, 255, 0.7));
+    @include shadow(inset 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(255, 255, 255, 0.7));
   }
 }
+
 
 .tn-small-button-default,
 .tn-small-button {
@@ -68,30 +69,62 @@
 }
 
 .fancy-toggle-button {
-  .option {
-    font-size: 13px;
-    padding: 2px 7px;
+  > .option {
+    &.add,
+    &.remove {
+      @extend .tn-button;
+      font-size: 13px;
+      margin: 0px;
 
-    &.active {
-      border: none;
-      @include shadow(0px 1px 1px rgba(0, 0, 0, 0.3));
-
-      &::before {
+      &.active {
+        display: inline-block;
         vertical-align: middle;
       }
     }
 
-    &.add {
-      color: $subscribe-fg;
-      @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 5%));
-      border-bottom: solid 2px darken($subscribe-bg, 13%);
+    @if $subscribe-button-placement == header {
+      &.add {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
+        }
+      }
+
+      &.remove {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          @include linear-gradient(top, $unsubscribe-bg, darken($unsubscribe-bg, 6%));
+        }
+      }
+
+      &.add,
+      &.remove {
+        &:active {
+          @include shadow(inset 0px 2px 3px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.3));
+        }
+      }
+    } @else {
+      &.add,
+      &.remove {
+        &,
+        &:active,
+        &:focus,
+        &:hover {
+          @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
+        }
+      }
+
+      &.add:active,
+      &.remove,
+      &.remove:active {
+        @include shadow(inset 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(255, 255, 255, 0.7));
+      }
     }
 
-    &.remove {
-      color: $unsubscribe-fg;
-      @include linear-gradient(top, $unsubscribe-bg, darken($unsubscribe-bg, 5%));
-      border-bottom: solid 1px darken($unsubscribe-bg, 13%);
-    }
   }
 }
 
