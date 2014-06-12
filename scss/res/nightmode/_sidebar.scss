@@ -37,18 +37,6 @@
     @include rounded(0px);
   }
 
-  .morelink {
-    a {
-      color: $button-fg;
-      &:focus {
-        outline: none !important;
-      }
-
-      &:active {
-        @include shadow(inset 0px 2px 2px darken($button-bg, 20%), 0px 1px 1px lighten($res-night-bg, 13%));
-      }
-    }
-  }
 
   .icon-menu {
     a {

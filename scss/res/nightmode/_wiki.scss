@@ -1,6 +1,7 @@
 &.wiki-page {
   .wiki-page-content {
     .md.wiki {
+      @extend .tn-dark-raised-box;
       color: $res-night-fg;
     }
   }

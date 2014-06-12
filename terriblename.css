@@ -62,7 +62,9 @@ hr {
 .tn-button, .morelink a, button,
 input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 .res .RESDashboardToggle,
-.res .RESDashboardToggle.remove, .res.res-nightmode button,
+.res .RESDashboardToggle.remove, .res.res-nightmode .content button,
+.res.res-nightmode .content input[type=submit],
+.res.res-nightmode button,
 .res.res-nightmode input[type=submit] {
   color: white;
   font-family: "Liberation Sans", Arial, sans-serif;
@@ -90,16 +92,19 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 }
 .tn-button:visited, .morelink a:visited, button:visited,
 input[type=submit]:visited, .res .RESshortcutside:visited,
-.res .RESDashboardToggle:visited, .res.res-nightmode button:visited,
+.res .RESDashboardToggle:visited,
+.res.res-nightmode button:visited,
 .res.res-nightmode input[type=submit]:visited {
   color: white;
 }
 .tn-button:hover, .morelink a:hover, button:hover,
 input[type=submit]:hover, .res .RESshortcutside:hover,
-.res .RESDashboardToggle:hover, .res.res-nightmode button:hover,
+.res .RESDashboardToggle:hover,
+.res.res-nightmode button:hover,
 .res.res-nightmode input[type=submit]:hover, .tn-button:focus, .morelink a:focus, button:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
-.res .RESDashboardToggle:focus, .res.res-nightmode button:focus,
+.res .RESDashboardToggle:focus,
+.res.res-nightmode button:focus,
 .res.res-nightmode input[type=submit]:focus {
   color: white;
   text-decoration: none !important;
@@ -110,16 +115,19 @@ input[type=submit]:focus, .res .RESshortcutside:focus,
 }
 .tn-button:focus, .morelink a:focus, button:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
-.res .RESDashboardToggle:focus, .res.res-nightmode button:focus,
+.res .RESDashboardToggle:focus,
+.res.res-nightmode button:focus,
 .res.res-nightmode input[type=submit]:focus, .tn-button:active, .morelink a:active, button:active,
 input[type=submit]:active, .res .RESshortcutside:active,
-.res .RESDashboardToggle:active, .res.res-nightmode button:active,
+.res .RESDashboardToggle:active,
+.res.res-nightmode button:active,
 .res.res-nightmode input[type=submit]:active {
   outline: none !important;
 }
 .tn-button:active, .morelink a:active, button:active,
 input[type=submit]:active, .res .RESshortcutside:active,
-.res .RESDashboardToggle:active, .res.res-nightmode button:active,
+.res .RESDashboardToggle:active,
+.res.res-nightmode button:active,
 .res.res-nightmode input[type=submit]:active {
   background: -webkit-linear-gradient(top, #cb4b16, #9d3a11);
   background: -moz-linear-gradient(top, #cb4b16, #9d3a11);
@@ -2268,7 +2276,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .tn-dark-raised-box, .res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
 .res.res-nightmode .content.submit .info-notice,
-.content.submit .res.res-nightmode .info-notice, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
+.content.submit .res.res-nightmode .info-notice, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
 .res.res-nightmode .RESDialogSmall.livePreview > h3 {
   border: none !important;
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
@@ -2386,11 +2394,6 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.res.res-nightmode button,
-.res.res-nightmode input[type=submit] {
-  padding-bottom: 3px;
-  text-transform: capitalize;
-}
 .res.res-nightmode .nav-buttons > .nextprev > a {
   color: #d1d1d1;
 }
@@ -2408,6 +2411,36 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .nav-buttons > .nextprev > .separator {
   border-left: none;
+}
+.res.res-nightmode .content button,
+.res.res-nightmode .content input[type=submit],
+.res.res-nightmode button,
+.res.res-nightmode input[type=submit] {
+  padding-bottom: 3px;
+  text-transform: capitalize;
+}
+.res.res-nightmode .content button,
+.res.res-nightmode .content input[type=submit],
+.res.res-nightmode button,
+.res.res-nightmode input[type=submit],
+.res.res-nightmode .side .morelink a {
+  color: white;
+}
+.res.res-nightmode .content button:focus,
+.res.res-nightmode .content input[type=submit]:focus,
+.res.res-nightmode button:focus,
+.res.res-nightmode input[type=submit]:focus,
+.res.res-nightmode .side .morelink a:focus {
+  outline: none !important;
+}
+.res.res-nightmode .content button:active,
+.res.res-nightmode .content input[type=submit]:active,
+.res.res-nightmode button:active,
+.res.res-nightmode input[type=submit]:active,
+.res.res-nightmode .side .morelink a:active {
+  -webkit-box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
+  -moz-box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
+  box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
 }
 .res.res-nightmode .subscribers,
 .res.res-nightmode .users-online {
@@ -2440,17 +2473,6 @@ table.diff tbody .diff_header:not([id]) {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
-}
-.res.res-nightmode .side .morelink a {
-  color: white;
-}
-.res.res-nightmode .side .morelink a:focus {
-  outline: none !important;
-}
-.res.res-nightmode .side .morelink a:active {
-  -webkit-box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
-  -moz-box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
-  box-shadow: inset 0px 2px 2px #6f290c, 0px 1px 1px #323232;
 }
 .res.res-nightmode .side .icon-menu a {
   color: #848484;

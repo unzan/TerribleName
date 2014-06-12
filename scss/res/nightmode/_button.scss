@@ -30,13 +30,6 @@
   }
 }
 
-button,
-input[type=submit] {
-  @extend .tn-button;
-  padding-bottom: 3px;
-  text-transform: capitalize;
-}
-
 .nav-buttons > .nextprev > a {
   @extend .tn-dark-raised-box;
   color: $res-night-fg;
@@ -52,5 +45,29 @@ input[type=submit] {
     > .separator {
       border-left: none;
     }
+  }
+}
+
+.content button,
+.content input[type=submit],
+button,
+input[type=submit] {
+  @extend .tn-button;
+  padding-bottom: 3px;
+  text-transform: capitalize;
+}
+
+.content button,
+.content input[type=submit],
+button,
+input[type=submit],
+.side .morelink a {
+  color: $button-fg;
+  &:focus {
+    outline: none !important;
+  }
+
+  &:active {
+    @include shadow(inset 0px 2px 2px darken($button-bg, 20%), 0px 1px 1px lighten($res-night-bg, 13%));
   }
 }
