@@ -2766,6 +2766,16 @@ table.diff tbody .diff_header:not([id]) {
   background: -o-linear-gradient(top, #b9221f, #8d1a18);
   background: linear-gradient(top, #b9221f, #8d1a18);
 }
+.res.res-nightmode.moderator .footer-parent .footer {
+  background: none !important;
+}
+.res.res-nightmode .footer-parent .footer {
+  border-top: solid 1px #070707 !important;
+  border-bottom: solid 1px #070707 !important;
+  -webkit-box-shadow: inset 0px 1px 0px #252525, 0px 1px 0px #252525;
+  -moz-box-shadow: inset 0px 1px 0px #252525, 0px 1px 0px #252525;
+  box-shadow: inset 0px 1px 0px #252525, 0px 1px 0px #252525;
+}
 
 .res-commentBoxes .res.comments-page .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment {
   background: none !important;

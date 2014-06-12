@@ -1,0 +1,13 @@
+&.moderator .footer-parent .footer {
+  // seriously? what's these bastards trying to achieve by
+  // setting different footer bg for moderator?
+  background: none !important;
+}
+
+.footer-parent {
+  .footer {
+    border-top: solid 1px darken($res-night-bg, 4%) !important;
+    border-bottom: solid 1px darken($res-night-bg, 4%) !important;
+    @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%), 0px 1px 0px lighten($res-night-bg, 8%));
+  }
+}
