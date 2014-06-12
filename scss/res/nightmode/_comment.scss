@@ -17,7 +17,8 @@
         > .noncollapsed {
           background: none !important;
           > .usertext {
-            > .usertext-body {
+            > .usertext-body,
+            > .usertext-edit > .livePreview {
               background: none !important;
               > .md {
                 background: none !important;

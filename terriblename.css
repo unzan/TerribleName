@@ -2565,13 +2565,16 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed {
   background: none !important;
 }
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body,
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-edit > .livePreview {
   background: none !important;
 }
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body > .md {
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body > .md,
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-edit > .livePreview > .md {
   background: none !important;
 }
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body > .md p {
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body > .md p,
+.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-edit > .livePreview > .md p {
   background: none !important;
 }
 .res.res-nightmode .commentarea > .menuarea {
