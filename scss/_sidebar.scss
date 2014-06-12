@@ -151,8 +151,8 @@
 
     &:hover {
       text-decoration: none;
-      @include linear-gradient(top, $small-button-bg, darken($small-button-bg, 4%));
-      @include shadow(0px 1px 1px rgba(0, 0, 0, 0.13));
+      @include linear-gradient(top, darken($small-button-bg, 2%), darken($small-button-bg, 6%));
+      @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.13));
     }
 
     &:active {

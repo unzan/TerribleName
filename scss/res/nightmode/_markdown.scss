@@ -6,16 +6,30 @@
     }
   }
 
+  p,
+  a,
+  ul,
+  ol,
+  li,
+  strong,
+  table,
+  tbody,
+  tr,
+  td,
+  em {
+    background: none !important;
+  }
+
   pre,
   code,
   blockquote {
     color: $res-night-fg;
-    background: lighten($res-night-bg, 10%);
+    background: lighten($res-night-bg, 10%) !important;
   }
 
   code {
     color: $res-night-code-fg;
-    background: none;
+    background: none !important;
   }
 
   pre {
@@ -26,7 +40,7 @@
   }
 
   hr {
-    background: lighten($res-night-bg, 17%);
+    background: lighten($res-night-bg, 17%) !important;
   }
 
   h1,
@@ -44,32 +58,32 @@
     border-bottom-color: darken($res-night-fg, 30%) !important;
   }
 
+  @if $show-line-num-in-codeblock == 1 {
+    pre {
+      border-color: lighten($res-night-bg, 20%);
+      background: lighten($res-night-bg, 20%) !important;
+
+      > code {
+        background: $res-night-bg !important;
+      }
+    }
+  }
+
   td,
   th {
     border-color: lighten($res-night-bg, 15%);
   }
 
   th {
-    background: lighten($res-night-bg, 15%);
+    background: lighten($res-night-bg, 15%) !important;
     color: $res-night-fg;
     text-shadow: none;
     @include shadow(none);
   }
 
-  @if $show-line-num-in-codeblock == 1 {
-    pre {
-      border-color: lighten($res-night-bg, 20%);
-      background: lighten($res-night-bg, 20%);
-
-      > code {
-        background: $res-night-bg;
-      }
-    }
-  }
-
   tbody {
     tr:hover {
-      background: lighten($res-night-bg, 7%);
+      background: lighten($res-night-bg, 7%) !important;
     }
   }
 

@@ -5,6 +5,10 @@
     }
   }
 
+  button.RESBigEditorPop {
+    top: 40px;
+  }
+
   .pageactions {
     > .wikiaction {
       @extend .tn-dark-button;
@@ -25,7 +29,7 @@
   }
 
   .md.wiki > .toc {
-    background: lighten($res-night-bg, 10%);
+    background: lighten($res-night-bg, 10%) !important;
     border: solid 1px lighten($res-night-bg, 20%);
     @include shadow(none);
 

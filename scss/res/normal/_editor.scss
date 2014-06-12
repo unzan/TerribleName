@@ -1,13 +1,13 @@
 button.RESBigEditorPop,
 .RESMacroDropdownTitle,
+.RESCloseButton,
 .markdownEditor > a {
   @extend .tn-small-button;
   width: 16px;
   height: 16px;
   display: block;
   overflow: hidden;
-  text-indent: 50px;
-  position: relative;
+  text-indent: -100px;
   margin-right: 2px;
 
   &::before {
@@ -17,6 +17,12 @@ button.RESBigEditorPop,
     left: 5px;
     top: 2px;
   }
+}
+
+button.RESBigEditorPop,
+.RESMacroDropdownTitle,
+.markdownEditor > a {
+  position: relative;
 }
 
 button.RESBigEditorPop {
@@ -225,4 +231,21 @@ button.RESBigEditorPop {
     @include linear-gradient(top, $res-char-counter-too-long-bg, darken($res-char-counter-too-long-bg, 10%));
   }
 
+}
+
+.RESCloseButton {
+  @extend .tn-small-button;
+  padding-right: 4px;
+  top: 9px;
+
+  &.RESFadeButton {
+    right: 42px;
+    &::before {
+      background-position: -96px -48px;
+    }
+  }
+
+  &.close::before {
+    background-position: 0px -32px;
+  }
 }

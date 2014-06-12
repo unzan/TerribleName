@@ -1,9 +1,11 @@
 button.RESBigEditorPop,
 .RESMacroDropdownTitle,
+.RESCloseButton,
 .markdownEditor > a {
   @extend .tn-dark-button;
 }
 
+#BigEditor > .RESDialogSmall.BERight,
 .RESDialogSmall.livePreview {
   > h3 {
     @extend .tn-dark-raised-box;
@@ -11,12 +13,33 @@ button.RESBigEditorPop,
     border: none;
   }
 
-  .md {
+  .md,
+  #BigPreview.md {
     a {
       color: $link-fg !important;
+      &[href$="/spoiler"] {
+        color: $res-night-spoiler-bg !important;
+        &:hover {
+          color: $res-night-spoiler-fg !important;
+        }
+      }
+
       &:visited {
         color: $link-fg-visited !important;
       }
+    }
+  }
+}
+
+#BigEditor {
+  > .RESDialogSmall {
+    &.BELeft {
+      background: $res-night-bg url($res-night-bg-image) left top repeat;
+      @include shadow(inset 0px 1px 0px lighten($res-night-bg, 10%));
+    }
+
+    &.BERight {
+      background: lighten($res-night-bg, 3%) !important;
     }
   }
 }
