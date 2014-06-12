@@ -1830,7 +1830,7 @@ table.diff th,
 table.diff td,
 table.diff .diff_header,
 table.diff .diff_next {
-  bordeR: none;
+  border: none;
   padding: 2px 4px;
 }
 table.diff .diff_header,
@@ -2598,6 +2598,9 @@ table.diff tbody .diff_header:not([id]) {
   -moz-border-radius: 0px 3px 3px 0px;
   border-radius: 0px 3px 3px 0px;
 }
+.res.res-nightmode.wiki-page .wikititle {
+  border: none !important;
+}
 .res.res-nightmode.wiki-page .wiki-page-content .md.wiki {
   color: #d1d1d1;
 }
@@ -2639,11 +2642,39 @@ table.diff tbody .diff_header:not([id]) {
   background: none !important;
   border-left-color: #515151;
 }
+.res.res-nightmode.wiki-page .wikirevisionlisting .generic-table {
+  color: #d1d1d1;
+}
+.res.res-nightmode.wiki-page .wikirevisionlisting .generic-table tr td {
+  border-color: #090909 !important;
+  -webkit-box-shadow: inset 1px 1px 0px #252525;
+  -moz-box-shadow: inset 1px 1px 0px #252525;
+  box-shadow: inset 1px 1px 0px #252525;
+}
+.res.res-nightmode.wiki-page .wikirevisionlisting .generic-table tr:hover > td {
+  background-color: #1b1b1b;
+}
 .res.res-nightmode .wiki-page .wiki-page-content .md.wiki,
 .res.res-nightmode .RESDialogSmall.livePreview {
   border: none;
   background: #191919 !important;
   color: #d1d1d1 !important;
+}
+.res.res-nightmode table.diff {
+  background: #111111;
+  border-color: #232323;
+}
+.res.res-nightmode table.diff .diff_header,
+.res.res-nightmode table.diff .diff_next {
+  background: #232323;
+  color: #d1d1d1;
+  border-color: #161616;
+  -webkit-box-shadow: inset 1px 1px 0px #3c3c3c;
+  -moz-box-shadow: inset 1px 1px 0px #3c3c3c;
+  box-shadow: inset 1px 1px 0px #3c3c3c;
+}
+.res.res-nightmode table.diff tbody .diff_header:not([id]) {
+  color: #4c4c4c;
 }
 .res.res-nightmode .md a {
   color: #268bd2;

@@ -159,6 +159,7 @@ $res-char-counter-bg: darken($main-bg, 50%);
 $res-char-counter-too-long-bg: $red;
 $res-night-spoiler-bg: lighten($res-night-bg, 25%);
 $res-night-spoiler-fg: $res-night-fg;
+$res-night-table-heading-bg: lighten($res-night-bg, 7%);
 
 // set this to 1 if you want to have line number at the left of codeblock
 $show-line-num-in-codeblock: 0;

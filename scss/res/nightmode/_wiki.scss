@@ -1,4 +1,8 @@
 &.wiki-page {
+  .wikititle {
+    border: none !important;
+  }
+
   .wiki-page-content {
     .md.wiki {
       @extend .tn-dark-raised-box;
@@ -50,6 +54,24 @@
       }
     }
   }
+
+  .wikirevisionlisting {
+    .generic-table {
+      color: $res-night-fg;
+      tr {
+        td {
+          border-color: darken($res-night-bg, 3%) !important;
+          //border-left: none;
+          //border-right: none;
+          @include shadow(inset 1px 1px 0px lighten($res-night-bg, 8%));
+        }
+
+        &:hover > td {
+          background-color: lighten($res-night-bg, 4%);
+        }
+      }
+    }
+  }
 }
 
 .wiki-page .wiki-page-content .md.wiki,
@@ -57,4 +79,21 @@
   border: none;
   background: lighten($res-night-bg, 3%) !important;
   color: $res-night-fg !important;
+}
+
+table.diff {
+  background: $res-night-bg;
+  border-color: $res-night-table-heading-bg;
+
+  .diff_header,
+  .diff_next {
+    background: $res-night-table-heading-bg;
+    color: $res-night-fg;
+    border-color: darken($res-night-table-heading-bg, 5%);
+    @include shadow(inset 1px 1px 0px lighten($res-night-table-heading-bg, 10%));
+  }
+
+  tbody .diff_header:not([id]) {
+    color: lighten($res-night-table-heading-bg, 16%);
+  }
 }
