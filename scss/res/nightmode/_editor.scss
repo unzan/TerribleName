@@ -5,6 +5,10 @@ button.RESBigEditorPop,
   @extend .tn-dark-button;
 }
 
+.usertext-edit .RESDialogSmall .md.RESDialogContents {
+  background: none !important;
+}
+
 #BigEditor > .RESDialogSmall.BERight,
 .RESDialogSmall.livePreview {
   > h3 {

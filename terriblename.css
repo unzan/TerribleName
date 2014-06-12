@@ -2716,6 +2716,9 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .md a[href$="/spoiler"]:hover {
   color: #d1d1d1 !important;
 }
+.res.res-nightmode .usertext-edit .RESDialogSmall .md.RESDialogContents {
+  background: none !important;
+}
 .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
 .res.res-nightmode .RESDialogSmall.livePreview > h3 {
   color: #d1d1d1;
