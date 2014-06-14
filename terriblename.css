@@ -1308,17 +1308,17 @@ input[type=password] {
 .commentarea .panestack-title {
   border-bottom: none;
 }
-.commentarea .usertext {
+.commentarea > .usertext {
   clear: both;
 }
-.commentarea .usertext > .usertext-edit {
+.commentarea > .usertext > .usertext-edit {
   width: 660px;
 }
-.commentarea .usertext > .usertext-edit textarea {
+.commentarea > .usertext > .usertext-edit textarea {
   width: 650px;
 }
-.commentarea .usertext .bottom-area > .help-toggle,
-.commentarea .usertext .bottom-area > .reddiquette {
+.commentarea > .usertext .bottom-area > .help-toggle,
+.commentarea > .usertext .bottom-area > .reddiquette {
   margin-top: 9px;
 }
 
@@ -2081,7 +2081,7 @@ table.diff tbody .diff_header:not([id]) {
 .res .commentarea .comment .expando-button:hover {
   text-decoration: none !important;
 }
-.res .commentarea .usertext > .usertext-edit textarea {
+.res .commentarea > .usertext > .usertext-edit textarea {
   width: 660px;
 }
 .res button.RESBigEditorPop,
