@@ -52,3 +52,26 @@ input[type=password] {
 .menuarea {
   @extend .tn-dark-engraved-box;
 }
+
+.flairselector.drop-choices.active {
+  @extend .tn-dark-raised-box;
+  > h2 {
+    @extend .tn-dark-engraved-box;
+    color: $res-night-fg;
+  }
+
+  .flairoptionpane {
+    ul {
+      > li {
+        border: none !important;
+        &:hover {
+          @extend .tn-dark-button-default;
+        }
+
+        &:active {
+          @extend .tn-dark-button-pressed;
+        }
+      }
+    }
+  }
+}

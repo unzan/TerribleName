@@ -497,6 +497,7 @@ input[type=password] {
 }
 
 .flairselector {
+  min-width: 250px !important;
   padding: 6px !important;
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 4px 6px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -2289,9 +2290,12 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode > .content {
   background: none !important;
 }
+.res.res-nightmode .error {
+  color: #d1d1d1;
+}
 .res.res-nightmode .tn-dark-engraved-box, .res.res-nightmode .subscribers,
 .res.res-nightmode .users-online,
-.res.res-nightmode .info-notice, .res.res-nightmode .menuarea, .res.res-nightmode .side .sidecontentbox .content, .res.res-nightmode .RESCharCounter {
+.res.res-nightmode .info-notice, .res.res-nightmode .menuarea, .res.res-nightmode .flairselector.drop-choices.active > h2, .res.res-nightmode .side .sidecontentbox .content, .res.res-nightmode .RESCharCounter {
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
   background: -moz-linear-gradient(top, #252525, #1e1e1e);
   background: -o-linear-gradient(top, #252525, #1e1e1e);
@@ -2302,7 +2306,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .tn-dark-raised-box, .res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
 .res.res-nightmode .content.submit .info-notice,
-.content.submit .res.res-nightmode .info-notice, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
+.content.submit .res.res-nightmode .info-notice, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
 .res.res-nightmode .RESDialogSmall.livePreview > h3 {
   border: none !important;
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
@@ -2370,10 +2374,22 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .formtabs-content .roundfield, .res.res-nightmode .fancy-settings .linefield .roundfield, .fancy-settings .res.res-nightmode .linefield .roundfield {
   background: none !important;
 }
-.res.res-nightmode .tn-dark-button, .res.res-nightmode .tabmenu.formtab > li > a, .res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
+.res.res-nightmode .flairselector.drop-choices.active > h2 {
+  color: #d1d1d1;
+}
+.res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li {
+  border: none !important;
+}
+.res.res-nightmode .tn-dark-button-default, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
+.res.res-nightmode .tn-dark-button,
+.res.res-nightmode .tabmenu.formtab > li > a,
+.res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .toggle .togglebutton,
-.res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse, .res.res-nightmode .commentarea .commentNavSortType,
-.res.res-nightmode .commentarea #REScommentSubToggle, .res.res-nightmode.wiki-page .pageactions > .wikiaction, .res.res-nightmode button.RESBigEditorPop,
+.res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
+.res.res-nightmode .commentarea .commentNavSortType,
+.res.res-nightmode .commentarea #REScommentSubToggle,
+.res.res-nightmode.wiki-page .pageactions > .wikiaction,
+.res.res-nightmode button.RESBigEditorPop,
 .res.res-nightmode .RESMacroDropdownTitle,
 .res.res-nightmode .RESCloseButton,
 .res.res-nightmode .markdownEditor > a {
@@ -2391,7 +2407,7 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.res.res-nightmode .tn-dark-button-pressed, .res.res-nightmode .tabmenu.formtab > li.selected > a, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
+.res.res-nightmode .tn-dark-button-pressed, .res.res-nightmode .tabmenu.formtab > li.selected > a, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
 .res.res-nightmode .tn-dark-button:active,
 .res.res-nightmode .tabmenu.formtab > li > a:active,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop:active,

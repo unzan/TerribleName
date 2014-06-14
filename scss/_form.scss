@@ -148,6 +148,7 @@ input[type=password] {
 
 
 .flairselector {
+  min-width: 250px !important;
   padding: 6px !important;
   @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 4px 6px rgba(0, 0, 0, 0.2));
 
