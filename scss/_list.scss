@@ -90,31 +90,29 @@
   .linklisting {
     .thing {
       .flat-list.buttons {
-        > li {
-          &.save-button > a,
-          > .toggle,
-          > .state-button,
-          > .flairselectbtn,
-          > .redditSingleClick {
-            visibility: hidden;
-          }
+        > li.save-button > a,
+        > li > .toggle,
+        > li > .state-button,
+        > li > .flairselectbtn,
+        > li > .redditSingleClick,
+        > .big-mod-buttons .pretty-button {
+          visibility: hidden;
+        }
 
-          &.option  {
-            display: none;
-          }
+        > li.option  {
+          display: none;
         }
       }
 
       &:hover {
         .flat-list.buttons {
-          > li {
-            &.save-button > a,
-            > .toggle,
-            > .state-button,
-            > .flairselectbtn,
-            > .redditSingleClick {
-              visibility: visible;
-            }
+          > li.save-button > a,
+          > li > .toggle,
+          > li > .state-button,
+          > li > .flairselectbtn,
+          > li > .redditSingleClick,
+          > .big-mod-buttons .pretty-button {
+            visibility: visible;
           }
         }
       }
@@ -221,6 +219,20 @@
     color: $nsfw-tag-fg;
     @include rounded(2px);
   }
+}
+
+.entry .flat-list.buttons > li.reported-stamp.stamp {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none !important;
+  color: $report-tag-fg;
+  padding: 2px 4px 0px 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  @include linear-gradient(top, $report-tag-bg, darken($report-tag-bg, 7%));
+  @include shadow(0px 1px 0px rgba(255, 255, 255, 0.8), inset 0px 1px 2px rgba(0, 0, 0, 0.2));
+  @include rounded(2px);
 }
 
 .tagline,

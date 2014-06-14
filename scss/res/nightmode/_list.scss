@@ -23,6 +23,10 @@
       }
 
       .flat-list.buttons > li {
+        &.reported-stamp.stamp {
+          @include shadow(none);
+        }
+
         a,
         .redditSingleClick {
           &:hover {
