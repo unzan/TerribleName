@@ -10,3 +10,15 @@
   }
 }
 
+.RESshortcutside,
+.RESDashboardToggle {
+  &,
+  &.remove {
+    @extend .tn-button;
+    font-size: 13px !important;
+    display: inline-block !important;
+    vertical-align: middle;
+    margin: 0px 5px 0px 0px;
+  }
+}
+

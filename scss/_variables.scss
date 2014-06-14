@@ -165,3 +165,7 @@ $res-night-table-heading-bg: lighten($res-night-bg, 7%);
 
 // set this to 1 if you want to have line number at the left of codeblock
 $show-line-num-in-codeblock: 0;
+
+// set to `header` to place subscribe button on header.
+// any other value will put it at its normal place
+$subscribe-button-placement: header;

@@ -4,15 +4,22 @@
   margin: 1em 1em 1em 2em;
 }
 
-.subscribe-button {
-  position: absolute;
-  top: ($header-height - 40) / 2;
-  right: 10px;
-  z-index: 9000;
-}
-
 .titlebox {
   margin-top: 20px;
+
+  @if $subscribe-button-placement == header {
+    .subscribe-button {
+      position: absolute;
+      top: ($header-height - 40) / 2;
+      right: 10px;
+      z-index: 9000;
+    }
+  } @else {
+    .subscribe-button {
+      display: block;
+      margin-bottom: 1em;
+    }
+  }
 
   form.flairtoggle {
     margin-bottom: 10px;

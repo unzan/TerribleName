@@ -1,14 +1,8 @@
 .subButtons {
   padding: 1em 0em !important;
-}
-
-.RESshortcutside,
-.RESDashboardToggle {
-  &,
-  &.remove {
-    @extend .tn-button;
-    font-size: 13px !important;
-    display: inline-block !important;
+  .subscribe-button {
+    display: inline-block;
+    margin: 0px 5px 0px 0px;
   }
 }
 

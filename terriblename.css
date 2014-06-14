@@ -59,7 +59,7 @@ hr {
   border-radius: 3px;
 }
 
-.tn-button, .morelink a, button,
+.tn-button, .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, button,
 input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 .res .RESDashboardToggle,
 .res .RESDashboardToggle.remove, .res.res-nightmode .content button,
@@ -74,7 +74,7 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
   height: auto;
   line-height: 1.5em;
   vertical-align: middle;
-  text-shadow: 0px 1px 1px #6f290c;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
   text-decoration: none;
   border: none;
   text-align: center;
@@ -90,18 +90,18 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3);
 }
-.tn-button:visited, .morelink a:visited, button:visited,
+.tn-button:visited, .fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited, button:visited,
 input[type=submit]:visited, .res .RESshortcutside:visited,
 .res .RESDashboardToggle:visited,
 .res.res-nightmode button:visited,
 .res.res-nightmode input[type=submit]:visited {
   color: white;
 }
-.tn-button:hover, .morelink a:hover, button:hover,
+.tn-button:hover, .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, button:hover,
 input[type=submit]:hover, .res .RESshortcutside:hover,
 .res .RESDashboardToggle:hover,
 .res.res-nightmode button:hover,
-.res.res-nightmode input[type=submit]:hover, .tn-button:focus, .morelink a:focus, button:focus,
+.res.res-nightmode input[type=submit]:hover, .tn-button:focus, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, button:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
 .res .RESDashboardToggle:focus,
 .res.res-nightmode button:focus,
@@ -113,18 +113,18 @@ input[type=submit]:focus, .res .RESshortcutside:focus,
   background: -o-linear-gradient(top, #e25418, #b44214);
   background: linear-gradient(top, #e25418, #b44214);
 }
-.tn-button:focus, .morelink a:focus, button:focus,
+.tn-button:focus, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, button:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
 .res .RESDashboardToggle:focus,
 .res.res-nightmode button:focus,
-.res.res-nightmode input[type=submit]:focus, .tn-button:active, .morelink a:active, button:active,
+.res.res-nightmode input[type=submit]:focus, .tn-button:active, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, button:active,
 input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESDashboardToggle:active,
 .res.res-nightmode button:active,
 .res.res-nightmode input[type=submit]:active {
   outline: none !important;
 }
-.tn-button:active, .morelink a:active, button:active,
+.tn-button:active, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, button:active,
 input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESDashboardToggle:active,
 .res.res-nightmode button:active,
@@ -133,9 +133,9 @@ input[type=submit]:active, .res .RESshortcutside:active,
   background: -moz-linear-gradient(top, #cb4b16, #9d3a11);
   background: -o-linear-gradient(top, #cb4b16, #9d3a11);
   background: linear-gradient(top, #cb4b16, #9d3a11);
-  -webkit-box-shadow: inset 0px 2px 0px #9d3a11, 0px 2px 2px rgba(255, 255, 255, 0.7);
-  -moz-box-shadow: inset 0px 2px 0px #9d3a11, 0px 2px 2px rgba(255, 255, 255, 0.7);
-  box-shadow: inset 0px 2px 0px #9d3a11, 0px 2px 2px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(255, 255, 255, 0.7);
+  -moz-box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(255, 255, 255, 0.7);
 }
 
 .tn-small-button-default, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
@@ -227,34 +227,30 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7);
 }
 
-.fancy-toggle-button .option {
+.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove {
   font-size: 13px;
-  padding: 2px 7px;
+  margin: 0px;
 }
-.fancy-toggle-button .option.active {
-  border: none;
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-}
-.fancy-toggle-button .option.active::before {
+.fancy-toggle-button > .option.add.active, .fancy-toggle-button > .option.remove.active {
+  display: inline-block;
   vertical-align: middle;
 }
-.fancy-toggle-button .option.add {
-  color: white;
-  background: -webkit-linear-gradient(top, #859900, #6f8000);
-  background: -moz-linear-gradient(top, #859900, #6f8000);
-  background: -o-linear-gradient(top, #859900, #6f8000);
-  background: linear-gradient(top, #859900, #6f8000);
-  border-bottom: solid 2px #4b5700;
+.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.add:active {
+  background: -webkit-linear-gradient(top, #859900, #6a7a00);
+  background: -moz-linear-gradient(top, #859900, #6a7a00);
+  background: -o-linear-gradient(top, #859900, #6a7a00);
+  background: linear-gradient(top, #859900, #6a7a00);
 }
-.fancy-toggle-button .option.remove {
-  color: white;
-  background: -webkit-linear-gradient(top, #dc322f, #cf2623);
-  background: -moz-linear-gradient(top, #dc322f, #cf2623);
-  background: -o-linear-gradient(top, #dc322f, #cf2623);
-  background: linear-gradient(top, #dc322f, #cf2623);
-  border-bottom: solid 1px #ac1f1d;
+.fancy-toggle-button > .option.remove, .fancy-toggle-button > .option.remove:hover, .fancy-toggle-button > .option.remove:focus, .fancy-toggle-button > .option.remove:active {
+  background: -webkit-linear-gradient(top, #dc322f, #ca2522);
+  background: -moz-linear-gradient(top, #dc322f, #ca2522);
+  background: -o-linear-gradient(top, #dc322f, #ca2522);
+  background: linear-gradient(top, #dc322f, #ca2522);
+}
+.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active {
+  -webkit-box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.3);
 }
 
 .nub {
@@ -1369,15 +1365,14 @@ input[type=password] {
   margin: 1em 1em 1em 2em;
 }
 
-.subscribe-button {
+.titlebox {
+  margin-top: 20px;
+}
+.titlebox .subscribe-button {
   position: absolute;
   top: 50px;
   right: 10px;
   z-index: 9000;
-}
-
-.titlebox {
-  margin-top: 20px;
 }
 .titlebox form.flairtoggle {
   margin-bottom: 10px;
@@ -1967,14 +1962,20 @@ table.diff tbody .diff_header:not([id]) {
 .res .subbarlink.RESShortcutsCurrentSub {
   color: #eaeaea !important;
 }
-.res .subButtons {
-  padding: 1em 0em !important;
-}
 .res .RESshortcutside, .res .RESshortcutside.remove,
 .res .RESDashboardToggle,
 .res .RESDashboardToggle.remove {
   font-size: 13px !important;
   display: inline-block !important;
+  vertical-align: middle;
+  margin: 0px 5px 0px 0px;
+}
+.res .subButtons {
+  padding: 1em 0em !important;
+}
+.res .subButtons .subscribe-button {
+  display: inline-block;
+  margin: 0px 5px 0px 0px;
 }
 .res .link .RES-keyNav-activeElement {
   background: none !important;
