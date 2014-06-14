@@ -17,7 +17,8 @@ input[type=password] {
   @include shadow(none);
 }
 
-.tabmenu.formtab {
+.fancy-settings + .tabmenu,
+.formtab.tabmenu {
   > li {
     > a {
       @extend .tn-dark-button;
@@ -40,6 +41,7 @@ input[type=password] {
   @extend .tn-dark-raised-box;
 }
 
+.tabpane-content,
 .formtabs-content {
   background: none;
   border: none;
@@ -74,4 +76,8 @@ input[type=password] {
       }
     }
   }
+}
+
+&.moderator .linefield {
+  background: none !important;
 }

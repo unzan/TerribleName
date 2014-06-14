@@ -723,6 +723,18 @@ input[type=password] {
   content: 'temp     ';
 }
 
+.usertable > .toggle.clearflairtemplates-button {
+  background: none;
+  padding: 0px;
+  border: none;
+}
+.usertable > .toggle.clearflairtemplates-button > .option.error,
+.usertable > .toggle.clearflairtemplates-button > .option > .togglebutton {
+  margin-left: 0px;
+  border-left: none;
+  padding: 0px;
+}
+
 #header {
   background: #111111 url("%%banner%%") 0px 0px no-repeat;
   color: #c6c6c6;
@@ -2358,20 +2370,28 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.res.res-nightmode .tabmenu.formtab > li > a {
+.res.res-nightmode .fancy-settings + .tabmenu > li > a,
+.res.res-nightmode .formtab.tabmenu > li > a {
   color: #111111 !important;
 }
-.res.res-nightmode .tabmenu.formtab > li.selected > a::after {
+.res.res-nightmode .fancy-settings + .tabmenu > li.selected > a::after,
+.res.res-nightmode .formtab.tabmenu > li.selected > a::after {
   display: none;
 }
-.res.res-nightmode .formtabs-content, .res.res-nightmode .fancy-settings .linefield, .fancy-settings .res.res-nightmode .linefield {
+.res.res-nightmode .tabpane-content,
+.res.res-nightmode .formtabs-content,
+.res.res-nightmode .fancy-settings .linefield,
+.fancy-settings .res.res-nightmode .linefield {
   background: none;
   border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.res.res-nightmode .formtabs-content .roundfield, .res.res-nightmode .fancy-settings .linefield .roundfield, .fancy-settings .res.res-nightmode .linefield .roundfield {
+.res.res-nightmode .tabpane-content .roundfield,
+.res.res-nightmode .formtabs-content .roundfield,
+.res.res-nightmode .fancy-settings .linefield .roundfield,
+.fancy-settings .res.res-nightmode .linefield .roundfield {
   background: none !important;
 }
 .res.res-nightmode .flairselector.drop-choices.active > h2 {
@@ -2380,9 +2400,13 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li {
   border: none !important;
 }
+.res.res-nightmode.moderator .linefield {
+  background: none !important;
+}
 .res.res-nightmode .tn-dark-button-default, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
 .res.res-nightmode .tn-dark-button,
-.res.res-nightmode .tabmenu.formtab > li > a,
+.res.res-nightmode .fancy-settings + .tabmenu > li > a,
+.res.res-nightmode .formtab.tabmenu > li > a,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .toggle .togglebutton,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
@@ -2407,9 +2431,11 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.res.res-nightmode .tn-dark-button-pressed, .res.res-nightmode .tabmenu.formtab > li.selected > a, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
+.res.res-nightmode .tn-dark-button-pressed, .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a,
+.res.res-nightmode .formtab.tabmenu > li.selected > a, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
 .res.res-nightmode .tn-dark-button:active,
-.res.res-nightmode .tabmenu.formtab > li > a:active,
+.res.res-nightmode .fancy-settings + .tabmenu > li > a:active,
+.res.res-nightmode .formtab.tabmenu > li > a:active,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop:active,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .toggle .togglebutton:active,
 .res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse:active,

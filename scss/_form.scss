@@ -399,3 +399,20 @@ input[type=password] {
     }
   }
 }
+
+.usertable {
+  > .toggle.clearflairtemplates-button {
+    background: none;
+    padding: 0px;
+    border: none;
+
+    > .option {
+      &.error,
+      > .togglebutton {
+        margin-left: 0px;
+        border-left: none;
+        padding: 0px;
+      }
+    }
+  }
+}
