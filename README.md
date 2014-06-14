@@ -23,13 +23,10 @@ How to use
 Known Issues
 ------------
 
-1. The message after you enabled/disabled inbox replies/contest mode is still
-   awful.
+1. Moderation buttons in Unmoderated Links page and on any link with reports are
+   still using the default style.
 
-2. In Unmoderated Links page, the moderation buttons are still using default
-   style.
-
-3. Theme still looks ugly in RES nightmode.
+2. Some wiki diffs might overlap with sidebar ([for example][fucking diff]).
 
 ***
 
@@ -42,7 +39,4 @@ Picture used in header banner is a [photograph][nyc] by [Jnn13][].
 [jnn13]: http://commons.wikimedia.org/wiki/User:Jnn13
 [subreddit]: http://www.reddit.com/r/TerribleName
 [compiled-css]: http://www.reddit.com/r/TerribleName/about/stylesheet
-[index-orig]: http://i.imgur.com/TLpyOW5.jpg
-[submit-orig]: http://i.imgur.com/ztZVram.png
-[index-thumb]: http://i.imgur.com/TLpyOW5m.jpg
-[submit-thumb]: http://i.imgur.com/ztZVramm.png
+[fucking diff]: http://www.reddit.com/r/TerribleName/wiki/index?v=92fa5ffe-e878-11e3-b3f7-12313b0758c1&v2=9eb34ba6-eca3-11e3-81e8-12313d090eed
