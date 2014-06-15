@@ -33,23 +33,6 @@
     }
   }
 
-  > .menuarea {
-    color: $res-night-fg;
-
-    > .spacer {
-      > .dropdown.lightdrop,
-      > .toggle .togglebutton,
-      > .drop-choices.lightdrop.inuse {
-        @extend .tn-dark-button;
-      }
-
-      > .dropdown.lightdrop > .selected::after {
-        border-top-color: $res-dark-button-fg;
-      }
-    }
-
-  }
-
   .commentNavSortType,
   #REScommentSubToggle {
     @extend .tn-dark-button;

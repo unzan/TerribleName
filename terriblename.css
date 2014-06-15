@@ -2394,6 +2394,12 @@ table.diff tbody .diff_header:not([id]) {
 .fancy-settings .res.res-nightmode .linefield .roundfield {
   background: none !important;
 }
+.res.res-nightmode .menuarea {
+  color: #d1d1d1;
+}
+.res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop > .selected::after {
+  border-top-color: #111111;
+}
 .res.res-nightmode .flairselector.drop-choices.active > h2 {
   color: #d1d1d1;
 }
@@ -2407,9 +2413,9 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .tn-dark-button,
 .res.res-nightmode .fancy-settings + .tabmenu > li > a,
 .res.res-nightmode .formtab.tabmenu > li > a,
-.res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop,
-.res.res-nightmode .commentarea > .menuarea > .spacer > .toggle .togglebutton,
-.res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse,
+.res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop,
+.res.res-nightmode .menuarea > .spacer > .toggle .togglebutton,
+.res.res-nightmode .menuarea > .spacer > .drop-choices.lightdrop.inuse,
 .res.res-nightmode .commentarea .commentNavSortType,
 .res.res-nightmode .commentarea #REScommentSubToggle,
 .res.res-nightmode.wiki-page .pageactions > .wikiaction,
@@ -2436,9 +2442,9 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .tn-dark-button:active,
 .res.res-nightmode .fancy-settings + .tabmenu > li > a:active,
 .res.res-nightmode .formtab.tabmenu > li > a:active,
-.res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop:active,
-.res.res-nightmode .commentarea > .menuarea > .spacer > .toggle .togglebutton:active,
-.res.res-nightmode .commentarea > .menuarea > .spacer > .drop-choices.lightdrop.inuse:active,
+.res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop:active,
+.res.res-nightmode .menuarea > .spacer > .toggle .togglebutton:active,
+.res.res-nightmode .menuarea > .spacer > .drop-choices.lightdrop.inuse:active,
 .res.res-nightmode .commentarea .commentNavSortType:active,
 .res.res-nightmode .commentarea #REScommentSubToggle:active,
 .res.res-nightmode.wiki-page .pageactions > .wikiaction:active,
@@ -2649,12 +2655,6 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body > .md p,
 .res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-edit > .livePreview > .md p {
   background: none !important;
-}
-.res.res-nightmode .commentarea > .menuarea {
-  color: #d1d1d1;
-}
-.res.res-nightmode .commentarea > .menuarea > .spacer > .dropdown.lightdrop > .selected::after {
-  border-top-color: #111111;
 }
 .res.res-nightmode .commentarea .commentNavSortType {
   -webkit-border-radius: 0px;
