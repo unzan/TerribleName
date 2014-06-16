@@ -1,52 +1,20 @@
-// look at these stupid selectors
-.res-commentBoxes {
-  &,
-  &.res-nightmode {
-    .res {
-      &,
-      &.res-nightmode {
-        &.comments-page {
-          .comment {
-            background: none !important;
-            .comment {
-              background: none !important;
-              .comment {
-                background: none !important;
-                .comment {
-                  background: none !important;
-                  .comment {
-                    background: none !important;
-                    .comment {
-                      background: none !important;
-                      .comment {
-                        background: none !important;
-                        .comment {
-                          background: none !important;
-                          .comment {
-                            background: none !important;
-                            .comment {
-                              background: none !important;
-                              .comment {
-                                background: none !important;
-                                .comment {
-                                  background: none !important;
-                                  .comment {
-                                    background: none !important;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+.res-commentBoxes,
+.res-commentBoxes.res-nightmode {
+  .res,
+  .res.res-nightmode {
+    .comment,
+    .comment .comment,
+    .comment .comment .comment,
+    .comment .comment .comment .comment,
+    .comment .comment .comment .comment .comment,
+    .comment .comment .comment .comment .comment .comment,
+    .comment .comment .comment .comment .comment .comment .comment,
+    .comment .comment .comment .comment .comment .comment .comment .comment,
+    .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+    .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+    .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+    .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+      background: none !important;
     }
   }
 }

@@ -2881,42 +2881,53 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0px 1px 0px #252525, 0px 1px 0px #252525;
 }
 
-.res-commentBoxes .res.comments-page .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-  background: none !important;
-}
-.res-commentBoxes .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes.res-nightmode .res.res-nightmode.comments-page .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+.res-commentBoxes .res .comment,
+.res-commentBoxes .res .comment .comment,
+.res-commentBoxes .res .comment .comment .comment,
+.res-commentBoxes .res .comment .comment .comment .comment,
+.res-commentBoxes .res .comment .comment .comment .comment .comment,
+.res-commentBoxes .res .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
   background: none !important;
 }
