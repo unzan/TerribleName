@@ -317,3 +317,8 @@
     }
   }
 }
+
+.unvotable-message {
+  @extend .infobar;
+  padding: 4px 8px;
+}

@@ -336,7 +336,7 @@ input[type=submit] {
   background: linear-gradient(top, #eaeaea, #c4c4c4);
 }
 
-.infobar, .linkinfo,
+.infobar, .unvotable-message, .linkinfo,
 .content.submit .info-notice {
   background: cornsilk;
   border: solid 1px rgba(0, 0, 0, 0.3);
@@ -1199,6 +1199,10 @@ input[type=password] {
   border-radius: 3px 0px 0px 3px;
 }
 
+.unvotable-message {
+  padding: 4px 8px;
+}
+
 .md {
   line-height: 1.5em;
 }
@@ -1714,14 +1718,14 @@ input[type=password] {
 .wiki-page > .content {
   position: relative;
 }
-.wiki-page .infobar, .wiki-page .linkinfo,
+.wiki-page .infobar, .wiki-page .unvotable-message, .wiki-page .linkinfo,
 .wiki-page .content.submit .info-notice,
 .content.submit .wiki-page .info-notice {
   padding: 3px 8px;
   display: block;
   margin: 7px 15px 15px 15px;
 }
-.wiki-page .infobar .md p, .wiki-page .linkinfo .md p,
+.wiki-page .infobar .md p, .wiki-page .unvotable-message .md p, .wiki-page .linkinfo .md p,
 .wiki-page .content.submit .info-notice .md p,
 .content.submit .wiki-page .info-notice .md p {
   padding: 0px;
@@ -2316,7 +2320,7 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
 }
-.res.res-nightmode .tn-dark-raised-box, .res.res-nightmode .infobar, .res.res-nightmode .linkinfo,
+.res.res-nightmode .tn-dark-raised-box, .res.res-nightmode .infobar, .res.res-nightmode .unvotable-message, .res.res-nightmode .linkinfo,
 .res.res-nightmode .content.submit .info-notice,
 .content.submit .res.res-nightmode .info-notice, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
 .res.res-nightmode .RESDialogSmall.livePreview > h3 {
