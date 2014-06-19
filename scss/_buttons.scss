@@ -136,6 +136,10 @@
   border: none;
   background: none;
 
+  &:hover {
+    background: none !important;
+  }
+
   a {
     @extend .tn-button;
     letter-spacing: 0px;

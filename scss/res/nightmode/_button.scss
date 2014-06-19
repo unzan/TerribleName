@@ -67,7 +67,15 @@ input[type=submit],
   &:focus {
     outline: none !important;
   }
+}
 
+.RESshortcutside,
+.RESDashboardToggle,
+.content button,
+.content input[type=submit],
+button,
+input[type=submit],
+.side .morelink a {
   &:active {
     @include shadow(inset 0px 2px 2px darken($button-bg, 20%), 0px 1px 1px lighten($res-night-bg, 13%));
   }

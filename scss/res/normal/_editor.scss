@@ -1,6 +1,6 @@
 button.RESBigEditorPop,
 .RESMacroDropdownTitle,
-.RESCloseButton,
+#BigEditor .RESCloseButton,
 .markdownEditor > a {
   @extend .tn-small-button;
   width: 16px;
@@ -213,6 +213,23 @@ button.RESBigEditorPop {
       }
     }
   }
+
+  .RESCloseButton {
+    @extend .tn-small-button;
+    padding-right: 4px;
+    top: 9px;
+
+    &.RESFadeButton {
+      right: 42px;
+      &::before {
+        background-position: -96px -48px;
+      }
+    }
+
+    &.close::before {
+      background-position: 0px -32px;
+    }
+  }
 }
 
 .RESCharCounter {
@@ -231,21 +248,4 @@ button.RESBigEditorPop {
     @include linear-gradient(top, $res-char-counter-too-long-bg, darken($res-char-counter-too-long-bg, 10%));
   }
 
-}
-
-.RESCloseButton {
-  @extend .tn-small-button;
-  padding-right: 4px;
-  top: 9px;
-
-  &.RESFadeButton {
-    right: 42px;
-    &::before {
-      background-position: -96px -48px;
-    }
-  }
-
-  &.close::before {
-    background-position: 0px -32px;
-  }
 }

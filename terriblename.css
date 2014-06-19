@@ -145,7 +145,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESSubscriptionButton,
 .res button.RESBigEditorPop,
 .res .RESMacroDropdownTitle,
-.res .RESCloseButton,
+.res #BigEditor .RESCloseButton,
 .res .markdownEditor > a {
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8), 0px 1px 1px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8), 0px 1px 1px rgba(0, 0, 0, 0.12);
@@ -163,7 +163,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESSubscriptionButton,
 .res button.RESBigEditorPop,
 .res .RESMacroDropdownTitle,
-.res .RESCloseButton,
+.res #BigEditor .RESCloseButton,
 .res .markdownEditor > a {
   color: #6b6b6b;
   text-decoration: none;
@@ -192,7 +192,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESSubscriptionButton:hover,
 .res button.RESBigEditorPop:hover,
 .res .RESMacroDropdownTitle:hover,
-.res .RESCloseButton:hover,
+.res #BigEditor .RESCloseButton:hover,
 .res .markdownEditor > a:hover,
 .tn-small-button:focus,
 .nav-buttons .nextprev > a:focus,
@@ -200,7 +200,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESSubscriptionButton:focus,
 .res button.RESBigEditorPop:focus,
 .res .RESMacroDropdownTitle:focus,
-.res .RESCloseButton:focus,
+.res #BigEditor .RESCloseButton:focus,
 .res .markdownEditor > a:focus {
   text-decoration: none;
 }
@@ -216,7 +216,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESSubscriptionButton:active,
 .res button.RESBigEditorPop:active,
 .res .RESMacroDropdownTitle:active,
-.res .RESCloseButton:active,
+.res #BigEditor .RESCloseButton:active,
 .res .markdownEditor > a:active {
   background: -webkit-linear-gradient(top, #efefef, #e0e0e0);
   background: -moz-linear-gradient(top, #efefef, #e0e0e0);
@@ -260,6 +260,9 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .morelink {
   border: none;
   background: none;
+}
+.morelink:hover {
+  background: none !important;
 }
 .morelink a {
   letter-spacing: 0px;
@@ -1581,7 +1584,7 @@ input[type=password] {
 .icon-menu .wikiaction-revisions::before,
 .icon-menu .wikiaction-pages::before, .res .gearIcon, .res button.RESBigEditorPop::before,
 .res .RESMacroDropdownTitle::before,
-.res .RESCloseButton::before,
+.res #BigEditor .RESCloseButton::before,
 .res .markdownEditor > a::before {
   display: inline-block !important;
   background-image: url("%%icons%%") !important;
@@ -2090,7 +2093,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res button.RESBigEditorPop,
 .res .RESMacroDropdownTitle,
-.res .RESCloseButton,
+.res #BigEditor .RESCloseButton,
 .res .markdownEditor > a {
   width: 16px;
   height: 16px;
@@ -2101,7 +2104,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res button.RESBigEditorPop::before,
 .res .RESMacroDropdownTitle::before,
-.res .RESCloseButton::before,
+.res #BigEditor .RESCloseButton::before,
 .res .markdownEditor > a::before {
   content: '';
   position: absolute;
@@ -2262,6 +2265,19 @@ table.diff tbody .diff_header:not([id]) {
   top: 40px;
   margin: 0px !important;
 }
+.res #BigEditor .RESCloseButton {
+  padding-right: 4px;
+  top: 9px;
+}
+.res #BigEditor .RESCloseButton.RESFadeButton {
+  right: 42px;
+}
+.res #BigEditor .RESCloseButton.RESFadeButton::before {
+  background-position: -96px -48px;
+}
+.res #BigEditor .RESCloseButton.close::before {
+  background-position: 0px -32px;
+}
 .res .RESCharCounter {
   padding: 2px 8px;
   color: white;
@@ -2285,19 +2301,6 @@ table.diff tbody .diff_header:not([id]) {
   background: -moz-linear-gradient(top, #dc322f, #b9221f);
   background: -o-linear-gradient(top, #dc322f, #b9221f);
   background: linear-gradient(top, #dc322f, #b9221f);
-}
-.res .RESCloseButton {
-  padding-right: 4px;
-  top: 9px;
-}
-.res .RESCloseButton.RESFadeButton {
-  right: 42px;
-}
-.res .RESCloseButton.RESFadeButton::before {
-  background-position: -96px -48px;
-}
-.res .RESCloseButton.close::before {
-  background-position: 0px -32px;
 }
 .res.res-nightmode {
   color: #d1d1d1;
@@ -2401,6 +2404,16 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .menuarea {
   color: #d1d1d1;
 }
+.res.res-nightmode .menuarea > .spacer > .drop-choices.lightdrop.inuse a:hover {
+  text-shadow: none;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
 .res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop > .selected::after {
   border-top-color: #111111;
 }
@@ -2413,19 +2426,18 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode.moderator .linefield {
   background: none !important;
 }
-.res.res-nightmode .tn-dark-button-default, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
+.res.res-nightmode .tn-dark-button-default, .res.res-nightmode .menuarea > .spacer > .drop-choices.lightdrop.inuse, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
 .res.res-nightmode .tn-dark-button,
 .res.res-nightmode .fancy-settings + .tabmenu > li > a,
 .res.res-nightmode .formtab.tabmenu > li > a,
 .res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop,
 .res.res-nightmode .menuarea > .spacer > .toggle .togglebutton,
-.res.res-nightmode .menuarea > .spacer > .drop-choices.lightdrop.inuse,
 .res.res-nightmode .commentarea .commentNavSortType,
 .res.res-nightmode .commentarea #REScommentSubToggle,
 .res.res-nightmode.wiki-page .pageactions > .wikiaction,
 .res.res-nightmode button.RESBigEditorPop,
 .res.res-nightmode .RESMacroDropdownTitle,
-.res.res-nightmode .RESCloseButton,
+.res.res-nightmode #BigEditor .RESCloseButton,
 .res.res-nightmode .markdownEditor > a {
   color: #111111;
   border: none;
@@ -2448,13 +2460,12 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .formtab.tabmenu > li > a:active,
 .res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop:active,
 .res.res-nightmode .menuarea > .spacer > .toggle .togglebutton:active,
-.res.res-nightmode .menuarea > .spacer > .drop-choices.lightdrop.inuse:active,
 .res.res-nightmode .commentarea .commentNavSortType:active,
 .res.res-nightmode .commentarea #REScommentSubToggle:active,
 .res.res-nightmode.wiki-page .pageactions > .wikiaction:active,
 .res.res-nightmode button.RESBigEditorPop:active,
 .res.res-nightmode .RESMacroDropdownTitle:active,
-.res.res-nightmode .RESCloseButton:active,
+.res.res-nightmode #BigEditor .RESCloseButton:active,
 .res.res-nightmode .markdownEditor > a:active {
   background: -webkit-linear-gradient(top, #636363, #444444);
   background: -moz-linear-gradient(top, #636363, #444444);
@@ -2511,6 +2522,8 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .side .morelink a:focus {
   outline: none !important;
 }
+.res.res-nightmode .RESshortcutside:active,
+.res.res-nightmode .RESDashboardToggle:active,
 .res.res-nightmode .content button:active,
 .res.res-nightmode .content input[type=submit]:active,
 .res.res-nightmode button:active,
