@@ -8,7 +8,7 @@
 
   #header-img-a {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: bottom;
     margin: 0px 10px 0 20px;
   }
 
@@ -151,7 +151,7 @@
   &::before {
     content: '';
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: bottom;
     height: $page-title-height;
     width: 3px;
   }
@@ -159,7 +159,7 @@
   &.redditname {
     font-size: 2.9em;
     font-weight: normal;
-    vertical-align: middle;
+    vertical-align: bottom;
 
     > a {
       display: inline;

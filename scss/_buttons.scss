@@ -156,7 +156,7 @@
   //darken($main-bg, 12%), darken($main-bg, 19%));
 }
 
-button,
+button:not(.arrow),
 input[type=submit] {
   @extend %tn-button;
   padding-bottom: 3px;

@@ -1,0 +1,12 @@
+.trending-subreddits {
+  //background: $trend-bg;
+  //padding: 8px;
+  //@extend %tn-raised-box;
+  margin: 10px 0px;
+  //border: solid 1px darken($trend-bg, 30%);
+  //@include rounded(3px);
+
+  li {
+    margin-left: 10px;
+  }
+}

@@ -1,5 +1,5 @@
-//@namespace url(http://www.w3.org/1999/xhtml);
-//@-moz-document domain("reddit.com") {
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document domain("reddit.com") {
   @import "userstyle/variables";
   @import "mixins";
   @import "basic";
@@ -14,5 +14,8 @@
   @import "icons";
   @import "wiki";
   @import "res";
+  @import "userstyle/header";
+  @import "userstyle/list";
+  @import "userstyle/trend";
   @import "userstyle/multireddits";
-//}
+}

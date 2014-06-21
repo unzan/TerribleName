@@ -1,0 +1,9 @@
+#header-img {
+  &.default-header {
+    background: url($logo-image) center center no-repeat;
+    width: 82px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}

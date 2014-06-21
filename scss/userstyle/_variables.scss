@@ -1,8 +1,26 @@
 @import "../variables";
+
+$accent: $orange;
+
+// ---- overrides -----
+$logo-image: 'image/logo.png';
 $main-bg-image: 'image/noise.png';
 $header-bg-image: 'image/banner.png';
 $icon-image: 'image/icons.png';
+$alt-icon-image: 'image/userstyle-icons.png';
 $res-night-bg-image: 'image/dark-noise.png';
 
-$multireddits-bg: rgba(0, 0, 0, 0.1);
-$multireddits-grippy-bg: $main-bg;
+$nsfw-tag-bg: $accent;
+$button-bg: $accent;
+
+// ---------------------------
+
+$multireddits-bg: rgba(0, 0, 0, 0.9);
+$multireddits-grippy-bg: none;
+$multireddits-intro-bg: rgba($yellow, 0.4);
+$multireddits-intro-fg: $menu-bar-fg;
+$multireddits-selected-color: $accent;
+$multireddits-entry-bg: $menu-bar-bg;
+$multireddits-entry-fg: $menu-bar-fg;
+
+$trend-bg: $bright-yellow;
