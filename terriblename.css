@@ -1700,7 +1700,7 @@ input[type=password] {
   background-position: -64px 0px;
 }
 .icon-menu .edit-stylesheet::before {
-  background-position: -96px -48px;
+  background-position: -96px -64px;
 }
 .icon-menu .wikiaction-revisions::before {
   background-position: -32px 0px;
