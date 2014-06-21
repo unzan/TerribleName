@@ -47,7 +47,7 @@
       }
 
       .usertext > .usertext-body > .md {
-        @extend .tn-dark-raised-box;
+        @extend %tn-dark-raised-box;
         color: $res-night-fg;
       }
     }

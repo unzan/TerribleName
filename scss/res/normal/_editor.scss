@@ -2,7 +2,7 @@ button.RESBigEditorPop,
 .RESMacroDropdownTitle,
 #BigEditor .RESCloseButton,
 .markdownEditor > a {
-  @extend .tn-small-button;
+  @extend %tn-small-button;
   width: 16px;
   height: 16px;
   display: block;
@@ -11,7 +11,7 @@ button.RESBigEditorPop,
   margin-right: 2px;
 
   &::before {
-    @extend .tn-icon;
+    @extend %tn-icon;
     content: '';
     position: absolute;
     left: 5px;
@@ -131,7 +131,7 @@ button.RESBigEditorPop {
 }
 
 .RESDialogSmall.livePreview {
-  @extend .tn-raised-box;
+  @extend %tn-raised-box;
   border: solid 1px rgba(0, 0, 0, 0.2);
   margin-top: 1em;
 }
@@ -215,7 +215,7 @@ button.RESBigEditorPop {
   }
 
   .RESCloseButton {
-    @extend .tn-small-button;
+    @extend %tn-small-button;
     padding-right: 4px;
     top: 9px;
 

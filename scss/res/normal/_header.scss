@@ -22,7 +22,7 @@
 }
 
 .gearIcon {
-  @extend .tn-icon;
+  @extend %tn-icon;
   background-position: -64px -32px;
   vertical-align: middle;
   opacity: 0.6;

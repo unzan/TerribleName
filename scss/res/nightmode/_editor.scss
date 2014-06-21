@@ -2,7 +2,7 @@ button.RESBigEditorPop,
 .RESMacroDropdownTitle,
 #BigEditor .RESCloseButton,
 .markdownEditor > a {
-  @extend .tn-dark-button;
+  @extend %tn-dark-button;
 }
 
 .usertext-edit .RESDialogSmall .md.RESDialogContents {
@@ -12,7 +12,7 @@ button.RESBigEditorPop,
 #BigEditor > .RESDialogSmall.BERight,
 .RESDialogSmall.livePreview {
   > h3 {
-    @extend .tn-dark-raised-box;
+    @extend %tn-dark-raised-box;
     color: $res-night-fg;
     border: none;
   }
@@ -49,7 +49,7 @@ button.RESBigEditorPop,
 }
 
 .RESCharCounter {
-  @extend .tn-dark-engraved-box;
+  @extend %tn-dark-engraved-box;
   color: $res-night-fg;
 
   &.tooLong {

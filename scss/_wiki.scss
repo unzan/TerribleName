@@ -29,7 +29,7 @@
     }
 
     .md.wiki {
-      @extend .tn-raised-box;
+      @extend %tn-raised-box;
       > .toc > ul {
         border: none;
         padding: 10px;
@@ -65,7 +65,7 @@
     @include rounded(0px);
 
     > .wikiaction {
-      @extend .tn-small-button;
+      @extend %tn-small-button;
 
       margin: 0px;
       border-right-style: none;
@@ -74,7 +74,7 @@
       @include rounded(0px);
 
       &.wikiaction-current {
-        @extend .tn-small-button-pressed;
+        @extend %tn-small-button-pressed;
         font-weight: bold;
       }
 

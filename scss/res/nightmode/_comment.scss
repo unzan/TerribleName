@@ -5,7 +5,7 @@
     > .entry {
       > .noncollapsed {
         > .usertext {
-          @extend .tn-dark-raised-box;
+          @extend %tn-dark-raised-box;
           &::before {
             top: -7px;
             border-bottom-color: lighten($res-night-bg, 8%);
@@ -35,7 +35,7 @@
 
   .commentNavSortType,
   #REScommentSubToggle {
-    @extend .tn-dark-button;
+    @extend %tn-dark-button;
   }
 
   .commentNavSortType {

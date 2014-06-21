@@ -1,5 +1,5 @@
 // res icons (including markdown editor icons) are set in file _res.scss
-.tn-icon {
+%tn-icon {
   display: inline-block !important;
   background-image: url($icon-image) !important;
   background-repeat: no-repeat !important;
@@ -11,7 +11,7 @@
   .leavemoderator,
   form.leavecontributor-button {
     &::before {
-      @extend .tn-icon;
+      @extend %tn-icon;
     }
   }
 
@@ -33,7 +33,7 @@
   {
     &,
     &:hover {
-      @extend .tn-icon;
+      @extend %tn-icon;
     }
   }
 
@@ -65,7 +65,7 @@
 
 .sidecontentbox {
   .collapse-button {
-    @extend .tn-icon;
+    @extend %tn-icon;
     padding: 0px;
     margin: 0px;
     text-indent: -999px;
@@ -78,7 +78,7 @@
 #mail,
 #modmail,
 .gilded-icon::before {
-  @extend .tn-icon;
+  @extend %tn-icon;
 }
 
 #mail,
@@ -125,10 +125,11 @@
   .reddit-flair,
   .reddit-moderationlog,
   .reddit-unmoderated,
+  .edit-stylesheet,
   .wikiaction-revisions,
   .wikiaction-pages {
     &::before {
-      @extend .tn-icon;
+      @extend %tn-icon;
       vertical-align: middle;
       margin-right: 10px;
     }
@@ -176,6 +177,10 @@
 
   .reddit-unmoderated::before {
     background-position: -64px 0px;
+  }
+
+  .edit-stylesheet::before {
+    background-position: -96px -48px;
   }
 
   .wikiaction-revisions::before {

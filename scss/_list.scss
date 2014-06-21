@@ -81,7 +81,7 @@
   }
 
   .usertext .md {
-    @extend .tn-raised-box;
+    @extend %tn-raised-box;
   }
 }
 
@@ -245,7 +245,7 @@
 
 .thing {
   .title {
-    @extend .tn-link;
+    @extend %tn-link;
   }
 
   .tagline {
@@ -278,7 +278,7 @@
   .nextprev {
     color: $main-fg;
     > a {
-      @extend .tn-small-button;
+      @extend %tn-small-button;
     }
   }
 }

@@ -14,7 +14,7 @@
 .RESDashboardToggle {
   &,
   &.remove {
-    @extend .tn-button;
+    @extend %tn-button;
     font-size: 13px !important;
     display: inline-block !important;
     vertical-align: middle;
