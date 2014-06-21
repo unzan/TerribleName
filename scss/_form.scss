@@ -182,11 +182,11 @@ input[type=password] {
         @include rounded(3px);
 
         &:hover {
-          @extend .tn-small-button-default;
+          @extend %tn-small-button-default;
         }
 
         &:active {
-          @extend .tn-small-button-pressed;
+          @extend %tn-small-button-pressed;
         }
       }
     }
@@ -276,7 +276,7 @@ input[type=password] {
 
     .toggle .togglebutton,
     .dropdown.lightdrop {
-      @extend .tn-small-button-shadowless;
+      @extend %tn-small-button-shadowless;
       font-size: 1em;
     }
 
@@ -340,7 +340,7 @@ input[type=password] {
       }
 
       > .option.error.active {
-        @extend .tn-engraved-box;
+        @extend %tn-engraved-box;
         background: darken($main-bg, 14%);
         position: absolute;
         z-index: 4000;
@@ -356,7 +356,7 @@ input[type=password] {
   }
 
   .drop-choices.lightdrop {
-    @extend .tn-small-button-default;
+    @extend %tn-small-button-default;
     z-index: 9000;
     padding: 4px;
     margin-top: 6px;

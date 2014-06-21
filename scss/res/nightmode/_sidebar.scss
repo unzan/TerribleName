@@ -13,7 +13,7 @@
     }
 
     .content {
-      @extend .tn-dark-engraved-box;
+      @extend %tn-dark-engraved-box;
       margin-top: 4px;
       border: none;
     }

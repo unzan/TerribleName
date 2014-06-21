@@ -21,13 +21,13 @@ input[type=password] {
 .formtab.tabmenu {
   > li {
     > a {
-      @extend .tn-dark-button;
+      @extend %tn-dark-button;
       color: $res-dark-button-fg !important;
     }
 
     &.selected {
       > a {
-        @extend .tn-dark-button-pressed;
+        @extend %tn-dark-button-pressed;
         &::after {
           display: none;
         }
@@ -38,7 +38,7 @@ input[type=password] {
 
 .infobar,
 .linkinfo {
-  @extend .tn-dark-raised-box;
+  @extend %tn-dark-raised-box;
 }
 
 .tabpane-content,
@@ -52,23 +52,23 @@ input[type=password] {
 }
 
 .menuarea {
-  @extend .tn-dark-engraved-box;
+  @extend %tn-dark-engraved-box;
   color: $res-night-fg;
 
   > .spacer {
     > .dropdown.lightdrop,
     > .toggle .togglebutton {
-      @extend .tn-dark-button;
+      @extend %tn-dark-button;
     }
 
     > .drop-choices.lightdrop.inuse {
-      @extend .tn-dark-button-default;
+      @extend %tn-dark-button-default;
 
       a:hover {
         text-shadow: none;
         @include linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
         @include shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.3));
-        //@extend .tn-dark-engraved-box;
+        //@extend %tn-dark-engraved-box;
         //background: rgba(0, 0, 0, 0.2);
       }
     }
@@ -80,9 +80,9 @@ input[type=password] {
 }
 
 .flairselector.drop-choices.active {
-  @extend .tn-dark-raised-box;
+  @extend %tn-dark-raised-box;
   > h2 {
-    @extend .tn-dark-engraved-box;
+    @extend %tn-dark-engraved-box;
     color: $res-night-fg;
   }
 
@@ -91,11 +91,11 @@ input[type=password] {
       > li {
         border: none !important;
         &:hover {
-          @extend .tn-dark-button-default;
+          @extend %tn-dark-button-default;
         }
 
         &:active {
-          @extend .tn-dark-button-pressed;
+          @extend %tn-dark-button-pressed;
         }
       }
     }

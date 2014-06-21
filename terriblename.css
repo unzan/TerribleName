@@ -4,15 +4,15 @@ body {
   font-family: "Liberation Sans", Arial, sans-serif;
 }
 
-.tn-link, .thing .title,
+.thing .title,
 a {
   color: #2177b4;
 }
-.tn-link:visited, .thing .title:visited,
+.thing .title:visited,
 a:visited {
   color: #5358ba;
 }
-.tn-link:active, .thing .title:active, .tn-link:focus, .thing .title:focus,
+.thing .title:active, .thing .title:focus,
 a:active,
 a:focus {
   outline: none;
@@ -34,7 +34,7 @@ hr {
   overflow: hidden;
 }
 
-.tn-engraved-box, .menuarea .spacer > .toggle > .option.error.active, .subscribers,
+.menuarea .spacer > .toggle > .option.error.active, .subscribers,
 .users-online, .res .menuarea {
   padding: 5px;
   background: rgba(0, 0, 0, 0.14);
@@ -43,7 +43,7 @@ hr {
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.tn-raised-box, .link .usertext .md, .wiki-page .wiki-page-content .md.wiki, .res .RESDialogSmall.livePreview {
+.link .usertext .md, .wiki-page .wiki-page-content .md.wiki, .res .RESDialogSmall.livePreview {
   background: -webkit-linear-gradient(top, white, #f7f7f7);
   background: -moz-linear-gradient(top, white, #f7f7f7);
   background: -o-linear-gradient(top, white, #f7f7f7);
@@ -59,7 +59,7 @@ hr {
   border-radius: 3px;
 }
 
-.tn-button, .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, button,
+.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, button,
 input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 .res .RESDashboardToggle,
 .res .RESDashboardToggle.remove, .res.res-nightmode .content button,
@@ -90,18 +90,18 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3);
 }
-.tn-button:visited, .fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited, button:visited,
+.fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited, button:visited,
 input[type=submit]:visited, .res .RESshortcutside:visited,
 .res .RESDashboardToggle:visited,
 .res.res-nightmode button:visited,
 .res.res-nightmode input[type=submit]:visited {
   color: white;
 }
-.tn-button:hover, .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, button:hover,
+.fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, button:hover,
 input[type=submit]:hover, .res .RESshortcutside:hover,
 .res .RESDashboardToggle:hover,
 .res.res-nightmode button:hover,
-.res.res-nightmode input[type=submit]:hover, .tn-button:focus, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, button:focus,
+.res.res-nightmode input[type=submit]:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, button:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
 .res .RESDashboardToggle:focus,
 .res.res-nightmode button:focus,
@@ -113,18 +113,18 @@ input[type=submit]:focus, .res .RESshortcutside:focus,
   background: -o-linear-gradient(top, #e25418, #b44214);
   background: linear-gradient(top, #e25418, #b44214);
 }
-.tn-button:focus, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, button:focus,
+.fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, button:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
 .res .RESDashboardToggle:focus,
 .res.res-nightmode button:focus,
-.res.res-nightmode input[type=submit]:focus, .tn-button:active, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, button:active,
+.res.res-nightmode input[type=submit]:focus, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, button:active,
 input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESDashboardToggle:active,
 .res.res-nightmode button:active,
 .res.res-nightmode input[type=submit]:active {
   outline: none !important;
 }
-.tn-button:active, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, button:active,
+.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, button:active,
 input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESDashboardToggle:active,
 .res.res-nightmode button:active,
@@ -138,8 +138,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(255, 255, 255, 0.7);
 }
 
-.tn-small-button-default, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
-.tn-small-button,
+.flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .nav-buttons .nextprev > a,
 .wiki-page .pageactions > .wikiaction,
 .res .RESSubscriptionButton,
@@ -152,12 +151,10 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.tn-small-button-default, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
-.tn-small-button-shadowless,
+.flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .menuarea .spacer .toggle .togglebutton,
 .menuarea .spacer .dropdown.lightdrop,
 .res .commentNavSortType,
-.tn-small-button,
 .nav-buttons .nextprev > a,
 .wiki-page .pageactions > .wikiaction,
 .res .RESSubscriptionButton,
@@ -177,16 +174,13 @@ input[type=submit]:active, .res .RESshortcutside:active,
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.tn-small-button-default:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop:hover, .tn-small-button-default:focus, .flairselector .flairoptionpane ul > li:focus:hover, .menuarea .drop-choices.lightdrop:focus,
-.tn-small-button-shadowless:hover,
+.flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop:hover, .flairselector .flairoptionpane ul > li:focus:hover, .menuarea .drop-choices.lightdrop:focus,
 .menuarea .spacer .toggle .togglebutton:hover,
 .menuarea .spacer .dropdown.lightdrop:hover,
 .res .commentNavSortType:hover,
-.tn-small-button-shadowless:focus,
 .menuarea .spacer .toggle .togglebutton:focus,
 .menuarea .spacer .dropdown.lightdrop:focus,
 .res .commentNavSortType:focus,
-.tn-small-button:hover,
 .nav-buttons .nextprev > a:hover,
 .wiki-page .pageactions > .wikiaction:hover,
 .res .RESSubscriptionButton:hover,
@@ -194,7 +188,6 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESMacroDropdownTitle:hover,
 .res #BigEditor .RESCloseButton:hover,
 .res .markdownEditor > a:hover,
-.tn-small-button:focus,
 .nav-buttons .nextprev > a:focus,
 .wiki-page .pageactions > .wikiaction:focus,
 .res .RESSubscriptionButton:focus,
@@ -205,12 +198,10 @@ input[type=submit]:active, .res .RESshortcutside:active,
   text-decoration: none;
 }
 
-.tn-small-button-pressed, .flairselector .flairoptionpane ul > li:active, .wiki-page .pageactions > .wikiaction.wikiaction-current,
-.tn-small-button-shadowless:active,
+.flairselector .flairoptionpane ul > li:active, .wiki-page .pageactions > .wikiaction.wikiaction-current,
 .menuarea .spacer .toggle .togglebutton:active,
 .menuarea .spacer .dropdown.lightdrop:active,
 .res .commentNavSortType:active,
-.tn-small-button:active,
 .nav-buttons .nextprev > a:active,
 .wiki-page .pageactions > .wikiaction:active,
 .res .RESSubscriptionButton:active,
@@ -1566,7 +1557,7 @@ input[type=password] {
   color: #2177b4;
 }
 
-.tn-icon, .titlebox .leavemoderator::before,
+.titlebox .leavemoderator::before,
 .titlebox form.leavecontributor-button::before, .arrow.up, .res.res-nightmode .thing .midcol > .up.arrow, .arrow.up:hover, .arrow.down, .res.res-nightmode .thing .midcol > .down.arrow, .arrow.down:hover, .arrow.upmod, .res.res-nightmode .thing .midcol > .upmod.arrow, .arrow.upmod:hover, .arrow.downmod, .res.res-nightmode .thing .midcol > .downmod.arrow, .arrow.downmod:hover, .sidecontentbox .collapse-button, #mail,
 #modmail,
 .gilded-icon::before, .icon-menu .reddit-edit::before,
@@ -1581,6 +1572,7 @@ input[type=password] {
 .icon-menu .reddit-flair::before,
 .icon-menu .reddit-moderationlog::before,
 .icon-menu .reddit-unmoderated::before,
+.icon-menu .edit-stylesheet::before,
 .icon-menu .wikiaction-revisions::before,
 .icon-menu .wikiaction-pages::before, .res .gearIcon, .res button.RESBigEditorPop::before,
 .res .RESMacroDropdownTitle::before,
@@ -1668,6 +1660,7 @@ input[type=password] {
 .icon-menu .reddit-flair::before,
 .icon-menu .reddit-moderationlog::before,
 .icon-menu .reddit-unmoderated::before,
+.icon-menu .edit-stylesheet::before,
 .icon-menu .wikiaction-revisions::before,
 .icon-menu .wikiaction-pages::before {
   vertical-align: middle;
@@ -1705,6 +1698,9 @@ input[type=password] {
 }
 .icon-menu .reddit-unmoderated::before {
   background-position: -64px 0px;
+}
+.icon-menu .edit-stylesheet::before {
+  background-position: -96px -64px;
 }
 .icon-menu .wikiaction-revisions::before {
   background-position: -32px 0px;
@@ -2312,7 +2308,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .error {
   color: #d1d1d1;
 }
-.res.res-nightmode .tn-dark-engraved-box, .res.res-nightmode .subscribers,
+.res.res-nightmode .subscribers,
 .res.res-nightmode .users-online,
 .res.res-nightmode .info-notice, .res.res-nightmode .menuarea, .res.res-nightmode .flairselector.drop-choices.active > h2, .res.res-nightmode .side .sidecontentbox .content, .res.res-nightmode .RESCharCounter {
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
@@ -2323,7 +2319,7 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
 }
-.res.res-nightmode .tn-dark-raised-box, .res.res-nightmode .infobar, .res.res-nightmode .unvotable-message, .res.res-nightmode .linkinfo,
+.res.res-nightmode .infobar, .res.res-nightmode .unvotable-message, .res.res-nightmode .linkinfo,
 .res.res-nightmode .content.submit .info-notice,
 .content.submit .res.res-nightmode .info-notice, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
 .res.res-nightmode .RESDialogSmall.livePreview > h3 {
@@ -2426,8 +2422,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode.moderator .linefield {
   background: none !important;
 }
-.res.res-nightmode .tn-dark-button-default, .res.res-nightmode .menuarea > .spacer > .drop-choices.lightdrop.inuse, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
-.res.res-nightmode .tn-dark-button,
+.res.res-nightmode .menuarea > .spacer > .drop-choices.lightdrop.inuse, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
 .res.res-nightmode .fancy-settings + .tabmenu > li > a,
 .res.res-nightmode .formtab.tabmenu > li > a,
 .res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop,
@@ -2453,9 +2448,8 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px #919191, 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.res.res-nightmode .tn-dark-button-pressed, .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a,
+.res.res-nightmode .fancy-settings + .tabmenu > li.selected > a,
 .res.res-nightmode .formtab.tabmenu > li.selected > a, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
-.res.res-nightmode .tn-dark-button:active,
 .res.res-nightmode .fancy-settings + .tabmenu > li > a:active,
 .res.res-nightmode .formtab.tabmenu > li > a:active,
 .res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop:active,

@@ -5,7 +5,7 @@
 
   .wiki-page-content {
     .md.wiki {
-      @extend .tn-dark-raised-box;
+      @extend %tn-dark-raised-box;
       color: $res-night-fg;
     }
   }
@@ -16,11 +16,11 @@
 
   .pageactions {
     > .wikiaction {
-      @extend .tn-dark-button;
+      @extend %tn-dark-button;
       @include rounded(0px);
 
       &.wikiaction-current {
-        @extend .tn-dark-button-pressed;
+        @extend %tn-dark-button-pressed;
       }
 
       &:first-child {

@@ -14,7 +14,7 @@
 }
 
 .commentNavSortType {
-  @extend .tn-small-button-shadowless;
+  @extend %tn-small-button-shadowless;
   margin: 0px;
   border-right-style: none;
   display: inline-block !important;
@@ -32,7 +32,7 @@
 }
 
 .menuarea {
-  @extend .tn-engraved-box;
+  @extend %tn-engraved-box;
   display: inline-block;
   min-width: 650px;
   @include rounded(3px);
@@ -52,7 +52,7 @@
 }
 
 .RESSubscriptionButton {
-  @extend .tn-small-button;
+  @extend %tn-small-button;
   &.unsubscribe {
     color: $small-button-fg !important;
   }
