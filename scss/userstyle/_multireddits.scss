@@ -1,0 +1,23 @@
+body.with-listing-chooser {
+  > .content {
+    margin-left: 160px;
+  }
+
+  .listing-chooser {
+    top: $header-height;
+    background: $multireddits-bg;
+    @include shadow(1px 0px 2px rgba(0, 0, 0, 0.1));
+
+    .grippy {
+      border-right: solid 1px darken($multireddits-grippy-bg, 20%);
+      border-left: solid 1px darken($multireddits-grippy-bg, 20%);
+      @include linear-gradient(left, $multireddits-grippy-bg, darken($multireddits-grippy-bg, 3%));
+      @include shadow(inset 1px 0px 0px lighten($multireddits-grippy-bg, 20%));
+
+      &::after {
+        display: none;
+      }
+
+    }
+  }
+}
