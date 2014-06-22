@@ -82,9 +82,9 @@
 }
 
 .thing {
-  //.midcol > .arrow {
-    //@extend .arrow;
-  //}
+  .midcol > .arrow {
+    @extend %tn-vote-arrows;
+  }
 
   .tagline {
     .author {

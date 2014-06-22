@@ -3,7 +3,9 @@
 $white:           #ffffff;
 $gray:            #eaeaea;
 $black:           #111111;
+$real-black:      #000000;
 $dark-brown:      #2C2928;
+$dark-gray:       #686868;
 $bright-yellow:   #FFF8DC;
 
 // accents from solarized
@@ -121,6 +123,7 @@ $deleted-comment-bg: none;
 
 $upvote-color: lighten($orange, 10%);
 $downvote-color: $violet;
+
 
 $button-fg: $white;
 $button-bg: $orange;

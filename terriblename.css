@@ -12,11 +12,6 @@ a {
 a:visited {
   color: #5358ba;
 }
-.thing .title:active, .thing .title:focus,
-a:active,
-a:focus {
-  outline: none;
-}
 
 hr {
   border: none;
@@ -32,6 +27,14 @@ hr {
 
 .content {
   overflow: hidden;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: none;
 }
 
 .menuarea .spacer > .toggle > .option.error.active, .subscribers,
@@ -59,7 +62,14 @@ hr {
   border-radius: 3px;
 }
 
-.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, button,
+.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .fancy-settings button,
+.usertext-edit button,
+.tabbedpane button,
+.flairselector button,
+.wiki-page-content button,
+.formtabs-content button,
+.fancy-settings .linefield button,
+.btn,
 input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 .res .RESDashboardToggle,
 .res .RESDashboardToggle.remove, .res.res-nightmode .content button,
@@ -83,25 +93,43 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
   background: -moz-linear-gradient(top, #cb4b16, #af4113);
   background: -o-linear-gradient(top, #cb4b16, #af4113);
   background: linear-gradient(top, #cb4b16, #af4113);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
-.fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited, button:visited,
+.fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited, .fancy-settings button:visited,
+.usertext-edit button:visited,
+.tabbedpane button:visited,
+.flairselector button:visited,
+.wiki-page-content button:visited,
+.formtabs-content button:visited,
+.btn:visited,
 input[type=submit]:visited, .res .RESshortcutside:visited,
 .res .RESDashboardToggle:visited,
 .res.res-nightmode button:visited,
 .res.res-nightmode input[type=submit]:visited {
   color: white;
 }
-.fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, button:hover,
+.fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, .fancy-settings button:hover,
+.usertext-edit button:hover,
+.tabbedpane button:hover,
+.flairselector button:hover,
+.wiki-page-content button:hover,
+.formtabs-content button:hover,
+.btn:hover,
 input[type=submit]:hover, .res .RESshortcutside:hover,
 .res .RESDashboardToggle:hover,
 .res.res-nightmode button:hover,
-.res.res-nightmode input[type=submit]:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, button:focus,
+.res.res-nightmode input[type=submit]:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .fancy-settings button:focus,
+.usertext-edit button:focus,
+.tabbedpane button:focus,
+.flairselector button:focus,
+.wiki-page-content button:focus,
+.formtabs-content button:focus,
+.btn:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
 .res .RESDashboardToggle:focus,
 .res.res-nightmode button:focus,
@@ -113,18 +141,13 @@ input[type=submit]:focus, .res .RESshortcutside:focus,
   background: -o-linear-gradient(top, #e25418, #b44214);
   background: linear-gradient(top, #e25418, #b44214);
 }
-.fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, button:focus,
-input[type=submit]:focus, .res .RESshortcutside:focus,
-.res .RESDashboardToggle:focus,
-.res.res-nightmode button:focus,
-.res.res-nightmode input[type=submit]:focus, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, button:active,
-input[type=submit]:active, .res .RESshortcutside:active,
-.res .RESDashboardToggle:active,
-.res.res-nightmode button:active,
-.res.res-nightmode input[type=submit]:active {
-  outline: none !important;
-}
-.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, button:active,
+.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .fancy-settings button:active,
+.usertext-edit button:active,
+.tabbedpane button:active,
+.flairselector button:active,
+.wiki-page-content button:active,
+.formtabs-content button:active,
+.btn:active,
 input[type=submit]:active, .res .RESshortcutside:active,
 .res .RESDashboardToggle:active,
 .res.res-nightmode button:active,
@@ -273,7 +296,14 @@ input[type=submit]:active, .res .RESshortcutside:active,
   background: linear-gradient(top, #cbcbcb, #bababa);
 }
 
-button,
+.fancy-settings button,
+.usertext-edit button,
+.tabbedpane button,
+.flairselector button,
+.wiki-page-content button,
+.formtabs-content button,
+.fancy-settings .linefield button,
+.btn,
 input[type=submit] {
   padding-bottom: 3px;
   text-transform: capitalize;
@@ -412,7 +442,6 @@ input[type=password] {
   border-bottom: none !important;
   background: #e0e0e0;
   font-size: 14px;
-  outline: none !important;
   -webkit-border-radius: 3px 3px 0px 0px;
   -moz-border-radius: 3px 3px 0px 0px;
   border-radius: 3px 3px 0px 0px;
@@ -1163,6 +1192,7 @@ input[type=password] {
   display: none;
 }
 
+.organic-listing .link,
 .link.promotedlink.promoted {
   position: relative;
   background-color: rgba(133, 153, 0, 0.1) !important;
@@ -1176,6 +1206,7 @@ input[type=password] {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
+.organic-listing .link > .entry > .sponsored-tagline,
 .link.promotedlink.promoted > .entry > .sponsored-tagline {
   bottom: 10px;
   right: -5px;
@@ -1558,7 +1589,15 @@ input[type=password] {
 }
 
 .titlebox .leavemoderator::before,
-.titlebox form.leavecontributor-button::before, .arrow.up, .res.res-nightmode .thing .midcol > .up.arrow, .arrow.up:hover, .arrow.down, .res.res-nightmode .thing .midcol > .down.arrow, .arrow.down:hover, .arrow.upmod, .res.res-nightmode .thing .midcol > .upmod.arrow, .arrow.upmod:hover, .arrow.downmod, .res.res-nightmode .thing .midcol > .downmod.arrow, .arrow.downmod:hover, .sidecontentbox .collapse-button, #mail,
+.titlebox form.leavecontributor-button::before, .res.res-nightmode .thing .midcol > .up.arrow, .res.res-nightmode .thing .midcol > .down.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow,
+.arrow.up,
+.arrow.up:hover,
+.arrow.down,
+.arrow.down:hover,
+.arrow.upmod,
+.arrow.upmod:hover,
+.arrow.downmod,
+.arrow.downmod:hover, .sidecontentbox .collapse-button, #mail,
 #modmail,
 .gilded-icon::before, .icon-menu .reddit-edit::before,
 .icon-menu .moderator-mail::before,
@@ -1592,19 +1631,28 @@ input[type=password] {
   background-position: -96px -16px;
 }
 
-.arrow, .res.res-nightmode .thing .midcol > .arrow {
+.res.res-nightmode .thing .midcol > .arrow,
+.arrow {
   margin-left: 3px;
 }
-.arrow.up, .res.res-nightmode .thing .midcol > .up.arrow, .arrow.up:hover, .res.res-nightmode .thing .midcol > .up.arrow:hover {
+.res.res-nightmode .thing .midcol > .up.arrow, .res.res-nightmode .thing .midcol > .up.arrow:hover,
+.arrow.up,
+.arrow.up:hover {
   background-position: -64px -80px !important;
 }
-.arrow.upmod, .res.res-nightmode .thing .midcol > .upmod.arrow, .arrow.upmod:hover, .res.res-nightmode .thing .midcol > .upmod.arrow:hover {
+.res.res-nightmode .thing .midcol > .upmod.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow:hover,
+.arrow.upmod,
+.arrow.upmod:hover {
   background-position: -48px -80px !important;
 }
-.arrow.down, .res.res-nightmode .thing .midcol > .down.arrow, .arrow.down:hover, .res.res-nightmode .thing .midcol > .down.arrow:hover {
+.res.res-nightmode .thing .midcol > .down.arrow, .res.res-nightmode .thing .midcol > .down.arrow:hover,
+.arrow.down,
+.arrow.down:hover {
   background-position: -96px 0px !important;
 }
-.arrow.downmod, .res.res-nightmode .thing .midcol > .downmod.arrow, .arrow.downmod:hover, .res.res-nightmode .thing .midcol > .downmod.arrow:hover {
+.res.res-nightmode .thing .midcol > .downmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow:hover,
+.arrow.downmod,
+.arrow.downmod:hover {
   background-position: -80px -80px !important;
 }
 
@@ -2508,13 +2556,6 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode input[type=submit],
 .res.res-nightmode .side .morelink a {
   color: white;
-}
-.res.res-nightmode .content button:focus,
-.res.res-nightmode .content input[type=submit]:focus,
-.res.res-nightmode button:focus,
-.res.res-nightmode input[type=submit]:focus,
-.res.res-nightmode .side .morelink a:focus {
-  outline: none !important;
 }
 .res.res-nightmode .RESshortcutside:active,
 .res.res-nightmode .RESDashboardToggle:active,

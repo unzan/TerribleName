@@ -64,9 +64,6 @@ button,
 input[type=submit],
 .side .morelink a {
   color: $button-fg;
-  &:focus {
-    outline: none !important;
-  }
 }
 
 .RESshortcutside,

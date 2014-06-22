@@ -13,8 +13,8 @@
   text-align: center;
   margin-right: 3px;
   @include linear-gradient(top, $button-bg, darken($button-bg, 6%));
-  @include rounded(4px);
   @include shadow(0px 1px 2px rgba(0, 0, 0, 0.4), inset 0px -2px 0px rgba(0, 0, 0, 0.3));
+  @include rounded(4px);
 
   &:visited {
     color: $button-fg;
@@ -25,11 +25,6 @@
     color: $button-fg;
     text-decoration: none !important;
     @include linear-gradient(top, lighten($button-bg, 5%), darken($button-bg, 5%));
-  }
-
-  &:focus,
-  &:active {
-    outline: none !important;
   }
 
   &:active {
@@ -156,7 +151,13 @@
   //darken($main-bg, 12%), darken($main-bg, 19%));
 }
 
-button:not(.arrow),
+.fancy-settings button,
+.usertext-edit button,
+.tabbedpane button,
+.flairselector button,
+.wiki-page-content button,
+.formtabs-content button,
+.btn,
 input[type=submit] {
   @extend %tn-button;
   padding-bottom: 3px;

@@ -63,8 +63,9 @@ body.with-listing-chooser {
 
       &.selected {
         margin-right: 0px;
-        color: lighten($multireddits-entry-fg, 16%);
-        @include linear-gradient(top, lighten($multireddits-entry-bg, 4%), darken($multireddits-entry-bg, 1%));
+        color: $multireddits-selected-entry-fg;
+        @include linear-gradient(top, $multireddits-selected-entry-bg, darken($multireddits-selected-entry-bg, 5%));
+        @include shadow(inset 0px 1px 0px lighten($multireddits-selected-entry-bg, 14%), 0px 2px 2px rgba(0, 0, 0, 0.4));
 
         &::before {
           border-left-color: $multireddits-selected-color;
@@ -73,6 +74,7 @@ body.with-listing-chooser {
 
       > a {
         color: inherit;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
         > .description {
           color: darken($multireddits-entry-fg, 20%);
         }
@@ -83,18 +85,96 @@ body.with-listing-chooser {
       > h3 {
         font-size: 1.2em;
         margin-right: 13px;
-        //border-bottom: solid 4px $orange;
-        //margin-left: 10px;
+      }
+
+      > .multis {
+        > .create {
+          padding-bottom: 9px;
+          input[type=text] {
+            width: 93px;
+            border: none !important;
+            padding: 2px;
+            margin-bottom: 8px;
+            @include rounded(3px);
+            @include shadow(none);
+            @include shadow(inset 0px 1px 2px rgba(0, 0, 0, 0.7));
+          }
+
+          button {
+            @extend %tn-button;
+            opacity: 1;
+            &:active {
+              @include shadow(inset 0px 2px 2px darken($button-bg, 20%), 0px 1px 0px lighten($multireddits-entry-bg, 16%));
+            }
+          }
+        }
       }
     }
   }
 }
 
 .multi-details {
+  > h1 > a,
+  > h2 > a {
+    color: $multireddits-title-fg;
+  }
+
+  > h1 {
+    display: block !important;
+    text-transform: uppercase;
+    //font-weight: normal;
+    //letter-spacing: -1px;
+    > a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  > h2 {
+    font-weight: normal;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: solid 3px $horiz-line-color;
+  }
+
+  .settings button,
+  form.copy-multi button.copy {
+    @extend %tn-button;
+    font-weight: bold;
+  }
+
   .settings {
     > .visibility-group {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    > .show-copy,
+    > .show-rename,
+    > .delete.confirm-button {
+      margin-right: 4px;
+    }
+  }
+
+  form.copy-multi {
+    button.copy {
+      opacity: 1;
+      margin-left: 5px;
+    }
+  }
+
+  form.add-sr,
+  .subreddits {
+    margin-left: 0px;
+  }
+
+  .subreddits {
+    > li {
+      margin-bottom: 4px;
+      > a {
+        @extend %tn-small-button;
+      }
     }
   }
 }
