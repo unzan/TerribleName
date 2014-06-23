@@ -50,18 +50,13 @@
 
   &.down,
   &.down:hover {
-    background-position: -96px 0px !important;
+    background-position: -96px -80px !important;
   }
 
   &.downmod,
   &.downmod:hover {
     background-position: -80px -80px !important;
   }
-}
-
-.up,
-.down {
-  opacity: 0.5;
 }
 
 .sidecontentbox {

@@ -292,27 +292,33 @@
   }
 }
 
-
-.organic-listing .link,
-.link.promotedlink.promoted {
+%tn-special-entry {
   position: relative;
-  background-color: $sponsored-bg !important;
-  border: solid 1px rgba(0, 0, 0, 0.2);
+  background-color: $special-entry-bg !important;
+  color: $special-entry-fg;
+  border: solid 1px rgba(0, 0, 0, 0.2) !important;
   padding: 1.3em 0.6em 1.3em 0em;
   margin-bottom: 5px;
   @include rounded(3px);
   @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 2px rgba(0, 0, 0, 0.1));
+}
 
+.organic-listing .link,
+.link.promotedlink.promoted {
+  @extend %tn-special-entry;
+}
+
+.link.promotedlink.promoted {
   > .entry {
     > .sponsored-tagline {
       bottom: 10px;
       right: -5px;
       background: $sponsored-tag-bg;
+      color: inherit;
       padding: 4px 10px;
       border: solid 1px rgba(0, 0, 0, 0.3);
       border-right: none;
       text-transform: capitalize;
-      color: $sponsored-fg;
       @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.15), 0px 1px 0px rgba(255, 255, 255, 0.7));
       @include rounded(3px 0px 0px 3px);
     }

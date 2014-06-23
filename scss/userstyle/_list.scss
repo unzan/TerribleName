@@ -42,21 +42,24 @@
 }
 
 .sr-interest-bar {
-  background-color: transparent;
+  @extend %tn-special-entry;
+
   > .bubble {
-    padding: 10px 20px 10px 10px;
-    @include shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
+    background: none;
+
+    &::after {
+      display: none;
+    }
 
     > .caption {
       > .subscribe {
-        @extend %tn-button;
-
-        &,
-        &:hover,
-        &:focus,
-        &:active {
-          @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
-        }
+        background: none;
+        border: none;
+        font-weight: inherit;
+        color: inherit;
+        display: inline;
+        margin: 0px;
+        padding: 0px;
       }
     }
 
@@ -72,3 +75,24 @@
     }
   }
 }
+
+.trending-subreddits {
+  margin: 10px 0px;
+
+  > .trending-subreddits-content {
+      > strong {
+      color: $main-fg;
+    }
+
+    li {
+      > a {
+        @extend %tn-small-button;
+      }
+    }
+
+    > .comments {
+      color: $list-entry-fg;
+    }
+  }
+}
+

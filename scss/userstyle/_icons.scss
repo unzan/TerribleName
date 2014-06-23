@@ -1,0 +1,31 @@
+.tagline .userattrs .cakeday {
+  @extend %tn-icon;
+  background-position: -16px -96px;
+}
+
+.subscription-box {
+  .sr-type-img {
+    @extend %tn-icon;
+    overflow: hidden;
+    padding-left: 16px;
+    margin-right: 4px;
+    @include box-sizing(border-box);
+
+    &[alt="moderator"] {
+      background-position: -16px -32px;
+    }
+
+    &[alt="private"] {
+      background-position: -96px 0px;
+    }
+
+    &[alt="over18"] {
+      background-position: 0px -96px;
+    }
+  }
+}
+
+.trending-subreddits strong::before {
+  @extend %tn-icon;
+  background-position: -32px -96px;
+}

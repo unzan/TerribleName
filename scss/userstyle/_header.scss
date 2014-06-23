@@ -1,10 +1,17 @@
-a#header-img {
+#header-img {
   &.default-header {
     background: url($logo-image) center center no-repeat;
     width: 82px;
     height: $page-title-height;
     margin: 0px 10px 0px 20px;
     vertical-align: middle;
+  }
+}
+
+#header-img-a {
+  > #header-img {
+    max-height: $page-title-height !important;
+    width: auto !important;
   }
 }
 
