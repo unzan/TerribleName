@@ -3,7 +3,7 @@ Terrible Name
 
 Terrible Name is a simple RES-friendly reddit theme written in [SCSS][].
 It's available as subreddit theme and userstyle. You can see a demo of subreddit
-theme in [/r/TerribleName][/r/TerribleName].
+theme in [/r/TerribleName][subreddit].
 
 Installation
 ------------
@@ -35,8 +35,8 @@ Known Issues
 1. Moderation buttons in Unmoderated Links page and on any link with reports are
    still using the default style.
 
-2. Some wiki diffs might overlap with sidebar ([for example][fucking diff]) when
-   the browser's window is too small.
+2. Some wiki diffs might overlap with sidebar when the browser's window is too
+   small ([for example][fucking diff]).
 
 ***
 
