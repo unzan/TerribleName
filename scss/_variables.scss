@@ -21,7 +21,7 @@ $green:           #859900;
 $sidebar-width:   300px;
 
 // --- these images are for local test
-$main-bg-image: 'image/noise.png';
+$main-bg-image: 'image/noise.jpg';
 $header-bg-image: 'image/banner.png';
 $icon-image: 'image/icons.png';
 
@@ -37,6 +37,7 @@ $monospace: 'DejaVu Sans Mono', 'Droid Sans Mono', Inconsolata, Monaco, monospac
 $main-bg: $gray;
 $main-fg: $black;
 
+$thumbnail-bg: $white;
 $text-bg: $white;
 $text-fg: $main-fg;
 $toc-bg: $bright-yellow;
@@ -120,6 +121,8 @@ $list-entry-fg: darken($gray, 50%);
 $comment-bg: rgba(255, 255, 255, 0.5);
 $comment-bg: $white;
 $deleted-comment-bg: none;
+$highlighted-comment-outline-color: rgba(0, 0, 0, 0.2);
+$highlighted-comment-bg: rgba($bright-yellow, 0.4);
 
 $upvote-color: lighten($orange, 10%);
 $downvote-color: $violet;
@@ -146,7 +149,7 @@ $form-tab-bg: $box-bg;
 $form-tab-fg: lighten($main-fg, 20%);
 $tooltip-bg: darken($bright-yellow, 10%);
 
-$res-night-bg-image: 'image/dark-noise.png';
+$res-night-bg-image: 'image/dark-noise.jpg';
 $res-night-bg-image: '%%dark-noise%%';
 $res-night-bg: lighten($black, 5%);
 $res-night-bg: $black;

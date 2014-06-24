@@ -8,25 +8,33 @@
       &.prev,
       &.next {
         @extend %tn-small-button;
-        height: auto !important;
+        //height: auto !important;
         position: relative;
         margin: 0px;
         overflow: hidden;
         white-space: nowrap;
-        text-indent: 0px;
-        width: 1.6em;
+        text-indent: -900px;
+        width: 20px;
+        height: 20px;
       }
 
       &::before {
-        margin-left: 0.3em;
-        margin-right: 3em;
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: 3px;
+        left: 6px;
+        border-top: solid 6px transparent;
+        border-bottom: solid 6px transparent;
       }
 
       &.prev {
         border-right: none;
         @include rounded(3px 0px 0px 3px);
         &::before {
-          content: '\25c2';
+          border-right: solid 5px $small-button-fg;
+          //content: '\25c2';
         }
       }
 
@@ -34,7 +42,8 @@
         border-left: none;
         @include rounded(0px 3px 3px 0px);
         &::before {
-          content: '\25b8';
+          border-left: solid 5px $small-button-fg;
+          //content: '\25b8';
         }
       }
     }

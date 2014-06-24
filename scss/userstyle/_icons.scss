@@ -3,27 +3,32 @@
   background-position: -16px -96px;
 }
 
-.subscription-box {
-  .sr-type-img {
+.subscription-box .sr-type-img {
+//.profile-page .titlebox .bottom > img[src$="/mailgray.png"] {
     @extend %tn-icon;
     overflow: hidden;
     padding-left: 16px;
     margin-right: 4px;
     @include box-sizing(border-box);
+}
 
-    &[alt="moderator"] {
-      background-position: -16px -32px;
-    }
+.subscription-box .sr-type-img {
+  &[alt="moderator"] {
+    background-position: -16px -32px;
+  }
 
-    &[alt="private"] {
-      background-position: -96px 0px;
-    }
+  &[alt="private"] {
+    background-position: -96px 0px;
+  }
 
-    &[alt="over18"] {
-      background-position: 0px -96px;
-    }
+  &[alt="over18"] {
+    background-position: 0px -96px;
   }
 }
+
+//.profile-page .titlebox .bottom > img[src$="/mailgray.png"] {
+  //background-position: -32px -48px;
+//}
 
 .trending-subreddits strong::before {
   @extend %tn-icon;

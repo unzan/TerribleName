@@ -9,6 +9,8 @@
 }
 
 #header-img-a {
+  max-width: 300px;
+  overflow: hidden;
   > #header-img {
     max-height: $page-title-height !important;
     width: auto !important;

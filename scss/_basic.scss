@@ -13,9 +13,13 @@ a {
 }
 
 hr {
+  margin: 1.5em 0em;
+}
+
+%tn-horiz-bar,
+hr {
   border: none;
   display: block;
-  margin: 1.5em 0em;
   height: 3px;
   background: $horiz-line-color;
 }

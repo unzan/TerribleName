@@ -1,0 +1,18 @@
+.subscription-box {
+  .subButtons {
+    padding: 3px 0px !important;
+
+    > .subscribe-button,
+    > .RESshortcut,
+    > .RESDashboardToggle {
+      margin-right: 5px;
+    }
+
+    > .subscribe-button > .option,
+    > .RESshortcut,
+    > .RESDashboardToggle {
+      padding: 2px 5px;
+      font-size: 10px !important;
+    }
+  }
+}

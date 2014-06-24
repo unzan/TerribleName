@@ -122,8 +122,6 @@ body.with-listing-chooser {
   > h1 {
     display: block !important;
     text-transform: uppercase;
-    //font-weight: normal;
-    //letter-spacing: -1px;
     > a {
       &:hover {
         text-decoration: none;
@@ -176,5 +174,20 @@ body.with-listing-chooser {
         @extend %tn-small-button;
       }
     }
+  }
+}
+
+.subscription-box {
+  .title {
+    color: $sidebar-fg;
+  }
+
+  .box-separator {
+    @extend %tn-horiz-bar;
+    margin: 6px 0px 8px 0px;
+  }
+
+  li {
+    margin-bottom: 4px !important;
   }
 }

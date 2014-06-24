@@ -1,4 +1,4 @@
-.infobar {
+%tn-info-box {
   background: $info-box-bg;
   border: solid 1px rgba(0, 0, 0, 0.3);
   font-family: $sans-serif;
@@ -22,6 +22,10 @@ input[type=password] {
   font-family: $sans-serif;
   @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.15), 0px 1px 0px rgba(255, 255, 255, 0.8));
   @include rounded(3px);
+}
+
+.infobar {
+  @extend %tn-info-box;
 }
 
 .roundfield,
@@ -249,7 +253,7 @@ input[type=password] {
   &::after {
     content: '';
     display: block;
-    clear: both;
+    clear: left;
   }
 
 

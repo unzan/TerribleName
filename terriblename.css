@@ -1,3 +1,21 @@
+/*
+ * Terrible Name
+ *
+ * A simple RES-friendly theme for reddit
+ *
+ * Author: unzan (https://github.com/unzan)
+ * Contributor: - David Davis (https://github.com/daviddavis)
+ *              - matheod (https://github.com/matheod)
+ * License: WTFPL
+ *
+ * Default icons provided with this theme are part of the Fugue Icon Set
+ * by Yusuke Kamiyamane [1]. Default banner is a photograph [2] by
+ * Holger Weinandt [3].
+ *
+ * [1]: http://p.yusukekamiyamane.com/
+ * [2]: http://commons.wikimedia.org/wiki/File:Panorama_Frankfurt_vom_Maintower_edit.jpg
+ * [3]: http://de.wikipedia.org/wiki/Benutzer:Schaengel
+ */
 body {
   background: #eaeaea url("%%noise%%") left top repeat;
   color: #111111;
@@ -14,9 +32,12 @@ a:visited {
 }
 
 hr {
+  margin: 1.5em 0em;
+}
+
+hr {
   border: none;
   display: block;
-  margin: 1.5em 0em;
   height: 3px;
   background: rgba(0, 0, 0, 0.2);
 }
@@ -615,7 +636,7 @@ input[type=password] {
 .menuarea::after {
   content: '';
   display: block;
-  clear: both;
+  clear: left;
 }
 .menuarea .spacer {
   display: block;
@@ -899,6 +920,9 @@ input[type=password] {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   font-variant: normal;
   text-transform: lowercase;
+  font-size: 2.9em;
+  font-weight: normal;
+  vertical-align: middle;
 }
 .pagename::before {
   content: '';
@@ -906,11 +930,6 @@ input[type=password] {
   vertical-align: middle;
   height: 89px;
   width: 3px;
-}
-.pagename.redditname {
-  font-size: 2.9em;
-  font-weight: normal;
-  vertical-align: middle;
 }
 .pagename.redditname > a {
   display: inline;
@@ -982,10 +1001,10 @@ input[type=password] {
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8);
 }
-.link .author {
+.link a.author {
   color: #2177b4;
 }
-.link .author.admin {
+.link a.author.admin {
   color: #dc322f;
 }
 .link .midcol {
@@ -1012,16 +1031,16 @@ input[type=password] {
 .wiki-page .linklisting .thing .flat-list.buttons > li > .flairselectbtn,
 .wiki-page .linklisting .thing .flat-list.buttons > li > .redditSingleClick,
 .wiki-page .linklisting .thing .flat-list.buttons > .big-mod-buttons .pretty-button,
-.listing-page .linklisting .thing .flat-list.buttons > li.save-button > a,
-.listing-page .linklisting .thing .flat-list.buttons > li > .toggle,
-.listing-page .linklisting .thing .flat-list.buttons > li > .state-button,
-.listing-page .linklisting .thing .flat-list.buttons > li > .flairselectbtn,
-.listing-page .linklisting .thing .flat-list.buttons > li > .redditSingleClick,
-.listing-page .linklisting .thing .flat-list.buttons > .big-mod-buttons .pretty-button {
+.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li.save-button > a,
+.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .toggle,
+.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .state-button,
+.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .flairselectbtn,
+.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .redditSingleClick,
+.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > .big-mod-buttons .pretty-button {
   visibility: hidden;
 }
 .wiki-page .linklisting .thing .flat-list.buttons > li.option,
-.listing-page .linklisting .thing .flat-list.buttons > li.option {
+.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li.option {
   display: none;
 }
 .wiki-page .linklisting .thing:hover .flat-list.buttons > li.save-button > a,
@@ -1030,12 +1049,12 @@ input[type=password] {
 .wiki-page .linklisting .thing:hover .flat-list.buttons > li > .flairselectbtn,
 .wiki-page .linklisting .thing:hover .flat-list.buttons > li > .redditSingleClick,
 .wiki-page .linklisting .thing:hover .flat-list.buttons > .big-mod-buttons .pretty-button,
-.listing-page .linklisting .thing:hover .flat-list.buttons > li.save-button > a,
-.listing-page .linklisting .thing:hover .flat-list.buttons > li > .toggle,
-.listing-page .linklisting .thing:hover .flat-list.buttons > li > .state-button,
-.listing-page .linklisting .thing:hover .flat-list.buttons > li > .flairselectbtn,
-.listing-page .linklisting .thing:hover .flat-list.buttons > li > .redditSingleClick,
-.listing-page .linklisting .thing:hover .flat-list.buttons > .big-mod-buttons .pretty-button {
+.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li.save-button > a,
+.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .toggle,
+.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .state-button,
+.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .flairselectbtn,
+.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .redditSingleClick,
+.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > .big-mod-buttons .pretty-button {
   visibility: visible;
 }
 
@@ -1324,6 +1343,7 @@ input[type=password] {
 
 .commentarea {
   border-top: solid 1px rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
@@ -1337,6 +1357,7 @@ input[type=password] {
 }
 .commentarea .panestack-title {
   border-bottom: none;
+  margin-top: 0px;
 }
 .commentarea > .usertext {
   clear: both;
@@ -1380,6 +1401,10 @@ input[type=password] {
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
+.comment > .entry > .noncollapsed > .usertext.border > .usertext-body {
+  background: rgba(255, 248, 220, 0.4);
+  outline: dashed 1px rgba(0, 0, 0, 0.2);
+}
 .comment > .entry > .noncollapsed > .usertext > .usertext-body {
   padding: 1px 8px;
 }
@@ -1404,6 +1429,7 @@ input[type=password] {
 
 .side {
   background: none;
+  color: #515151;
   width: 300px;
   margin: 1em 1em 1em 2em;
 }
@@ -1497,6 +1523,9 @@ input[type=password] {
   content: 'online';
 }
 
+.sidecontentbox > .title h1 {
+  color: #515151;
+}
 .sidecontentbox a.helplink {
   margin: 0px;
 }
@@ -1761,16 +1790,12 @@ input[type=password] {
 .wiki-page > .content {
   position: relative;
 }
-.wiki-page .infobar, .wiki-page .unvotable-message, .wiki-page .linkinfo,
-.wiki-page .content.submit .info-notice,
-.content.submit .wiki-page .info-notice {
+.wiki-page .infobar, .wiki-page .unvotable-message {
   padding: 3px 8px;
   display: block;
   margin: 7px 15px 15px 15px;
 }
-.wiki-page .infobar .md p, .wiki-page .unvotable-message .md p, .wiki-page .linkinfo .md p,
-.wiki-page .content.submit .info-notice .md p,
-.content.submit .wiki-page .info-notice .md p {
+.wiki-page .infobar .md p, .wiki-page .unvotable-message .md p {
   padding: 0px;
   margin: 0px;
 }
@@ -2040,6 +2065,9 @@ table.diff tbody .diff_header:not([id]) {
 .res .link .RES-keyNav-activeElement {
   background: none !important;
   border-right: solid 4px rgba(203, 75, 22, 0.5);
+}
+.res .thing .title.imgScanned.visited {
+  color: #5358ba;
 }
 .res .thing .tagline .author.moderator, .res .thing .tagline .author.moderator:hover {
   background-color: #6f8000 !important;
@@ -2363,9 +2391,8 @@ table.diff tbody .diff_header:not([id]) {
   -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px #444444;
 }
-.res.res-nightmode .infobar, .res.res-nightmode .unvotable-message, .res.res-nightmode .linkinfo,
-.res.res-nightmode .content.submit .info-notice,
-.content.submit .res.res-nightmode .info-notice, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
+.res.res-nightmode .infobar, .res.res-nightmode .unvotable-message,
+.res.res-nightmode .linkinfo, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
 .res.res-nightmode .RESDialogSmall.livePreview > h3 {
   border: none !important;
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);

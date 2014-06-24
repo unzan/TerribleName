@@ -1,3 +1,4 @@
+@import "license";
 @namespace url(http://www.w3.org/1999/xhtml);
 @-moz-document domain("reddit.com") {
   @import "userstyle/variables";
@@ -18,4 +19,6 @@
   @import "userstyle/header";
   @import "userstyle/list";
   @import "userstyle/multireddits";
+  @import "userstyle/profile";
+  @import "userstyle/res";
 }

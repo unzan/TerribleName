@@ -1,5 +1,6 @@
 .side {
   background: none;
+  color: $sidebar-fg;
   width: $sidebar-width;
   margin: 1em 1em 1em 2em;
 }
@@ -56,9 +57,8 @@
 
 .linkinfo,
 .content.submit .info-notice {
-  @extend .infobar;
+  @extend %tn-info-box;
 }
-
 
 .users-online::before {
   background: none;
@@ -114,6 +114,10 @@
 
 
 .sidecontentbox {
+  > .title h1 {
+    color: $sidebar-fg;
+  }
+
   a.helplink {
     margin: 0px;
   }

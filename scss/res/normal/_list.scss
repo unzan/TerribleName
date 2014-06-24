@@ -6,6 +6,10 @@
 }
 
 .thing {
+  .title.imgScanned.visited {
+    color: $link-fg-visited;
+  }
+
   .tagline {
     .author {
       &.moderator {
