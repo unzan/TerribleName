@@ -136,9 +136,12 @@ body.with-listing-chooser {
     border-bottom: solid 3px $horiz-line-color;
   }
 
-  .settings button,
-  form.copy-multi button.copy {
-    @extend %tn-button;
+  .settings > button,
+  .settings > .delete > button,
+  &.public .settings > .share-in-sr,
+  form.copy-multi button.copy,
+  form.rename-multi button.rename {
+    @extend %tn-default-button;
     font-weight: bold;
   }
 
@@ -155,11 +158,10 @@ body.with-listing-chooser {
     }
   }
 
-  form.copy-multi {
-    button.copy {
-      opacity: 1;
-      margin-left: 5px;
-    }
+  form.copy-multi button.copy,
+  form.rename-multi button.rename {
+    opacity: 1;
+    margin-left: 5px;
   }
 
   form.add-sr,
@@ -168,11 +170,120 @@ body.with-listing-chooser {
   }
 
   .subreddits {
+    margin-bottom: 10px;
     > li {
-      margin-bottom: 4px;
-      > a {
-        @extend %tn-small-button;
+      margin-bottom: 3px;
+
+      > a,
+      > button.remove-sr {
+        line-height: 1.1em;
+        height: 1.1em;
+        font-size: 14px !important;
       }
+
+      > button.remove-sr {
+        overflow: hidden;
+        width: 0.7em;
+        display: inline-block;
+        color: transparent;
+        text-indent: 0px;
+        &::before {
+          color: $small-button-fg;
+          display: inline-block;
+          content: '\2715';
+          left: 4px;
+          top: 4px;
+          //margin-right: 2em;
+          //margin-left: 0.1em;
+        }
+      }
+    }
+  }
+
+  .recommend-box {
+    > .recs {
+      > .recommendations {
+        margin: 10px 0px;
+        > .rec-item {
+          width: 145px;
+          background: none;
+          border: none;
+          margin: 0px 2px 4px 0px;
+          padding: 0px;
+
+          > a {
+            width: 107px;
+          }
+
+          > a,
+          > button.add {
+            font-size: 13px;
+            line-height: 1.3em;
+            height: 1.3em;
+          }
+
+          > button.add {
+            width: 1em;
+            text-indent: 0;
+
+            &::before,
+            &::after {
+              content: '';
+              background: lighten($small-button-fg, 10%);
+            }
+
+            &::before {
+              top: 6px;
+              bottom: 6px;
+              left: 10px;
+              width: 3px;
+            }
+
+            &::after {
+              left: 6px;
+              right: 6px;
+              top: 10px;
+              height: 3px;
+              width: auto;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  .subreddits > li > a,
+  .subreddits > li > button.remove-sr,
+  .recommend-box > .recs > .recommendations > .rec-item > a,
+  .recommend-box > .recs > .recommendations > .rec-item > button.add {
+    @extend %tn-small-button;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0px !important;
+    @include box-sizing(content-box);
+  }
+
+  .subreddits > li > a,
+  .recommend-box > .recs > .recommendations > .rec-item > a {
+    padding: 3px 6px;
+    @include rounded(3px 0px 0px 3px);
+  }
+
+  .subreddits > li > button.remove-sr,
+  .recommend-box > .recs > .recommendations > .rec-item > button.add {
+    //@include linear-gradient(top, darken($small-button-bg, 10%), darken($small-button-bg, 15%));
+    opacity: 1;
+    border-left: none;
+    overflow: hidden;
+    padding: 3px 5px;
+    display: inline-block;
+    position: relative;
+    @include rounded(0px 3px 3px 0px);
+
+    &::after,
+    &::before {
+      position: absolute;
     }
   }
 }
@@ -189,5 +300,21 @@ body.with-listing-chooser {
 
   li {
     margin-bottom: 4px !important;
+  }
+}
+
+.hover-bubble.multi-add-notice {
+  background: $notice-bubble-bg;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  @include shadow(0px 3px 5px rgba(0, 0, 0, 0.14));
+
+  &.anchor-right::after {
+    border-left-color: $notice-bubble-bg;
+    right: -17px;
+  }
+
+  &.anchor-right::before {
+    border-left-color: rgba(0, 0, 0, 0.3);
+    right: -18px;
   }
 }

@@ -151,6 +151,7 @@
   //darken($main-bg, 12%), darken($main-bg, 19%));
 }
 
+%tn-default-button,
 .fancy-settings button,
 .usertext-edit button,
 .tabbedpane button,
@@ -160,6 +161,7 @@
 .btn,
 input[type=submit] {
   @extend %tn-button;
+  display: inline-block;
   padding-bottom: 3px;
   text-transform: capitalize;
 }
@@ -213,3 +215,35 @@ input[type=submit] {
     }
   }
 }
+
+.nav-buttons {
+  padding: 1em 0em;
+
+  .nextprev {
+    color: $main-fg;
+    > a {
+      @extend %tn-small-button;
+    }
+  }
+
+  .next-suggestions {
+    > a {
+      display: inline-block;
+      padding: 2px 6px;
+      border: solid 1px rgba(darken($small-button-bg, 30%), 0.6);
+      margin-right: 3px;
+      font-weight: bold;
+      color: $small-button-fg;
+
+      &:hover,
+      &:focus {
+        @extend %tn-small-button-default;
+      }
+
+      &:active {
+        @extend %tn-small-button-pressed;
+      }
+    }
+  }
+}
+

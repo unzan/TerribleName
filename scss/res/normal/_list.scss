@@ -1,8 +1,23 @@
+.RESUserTag + .flair {
+  margin-left: 3px;
+}
+
 .link {
   .RES-keyNav-activeElement {
     background: none !important;
     border-right: solid 4px $res-active-element-color;
   }
+
+  //&:not(.promoted) {
+    //.RES-keyNav-activeElement {
+      //border-right: solid 4px $res-active-element-color;
+    //}
+  //}
+
+  //&.promoted {
+    //.RES-keyNav-activeElement {
+    //}
+  //}
 }
 
 .thing {

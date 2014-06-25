@@ -51,6 +51,7 @@ $codeblock-fg: $text-fg;
 $codeblock-border-color: $quote-border-color;
 $table-heading-bg: darken($text-bg, 10%);
 $table-heading-fg: lighten($main-fg, 20%);
+$table-content-bg: $text-bg;
 $table-highlight-bg: $bright-yellow;
 $table-border-color: darken($main-bg, 20%);
 $inline-code-fg: darken($orange, 5%);
@@ -112,10 +113,9 @@ $default-modpost-thumb-bg: rgba($green, 0.5);
 $default-text-thumb-bg: rgba($blue, 0.5);
 $flat-list-hover-bg: rgba(0, 0, 0, 0.1);
 
-$default-link-flair-bg: lighten($blue, 5%);
-$default-link-flair-fg: $white;
-$default-user-flair-bg: lighten($green, 3%);
-$default-user-flair-fg: $white;
+$flair-bg: $bright-yellow;
+$flair-fg: $main-fg;
+$notice-bubble-bg: $bright-yellow;
 
 $list-entry-fg: darken($gray, 50%);
 $comment-bg: rgba(255, 255, 255, 0.5);

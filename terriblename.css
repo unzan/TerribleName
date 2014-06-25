@@ -48,6 +48,7 @@ hr {
 
 .content {
   overflow: hidden;
+  padding-bottom: 10px;
 }
 
 :focus {
@@ -83,7 +84,8 @@ hr {
   border-radius: 3px;
 }
 
-.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .fancy-settings button,
+.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a,
+.fancy-settings button,
 .usertext-edit button,
 .tabbedpane button,
 .flairselector button,
@@ -121,7 +123,8 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited, .fancy-settings button:visited,
+.fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited,
+.fancy-settings button:visited,
 .usertext-edit button:visited,
 .tabbedpane button:visited,
 .flairselector button:visited,
@@ -134,7 +137,8 @@ input[type=submit]:visited, .res .RESshortcutside:visited,
 .res.res-nightmode input[type=submit]:visited {
   color: white;
 }
-.fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, .fancy-settings button:hover,
+.fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover,
+.fancy-settings button:hover,
 .usertext-edit button:hover,
 .tabbedpane button:hover,
 .flairselector button:hover,
@@ -144,7 +148,8 @@ input[type=submit]:visited, .res .RESshortcutside:visited,
 input[type=submit]:hover, .res .RESshortcutside:hover,
 .res .RESDashboardToggle:hover,
 .res.res-nightmode button:hover,
-.res.res-nightmode input[type=submit]:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .fancy-settings button:focus,
+.res.res-nightmode input[type=submit]:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus,
+.fancy-settings button:focus,
 .usertext-edit button:focus,
 .tabbedpane button:focus,
 .flairselector button:focus,
@@ -162,7 +167,8 @@ input[type=submit]:focus, .res .RESshortcutside:focus,
   background: -o-linear-gradient(top, #e25418, #b44214);
   background: linear-gradient(top, #e25418, #b44214);
 }
-.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .fancy-settings button:active,
+.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active,
+.fancy-settings button:active,
 .usertext-edit button:active,
 .tabbedpane button:active,
 .flairselector button:active,
@@ -182,7 +188,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(255, 255, 255, 0.7);
 }
 
-.flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+.nav-buttons .next-suggestions > a:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .nav-buttons .nextprev > a,
 .wiki-page .pageactions > .wikiaction,
 .res .RESSubscriptionButton,
@@ -195,7 +201,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+.nav-buttons .next-suggestions > a:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .menuarea .spacer .toggle .togglebutton,
 .menuarea .spacer .dropdown.lightdrop,
 .res .commentNavSortType,
@@ -218,7 +224,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop:hover, .flairselector .flairoptionpane ul > li:focus:hover, .menuarea .drop-choices.lightdrop:focus,
+.nav-buttons .next-suggestions > a:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:focus:hover, .menuarea .drop-choices.lightdrop:focus,
 .menuarea .spacer .toggle .togglebutton:hover,
 .menuarea .spacer .dropdown.lightdrop:hover,
 .res .commentNavSortType:hover,
@@ -242,7 +248,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
   text-decoration: none;
 }
 
-.flairselector .flairoptionpane ul > li:active, .wiki-page .pageactions > .wikiaction.wikiaction-current,
+.nav-buttons .next-suggestions > a:active, .flairselector .flairoptionpane ul > li:active, .wiki-page .pageactions > .wikiaction.wikiaction-current,
 .menuarea .spacer .toggle .togglebutton:active,
 .menuarea .spacer .dropdown.lightdrop:active,
 .res .commentNavSortType:active,
@@ -326,6 +332,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .fancy-settings .linefield button,
 .btn,
 input[type=submit] {
+  display: inline-block;
   padding-bottom: 3px;
   text-transform: capitalize;
 }
@@ -379,6 +386,21 @@ input[type=submit] {
   background: -moz-linear-gradient(top, #eaeaea, #c4c4c4);
   background: -o-linear-gradient(top, #eaeaea, #c4c4c4);
   background: linear-gradient(top, #eaeaea, #c4c4c4);
+}
+
+.nav-buttons {
+  padding: 1em 0em;
+}
+.nav-buttons .nextprev {
+  color: #111111;
+}
+.nav-buttons .next-suggestions > a {
+  display: inline-block;
+  padding: 2px 6px;
+  border: solid 1px rgba(170, 170, 170, 0.6);
+  margin-right: 3px;
+  font-weight: bold;
+  color: #6b6b6b;
 }
 
 .infobar, .unvotable-message, .linkinfo,
@@ -1196,13 +1218,6 @@ input[type=password] {
   background: rgba(133, 153, 0, 0.5);
 }
 
-.nav-buttons {
-  padding: 1em 0em;
-}
-.nav-buttons .nextprev {
-  color: #111111;
-}
-
 .organic-listing {
   background-color: transparent !important;
   border: none !important;
@@ -1297,6 +1312,7 @@ input[type=password] {
 .md pre {
   margin: 1em 0em;
   padding: 0px;
+  max-width: 95%;
 }
 .md pre > code {
   padding: 7px;
@@ -1329,6 +1345,9 @@ input[type=password] {
   -moz-box-shadow: inset 0px 1px 0px white;
   box-shadow: inset 0px 1px 0px white;
 }
+.md tbody tr {
+  background: white;
+}
 .md tbody tr:hover {
   background: cornsilk;
 }
@@ -1347,6 +1366,10 @@ input[type=password] {
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+.commentarea > .infobar, .commentarea > .unvotable-message {
+  margin-bottom: 15px;
+  margin-left: 10px;
 }
 .commentarea .menuarea {
   color: #111111;
@@ -2061,6 +2084,9 @@ table.diff tbody .diff_header:not([id]) {
 .res .subButtons .subscribe-button {
   display: inline-block;
   margin: 0px 5px 0px 0px;
+}
+.res .RESUserTag + .flair {
+  margin-left: 3px;
 }
 .res .link .RES-keyNav-activeElement {
   background: none !important;

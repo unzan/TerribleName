@@ -3,6 +3,11 @@
   padding-top: 10px;
   @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
 
+  > .infobar {
+    margin-bottom: 15px;
+    margin-left: 10px;
+  }
+
   .menuarea {
     color: $main-fg;
     + .nestedlisting {

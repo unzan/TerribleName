@@ -48,6 +48,12 @@
       }
     }
   }
+
+  .link {
+    .title {
+      max-width: 93%;
+    }
+  }
 }
 
 .sr-interest-bar {
@@ -89,7 +95,8 @@
   margin: 10px 0px;
 
   > .trending-subreddits-content {
-      > strong {
+    padding-bottom: 3px;
+    > strong {
       color: $main-fg;
     }
 

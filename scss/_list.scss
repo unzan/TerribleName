@@ -272,17 +272,6 @@
   }
 }
 
-.nav-buttons {
-  padding: 1em 0em;
-
-  .nextprev {
-    color: $main-fg;
-    > a {
-      @extend %tn-small-button;
-    }
-  }
-}
-
 .organic-listing {
   background-color: transparent !important;
   border: none !important;
