@@ -1,15 +1,15 @@
-.tagline .userattrs .cakeday {
+.subscription-box .sr-type-img,
+.message.new > .entry .head::after,
+.trending-subreddits strong::before {
   @extend %tn-icon;
-  background-position: -16px -96px;
 }
 
 .subscription-box .sr-type-img {
 //.profile-page .titlebox .bottom > img[src$="/mailgray.png"] {
-    @extend %tn-icon;
-    overflow: hidden;
-    padding-left: 16px;
-    margin-right: 4px;
-    @include box-sizing(border-box);
+  overflow: hidden;
+  padding-left: 16px;
+  margin-right: 4px;
+  @include box-sizing(border-box);
 }
 
 .subscription-box .sr-type-img {
@@ -27,6 +27,12 @@
 }
 
 .trending-subreddits strong::before {
-  @extend %tn-icon;
   background-position: -32px -96px;
+}
+
+.message.new > .entry .head::after {
+  background-position: -48px -96px;
+  margin-left: 10px;
+  content: '';
+  vertical-align: middle;
 }

@@ -1,0 +1,132 @@
+.message {
+  > .subject {
+    > .correspondent {
+      background: none;
+      padding: 0px;
+      display: inline;
+      border: none;
+
+      > .author {
+        margin-right: 0px;
+        &::after {
+          content: ':';
+        }
+      }
+    }
+
+    > .expand-btn {
+      @extend %tn-small-button;
+      font-size: 1em;
+      margin: 8px 3px 8px 0px;
+    }
+  }
+
+  &.message-parent,
+  &.message-reply {
+    > .entry {
+      border-left: none;
+      > .noncollapsed {
+        color: $main-fg;
+        > .tagline {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  &.new {
+    > .entry {
+      background: none;
+      .head {
+        color: $main-fg;
+        font-weight: normal;
+      }
+    }
+  }
+
+  > .entry {
+    display: inline-block;
+
+    &.RES-keyNav-activeElement {
+      background: none !important;
+    }
+
+    > .collapsed {
+      font-size: 13px;
+      > .head {
+        color: $main-fg;
+      }
+    }
+
+    > .noncollapsed {
+      > .md,
+      > .flat-list {
+        margin-left: 0px;
+      }
+
+      > .md {
+        @extend %tn-comment-bubble;
+        padding: 4px 10px;
+        margin-bottom: 5px;
+
+        // FIXME: this is wrong
+        overflow: visible;
+      }
+
+      > .tagline {
+        margin-bottom: 10px;
+        color: $main-fg;
+      }
+    }
+  }
+}
+
+.messages-page {
+  .error {
+    margin: 7px 310px 7px 15px;
+  }
+
+  .menuarea {
+    .flat-list {
+      overflow: hidden;
+      padding-bottom: 3px;
+      font-size: 14px;
+      text-transform: capitalize;
+
+      > li {
+        display: block;
+        float: left;
+
+        > a {
+          @extend %tn-switch-button;
+        }
+
+        &.selected {
+          > a {
+            @extend %tn-switch-button-active;
+          }
+        }
+
+        &:first-child > a {
+          @extend %tn-switch-button-round-left;
+        }
+
+        &:last-child > a {
+          @extend %tn-switch-button-round-right;
+        }
+
+        > .separator {
+          display: none;
+        }
+      }
+    }
+  }
+
+  > .content {
+    > .listing {
+      > .message {
+        @extend %tn-list-entry-separator;
+      }
+    }
+  }
+}

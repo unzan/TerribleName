@@ -63,6 +63,31 @@
   @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7));
 }
 
+%tn-switch-button {
+  @extend %tn-small-button;
+  margin: 0px;
+  border-right-style: none;
+  @include rounded(0px);
+
+  &:visited {
+    color: $small-button-fg;
+  }
+}
+
+%tn-switch-button-round-left {
+  @include rounded(3px 0px 0px 3px);
+}
+
+%tn-switch-button-round-right {
+  border-right-style: solid;
+  @include rounded(0px 3px 3px 0px);
+}
+
+%tn-switch-button-active {
+  @extend %tn-small-button-pressed;
+  font-weight: bold;
+}
+
 .fancy-toggle-button {
   > .option {
     &.add,

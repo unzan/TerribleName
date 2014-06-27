@@ -71,6 +71,11 @@
   }
 }
 
+.tagline .userattrs .cakeday {
+  @extend %tn-icon;
+  background-position: -16px -96px;
+}
+
 #mail,
 #modmail,
 .gilded-icon::before {

@@ -65,30 +65,31 @@
     @include rounded(0px);
 
     > .wikiaction {
-      @extend %tn-small-button;
-
-      margin: 0px;
-      border-right-style: none;
+      @extend %tn-switch-button;
       font-size: 14px !important;
       text-transform: capitalize;
-      @include rounded(0px);
+      //@extend %tn-small-button;
+
+      //margin: 0px;
+      //border-right-style: none;
+      //@include rounded(0px);
 
       &.wikiaction-current {
-        @extend %tn-small-button-pressed;
-        font-weight: bold;
+        @extend %tn-switch-button-active;
+        //@extend %tn-small-button-pressed;
+        //font-weight: bold;
       }
 
-      &:visited {
-        color: $small-button-fg;
-      }
+      //&:visited {
+        //color: $small-button-fg;
+      //}
 
       &:first-child {
-        @include rounded(3px 0px 0px 3px);
+        @extend %tn-switch-button-round-left;
       }
 
       &:last-child {
-        border-right-style: solid;
-        @include rounded(0px 3px 3px 0px);
+        @extend %tn-switch-button-round-right;
       }
     }
   }

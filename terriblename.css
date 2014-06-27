@@ -60,7 +60,7 @@ hr {
 }
 
 .menuarea .spacer > .toggle > .option.error.active, .subscribers,
-.users-online, .res .menuarea {
+.users-online, .res .commentarea .menuarea {
   padding: 5px;
   background: rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 1px 1px rgba(0, 0, 0, 0.2);
@@ -189,8 +189,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 }
 
 .nav-buttons .next-suggestions > a:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
-.nav-buttons .nextprev > a,
 .wiki-page .pageactions > .wikiaction,
+.nav-buttons .nextprev > a,
 .res .RESSubscriptionButton,
 .res button.RESBigEditorPop,
 .res .RESMacroDropdownTitle,
@@ -205,8 +205,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .menuarea .spacer .toggle .togglebutton,
 .menuarea .spacer .dropdown.lightdrop,
 .res .commentNavSortType,
-.nav-buttons .nextprev > a,
 .wiki-page .pageactions > .wikiaction,
+.nav-buttons .nextprev > a,
 .res .RESSubscriptionButton,
 .res button.RESBigEditorPop,
 .res .RESMacroDropdownTitle,
@@ -231,15 +231,15 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .menuarea .spacer .toggle .togglebutton:focus,
 .menuarea .spacer .dropdown.lightdrop:focus,
 .res .commentNavSortType:focus,
-.nav-buttons .nextprev > a:hover,
 .wiki-page .pageactions > .wikiaction:hover,
+.nav-buttons .nextprev > a:hover,
 .res .RESSubscriptionButton:hover,
 .res button.RESBigEditorPop:hover,
 .res .RESMacroDropdownTitle:hover,
 .res #BigEditor .RESCloseButton:hover,
 .res .markdownEditor > a:hover,
-.nav-buttons .nextprev > a:focus,
 .wiki-page .pageactions > .wikiaction:focus,
+.nav-buttons .nextprev > a:focus,
 .res .RESSubscriptionButton:focus,
 .res button.RESBigEditorPop:focus,
 .res .RESMacroDropdownTitle:focus,
@@ -248,12 +248,12 @@ input[type=submit]:active, .res .RESshortcutside:active,
   text-decoration: none;
 }
 
-.nav-buttons .next-suggestions > a:active, .flairselector .flairoptionpane ul > li:active, .wiki-page .pageactions > .wikiaction.wikiaction-current,
+.wiki-page .pageactions > .wikiaction.wikiaction-current, .nav-buttons .next-suggestions > a:active, .flairselector .flairoptionpane ul > li:active,
 .menuarea .spacer .toggle .togglebutton:active,
 .menuarea .spacer .dropdown.lightdrop:active,
 .res .commentNavSortType:active,
-.nav-buttons .nextprev > a:active,
 .wiki-page .pageactions > .wikiaction:active,
+.nav-buttons .nextprev > a:active,
 .res .RESSubscriptionButton:active,
 .res button.RESBigEditorPop:active,
 .res .RESMacroDropdownTitle:active,
@@ -266,6 +266,34 @@ input[type=submit]:active, .res .RESshortcutside:active,
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7);
   -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7);
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+
+.wiki-page .pageactions > .wikiaction {
+  margin: 0px;
+  border-right-style: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.wiki-page .pageactions > .wikiaction:visited {
+  color: #6b6b6b;
+}
+
+.wiki-page .pageactions > .wikiaction:first-child {
+  -webkit-border-radius: 3px 0px 0px 3px;
+  -moz-border-radius: 3px 0px 0px 3px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.wiki-page .pageactions > .wikiaction:last-child {
+  border-right-style: solid;
+  -webkit-border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.wiki-page .pageactions > .wikiaction.wikiaction-current {
+  font-weight: bold;
 }
 
 .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove {
@@ -981,6 +1009,13 @@ input[type=password] {
   border-top: solid 1px #202020;
 }
 
+.link.last-clicked:not(:first-child), .link:not(:first-child) {
+  border-top: solid 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8);
+}
+
 .wiki-page > .content,
 .listing-page > .content {
   overflow: visible;
@@ -1016,12 +1051,6 @@ input[type=password] {
 .link.last-clicked {
   border: none;
   overflow: visible;
-}
-.link.last-clicked:not(:first-child), .link:not(:first-child) {
-  border-top: solid 1px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8);
-  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8);
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8);
 }
 .link a.author {
   color: #2177b4;
@@ -1396,19 +1425,6 @@ input[type=password] {
   margin-top: 9px;
 }
 
-.comment .midcol {
-  width: 16px;
-}
-.comment > .entry {
-  padding: 0px;
-}
-.comment > .entry .score,
-.comment > .entry .collapsed {
-  font-size: 13px;
-}
-.comment > .entry > .noncollapsed {
-  display: inline-block;
-}
 .comment > .entry > .noncollapsed > .usertext {
   margin: 8px 2px 0px 2px;
   padding: 3px;
@@ -1424,13 +1440,6 @@ input[type=password] {
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
-.comment > .entry > .noncollapsed > .usertext.border > .usertext-body {
-  background: rgba(255, 248, 220, 0.4);
-  outline: dashed 1px rgba(0, 0, 0, 0.2);
-}
-.comment > .entry > .noncollapsed > .usertext > .usertext-body {
-  padding: 1px 8px;
-}
 .comment > .entry > .noncollapsed > .usertext::before {
   content: '';
   position: absolute;
@@ -1441,6 +1450,27 @@ input[type=password] {
   border-left: solid 8px transparent;
   border-right: solid 8px transparent;
   border-bottom: solid 8px white;
+}
+
+.comment .midcol {
+  width: 16px;
+}
+.comment > .entry {
+  padding: 0px;
+}
+.comment > .entry .score,
+.comment > .entry .collapsed {
+  font-size: 13px;
+}
+.comment > .entry > .noncollapsed {
+  display: inline-block;
+}
+.comment > .entry > .noncollapsed > .usertext.border > .usertext-body {
+  background: rgba(255, 248, 220, 0.4);
+  outline: dashed 1px rgba(0, 0, 0, 0.2);
+}
+.comment > .entry > .noncollapsed > .usertext > .usertext-body {
+  padding: 1px 8px;
 }
 .comment > .entry .flat-list.buttons {
   display: block;
@@ -1650,7 +1680,7 @@ input[type=password] {
 .arrow.upmod,
 .arrow.upmod:hover,
 .arrow.downmod,
-.arrow.downmod:hover, .sidecontentbox .collapse-button, #mail,
+.arrow.downmod:hover, .sidecontentbox .collapse-button, .tagline .userattrs .cakeday, #mail,
 #modmail,
 .gilded-icon::before, .icon-menu .reddit-edit::before,
 .icon-menu .moderator-mail::before,
@@ -1716,6 +1746,10 @@ input[type=password] {
   background-color: transparent;
   border: none;
   background-position: 0px -64px;
+}
+
+.tagline .userattrs .cakeday {
+  background-position: -16px -96px;
 }
 
 #mail,
@@ -1862,30 +1896,8 @@ input[type=password] {
   border-radius: 0px;
 }
 .wiki-page .pageactions > .wikiaction {
-  margin: 0px;
-  border-right-style: none;
   font-size: 14px !important;
   text-transform: capitalize;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-}
-.wiki-page .pageactions > .wikiaction.wikiaction-current {
-  font-weight: bold;
-}
-.wiki-page .pageactions > .wikiaction:visited {
-  color: #6b6b6b;
-}
-.wiki-page .pageactions > .wikiaction:first-child {
-  -webkit-border-radius: 3px 0px 0px 3px;
-  -moz-border-radius: 3px 0px 0px 3px;
-  border-radius: 3px 0px 0px 3px;
-}
-.wiki-page .pageactions > .wikiaction:last-child {
-  border-right-style: solid;
-  -webkit-border-radius: 0px 3px 3px 0px;
-  -moz-border-radius: 0px 3px 3px 0px;
-  border-radius: 0px 3px 3px 0px;
 }
 .wiki-page .wikirevisionlisting {
   margin-bottom: 1em;
@@ -2135,24 +2147,6 @@ table.diff tbody .diff_header:not([id]) {
   border-radius: 0px 3px 3px 0px;
   border-right-style: solid;
 }
-.res .menuarea {
-  display: inline-block;
-  min-width: 650px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-.res .menuarea > .spacer > .dropdown-title,
-.res .menuarea #REScommentNavToggle > span:first-child {
-  width: 6em;
-  float: left;
-  margin: 3px 5px 0px 5px;
-  display: inline-block;
-  text-align: right;
-}
-.res .menuarea .dropdown.lightdrop {
-  margin-right: 10px;
-}
 .res .RESSubscriptionButton.unsubscribe {
   color: #6b6b6b !important;
 }
@@ -2162,6 +2156,24 @@ table.diff tbody .diff_header:not([id]) {
 .res .commentarea .RES-keyNav-activeElement.entry .noncollapsed,
 .res .commentarea .RES-keyNav-activeElement .md {
   background: none !important;
+}
+.res .commentarea .menuarea {
+  display: inline-block;
+  min-width: 650px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.res .commentarea .menuarea > .spacer > .dropdown-title,
+.res .commentarea .menuarea #REScommentNavToggle > span:first-child {
+  width: 6em;
+  float: left;
+  margin: 3px 5px 0px 5px;
+  display: inline-block;
+  text-align: right;
+}
+.res .commentarea .menuarea .dropdown.lightdrop {
+  margin-right: 10px;
 }
 .res .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
   outline: dashed 1px rgba(203, 75, 22, 0.5);

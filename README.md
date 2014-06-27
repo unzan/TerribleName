@@ -28,6 +28,13 @@ Installation
 Create a blank style with Stylish and put the content of `userstyle.css` into it
 then click **Save**.
 
+Note on userstyle
+-----------------
+
+The userstyle version is not meant to override custom stylesheet of subreddits.
+If you don't want to see any style conflict, uncheck the
+**allow subreddits to show me custom styles** option in your preference or use
+RES to disable individual subreddit stylesheet.
 
 Known Issues
 ------------
@@ -37,6 +44,9 @@ Known Issues
 
 2. Some wiki diffs might overlap with sidebar when the browser's window is too
    small ([for example][fucking diff]).
+
+3. RES active entry indicator overlapped with "sponsored link" label in
+   promoted link
 
 ***
 
@@ -49,5 +59,6 @@ Picture used in header banner is a [photograph][photo] by
 [photo]: http://commons.wikimedia.org/wiki/File:Panorama_Frankfurt_vom_Maintower_edit.jpg
 [photographer]: http://de.wikipedia.org/wiki/Benutzer:Schaengel
 [subreddit]: http://www.reddit.com/r/TerribleName
+[1tbs]: http://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS
 [compiled-css]: http://www.reddit.com/r/TerribleName/about/stylesheet
 [fucking diff]: http://www.reddit.com/r/TerribleName/wiki/index?v=92fa5ffe-e878-11e3-b3f7-12313b0758c1&v2=9eb34ba6-eca3-11e3-81e8-12313d090eed
