@@ -2175,6 +2175,9 @@ table.diff tbody .diff_header:not([id]) {
 .res .commentarea .menuarea .dropdown.lightdrop {
   margin-right: 10px;
 }
+.res .commentarea .comment {
+  margin-bottom: 0px !important;
+}
 .res .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
   outline: dashed 1px rgba(203, 75, 22, 0.5);
 }
