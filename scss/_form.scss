@@ -100,21 +100,28 @@ input[type=password] {
   margin-left: 10px;
 }
 
-.tabpane-content,
-.formtabs-content {
-  clear: both;
-  margin-bottom: 1em;
+%tn-form-group {
   @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 1px rgba(0, 0, 0, 0.14));
-}
-
-.flairselector,
-.tabpane-content,
-.formtabs-content {
   overflow: hidden;
   background: $box-bg;
   border: solid 1px rgba(0, 0, 0, 0.3);
   padding: 10px;
   @include rounded(3px);
+}
+
+.tabpane-content,
+.formtabs-content {
+  clear: both;
+  margin-bottom: 1em;
+}
+
+.flairselector,
+.tabpane-content,
+.formtabs-content,
+.login-form-side,
+.searchfacets,
+.searchpane.raisedbox {
+  @extend %tn-form-group;
 }
 
 .fancy-settings {
@@ -418,5 +425,41 @@ input[type=password] {
         padding: 0px;
       }
     }
+  }
+}
+
+.login-form-side {
+  font-size: 1em;
+  padding: 3px;
+
+  input[type=text],
+  input[type=password] {
+    width: 130px;
+    height: auto;
+    padding: 3px;
+  }
+}
+
+.searchpane.raisedbox {
+  overflow: visible;
+  margin: 0px;
+  #search {
+    input[type=submit] {
+      padding: 2px 8px 3px 8px;
+    }
+  }
+}
+
+.searchfacets {
+  margin-top: 1em;
+
+  > .title {
+    margin: 0px;
+    padding-bottom: 6px;
+    border-bottom: solid 3px $horiz-line-color;
+  }
+
+  > .list {
+    margin-top: 10px;
   }
 }

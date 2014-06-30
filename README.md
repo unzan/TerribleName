@@ -46,7 +46,9 @@ Known Issues
    small ([for example][fucking diff]).
 
 3. RES active entry indicator overlapped with "sponsored link" label in
-   promoted link
+   promoted link.
+
+4. Doesn't work with RES pinned header feature
 
 ***
 

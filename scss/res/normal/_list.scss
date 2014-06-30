@@ -27,6 +27,14 @@
 
   .tagline {
     .author {
+      &.moderator,
+      &.submitter,
+      &.admin {
+        vertical-align: middle;
+        padding: 1px 3px;
+        @include rounded(2px);
+      }
+
       &.moderator {
         &,
         &:hover {

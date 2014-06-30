@@ -88,63 +88,65 @@
   font-weight: bold;
 }
 
-.fancy-toggle-button {
-  > .option {
-    &.add,
-    &.remove {
-      @extend %tn-button;
-      font-size: 13px;
-      margin: 0px;
-
-      &.active {
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-
-    @if $subscribe-button-placement == header {
-      &.add {
-        &,
-        &:hover,
-        &:focus,
-        &:active {
-          @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
-        }
-      }
-
-      &.remove {
-        &,
-        &:hover,
-        &:focus,
-        &:active {
-          @include linear-gradient(top, $unsubscribe-bg, darken($unsubscribe-bg, 6%));
-        }
-      }
-
+.side {
+  .fancy-toggle-button {
+    > .option {
       &.add,
       &.remove {
-        &:active {
-          @include shadow(inset 0px 2px 3px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.3));
-        }
-      }
-    } @else {
-      &.add,
-      &.remove {
-        &,
-        &:active,
-        &:focus,
-        &:hover {
-          @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
+        @extend %tn-button;
+        font-size: 13px;
+        margin: 0px;
+
+        &.active {
+          display: inline-block;
+          vertical-align: middle;
         }
       }
 
-      &.add:active,
-      &.remove,
-      &.remove:active {
-        @include shadow(inset 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(255, 255, 255, 0.7));
+      @if $subscribe-button-placement == header {
+        &.add {
+          &,
+          &:hover,
+          &:focus,
+          &:active {
+            @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
+          }
+        }
+
+        &.remove {
+          &,
+          &:hover,
+          &:focus,
+          &:active {
+            @include linear-gradient(top, $unsubscribe-bg, darken($unsubscribe-bg, 6%));
+          }
+        }
+
+        &.add,
+        &.remove {
+          &:active {
+            @include shadow(inset 0px 2px 3px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.3));
+          }
+        }
+      } @else {
+        &.add,
+        &.remove {
+          &,
+          &:active,
+          &:focus,
+          &:hover {
+            @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
+          }
+        }
+
+        &.add:active,
+        &.remove,
+        &.remove:active {
+          @include shadow(inset 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(255, 255, 255, 0.7));
+        }
       }
+
     }
-
   }
 }
 
@@ -241,6 +243,24 @@ input[type=submit] {
   }
 }
 
+%tn-alt-small-button {
+  display: inline-block;
+  padding: 2px 6px;
+  border: solid 1px rgba(darken($small-button-bg, 30%), 0.6);
+  margin-right: 3px;
+  font-weight: bold;
+  color: $small-button-fg;
+
+  &:hover,
+  &:focus {
+    @extend %tn-small-button-default;
+  }
+
+  &:active {
+    @extend %tn-small-button-pressed;
+  }
+}
+
 .nav-buttons {
   padding: 1em 0em;
 
@@ -253,21 +273,7 @@ input[type=submit] {
 
   .next-suggestions {
     > a {
-      display: inline-block;
-      padding: 2px 6px;
-      border: solid 1px rgba(darken($small-button-bg, 30%), 0.6);
-      margin-right: 3px;
-      font-weight: bold;
-      color: $small-button-fg;
-
-      &:hover,
-      &:focus {
-        @extend %tn-small-button-default;
-      }
-
-      &:active {
-        @extend %tn-small-button-pressed;
-      }
+      @extend %tn-alt-small-button;
     }
   }
 }

@@ -1,0 +1,133 @@
+.explore-header {
+  margin-bottom: 1.3em;
+
+  > .explore-discuss-link {
+    margin: 7px 0px 0px 7px;
+  }
+
+  > #explore-settings {
+    input[type=checkbox] {
+      vertical-align: middle;
+      margin: 0px 5px;
+    }
+
+    button {
+      margin-left: 1em;
+    }
+  }
+}
+
+.explore-item {
+  @extend %tn-form-group;
+  position: relative;
+  padding: 2px 5px 10px 20px;
+  margin-bottom: 5px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    bottom: 3px;
+    width: 8px;
+    background: $red;
+  }
+  
+  &.explore-comment {
+    &::before {
+      background: $explore-comment-color;
+    }
+
+    > .comment {
+      color: lighten($main-fg, 20%);
+      > .md {
+        font-size: $normal-font-size;
+      }
+
+      > .comment-fade {
+        @include linear-gradient(top, rgba($box-bg, 0), rgba($box-bg, 1));
+      }
+    }
+
+    > .comment-link {
+      color: $list-entry-fg;
+      font-size: $normal-font-size;
+    }
+  }
+
+  &.explore-rising::before {
+    background: $explore-rising-color;
+  }
+
+  &.explore-hot::before {
+    background: $explore-hot-color;
+  }
+
+  &.explore-discovery::before {
+    background: $explore-discovery-color;
+  }
+
+  .explore-sr {
+    margin: 0px 0px 5px 0px;
+    padding: 5px 0px 3px 0px;
+    display: block;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+    @include shadow(0px 1px 0px rgba(255, 255, 255, 0.8));
+
+    > .explore-label {
+      background: none;
+      border: none;
+      font-size: $normal-font-size;
+      line-height: auto;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    > .explore-sr-details {
+      font-size: inherit;
+      color: lighten($main-fg, 30%);
+    }
+
+    > .explore-feedback {
+      float: right;
+      margin-top: -2px;
+
+      > .fancy-toggle-button.toggle > .option.active,
+      > .explore-feedback-dismiss {
+        @extend %tn-small-button;
+        font-size: $normal-font-size;
+        display: block;
+        float: right;
+        font-weight: normal;
+        height: 1em;
+        line-height: 1em;
+        padding: 2px 6px;
+        margin: 0px;
+      }
+
+      > .fancy-toggle-button.toggle > .option.active.remove {
+        @extend %tn-small-button-pressed;
+      }
+
+      > .explore-feedback-dismiss {
+        opacity: 1;
+        text-indent: 0px;
+        width: 0.8em;
+
+        &::before {
+          content: '\2715';
+          margin-right: 4em;
+        }
+      }
+    }
+  }
+
+  .thing {
+    padding: 0px;
+
+    &:not(:first-child) {
+      border-top: none;
+      @include shadow(none);
+    }
+  }
+}

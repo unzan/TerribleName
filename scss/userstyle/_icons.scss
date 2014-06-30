@@ -1,11 +1,11 @@
 .subscription-box .sr-type-img,
 .message.new > .entry .head::after,
-.trending-subreddits strong::before {
+.trending-subreddits strong::before,
+.explore-label::before {
   @extend %tn-icon;
 }
 
 .subscription-box .sr-type-img {
-//.profile-page .titlebox .bottom > img[src$="/mailgray.png"] {
   overflow: hidden;
   padding-left: 16px;
   margin-right: 4px;
@@ -35,4 +35,25 @@
   margin-left: 10px;
   content: '';
   vertical-align: middle;
+}
+
+.explore-label::before {
+  content: '';
+  vertical-align: middle;
+}
+
+.explore-rising .explore-label::before {
+  background-position: -32px -96px;
+}
+
+.explore-hot .explore-label::before {
+  background-position: -64px -96px;
+}
+
+.explore-discovery .explore-label::before {
+  background-position: -96px -96px;
+}
+
+.explore-comment .explore-label::before {
+  background-position: -80px -96px;
 }
