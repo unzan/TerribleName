@@ -350,18 +350,24 @@ input[type=password] {
         display: block;
       }
 
-      > .option.error.active {
-        @extend %tn-engraved-box;
-        background: darken($main-bg, 14%);
-        position: absolute;
-        z-index: 4000;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        text-align: center;
-        font-size: 1em;
-        @include rounded(3px);
+      > .option.active {
+        &.main {
+          margin-right: 4px;
+        }
+
+        &.error {
+          @extend %tn-engraved-box;
+          background: darken($main-bg, 14%);
+          position: absolute;
+          z-index: 4000;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          text-align: center;
+          font-size: 1em;
+          @include rounded(3px);
+        }
       }
     }
   }

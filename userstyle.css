@@ -62,7 +62,7 @@
     border: none;
   }
 
-  .menuarea .spacer > .toggle > .option.error.active, .subscribers,
+  .menuarea .spacer > .toggle > .option.active.error, .subscribers,
   .users-online, .res .commentarea .menuarea {
     padding: 5px;
     background: rgba(0, 0, 0, 0.14);
@@ -197,9 +197,9 @@
   .nav-buttons .nextprev > a,
   .res .RESSubscriptionButton,
   .res button.RESBigEditorPop,
-  .res .RESMacroDropdownTitle,
   .res #BigEditor .RESCloseButton,
-  .res .markdownEditor > a,
+  .res .markdownEditor .RESMacroDropdownTitle,
+  .res .markdownEditor > a.edit-btn,
   .organic-listing .nextprev .arrow.prev,
   .organic-listing .nextprev .arrow.next,
   .trending-subreddits > .trending-subreddits-content li > a,
@@ -224,9 +224,9 @@
   .nav-buttons .nextprev > a,
   .res .RESSubscriptionButton,
   .res button.RESBigEditorPop,
-  .res .RESMacroDropdownTitle,
   .res #BigEditor .RESCloseButton,
-  .res .markdownEditor > a,
+  .res .markdownEditor .RESMacroDropdownTitle,
+  .res .markdownEditor > a.edit-btn,
   .organic-listing .nextprev .arrow.prev,
   .organic-listing .nextprev .arrow.next,
   .trending-subreddits > .trending-subreddits-content li > a,
@@ -260,9 +260,9 @@
   .nav-buttons .nextprev > a:hover,
   .res .RESSubscriptionButton:hover,
   .res button.RESBigEditorPop:hover,
-  .res .RESMacroDropdownTitle:hover,
   .res #BigEditor .RESCloseButton:hover,
-  .res .markdownEditor > a:hover,
+  .res .markdownEditor .RESMacroDropdownTitle:hover,
+  .res .markdownEditor > a.edit-btn:hover,
   .organic-listing .nextprev .arrow.prev:hover,
   .organic-listing .nextprev .arrow.next:hover,
   .trending-subreddits > .trending-subreddits-content li > a:hover,
@@ -280,9 +280,9 @@
   .nav-buttons .nextprev > a:focus,
   .res .RESSubscriptionButton:focus,
   .res button.RESBigEditorPop:focus,
-  .res .RESMacroDropdownTitle:focus,
   .res #BigEditor .RESCloseButton:focus,
-  .res .markdownEditor > a:focus,
+  .res .markdownEditor .RESMacroDropdownTitle:focus,
+  .res .markdownEditor > a.edit-btn:focus,
   .organic-listing .nextprev .arrow.prev:focus,
   .organic-listing .nextprev .arrow.next:focus,
   .trending-subreddits > .trending-subreddits-content li > a:focus,
@@ -307,9 +307,9 @@
   .nav-buttons .nextprev > a:active,
   .res .RESSubscriptionButton:active,
   .res button.RESBigEditorPop:active,
-  .res .RESMacroDropdownTitle:active,
   .res #BigEditor .RESCloseButton:active,
-  .res .markdownEditor > a:active,
+  .res .markdownEditor .RESMacroDropdownTitle:active,
+  .res .markdownEditor > a.edit-btn:active,
   .organic-listing .nextprev .arrow.prev:active,
   .organic-listing .nextprev .arrow.next:active,
   .trending-subreddits > .trending-subreddits-content li > a:active,
@@ -782,7 +782,10 @@
   .menuarea .spacer > .toggle:hover + .help-hoverable {
     display: block;
   }
-  .menuarea .spacer > .toggle > .option.error.active {
+  .menuarea .spacer > .toggle > .option.active.main {
+    margin-right: 4px;
+  }
+  .menuarea .spacer > .toggle > .option.active.error {
     background: #c6c6c6;
     position: absolute;
     z-index: 4000;
@@ -1673,9 +1676,9 @@
   .icon-menu .edit-stylesheet::before,
   .icon-menu .wikiaction-revisions::before,
   .icon-menu .wikiaction-pages::before, .res .gearIcon, .res button.RESBigEditorPop::before,
-  .res .RESMacroDropdownTitle::before,
   .res #BigEditor .RESCloseButton::before,
-  .res .markdownEditor > a::before, .subscription-box .sr-type-img,
+  .res .markdownEditor .RESMacroDropdownTitle::before,
+  .res .markdownEditor > a.edit-btn::before, .subscription-box .sr-type-img,
   .message.new > .entry .head::after,
   .trending-subreddits strong::before,
   .explore-label::before, .profile-page .titlebox > .bottom > a[href*="/compose/"]::before {
@@ -2058,7 +2061,7 @@
     color: #848484;
     font-size: 13px;
   }
-  .res .subbarlink.RESShortcutsCurrentSub {
+  .res #sr-header-area #RESShortcuts a.subbarlink.RESShortcutsCurrentSub {
     color: #eaeaea !important;
   }
   .res .RESshortcutside, .res .RESshortcutside.remove,
@@ -2117,6 +2120,22 @@
     border-right-style: none;
     display: inline-block !important;
     border-radius: 0px;
+  }
+  .res .commentNavSortType:nth-of-type(9) {
+    border-radius: 0px 3px 3px 0px;
+    border-right-style: solid;
+  }
+  .res .commentNavSortType:nth-of-type(9) + span {
+    display: block !important;
+    clear: left;
+    text-indent: -20em;
+  }
+  .res .commentNavSortType:nth-of-type(-n+9) {
+    margin-bottom: 3px;
+  }
+  .res .commentNavSortType:nth-of-type(10) {
+    border-radius: 3px 0px 0px 3px;
+    margin-left: 6.3em;
   }
   .res .commentNavSortType:nth-child(2) {
     border-radius: 3px 0px 0px 3px;
@@ -2177,9 +2196,9 @@
     width: 660px;
   }
   .res button.RESBigEditorPop,
-  .res .RESMacroDropdownTitle,
   .res #BigEditor .RESCloseButton,
-  .res .markdownEditor > a {
+  .res .markdownEditor .RESMacroDropdownTitle,
+  .res .markdownEditor > a.edit-btn {
     width: 16px;
     height: 16px;
     display: block;
@@ -2188,17 +2207,17 @@
     margin-right: 2px;
   }
   .res button.RESBigEditorPop::before,
-  .res .RESMacroDropdownTitle::before,
   .res #BigEditor .RESCloseButton::before,
-  .res .markdownEditor > a::before {
+  .res .markdownEditor .RESMacroDropdownTitle::before,
+  .res .markdownEditor > a.edit-btn::before {
     content: '';
     position: absolute;
     left: 5px;
     top: 2px;
   }
   .res button.RESBigEditorPop,
-  .res .RESMacroDropdownTitle,
-  .res .markdownEditor > a {
+  .res .markdownEditor .RESMacroDropdownTitle,
+  .res .markdownEditor > a.edit-btn {
     position: relative;
   }
   .res button.RESBigEditorPop {
@@ -2216,18 +2235,6 @@
     left: 3px;
     background-position: -16px -48px;
   }
-  .res .RESMacroDropdownTitle::before {
-    background-position: -48px -32px;
-  }
-  .res .RESMacroDropdownTitleOverlay {
-    display: none !important;
-  }
-  .res .RESMacroWrappingSpan {
-    margin-left: 0px !important;
-  }
-  .res .RESMacroDropdown {
-    margin-top: 25px !important;
-  }
   .res.wiki-page button.RESBigEditorPop {
     position: absolute;
     float: none;
@@ -2241,37 +2248,37 @@
     overflow: hidden;
     padding: 2px;
   }
-  .res .markdownEditor > a {
+  .res .markdownEditor > a.edit-btn {
     float: left;
   }
-  .res .markdownEditor > a:nth-child(1)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(1)::before {
     background-position: -80px -64px;
   }
-  .res .markdownEditor > a:nth-child(2)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(2)::before {
     background-position: -80px -16px;
   }
-  .res .markdownEditor > a:nth-child(3)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(3)::before {
     background-position: -48px -64px;
   }
-  .res .markdownEditor > a:nth-child(4)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(4)::before {
     background-position: -32px -64px;
   }
-  .res .markdownEditor > a:nth-child(5)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(5)::before {
     background-position: -64px 0px;
   }
-  .res .markdownEditor > a:nth-child(6)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(6)::before {
     background-position: -64px -64px;
   }
-  .res .markdownEditor > a:nth-child(7)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(7)::before {
     background-position: -80px -48px;
   }
-  .res .markdownEditor > a:nth-child(8)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(8)::before {
     background-position: -16px -64px;
   }
-  .res .markdownEditor > a:nth-child(9)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(9)::before {
     background-position: -80px 0px;
   }
-  .res .markdownEditor > a:nth-child(10)::before {
+  .res .markdownEditor > a.edit-btn:nth-child(10)::before {
     background-position: 0px 0px;
   }
   .res .RESDialogSmall.livePreview {
@@ -2314,8 +2321,7 @@
   .res #BigEditor > .RESDialogSmall.BELeft > h3 {
     display: none;
   }
-  .res #BigEditor > .RESDialogSmall.BELeft > div:not(.RESDialogContents) > .markdownEditor,
-  .res #BigEditor > .RESDialogSmall.BELeft > div:not(.RESDialogContents) > .commentingAs {
+  .res #BigEditor > .RESDialogSmall.BELeft > .markdownEditor-wrapper {
     display: none;
   }
   .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents {
@@ -2324,13 +2330,9 @@
     padding: 0px;
     padding-bottom: 100px;
   }
-  .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents .markdownEditor {
-    margin-bottom: 3px;
-  }
-  .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents .commentingAs {
-    position: absolute;
-    bottom: 40px;
-    right: 0px;
+  .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents .commentingAs,
+  .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents .RESMacroWrappingSpan {
+    margin-top: 4px;
   }
   .res #BigEditor > .RESDialogSmall.BERight > .RESDialogContents {
     top: 40px;
@@ -2486,9 +2488,8 @@
   .res.res-nightmode .commentarea #REScommentSubToggle,
   .res.res-nightmode.wiki-page .pageactions > .wikiaction,
   .res.res-nightmode button.RESBigEditorPop,
-  .res.res-nightmode .RESMacroDropdownTitle,
   .res.res-nightmode #BigEditor .RESCloseButton,
-  .res.res-nightmode .markdownEditor > a {
+  .res.res-nightmode .markdownEditor > a.edit-btn {
     color: #111111;
     border: none;
     text-shadow: 0px 1px 1px #898989;
@@ -2508,9 +2509,8 @@
   .res.res-nightmode .commentarea #REScommentSubToggle:active,
   .res.res-nightmode.wiki-page .pageactions > .wikiaction:active,
   .res.res-nightmode button.RESBigEditorPop:active,
-  .res.res-nightmode .RESMacroDropdownTitle:active,
   .res.res-nightmode #BigEditor .RESCloseButton:active,
-  .res.res-nightmode .markdownEditor > a:active {
+  .res.res-nightmode .markdownEditor > a.edit-btn:active {
     background: -webkit-linear-gradient(top, #636363, #444444);
     background: -moz-linear-gradient(top, #636363, #444444);
     background: linear-gradient(top, #636363, #444444);
