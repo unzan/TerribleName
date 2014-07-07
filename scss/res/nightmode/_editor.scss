@@ -1,7 +1,6 @@
 button.RESBigEditorPop,
-.RESMacroDropdownTitle,
 #BigEditor .RESCloseButton,
-.markdownEditor > a {
+.markdownEditor > a.edit-btn {
   @extend %tn-dark-button;
 }
 

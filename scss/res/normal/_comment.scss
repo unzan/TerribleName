@@ -20,6 +20,25 @@
   display: inline-block !important;
   @include rounded(0px);
 
+  &:nth-of-type(9) {
+    @include rounded(0px 3px 3px 0px);
+    border-right-style: solid;
+    + span {
+      display: block !important;
+      clear: left;
+      text-indent: -20em;
+    }
+  }
+
+  &:nth-of-type(-n+9) {
+    margin-bottom: 3px;
+  }
+
+  &:nth-of-type(10) {
+    @include rounded(3px 0px 0px 3px);
+    margin-left: 6.3em;
+  }
+
   &:nth-child(2) {
     @include rounded(3px 0px 0px 3px);
   }
@@ -69,6 +88,8 @@
   }
 
   .comment {
+    margin-bottom: 0px !important;
+
     > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
       outline: dashed 1px $res-active-element-color;
     }

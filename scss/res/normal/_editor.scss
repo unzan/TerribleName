@@ -1,7 +1,7 @@
 button.RESBigEditorPop,
-.RESMacroDropdownTitle,
 #BigEditor .RESCloseButton,
-.markdownEditor > a {
+.markdownEditor .RESMacroDropdownTitle,
+.markdownEditor > a.edit-btn {
   @extend %tn-small-button;
   width: 16px;
   height: 16px;
@@ -20,8 +20,8 @@ button.RESBigEditorPop,
 }
 
 button.RESBigEditorPop,
-.RESMacroDropdownTitle,
-.markdownEditor > a {
+.markdownEditor .RESMacroDropdownTitle,
+.markdownEditor > a.edit-btn {
   position: relative;
 }
 
@@ -42,22 +42,6 @@ button.RESBigEditorPop {
   }
 }
 
-.RESMacroDropdownTitle::before {
-  background-position: -48px -32px;
-}
-
-.RESMacroDropdownTitleOverlay {
-  display: none !important;
-}
-
-.RESMacroWrappingSpan {
-  margin-left: 0px !important;
-}
-
-.RESMacroDropdown {
-  margin-top: 25px !important;
-}
-
 &.wiki-page {
   button.RESBigEditorPop {
     position: absolute;
@@ -76,7 +60,7 @@ button.RESBigEditorPop {
   overflow: hidden;
   padding: 2px;
 
-  > a {
+  > a.edit-btn {
     float: left;
 
     &:nth-child(1)::before {
@@ -180,12 +164,10 @@ button.RESBigEditorPop {
         display: none;
       }
 
-      //why the fuck are there two fucking toolbars?
-      > div:not(.RESDialogContents) {
-        > .markdownEditor,
-        > .commentingAs {
-          display: none;
-        }
+      // so they recently added class to the this godknowswhythereisaduplicate toolbar.
+      // i still have no idea if this is really intentional or not
+      > .markdownEditor-wrapper {
+        display: none;
       }
 
       > .RESDialogContents {
@@ -194,14 +176,9 @@ button.RESBigEditorPop {
         padding: 0px;
         padding-bottom: 100px;
 
-        .markdownEditor {
-          margin-bottom: 3px;
-        }
-
-        .commentingAs {
-          position: absolute;
-          bottom: 40px;
-          right: 0px;
+        .commentingAs,
+        .RESMacroWrappingSpan {
+          margin-top: 4px;
         }
       }
     }
