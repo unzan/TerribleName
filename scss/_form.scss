@@ -249,7 +249,7 @@ input[type=password] {
   &::after {
     content: '';
     display: block;
-    clear: both;
+    clear: left;
   }
 
 

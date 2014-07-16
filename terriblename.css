@@ -586,7 +586,7 @@ input[type=password] {
 .menuarea::after {
   content: '';
   display: block;
-  clear: both;
+  clear: left;
 }
 .menuarea .spacer {
   display: block;
