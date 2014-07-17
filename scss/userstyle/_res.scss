@@ -1,6 +1,6 @@
 .subscription-box {
   .subButtons {
-    padding: 3px 0px !important;
+    padding: 3px 0 !important;
 
     > .subscribe-button,
     > .RESshortcut,
@@ -13,6 +13,31 @@
     > .RESDashboardToggle {
       padding: 2px 5px;
       font-size: 10px !important;
+    }
+  }
+}
+
+// RES' My Subreddits dropdown
+#srList {
+  font-size: 10px;
+  background: $sr-dropdown-bg;
+  color: $sr-dropdown-fg;
+  border: none;
+  @include shadow(0 5px 6px rgba(0, 0, 0, 0.3));
+
+  tr {
+    border: none;
+    a {
+      color: lighten($link-fg, 20%);
+    }
+
+    &:hover {
+      color: $sr-dropdown-selected-fg;
+      background: $sr-dropdown-selected-bg;
+
+      a {
+        color: $sr-dropdown-selected-fg;
+      }
     }
   }
 }

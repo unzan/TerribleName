@@ -10,7 +10,7 @@
         @extend %tn-small-button;
         //height: auto !important;
         position: relative;
-        margin: 0px;
+        margin: 0;
         overflow: hidden;
         white-space: nowrap;
         text-indent: -900px;
@@ -21,8 +21,8 @@
       &::before {
         content: '';
         position: absolute;
-        width: 0px;
-        height: 0px;
+        width: 0;
+        height: 0;
         top: 3px;
         left: 6px;
         border-top: solid 6px transparent;
@@ -31,7 +31,7 @@
 
       &.prev {
         border-right: none;
-        @include rounded(3px 0px 0px 3px);
+        @include rounded(3px 0 0 3px);
         &::before {
           border-right: solid 5px $small-button-fg;
           //content: '\25c2';
@@ -40,7 +40,7 @@
 
       &.next {
         border-left: none;
-        @include rounded(0px 3px 3px 0px);
+        @include rounded(0 3px 3px 0);
         &::before {
           border-left: solid 5px $small-button-fg;
           //content: '\25b8';
@@ -73,8 +73,8 @@
         font-weight: inherit;
         color: inherit;
         display: inline;
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
       }
     }
 
@@ -92,7 +92,7 @@
 }
 
 .trending-subreddits {
-  margin: 10px 0px;
+  margin: 10px 0;
 
   > .trending-subreddits-content {
     padding-bottom: 3px;

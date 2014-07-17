@@ -1,9 +1,27 @@
+// set this to 1 if you want to have line number at the left of codeblock
+$show-line-num-in-codeblock: 0;
+
+// set to `header` to place subscribe button on header.
+// any other value will put it at its normal place
+$subscribe-button-placement: header;
+
+// control whether the output css is using vendor prefixes or not.
+// valid values:
+// - 0: no vendor prefixes
+// - 1: use vendor prefixes for gradients. no vendor prefixes anywhere else.
+// - 2: always use vendor prefixes
+$vendor-prefixes: 1;
+
+// set to `old` to use the old circle button or any other value to use the simpler
+// squarish button
+$expando-button-style: new;
+
 // --- PALETTE ---------------------------------------------
 
-$white:           #ffffff;
+$white:           #fff;
 $gray:            #eaeaea;
-$black:           #111111;
-$real-black:      #000000;
+$black:           #111;
+$real-black:      #000;
 $dark-brown:      #2C2928;
 $dark-gray:       #686868;
 $bright-yellow:   #FFF8DC;
@@ -17,6 +35,7 @@ $violet:          #6c71c4;
 $blue:            #268bd2;
 $cyan:            #2aa198;
 $green:           #859900;
+$dark-green:      darken($green, 5%);
 
 $sidebar-width:   300px;
 
@@ -38,6 +57,7 @@ $normal-font-size: 13px;
 $main-bg: $gray;
 $main-fg: $black;
 
+$default-border-color: darken($main-bg, 25%);
 $thumbnail-bg: $white;
 $text-bg: $white;
 $text-fg: $main-fg;
@@ -63,7 +83,7 @@ $diff-add-bg: rgba($green, 0.3);
 $diff-sub-bg: rgba($red, 0.3);
 $spoiler-bg: $black;
 $spoiler-fg: $white;
-$horiz-line-color: rgba(0, 0, 0, 0.2);
+$horiz-line-color: darken($main-bg, 20%);
 
 $engraved-box-bg: rgba(0, 0, 0, 0.14);
 $popup-title-fg: lighten($main-fg, 20%);
@@ -73,7 +93,8 @@ $flair-selection-hover-bg: none;
 
 $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);
-$sticky-link-fg: darken($green, 10%);
+$sticky-link-fg: $dark-green;
+
 
 $header-height: 140px;
 $header-bg: $black;
@@ -86,7 +107,7 @@ $menu-bar-fg: darken($gray, 30%);
 $sr-header-fg: darken($gray, 40%);
 $sr-header-bg: rgba(0, 0, 0, 0.5);
 $sr-dropdown-bg: $black;
-$sr-dropdown-fg: lighten($gray, 30%);
+$sr-dropdown-fg: $sr-header-fg;
 $sr-dropdown-selected-bg: $orange;
 $sr-dropdown-selected-fg: $white;
 $dropdown-selected-bg: $orange;
@@ -102,9 +123,9 @@ $nsfw-tag-bg: $orange;
 $nsfw-tag-fg: $white;
 $report-tag-bg: $red;
 $report-tag-fg: $white;
-$sticky-tag-bg: $green;
+$sticky-tag-bg: $dark-green;
 $sticky-tag-fg: $white;
-$mod-tag-fg: darken($green, 5%);
+$mod-tag-fg: $dark-green;
 $admin-tag-fg: $red;
 $submitter-tag-fg: $link-fg;
 $score-fg: darken($gray, 40%);
@@ -112,14 +133,13 @@ $default-thumb-bg: rgba(0, 0, 0, 0.2);
 $default-nsfw-thumb-bg: rgba($magenta, 0.5);
 $default-modpost-thumb-bg: rgba($green, 0.5);
 $default-text-thumb-bg: rgba($blue, 0.5);
-$flat-list-hover-bg: rgba(0, 0, 0, 0.1);
+$flat-list-hover-bg: darken($main-bg, 11%);
 
 $flair-bg: $bright-yellow;
 $flair-fg: $main-fg;
 $notice-bubble-bg: $bright-yellow;
 
 $list-entry-fg: darken($gray, 50%);
-$comment-bg: rgba(255, 255, 255, 0.5);
 $comment-bg: $white;
 $deleted-comment-bg: none;
 $highlighted-comment-outline-color: rgba(0, 0, 0, 0.2);
@@ -169,10 +189,3 @@ $res-char-counter-too-long-bg: $red;
 $res-night-spoiler-bg: lighten($res-night-bg, 25%);
 $res-night-spoiler-fg: $res-night-fg;
 $res-night-table-heading-bg: lighten($res-night-bg, 7%);
-
-// set this to 1 if you want to have line number at the left of codeblock
-$show-line-num-in-codeblock: 0;
-
-// set to `header` to place subscribe button on header.
-// any other value will put it at its normal place
-$subscribe-button-placement: header;

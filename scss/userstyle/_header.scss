@@ -3,7 +3,7 @@
     background: url($logo-image) center center no-repeat;
     width: 82px;
     height: $page-title-height;
-    margin: 0px 10px 0px 20px;
+    margin: 0 10px 0 20px;
     vertical-align: middle;
   }
 }
@@ -21,7 +21,7 @@ body.with-listing-chooser {
   #header {
     .pagename {
       position: static;
-      margin-left: 0px;
+      margin-left: 0;
     }
   }
 }

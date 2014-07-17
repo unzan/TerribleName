@@ -62,12 +62,12 @@
 .sidecontentbox {
   .collapse-button {
     @extend %tn-icon;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     text-indent: -999px;
     background-color: transparent;
     border: none;
-    background-position: 0px -64px;
+    background-position: 0 -64px;
   }
 }
 
@@ -110,7 +110,7 @@
 }
 
 .gilded-icon::before {
-  background-position: 0px -48px;
+  background-position: 0 -48px;
 }
 
 .icon-menu {
@@ -137,7 +137,7 @@
   }
 
   .reddit-edit::before {
-    background-position: 0px -16px;
+    background-position: 0 -16px;
   }
 
   .reddit-moderators::before {
@@ -149,7 +149,7 @@
   }
 
   .reddit-traffic::before {
-    background-position: 0px -80px;
+    background-position: 0 -80px;
   }
 
   .reddit-modqueue::before {
@@ -161,7 +161,7 @@
   }
 
   .reddit-spam::before {
-    background-position: -16px 0px;
+    background-position: -16px 0;
   }
 
   .reddit-ban::before {
@@ -177,7 +177,7 @@
   }
 
   .reddit-unmoderated::before {
-    background-position: -64px 0px;
+    background-position: -64px 0;
   }
 
   .edit-stylesheet::before {
@@ -185,7 +185,7 @@
   }
 
   .wikiaction-revisions::before {
-    background-position: -32px 0px;
+    background-position: -32px 0;
   }
 
   .wikiaction-pages::before {
@@ -195,6 +195,6 @@
   .moderator-mail::before {
     margin-top: 0;
     margin-left: 0;
-    background-position: -48px 0px;
+    background-position: -48px 0;
   }
 }

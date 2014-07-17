@@ -1,15 +1,15 @@
 #header {
-  background: $header-bg url($header-bg-image) 0px 0px no-repeat;
+  background: $header-bg url($header-bg-image) 0 0 no-repeat;
   color: $header-fg;
   border-bottom: none;
   height: $header-height;
   position: relative;
-  @include shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
+  @include shadow(0 2px 5px rgba(0, 0, 0, 0.5));
 
   #header-img-a {
     display: inline-block;
     vertical-align: middle;
-    margin: 0px 10px 0 20px;
+    margin: 0 10px 0 20px;
   }
 
   #header-bottom-left > .pagename:last-child::after {
@@ -20,24 +20,24 @@
   #header-bottom-left > .pagename:last-child::after,
   .tabmenu {
     display: block;
-    margin: 0px;
+    margin: 0;
     padding-left: 6px;
     overflow: hidden;
-    text-shadow: 0px 1px 0px darken($menu-bar-bg, 15%);
+    text-shadow: 0 1px 0 darken($menu-bar-bg, 15%);
     position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     @include linear-gradient(top, $menu-bar-bg, darken($menu-bar-bg, 5%));
-    @include shadow(inset 0px 1px 0px lighten($menu-bar-bg, 10%), inset 0px -1px 0px darken($menu-bar-bg, 9%));
+    @include shadow(inset 0 1px 0 lighten($menu-bar-bg, 10%), inset 0 -1px 0 darken($menu-bar-bg, 9%));
   }
 
   .tabmenu {
     > li {
       display: block;
       float: left;
-      margin: 0px;
-      padding: 0px;
+      margin: 0;
+      padding: 0;
 
 
       > a {
@@ -58,7 +58,7 @@
           color: lighten($menu-bar-fg, 30%);
           border: none;
           @include linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-          @include shadow(0px 1px 1px lighten($menu-bar-bg, 2%), inset 0px -2px 3px rgba(0, 0, 0, 0.2));
+          @include shadow(0 1px 1px lighten($menu-bar-bg, 2%), inset 0 -2px 3px rgba(0, 0, 0, 0.2));
         }
       }
 
@@ -96,8 +96,8 @@
     content: '';
     display: inline-block;
     margin-left: 5px;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     border-left: solid 4px transparent;
     border-right: solid 4px transparent;
     border-top: solid 4px $sr-header-fg;
@@ -109,14 +109,9 @@
   bottom: 7px;
   right: 20px;
   font-size: larger;
-  padding: 0px !important;
+  padding: 0 !important;
   color: $menu-bar-fg;
   line-height: 16px !important;
-
-
-  .nohavemail {
-    opacity: 0.6;
-  }
 
   > .user,
   > .flat-list,
@@ -144,7 +139,7 @@
 
 .pagename {
   color: $page-title-fg;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   font-variant: normal;
   text-transform: lowercase;
   font-size: 2.9em;
@@ -176,7 +171,7 @@
 .drop-choices.srdrop {
   background: $sr-dropdown-bg;
   border: none;
-  @include shadow(0px 5px 6px rgba(0, 0, 0, 0.3));
+  @include shadow(0 5px 6px rgba(0, 0, 0, 0.3));
 
   a {
     &.choice {
