@@ -86,6 +86,7 @@
   .multi-details form.rename-multi button.rename,
   .fancy-settings button,
   .usertext-edit button.save,
+  .usertext-edit button.cancel,
   .tabbedpane button,
   .flairselector button,
   .wiki-page-content button,
@@ -123,6 +124,7 @@
   .multi-details form.rename-multi button.rename:visited,
   .fancy-settings button:visited,
   .usertext-edit button.save:visited,
+  .usertext-edit button.cancel:visited,
   .tabbedpane button:visited,
   .flairselector button:visited,
   .wiki-page-content button:visited,
@@ -140,6 +142,7 @@
   .multi-details form.rename-multi button.rename:hover,
   .fancy-settings button:hover,
   .usertext-edit button.save:hover,
+  .usertext-edit button.cancel:hover,
   .tabbedpane button:hover,
   .flairselector button:hover,
   .wiki-page-content button:hover,
@@ -154,6 +157,7 @@
   .multi-details form.rename-multi button.rename:focus,
   .fancy-settings button:focus,
   .usertext-edit button.save:focus,
+  .usertext-edit button.cancel:focus,
   .tabbedpane button:focus,
   .flairselector button:focus,
   .wiki-page-content button:focus,
@@ -175,6 +179,7 @@
   .multi-details form.rename-multi button.rename:active,
   .fancy-settings button:active,
   .usertext-edit button.save:active,
+  .usertext-edit button.cancel:active,
   .tabbedpane button:active,
   .flairselector button:active,
   .wiki-page-content button:active,
@@ -205,6 +210,7 @@
   .trending-subreddits > .trending-subreddits-content li > a,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss,
+  .multi-details .settings > .delete.confirm-button > .confirmation > button,
   .side form.add-sr > button.add,
   .side .subreddits > li > a,
   .side .subreddits > li > button.remove-sr,
@@ -232,6 +238,7 @@
   .trending-subreddits > .trending-subreddits-content li > a,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss,
+  .multi-details .settings > .delete.confirm-button > .confirmation > button,
   .side form.add-sr > button.add,
   .side .subreddits > li > a,
   .side .subreddits > li > button.remove-sr,
@@ -268,6 +275,7 @@
   .trending-subreddits > .trending-subreddits-content li > a:hover,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active:hover,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss:hover,
+  .multi-details .settings > .delete.confirm-button > .confirmation > button:hover,
   .side form.add-sr > button.add:hover,
   .side .subreddits > li > a:hover,
   .side .subreddits > li > button.remove-sr:hover,
@@ -288,6 +296,7 @@
   .trending-subreddits > .trending-subreddits-content li > a:focus,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active:focus,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss:focus,
+  .multi-details .settings > .delete.confirm-button > .confirmation > button:focus,
   .side form.add-sr > button.add:focus,
   .side .subreddits > li > a:focus,
   .side .subreddits > li > button.remove-sr:focus,
@@ -315,6 +324,7 @@
   .trending-subreddits > .trending-subreddits-content li > a:active,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active:active,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss:active,
+  .multi-details .settings > .delete.confirm-button > .confirmation > button:active,
   .side form.add-sr > button.add:active,
   .side .subreddits > li > a:active,
   .side .subreddits > li > button.remove-sr:active,
@@ -404,6 +414,7 @@
   .multi-details form.rename-multi button.rename,
   .fancy-settings button,
   .usertext-edit button.save,
+  .usertext-edit button.cancel,
   .tabbedpane button,
   .flairselector button,
   .wiki-page-content button,
@@ -563,7 +574,7 @@
   .fancy-settings .linefield,
   .login-form-side,
   .searchfacets,
-  .searchpane.raisedbox, .explore-item {
+  .searchpane.raisedbox, .explore-item, .multi-details .settings > .delete.confirm-button > .confirmation {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14);
     overflow: hidden;
     background: #efefef;
@@ -3326,6 +3337,25 @@
   .multi-details .settings > .delete.confirm-button {
     margin-right: 4px;
   }
+  .multi-details .settings > .delete.confirm-button > .confirmation {
+    display: block;
+    margin: 10px 0;
+    text-align: right;
+    font-size: 0;
+    overflow: hidden;
+  }
+  .multi-details .settings > .delete.confirm-button > .confirmation > .prompt,
+  .multi-details .settings > .delete.confirm-button > .confirmation > button {
+    font-size: 13px;
+  }
+  .multi-details .settings > .delete.confirm-button > .confirmation > .prompt {
+    color: #111111;
+    margin: 3px 0 0 0;
+    float: left;
+  }
+  .multi-details .settings > .delete.confirm-button > .confirmation > button {
+    margin-left: 6px;
+  }
   .multi-details form.copy-multi button.copy,
   .multi-details form.rename-multi button.rename {
     opacity: 1;
@@ -3473,8 +3503,11 @@
   .hover-bubble.multi-add-notice {
     background: cornsilk;
     border: solid 1px rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+    border-radius: 4px;
   }
+
   .hover-bubble.multi-add-notice.anchor-right::after {
     border-left-color: cornsilk;
     right: -17px;
