@@ -21,4 +21,10 @@
   }
 }
 
-@import "res/stupid_fixes";
+.res-commentBoxes,
+.res-commentBoxes.res-nightmode {
+  .res,
+  .res.res-nightmode {
+    @import "res/stupid_fixes";
+  }
+}

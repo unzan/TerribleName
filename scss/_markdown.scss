@@ -1,3 +1,26 @@
+%tn-markdown-table {
+  td,
+  th {
+    border-color: $table-border-color;
+  }
+
+  th {
+    background: $table-heading-bg;
+    color: $table-heading-fg;
+    text-shadow: 0 1px 1px lighten($table-heading-bg, 20%);
+    @include shadow(inset 0 1px 0 lighten($table-heading-bg, 30%));
+  }
+
+  tbody {
+    tr {
+      background: $table-content-bg;
+      &:hover {
+        background: $table-highlight-bg;
+      }
+    }
+  }
+}
+
 .md {
   line-height: 1.5em;
 
@@ -105,33 +128,16 @@
     }
   }
 
+  table {
+    @extend %tn-markdown-table;
+  }
+
   ul {
     list-style-type: square;
   }
 
   a:hover {
     text-decoration: underline;
-  }
-
-  td,
-  th {
-    border-color: $table-border-color;
-  }
-
-  th {
-    background: $table-heading-bg;
-    color: $table-heading-fg;
-    text-shadow: 0 1px 1px lighten($table-heading-bg, 20%);
-    @include shadow(inset 0 1px 0 lighten($table-heading-bg, 30%));
-  }
-
-  tbody {
-    tr {
-      background: $table-content-bg;
-      &:hover {
-        background: $table-highlight-bg;
-      }
-    }
   }
 
   a[href$="/spoiler"] {

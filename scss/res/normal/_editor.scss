@@ -230,3 +230,25 @@ button.RESBigEditorPop {
   }
 
 }
+
+#alert_message {
+  @extend %tn-form-group;
+
+  .buttonContainer {
+    > input[type=button] {
+      @extend %tn-small-button;
+      font-size: $normal-font-size;
+      margin-right: 5px;
+    }
+  }
+
+  > input[type=button] {
+    @extend %tn-button;
+    font-size: $normal-font-size;
+    text-transform: capitalize;
+  }
+
+  table.commentPreview {
+    @extend %tn-markdown-table;
+  }
+}

@@ -1,7 +1,7 @@
 /*
  * Terrible Name
  *
- * A simple RES-friendly theme for reddit
+ * A simple theme for reddit
  *
  * Author: unzan (https://github.com/unzan)
  * Contributor: - David Davis (https://github.com/daviddavis)
@@ -77,6 +77,18 @@ hr {
   border-radius: 3px;
 }
 
+.linkflairlabel,
+.flair {
+  display: inline-block;
+  font-size: 12px !important;
+  border: solid 1px #c1c1c1;
+  line-height: 1.2em;
+  padding: 1px 4px;
+  vertical-align: middle;
+  background: cornsilk;
+  color: #111111;
+}
+
 .side .fancy-toggle-button > .option.add, .side .fancy-toggle-button > .option.remove, .morelink a,
 .fancy-settings button,
 .usertext-edit button.save,
@@ -86,10 +98,10 @@ hr {
 .wiki-page-content button,
 .formtabs-content button,
 .fancy-settings .linefield button,
-.btn,
+button.btn,
 input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 .res .RESDashboardToggle,
-.res .RESDashboardToggle.remove, .res #BigEditor button, .res.res-nightmode .content button,
+.res .RESDashboardToggle.remove, .res #BigEditor button, .res #alert_message > input[type=button], .res.res-nightmode .content button,
 .res.res-nightmode .content input[type=submit],
 .res.res-nightmode button,
 .res.res-nightmode input[type=submit] {
@@ -120,9 +132,9 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 .flairselector button:visited,
 .wiki-page-content button:visited,
 .formtabs-content button:visited,
-.btn:visited,
+button.btn:visited,
 input[type=submit]:visited, .res .RESshortcutside:visited,
-.res .RESDashboardToggle:visited, .res #BigEditor button:visited,
+.res .RESDashboardToggle:visited, .res #BigEditor button:visited, .res #alert_message > input[type=button]:visited,
 .res.res-nightmode button:visited,
 .res.res-nightmode input[type=submit]:visited {
   color: white;
@@ -135,9 +147,9 @@ input[type=submit]:visited, .res .RESshortcutside:visited,
 .flairselector button:hover,
 .wiki-page-content button:hover,
 .formtabs-content button:hover,
-.btn:hover,
+button.btn:hover,
 input[type=submit]:hover, .res .RESshortcutside:hover,
-.res .RESDashboardToggle:hover, .res #BigEditor button:hover,
+.res .RESDashboardToggle:hover, .res #BigEditor button:hover, .res #alert_message > input[type=button]:hover,
 .res.res-nightmode button:hover,
 .res.res-nightmode input[type=submit]:hover, .side .fancy-toggle-button > .option.add:focus, .side .fancy-toggle-button > .option.remove:focus, .morelink a:focus,
 .fancy-settings button:focus,
@@ -147,9 +159,9 @@ input[type=submit]:hover, .res .RESshortcutside:hover,
 .flairselector button:focus,
 .wiki-page-content button:focus,
 .formtabs-content button:focus,
-.btn:focus,
+button.btn:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
-.res .RESDashboardToggle:focus, .res #BigEditor button:focus,
+.res .RESDashboardToggle:focus, .res #BigEditor button:focus, .res #alert_message > input[type=button]:focus,
 .res.res-nightmode button:focus,
 .res.res-nightmode input[type=submit]:focus {
   color: white;
@@ -166,9 +178,9 @@ input[type=submit]:focus, .res .RESshortcutside:focus,
 .flairselector button:active,
 .wiki-page-content button:active,
 .formtabs-content button:active,
-.btn:active,
+button.btn:active,
 input[type=submit]:active, .res .RESshortcutside:active,
-.res .RESDashboardToggle:active, .res #BigEditor button:active,
+.res .RESDashboardToggle:active, .res #BigEditor button:active, .res #alert_message > input[type=button]:active,
 .res.res-nightmode button:active,
 .res.res-nightmode input[type=submit]:active {
   background: -webkit-linear-gradient(top, #cb4b16, #9d3a11);
@@ -184,7 +196,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res button.RESBigEditorPop,
 .res #BigEditor .RESCloseButton,
 .res .markdownEditor .RESMacroDropdownTitle,
-.res .markdownEditor > a.edit-btn {
+.res .markdownEditor > a.edit-btn,
+.res #alert_message .buttonContainer > input[type=button] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.12);
 }
 
@@ -198,7 +211,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res button.RESBigEditorPop,
 .res #BigEditor .RESCloseButton,
 .res .markdownEditor .RESMacroDropdownTitle,
-.res .markdownEditor > a.edit-btn {
+.res .markdownEditor > a.edit-btn,
+.res #alert_message .buttonContainer > input[type=button] {
   color: #6b6b6b;
   text-decoration: none;
   padding: 2px 6px;
@@ -222,13 +236,15 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res #BigEditor .RESCloseButton:hover,
 .res .markdownEditor .RESMacroDropdownTitle:hover,
 .res .markdownEditor > a.edit-btn:hover,
+.res #alert_message .buttonContainer > input[type=button]:hover,
 .wiki-page .pageactions > .wikiaction:focus,
 .nav-buttons .nextprev > a:focus,
 .res .RESSubscriptionButton:focus,
 .res button.RESBigEditorPop:focus,
 .res #BigEditor .RESCloseButton:focus,
 .res .markdownEditor .RESMacroDropdownTitle:focus,
-.res .markdownEditor > a.edit-btn:focus {
+.res .markdownEditor > a.edit-btn:focus,
+.res #alert_message .buttonContainer > input[type=button]:focus {
   text-decoration: none;
 }
 
@@ -242,7 +258,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .res button.RESBigEditorPop:active,
 .res #BigEditor .RESCloseButton:active,
 .res .markdownEditor .RESMacroDropdownTitle:active,
-.res .markdownEditor > a.edit-btn:active {
+.res .markdownEditor > a.edit-btn:active,
+.res #alert_message .buttonContainer > input[type=button]:active {
   background: -webkit-linear-gradient(top, #efefef, #e0e0e0);
   background: -moz-linear-gradient(top, #efefef, #e0e0e0);
   background: linear-gradient(top, #efefef, #e0e0e0);
@@ -327,7 +344,7 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .wiki-page-content button,
 .formtabs-content button,
 .fancy-settings .linefield button,
-.btn,
+button.btn,
 input[type=submit] {
   display: inline-block;
   padding-bottom: 3px;
@@ -480,7 +497,7 @@ input[type=password] {
 .fancy-settings .linefield,
 .login-form-side,
 .searchfacets,
-.searchpane.raisedbox {
+.searchpane.raisedbox, .res #alert_message {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14);
   overflow: hidden;
   background: #efefef;
@@ -1207,6 +1224,24 @@ input[type=password] {
   padding: 4px 8px;
 }
 
+.md table td, .res #alert_message table.commentPreview td,
+.md table th,
+.res #alert_message table.commentPreview th {
+  border-color: #b7b7b7;
+}
+.md table th, .res #alert_message table.commentPreview th {
+  background: #e6e6e6;
+  color: #444444;
+  text-shadow: 0 1px 1px white;
+  box-shadow: inset 0 1px 0 white;
+}
+.md table tbody tr, .res #alert_message table.commentPreview tbody tr {
+  background: white;
+}
+.md table tbody tr:hover, .res #alert_message table.commentPreview tbody tr:hover {
+  background: cornsilk;
+}
+
 .md {
   line-height: 1.5em;
 }
@@ -1274,22 +1309,6 @@ input[type=password] {
 }
 .md a:hover {
   text-decoration: underline;
-}
-.md td,
-.md th {
-  border-color: #b7b7b7;
-}
-.md th {
-  background: #e6e6e6;
-  color: #444444;
-  text-shadow: 0 1px 1px white;
-  box-shadow: inset 0 1px 0 white;
-}
-.md tbody tr {
-  background: white;
-}
-.md tbody tr:hover {
-  background: cornsilk;
 }
 .md a[href$="/spoiler"] {
   background: #111111 !important;
@@ -1382,28 +1401,6 @@ input[type=password] {
 }
 .comment.deleted > .entry > .noncollapsed > .usertext {
   display: none;
-}
-
-.contest-mode.infobar, .contest-mode.unvotable-message {
-  margin: 0 !important;
-  font-size: 0;
-  display: inline-block;
-  width: auto !important;
-  position: absolute;
-  background: none;
-  border: none;
-  box-shadow: none;
-  font-weight: bold;
-  color: #5e5e5e;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
-  top: -30px;
-  right: 0px;
-  white-space: nowrap;
-  padding: 3px;
-}
-.contest-mode.infobar::before, .contest-mode.unvotable-message::before {
-  content: 'Contest Mode';
-  font-size: 13px;
 }
 
 .side {
@@ -1655,7 +1652,7 @@ input[type=password] {
 }
 
 .tagline .userattrs .cakeday {
-  background-position: -16px -96px;
+  background-position: -96px 0;
 }
 
 #mail,
@@ -2273,6 +2270,14 @@ table.diff tbody .diff_header:not([id]) {
   background: -webkit-linear-gradient(top, #dc322f, #b9221f);
   background: -moz-linear-gradient(top, #dc322f, #b9221f);
   background: linear-gradient(top, #dc322f, #b9221f);
+}
+.res #alert_message .buttonContainer > input[type=button] {
+  font-size: 13px;
+  margin-right: 5px;
+}
+.res #alert_message > input[type=button] {
+  font-size: 13px;
+  text-transform: capitalize;
 }
 .res.res-nightmode {
   color: #d1d1d1;

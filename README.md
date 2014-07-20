@@ -1,7 +1,7 @@
 Terrible Name
 =============
 
-Terrible Name is a simple RES-friendly reddit theme written in [SCSS][].
+Terrible Name is a simple reddit theme written in [SCSS][].
 It's available as subreddit theme and userstyle. You can see a demo of subreddit
 theme in [/r/TerribleName][subreddit].
 
@@ -25,16 +25,36 @@ Installation
 
 ### For userstyle
 
-Create a blank style with Stylish and put the content of `userstyle.css` into it
-then click **Save**.
+#### Firefox
 
-Note on userstyle
------------------
+Create a blank style with Stylish and put the content of `userstyle.css` into
+the editor box then click **Save**.
 
-The userstyle version is not meant to override custom stylesheet of subreddits.
-If you don't want to see any style conflict, uncheck the
-**allow subreddits to show me custom styles** option in your preference or use
-RES to disable individual subreddit stylesheet.
+#### Chrome/Chromium
+
+In the **Installed styles** page, click **Write new style**. Paste the content
+of `userstyle.css` into the Code box and remove these two lines:
+
+    @namespace url(http://www.w3.org/1999/xhtml);
+    @-moz-document domain("reddit.com") {
+
+(it's right below a block of comment at the top of pasted code)
+
+You also should remove the closing brace (`}`) at the last line.
+
+In the **Applies to** field, click **Specify** and select **URLs on the domain**
+then type `reddit.com` in text input next to the dropdown. Then
+finally click **Save**.
+
+Notes on userstyle
+------------------
+
+1. The userstyle version is not meant to override custom stylesheet of subreddits.
+   If you don't want to see any style conflict, uncheck the
+   **allow subreddits to show me custom styles** option in your preference or use
+   RES to disable individual subreddit stylesheet.
+
+2. No plan for nightmode compatibility.
 
 Known Issues
 ------------
@@ -48,7 +68,10 @@ Known Issues
 3. RES active entry indicator overlapped with "sponsored link" label in
    promoted link.
 
-4. Doesn't work with RES pinned header feature
+4. Doesn't work with RES pinned header feature.
+
+5. The newly added blue contest mode notice makes the navigation toolbar
+   in comments page messy.
 
 ***
 

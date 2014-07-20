@@ -1,43 +1,56 @@
-.subscription-box {
-  .subButtons {
-    padding: 3px 0 !important;
+.res {
+  @import "../res/normal/header";
+  @import "../res/normal/button";
+  @import "../res/normal/sidebar";
+  @import "../res/normal/list";
+  @import "../res/normal/comment";
+  @import "../res/normal/editor";
 
-    > .subscribe-button,
-    > .RESshortcut,
-    > .RESDashboardToggle {
-      margin-right: 5px;
+  .subscription-box {
+    .subButtons {
+      padding: 3px 0 !important;
+
+      > .subscribe-button,
+      > .RESshortcut,
+      > .RESDashboardToggle {
+        margin-right: 5px;
+      }
+
+      > .subscribe-button > .option,
+      > .RESshortcut,
+      > .RESDashboardToggle {
+        padding: 2px 5px;
+        font-size: 10px !important;
+      }
     }
+  }
 
-    > .subscribe-button > .option,
-    > .RESshortcut,
-    > .RESDashboardToggle {
-      padding: 2px 5px;
-      font-size: 10px !important;
+  // RES' My Subreddits dropdown
+  #srList {
+    font-size: 10px;
+    background: $sr-dropdown-bg;
+    color: $sr-dropdown-fg;
+    border: none;
+    @include shadow(0 5px 6px rgba(0, 0, 0, 0.3));
+
+    tr {
+      border: none;
+      a {
+        color: lighten($link-fg, 20%);
+      }
+
+      &:hover {
+        color: $sr-dropdown-selected-fg;
+        background: $sr-dropdown-selected-bg;
+
+        a {
+          color: $sr-dropdown-selected-fg;
+        }
+      }
     }
   }
 }
 
-// RES' My Subreddits dropdown
-#srList {
-  font-size: 10px;
-  background: $sr-dropdown-bg;
-  color: $sr-dropdown-fg;
-  border: none;
-  @include shadow(0 5px 6px rgba(0, 0, 0, 0.3));
-
-  tr {
-    border: none;
-    a {
-      color: lighten($link-fg, 20%);
-    }
-
-    &:hover {
-      color: $sr-dropdown-selected-fg;
-      background: $sr-dropdown-selected-bg;
-
-      a {
-        color: $sr-dropdown-selected-fg;
-      }
-    }
-  }
+.res-commentBoxes .res {
+  @import "../res/stupid_fixes";
 }
