@@ -94,7 +94,7 @@
   .fancy-settings .linefield button,
   button.btn,
   input[type=submit], .explore-header #explore-settings button,
-  #compose-message button#send, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button, .profile-page .expand-summary, .res .RESshortcutside, .res .RESshortcutside.remove,
+  #compose-message button#send, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button, .multi-details .settings > .delete.confirm-button > .confirmation > button, .profile-page .expand-summary, .res .RESshortcutside, .res .RESshortcutside.remove,
   .res .RESDashboardToggle,
   .res .RESDashboardToggle.remove, .res #BigEditor button, .res #alert_message > input[type=button] {
     color: white;
@@ -128,7 +128,7 @@
   .formtabs-content button:visited,
   button.btn:visited,
   input[type=submit]:visited, .explore-header #explore-settings button:visited,
-  #compose-message button#send:visited, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:visited, .profile-page .expand-summary:visited, .res .RESshortcutside:visited,
+  #compose-message button#send:visited, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:visited, .multi-details .settings > .delete.confirm-button > .confirmation > button:visited, .profile-page .expand-summary:visited, .res .RESshortcutside:visited,
   .res .RESDashboardToggle:visited, .res #BigEditor button:visited, .res #alert_message > input[type=button]:visited {
     color: white;
   }
@@ -144,7 +144,7 @@
   .formtabs-content button:hover,
   button.btn:hover,
   input[type=submit]:hover, .explore-header #explore-settings button:hover,
-  #compose-message button#send:hover, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:hover, .profile-page .expand-summary:hover, .res .RESshortcutside:hover,
+  #compose-message button#send:hover, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:hover, .multi-details .settings > .delete.confirm-button > .confirmation > button:hover, .profile-page .expand-summary:hover, .res .RESshortcutside:hover,
   .res .RESDashboardToggle:hover, .res #BigEditor button:hover, .res #alert_message > input[type=button]:hover, .side .fancy-toggle-button > .option.add:focus, .side .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .multi-details .settings > button:focus, .multi-details.public .settings > .share-in-sr:focus,
   .multi-details form.copy-multi button.copy:focus,
   .multi-details form.rename-multi button.rename:focus,
@@ -157,7 +157,7 @@
   .formtabs-content button:focus,
   button.btn:focus,
   input[type=submit]:focus, .explore-header #explore-settings button:focus,
-  #compose-message button#send:focus, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:focus, .profile-page .expand-summary:focus, .res .RESshortcutside:focus,
+  #compose-message button#send:focus, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:focus, .multi-details .settings > .delete.confirm-button > .confirmation > button:focus, .profile-page .expand-summary:focus, .res .RESshortcutside:focus,
   .res .RESDashboardToggle:focus, .res #BigEditor button:focus, .res #alert_message > input[type=button]:focus {
     color: white;
     text-decoration: none !important;
@@ -177,7 +177,7 @@
   .formtabs-content button:active,
   button.btn:active,
   input[type=submit]:active, .explore-header #explore-settings button:active,
-  #compose-message button#send:active, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:active, .profile-page .expand-summary:active, .res .RESshortcutside:active,
+  #compose-message button#send:active, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:active, .multi-details .settings > .delete.confirm-button > .confirmation > button:active, .profile-page .expand-summary:active, .res .RESshortcutside:active,
   .res .RESDashboardToggle:active, .res #BigEditor button:active, .res #alert_message > input[type=button]:active {
     background: -webkit-linear-gradient(top, #cb4b16, #9d3a11);
     background: -moz-linear-gradient(top, #cb4b16, #9d3a11);
@@ -194,7 +194,6 @@
   .trending-subreddits > .trending-subreddits-content li > a,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss,
-  .multi-details .settings > .delete.confirm-button > .confirmation > button,
   .side form.add-sr > button.add,
   .side .subreddits > li > a,
   .side .subreddits > li > button.remove-sr,
@@ -223,7 +222,6 @@
   .trending-subreddits > .trending-subreddits-content li > a,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss,
-  .multi-details .settings > .delete.confirm-button > .confirmation > button,
   .side form.add-sr > button.add,
   .side .subreddits > li > a,
   .side .subreddits > li > button.remove-sr,
@@ -261,7 +259,6 @@
   .trending-subreddits > .trending-subreddits-content li > a:hover,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active:hover,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss:hover,
-  .multi-details .settings > .delete.confirm-button > .confirmation > button:hover,
   .side form.add-sr > button.add:hover,
   .side .subreddits > li > a:hover,
   .side .subreddits > li > button.remove-sr:hover,
@@ -283,7 +280,6 @@
   .trending-subreddits > .trending-subreddits-content li > a:focus,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active:focus,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss:focus,
-  .multi-details .settings > .delete.confirm-button > .confirmation > button:focus,
   .side form.add-sr > button.add:focus,
   .side .subreddits > li > a:focus,
   .side .subreddits > li > button.remove-sr:focus,
@@ -312,7 +308,6 @@
   .trending-subreddits > .trending-subreddits-content li > a:active,
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active:active,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss:active,
-  .multi-details .settings > .delete.confirm-button > .confirmation > button:active,
   .side form.add-sr > button.add:active,
   .side .subreddits > li > a:active,
   .side .subreddits > li > button.remove-sr:active,
@@ -568,7 +563,9 @@
   .fancy-settings .linefield,
   .login-form-side,
   .searchfacets,
-  .searchpane.raisedbox, .explore-item, .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message {
+  .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
+  .multi-details form.copy-multi,
+  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14);
     overflow: hidden;
     background: #efefef;
@@ -2351,6 +2348,13 @@
   .multi-details form.rename-multi button.rename {
     font-weight: bold;
   }
+  .multi-details form.rename-multi,
+  .multi-details form.copy-multi,
+  .multi-details .settings > .delete.confirm-button > .confirmation {
+    margin: 10px 0;
+    font-size: 0;
+    overflow: hidden;
+  }
   .multi-details .settings > .visibility-group {
     display: block;
     margin-bottom: 10px;
@@ -2362,10 +2366,7 @@
   }
   .multi-details .settings > .delete.confirm-button > .confirmation {
     display: block;
-    margin: 10px 0;
     text-align: right;
-    font-size: 0;
-    overflow: hidden;
   }
   .multi-details .settings > .delete.confirm-button > .confirmation > .prompt,
   .multi-details .settings > .delete.confirm-button > .confirmation > button {
@@ -2376,13 +2377,34 @@
     margin: 3px 0 0 0;
     float: left;
   }
+  .multi-details .settings > .delete.confirm-button > .confirmation > .prompt::first-letter {
+    text-transform: uppercase;
+  }
   .multi-details .settings > .delete.confirm-button > .confirmation > button {
     margin-left: 6px;
+    text-transform: capitalize;
+  }
+  .multi-details form.copy-multi > .warning,
+  .multi-details form.rename-multi > .warning {
+    font-size: 13px;
+    color: #111111;
+    padding: 0;
+    margin: 0 0 5px 0;
   }
   .multi-details form.copy-multi button.copy,
+  .multi-details form.copy-multi button.rename,
+  .multi-details form.rename-multi button.copy,
   .multi-details form.rename-multi button.rename {
     opacity: 1;
     margin-left: 5px;
+  }
+  .multi-details form.copy-multi button.copy,
+  .multi-details form.copy-multi button.rename,
+  .multi-details form.copy-multi .multi-name,
+  .multi-details form.rename-multi button.copy,
+  .multi-details form.rename-multi button.rename,
+  .multi-details form.rename-multi .multi-name {
+    vertical-align: middle;
   }
 
   .side .titlebox.filtered-details {

@@ -145,6 +145,15 @@ body.with-listing-chooser {
     font-weight: bold;
   }
 
+  form.rename-multi,
+  form.copy-multi,
+  .settings > .delete.confirm-button > .confirmation {
+    @extend %tn-form-group;
+    margin: 10px 0;
+    font-size: 0;
+    overflow: hidden;
+  }
+
   .settings {
     > .visibility-group {
       display: block;
@@ -159,12 +168,8 @@ body.with-listing-chooser {
 
     > .delete.confirm-button {
       > .confirmation {
-        @extend %tn-form-group;
         display: block;
-        margin: 10px 0;
         text-align: right;
-        font-size: 0;
-        overflow: hidden;
 
         > .prompt,
         > button {
@@ -175,20 +180,41 @@ body.with-listing-chooser {
           color: $main-fg;
           margin: 3px 0 0 0;
           float: left;
+
+          &::first-letter {
+            text-transform: uppercase;
+          }
         }
 
         > button {
-          @extend %tn-small-button;
+          @extend %tn-button;
           margin-left: 6px;
+          text-transform: capitalize;
         }
       }
     }
   }
 
-  form.copy-multi button.copy,
-  form.rename-multi button.rename {
-    opacity: 1;
-    margin-left: 5px;
+  form.copy-multi,
+  form.rename-multi {
+    > .warning {
+      font-size: $normal-font-size;
+      color: $main-fg;
+      padding: 0;
+      margin: 0 0 5px 0;
+    }
+
+    button.copy,
+    button.rename {
+      opacity: 1;
+      margin-left: 5px;
+    }
+
+    button.copy,
+    button.rename,
+    .multi-name {
+      vertical-align: middle;
+    }
   }
 }
 
