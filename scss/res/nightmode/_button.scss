@@ -21,12 +21,9 @@
       &,
       &:hover {
         background: lighten($res-night-bg, 10%) !important;
+        border: none !important;
+        @include shadow(none !important);
       }
-    }
-
-    &.toggleImage.image.collapsed.expanded,
-    &.expanded {
-      @include shadow(none);
     }
   }
 }

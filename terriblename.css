@@ -2428,9 +2428,8 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .thing .expando-button.collapsed, .res.res-nightmode .thing .expando-button.collapsed:hover, .res.res-nightmode .thing .expando-button.expanded, .res.res-nightmode .thing .expando-button.expanded:hover {
   background: #2b2b2b !important;
-}
-.res.res-nightmode .thing .toggleImage.image.collapsed.expanded.expando-button, .res.res-nightmode .thing .expando-button.expanded {
-  box-shadow: none;
+  border: none !important;
+  box-shadow: none !important;
 }
 .res.res-nightmode .nav-buttons > .nextprev > a {
   color: #d1d1d1;
@@ -2600,10 +2599,10 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .commentarea .commentNavSortType {
   border-radius: 0;
 }
-.res.res-nightmode .commentarea .commentNavSortType:nth-of-type(1), .res.res-nightmode .commentarea .commentNavSortType:nth-of-type(10) {
+.res.res-nightmode .commentarea .commentNavSortType:nth-of-type(1), .res.res-nightmode .commentarea .commentNavSortType:nth-of-type(9) {
   border-radius: 3px 0 0 3px;
 }
-.res.res-nightmode .commentarea .commentNavSortType:nth-of-type(9), .res.res-nightmode .commentarea .commentNavSortType:last-child {
+.res.res-nightmode .commentarea .commentNavSortType:nth-of-type(8), .res.res-nightmode .commentarea .commentNavSortType:last-child {
   border-radius: 0 3px 3px 0;
 }
 .res.res-nightmode.wiki-page .wikititle {
