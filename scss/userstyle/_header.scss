@@ -1,0 +1,28 @@
+#header-img {
+  &.default-header {
+    background: url($logo-image) center center no-repeat;
+    width: 82px;
+    height: $page-title-height;
+    margin: 0 10px 0 20px;
+    vertical-align: middle;
+  }
+}
+
+#header-img-a {
+  max-width: 300px;
+  overflow: hidden;
+  > #header-img {
+    max-height: $page-title-height !important;
+    width: auto !important;
+  }
+}
+
+body.with-listing-chooser {
+  #header {
+    .pagename {
+      position: static;
+      margin-left: 0;
+    }
+  }
+}
+

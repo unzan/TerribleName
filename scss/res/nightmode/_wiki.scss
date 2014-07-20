@@ -17,18 +17,18 @@
   .pageactions {
     > .wikiaction {
       @extend %tn-dark-button;
-      @include rounded(0px);
+      @include rounded(0);
 
       &.wikiaction-current {
         @extend %tn-dark-button-pressed;
       }
 
       &:first-child {
-        @include rounded(3px 0px 0px 3px);
+        @include rounded(3px 0 0 3px);
       }
 
       &:last-child {
-        @include rounded(0px 3px 3px 0px);
+        @include rounded(0 3px 3px 0);
       }
     }
   }
@@ -63,7 +63,7 @@
           border-color: darken($res-night-bg, 3%) !important;
           //border-left: none;
           //border-right: none;
-          @include shadow(inset 1px 1px 0px lighten($res-night-bg, 8%));
+          @include shadow(inset 1px 1px 0 lighten($res-night-bg, 8%));
         }
 
         &:hover > td {
@@ -90,7 +90,7 @@ table.diff {
     background: $res-night-table-heading-bg;
     color: $res-night-fg;
     border-color: darken($res-night-table-heading-bg, 5%);
-    @include shadow(inset 1px 1px 0px lighten($res-night-table-heading-bg, 10%));
+    @include shadow(inset 1px 1px 0 lighten($res-night-table-heading-bg, 10%));
   }
 
   tbody .diff_header:not([id]) {

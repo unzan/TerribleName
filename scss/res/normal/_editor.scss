@@ -48,7 +48,7 @@ button.RESBigEditorPop {
     float: none;
     right: 15px;
     top: 36px;
-    //margin: 16px 15px 0px 8px;
+    //margin: 16px 15px 0 8px;
   }
 
   .wiki-page-content > #editform > div > .markdownEditor > .RESCharCounter {
@@ -85,7 +85,7 @@ button.RESBigEditorPop {
 
     &:nth-child(5)::before {
       // link
-      background-position: -64px 0px;
+      background-position: -64px 0;
     }
 
     &:nth-child(6)::before {
@@ -104,12 +104,12 @@ button.RESBigEditorPop {
 
     &:nth-child(9)::before {
       // ol
-      background-position: -80px 0px;
+      background-position: -80px 0;
     }
 
     &:nth-child(10)::before {
       // table
-      background-position: 0px 0px;
+      background-position: 0 0;
     }
   }
 }
@@ -122,18 +122,18 @@ button.RESBigEditorPop {
 
 .usertext-edit .RESDialogSmall .md.RESDialogContents,
 .RESDialogSmall.livePreview {
-  padding: 0px !important;
+  padding: 0 !important;
 }
 
 .usertext-edit .RESDialogSmall .md.RESDialogContents {
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 
 #BigPreview.md,
 .usertext-edit .RESDialogSmall .md.RESDialogContents,
 .RESDialogSmall.livePreview > .md {
   background: none !important;
-  @include rounded(0px);
+  @include rounded(0);
   @include shadow(none);
 }
 
@@ -144,21 +144,25 @@ button.RESBigEditorPop {
     color: $table-heading-fg;
     background: $table-heading-bg;
     font-weight: bold;
-    margin: 0px;
-    top: 0px;
-    @include rounded(3px 3px 0px 0px);
-    @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 2px 3px rgba(0, 0, 0, 0.14));
+    margin: 0;
+    top: 0;
+    @include rounded(3px 3px 0 0);
+    @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 2px 3px rgba(0, 0, 0, 0.14));
   }
 }
 
 #BigEditor {
+  button {
+    @extend %tn-button;
+  }
+
   > .RESDialogSmall {
     border: none !important;
-    @include shadow(0px 3px 5px rgba(0, 0, 0, 0.3));
+    @include shadow(0 3px 5px rgba(0, 0, 0, 0.3));
 
     &.BELeft {
       background: $main-bg url($main-bg-image) left top repeat;
-      @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7));
+      @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7));
 
       > h3 {
         display: none;
@@ -173,7 +177,7 @@ button.RESBigEditorPop {
       > .RESDialogContents {
         top: 10px;
         right: 8px;
-        padding: 0px;
+        padding: 0;
         padding-bottom: 100px;
 
         .commentingAs,
@@ -186,7 +190,7 @@ button.RESBigEditorPop {
     &.BERight {
       > .RESDialogContents {
         top: 40px;
-        margin: 0px !important;
+        margin: 0 !important;
       }
     }
   }
@@ -204,7 +208,7 @@ button.RESBigEditorPop {
     }
 
     &.close::before {
-      background-position: 0px -32px;
+      background-position: 0 -32px;
     }
   }
 }
@@ -213,16 +217,38 @@ button.RESBigEditorPop {
   padding: 2px 8px;
   color: $res-char-counter-fg;
   font-weight: bold;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-  margin-bottom: 0px !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0 !important;
 
   @include linear-gradient(top, $res-char-counter-bg, darken($res-char-counter-bg, 10%));
   @include rounded(3px);
-  @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.7));
+  @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.7));
 
   &.tooLong {
     color: $res-char-counter-fg;
     @include linear-gradient(top, $res-char-counter-too-long-bg, darken($res-char-counter-too-long-bg, 10%));
   }
 
+}
+
+#alert_message {
+  @extend %tn-form-group;
+
+  .buttonContainer {
+    > input[type=button] {
+      @extend %tn-small-button;
+      font-size: $normal-font-size;
+      margin-right: 5px;
+    }
+  }
+
+  > input[type=button] {
+    @extend %tn-button;
+    font-size: $normal-font-size;
+    text-transform: capitalize;
+  }
+
+  table.commentPreview {
+    @extend %tn-markdown-table;
+  }
 }

@@ -34,7 +34,7 @@
   .sidebox {
     border: none !important;
     overflow: visible !important;
-    @include rounded(0px);
+    @include rounded(0);
   }
 
 
@@ -44,7 +44,7 @@
       background-color: transparent;
       &:hover {
         color: $res-night-fg;
-        @include shadow(inset 0px 1px 0px lighten($res-night-bg, 18%), 0px 1px 1px rgba(0, 0, 0, 0.2));
+        @include shadow(inset 0 1px 0 lighten($res-night-bg, 18%), 0 1px 1px rgba(0, 0, 0, 0.2));
       }
 
       &:hover,
@@ -54,7 +54,7 @@
       }
 
       &:active {
-        @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px lighten($res-night-bg, 18%));
+        @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 lighten($res-night-bg, 18%));
       }
     }
   }

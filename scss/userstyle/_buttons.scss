@@ -1,0 +1,6 @@
+.explore-header #explore-settings button,
+#compose-message button#send {
+  @extend %tn-button;
+  padding-bottom: 3px;
+}
+

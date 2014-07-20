@@ -1,8 +1,8 @@
+@import "license";
 @import "variables";
 @import "mixins";
 @import "basic";
-// no custom flair style for now
-//@import "flairs";
+@import "flairs";
 @import "buttons";
 @import "form";
 @import "header";

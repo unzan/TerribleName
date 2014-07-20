@@ -1,3 +1,7 @@
+.RESUserTag + .flair {
+  margin-left: 3px;
+}
+
 .link {
   .RES-keyNav-activeElement {
     background: none !important;
@@ -6,8 +10,20 @@
 }
 
 .thing {
+  .title.imgScanned.visited {
+    color: $link-fg-visited;
+  }
+
   .tagline {
     .author {
+      &.moderator,
+      &.submitter,
+      &.admin {
+        vertical-align: middle;
+        padding: 1px 3px;
+        @include rounded(2px);
+      }
+
       &.moderator {
         &,
         &:hover {

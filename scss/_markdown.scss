@@ -1,3 +1,26 @@
+%tn-markdown-table {
+  td,
+  th {
+    border-color: $table-border-color;
+  }
+
+  th {
+    background: $table-heading-bg;
+    color: $table-heading-fg;
+    text-shadow: 0 1px 1px lighten($table-heading-bg, 20%);
+    @include shadow(inset 0 1px 0 lighten($table-heading-bg, 30%));
+  }
+
+  tbody {
+    tr {
+      background: $table-content-bg;
+      &:hover {
+        background: $table-highlight-bg;
+      }
+    }
+  }
+}
+
 .md {
   line-height: 1.5em;
 
@@ -15,7 +38,7 @@
   h1,
   h2 {
     font-weight: normal !important;
-    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+    border-bottom: solid 1px $horiz-line-color;
     margin: 0.5em 0em 1em 0em;
   }
 
@@ -55,7 +78,8 @@
 
   pre {
     margin: 1em 0em;
-    padding: 0px;
+    padding: 0;
+    max-width: 95%;
 
     > code {
       padding: 7px;
@@ -104,30 +128,16 @@
     }
   }
 
+  table {
+    @extend %tn-markdown-table;
+  }
+
   ul {
     list-style-type: square;
   }
 
   a:hover {
     text-decoration: underline;
-  }
-
-  td,
-  th {
-    border-color: $table-border-color;
-  }
-
-  th {
-    background: $table-heading-bg;
-    color: $table-heading-fg;
-    text-shadow: 0px 1px 1px lighten($table-heading-bg, 20%);
-    @include shadow(inset 0px 1px 0px lighten($table-heading-bg, 30%));
-  }
-
-  tbody {
-    tr:hover {
-      background: $table-highlight-bg;
-    }
   }
 
   a[href$="/spoiler"] {

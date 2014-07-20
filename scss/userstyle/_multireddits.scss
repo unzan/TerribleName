@@ -1,0 +1,406 @@
+body.with-listing-chooser {
+  #header .tabmenu {
+    margin-left: 0;
+  }
+
+  > .content {
+    margin-left: 145px;
+  }
+
+  &.listing-chooser-collapsed {
+    > .listing-chooser {
+      padding-right: 10px;
+
+      .grippy {
+        width: 10px;
+      }
+    }
+
+    > .content {
+      margin-left: 30px;
+    }
+  }
+
+  .listing-chooser {
+    top: $header-height;
+    background: $multireddits-bg;
+    padding-right: 0;
+    @include shadow(1px 0 0 rgba(255, 255, 255, 0.8));
+
+    .grippy {
+      background: $main-bg url($main-bg-image) top left repeat;
+      border-left: none;
+      width: 10px;
+      border-right: solid 1px rgba(0, 0, 0, 0.2);
+      @include shadow(inset 1px 0 0 rgba(255, 255, 255, 0.9));
+
+      &::before,
+      &::after {
+        // can't find a good icon to replace the sidebar toggler so we'll hide it temporarily
+        display: none !important;
+      }
+    }
+
+    .intro {
+      border-top: solid 3px lighten($multireddits-intro-bg, 10%);
+      border-bottom: solid 3px lighten($multireddits-intro-bg, 10%);
+      padding: 10px 0;
+      color: $multireddits-intro-fg;
+      background: $multireddits-intro-bg;
+      @include shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.4));
+
+      > p {
+        margin-right: 10px;
+      }
+    }
+
+    li {
+      color: $multireddits-entry-fg;
+      border: solid 1px darken($multireddits-entry-bg, 10%);
+      margin-bottom: 5px;
+      @include linear-gradient(top, $multireddits-entry-bg, darken($multireddits-entry-bg, 5%));
+      @include shadow(inset 0 1px 0 lighten($multireddits-entry-bg, 14%), 0 2px 2px rgba(0, 0, 0, 0.4));
+
+      &.selected {
+        margin-right: 0;
+        color: $multireddits-selected-entry-fg;
+        @include linear-gradient(top, $multireddits-selected-entry-bg, darken($multireddits-selected-entry-bg, 5%));
+        @include shadow(inset 0 1px 0 lighten($multireddits-selected-entry-bg, 14%), 0 2px 2px rgba(0, 0, 0, 0.4));
+
+        &::before {
+          border-left-color: $multireddits-selected-color;
+        }
+      }
+
+      > a {
+        color: inherit;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        > .description {
+          color: darken($multireddits-entry-fg, 20%);
+        }
+      }
+    }
+
+    > .contents {
+      > h3 {
+        font-size: 1.2em;
+        margin-right: 13px;
+      }
+
+      > .multis {
+        > .create {
+          padding-bottom: 9px;
+          input[type=text] {
+            width: 93px;
+            border: none !important;
+            padding: 2px;
+            margin-bottom: 8px;
+            @include rounded(3px);
+            @include shadow(none);
+            @include shadow(inset 0 1px 2px rgba(0, 0, 0, 0.7));
+          }
+
+          button {
+            @extend %tn-button;
+            opacity: 1;
+            &:active {
+              @include shadow(inset 0 2px 2px darken($button-bg, 20%), 0 1px 0 lighten($multireddits-entry-bg, 16%));
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.multi-details {
+  > h1 > a,
+  > h2 > a {
+    color: $multireddits-title-fg;
+  }
+
+  > h1 {
+    display: block !important;
+    text-transform: uppercase;
+    > a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  > h2 {
+    font-weight: normal;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: solid 3px $horiz-line-color;
+  }
+
+  .settings > button,
+  .settings > .delete > button,
+  &.public .settings > .share-in-sr,
+  form.copy-multi button.copy,
+  form.rename-multi button.rename {
+    @extend %tn-default-button;
+    font-weight: bold;
+  }
+
+  form.rename-multi,
+  form.copy-multi,
+  .settings > .delete.confirm-button > .confirmation {
+    @extend %tn-form-group;
+    margin: 10px 0;
+    font-size: 0;
+    overflow: hidden;
+  }
+
+  .settings {
+    > .visibility-group {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    > .show-copy,
+    > .show-rename,
+    > .delete.confirm-button {
+      margin-right: 4px;
+    }
+
+    > .delete.confirm-button {
+      > .confirmation {
+        display: block;
+        text-align: right;
+
+        > .prompt,
+        > button {
+          font-size: $normal-font-size;
+        }
+
+        > .prompt {
+          color: $main-fg;
+          margin: 3px 0 0 0;
+          float: left;
+
+          &::first-letter {
+            text-transform: uppercase;
+          }
+        }
+
+        > button {
+          @extend %tn-button;
+          margin-left: 6px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  form.copy-multi,
+  form.rename-multi {
+    > .warning {
+      font-size: $normal-font-size;
+      color: $main-fg;
+      padding: 0;
+      margin: 0 0 5px 0;
+    }
+
+    button.copy,
+    button.rename {
+      opacity: 1;
+      margin-left: 5px;
+    }
+
+    button.copy,
+    button.rename,
+    .multi-name {
+      vertical-align: middle;
+    }
+  }
+}
+
+.side {
+  .titlebox.filtered-details {
+    margin-top: 0 !important;
+
+    > .usertext {
+      padding-top: 0 !important;
+    }
+  }
+
+  .subreddits {
+    margin-bottom: 10px;
+    > li {
+      margin-bottom: 3px;
+
+      > a,
+      > button.remove-sr {
+        line-height: 1.1em;
+        height: 1.1em;
+        font-size: 14px !important;
+      }
+
+      > button.remove-sr {
+        overflow: hidden;
+        width: 0.7em;
+        display: inline-block;
+        color: transparent;
+        text-indent: 0;
+        &::before {
+          color: $small-button-fg;
+          display: inline-block;
+          content: '\2715';
+          left: 4px;
+          top: 4px;
+        }
+      }
+    }
+  }
+
+  form.add-sr,
+  .subreddits {
+    margin-left: 0;
+  }
+
+  .recommend-box {
+    > .recs {
+      > .recommendations {
+        margin: 10px 0;
+        > .rec-item {
+          width: 145px;
+          background: none;
+          border: none;
+          margin: 0 2px 4px 0;
+          padding: 0;
+
+          > a {
+            width: 107px;
+          }
+
+          > a,
+          > button.add {
+            font-size: 13px;
+            line-height: 1.3em;
+            height: 1.3em;
+          }
+        }
+      }
+    }
+  }
+
+  form.add-sr > input.sr-name,
+  form.add-sr > button.add,
+  .recommend-box > .recs > .recommendations > .rec-item > a,
+  .recommend-box > .recs > .recommendations > .rec-item > button.add {
+    font-size: 13px;
+    line-height: 1.3em;
+    height: 1.3em;
+    @include box-sizing(content-box);
+  }
+
+  form.add-sr,
+  .recommend-box > .recs > .recommendations > .rec-item {
+    > button.add {
+      width: 1em;
+      text-indent: 0;
+
+      &::before,
+      &::after {
+        content: '';
+        background: lighten($small-button-fg, 10%);
+      }
+
+      &::before {
+        top: 6px;
+        bottom: 6px;
+        left: 10px;
+        width: 3px;
+      }
+
+      &::after {
+        left: 6px;
+        right: 6px;
+        top: 10px;
+        height: 3px;
+        width: auto;
+      }
+
+    }
+  }
+
+  form.add-sr > button.add,
+  .subreddits > li > a,
+  .subreddits > li > button.remove-sr,
+  .recommend-box > .recs > .recommendations > .rec-item > a,
+  .recommend-box > .recs > .recommendations > .rec-item > button.add {
+    @extend %tn-small-button;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 !important;
+    @include box-sizing(content-box);
+  }
+
+  form.add-sr > input.sr-name,
+  .subreddits > li > a,
+  .recommend-box > .recs > .recommendations > .rec-item > a {
+    padding: 3px 6px;
+    @include rounded(3px 0 0 3px);
+  }
+
+  form.add-sr > button.add,
+  .subreddits > li > button.remove-sr,
+  .recommend-box > .recs > .recommendations > .rec-item > button.add {
+    opacity: 1;
+    border-left: none;
+    overflow: hidden;
+    padding: 3px 5px;
+    display: inline-block;
+    position: relative;
+    @include rounded(0 3px 3px 0);
+
+    &::after,
+    &::before {
+      position: absolute;
+    }
+  }
+
+  form.add-sr > button.add {
+    color: transparent;
+  }
+}
+
+.subscription-box {
+  .title {
+    color: $sidebar-fg;
+  }
+
+  .box-separator {
+    @extend %tn-horiz-bar;
+    margin: 6px 0 8px 0;
+  }
+
+  li {
+    margin-bottom: 4px !important;
+  }
+}
+
+%tn-bubble {
+  background: $notice-bubble-bg;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  padding: 10px 15px;
+  @include shadow(0 3px 5px rgba(0, 0, 0, 0.14));
+  @include rounded(4px);
+}
+
+.hover-bubble.multi-add-notice {
+  @extend %tn-bubble;
+
+  &.anchor-right::after {
+    border-left-color: $notice-bubble-bg;
+    right: -17px;
+  }
+
+  &.anchor-right::before {
+    border-left-color: rgba(0, 0, 0, 0.3);
+    right: -18px;
+  }
+}

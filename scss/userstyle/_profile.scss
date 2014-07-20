@@ -1,0 +1,36 @@
+.profile-page {
+  .RES-keyNav-activeElement {
+    background: none !important;
+  }
+
+  .server-seconds {
+    @extend %tn-info-box;
+  }
+
+  .expand-summary {
+    @extend %tn-button;
+    margin-top: 10px;
+  }
+
+  .titlebox {
+    > .bottom {
+      > img[src$="/mailgray.png"] {
+        display: none;
+      }
+
+      > a[href*="/compose/"] {
+        @extend %tn-small-button;
+        font-size: 13px;
+
+        &::before {
+          @extend %tn-icon;
+          content: '';
+          vertical-align: middle;
+          margin-right: 6px;
+          margin-top: -3px;
+          background-position: -32px -48px;
+        }
+      }
+    }
+  }
+}

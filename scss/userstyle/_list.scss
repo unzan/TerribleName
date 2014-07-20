@@ -1,0 +1,114 @@
+.organic-listing {
+  .nextprev {
+    margin: 10px;
+    .arrow {
+      text-align: center;
+      vertical-align: middle;
+
+      &.prev,
+      &.next {
+        @extend %tn-small-button;
+        //height: auto !important;
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-indent: -900px;
+        width: 20px;
+        height: 20px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 3px;
+        left: 6px;
+        border-top: solid 6px transparent;
+        border-bottom: solid 6px transparent;
+      }
+
+      &.prev {
+        border-right: none;
+        @include rounded(3px 0 0 3px);
+        &::before {
+          border-right: solid 5px $small-button-fg;
+          //content: '\25c2';
+        }
+      }
+
+      &.next {
+        border-left: none;
+        @include rounded(0 3px 3px 0);
+        &::before {
+          border-left: solid 5px $small-button-fg;
+          //content: '\25b8';
+        }
+      }
+    }
+  }
+
+  .link {
+    .title {
+      max-width: 93%;
+    }
+  }
+}
+
+.sr-interest-bar {
+  @extend %tn-special-entry;
+
+  > .bubble {
+    background: none;
+
+    &::after {
+      display: none;
+    }
+
+    > .caption {
+      > .subscribe {
+        background: none;
+        border: none;
+        font-weight: inherit;
+        color: inherit;
+        display: inline;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    > .query-box {
+      border: none;
+      > .query {
+        @extend %tn-input;
+      }
+    }
+
+    > .results {
+      border-top: none;
+    }
+  }
+}
+
+.trending-subreddits {
+  margin: 10px 0;
+
+  > .trending-subreddits-content {
+    padding-bottom: 3px;
+    > strong {
+      color: $main-fg;
+    }
+
+    li {
+      > a {
+        @extend %tn-small-button;
+      }
+    }
+
+    > .comments {
+      color: $list-entry-fg;
+    }
+  }
+}
+

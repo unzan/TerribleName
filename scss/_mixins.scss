@@ -1,24 +1,31 @@
 @mixin shadow($shadows...) {
-  -webkit-box-shadow: $shadows;
-  -moz-box-shadow: $shadows;
+  @if $vendor-prefixes > 1 {
+    -webkit-box-shadow: $shadows;
+    -moz-box-shadow: $shadows;
+  }
   box-shadow: $shadows;
 }
 
 @mixin rounded($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
+  @if $vendor-prefixes > 1 {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+  }
   border-radius: $radius;
 }
 
 @mixin linear-gradient($definition...) {
-  background: -webkit-linear-gradient($definition);
-  background: -moz-linear-gradient($definition);
-  background: -o-linear-gradient($definition);
+  @if $vendor-prefixes > 0 {
+    background: -webkit-linear-gradient($definition);
+    background: -moz-linear-gradient($definition);
+  }
   background: linear-gradient($definition);
 }
 
 @mixin box-sizing($value) {
-  -webkit-box-sizing: $value;
-  -moz-box-sizing: $value;
+  @if $vendor-prefixes > 1 {
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+  }
   box-sizing: $value;
 }

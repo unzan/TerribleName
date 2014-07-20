@@ -1,6 +1,6 @@
 .commentarea {
   border-top-color: darken($res-night-bg, 4%);
-  @include shadow(inset 0px 1px 0px lighten($res-night-bg, 8%));
+  @include shadow(inset 0 1px 0 lighten($res-night-bg, 8%));
   .comment {
     > .entry {
       > .noncollapsed {
@@ -39,13 +39,15 @@
   }
 
   .commentNavSortType {
-    @include rounded(0px);
-    &:nth-child(2) {
-      @include rounded(3px 0px 0px 3px);
+    @include rounded(0);
+    &:nth-of-type(1),
+    &:nth-of-type(10) {
+      @include rounded(3px 0 0 3px);
     }
 
+    &:nth-of-type(9),
     &:last-child {
-      @include rounded(0px 3px 3px 0px);
+      @include rounded(0 3px 3px 0);
     }
   }
 }

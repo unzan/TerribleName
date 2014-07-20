@@ -1,3 +1,8 @@
+%tn-list-entry-separator {
+  border-top: solid 1px darken($main-bg, 18%);
+  @include shadow(inset 0 1px 0 lighten($main-bg, 5%));
+}
+
 .wiki-page,
 .listing-page {
   > .content {
@@ -12,7 +17,7 @@
 
     > li {
       display: inline-block;
-      padding: 0px;
+      padding: 0;
 
       a,
       .redditSingleClick {
@@ -30,7 +35,7 @@
 
 .link {
   padding: 1.3em 0em;
-  margin: 0px;
+  margin: 0;
   position: relative;
 
   &.last-clicked {
@@ -40,11 +45,10 @@
 
   &.last-clicked:not(:first-child),
   &:not(:first-child) {
-    border-top: solid 1px rgba(0, 0, 0, 0.2);
-    @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.8));
+    @extend %tn-list-entry-separator;
   }
 
-  .author {
+  a.author {
     color: $link-fg;
     &.admin {
       color: $admin-tag-fg;
@@ -86,7 +90,7 @@
 }
 
 .wiki-page,
-.listing-page {
+.listing-page:not(.profile-page) {
   .linklisting {
     .thing {
       .flat-list.buttons {
@@ -128,7 +132,7 @@
 }
 
 .thumbnail {
-  width: 76px;
+  width: 76px !important;
   padding: 2px 4px;
   position: relative;
   font-size: 16px;
@@ -144,7 +148,7 @@
     color: $main-bg;
     font: normal 28px $serif;
     line-height: 1.4em;
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
     @include rounded(100%);
   }
 
@@ -175,8 +179,8 @@
   img {
     display: block;
     padding: 3px;
-    background: $white;
-    @include shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+    background: $thumbnail-bg;
+    @include shadow(0 1px 2px rgba(0, 0, 0, 0.3));
   }
 }
 
@@ -202,17 +206,26 @@
       content: 'dmin';
     }
   }
+
+  .submitter {
+    color: $submitter-tag-fg;
+    font-size: 0;
+    &::after {
+      font-size: $normal-font-size;
+      content: 'OP';
+    }
+  }
 }
 
 .nsfw-stamp {
   border: none;
-  margin: 0px 4px 0px 0px;
+  margin: 0 4px 0 0;
 
   acronym {
     display: inline-block;
-    font-size: 10px;
-    line-height: 1em;
-    padding: 3px 3px 3px 2px;
+    font-size: ($normal-font-size - 2);
+    //line-height: 1em;
+    padding: 0 3px;
     text-align: center;
     border: none !important;
     background: $nsfw-tag-bg;
@@ -227,11 +240,11 @@
   right: 14px;
   border: none !important;
   color: $report-tag-fg;
-  padding: 2px 4px 0px 4px;
+  padding: 2px 4px 0 4px;
   text-transform: uppercase;
   font-weight: bold;
   @include linear-gradient(top, $report-tag-bg, darken($report-tag-bg, 7%));
-  @include shadow(0px 1px 0px rgba(255, 255, 255, 0.8), inset 0px 1px 2px rgba(0, 0, 0, 0.2));
+  @include shadow(0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2));
   @include rounded(2px);
 }
 
@@ -272,17 +285,6 @@
   }
 }
 
-.nav-buttons {
-  padding: 1em 0em;
-
-  .nextprev {
-    color: $main-fg;
-    > a {
-      @extend %tn-small-button;
-    }
-  }
-}
-
 .organic-listing {
   background-color: transparent !important;
   border: none !important;
@@ -292,28 +294,35 @@
   }
 }
 
-
-.link.promotedlink.promoted {
+%tn-special-entry {
   position: relative;
-  background-color: $sponsored-bg !important;
-  border: solid 1px rgba(0, 0, 0, 0.2);
+  background-color: $special-entry-bg !important;
+  color: $special-entry-fg;
+  border: solid 1px rgba(0, 0, 0, 0.2) !important;
   padding: 1.3em 0.6em 1.3em 0em;
   margin-bottom: 5px;
   @include rounded(3px);
-  @include shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.7), 0px 1px 2px rgba(0, 0, 0, 0.1));
+  @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.1));
+}
 
+.organic-listing .link,
+.link.promotedlink.promoted {
+  @extend %tn-special-entry;
+}
+
+.link.promotedlink.promoted {
   > .entry {
     > .sponsored-tagline {
       bottom: 10px;
       right: -5px;
       background: $sponsored-tag-bg;
+      color: inherit;
       padding: 4px 10px;
       border: solid 1px rgba(0, 0, 0, 0.3);
       border-right: none;
       text-transform: capitalize;
-      color: $sponsored-fg;
-      @include shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.15), 0px 1px 0px rgba(255, 255, 255, 0.7));
-      @include rounded(3px 0px 0px 3px);
+      @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.7));
+      @include rounded(3px 0 0 3px);
     }
   }
 }

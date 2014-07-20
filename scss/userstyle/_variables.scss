@@ -1,0 +1,25 @@
+@import "../variables";
+@import "embedded_images";
+
+$accent: $orange;
+
+$nsfw-tag-bg: $accent;
+$button-bg: $accent;
+$res-active-element-color: rgba($accent, 0.5);
+
+$multireddits-bg: rgba(0, 0, 0, 0.9);
+$multireddits-grippy-bg: none;
+$multireddits-intro-bg: rgba($yellow, 0.4);
+$multireddits-intro-fg: $menu-bar-fg;
+$multireddits-selected-color: $accent;
+$multireddits-entry-bg: $menu-bar-bg;
+$multireddits-entry-fg: $menu-bar-fg;
+$multireddits-selected-entry-bg: lighten($multireddits-entry-bg, 5%);
+$multireddits-selected-entry-fg: lighten($multireddits-entry-fg, 14%);
+$multireddits-title-bg: $bright-yellow;
+$multireddits-title-fg: lighten($main-fg, 20%);
+
+$explore-hot-color: $orange;
+$explore-discovery-color: $violet;
+$explore-rising-color: $green;
+$explore-comment-color: $blue;

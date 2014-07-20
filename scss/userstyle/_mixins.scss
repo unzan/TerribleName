@@ -1,0 +1,17 @@
+@mixin shadow($shadows...) {
+  box-shadow: $shadows;
+}
+
+@mixin rounded($radius) {
+  border-radius: $radius;
+}
+
+@mixin linear-gradient($definition...) {
+  background: -webkit-linear-gradient($definition);
+  background: -moz-linear-gradient($definition);
+  background: linear-gradient($definition);
+}
+
+@mixin box-sizing($value) {
+  box-sizing: $value;
+}
