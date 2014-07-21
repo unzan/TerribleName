@@ -971,6 +971,7 @@ input[type=password] {
 }
 
 .link .flat-list.buttons {
+  display: block;
   margin-top: 9px;
 }
 .link .flat-list.buttons > li {
@@ -1378,6 +1379,9 @@ input[type=password] {
 .comment .midcol {
   width: 16px;
 }
+.comment .child {
+  margin-top: 0;
+}
 .comment > .entry {
   padding: 0;
 }
@@ -1397,7 +1401,19 @@ input[type=password] {
 }
 .comment > .entry .flat-list.buttons {
   display: block;
-  margin-top: 7px;
+  margin: 3px 0 0 4px;
+}
+.comment > .entry .flat-list.buttons > li.toggle > form > a,
+.comment > .entry .flat-list.buttons > li > a,
+.comment > .entry .flat-list.buttons > li > .toggle > .option.main,
+.comment > .entry .flat-list.buttons > .big-mod-buttons .pretty-button {
+  visibility: hidden;
+}
+.comment > .entry:hover .flat-list.buttons > li.toggle > form > a,
+.comment > .entry:hover .flat-list.buttons > li > a,
+.comment > .entry:hover .flat-list.buttons > li > .toggle > .option.active,
+.comment > .entry:hover .flat-list.buttons > .big-mod-buttons .pretty-button {
+  visibility: visible;
 }
 .comment.deleted > .entry > .noncollapsed > .usertext {
   display: none;
@@ -2074,6 +2090,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res .commentarea .comment {
   margin-bottom: 0 !important;
+  padding: 0 !important;
 }
 .res .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
   outline: dashed 1px rgba(203, 75, 22, 0.5);

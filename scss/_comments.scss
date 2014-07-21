@@ -66,6 +66,12 @@
     width: 16px;
   }
 
+  @if $hide-comment-links == yes {
+    .child {
+      margin-top: 0;
+    }
+  }
+
   > .entry {
     padding: 0;
 
@@ -95,9 +101,34 @@
       }
     }
 
-    .flat-list.buttons {
-      display: block;
-      margin-top: 7px;
+    @if $hide-comment-links == yes {
+      .flat-list.buttons {
+        display: block;
+        margin: 3px 0 0 4px;
+
+        > li.toggle > form > a,
+        > li > a,
+        > li > .toggle > .option.main,
+        > .big-mod-buttons .pretty-button {
+          visibility: hidden;
+        }
+      }
+
+      &:hover {
+        .flat-list.buttons {
+          > li.toggle > form > a,
+          > li > a,
+          > li > .toggle > .option.active,
+          > .big-mod-buttons .pretty-button {
+            visibility: visible;
+          }
+        }
+      }
+    } @else {
+      .flat-list.buttons {
+        display: block;
+        margin-top: 7px;
+      }
     }
   }
 

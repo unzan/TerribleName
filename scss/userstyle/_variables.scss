@@ -1,5 +1,13 @@
 @import "../variables";
-@import "embedded_images";
+
+// userstyles.org limit css size to ~100kb so we can't use
+// large embedded images
+//@import "embedded_images";
+$main-bg-image: 'http://i.imgur.com/l6K6XJU.jpg';
+$header-bg-image: 'http://i.imgur.com/kfumYVX.jpg';
+$icon-image: 'http://i.imgur.com/sYoF1Sw.png';
+$res-night-bg-image: 'http://i.imgur.com/aCGpwZK.jpg';
+$logo-image: 'http://i.imgur.com/1yRy1Sk.png';
 
 $accent: $orange;
 
