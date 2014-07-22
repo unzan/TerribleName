@@ -90,40 +90,15 @@
     }
   }
 
-  @if $show-line-num-in-codeblock == 0 {
+  @if $show-line-num-in-codeblock == yes {
+    pre {
+      @include box-with-line-num($line-num-fg, $line-num-bg);
+    }
+  } @else {
     pre {
       > code {
         border: solid 1px $codeblock-border-color;
         @include rounded(3px);
-      }
-    }
-  } @else {
-    pre {
-      position: relative;
-      background: $line-num-bg;
-      border: solid 1px $line-num-bg;
-      @include rounded(3px);
-
-      > code {
-        margin-left: 2.8em;
-      }
-
-      $nums: '';
-      @for $i from 1 to 999 {
-        $nums: '#{$nums}#{$i}  ';
-      }
-
-      &::before {
-        content: $nums;
-        position: absolute;
-        color: $line-num-fg;
-        left: 0;
-        top: 7px;
-        bottom: 7px;
-        width: 2.3em;
-        white-space: pre-wrap;
-        direction: rtl;
-        overflow: hidden;
       }
     }
   }

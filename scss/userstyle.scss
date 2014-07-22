@@ -2,7 +2,7 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @-moz-document domain("reddit.com") {
   @import "userstyle/variables";
-  @import "userstyle/mixins";
+  @import "mixins";
   @import "basic";
   @import "buttons";
   @import "form";

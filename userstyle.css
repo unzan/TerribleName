@@ -1447,9 +1447,6 @@
   .comment .midcol {
     width: 16px;
   }
-  .comment .child {
-    margin-top: 0;
-  }
   .comment > .entry {
     padding: 0;
   }
@@ -1469,19 +1466,7 @@
   }
   .comment > .entry .flat-list.buttons {
     display: block;
-    margin: 3px 0 0 4px;
-  }
-  .comment > .entry .flat-list.buttons > li.toggle > form > a,
-  .comment > .entry .flat-list.buttons > li > a,
-  .comment > .entry .flat-list.buttons > li > .toggle > .option.main,
-  .comment > .entry .flat-list.buttons > .big-mod-buttons .pretty-button {
-    visibility: hidden;
-  }
-  .comment > .entry:hover .flat-list.buttons > li.toggle > form > a,
-  .comment > .entry:hover .flat-list.buttons > li > a,
-  .comment > .entry:hover .flat-list.buttons > li > .toggle > .option.active,
-  .comment > .entry:hover .flat-list.buttons > .big-mod-buttons .pretty-button {
-    visibility: visible;
+    margin-top: 7px;
   }
   .comment.deleted > .entry > .noncollapsed > .usertext {
     display: none;
