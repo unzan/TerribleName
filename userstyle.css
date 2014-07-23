@@ -1096,12 +1096,14 @@
   .wiki-page .linklisting .thing .flat-list.buttons > li > .state-button,
   .wiki-page .linklisting .thing .flat-list.buttons > li > .flairselectbtn,
   .wiki-page .linklisting .thing .flat-list.buttons > li > .redditSingleClick,
+  .wiki-page .linklisting .thing .flat-list.buttons > li > .give-gold,
   .wiki-page .linklisting .thing .flat-list.buttons > .big-mod-buttons .pretty-button,
   .listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li.save-button > a,
   .listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .toggle,
   .listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .state-button,
   .listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .flairselectbtn,
   .listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .redditSingleClick,
+  .listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .give-gold,
   .listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > .big-mod-buttons .pretty-button {
     visibility: hidden;
   }
@@ -1114,12 +1116,14 @@
   .wiki-page .linklisting .thing:hover .flat-list.buttons > li > .state-button,
   .wiki-page .linklisting .thing:hover .flat-list.buttons > li > .flairselectbtn,
   .wiki-page .linklisting .thing:hover .flat-list.buttons > li > .redditSingleClick,
+  .wiki-page .linklisting .thing:hover .flat-list.buttons > li > .give-gold,
   .wiki-page .linklisting .thing:hover .flat-list.buttons > .big-mod-buttons .pretty-button,
   .listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li.save-button > a,
   .listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .toggle,
   .listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .state-button,
   .listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .flairselectbtn,
   .listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .redditSingleClick,
+  .listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .give-gold,
   .listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > .big-mod-buttons .pretty-button {
     visibility: visible;
   }
