@@ -936,6 +936,22 @@
   #sr-header-area .selected > a {
     color: #d1d1d1;
   }
+  #sr-header-area .drop-choices.srdrop {
+    background: #111111;
+    border: none;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  }
+  #sr-header-area .drop-choices.srdrop a.choice {
+    color: #848484;
+    padding: 3px 8px;
+  }
+  #sr-header-area .drop-choices.srdrop a.choice:hover {
+    color: white !important;
+    background: #cb4b16 !important;
+  }
+  #sr-header-area .drop-choices.srdrop a.choice.bottom-option {
+    border-top: solid 1px #202020;
+  }
 
   #sr-more-link {
     background: rgba(0, 0, 0, 0.5);
@@ -1008,23 +1024,6 @@
   .pagename.redditname > a:hover {
     color: #eaeaea;
     text-decoration: none;
-  }
-
-  .drop-choices.srdrop {
-    background: #111111;
-    border: none;
-    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
-  }
-  .drop-choices.srdrop a.choice {
-    color: #848484;
-    padding: 3px 8px;
-  }
-  .drop-choices.srdrop a.choice:hover {
-    color: white !important;
-    background: #cb4b16 !important;
-  }
-  .drop-choices.srdrop a.choice.bottom-option {
-    border-top: solid 1px #202020;
   }
 
   .link.last-clicked:not(:first-child), .link:not(:first-child), .messages-page > .content > .listing > .message {
@@ -2756,6 +2755,15 @@
   }
   .res .RESUserTag + .flair {
     margin-left: 3px;
+  }
+  .res #userTaggerToolTip {
+    height: 300px;
+  }
+  .res #userTaggerToolTip #userTaggerTag {
+    width: 170px !important;
+  }
+  .res #userTaggerToolTip #userTaggerSave {
+    border: none;
   }
   .res .link .RES-keyNav-activeElement {
     background: none !important;

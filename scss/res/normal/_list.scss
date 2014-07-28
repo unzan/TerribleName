@@ -2,6 +2,18 @@
   margin-left: 3px;
 }
 
+#userTaggerToolTip {
+  height: 300px;
+
+  #userTaggerTag {
+    width: 170px !important;
+  }
+
+  #userTaggerSave {
+    border: none;
+  }
+}
+
 .link {
   .RES-keyNav-activeElement {
     background: none !important;
