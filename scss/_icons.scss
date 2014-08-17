@@ -115,6 +115,7 @@
 
 .icon-menu {
   .reddit-edit,
+  .reddit-edited, // last edited comment. fucking reddit devs and their shitty naming system
   .moderator-mail,
   .reddit-moderators,
   .reddit-contributors,
@@ -138,6 +139,10 @@
 
   .reddit-edit::before {
     background-position: 0 -16px;
+  }
+
+  .reddit-edited::before {
+    background-position: -48px -32px;
   }
 
   .reddit-moderators::before {

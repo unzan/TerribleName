@@ -88,65 +88,63 @@
   font-weight: bold;
 }
 
-.side {
-  .fancy-toggle-button {
-    > .option {
+.fancy-toggle-button {
+  > .option {
+    &.add,
+    &.remove {
+      @extend %tn-button;
+      font-size: 13px;
+      margin: 0;
+
+      &.active {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    @if $subscribe-button-placement == header {
+      &.add {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
+        }
+      }
+
+      &.remove {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          @include linear-gradient(top, $unsubscribe-bg, darken($unsubscribe-bg, 6%));
+        }
+      }
+
       &.add,
       &.remove {
-        @extend %tn-button;
-        font-size: 13px;
-        margin: 0;
-
-        &.active {
-          display: inline-block;
-          vertical-align: middle;
+        &:active {
+          @include shadow(inset 0 2px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.3));
+        }
+      }
+    } @else {
+      &.add,
+      &.remove {
+        &,
+        &:active,
+        &:focus,
+        &:hover {
+          @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
         }
       }
 
-      @if $subscribe-button-placement == header {
-        &.add {
-          &,
-          &:hover,
-          &:focus,
-          &:active {
-            @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
-          }
-        }
-
-        &.remove {
-          &,
-          &:hover,
-          &:focus,
-          &:active {
-            @include linear-gradient(top, $unsubscribe-bg, darken($unsubscribe-bg, 6%));
-          }
-        }
-
-        &.add,
-        &.remove {
-          &:active {
-            @include shadow(inset 0 2px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.3));
-          }
-        }
-      } @else {
-        &.add,
-        &.remove {
-          &,
-          &:active,
-          &:focus,
-          &:hover {
-            @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
-          }
-        }
-
-        &.add:active,
-        &.remove,
-        &.remove:active {
-          @include shadow(inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7));
-        }
+      &.add:active,
+      &.remove,
+      &.remove:active {
+        @include shadow(inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7));
       }
-
     }
+
   }
 }
 

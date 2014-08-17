@@ -86,41 +86,6 @@
     margin: 7px 310px 7px 15px;
   }
 
-  .menuarea {
-    .flat-list {
-      overflow: hidden;
-      padding-bottom: 3px;
-      font-size: 14px;
-      text-transform: capitalize;
-
-      > li {
-        display: block;
-        float: left;
-
-        > a {
-          @extend %tn-switch-button;
-        }
-
-        &.selected {
-          > a {
-            @extend %tn-switch-button-active;
-          }
-        }
-
-        &:first-child > a {
-          @extend %tn-switch-button-round-left;
-        }
-
-        &:last-child > a {
-          @extend %tn-switch-button-round-right;
-        }
-
-        > .separator {
-          display: none;
-        }
-      }
-    }
-  }
 
   > .content {
     > .listing {

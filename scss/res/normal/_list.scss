@@ -14,14 +14,15 @@
   }
 }
 
-.link {
-  .RES-keyNav-activeElement {
-    background: none !important;
-    border-right: solid 4px $res-active-element-color;
-  }
-}
-
 .thing {
+  &.subreddit,
+  &.link {
+    .RES-keyNav-activeElement {
+      background: none !important;
+      border-right: solid 4px $res-active-element-color;
+    }
+  }
+
   .title.imgScanned.visited {
     color: $link-fg-visited;
   }

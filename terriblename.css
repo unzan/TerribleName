@@ -89,7 +89,7 @@ hr {
   color: #111111;
 }
 
-.side .fancy-toggle-button > .option.add, .side .fancy-toggle-button > .option.remove, .morelink a,
+.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a,
 .fancy-settings button,
 .usertext-edit button.save,
 .usertext-edit button.cancel,
@@ -124,7 +124,7 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
-.side .fancy-toggle-button > .option.add:visited, .side .fancy-toggle-button > .option.remove:visited, .morelink a:visited,
+.fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited,
 .fancy-settings button:visited,
 .usertext-edit button.save:visited,
 .usertext-edit button.cancel:visited,
@@ -139,7 +139,7 @@ input[type=submit]:visited, .res .RESshortcutside:visited,
 .res.res-nightmode input[type=submit]:visited {
   color: white;
 }
-.side .fancy-toggle-button > .option.add:hover, .side .fancy-toggle-button > .option.remove:hover, .morelink a:hover,
+.fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover,
 .fancy-settings button:hover,
 .usertext-edit button.save:hover,
 .usertext-edit button.cancel:hover,
@@ -151,7 +151,7 @@ button.btn:hover,
 input[type=submit]:hover, .res .RESshortcutside:hover,
 .res .RESDashboardToggle:hover, .res #BigEditor button:hover, .res #alert_message > input[type=button]:hover,
 .res.res-nightmode button:hover,
-.res.res-nightmode input[type=submit]:hover, .side .fancy-toggle-button > .option.add:focus, .side .fancy-toggle-button > .option.remove:focus, .morelink a:focus,
+.res.res-nightmode input[type=submit]:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus,
 .fancy-settings button:focus,
 .usertext-edit button.save:focus,
 .usertext-edit button.cancel:focus,
@@ -170,7 +170,7 @@ input[type=submit]:focus, .res .RESshortcutside:focus,
   background: -moz-linear-gradient(top, #e25418, #b44214);
   background: linear-gradient(top, #e25418, #b44214);
 }
-.side .fancy-toggle-button > .option.add:active, .side .fancy-toggle-button > .option.remove:active, .morelink a:active,
+.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active,
 .fancy-settings button:active,
 .usertext-edit button.save:active,
 .usertext-edit button.cancel:active,
@@ -288,25 +288,25 @@ input[type=submit]:active, .res .RESshortcutside:active,
   font-weight: bold;
 }
 
-.side .fancy-toggle-button > .option.add, .side .fancy-toggle-button > .option.remove {
+.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove {
   font-size: 13px;
   margin: 0;
 }
-.side .fancy-toggle-button > .option.add.active, .side .fancy-toggle-button > .option.remove.active {
+.fancy-toggle-button > .option.add.active, .fancy-toggle-button > .option.remove.active {
   display: inline-block;
   vertical-align: middle;
 }
-.side .fancy-toggle-button > .option.add, .side .fancy-toggle-button > .option.add:hover, .side .fancy-toggle-button > .option.add:focus, .side .fancy-toggle-button > .option.add:active {
+.fancy-toggle-button > .option.add, .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.add:active {
   background: -webkit-linear-gradient(top, #859900, #6a7a00);
   background: -moz-linear-gradient(top, #859900, #6a7a00);
   background: linear-gradient(top, #859900, #6a7a00);
 }
-.side .fancy-toggle-button > .option.remove, .side .fancy-toggle-button > .option.remove:hover, .side .fancy-toggle-button > .option.remove:focus, .side .fancy-toggle-button > .option.remove:active {
+.fancy-toggle-button > .option.remove, .fancy-toggle-button > .option.remove:hover, .fancy-toggle-button > .option.remove:focus, .fancy-toggle-button > .option.remove:active {
   background: -webkit-linear-gradient(top, #dc322f, #ca2522);
   background: -moz-linear-gradient(top, #dc322f, #ca2522);
   background: linear-gradient(top, #dc322f, #ca2522);
 }
-.side .fancy-toggle-button > .option.add:active, .side .fancy-toggle-button > .option.remove:active {
+.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active {
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -958,9 +958,14 @@ input[type=password] {
   text-decoration: none;
 }
 
-.link.last-clicked:not(:first-child), .link:not(:first-child) {
+.last-clicked.link:not(:first-child), .link:not(:first-child) {
   border-top: solid 1px #bcbcbc;
   box-shadow: inset 0 1px 0 #f7f7f7;
+}
+
+.link {
+  margin: 0;
+  position: relative;
 }
 
 .wiki-page > .content,
@@ -969,30 +974,8 @@ input[type=password] {
   margin-right: 330px;
 }
 
-.link .flat-list.buttons {
-  display: block;
-  margin-top: 9px;
-}
-.link .flat-list.buttons > li {
-  display: inline-block;
-  padding: 0;
-}
-.link .flat-list.buttons > li a,
-.link .flat-list.buttons > li .redditSingleClick {
-  padding: 2px 5px !important;
-  font-weight: bold;
-  border-radius: 3px;
-}
-.link .flat-list.buttons > li a:hover,
-.link .flat-list.buttons > li .redditSingleClick:hover {
-  text-decoration: none;
-  background: #cecece;
-}
-
 .link {
   padding: 1.3em 0em;
-  margin: 0;
-  position: relative;
 }
 .link.last-clicked {
   border: none;
@@ -1015,6 +998,25 @@ input[type=password] {
 .link .rank {
   display: none;
 }
+.link .flat-list.buttons {
+  display: block;
+  margin-top: 9px;
+}
+.link .flat-list.buttons a,
+.link .flat-list.buttons .redditSingleClick {
+  padding: 2px 5px !important;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.link .flat-list.buttons a:hover,
+.link .flat-list.buttons .redditSingleClick:hover {
+  text-decoration: none;
+  background: #cecece;
+}
+.link .flat-list.buttons > li {
+  display: inline-block;
+  padding: 0;
+}
 .link .flat-list.buttons > li.option.active {
   display: inline-block;
 }
@@ -1022,40 +1024,40 @@ input[type=password] {
   display: inline-block !important;
 }
 
-.wiki-page .linklisting .thing .flat-list.buttons > li.save-button > a,
-.wiki-page .linklisting .thing .flat-list.buttons > li > .toggle,
-.wiki-page .linklisting .thing .flat-list.buttons > li > .state-button,
-.wiki-page .linklisting .thing .flat-list.buttons > li > .flairselectbtn,
-.wiki-page .linklisting .thing .flat-list.buttons > li > .redditSingleClick,
-.wiki-page .linklisting .thing .flat-list.buttons > li > .give-gold,
-.wiki-page .linklisting .thing .flat-list.buttons > .big-mod-buttons .pretty-button,
-.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li.save-button > a,
-.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .toggle,
-.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .state-button,
-.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .flairselectbtn,
-.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .redditSingleClick,
-.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li > .give-gold,
-.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > .big-mod-buttons .pretty-button {
+.wiki-page .linklisting .link .flat-list.buttons > li.save-button > a,
+.wiki-page .linklisting .link .flat-list.buttons > li > .toggle,
+.wiki-page .linklisting .link .flat-list.buttons > li > .state-button,
+.wiki-page .linklisting .link .flat-list.buttons > li > .flairselectbtn,
+.wiki-page .linklisting .link .flat-list.buttons > li > .redditSingleClick,
+.wiki-page .linklisting .link .flat-list.buttons > li > .give-gold,
+.wiki-page .linklisting .link .flat-list.buttons > .big-mod-buttons .pretty-button,
+.listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li.save-button > a,
+.listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .toggle,
+.listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .state-button,
+.listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .flairselectbtn,
+.listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .redditSingleClick,
+.listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .give-gold,
+.listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > .big-mod-buttons .pretty-button {
   visibility: hidden;
 }
-.wiki-page .linklisting .thing .flat-list.buttons > li.option,
-.listing-page:not(.profile-page) .linklisting .thing .flat-list.buttons > li.option {
+.wiki-page .linklisting .link .flat-list.buttons > li.option,
+.listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li.option {
   display: none;
 }
-.wiki-page .linklisting .thing:hover .flat-list.buttons > li.save-button > a,
-.wiki-page .linklisting .thing:hover .flat-list.buttons > li > .toggle,
-.wiki-page .linklisting .thing:hover .flat-list.buttons > li > .state-button,
-.wiki-page .linklisting .thing:hover .flat-list.buttons > li > .flairselectbtn,
-.wiki-page .linklisting .thing:hover .flat-list.buttons > li > .redditSingleClick,
-.wiki-page .linklisting .thing:hover .flat-list.buttons > li > .give-gold,
-.wiki-page .linklisting .thing:hover .flat-list.buttons > .big-mod-buttons .pretty-button,
-.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li.save-button > a,
-.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .toggle,
-.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .state-button,
-.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .flairselectbtn,
-.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .redditSingleClick,
-.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > li > .give-gold,
-.listing-page:not(.profile-page) .linklisting .thing:hover .flat-list.buttons > .big-mod-buttons .pretty-button {
+.wiki-page .linklisting .link:hover .flat-list.buttons > li.save-button > a,
+.wiki-page .linklisting .link:hover .flat-list.buttons > li > .toggle,
+.wiki-page .linklisting .link:hover .flat-list.buttons > li > .state-button,
+.wiki-page .linklisting .link:hover .flat-list.buttons > li > .flairselectbtn,
+.wiki-page .linklisting .link:hover .flat-list.buttons > li > .redditSingleClick,
+.wiki-page .linklisting .link:hover .flat-list.buttons > li > .give-gold,
+.wiki-page .linklisting .link:hover .flat-list.buttons > .big-mod-buttons .pretty-button,
+.listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li.save-button > a,
+.listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .toggle,
+.listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .state-button,
+.listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .flairselectbtn,
+.listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .redditSingleClick,
+.listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .give-gold,
+.listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > .big-mod-buttons .pretty-button {
   visibility: visible;
 }
 
@@ -1590,6 +1592,7 @@ input[type=password] {
 .arrow.downmod:hover, .sidecontentbox .collapse-button, .tagline .userattrs .cakeday, #mail,
 #modmail,
 .gilded-icon::before, .icon-menu .reddit-edit::before,
+.icon-menu .reddit-edited::before,
 .icon-menu .moderator-mail::before,
 .icon-menu .reddit-moderators::before,
 .icon-menu .reddit-contributors::before,
@@ -1686,6 +1689,7 @@ input[type=password] {
 }
 
 .icon-menu .reddit-edit::before,
+.icon-menu .reddit-edited::before,
 .icon-menu .moderator-mail::before,
 .icon-menu .reddit-moderators::before,
 .icon-menu .reddit-contributors::before,
@@ -1705,6 +1709,9 @@ input[type=password] {
 }
 .icon-menu .reddit-edit::before {
   background-position: 0 -16px;
+}
+.icon-menu .reddit-edited::before {
+  background-position: -48px -32px;
 }
 .icon-menu .reddit-moderators::before {
   background-position: -16px -32px;
@@ -2002,7 +2009,7 @@ table.diff tbody .diff_header:not([id]) {
 .res #userTaggerToolTip #userTaggerSave {
   border: none;
 }
-.res .link .RES-keyNav-activeElement {
+.res .thing.subreddit .RES-keyNav-activeElement, .res .thing.link .RES-keyNav-activeElement {
   background: none !important;
   border-right: solid 4px rgba(203, 75, 22, 0.5);
 }

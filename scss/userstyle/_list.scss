@@ -112,3 +112,52 @@
   }
 }
 
+.menuarea {
+  .flat-list {
+    overflow: hidden;
+    padding-bottom: 3px;
+    font-size: 14px;
+    text-transform: capitalize;
+
+    > li {
+      display: block;
+      float: left;
+
+      > a {
+        @extend %tn-switch-button;
+      }
+
+      &.selected {
+        > a {
+          @extend %tn-switch-button-active;
+        }
+      }
+
+      &:first-child > a {
+        @extend %tn-switch-button-round-left;
+      }
+
+      &:last-child > a {
+        @extend %tn-switch-button-round-right;
+      }
+
+      > .separator {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.thing.subreddit {
+  @extend %tn-list-entry;
+  padding: 1em 0em 0.3em 0em;
+
+  .midcol {
+    margin-right: 10px;
+  }
+
+  .titlerow {
+    margin-bottom: 5px;
+  }
+}

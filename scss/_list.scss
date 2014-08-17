@@ -3,6 +3,21 @@
   @include shadow(inset 0 1px 0 lighten($main-bg, 5%));
 }
 
+%tn-list-entry {
+  margin: 0;
+  position: relative;
+
+  &.last-clicked:not(:first-child),
+  &:not(:first-child) {
+    @extend %tn-list-entry-separator;
+  }
+
+  .usertext .md {
+    @extend %tn-raised-box;
+  }
+
+}
+
 .wiki-page,
 .listing-page {
   > .content {
@@ -12,40 +27,12 @@
 }
 
 .link {
-  .flat-list.buttons {
-    display: block;
-    margin-top: 9px;
-    > li {
-      display: inline-block;
-      padding: 0;
-
-      a,
-      .redditSingleClick {
-        padding: 2px 5px !important;
-        font-weight: bold;
-        @include rounded(3px);
-        &:hover {
-          text-decoration: none;
-          background: $flat-list-hover-bg;
-        }
-      }
-    }
-  }
-}
-
-.link {
+  @extend %tn-list-entry;
   padding: 1.3em 0em;
-  margin: 0;
-  position: relative;
 
   &.last-clicked {
     border: none;
     overflow: visible;
-  }
-
-  &.last-clicked:not(:first-child),
-  &:not(:first-child) {
-    @extend %tn-list-entry-separator;
   }
 
   a.author {
@@ -70,7 +57,24 @@
   }
 
   .flat-list.buttons {
+    display: block;
+    margin-top: 9px;
+
+    a,
+    .redditSingleClick {
+      padding: 2px 5px !important;
+      font-weight: bold;
+      @include rounded(3px);
+      &:hover {
+        text-decoration: none;
+        background: $flat-list-hover-bg;
+      }
+    }
+
     > li {
+      display: inline-block;
+      padding: 0;
+
       &.option  {
         &.active {
           display: inline-block;
@@ -81,18 +85,15 @@
       &.first {
         display: inline-block !important;
       }
-    }
-  }
 
-  .usertext .md {
-    @extend %tn-raised-box;
+    }
   }
 }
 
 .wiki-page,
 .listing-page:not(.profile-page) {
   .linklisting {
-    .thing {
+    .link {
       .flat-list.buttons {
         > li.save-button > a,
         > li > .toggle,
