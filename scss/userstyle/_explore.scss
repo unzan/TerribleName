@@ -95,6 +95,7 @@
       > .fancy-toggle-button.toggle > .option.active,
       > .explore-feedback-dismiss {
         @extend %tn-small-button;
+        text-shadow: none;
         font-size: $normal-font-size;
         display: block;
         float: right;

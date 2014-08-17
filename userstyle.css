@@ -2250,6 +2250,7 @@
   }
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss {
+    text-shadow: none;
     font-size: 13px;
     display: block;
     float: right;
