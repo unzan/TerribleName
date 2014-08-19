@@ -89,7 +89,7 @@
     margin-bottom: 0 !important;
     padding: 0 !important;
 
-    > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
+    &.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-body {
       outline: dashed 1px $res-active-element-color;
     }
 

@@ -1359,7 +1359,7 @@ input[type=password] {
   margin-top: 9px;
 }
 
-.comment > .entry > .noncollapsed > .usertext {
+.comment.noncollapsed > .entry > .usertext {
   margin: 8px 2px 0 2px;
   padding: 3px;
   position: relative;
@@ -1369,7 +1369,7 @@ input[type=password] {
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.comment > .entry > .noncollapsed > .usertext::before {
+.comment.noncollapsed > .entry > .usertext::before {
   content: '';
   position: absolute;
   left: 20px;
@@ -1384,24 +1384,24 @@ input[type=password] {
 .comment .midcol {
   width: 16px;
 }
-.comment > .entry {
-  padding: 0;
-}
-.comment > .entry .score,
-.comment > .entry .collapsed {
+.comment .score, .comment.collapsed {
   font-size: 13px;
 }
-.comment > .entry > .noncollapsed {
+.comment.noncollapsed {
   display: inline-block;
 }
-.comment > .entry > .noncollapsed > .usertext.border > .usertext-body {
+.comment.noncollapsed > .entry {
+  padding: 0;
+  display: inline-block;
+}
+.comment.noncollapsed > .entry > .usertext.border > .usertext-body {
   background: rgba(255, 248, 220, 0.4);
   outline: dashed 1px rgba(0, 0, 0, 0.2);
 }
-.comment > .entry > .noncollapsed > .usertext > .usertext-body {
+.comment.noncollapsed > .entry > .usertext > .usertext-body {
   padding: 1px 8px;
 }
-.comment > .entry .flat-list.buttons {
+.comment.noncollapsed .flat-list.buttons {
   display: block;
   margin-top: 7px;
 }
@@ -2096,7 +2096,7 @@ table.diff tbody .diff_header:not([id]) {
   margin-bottom: 0 !important;
   padding: 0 !important;
 }
-.res .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
+.res .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-body {
   outline: dashed 1px rgba(203, 75, 22, 0.5);
 }
 .res .commentarea .comment .tagline {
@@ -2319,7 +2319,7 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 #444444;
 }
 .res.res-nightmode .infobar, .res.res-nightmode .unvotable-message,
-.res.res-nightmode .linkinfo, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
+.res.res-nightmode .linkinfo, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment.noncollapsed > .entry > .usertext, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
 .res.res-nightmode .RESDialogSmall.livePreview > h3 {
   border: none !important;
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
@@ -2598,23 +2598,23 @@ table.diff tbody .diff_header:not([id]) {
   border-top-color: #070707;
   box-shadow: inset 0 1px 0 #252525;
 }
-.res.res-nightmode .commentarea .comment > .entry > .noncollapsed > .usertext::before {
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry > .usertext::before {
   top: -7px;
   border-bottom-color: #252525;
 }
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed {
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement {
   background: none !important;
 }
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body,
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-edit > .livePreview {
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-body,
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-edit > .livePreview {
   background: none !important;
 }
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body > .md,
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-edit > .livePreview > .md {
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-body > .md,
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-edit > .livePreview > .md {
   background: none !important;
 }
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body > .md p,
-.res.res-nightmode .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-edit > .livePreview > .md p {
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-body > .md p,
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-edit > .livePreview > .md p {
   background: none !important;
 }
 .res.res-nightmode .commentarea .commentNavSortType {
