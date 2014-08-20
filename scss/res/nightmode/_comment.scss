@@ -2,8 +2,8 @@
   border-top-color: darken($res-night-bg, 4%);
   @include shadow(inset 0 1px 0 lighten($res-night-bg, 8%));
   .comment {
-    &.noncollapsed {
-      > .entry {
+    > .entry {
+      > .noncollapsed {
         > .usertext {
           @extend %tn-dark-raised-box;
           &::before {
@@ -11,8 +11,10 @@
             border-bottom-color: lighten($res-night-bg, 8%);
           }
         }
+      }
 
-        &.RES-keyNav-activeElement {
+      &.RES-keyNav-activeElement {
+        > .noncollapsed {
           background: none !important;
           > .usertext {
             > .usertext-body,

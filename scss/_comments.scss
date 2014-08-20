@@ -72,16 +72,15 @@
     }
   }
 
-  .score,
-  &.collapsed {
-    font-size: 13px;
-  }
+  > .entry {
+    padding: 0;
 
-  &.noncollapsed {
-    display: inline-block;
+    .score,
+    .collapsed {
+      font-size: 13px;
+    }
 
-    > .entry {
-      padding: 0;
+    > .noncollapsed {
       display: inline-block;
 
       > .usertext {

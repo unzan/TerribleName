@@ -21,10 +21,6 @@
     }
   }
 
-  .entry.RES-keyNav-activeElement {
-    background: none !important;
-  }
-
   &.message-parent,
   &.message-reply {
     > .entry {
@@ -39,7 +35,7 @@
   }
 
   &.new {
-    .entry {
+    > .entry {
       background: none;
       .head {
         color: $main-fg;
@@ -48,17 +44,21 @@
     }
   }
 
-  &.collapsed {
-    font-size: 13px;
-    .head {
-      color: $main-fg;
+  > .entry {
+    display: inline-block;
+
+    &.RES-keyNav-activeElement {
+      background: none !important;
     }
-  }
 
-  &.noncollapsed {
-    > .entry {
-      display: inline-block;
+    > .collapsed {
+      font-size: 13px;
+      > .head {
+        color: $main-fg;
+      }
+    }
 
+    > .noncollapsed {
       > .md,
       > .flat-list {
         margin-left: 0;
