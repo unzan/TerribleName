@@ -1427,7 +1427,7 @@
     margin-top: 9px;
   }
 
-  .comment > .entry > .noncollapsed > .usertext, .message > .entry > .noncollapsed > .md {
+  .comment.noncollapsed > .entry > .usertext, .message.noncollapsed > .entry > .md {
     margin: 8px 2px 0 2px;
     padding: 3px;
     position: relative;
@@ -1437,7 +1437,7 @@
     border-radius: 3px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
-  .comment > .entry > .noncollapsed > .usertext::before, .message > .entry > .noncollapsed > .md::before {
+  .comment.noncollapsed > .entry > .usertext::before, .message.noncollapsed > .entry > .md::before {
     content: '';
     position: absolute;
     left: 20px;
@@ -1452,24 +1452,24 @@
   .comment .midcol {
     width: 16px;
   }
-  .comment > .entry {
-    padding: 0;
-  }
-  .comment > .entry .score,
-  .comment > .entry .collapsed {
+  .comment .score, .comment.collapsed {
     font-size: 13px;
   }
-  .comment > .entry > .noncollapsed {
+  .comment.noncollapsed {
     display: inline-block;
   }
-  .comment > .entry > .noncollapsed > .usertext.border > .usertext-body {
+  .comment.noncollapsed > .entry {
+    padding: 0;
+    display: inline-block;
+  }
+  .comment.noncollapsed > .entry > .usertext.border > .usertext-body {
     background: rgba(255, 248, 220, 0.4);
     outline: dashed 1px rgba(0, 0, 0, 0.2);
   }
-  .comment > .entry > .noncollapsed > .usertext > .usertext-body {
+  .comment.noncollapsed > .entry > .usertext > .usertext-body {
     padding: 1px 8px;
   }
-  .comment > .entry .flat-list.buttons {
+  .comment.noncollapsed .flat-list.buttons {
     display: block;
     margin-top: 7px;
   }
@@ -2642,6 +2642,9 @@
     font-size: 1em;
     margin: 8px 3px 8px 0;
   }
+  .message .entry.RES-keyNav-activeElement {
+    background: none !important;
+  }
   .message.message-parent > .entry, .message.message-reply > .entry {
     border-left: none;
   }
@@ -2651,35 +2654,32 @@
   .message.message-parent > .entry > .noncollapsed > .tagline, .message.message-reply > .entry > .noncollapsed > .tagline {
     color: inherit;
   }
-  .message.new > .entry {
+  .message.new .entry {
     background: none;
   }
-  .message.new > .entry .head {
+  .message.new .entry .head {
     color: #111111;
     font-weight: normal;
   }
-  .message > .entry {
-    display: inline-block;
-  }
-  .message > .entry.RES-keyNav-activeElement {
-    background: none !important;
-  }
-  .message > .entry > .collapsed {
+  .message.collapsed {
     font-size: 13px;
   }
-  .message > .entry > .collapsed > .head {
+  .message.collapsed .head {
     color: #111111;
   }
-  .message > .entry > .noncollapsed > .md,
-  .message > .entry > .noncollapsed > .flat-list {
+  .message.noncollapsed > .entry {
+    display: inline-block;
+  }
+  .message.noncollapsed > .entry > .md,
+  .message.noncollapsed > .entry > .flat-list {
     margin-left: 0;
   }
-  .message > .entry > .noncollapsed > .md {
+  .message.noncollapsed > .entry > .md {
     padding: 4px 10px;
     margin-bottom: 5px;
     overflow: visible;
   }
-  .message > .entry > .noncollapsed > .tagline {
+  .message.noncollapsed > .entry > .tagline {
     margin-bottom: 10px;
     color: #111111;
   }
@@ -2879,7 +2879,7 @@
     margin-bottom: 0 !important;
     padding: 0 !important;
   }
-  .res .commentarea .comment > .entry.RES-keyNav-activeElement > .noncollapsed > .usertext > .usertext-body {
+  .res .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-body {
     outline: dashed 1px rgba(203, 75, 22, 0.5);
   }
   .res .commentarea .comment .tagline {
