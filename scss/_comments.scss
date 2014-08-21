@@ -66,6 +66,10 @@
     width: 16px;
   }
 
+  .child > .usertext {
+    margin-left: 20px;
+  }
+
   @if $hide-comment-links == yes {
     .child {
       margin-top: 0;
@@ -78,25 +82,28 @@
   }
 
   &.noncollapsed {
-    display: inline-block;
+    display: block;
 
     > .entry {
       padding: 0;
       display: inline-block;
+      max-width: 95%;
+      overflow: visible;
 
       > .usertext {
-        @extend %tn-comment-bubble;
+        display: block;
 
         // single comment thread. god knows why it's called .border
-        &.border {
-          > .usertext-body {
-            background: $highlighted-comment-bg;
-            outline: dashed 1px $highlighted-comment-outline-color;
-          }
+        &.border > .usertext-body > .md {
+          background: $highlighted-comment-bg;
+          outline: dashed 1px $highlighted-comment-outline-color;
         }
 
         > .usertext-body {
-          padding: 1px 8px;
+          @extend %tn-comment-bubble;
+          > .md {
+            padding: 1px 8px;
+          }
         }
 
       }

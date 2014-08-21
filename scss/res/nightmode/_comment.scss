@@ -4,7 +4,7 @@
   .comment {
     &.noncollapsed {
       > .entry {
-        > .usertext {
+        > .usertext > .usertext-body {
           @extend %tn-dark-raised-box;
           &::before {
             top: -7px;
@@ -15,9 +15,12 @@
         &.RES-keyNav-activeElement {
           background: none !important;
           > .usertext {
-            > .usertext-body,
             > .usertext-edit > .livePreview {
               background: none !important;
+            }
+
+            > .usertext-body,
+            > .usertext-edit > .livePreview {
               > .md {
                 background: none !important;
                 p {

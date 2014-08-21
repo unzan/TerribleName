@@ -59,9 +59,12 @@
 .commentarea {
   .RES-keyNav-activeElement {
     background: none !important;
-    &.entry .noncollapsed,
     .md {
       background: none !important;
+    }
+
+    .usertext.border > .usertext-body > .md {
+      background: $highlighted-comment-bg !important;
     }
   }
 
@@ -89,7 +92,7 @@
     margin-bottom: 0 !important;
     padding: 0 !important;
 
-    &.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-body {
+    &.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-body > .md {
       outline: dashed 1px $res-active-element-color;
     }
 
