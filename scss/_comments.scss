@@ -108,41 +108,41 @@
         }
 
       }
-    }
 
-    @if $hide-comment-links == yes {
-      .flat-list.buttons {
-        display: block;
-        margin: 3px 0 0 4px;
-
-        > li.toggle > form > a,
-        > li > a,
-        > li > .toggle > .option.main,
-        > .big-mod-buttons .pretty-button {
-          visibility: hidden;
-        }
-      }
-
-      &:hover {
+      @if $hide-comment-links == yes {
         .flat-list.buttons {
+          display: block;
+          margin: 3px 0 0 4px;
+
           > li.toggle > form > a,
           > li > a,
-          > li > .toggle > .option.active,
+          > li > .toggle > .option.main,
           > .big-mod-buttons .pretty-button {
-            visibility: visible;
+            visibility: hidden;
           }
         }
-      }
-    } @else {
-      .flat-list.buttons {
-        display: block;
-        margin-top: 7px;
+
+        &:hover {
+          .flat-list.buttons {
+            > li.toggle > form > a,
+            > li > a,
+            > li > .toggle > .option.active,
+            > .big-mod-buttons .pretty-button {
+              visibility: visible;
+            }
+          }
+        }
+      } @else {
+        .flat-list.buttons {
+          display: block;
+          margin-top: 7px;
+        }
       }
     }
   }
 
 
-  &.deleted > .entry > .noncollapsed > .usertext {
+  &.deleted .usertext-body {
     display: none;
   }
 }

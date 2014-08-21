@@ -12,8 +12,11 @@
     @extend %tn-list-entry-separator;
   }
 
-  .usertext .md {
-    @extend %tn-raised-box;
+  .usertext {
+    padding-right: 15px;
+    .md {
+      @extend %tn-raised-box;
+    }
   }
 
 }

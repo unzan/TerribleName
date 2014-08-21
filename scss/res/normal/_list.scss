@@ -17,9 +17,12 @@
 .thing {
   &.subreddit,
   &.link {
-    .RES-keyNav-activeElement {
-      background: none !important;
-      border-right: solid 4px $res-active-element-color;
+    .entry {
+      border-right: solid 4px transparent;
+      &.RES-keyNav-activeElement {
+        background: none !important;
+        border-right-color: $res-active-element-color;
+      }
     }
   }
 

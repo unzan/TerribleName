@@ -967,6 +967,9 @@ input[type=password] {
   margin: 0;
   position: relative;
 }
+.link .usertext {
+  padding-right: 15px;
+}
 
 .wiki-page > .content,
 .listing-page > .content {
@@ -1413,11 +1416,11 @@ input[type=password] {
 .comment.noncollapsed > .entry > .usertext > .usertext-body > .md {
   padding: 1px 8px;
 }
-.comment.noncollapsed .flat-list.buttons {
+.comment.noncollapsed > .entry .flat-list.buttons {
   display: block;
   margin-top: 7px;
 }
-.comment.deleted > .entry > .noncollapsed > .usertext {
+.comment.deleted .usertext-body {
   display: none;
 }
 
@@ -2021,9 +2024,12 @@ table.diff tbody .diff_header:not([id]) {
 .res #userTaggerToolTip #userTaggerSave {
   border: none;
 }
-.res .thing.subreddit .RES-keyNav-activeElement, .res .thing.link .RES-keyNav-activeElement {
+.res .thing.subreddit .entry, .res .thing.link .entry {
+  border-right: solid 4px transparent;
+}
+.res .thing.subreddit .entry.RES-keyNav-activeElement, .res .thing.link .entry.RES-keyNav-activeElement {
   background: none !important;
-  border-right: solid 4px rgba(203, 75, 22, 0.5);
+  border-right-color: rgba(203, 75, 22, 0.5);
 }
 .res .thing .title.imgScanned.visited {
   color: #5358ba;
