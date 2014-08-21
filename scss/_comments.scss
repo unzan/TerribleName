@@ -141,8 +141,7 @@
     }
   }
 
-
-  &.deleted .usertext-body {
+  &.deleted > .entry > .usertext > .usertext-body {
     display: none;
   }
 }

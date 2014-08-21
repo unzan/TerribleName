@@ -1488,7 +1488,7 @@
     display: block;
     margin-top: 7px;
   }
-  .comment.deleted .usertext-body {
+  .comment.deleted > .entry > .usertext > .usertext-body {
     display: none;
   }
 
