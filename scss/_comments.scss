@@ -101,6 +101,7 @@
 
         > .usertext-body {
           @extend %tn-comment-bubble;
+          max-width: $max-comment-width;
           > .md {
             padding: 1px 8px;
           }

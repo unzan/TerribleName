@@ -1318,6 +1318,7 @@
 
   .md {
     line-height: 1.5em;
+    max-width: none;
   }
   .md h1,
   .md h2,
@@ -1473,6 +1474,9 @@
   .comment.noncollapsed > .entry > .usertext.border > .usertext-body > .md {
     background: rgba(255, 248, 220, 0.4);
     outline: dashed 1px rgba(0, 0, 0, 0.2);
+  }
+  .comment.noncollapsed > .entry > .usertext > .usertext-body {
+    max-width: 63em;
   }
   .comment.noncollapsed > .entry > .usertext > .usertext-body > .md {
     padding: 1px 8px;
@@ -2685,6 +2689,7 @@
   .message.noncollapsed > .entry > .md {
     padding: 4px 10px;
     margin-bottom: 5px;
+    max-width: 63em;
     overflow: visible;
   }
   .message.noncollapsed > .entry > .tagline {
