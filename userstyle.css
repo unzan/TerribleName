@@ -1453,6 +1453,9 @@
     border-bottom: solid 8px white;
   }
 
+  .comment.spam .child {
+    background-color: transparent;
+  }
   .comment .midcol {
     width: 16px;
   }
