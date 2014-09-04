@@ -37,7 +37,9 @@ input[type=password] {
 }
 
 .infobar,
-.linkinfo {
+.linkinfo,
+.report-form,
+.flat-list > .report-reasons {
   @extend %tn-dark-raised-box;
 }
 

@@ -2362,7 +2362,9 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 #444444;
 }
 .res.res-nightmode .infobar, .res.res-nightmode .unvotable-message,
-.res.res-nightmode .linkinfo, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment.noncollapsed > .entry > .usertext > .usertext-body, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
+.res.res-nightmode .linkinfo,
+.res.res-nightmode .report-form,
+.res.res-nightmode .flat-list > .report-reasons, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment.noncollapsed > .entry > .usertext > .usertext-body, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
 .res.res-nightmode .RESDialogSmall.livePreview > h3 {
   border: none !important;
   background: -webkit-linear-gradient(top, #252525, #1e1e1e);
