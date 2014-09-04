@@ -469,3 +469,8 @@ input[type=password] {
     margin-top: 10px;
   }
 }
+
+.report-form {
+  @extend %tn-info-box;
+  padding: 8px;
+}

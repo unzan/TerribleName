@@ -394,7 +394,7 @@ input[type=submit] {
   color: #111111;
 }
 
-.infobar, .unvotable-message, .linkinfo,
+.infobar, .unvotable-message, .report-form, .linkinfo,
 .content.submit .info-notice {
   background: cornsilk;
   border: solid 1px #aaaaaa;
@@ -793,6 +793,10 @@ input[type=password] {
   margin-top: 10px;
 }
 
+.report-form {
+  padding: 8px;
+}
+
 #header {
   background: #111111 url("%%banner%%") 0 0 no-repeat;
   color: #c6c6c6;
@@ -1033,6 +1037,7 @@ input[type=password] {
 .wiki-page .linklisting .link .flat-list.buttons > li > .flairselectbtn,
 .wiki-page .linklisting .link .flat-list.buttons > li > .redditSingleClick,
 .wiki-page .linklisting .link .flat-list.buttons > li > .give-gold,
+.wiki-page .linklisting .link .flat-list.buttons > .report-button > .report-thing,
 .wiki-page .linklisting .link .flat-list.buttons > .big-mod-buttons .pretty-button,
 .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li.save-button > a,
 .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .toggle,
@@ -1040,6 +1045,7 @@ input[type=password] {
 .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .flairselectbtn,
 .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .redditSingleClick,
 .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .give-gold,
+.listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > .report-button > .report-thing,
 .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > .big-mod-buttons .pretty-button {
   visibility: hidden;
 }
@@ -1053,6 +1059,7 @@ input[type=password] {
 .wiki-page .linklisting .link:hover .flat-list.buttons > li > .flairselectbtn,
 .wiki-page .linklisting .link:hover .flat-list.buttons > li > .redditSingleClick,
 .wiki-page .linklisting .link:hover .flat-list.buttons > li > .give-gold,
+.wiki-page .linklisting .link:hover .flat-list.buttons > .report-button > .report-thing,
 .wiki-page .linklisting .link:hover .flat-list.buttons > .big-mod-buttons .pretty-button,
 .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li.save-button > a,
 .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .toggle,
@@ -1060,6 +1067,7 @@ input[type=password] {
 .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .flairselectbtn,
 .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .redditSingleClick,
 .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .give-gold,
+.listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > .report-button > .report-thing,
 .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > .big-mod-buttons .pretty-button {
   visibility: visible;
 }
