@@ -470,7 +470,19 @@ input[type=password] {
   }
 }
 
-.report-form {
+.report-form,
+.flat-list > .report-reasons {
   @extend %tn-info-box;
+  border-color: $default-border-color !important;
   padding: 8px;
+}
+
+.report-reasons {
+  counter-reset: report;
+  font-size: $normal-font-size;
+
+  > .report-reason::before {
+    counter-increment: report;
+    content: counter(report) ". ";
+  }
 }

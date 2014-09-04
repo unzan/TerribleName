@@ -459,7 +459,8 @@
     color: #111111;
   }
 
-  .infobar, .unvotable-message, .report-form, .linkinfo,
+  .infobar, .unvotable-message, .report-form,
+  .flat-list > .report-reasons, .linkinfo,
   .content.submit .info-notice, .profile-page .server-seconds {
     background: cornsilk;
     border: solid 1px #aaaaaa;
@@ -861,8 +862,19 @@
     margin-top: 10px;
   }
 
-  .report-form {
+  .report-form,
+  .flat-list > .report-reasons {
+    border-color: #aaaaaa !important;
     padding: 8px;
+  }
+
+  .report-reasons {
+    counter-reset: report;
+    font-size: 13px;
+  }
+  .report-reasons > .report-reason::before {
+    counter-increment: report;
+    content: counter(report) ". ";
   }
 
   #header {
