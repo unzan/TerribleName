@@ -25,17 +25,17 @@
     clear: both;
 
     > .usertext-edit {
-      width: 660px;
+      width: $comment-textbox-width + 10;
       textarea {
-        width: 650px;
+        width: $comment-textbox-width;
       }
     }
+  }
 
-    .bottom-area {
-      > .help-toggle,
-      > .reddiquette {
-        margin-top: 9px;
-      }
+  .bottom-area {
+    > .help-toggle,
+    > .reddiquette {
+      margin-top: 9px;
     }
   }
 }

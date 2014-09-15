@@ -702,7 +702,7 @@
   .menuarea .spacer {
     display: block;
     float: left;
-    margin: 0 5px 0 0;
+    margin: 0 5px 0 0 !important;
   }
   .menuarea .spacer:first-child {
     position: relative;
@@ -1446,8 +1446,8 @@
   .commentarea > .usertext > .usertext-edit textarea {
     width: 650px;
   }
-  .commentarea > .usertext .bottom-area > .help-toggle,
-  .commentarea > .usertext .bottom-area > .reddiquette {
+  .commentarea .bottom-area > .help-toggle,
+  .commentarea .bottom-area > .reddiquette {
     margin-top: 9px;
   }
 
@@ -2861,7 +2861,7 @@
   .res #REScommentNavToggle {
     clear: both;
     display: block;
-    margin-top: 5px;
+    padding-top: 5px;
     white-space: nowrap;
   }
   .res #REScommentNavToggle > span:not(:first-child) {
@@ -2876,13 +2876,14 @@
   .res .commentNavSortType:nth-of-type(8) + span {
     display: block !important;
     clear: left;
+    font-size: 0;
     text-indent: -20em;
   }
   .res .commentNavSortType:nth-of-type(-n+8) {
     margin-bottom: 3px;
   }
   .res .commentNavSortType:nth-of-type(9) {
-    margin-left: 6.3em;
+    margin-left: 6.8em;
   }
   .res .commentNavSortType:nth-of-type(1), .res .commentNavSortType:nth-of-type(9) {
     border-radius: 3px 0 0 3px;
@@ -2949,6 +2950,7 @@
   .res #BigEditor .RESCloseButton,
   .res .markdownEditor .RESMacroDropdownTitle,
   .res .markdownEditor > a.edit-btn {
+    font-size: 0 !important;
     width: 16px;
     height: 16px;
     display: block;
@@ -2985,6 +2987,9 @@
     left: 3px;
     background-position: -16px -48px;
   }
+  .res .bottom-area > .help-toggle {
+    margin-right: 10px;
+  }
   .res.wiki-page button.RESBigEditorPop {
     position: absolute;
     float: none;
@@ -2994,6 +2999,16 @@
   .res.wiki-page .wiki-page-content > #editform > div > .markdownEditor > .RESCharCounter {
     margin-right: 30px;
   }
+  .res .commentingAs,
+  .res .RESMacroWrappingSpan {
+    margin-top: 4px;
+  }
+  .res .RESMacroWrappingSpan {
+    float: right;
+  }
+  .res .markdownEditor-wrapper {
+    width: auto;
+  }
   .res .markdownEditor {
     overflow: hidden;
     padding: 2px;
@@ -3001,34 +3016,34 @@
   .res .markdownEditor > a.edit-btn {
     float: left;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(1)::before {
+  .res .markdownEditor > a.edit-btn.btn-bold::before {
     background-position: -80px -64px;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(2)::before {
+  .res .markdownEditor > a.edit-btn.btn-italic::before {
     background-position: -80px -16px;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(3)::before {
+  .res .markdownEditor > a.edit-btn.btn-strike::before {
     background-position: -48px -64px;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(4)::before {
+  .res .markdownEditor > a.edit-btn.btn-superscript::before {
     background-position: -32px -64px;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(5)::before {
+  .res .markdownEditor > a.edit-btn.btn-link::before {
     background-position: -64px 0;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(6)::before {
+  .res .markdownEditor > a.edit-btn.btn-quote::before {
     background-position: -64px -64px;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(7)::before {
+  .res .markdownEditor > a.edit-btn.btn-code::before {
     background-position: -80px -48px;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(8)::before {
+  .res .markdownEditor > a.edit-btn.btn-list-unordered::before {
     background-position: -16px -64px;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(9)::before {
+  .res .markdownEditor > a.edit-btn.btn-list-ordered::before {
     background-position: -80px 0;
   }
-  .res .markdownEditor > a.edit-btn:nth-child(10)::before {
+  .res .markdownEditor > a.edit-btn.btn-table::before {
     background-position: 0 0;
   }
   .res .RESDialogSmall.livePreview {
@@ -3078,11 +3093,7 @@
     top: 10px;
     right: 8px;
     padding: 0;
-    padding-bottom: 100px;
-  }
-  .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents .commentingAs,
-  .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents .RESMacroWrappingSpan {
-    margin-top: 4px;
+    padding-bottom: 100px !important;
   }
   .res #BigEditor > .RESDialogSmall.BERight > .RESDialogContents {
     top: 40px;

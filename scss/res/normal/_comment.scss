@@ -5,7 +5,7 @@
 #REScommentNavToggle {
   clear: both;
   display: block;
-  margin-top: 5px;
+  padding-top: 5px;
   white-space: nowrap;
 }
 
@@ -24,6 +24,7 @@
     + span {
       display: block !important;
       clear: left;
+      font-size: 0;
       text-indent: -20em;
     }
   }
@@ -33,7 +34,7 @@
   }
 
   &:nth-of-type(9) {
-    margin-left: 6.3em;
+    margin-left: 6.8em;
   }
 
   &:nth-of-type(1),
@@ -118,7 +119,7 @@
   }
 
   > .usertext > .usertext-edit textarea {
-    width: 660px;
+    width: $comment-textbox-width + 10;
   }
 }
 
