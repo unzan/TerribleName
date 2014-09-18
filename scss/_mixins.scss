@@ -58,3 +58,17 @@
     overflow: hidden;
   }
 }
+
+@mixin transform($definition...) {
+  @if $vendor-prefixes > 1 {
+    -webkit-transform: $definition;
+    -moz-transform: $definition;
+  }
+  transform: $definition;
+}
+
+@mixin transform-origin($definition) {
+  -webkit-transform-origin: $definition;
+  -moz-transform-origin: $definition;
+  transform-origin: $definition;
+}

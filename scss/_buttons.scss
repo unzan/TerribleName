@@ -168,11 +168,50 @@
   }
 }
 
-.submit.disabled > .morelink > a {
-  color: $button-disabled-fg;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
-  @include shadow(0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2));
-  @include linear-gradient(top, $button-disabled-bg, darken($button-disabled-bg, 7%));
+.submit {
+  &.disabled > .morelink > a {
+    color: $button-disabled-fg;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    @include shadow(0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2));
+    @include linear-gradient(top, $button-disabled-bg, darken($button-disabled-bg, 7%));
+  }
+
+  &.mod-override > .morelink {
+    > a {
+      padding-left: 30px;
+      &::after {
+        @extend %tn-icon;
+        background-position: -16px -32px;
+        left: 3px;
+        top: 1px;
+        opacity: 0.6;
+      }
+
+      &::before {
+        @extend %tn-tooltip;
+        display: none;
+        content: 'Only available to moderator';
+        position: absolute;
+        font-weight: normal;
+        right: 102%;
+        top: 0;
+        font-size: $normal-font-size;
+        width: auto;
+        white-space: nowrap;
+        text-shadow: none;
+      }
+    }
+
+    &:hover > a {
+      &::after {
+        opacity: 1;
+      }
+
+      &::before {
+        display: block;
+      }
+    }
+  }
 }
 
 %tn-default-button,

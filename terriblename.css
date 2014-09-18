@@ -335,6 +335,33 @@ input[type=submit]:active, .res .RESshortcutside:active,
   background: -moz-linear-gradient(top, #cbcbcb, #bababa);
   background: linear-gradient(top, #cbcbcb, #bababa);
 }
+.submit.mod-override > .morelink > a {
+  padding-left: 30px;
+}
+.submit.mod-override > .morelink > a::after {
+  background-position: -16px -32px;
+  left: 3px;
+  top: 1px;
+  opacity: 0.6;
+}
+.submit.mod-override > .morelink > a::before {
+  display: none;
+  content: 'Only available to moderator';
+  position: absolute;
+  font-weight: normal;
+  right: 102%;
+  top: 0;
+  font-size: 13px;
+  width: auto;
+  white-space: nowrap;
+  text-shadow: none;
+}
+.submit.mod-override > .morelink:hover > a::after {
+  opacity: 1;
+}
+.submit.mod-override > .morelink:hover > a::before {
+  display: block;
+}
 
 .fancy-settings button,
 .usertext-edit button.save,
@@ -402,6 +429,16 @@ input[type=submit] {
   font-family: "Liberation Sans", Arial, sans-serif;
   border-radius: 3px;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.submit.mod-override > .morelink > a::before, .menuarea .spacer > .help-hoverable {
+  z-index: 3000;
+  position: absolute;
+  background: #ffeea9;
+  color: #111111;
+  padding: 4px 6px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
 }
 
 #search input[type=text],
@@ -676,16 +713,10 @@ input[type=password] {
 }
 .menuarea .spacer > .help-hoverable {
   display: none;
-  z-index: 3000;
   left: 30%;
   bottom: 110%;
-  width: 30em;
   color: #ffeea9;
-  position: absolute;
-  background: #ffeea9;
-  padding: 4px 6px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  width: 30em;
 }
 .menuarea .spacer > .help-hoverable::before {
   color: #111111;
@@ -1618,7 +1649,7 @@ input[type=password] {
   color: #2177b4;
 }
 
-.titlebox .leavemoderator::before,
+.submit.mod-override > .morelink > a::after, .titlebox .leavemoderator::before,
 .titlebox form.leavecontributor-button::before, .res.res-nightmode .thing .midcol > .up.arrow, .res.res-nightmode .thing .midcol > .down.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow,
 .arrow.up,
 .arrow.up:hover,

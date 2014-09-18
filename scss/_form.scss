@@ -6,6 +6,16 @@
   @include shadow(0 1px 0 rgba(255, 255, 255, 0.7));
 }
 
+%tn-tooltip {
+  z-index: 3000;
+  position: absolute;
+  background: $tooltip-bg;
+  color: $tooltip-fg;
+  padding: 4px 6px;
+  @include shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  @include rounded(3px);
+}
+
 %tn-input,
 #search input[type=text],
 .roundfield-content > input#url,
@@ -318,17 +328,12 @@ input[type=password] {
     }
 
     > .help-hoverable {
+      @extend %tn-tooltip;
       display: none;
-      z-index: 3000;
       left: 30%;
       bottom: 110%;
-      width: 30em;
       color: $tooltip-bg;
-      position: absolute;
-      background: $tooltip-bg;
-      padding: 4px 6px;
-      @include shadow(0 2px 3px rgba(0, 0, 0, 0.2));
-      @include rounded(3px);
+      width: 30em;
 
       &::before {
         color: $main-fg;
