@@ -482,12 +482,11 @@ input[type=password] {
   padding: 8px;
 }
 
-.report-reasons {
-  counter-reset: report;
+ul.report-reasons {
+  list-style: square inside;
   font-size: $normal-font-size;
 
-  > .report-reason::before {
-    counter-increment: report;
-    content: counter(report) ". ";
+  > li.report-reason {
+    display: list-item;
   }
 }

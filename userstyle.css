@@ -899,13 +899,12 @@
     padding: 8px;
   }
 
-  .report-reasons {
-    counter-reset: report;
+  ul.report-reasons {
+    list-style: square inside;
     font-size: 13px;
   }
-  .report-reasons > .report-reason::before {
-    counter-increment: report;
-    content: counter(report) ". ";
+  ul.report-reasons > li.report-reason {
+    display: list-item;
   }
 
   #header {
