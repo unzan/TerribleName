@@ -22,3 +22,8 @@
   }
 }
 
+#searchexpando > .searchexpando-submit > input[type="submit"] {
+  width: auto !important;
+  height: auto !important;
+  @include linear-gradient(top, $button-bg, darken($button-bg, 6%));
+}

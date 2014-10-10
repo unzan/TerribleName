@@ -34,6 +34,10 @@ input[type=password] {
   @include rounded(3px);
 }
 
+#search input[type=text] {
+  padding: 6px;
+}
+
 .infobar {
   @extend %tn-info-box;
 }

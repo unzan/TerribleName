@@ -33,6 +33,11 @@
   }
 }
 
+%tn-button-reset {
+  padding: 0 !important;
+  min-width: 0 !important;
+  @include shadow(none);
+}
 
 %tn-small-button-default,
 %tn-small-button {
@@ -342,5 +347,9 @@ input[type=submit] {
       @extend %tn-alt-small-button;
     }
   }
+}
+
+#search > input[type="submit"] {
+  @extend %tn-button-reset;
 }
 
