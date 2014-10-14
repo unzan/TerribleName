@@ -195,7 +195,12 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: none;
 }
 
-.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando,
+.res .selftext.collapsed.expando-button.toggleImage.video-muted,
+.res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
+.res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
+.res .toggleImage.video-muted.expando-button.collapsed.expanded,
+.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .wiki-page .pageactions > .wikiaction,
 .nav-buttons .nextprev > a,
 .res .RESSubscriptionButton,
@@ -207,7 +212,12 @@ input[type=submit]:active, .res .RESshortcutside:active,
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando,
+.res .selftext.collapsed.expando-button.toggleImage.video-muted,
+.res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
+.res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
+.res .toggleImage.video-muted.expando-button.collapsed.expanded,
+.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .menuarea .spacer .toggle .togglebutton,
 .menuarea .spacer .dropdown.lightdrop,
 .res .commentNavSortType,
@@ -228,7 +238,11 @@ input[type=submit]:active, .res .RESshortcutside:active,
   background: linear-gradient(top, #f7f7f7, #e7e7e7);
   border-radius: 3px;
 }
-.expando-button.selftext.collapsed:hover, .res .toggleImage.image.expando-button.collapsedExpando:hover, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded:hover, .res .toggleImage.image.expando-button.expanded:hover, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop:hover, .expando-button.selftext.collapsed:focus, .res .toggleImage.image.expando-button.collapsedExpando:focus, .expando-button.video.collapsed:focus, .expando-button.selftext.expanded:focus, .res .toggleImage.image.expando-button.expanded:focus, .expando-button.video.expanded:focus, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:focus:hover, .menuarea .drop-choices.lightdrop:focus,
+.expando-button.selftext.collapsed:hover, .res .toggleImage.image.expando-button.collapsedExpando:hover,
+.res .toggleImage.video-muted.expando-button.collapsedExpando:hover, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded:hover, .res .toggleImage.image.expando-button.expanded:hover,
+.res .toggleImage.video-muted.expando-button.expanded:hover, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop:hover, .expando-button.selftext.collapsed:focus, .res .toggleImage.image.expando-button.collapsedExpando:focus,
+.res .toggleImage.video-muted.expando-button.collapsedExpando:focus, .expando-button.video.collapsed:focus, .expando-button.selftext.expanded:focus, .res .toggleImage.image.expando-button.expanded:focus,
+.res .toggleImage.video-muted.expando-button.expanded:focus, .expando-button.video.expanded:focus, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:focus:hover, .menuarea .drop-choices.lightdrop:focus,
 .menuarea .spacer .toggle .togglebutton:hover,
 .menuarea .spacer .dropdown.lightdrop:hover,
 .res .commentNavSortType:hover,
@@ -254,7 +268,9 @@ input[type=submit]:active, .res .RESshortcutside:active,
   text-decoration: none;
 }
 
-.wiki-page .pageactions > .wikiaction.wikiaction-current, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:active, .flairselector .flairoptionpane ul > li:active,
+.wiki-page .pageactions > .wikiaction.wikiaction-current, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
+.res .toggleImage.video-muted.expando-button.collapsed.expanded,
+.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:active, .flairselector .flairoptionpane ul > li:active,
 .menuarea .spacer .toggle .togglebutton:active,
 .menuarea .spacer .dropdown.lightdrop:active,
 .res .commentNavSortType:active,
@@ -384,7 +400,8 @@ input[type=submit] {
   text-transform: capitalize;
 }
 
-.expando-button, .res .expando-button.toggleImage.image {
+.expando-button, .res .expando-button.toggleImage.image,
+.res .expando-button.toggleImage.video-muted {
   cursor: pointer;
   width: 19px;
   height: 19px;
@@ -392,7 +409,8 @@ input[type=submit] {
   background-position: 0 0 !important;
   padding: 0 !important;
 }
-.expando-button::before, .res .expando-button.toggleImage.image::before {
+.expando-button::before, .res .expando-button.toggleImage.image::before,
+.res .expando-button.toggleImage.video-muted::before {
   content: '';
   position: absolute;
   left: 4px;
@@ -401,7 +419,10 @@ input[type=submit] {
   top: 8px;
   background: #848484;
 }
-.expando-button.selftext.collapsed::after, .res .selftext.collapsed.expando-button.toggleImage.image::after, .res .toggleImage.image.expando-button.collapsedExpando::after, .expando-button.video.collapsed::after, .res .video.collapsed.expando-button.toggleImage.image::after {
+.expando-button.selftext.collapsed::after, .res .selftext.collapsed.expando-button.toggleImage.image::after, .res .toggleImage.image.expando-button.collapsedExpando::after,
+.res .selftext.collapsed.expando-button.toggleImage.video-muted::after,
+.res .toggleImage.video-muted.expando-button.collapsedExpando::after, .expando-button.video.collapsed::after, .res .video.collapsed.expando-button.toggleImage.image::after,
+.res .video.collapsed.expando-button.toggleImage.video-muted::after {
   content: '';
   position: absolute;
   top: 4px;

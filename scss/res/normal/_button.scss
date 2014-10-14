@@ -1,4 +1,5 @@
-.expando-button.toggleImage.image {
+.expando-button.toggleImage.image,
+.expando-button.toggleImage.video-muted {
   @extend .expando-button;
   &.collapsedExpando {
     @extend .expando-button.selftext.collapsed;
