@@ -400,6 +400,7 @@
   .morelink {
     border: none;
     background: none;
+    height: auto;
   }
   .morelink:hover {
     background: none !important;
@@ -2142,6 +2143,15 @@
   .explore-header #explore-settings button,
   #compose-message button#send {
     padding-bottom: 3px;
+  }
+
+  .sidebox.holiday_shopping > .morelink > a {
+    color: #fff;
+  }
+  .sidebox.holiday_shopping > .morelink > a::before {
+    position: absolute;
+    left: 12px;
+    top: 2px;
   }
 
   #header-img.default-header {
