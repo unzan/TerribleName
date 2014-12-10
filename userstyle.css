@@ -514,7 +514,7 @@
     color: #111;
   }
 
-  .infobar, .unvotable-message, .report-form,
+  .infobar, .unvotable-message, .action-form,
   .flat-list > .report-reasons, .linkinfo,
   .content.submit .info-notice, .profile-page .server-seconds {
     background: #FFF8DC;
@@ -925,7 +925,7 @@
     margin-top: 10px;
   }
 
-  .report-form,
+  .action-form,
   .flat-list > .report-reasons {
     border-color: #aaaaaa !important;
     padding: 8px;
@@ -1179,7 +1179,7 @@
   .wiki-page .linklisting .link .flat-list.buttons > li > .flairselectbtn,
   .wiki-page .linklisting .link .flat-list.buttons > li > .redditSingleClick,
   .wiki-page .linklisting .link .flat-list.buttons > li > .give-gold,
-  .wiki-page .linklisting .link .flat-list.buttons > .report-button > .report-thing,
+  .wiki-page .linklisting .link .flat-list.buttons > .report-button > .action-thing,
   .wiki-page .linklisting .link .flat-list.buttons > .big-mod-buttons .pretty-button,
   .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li.save-button > a,
   .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .toggle,
@@ -1187,7 +1187,7 @@
   .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .flairselectbtn,
   .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .redditSingleClick,
   .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > li > .give-gold,
-  .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > .report-button > .report-thing,
+  .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > .report-button > .action-thing,
   .listing-page:not(.profile-page) .linklisting .link .flat-list.buttons > .big-mod-buttons .pretty-button {
     visibility: hidden;
   }
@@ -1201,7 +1201,7 @@
   .wiki-page .linklisting .link:hover .flat-list.buttons > li > .flairselectbtn,
   .wiki-page .linklisting .link:hover .flat-list.buttons > li > .redditSingleClick,
   .wiki-page .linklisting .link:hover .flat-list.buttons > li > .give-gold,
-  .wiki-page .linklisting .link:hover .flat-list.buttons > .report-button > .report-thing,
+  .wiki-page .linklisting .link:hover .flat-list.buttons > .report-button > .action-thing,
   .wiki-page .linklisting .link:hover .flat-list.buttons > .big-mod-buttons .pretty-button,
   .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li.save-button > a,
   .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .toggle,
@@ -1209,7 +1209,7 @@
   .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .flairselectbtn,
   .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .redditSingleClick,
   .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > li > .give-gold,
-  .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > .report-button > .report-thing,
+  .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > .report-button > .action-thing,
   .listing-page:not(.profile-page) .linklisting .link:hover .flat-list.buttons > .big-mod-buttons .pretty-button {
     visibility: visible;
   }
