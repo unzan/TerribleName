@@ -3265,4 +3265,7 @@
   .res-commentBoxes .res .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
     background: none !important;
   }
+  .res-commentBoxes .res .thing.comment {
+    border: none !important;
+  }
 }
