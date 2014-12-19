@@ -1,0 +1,39 @@
+$custom-notice-bg: $bright-yellow;
+
+.side .md blockquote {
+  display: none;
+}
+
+.listing-page {
+  > .content {
+    margin-top: 40px;
+  }
+
+  .side .md {
+    blockquote {
+      display: block;
+      position: absolute;
+      left: 2px;
+      right: $sidebar-width + 30px;
+      top: $header-height - 5px;
+      padding: 7px;
+      overflow: hidden;
+      border: none;
+      background: $custom-notice-bg;
+      text-align: center;
+      @include rounded(0 0 3px 3px);
+      @include shadow(0 2px 2px rgba(0, 0, 0, 0.14));
+
+      h6 {
+        vertical-align: middle;
+        font-size: $normal-font-size;
+        font-weight: normal;
+        display: inline-block;
+        padding: 0 0.8em;
+        &:not(:last-child) {
+          border-right: solid 2px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}

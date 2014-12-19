@@ -3000,3 +3000,35 @@ table.diff tbody .diff_header:not([id]) {
 .res-commentBoxes.res-nightmode .res.res-nightmode .thing.comment {
   border: none !important;
 }
+
+.side .md blockquote {
+  display: none;
+}
+
+.listing-page > .content {
+  margin-top: 40px;
+}
+.listing-page .side .md blockquote {
+  display: block;
+  position: absolute;
+  left: 2px;
+  right: 330px;
+  top: 135px;
+  padding: 7px;
+  overflow: hidden;
+  border: none;
+  background: #FFF8DC;
+  text-align: center;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.14);
+}
+.listing-page .side .md blockquote h6 {
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: normal;
+  display: inline-block;
+  padding: 0 0.8em;
+}
+.listing-page .side .md blockquote h6:not(:last-child) {
+  border-right: solid 2px rgba(0, 0, 0, 0.2);
+}
