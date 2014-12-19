@@ -1,5 +1,6 @@
 > #header {
-  background: $header-bg url($header-bg-image) left top no-repeat !important;
+  @extend #header;
+  //background: $header-bg url($header-bg-image) 0 18px no-repeat !important;
 
   #sr-header-area {
     background: $sr-header-bg !important;

@@ -107,25 +107,25 @@
       }
     }
 
+    &.add {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
+      }
+    }
+
+    &.remove {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        @include linear-gradient(top, $unsubscribe-bg, darken($unsubscribe-bg, 6%));
+      }
+    }
+
     @if $subscribe-button-placement == header {
-      &.add {
-        &,
-        &:hover,
-        &:focus,
-        &:active {
-          @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
-        }
-      }
-
-      &.remove {
-        &,
-        &:hover,
-        &:focus,
-        &:active {
-          @include linear-gradient(top, $unsubscribe-bg, darken($unsubscribe-bg, 6%));
-        }
-      }
-
       &.add,
       &.remove {
         &:active {
@@ -133,16 +133,6 @@
         }
       }
     } @else {
-      &.add,
-      &.remove {
-        &,
-        &:active,
-        &:focus,
-        &:hover {
-          @include linear-gradient(top, $subscribe-bg, darken($subscribe-bg, 6%));
-        }
-      }
-
       &.add:active,
       &.remove,
       &.remove:active {

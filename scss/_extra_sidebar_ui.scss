@@ -1,0 +1,82 @@
+.side {
+  .md {
+    h3 {
+      font-size: 1.6em;
+      margin-bottom: 1em;
+
+      + ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 1.4em;
+
+        a {
+          display: block;
+          background: $sr-rec-bg;
+          color: $sr-rec-fg;
+          margin-bottom: 4px;
+          overflow: hidden;
+
+          > em,
+          > strong {
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          > strong {
+            width: 160px;
+            margin-left: 5px;
+          }
+
+          > em {
+            opacity: 0.7;
+            width: 120px;
+            height: 70px;
+            text-indent: -900px;
+            background-image: url($sr-rec-image);
+            background-repeat: no-repeat;
+          }
+
+          &[href="/r/Blowjobs"] > em {
+            background-position: 0 0;
+          }
+
+          &[href="/r/blowjobsandwich"] > em {
+            background-position: -120px 0;
+          }
+
+          &[href="/r/lickingdick"] > em {
+            background-position: -240px 0;
+          }
+
+          &[href="/r/dreamjobs"] > em {
+            background-position: -360px 0;
+          }
+
+          &[href="/r/Pouting"] > em {
+            background-position: -240px -70px;
+          }
+
+          &[href="/r/OnHerKnees"] > em {
+            background-position: -120px -70px;
+          }
+
+          &[href="/r/ballsucking"] > em {
+            background-position: 0 -70px;
+          }
+
+          &:hover {
+            color: $sr-rec-fg;
+            background: $sr-rec-hover-bg;
+            text-decoration: none;
+
+            > em {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

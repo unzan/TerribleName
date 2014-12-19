@@ -385,12 +385,12 @@
     background: linear-gradient(top, #859900, #6a7a00);
   }
   .fancy-toggle-button > .option.remove, .fancy-toggle-button > .option.remove:hover, .fancy-toggle-button > .option.remove:focus, .fancy-toggle-button > .option.remove:active {
-    background: -webkit-linear-gradient(top, #dc322f, #ca2522);
-    background: -moz-linear-gradient(top, #dc322f, #ca2522);
-    background: linear-gradient(top, #dc322f, #ca2522);
+    background: -webkit-linear-gradient(top, #c4c4c4, #b4b4b4);
+    background: -moz-linear-gradient(top, #c4c4c4, #b4b4b4);
+    background: linear-gradient(top, #c4c4c4, #b4b4b4);
   }
-  .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active {
-    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.3);
+  .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove, .fancy-toggle-button > .option.remove:active {
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7);
   }
 
   .nub {
@@ -940,10 +940,10 @@
   }
 
   #header {
-    background: #111 url("http://i.imgur.com/kfumYVX.jpg") 0 0 no-repeat;
+    background: #111 url("http://i.imgur.com/kfumYVX.jpg") 0 18px repeat-x;
     color: #c6c6c6;
     border-bottom: none;
-    height: 140px;
+    height: 148px;
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
@@ -1001,7 +1001,7 @@
   }
 
   #sr-header-area {
-    background: rgba(0, 0, 0, 0.5);
+    background: #111;
     border-bottom: none;
   }
   #sr-header-area a {
@@ -1032,7 +1032,7 @@
   }
 
   #sr-more-link {
-    background: rgba(0, 0, 0, 0.5);
+    background: #111;
   }
 
   .dropdown.srdrop .selected {
@@ -1083,7 +1083,6 @@
     color: #b7b7b7;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     font-variant: normal;
-    text-transform: lowercase;
     font-size: 2.9em;
     font-weight: normal;
     vertical-align: middle;
@@ -1092,15 +1091,29 @@
     content: '';
     display: inline-block;
     vertical-align: middle;
-    height: 89px;
+    height: 97px;
     width: 3px;
   }
   .pagename.redditname > a {
     display: inline;
     color: inherit;
+    font-size: 0;
+  }
+  .pagename.redditname > a::before, .pagename.redditname > a::after {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -3px;
+  }
+  .pagename.redditname > a::before {
+    content: 'COCK';
+    color: #fff;
+  }
+  .pagename.redditname > a::after {
+    content: 'KISSES';
+    color: #cb4b16;
+    margin-right: 10px;
   }
   .pagename.redditname > a:hover {
-    color: #eaeaea;
     text-decoration: none;
   }
 
@@ -1588,10 +1601,8 @@
     margin-top: 20px;
   }
   .titlebox .subscribe-button {
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    z-index: 9000;
+    display: block;
+    margin-bottom: 1em;
   }
   .titlebox form.flairtoggle {
     margin-bottom: 10px;
@@ -2157,7 +2168,7 @@
   #header-img.default-header {
     background: url("http://i.imgur.com/1yRy1Sk.png") center center no-repeat;
     width: 82px;
-    height: 89px;
+    height: 97px;
     margin: 0 10px 0 20px;
     vertical-align: middle;
   }
@@ -2167,7 +2178,7 @@
     overflow: hidden;
   }
   #header-img-a > #header-img {
-    max-height: 89px !important;
+    max-height: 97px !important;
     width: auto !important;
   }
 
@@ -2402,7 +2413,7 @@
     margin-left: 30px;
   }
   body.with-listing-chooser .listing-chooser {
-    top: 140px;
+    top: 148px;
     background: rgba(0, 0, 0, 0.9);
     padding-right: 0;
     box-shadow: 1px 0 0 rgba(255, 255, 255, 0.8);

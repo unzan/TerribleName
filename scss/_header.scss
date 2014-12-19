@@ -1,5 +1,5 @@
 #header {
-  background: $header-bg url($header-bg-image) 0 0 no-repeat;
+  background: $header-bg url($header-bg-image) 0 18px repeat-x;
   color: $header-fg;
   border-bottom: none;
   height: $header-height;
@@ -164,7 +164,7 @@
   color: $page-title-fg;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   font-variant: normal;
-  text-transform: lowercase;
+  //text-transform: lowercase;
   font-size: 2.9em;
   font-weight: normal;
   vertical-align: middle;
@@ -178,13 +178,39 @@
   }
 
   &.redditname {
+    //> a {
+      //display: inline-block;
+      //height: 45px;
+      //width: 324px;
+      //background: url($srname-image) left top no-repeat;
+      //text-indent: -900px;
+    //}
 
     > a {
       display: inline;
       color: inherit;
+      font-size: 0;
+
+      &::before,
+      &::after {
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: -3px;
+      }
+
+      &::before {
+        content: 'COCK';
+        color: $white;
+      }
+
+      &::after {
+        content: 'KISSES';
+        color: $orange;
+        margin-right: 10px;
+      }
 
       &:hover {
-        color: lighten($page-title-fg, 20%);
+        //color: lighten($page-title-fg, 20%);
         text-decoration: none;
       }
     }

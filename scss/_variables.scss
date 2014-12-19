@@ -3,7 +3,7 @@ $show-line-num-in-codeblock: no;
 
 // set to `header` to place subscribe button on header.
 // any other value will put it at its normal place
-$subscribe-button-placement: header;
+$subscribe-button-placement: normal;
 
 // control whether the output css is using vendor prefixes or not.
 // valid values:
@@ -46,13 +46,15 @@ $sidebar-width:   300px;
 
 // --- these images are for local test
 $main-bg-image: 'image/noise.jpg';
-$header-bg-image: 'image/banner.jpg';
+$header-bg-image: 'image/cockkisses-banner.jpg';
 $icon-image: 'image/icons.png';
+$sr-rec-image: 'image/sr-rec-sprite.jpg';
 
 // --- and these are for reddit css
 $main-bg-image: '%%noise%%';
-$header-bg-image: '%%banner%%';
+$header-bg-image: '%%cockkisses-banner%%';
 $icon-image: '%%icons%%';
+$sr-rec-image: '%%sr-rec-sprite%%';
 
 $sans-serif: 'Liberation Sans', Arial, sans-serif;
 $serif: 'Liberation Serif', 'Times New Roman', serif;
@@ -101,7 +103,7 @@ $link-fg-visited: darken($violet, 7%);
 $sticky-link-fg: $dark-green;
 
 
-$header-height: 140px;
+$header-height: 148px;
 $header-bg: $black;
 $header-fg: darken($gray, 14%);
 $page-title-height: $header-height - 51px;
@@ -110,7 +112,7 @@ $page-title-fg: darken($gray, 20%);
 $menu-bar-bg: $dark-brown;
 $menu-bar-fg: darken($gray, 30%);
 $sr-header-fg: darken($gray, 40%);
-$sr-header-bg: rgba(0, 0, 0, 0.5);
+$sr-header-bg: $header-bg;
 $sr-dropdown-bg: $black;
 $sr-dropdown-fg: $sr-header-fg;
 $sr-dropdown-selected-bg: $orange;
@@ -166,7 +168,7 @@ $expand-button-fg: darken($gray, 40%);
 
 $subscribe-bg: $green;
 $subscribe-fg: $white;
-$unsubscribe-bg: $red;
+$unsubscribe-bg: darken($main-bg, 15%);
 $unsubscribe-fg: $white;
 
 $box-bg: lighten($main-bg, 2%);
@@ -195,3 +197,7 @@ $res-char-counter-too-long-bg: $red;
 $res-night-spoiler-bg: lighten($res-night-bg, 25%);
 $res-night-spoiler-fg: $res-night-fg;
 $res-night-table-heading-bg: lighten($res-night-bg, 7%);
+
+$sr-rec-bg: lighten($dark-brown, 10%);
+$sr-rec-hover-bg: $orange;
+$sr-rec-fg: $gray;

@@ -324,12 +324,12 @@ input[type=submit]:active, .res .RESshortcutside:active,
   background: linear-gradient(top, #859900, #6a7a00);
 }
 .fancy-toggle-button > .option.remove, .fancy-toggle-button > .option.remove:hover, .fancy-toggle-button > .option.remove:focus, .fancy-toggle-button > .option.remove:active {
-  background: -webkit-linear-gradient(top, #dc322f, #ca2522);
-  background: -moz-linear-gradient(top, #dc322f, #ca2522);
-  background: linear-gradient(top, #dc322f, #ca2522);
+  background: -webkit-linear-gradient(top, #c4c4c4, #b4b4b4);
+  background: -moz-linear-gradient(top, #c4c4c4, #b4b4b4);
+  background: linear-gradient(top, #c4c4c4, #b4b4b4);
 }
-.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active {
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.3);
+.fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove, .fancy-toggle-button > .option.remove:active {
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7);
 }
 
 .nub {
@@ -871,11 +871,11 @@ ul.report-reasons > li.report-reason {
   display: list-item;
 }
 
-#header {
-  background: #111 url("%%banner%%") 0 0 no-repeat;
+#header, .res.res-nightmode > #header {
+  background: #111 url("%%cockkisses-banner%%") 0 18px repeat-x;
   color: #c6c6c6;
   border-bottom: none;
-  height: 140px;
+  height: 148px;
   position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -889,7 +889,8 @@ ul.report-reasons > li.report-reason {
   height: 32px;
 }
 #header #header-bottom-left > .pagename:last-child::after,
-#header .tabmenu {
+#header .tabmenu,
+.res.res-nightmode > #header .tabmenu {
   display: block;
   margin: 0;
   padding-left: 6px;
@@ -904,13 +905,13 @@ ul.report-reasons > li.report-reason {
   background: linear-gradient(top, #2C2928, #1f1d1c);
   box-shadow: inset 0 1px 0 #474240, inset 0 -1px 0 #141312;
 }
-#header .tabmenu > li {
+#header .tabmenu > li, .res.res-nightmode > #header .tabmenu > li {
   display: block;
   float: left;
   margin: 0;
   padding: 0;
 }
-#header .tabmenu > li > a {
+#header .tabmenu > li > a, .res.res-nightmode > #header .tabmenu > li > a {
   background: none;
   display: block;
   font-weight: normal;
@@ -933,7 +934,7 @@ ul.report-reasons > li.report-reason {
 }
 
 #sr-header-area {
-  background: rgba(0, 0, 0, 0.5);
+  background: #111;
   border-bottom: none;
 }
 #sr-header-area a {
@@ -964,7 +965,7 @@ ul.report-reasons > li.report-reason {
 }
 
 #sr-more-link {
-  background: rgba(0, 0, 0, 0.5);
+  background: #111;
 }
 
 .dropdown.srdrop .selected {
@@ -1015,7 +1016,6 @@ ul.report-reasons > li.report-reason {
   color: #b7b7b7;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   font-variant: normal;
-  text-transform: lowercase;
   font-size: 2.9em;
   font-weight: normal;
   vertical-align: middle;
@@ -1024,15 +1024,29 @@ ul.report-reasons > li.report-reason {
   content: '';
   display: inline-block;
   vertical-align: middle;
-  height: 89px;
+  height: 97px;
   width: 3px;
 }
 .pagename.redditname > a {
   display: inline;
   color: inherit;
+  font-size: 0;
+}
+.pagename.redditname > a::before, .pagename.redditname > a::after {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -3px;
+}
+.pagename.redditname > a::before {
+  content: 'COCK';
+  color: #fff;
+}
+.pagename.redditname > a::after {
+  content: 'KISSES';
+  color: #cb4b16;
+  margin-right: 10px;
 }
 .pagename.redditname > a:hover {
-  color: #eaeaea;
   text-decoration: none;
 }
 
@@ -1520,10 +1534,8 @@ ul.report-reasons > li.report-reason {
   margin-top: 20px;
 }
 .titlebox .subscribe-button {
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  z-index: 9000;
+  display: block;
+  margin-bottom: 1em;
 }
 .titlebox form.flairtoggle {
   margin-bottom: 10px;
@@ -2452,11 +2464,8 @@ table.diff tbody .diff_header:not([id]) {
   background: linear-gradient(top, #252525, #1e1e1e);
   box-shadow: inset 0 1px 0 #3f3f3f, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-.res.res-nightmode > #header {
-  background: #111 url("%%banner%%") left top no-repeat !important;
-}
 .res.res-nightmode > #header #sr-header-area {
-  background: rgba(0, 0, 0, 0.5) !important;
+  background: #111 !important;
   color: #848484;
 }
 .res.res-nightmode > #header #header-bottom-left {
@@ -2614,6 +2623,12 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode input[type=submit]:active,
 .res.res-nightmode .side .morelink a:active {
   box-shadow: inset 0 2px 2px #6f290c, 0 1px 1px #323232;
+}
+.res.res-nightmode .fancy-toggle-button > .option.remove {
+  background: -webkit-linear-gradient(top, #373737, #252525);
+  background: -moz-linear-gradient(top, #373737, #252525);
+  background: linear-gradient(top, #373737, #252525);
+  box-shadow: inset 0 2px 2px #1e1e1e, 0 1px 1px #3c3c3c;
 }
 .res.res-nightmode .subscribers,
 .res.res-nightmode .users-online {
@@ -2823,7 +2838,6 @@ table.diff tbody .diff_header:not([id]) {
   color: #6c71c4;
 }
 .res.res-nightmode .md p,
-.res.res-nightmode .md a,
 .res.res-nightmode .md ul,
 .res.res-nightmode .md ol,
 .res.res-nightmode .md li,
@@ -2831,8 +2845,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .md table,
 .res.res-nightmode .md tbody,
 .res.res-nightmode .md tr,
-.res.res-nightmode .md td,
-.res.res-nightmode .md em {
+.res.res-nightmode .md td {
   background: none !important;
 }
 .res.res-nightmode .md pre,
@@ -2990,4 +3003,69 @@ table.diff tbody .diff_header:not([id]) {
 .res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
 .res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
   background: none !important;
+}
+
+.side .md h3 {
+  font-size: 1.6em;
+  margin-bottom: 1em;
+}
+.side .md h3 + ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.side .md h3 + ul a {
+  display: block;
+  background: #474240;
+  color: #eaeaea;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+.side .md h3 + ul a > em,
+.side .md h3 + ul a > strong {
+  display: inline-block;
+  vertical-align: middle;
+}
+.side .md h3 + ul a > strong {
+  width: 160px;
+  margin-left: 5px;
+}
+.side .md h3 + ul a > em {
+  opacity: 0.7;
+  width: 120px;
+  height: 70px;
+  text-indent: -900px;
+  background-image: url("%%sr-rec-sprite%%");
+  background-repeat: no-repeat;
+}
+.side .md h3 + ul a[href="/r/Blowjobs"] > em {
+  background-position: 0 0;
+}
+.side .md h3 + ul a[href="/r/blowjobsandwich"] > em {
+  background-position: -120px 0;
+}
+.side .md h3 + ul a[href="/r/lickingdick"] > em {
+  background-position: -240px 0;
+}
+.side .md h3 + ul a[href="/r/dreamjobs"] > em {
+  background-position: -360px 0;
+}
+.side .md h3 + ul a[href="/r/Pouting"] > em {
+  background-position: -240px -70px;
+}
+.side .md h3 + ul a[href="/r/OnHerKnees"] > em {
+  background-position: -120px -70px;
+}
+.side .md h3 + ul a[href="/r/ballsucking"] > em {
+  background-position: 0 -70px;
+}
+.side .md h3 + ul a:hover {
+  color: #eaeaea;
+  background: #cb4b16;
+  text-decoration: none;
+}
+.side .md h3 + ul a:hover > em {
+  opacity: 1;
 }
