@@ -59,12 +59,12 @@
     > .entry {
       display: inline-block;
 
-      > .md,
-      > .flat-list {
+      .md,
+      .flat-list {
         margin-left: 0;
       }
 
-      > .md {
+      .md-container {
         @extend %tn-comment-bubble;
         padding: 4px 10px;
         margin-bottom: 5px;

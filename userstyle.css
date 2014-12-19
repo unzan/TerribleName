@@ -1513,7 +1513,7 @@
     margin-top: 9px;
   }
 
-  .comment.noncollapsed > .entry > .usertext > .usertext-body, .message.noncollapsed > .entry > .md {
+  .comment.noncollapsed > .entry > .usertext > .usertext-body, .message.noncollapsed > .entry .md-container {
     margin: 8px 2px 0 2px;
     padding: 3px;
     position: relative;
@@ -1523,7 +1523,7 @@
     border-radius: 3px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
-  .comment.noncollapsed > .entry > .usertext > .usertext-body::before, .message.noncollapsed > .entry > .md::before {
+  .comment.noncollapsed > .entry > .usertext > .usertext-body::before, .message.noncollapsed > .entry .md-container::before {
     content: '';
     position: absolute;
     left: 20px;
@@ -2779,11 +2779,11 @@
   .message.noncollapsed > .entry {
     display: inline-block;
   }
-  .message.noncollapsed > .entry > .md,
-  .message.noncollapsed > .entry > .flat-list {
+  .message.noncollapsed > .entry .md,
+  .message.noncollapsed > .entry .flat-list {
     margin-left: 0;
   }
-  .message.noncollapsed > .entry > .md {
+  .message.noncollapsed > .entry .md-container {
     padding: 4px 10px;
     margin-bottom: 5px;
     max-width: 63em;
