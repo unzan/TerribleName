@@ -2443,7 +2443,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .infobar, .res.res-nightmode .unvotable-message,
 .res.res-nightmode .linkinfo,
-.res.res-nightmode .report-form,
+.res.res-nightmode .action-form,
 .res.res-nightmode .flat-list > .report-reasons, .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode .commentarea .comment.noncollapsed > .entry > .usertext > .usertext-body, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
 .res.res-nightmode .RESDialogSmall.livePreview > h3 {
   border: none !important;
@@ -2498,6 +2498,9 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a::after,
 .res.res-nightmode .formtab.tabmenu > li.selected > a::after {
   display: none;
+}
+.res.res-nightmode .report-reasons li {
+  color: #d1d1d1 !important;
 }
 .res.res-nightmode .tabpane-content,
 .res.res-nightmode .formtabs-content,
@@ -2637,6 +2640,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .side .sidebox,
 .res.res-nightmode .side .sidebox .spacer,
 .res.res-nightmode .side .leavemoderator,
+.res.res-nightmode .side .leavecontributor-button,
 .res.res-nightmode .side .titlebox form.flairtoggle {
   background: none !important;
 }
