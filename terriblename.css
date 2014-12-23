@@ -22,11 +22,11 @@ body {
   font-family: "Liberation Sans", Arial, sans-serif;
 }
 
-.thing .title,
+.thing .title, .thing .tagline a,
 a {
   color: #2177b4;
 }
-.thing .title:visited,
+.thing .title:visited, .thing .tagline a:visited,
 a:visited {
   color: #5358ba;
 }
@@ -2028,7 +2028,7 @@ table.diff tbody .diff_header:not([id]) {
   padding: 0 !important;
 }
 .res #header-bottom-right.res-navTop #userbarToggle.userbarShow {
-  bottom: -4px !important;
+  bottom: 23px !important;
   top: auto !important;
   min-height: auto !important;
 }
@@ -2734,6 +2734,9 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .thing .tagline .author.moderator, .res.res-nightmode .thing .tagline .author.moderator:hover {
   background-color: #424d00 !important;
 }
+.res.res-nightmode .thing.reported {
+  border: none;
+}
 .res.res-nightmode .commentarea {
   border-top-color: #070707;
   box-shadow: inset 0 1px 0 #252525;
@@ -3003,6 +3006,12 @@ table.diff tbody .diff_header:not([id]) {
 .res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
 .res-commentBoxes.res-nightmode .res.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
   background: none !important;
+}
+.res-commentBoxes .res .thing.comment,
+.res-commentBoxes .res.res-nightmode .thing.comment,
+.res-commentBoxes.res-nightmode .res .thing.comment,
+.res-commentBoxes.res-nightmode .res.res-nightmode .thing.comment {
+  border: none !important;
 }
 
 .side .md h3 {
