@@ -2016,7 +2016,7 @@ table.diff tbody .diff_header:not([id]) {
   padding: 0 !important;
 }
 .res #header-bottom-right.res-navTop #userbarToggle.userbarShow {
-  bottom: -4px !important;
+  bottom: 23px !important;
   top: auto !important;
   min-height: auto !important;
 }
