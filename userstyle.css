@@ -24,11 +24,11 @@
     font-family: "Liberation Sans", Arial, sans-serif;
   }
 
-  .thing .title,
+  .thing .title, .thing .tagline a,
   a {
     color: #2177b4;
   }
-  .thing .title:visited,
+  .thing .title:visited, .thing .tagline a:visited,
   a:visited {
     color: #5358ba;
   }
@@ -2809,7 +2809,7 @@
     padding: 0 !important;
   }
   .res #header-bottom-right.res-navTop #userbarToggle.userbarShow {
-    bottom: -4px !important;
+    bottom: 23px !important;
     top: auto !important;
     min-height: auto !important;
   }
