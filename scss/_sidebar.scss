@@ -58,6 +58,7 @@
 .linkinfo,
 .content.submit .info-notice {
   @extend %tn-info-box;
+  padding: 10px;
 }
 
 .users-online::before {

@@ -50,9 +50,9 @@ $header-bg-image: 'image/banner.jpg';
 $icon-image: 'image/icons.png';
 
 // --- and these are for reddit css
-$main-bg-image: '%%noise%%';
-$header-bg-image: '%%banner%%';
-$icon-image: '%%icons%%';
+//$main-bg-image: '%%noise%%';
+//$header-bg-image: '%%banner%%';
+//$icon-image: '%%icons%%';
 
 $sans-serif: 'Liberation Sans', Arial, sans-serif;
 $serif: 'Liberation Serif', 'Times New Roman', serif;
@@ -146,9 +146,10 @@ $notice-bubble-bg: $bright-yellow;
 
 $list-entry-fg: darken($gray, 50%);
 $comment-bg: $white;
+$comment-footer-bg: darken($comment-bg, 4%);
 $deleted-comment-bg: none;
 $highlighted-comment-outline-color: rgba(0, 0, 0, 0.2);
-$highlighted-comment-bg: rgba($bright-yellow, 0.4);
+$highlighted-comment-bg: $bright-yellow;
 $comment-textbox-width: 650px;
 $upvote-color: lighten($orange, 10%);
 $downvote-color: $violet;
@@ -184,7 +185,7 @@ $res-night-fg: darken($gray, 10%);
 $res-dark-button-bg: lighten($res-night-bg, 40%);
 $res-dark-button-fg: $res-night-bg;
 $res-night-code-fg: lighten($inline-code-fg, 20%);
-$res-active-element-color: rgba($orange, 0.5);
+$res-active-element-color: lighten($orange, 30%);
 $res-popup-bg: #5F99CF;
 $res-temp-sort-bg: rgba(0, 0, 0, 0.2);
 $res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);
