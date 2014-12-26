@@ -1,10 +1,6 @@
 // set this to `yes` if you want to have line number at the left of codeblock
 $show-line-num-in-codeblock: no;
 
-// set to `header` to place subscribe button on header.
-// any other value will put it at its normal place
-$subscribe-button-placement: header;
-
 // control whether the output css is using vendor prefixes or not.
 // valid values:
 // - 0: no vendor prefixes
@@ -150,10 +146,16 @@ $comment-footer-bg: darken($comment-bg, 4%);
 $deleted-comment-bg: none;
 $highlighted-comment-outline-color: rgba(0, 0, 0, 0.2);
 $highlighted-comment-bg: $bright-yellow;
-$comment-textbox-width: 650px;
+$comment-textbox-width: 520px;
 $upvote-color: lighten($orange, 10%);
 $downvote-color: $violet;
 
+$misc-spam-color: $violet;
+$misc-remove-color: $red;
+$misc-approve-color: $green;
+$misc-ignore-color: $cyan;
+$misc-spam-tag-fg: $white;
+$misc-spam-tagline-bg: lighten($orange, 35%);
 
 $button-fg: $white;
 $button-bg: $orange;
@@ -167,8 +169,8 @@ $expand-button-fg: darken($gray, 40%);
 
 $subscribe-bg: $green;
 $subscribe-fg: $white;
-$unsubscribe-bg: $red;
-$unsubscribe-fg: $white;
+$unsubscribe-bg: darken($main-bg, 15%);
+$unsubscribe-fg: lighten($main-fg, 30%);
 
 $box-bg: lighten($main-bg, 2%);
 $info-box-bg: $bright-yellow;
@@ -177,6 +179,7 @@ $form-tab-fg: lighten($main-fg, 20%);
 $tooltip-bg: darken($bright-yellow, 10%);
 $tooltip-fg: $main-fg;
 
+$res-editor-toolbar-bg: $small-button-bg;
 $res-night-bg-image: 'image/dark-noise.jpg';
 $res-night-bg-image: '%%dark-noise%%';
 $res-night-bg: lighten($black, 5%);
@@ -185,7 +188,7 @@ $res-night-fg: darken($gray, 10%);
 $res-dark-button-bg: lighten($res-night-bg, 40%);
 $res-dark-button-fg: $res-night-bg;
 $res-night-code-fg: lighten($inline-code-fg, 20%);
-$res-active-element-color: lighten($orange, 30%);
+$res-active-element-color: lighten($orange, 20%);
 $res-popup-bg: #5F99CF;
 $res-temp-sort-bg: rgba(0, 0, 0, 0.2);
 $res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);

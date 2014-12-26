@@ -93,45 +93,6 @@
   }
 }
 
-.wiki-page,
-.listing-page:not(.profile-page) {
-  .linklisting {
-    .link {
-      .flat-list.buttons {
-        > li.save-button > a,
-        > li > .toggle,
-        > li > .state-button,
-        > li > .flairselectbtn,
-        > li > .redditSingleClick,
-        > li > .give-gold,
-        > .report-button > .action-thing,
-        > .big-mod-buttons .pretty-button {
-          visibility: hidden;
-        }
-
-        > li.option  {
-          display: none;
-        }
-      }
-
-      &:hover {
-        .flat-list.buttons {
-          > li.save-button > a,
-          > li > .toggle,
-          > li > .state-button,
-          > li > .flairselectbtn,
-          > li > .redditSingleClick,
-          > li > .give-gold,
-          > .report-button > .action-thing,
-          > .big-mod-buttons .pretty-button {
-            visibility: visible;
-          }
-        }
-      }
-    }
-  }
-}
-
 .thing.stickied {
   a.title {
     color: $sticky-link-fg !important;
@@ -244,17 +205,16 @@
 
 .entry .flat-list.buttons > li.reported-stamp.stamp {
   position: absolute;
-  top: 7px;
+  top: 6px;
   right: 10px;
   border: none !important;
   color: $report-tag-fg;
-  padding: 0 4px 0 4px;
-  text-transform: uppercase;
+  padding: 2px 4px;
+  font-variant: small-caps;
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: $normal-font-size;
+  line-height: 1em;
   background: $report-tag-bg;
-  //@include linear-gradient(top, $report-tag-bg, darken($report-tag-bg, 7%));
-  //@include shadow(0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2));
   @include rounded(2px);
 }
 
@@ -382,19 +342,19 @@
 
   > span[role=radiogroup] > .pretty-button {
     &:first-child {
-      color: $violet;
+      color: $misc-spam-color;
     }
 
     &:nth-child(2) {
-      color: $red;
+      color: $misc-remove-color;
     }
 
     &.positive {
-      color: $green;
+      color: $misc-approve-color;
     }
   }
 
   > .pretty-button {
-    color: $cyan;
+    color: $misc-ignore-color;
   }
 }

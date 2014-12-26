@@ -14,7 +14,6 @@
 }
 
 .commentNavSortType {
-  //@extend %tn-small-button;
   @extend %tn-switch-button;
 
   &:nth-of-type(1) {
@@ -24,39 +23,6 @@
   &:last-child {
     @extend %tn-switch-button-round-right;
   }
-
-  //margin: 0;
-  //border-right-style: none;
-  //display: inline-block !important;
-  //@include rounded(0);
-
-  //&:nth-of-type(8) {
-    //+ span {
-      //display: block !important;
-      //clear: left;
-      //font-size: 0;
-      //text-indent: -20em;
-    //}
-  //}
-
-  //&:nth-of-type(-n+8) {
-    //margin-bottom: 3px;
-  //}
-
-  //&:nth-of-type(9) {
-    //margin-left: 6.8em;
-  //}
-
-  //&:nth-of-type(1),
-  //&:nth-of-type(9) {
-    //@include rounded(3px 0 0 3px);
-  //}
-
-  //&:nth-of-type(8),
-  //&:last-child {
-    //@include rounded(0 3px 3px 0);
-    //border-right-style: solid;
-  //}
 }
 
 .RESSubscriptionButton {
@@ -69,11 +35,6 @@
 
 .commentarea {
   .menuarea {
-    //@extend %tn-engraved-box;
-    display: inline-block;
-    min-width: 650px;
-    @include rounded(3px);
-
     > .spacer > .dropdown-title,
     #REScommentNavToggle > span:first-child {
       width: 6em;
@@ -87,10 +48,6 @@
       margin-right: 10px;
     }
   }
-
-  > .usertext > .usertext-edit textarea {
-    width: $comment-textbox-width + 10;
-  }
 }
 
 .comment {
@@ -99,20 +56,29 @@
     padding: 0 !important;
   }
 
-  > .entry.RES-keyNav-activeElement {
-    background: $comment-bg !important;
+  &.noncollapsed > .entry {
+    &.RES-keyNav-activeElement {
+      background: $comment-bg !important;
 
-    .usertext {
-      border-right-color: $res-active-element-color;
+      &::after {
+        content: '';
+        background: $res-active-element-color;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        @include rounded(0 3px 3px 0);
+      }
+
+      .md {
+        background: none !important;
+      }
     }
 
-    .md {
-      background: none !important;
+    > .tagline {
+      display: block;
     }
-  }
-
-  .tagline {
-    display: block !important;
   }
 
   .child,
@@ -129,5 +95,29 @@
       text-decoration: none !important;
     }
   }
-
 }
+
+.morerecursion,
+.morechildren,
+.comment.collapsed {
+  > .entry {
+    margin-bottom: 0.3em;
+    &.RES-keyNav-activeElement {
+      background: none !important;
+    }
+  }
+}
+
+.morerecursion .deepthread,
+.morechildren .morecomments,
+.comment.collapsed .tagline {
+  margin: 3px;
+  display: inline-block;
+}
+
+.morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
+.morechildren > .entry.RES-keyNav-activeElement > .morecomments,
+.comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
+  outline: dashed 1px $res-active-element-color;
+}
+

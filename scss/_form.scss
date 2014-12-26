@@ -45,17 +45,32 @@ input[type=password] {
   @extend %tn-info-box;
 }
 
+.usertext {
+  position: relative;
+
+  .usertext-edit {
+    display: inline-block;
+    width: auto !important;
+  }
+
+  .markhelp,
+  .markhelp > table {
+    width: auto;
+    max-width: $comment-textbox-width;
+  }
+}
+
 .roundfield,
 .linefield {
   background: none;
   padding: 0;
 
   &.info-notice {
-    width: 520px;
+    width: $comment-textbox-width;
   }
 
   .usertext-edit textarea {
-    width: 500px;
+    width: $comment-textbox-width;
   }
 }
 
@@ -137,25 +152,47 @@ input[type=password] {
 .formtabs-content,
 .login-form-side,
 .searchfacets,
+.fancy-settings .linefield,
 .searchpane.raisedbox {
   @extend %tn-form-group;
 }
 
-.fancy-settings {
-  padding: 10px;
-  overflow: hidden;
-
-  .linefield {
-    @extend .formtabs-content;
-    margin-bottom: 0.4em;
+.formtabs-content {
+  width: $comment-textbox-width + 10px;
+  textarea {
+    resize: vertical;
   }
+}
+
+.fancy-settings {
+  margin: 10px;
+  overflow: hidden;
 }
 
 .flairgrant,
 .fancy-settings {
+  .save-button {
+    clear: left;
+  }
+
   .linefield {
+    float: left;
+    clear: left;
+    width: auto;
+    min-width: $comment-textbox-width + 24px;
+    margin: 0 0.5em 0.4em 0;
+
     .title {
       color: $link-fg;
+    }
+
+    .delete-field {
+      width: 500px;
+    }
+
+    .gray {
+      font-size: $normal-font-size;
+      color: $main-fg;
     }
 
     .linefield-content {
@@ -268,9 +305,8 @@ input[type=password] {
 .menuarea {
   color: $main-fg;
   overflow: visible;
-  margin: 15px 0 0 10px;
-  padding: 5px;
-  width: 650px;
+  margin: 15px 0 0 10px !important;
+  padding: 5px !important;
   position: relative;
   border: none !important;
 
@@ -482,6 +518,15 @@ input[type=password] {
   }
 }
 
+.link {
+  .report-reasons,
+  .action-form {
+    @extend %tn-info-box;
+    padding: 10px;
+    margin-top: 10px;
+  }
+}
+
 .comment {
   .report-reasons,
   .action-form {
@@ -491,42 +536,46 @@ input[type=password] {
     border: none;
     max-width: 100%;
     width: auto !important;
-    font-size: $normal-font-size;
     @include rounded(0 0 3px 3px);
-
-    > ol {
-      margin-bottom: 10px;
-    }
-  }
-
-  .report-reasons .report-reason-title,
-  .action-form .reason-prompt {
-    font-weight: bold;
-    font-size: 1.1em;
-    display: block;
-    padding: 0 0 6px 0;
-    border-bottom: solid 3px darken($comment-footer-bg, 15%);
-    //background: darken($comment-footer-bg, 10%);
-    margin-bottom: 10px;
-    &::first-letter {
-      text-transform: uppercase;
-    }
-    //text-transform: uppercase;
   }
 }
 
-//.action-form,
-//.flat-list > .report-reasons {
-  //@extend %tn-info-box;
-  //border-color: $default-border-color !important;
-  //padding: 8px;
-//}
+ul.report-reasons > li.report-reason-title,
+.action-form > .reason-prompt {
+  font-weight: bold;
+  font-size: 1.1em;
+  display: block;
+  padding: 0 0 6px 0;
+  border-bottom: solid 3px rgba(0, 0, 0, 0.3) !important;
+  margin-bottom: 10px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
 
-//ul.report-reasons {
-  //list-style: square inside;
-  //font-size: $normal-font-size;
+.report-reasons,
+.action-form {
+  font-size: $normal-font-size;
+}
 
-  //> li.report-reason {
-    //display: list-item;
-  //}
-//}
+.action-form > ol {
+  margin-bottom: 10px;
+}
+
+ul.report-reasons {
+  list-style: square outside;
+  overflow: visible;
+
+  > li.report-reason-title {
+    display: block;
+    line-height: 1em !important;
+  }
+
+  > li.report-reason {
+    display: list-item;
+    white-space: normal;
+    overflow: visible;
+    padding: 0;
+    margin: 0 0 3px 15px;
+  }
+}
