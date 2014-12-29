@@ -1,12 +1,10 @@
 %tn-info-box {
   background: $info-box-bg;
+  color: $info-box-fg;
   border: none;
-  //border: solid 1px $default-border-color;
   font-family: $sans-serif;
-  //@include rounded(3px);
   @include rounded(0);
   @include shadow(0 1px 1px rgba(0, 0, 0, 0.15));
-  //@include shadow(0 1px 0 rgba(255, 255, 255, 0.7));
 }
 
 %tn-tooltip {
@@ -15,7 +13,7 @@
   background: $tooltip-bg;
   color: $tooltip-fg;
   padding: 4px 6px;
-  @include shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  @include shadow(0 3px 4px rgba(0, 0, 0, 0.2));
   @include rounded(3px);
 }
 
@@ -307,7 +305,6 @@ input[type=password] {
   overflow: visible;
   margin: 15px 0 0 10px !important;
   padding: 5px !important;
-  position: relative;
   border: none !important;
 
   &::after {
@@ -373,18 +370,13 @@ input[type=password] {
     > .help-hoverable {
       @extend %tn-tooltip;
       display: none;
-      left: 30%;
-      bottom: 110%;
       color: $tooltip-bg;
       width: 30em;
+      margin: 5px 0 0 -40px;
 
       &::before {
         color: $main-fg;
         content: attr(title);
-      }
-
-      &:nth-child(2) {
-        left: 10%;
       }
     }
 
@@ -404,16 +396,11 @@ input[type=password] {
         }
 
         &.error {
-          @extend %tn-engraved-box;
-          background: darken($main-bg, 14%);
-          position: absolute;
-          z-index: 4000;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          text-align: center;
+          display: inline-block;
+          background: $info-box-bg;
+          padding: 2px 5px;
           font-size: 1em;
+          margin-right: 3px;
           @include rounded(3px);
         }
       }

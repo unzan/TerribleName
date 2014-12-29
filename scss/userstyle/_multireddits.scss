@@ -294,7 +294,7 @@ body.with-listing-chooser {
     font-size: 13px;
     line-height: 1.3em;
     height: 1.3em;
-    @include box-sizing(content-box);
+    @include vendor(box-sizing, content-box);
   }
 
   form.add-sr,
@@ -336,7 +336,7 @@ body.with-listing-chooser {
     vertical-align: middle;
     display: inline-block;
     margin: 0 !important;
-    @include box-sizing(content-box);
+    @include vendor(box-sizing, content-box);
   }
 
   form.add-sr > input.sr-name,

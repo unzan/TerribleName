@@ -41,14 +41,14 @@ $dark-green:      darken($green, 5%);
 $sidebar-width:   300px;
 
 // --- these images are for local test
-$main-bg-image: 'image/noise.jpg';
-$header-bg-image: 'image/banner.jpg';
-$icon-image: 'image/icons.png';
+//$main-bg-image: 'image/noise.jpg';
+//$header-bg-image: 'image/banner.jpg';
+//$icon-image: 'image/icons.png';
 
 // --- and these are for reddit css
-//$main-bg-image: '%%noise%%';
-//$header-bg-image: '%%banner%%';
-//$icon-image: '%%icons%%';
+$main-bg-image: '%%noise%%';
+$header-bg-image: '%%banner%%';
+$icon-image: '%%icons%%';
 
 $sans-serif: 'Liberation Sans', Arial, sans-serif;
 $serif: 'Liberation Serif', 'Times New Roman', serif;
@@ -154,6 +154,7 @@ $misc-spam-color: $violet;
 $misc-remove-color: $red;
 $misc-approve-color: $green;
 $misc-ignore-color: $cyan;
+$misc-selected-bg: $bright-yellow;
 $misc-spam-tag-fg: $white;
 $misc-spam-tagline-bg: lighten($orange, 35%);
 
@@ -174,6 +175,7 @@ $unsubscribe-fg: lighten($main-fg, 30%);
 
 $box-bg: lighten($main-bg, 2%);
 $info-box-bg: $bright-yellow;
+$info-box-fg: $main-fg;
 $form-tab-bg: $box-bg;
 $form-tab-fg: lighten($main-fg, 20%);
 $tooltip-bg: darken($bright-yellow, 10%);

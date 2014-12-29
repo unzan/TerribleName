@@ -1,17 +1,17 @@
-@mixin shadow($shadows...) {
+@mixin vendor($prop, $value...) {
   @if $vendor-prefixes > 1 {
-    -webkit-box-shadow: $shadows;
-    -moz-box-shadow: $shadows;
+    -webkit-#{$prop}: $value;
+    -moz-#{$prop}: $value;
   }
-  box-shadow: $shadows;
+  #{$prop}: $value;
+}
+
+@mixin shadow($shadows...) {
+  @include vendor(box-shadow, $shadows);
 }
 
 @mixin rounded($radius) {
-  @if $vendor-prefixes > 1 {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-  }
-  border-radius: $radius;
+  @include vendor(border-radius, $radius);
 }
 
 @mixin linear-gradient($definition...) {
@@ -20,14 +20,6 @@
     background: -moz-linear-gradient($definition);
   }
   background: linear-gradient($definition);
-}
-
-@mixin box-sizing($value) {
-  @if $vendor-prefixes > 1 {
-    -webkit-box-sizing: $value;
-    -moz-box-sizing: $value;
-  }
-  box-sizing: $value;
 }
 
 @mixin box-with-line-num($fg, $bg) {
@@ -57,18 +49,4 @@
     direction: rtl;
     overflow: hidden;
   }
-}
-
-@mixin transform($definition...) {
-  @if $vendor-prefixes > 1 {
-    -webkit-transform: $definition;
-    -moz-transform: $definition;
-  }
-  transform: $definition;
-}
-
-@mixin transform-origin($definition) {
-  -webkit-transform-origin: $definition;
-  -moz-transform-origin: $definition;
-  transform-origin: $definition;
 }

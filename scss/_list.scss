@@ -309,16 +309,12 @@
 
 .big-mod-buttons {
   .pretty-button {
-    display: inline;
+    display: inline-block;
     background: none;
     border: none;
     padding: 0;
     font-size: $normal-font-size;
     @include rounded(0);
-
-    &:hover {
-      text-decoration: underline !important;
-    }
 
     &::before,
     &::after {
@@ -336,7 +332,7 @@
 
     &.pressed {
       font-weight: bold;
-      background: none;
+      background: $misc-selected-bg;
     }
   }
 
@@ -358,3 +354,8 @@
     color: $misc-ignore-color;
   }
 }
+
+.comment .pretty-button:hover {
+  text-decoration: underline !important;
+}
+

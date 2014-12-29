@@ -17,7 +17,7 @@
  * [3]: http://de.wikipedia.org/wiki/Benutzer:Schaengel
  */
 body {
-  background: #eaeaea url("image/noise.jpg") left top repeat;
+  background: #eaeaea url("%%noise%%") left top repeat;
   color: #111;
   font-family: "Liberation Sans", Arial, sans-serif;
 }
@@ -59,14 +59,14 @@ hr {
   border: none;
 }
 
-.menuarea .spacer > .toggle > .option.active.error, .subscribers,
+.subscribers,
 .users-online {
   padding: 5px;
   background: rgba(0, 0, 0, 0.14);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.link .usertext .md, .wiki-page .wiki-page-content .md.wiki, .res .RESDialogSmall.livePreview {
+.link .usertext .md, .wiki-page .wiki-page-content .md.wiki {
   background: -webkit-linear-gradient(top, #fff, #f7f7f7);
   background: -moz-linear-gradient(top, #fff, #f7f7f7);
   background: linear-gradient(top, #fff, #f7f7f7);
@@ -80,8 +80,8 @@ hr {
 .linkflairlabel,
 .flair {
   display: inline-block;
-  font-size: 12px !important;
-  border: solid 1px rgba(0, 0, 0, 0.14);
+  font-size: 13px !important;
+  border: solid 1px rgba(0, 0, 0, 0.18);
   line-height: 1.2em;
   padding: 1px 4px;
   vertical-align: middle;
@@ -100,7 +100,7 @@ hr {
 button.btn,
 input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 .res .RESDashboardToggle,
-.res .RESDashboardToggle.remove, .res #BigEditor button, .res #alert_message > input[type=button], .res.res-nightmode .content button,
+.res .RESDashboardToggle.remove, .res #alert_message > input[type=button], .res #BigEditor button, .res.res-nightmode .content button,
 .res.res-nightmode .content input[type=submit],
 .res.res-nightmode button,
 .res.res-nightmode input[type=submit] {
@@ -133,7 +133,7 @@ input[type=submit], .res .RESshortcutside, .res .RESshortcutside.remove,
 .formtabs-content button:visited,
 button.btn:visited,
 input[type=submit]:visited, .res .RESshortcutside:visited,
-.res .RESDashboardToggle:visited, .res #BigEditor button:visited, .res #alert_message > input[type=button]:visited,
+.res .RESDashboardToggle:visited, .res #alert_message > input[type=button]:visited, .res #BigEditor button:visited,
 .res.res-nightmode button:visited,
 .res.res-nightmode input[type=submit]:visited {
   color: #fff;
@@ -148,7 +148,7 @@ input[type=submit]:visited, .res .RESshortcutside:visited,
 .formtabs-content button:hover,
 button.btn:hover,
 input[type=submit]:hover, .res .RESshortcutside:hover,
-.res .RESDashboardToggle:hover, .res #BigEditor button:hover, .res #alert_message > input[type=button]:hover,
+.res .RESDashboardToggle:hover, .res #alert_message > input[type=button]:hover, .res #BigEditor button:hover,
 .res.res-nightmode button:hover,
 .res.res-nightmode input[type=submit]:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus,
 .fancy-settings button:focus,
@@ -160,7 +160,7 @@ input[type=submit]:hover, .res .RESshortcutside:hover,
 .formtabs-content button:focus,
 button.btn:focus,
 input[type=submit]:focus, .res .RESshortcutside:focus,
-.res .RESDashboardToggle:focus, .res #BigEditor button:focus, .res #alert_message > input[type=button]:focus,
+.res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus, .res #BigEditor button:focus,
 .res.res-nightmode button:focus,
 .res.res-nightmode input[type=submit]:focus {
   color: #fff;
@@ -179,7 +179,7 @@ input[type=submit]:focus, .res .RESshortcutside:focus,
 .formtabs-content button:active,
 button.btn:active,
 input[type=submit]:active, .res .RESshortcutside:active,
-.res .RESDashboardToggle:active, .res #BigEditor button:active, .res #alert_message > input[type=button]:active,
+.res .RESDashboardToggle:active, .res #alert_message > input[type=button]:active, .res #BigEditor button:active,
 .res.res-nightmode button:active,
 .res.res-nightmode input[type=submit]:active {
   background: -webkit-linear-gradient(top, #cb4b16, #9d3a11);
@@ -206,8 +206,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .menuarea .spacer .toggle .togglebutton,
 .menuarea .spacer .dropdown.lightdrop,
 .res .RESSubscriptionButton,
-.res button.RESBigEditorPop,
 .res #BigEditor .RESCloseButton,
+.res button.RESBigEditorPop,
 .res .markdownEditor .RESMacroDropdownTitle,
 .res #alert_message .buttonContainer > input[type=button] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.12);
@@ -225,8 +225,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .menuarea .spacer .toggle .togglebutton,
 .menuarea .spacer .dropdown.lightdrop,
 .res .RESSubscriptionButton,
-.res button.RESBigEditorPop,
 .res #BigEditor .RESCloseButton,
+.res button.RESBigEditorPop,
 .res .markdownEditor .RESMacroDropdownTitle,
 .res #alert_message .buttonContainer > input[type=button] {
   color: #6b6b6b;
@@ -249,8 +249,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .menuarea .spacer .toggle .togglebutton:hover,
 .menuarea .spacer .dropdown.lightdrop:hover,
 .res .RESSubscriptionButton:hover,
-.res button.RESBigEditorPop:hover,
 .res #BigEditor .RESCloseButton:hover,
+.res button.RESBigEditorPop:hover,
 .res .markdownEditor .RESMacroDropdownTitle:hover,
 .res #alert_message .buttonContainer > input[type=button]:hover,
 .wiki-page .pageactions > .wikiaction:focus,
@@ -259,8 +259,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .menuarea .spacer .toggle .togglebutton:focus,
 .menuarea .spacer .dropdown.lightdrop:focus,
 .res .RESSubscriptionButton:focus,
-.res button.RESBigEditorPop:focus,
 .res #BigEditor .RESCloseButton:focus,
+.res button.RESBigEditorPop:focus,
 .res .markdownEditor .RESMacroDropdownTitle:focus,
 .res #alert_message .buttonContainer > input[type=button]:focus {
   text-decoration: none;
@@ -275,8 +275,8 @@ input[type=submit]:active, .res .RESshortcutside:active,
 .menuarea .spacer .toggle .togglebutton:active,
 .menuarea .spacer .dropdown.lightdrop:active,
 .res .RESSubscriptionButton:active,
-.res button.RESBigEditorPop:active,
 .res #BigEditor .RESCloseButton:active,
+.res button.RESBigEditorPop:active,
 .res .markdownEditor .RESMacroDropdownTitle:active,
 .res #alert_message .buttonContainer > input[type=button]:active {
   background: -webkit-linear-gradient(top, #efefef, #e0e0e0);
@@ -446,9 +446,10 @@ input[type=submit] {
 }
 
 .infobar, .unvotable-message, .link .report-reasons,
-.link .action-form, .linkinfo,
+.link .action-form, .contest-mode.infobar, .contest-mode.unvotable-message, .linkinfo,
 .content.submit .info-notice {
   background: #FFF8DC;
+  color: #111;
   border: none;
   font-family: "Liberation Sans", Arial, sans-serif;
   border-radius: 0;
@@ -461,7 +462,7 @@ input[type=submit] {
   background: #ffeea9;
   color: #111;
   padding: 4px 6px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
 
@@ -724,7 +725,6 @@ input[type=password] {
   overflow: visible;
   margin: 15px 0 0 10px !important;
   padding: 5px !important;
-  position: relative;
   border: none !important;
 }
 .menuarea::after {
@@ -777,17 +777,13 @@ input[type=password] {
 }
 .menuarea .spacer > .help-hoverable {
   display: none;
-  left: 30%;
-  bottom: 110%;
   color: #ffeea9;
   width: 30em;
+  margin: 5px 0 0 -40px;
 }
 .menuarea .spacer > .help-hoverable::before {
   color: #111;
   content: attr(title);
-}
-.menuarea .spacer > .help-hoverable:nth-child(2) {
-  left: 10%;
 }
 .menuarea .spacer > .toggle a {
   font-size: 1em;
@@ -800,15 +796,11 @@ input[type=password] {
   margin-right: 4px;
 }
 .menuarea .spacer > .toggle > .option.active.error {
-  background: #c6c6c6;
-  position: absolute;
-  z-index: 4000;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  text-align: center;
+  display: inline-block;
+  background: #FFF8DC;
+  padding: 2px 5px;
   font-size: 1em;
+  margin-right: 3px;
   border-radius: 3px;
 }
 .menuarea .drop-choices.lightdrop {
@@ -946,7 +938,7 @@ ul.report-reasons > li.report-reason {
 }
 
 #header {
-  background: #111 url("image/banner.jpg") 0 0 no-repeat;
+  background: #111 url("%%banner%%") 0 0 no-repeat;
   color: #c6c6c6;
   border-bottom: none;
   height: 140px;
@@ -1348,15 +1340,12 @@ ul.report-reasons > li.report-reason {
 }
 
 .big-mod-buttons .pretty-button {
-  display: inline;
+  display: inline-block;
   background: none;
   border: none;
   padding: 0;
   font-size: 13px;
   border-radius: 0;
-}
-.big-mod-buttons .pretty-button:hover {
-  text-decoration: underline !important;
 }
 .big-mod-buttons .pretty-button::before, .big-mod-buttons .pretty-button::after {
   color: #6b6b6b !important;
@@ -1370,7 +1359,7 @@ ul.report-reasons > li.report-reason {
 }
 .big-mod-buttons .pretty-button.pressed {
   font-weight: bold;
-  background: none;
+  background: #FFF8DC;
 }
 .big-mod-buttons > span[role=radiogroup] > .pretty-button:first-child {
   color: #6c71c4;
@@ -1383,6 +1372,10 @@ ul.report-reasons > li.report-reason {
 }
 .big-mod-buttons > .pretty-button {
   color: #2aa198;
+}
+
+.comment .pretty-button:hover {
+  text-decoration: underline !important;
 }
 
 .md table td, .res #alert_message table.commentPreview td,
@@ -1484,6 +1477,7 @@ ul.report-reasons > li.report-reason {
 .commentarea {
   border-top: solid 1px rgba(0, 0, 0, 0.2);
   padding-top: 10px;
+  position: relative;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 .commentarea > .infobar, .commentarea > .unvotable-message {
@@ -1607,6 +1601,9 @@ ul.report-reasons > li.report-reason {
   max-width: 63em;
   padding: 2px 14px 2px 10px;
 }
+.comment.noncollapsed > .entry .usertext-edit textarea {
+  max-width: 67em;
+}
 .comment.noncollapsed > .entry .flat-list.buttons {
   background: whitesmoke;
   border-top: solid 1px #e6e6e6;
@@ -1616,6 +1613,9 @@ ul.report-reasons > li.report-reason {
 .comment.noncollapsed > .entry .flat-list.buttons li a {
   font-weight: normal;
 }
+.comment.deleted > .entry {
+  opacity: 0.7;
+}
 .comment.deleted > .entry > .usertext > .usertext-body {
   display: none;
 }
@@ -1623,6 +1623,20 @@ ul.report-reasons > li.report-reason {
 .comment.collapsed > .entry,
 .morerecursion > .entry {
   margin-bottom: 0.7em;
+}
+
+.contest-mode.infobar, .contest-mode.unvotable-message {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  max-width: 300px;
+  margin: 0;
+  font-size: 0;
+}
+.contest-mode.infobar:hover, .contest-mode.unvotable-message:hover,
+.contest-mode.infobar > strong,
+.contest-mode.unvotable-message > strong {
+  font-size: 13px;
 }
 
 .side {
@@ -1825,11 +1839,11 @@ ul.report-reasons > li.report-reason {
 .icon-menu .reddit-unmoderated::before,
 .icon-menu .edit-stylesheet::before,
 .icon-menu .wikiaction-revisions::before,
-.icon-menu .wikiaction-pages::before, .res .gearIcon, .res button.RESBigEditorPop::before,
-.res #BigEditor .RESCloseButton::before,
+.icon-menu .wikiaction-pages::before, .res .gearIcon, .res #BigEditor .RESCloseButton::before,
+.res button.RESBigEditorPop::before,
 .res .markdownEditor .RESMacroDropdownTitle::before {
   display: inline-block !important;
-  background-image: url("image/icons.png") !important;
+  background-image: url("%%icons%%") !important;
   background-repeat: no-repeat !important;
   width: 16px !important;
   height: 16px !important;
@@ -2342,8 +2356,8 @@ table.diff tbody .diff_header:not([id]) {
 .res .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
   outline: dashed 1px #ed855a;
 }
-.res button.RESBigEditorPop,
 .res #BigEditor .RESCloseButton,
+.res button.RESBigEditorPop,
 .res .markdownEditor .RESMacroDropdownTitle {
   font-size: 0 !important;
   width: 16px;
@@ -2353,8 +2367,8 @@ table.diff tbody .diff_header:not([id]) {
   text-indent: -100px;
   margin-right: 2px;
 }
-.res button.RESBigEditorPop::before,
 .res #BigEditor .RESCloseButton::before,
+.res button.RESBigEditorPop::before,
 .res .markdownEditor .RESMacroDropdownTitle::before {
   content: '';
   position: absolute;
@@ -2407,6 +2421,14 @@ table.diff tbody .diff_header:not([id]) {
   right: 0;
   top: 22px;
 }
+.res .BERight > h3,
+.res .RESDialogSmall.livePreview > h3,
+.res .BELeft,
+.res .markdownEditor-wrapper {
+  background: -webkit-linear-gradient(top, #f7f7f7, #eaeaea);
+  background: -moz-linear-gradient(top, #f7f7f7, #eaeaea);
+  background: linear-gradient(top, #f7f7f7, #eaeaea);
+}
 .res .markdownEditor-wrapper {
   width: auto;
   position: relative;
@@ -2415,9 +2437,6 @@ table.diff tbody .diff_header:not([id]) {
   border-bottom: none;
   margin: 0;
   border-radius: 3px 3px 0 0;
-  background: -webkit-linear-gradient(top, #f7f7f7, #eaeaea);
-  background: -moz-linear-gradient(top, #f7f7f7, #eaeaea);
-  background: linear-gradient(top, #f7f7f7, #eaeaea);
 }
 .res .markdownEditor-wrapper + div > textarea {
   margin: 0;
@@ -2443,10 +2462,25 @@ table.diff tbody .diff_header:not([id]) {
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px white;
 }
+.res .BERight,
+.res .RESDialogSmall.livePreview {
+  background: #fff;
+  color: #111;
+}
+.res .BERight > h3,
+.res .RESDialogSmall.livePreview > h3 {
+  border-bottom-color: #aaaaaa;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
 .res .RESDialogSmall.livePreview {
   max-width: 520px;
-  border: solid 1px rgba(0, 0, 0, 0.2);
+  border: solid 1px #aaaaaa;
   margin-top: 1em;
+}
+.res .RESDialogSmall.livePreview > h3 {
+  padding: 7px;
+  height: auto;
+  border-radius: 3px 3px 0 0;
 }
 .res .usertext-edit .RESDialogSmall .md.RESDialogContents,
 .res .RESDialogSmall.livePreview {
@@ -2455,60 +2489,11 @@ table.diff tbody .diff_header:not([id]) {
 .res .usertext-edit .RESDialogSmall .md.RESDialogContents {
   margin: 0 10px;
 }
-.res #BigPreview.md,
 .res .usertext-edit .RESDialogSmall .md.RESDialogContents,
 .res .RESDialogSmall.livePreview > .md {
   background: none !important;
   border-radius: 0;
   box-shadow: none;
-}
-.res #BigEditor > .RESDialogSmall.BERight > h3,
-.res .RESDialogSmall.livePreview > h3 {
-  position: static;
-  color: #444444;
-  background: #e6e6e6;
-  font-weight: bold;
-  margin: 0;
-  top: 0;
-  border-radius: 3px 3px 0 0;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 2px 3px rgba(0, 0, 0, 0.14);
-}
-.res #BigEditor > .RESDialogSmall {
-  border: none !important;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-}
-.res #BigEditor > .RESDialogSmall.BELeft {
-  background: #eaeaea url("image/noise.jpg") left top repeat;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
-}
-.res #BigEditor > .RESDialogSmall.BELeft > h3 {
-  display: none;
-}
-.res #BigEditor > .RESDialogSmall.BELeft > .markdownEditor-wrapper {
-  display: none;
-}
-.res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents {
-  top: 10px;
-  right: 8px;
-  padding: 0;
-  padding-bottom: 100px !important;
-}
-.res #BigEditor > .RESDialogSmall.BERight > .RESDialogContents {
-  top: 40px;
-  margin: 0 !important;
-}
-.res #BigEditor .RESCloseButton {
-  padding-right: 4px;
-  top: 9px;
-}
-.res #BigEditor .RESCloseButton.RESFadeButton {
-  right: 42px;
-}
-.res #BigEditor .RESCloseButton.RESFadeButton::before {
-  background-position: -96px -48px;
-}
-.res #BigEditor .RESCloseButton.close::before {
-  background-position: 0 -32px;
 }
 .res .RESCharCounter {
   padding: 1px 6px;
@@ -2529,6 +2514,56 @@ table.diff tbody .diff_header:not([id]) {
 .res #alert_message > input[type=button] {
   font-size: 13px;
   text-transform: capitalize;
+}
+.res #BigEditor > .RESDialogSmall {
+  border: none;
+  margin: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+.res #BigEditor > .RESDialogSmall > .RESDialogContents {
+  margin: 0;
+}
+.res #BigEditor > .RESDialogSmall.BELeft > h3 {
+  display: none;
+}
+.res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents {
+  padding: 0 0 100px 0 !important;
+  width: 100%;
+  outline: dashed 1px blue;
+}
+.res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents > .markdownEditor-wrapper {
+  border: none;
+}
+.res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents > #BigText {
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  overflow: auto;
+  border-left: none !important;
+  border-right: none !important;
+  box-sizing: padding-box;
+  border-radius: 0;
+}
+.res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents > .BEFoot {
+  margin: 5px;
+}
+.res #BigEditor > .RESDialogSmall.BERight > .RESDialogContents {
+  top: 40px;
+  padding: 5px 10px;
+  margin: 0 !important;
+}
+.res #BigEditor .RESCloseButton {
+  padding-right: 4px;
+  top: 9px;
+}
+.res #BigEditor .RESCloseButton.RESFadeButton {
+  right: 42px;
+}
+.res #BigEditor .RESCloseButton.RESFadeButton::before {
+  background-position: -96px -48px;
+}
+.res #BigEditor .RESCloseButton.close::before {
+  background-position: 0 -32px;
 }
 .res.res-nightmode {
   color: #d1d1d1;
@@ -2560,7 +2595,7 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0 1px 0 #3f3f3f, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 .res.res-nightmode > #header {
-  background: #111 url("image/banner.jpg") left top no-repeat !important;
+  background: #111 url("%%banner%%") left top no-repeat !important;
 }
 .res.res-nightmode > #header #sr-header-area {
   background: rgba(0, 0, 0, 0.5) !important;

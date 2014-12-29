@@ -12,7 +12,7 @@
     overflow: hidden;
     padding-left: 16px;
     margin-right: 4px;
-    @include box-sizing(border-box);
+    @include vendor(box-sizing, border-box);
 
     &[alt="moderator"] {
       background-position: -16px -32px;
