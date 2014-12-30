@@ -12,9 +12,6 @@ $vendor-prefixes: 1;
 // squarish button
 $expando-button-style: new;
 
-// set to `yes` to hide links under comment entry
-$hide-comment-links: no;
-
 $max-comment-width: 63em;
 
 // --- PALETTE ---------------------------------------------
@@ -41,9 +38,9 @@ $dark-green:      darken($green, 5%);
 $sidebar-width:   300px;
 
 // --- these images are for local test
-//$main-bg-image: 'image/noise.jpg';
-//$header-bg-image: 'image/banner.jpg';
-//$icon-image: 'image/icons.png';
+$main-bg-image: 'image/noise.jpg';
+$header-bg-image: 'image/banner.jpg';
+$icon-image: 'image/icons.png';
 
 // --- and these are for reddit css
 $main-bg-image: '%%noise%%';
@@ -180,6 +177,8 @@ $form-tab-bg: $box-bg;
 $form-tab-fg: lighten($main-fg, 20%);
 $tooltip-bg: darken($bright-yellow, 10%);
 $tooltip-fg: $main-fg;
+//$stats-bg: lighten($main-bg, 6%);
+$stats-bg: lighten($main-bg, 6%);
 
 $res-editor-toolbar-bg: $small-button-bg;
 $res-night-bg-image: 'image/dark-noise.jpg';

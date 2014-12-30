@@ -58,49 +58,43 @@
 
 .subscribers,
 .users-online {
-  @extend %tn-engraved-box;
   display: inline-block;
   vertical-align: top;
-  width: 139px;
+  width: 145px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
+  border: solid 1px $default-border-color;
+  padding: 5px;
+  @include vendor(box-sizing, padding-box);
+  @include linear-gradient(top, $stats-bg, darken($stats-bg, 6%));
+  @include shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+
   .number {
     font-size: 1.3em;
     font-weight: bold;
+    display: block;
   }
 
   .word {
-    display: none;
-  }
-
-  &::after {
     display: block;
     font-size: 0.9em;
-    font-weight: normal;
-    text-transform: uppercase;
+    color: lighten($sidebar-fg, 10%);
   }
 }
 
 .subscribers {
-  margin-right: 1px;
-  @include rounded(5px 0 0 5px);
+  @include rounded(3px 0 0 3px);
+  border-right: none;
 
-  &::after {
-    content: 'subscribers';
-  }
 }
 
 .users-online {
-  @include rounded(0 5px 5px 0);
+  @include rounded(0 3px 3px 0);
 
   &::before {
     display: none;
-  }
-
-  &::after {
-    content: 'online';
   }
 }
 

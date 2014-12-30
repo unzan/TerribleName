@@ -1,3 +1,21 @@
+%tn-active-comment-entry {
+  background: $comment-bg !important;
+  &::after {
+    content: '';
+    background: $res-active-element-color;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    @include rounded(0 3px 3px 0);
+  }
+}
+
+%tn-active-collapsed-comment-indicator {
+  outline: dashed 1px $res-active-element-color;
+}
+
 #REScommentNavBox {
   z-index: 9000;
 }
@@ -58,19 +76,7 @@
 
   &.noncollapsed > .entry {
     &.RES-keyNav-activeElement {
-      background: $comment-bg !important;
-
-      &::after {
-        content: '';
-        background: $res-active-element-color;
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        @include rounded(0 3px 3px 0);
-      }
-
+      @extend %tn-active-comment-entry;
       .md {
         background: none !important;
       }
@@ -118,6 +124,6 @@
 .morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
 .morechildren > .entry.RES-keyNav-activeElement > .morecomments,
 .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
-  outline: dashed 1px $res-active-element-color;
+  @extend %tn-active-collapsed-comment-indicator;
 }
 

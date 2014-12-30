@@ -59,6 +59,48 @@
   }
 }
 
+%tn-comment-tagline {
+  display: block;
+  padding: 6px 14px 6px 10px;
+  border-bottom: solid 1px darken($comment-bg, 10%);
+  @include rounded(3px 3px 0 0);
+}
+
+%tn-comment-footer {
+  background: $comment-footer-bg;
+  border-top: solid 1px darken($comment-bg, 10%);
+  padding: 4px 12px 4px 8px;
+  @include rounded(0 0 3px 3px);
+
+  li {
+    a {
+      font-weight: normal;
+    }
+  }
+}
+
+.nestedlisting {
+  // this is the vertical line on the left of comment
+  .thing.comment.noncollapsed::before {
+    content: '';
+    position: absolute;
+    background: darken($main-bg, 15%);
+    top: 42px;
+    left: 9px;
+    width: 1px;
+    bottom: 8px;
+  }
+}
+
+.linklisting {
+  > .comment {
+    @extend %tn-list-entry;
+    > .parent {
+      padding: 10px 32px 5px 32px;
+    }
+  }
+}
+
 .comment {
   font-size: $normal-font-size;
 
@@ -114,16 +156,6 @@
     display: block;
     &.thing {
       position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        background: darken($main-bg, 15%);
-        top: 42px;
-        left: 9px;
-        width: 1px;
-        bottom: 8px;
-      }
     }
 
     > .entry {
@@ -135,10 +167,7 @@
       margin: 0 2px 13px 2px;
 
       > .tagline {
-        display: block;
-        padding: 6px 14px 6px 10px;
-        border-bottom: solid 1px darken($comment-bg, 10%);
-        @include rounded(3px 3px 0 0);
+        @extend %tn-comment-tagline;
       }
 
       > .usertext {
@@ -163,16 +192,7 @@
       }
 
       .flat-list.buttons {
-        background: $comment-footer-bg;
-        border-top: solid 1px darken($comment-bg, 10%);
-        padding: 4px 12px 4px 8px;
-        @include rounded(0 0 3px 3px);
-
-        li {
-          a {
-            font-weight: normal;
-          }
-        }
+        @extend %tn-comment-footer;
       }
     }
   }

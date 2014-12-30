@@ -21,6 +21,14 @@
   }
 }
 
+%tn-quote {
+  border-left: solid 3px $quote-border-color;
+  padding: 0.2em 0.5em;
+  background: $quote-bg;
+  color: $quote-fg;
+  margin: 0.4em;
+}
+
 .md {
   line-height: 1.5em;
   max-width: none;
@@ -61,11 +69,7 @@
   }
 
   blockquote {
-    border-left: solid 3px $quote-border-color;
-    padding: 0.2em 0.5em;
-    background: $quote-bg;
-    color: $quote-fg;
-    margin: 0.4em;
+    @extend %tn-quote;
   }
 
   code,

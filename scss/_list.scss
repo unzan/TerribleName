@@ -12,13 +12,14 @@
     @extend %tn-list-entry-separator;
   }
 
-  .usertext {
-    padding-right: 15px;
-    .md {
-      @extend %tn-raised-box;
+  &.link {
+    .usertext {
+      padding-right: 15px;
+      .md {
+        @extend %tn-raised-box;
+      }
     }
   }
-
 }
 
 .wiki-page,
@@ -93,10 +94,16 @@
   }
 }
 
-.thing.stickied {
-  a.title {
-    color: $sticky-link-fg !important;
-    font-weight: bold !important;
+.thing {
+  .title {
+    @extend %tn-link;
+  }
+
+  &.stickied {
+    a.title {
+      color: $sticky-link-fg !important;
+      font-weight: bold !important;
+    }
   }
 }
 
@@ -228,10 +235,6 @@
 }
 
 .link {
-  .title {
-    @extend %tn-link;
-  }
-
   .tagline {
     margin-top: 4px;
 
@@ -307,55 +310,7 @@
   padding: 4px 8px;
 }
 
-.big-mod-buttons {
-  .pretty-button {
-    display: inline-block;
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: $normal-font-size;
-    @include rounded(0);
-
-    &::before,
-    &::after {
-      color: $list-entry-fg !important;
-      display: inline-block;
-    }
-
-    &::before {
-      content: '[';
-    }
-
-    &::after {
-      content: ']';
-    }
-
-    &.pressed {
-      font-weight: bold;
-      background: $misc-selected-bg;
-    }
-  }
-
-  > span[role=radiogroup] > .pretty-button {
-    &:first-child {
-      color: $misc-spam-color;
-    }
-
-    &:nth-child(2) {
-      color: $misc-remove-color;
-    }
-
-    &.positive {
-      color: $misc-approve-color;
-    }
-  }
-
-  > .pretty-button {
-    color: $misc-ignore-color;
-  }
+#noresults {
+  margin: 7px 15px;
+  font-style: italic;
 }
-
-.comment .pretty-button:hover {
-  text-decoration: underline !important;
-}
-
