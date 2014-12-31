@@ -138,7 +138,7 @@ $flair-fg: $main-fg;
 $notice-bubble-bg: $bright-yellow;
 
 $list-entry-fg: darken($gray, 50%);
-$comment-bg: $white;
+$comment-bg: $text-bg;
 $comment-footer-bg: darken($comment-bg, 4%);
 $deleted-comment-bg: none;
 $highlighted-comment-outline-color: rgba(0, 0, 0, 0.2);
@@ -182,9 +182,10 @@ $stats-bg: lighten($main-bg, 6%);
 
 $res-editor-toolbar-bg: $small-button-bg;
 $res-night-bg-image: 'image/dark-noise.jpg';
-$res-night-bg-image: '%%dark-noise%%';
-$res-night-bg: lighten($black, 5%);
+//$res-night-bg-image: '%%dark-noise%%';
 $res-night-bg: $black;
+//$res-night-bg: lighten($black, 10%);
+//$res-night-bg: #1A1615;
 $res-night-fg: darken($gray, 10%);
 $res-dark-button-bg: lighten($res-night-bg, 40%);
 $res-dark-button-fg: $res-night-bg;

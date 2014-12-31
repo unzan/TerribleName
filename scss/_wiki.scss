@@ -29,7 +29,8 @@
     }
 
     .md.wiki {
-      @extend %tn-raised-box;
+      @extend %tn-simple-text-container;
+
       > .toc > ul {
         border: none;
         padding: 10px;
@@ -39,20 +40,12 @@
   }
 
   .wikititle {
+    @extend %tn-bracketed;
     display: inline-block;
     margin: 9px 15px 0 15px;
     line-height: 1em;
     padding: 0;
     font-weight: bold;
-
-    // i'm not sure why i use brackets, but i like it :)
-    &::before {
-      content: '[';
-    }
-
-    &::after {
-      content: ']';
-    }
   }
 
   // wiki toolbar

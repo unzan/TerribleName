@@ -41,8 +41,12 @@
 }
 
 %tn-comment-bubble {
+  @extend %tn-simple-text-container;
   position: relative;
   background: $comment-bg;
+  padding: 0;
+  display: inline-block;
+  overflow: visible;
   @include rounded(3px);
   @include shadow(0 1px 2px rgba(0, 0, 0, 0.2));
 
@@ -160,10 +164,7 @@
 
     > .entry {
       @extend %tn-comment-bubble;
-      padding: 0;
-      display: inline-block;
       max-width: 95%;
-      overflow: visible;
       margin: 0 2px 13px 2px;
 
       > .tagline {

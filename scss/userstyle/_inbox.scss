@@ -70,9 +70,6 @@
   &.noncollapsed {
     > .entry {
       @extend %tn-comment-bubble;
-      display: inline-block;
-      padding: 0;
-      overflow: visible;
       margin-bottom: 10px;
       max-width: $max-comment-width;
 

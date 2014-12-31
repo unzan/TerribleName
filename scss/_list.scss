@@ -16,7 +16,7 @@
     .usertext {
       padding-right: 15px;
       .md {
-        @extend %tn-raised-box;
+        @extend %tn-simple-text-container;
       }
     }
   }
@@ -200,7 +200,6 @@
   acronym {
     display: inline-block;
     font-size: ($normal-font-size - 2);
-    //line-height: 1em;
     padding: 0 3px;
     text-align: center;
     border: none !important;

@@ -46,9 +46,12 @@
         }
       }
 
-      .usertext > .usertext-body > .md {
-        @extend %tn-dark-raised-box;
-        color: $res-night-fg;
+      &,
+      &.RES-keyNav-activeElement {
+        .usertext > .usertext-body > .md {
+          @extend %tn-dark-text-container;
+          color: $res-night-fg;
+        }
       }
     }
 

@@ -1,5 +1,5 @@
 %tn-button {
-  color: $button-fg;
+  color: $button-fg !important;
   font-family: $sans-serif;
   padding: 2px 8px;
   width: auto;
@@ -8,7 +8,7 @@
   line-height: 1.5em;
   vertical-align: middle;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-  text-decoration: none;
+  text-decoration: none !important;
   border: none;
   text-align: center;
   margin-right: 3px;
@@ -16,14 +16,9 @@
   @include shadow(0 1px 2px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3));
   @include rounded(4px);
 
-  &:visited {
-    color: $button-fg;
-  }
-
   &:hover,
   &:focus {
     color: $button-fg;
-    text-decoration: none !important;
     @include linear-gradient(top, lighten($button-bg, 5%), darken($button-bg, 5%));
   }
 
@@ -31,6 +26,13 @@
     @include linear-gradient(top, $button-bg, darken($button-bg, 10%));
     @include shadow(inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7));
   }
+}
+
+%tn-default-button {
+  @extend %tn-button;
+  display: inline-block;
+  padding-bottom: 3px;
+  text-transform: capitalize;
 }
 
 %tn-button-reset {
@@ -48,16 +50,11 @@
 %tn-small-button-shadowless,
 %tn-small-button {
   color: $small-button-fg;
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 2px 6px;
   border: solid 1px darken($small-button-bg, 30%);
   @include linear-gradient(top, $small-button-bg, darken($small-button-bg, 6%));
   @include rounded(3px);
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
 }
 
 
@@ -72,11 +69,8 @@
   @extend %tn-small-button;
   margin: 0;
   border-right-style: none;
+  color: $small-button-fg !important;
   @include rounded(0);
-
-  &:visited {
-    color: $small-button-fg;
-  }
 }
 
 %tn-switch-button-round-left {
@@ -156,10 +150,10 @@
 
 .submit {
   &.disabled > .morelink > a {
-    color: $button-disabled-fg;
+    color: $button-disabled-fg !important;
+    background: $button-disabled-bg;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
     @include shadow(0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2));
-    @include linear-gradient(top, $button-disabled-bg, darken($button-disabled-bg, 7%));
   }
 
   &.mod-override > .morelink {
@@ -200,7 +194,6 @@
   }
 }
 
-%tn-default-button,
 .fancy-settings button,
 .usertext-edit button.save,
 .usertext-edit button.cancel,
@@ -210,10 +203,7 @@
 .formtabs-content button,
 button.btn,
 input[type=submit] {
-  @extend %tn-button;
-  display: inline-block;
-  padding-bottom: 3px;
-  text-transform: capitalize;
+  @extend %tn-default-button;
 }
 
 
@@ -334,33 +324,38 @@ input[type=submit] {
   @extend %tn-button-reset;
 }
 
+a.pretty-button {
+  @extend %tn-bracketed;
+  display: inline-block;
+  border: none;
+  padding: 0;
+  font-size: $normal-font-size;
+  @include rounded(0);
+
+  &,
+  &.neutral {
+    background: none;
+  }
+
+  &::before,
+  &::after {
+    color: $list-entry-fg !important;
+    display: inline-block;
+  }
+
+  &.pressed {
+    font-weight: bold;
+    background: $misc-selected-bg !important;
+  }
+
+  &[onclick*=ignore_reports] {
+    color: $misc-ignore-color;
+  }
+}
+
 .big-mod-buttons {
   .pretty-button {
-    display: inline-block;
     background: none;
-    border: none;
-    padding: 0;
-    font-size: $normal-font-size;
-    @include rounded(0);
-
-    &::before,
-    &::after {
-      color: $list-entry-fg !important;
-      display: inline-block;
-    }
-
-    &::before {
-      content: '[';
-    }
-
-    &::after {
-      content: ']';
-    }
-
-    &.pressed {
-      font-weight: bold;
-      background: $misc-selected-bg;
-    }
   }
 
   > span[role=radiogroup] > .pretty-button {
@@ -375,10 +370,6 @@ input[type=submit] {
     &.positive {
       color: $misc-approve-color;
     }
-  }
-
-  > .pretty-button {
-    color: $misc-ignore-color;
   }
 }
 

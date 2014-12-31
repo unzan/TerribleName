@@ -62,21 +62,22 @@
     border: none;
   }
 
-  .link .usertext .md, .linklisting > .link.comment .usertext .md, .link.thing.subreddit .usertext .md, .wiki-page .wiki-page-content .md.wiki {
-    background: -webkit-linear-gradient(top, #fff, #f7f7f7);
-    background: -moz-linear-gradient(top, #fff, #f7f7f7);
-    background: linear-gradient(top, #fff, #f7f7f7);
+  .link .usertext .md, .linklisting > .link.comment .usertext .md, .link.thing.subreddit .usertext .md, .comment.noncollapsed > .entry, .message.noncollapsed > .entry, .wiki-page .wiki-page-content .md.wiki {
+    background: #fff;
     color: #111;
-    padding: 5px 20px;
     border: none;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 4px 15px;
     border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
-  .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .multi-details .settings > button,
-  .multi-details .settings > .delete > button, .multi-details.public .settings > .share-in-sr,
-  .multi-details form.copy-multi button.copy,
-  .multi-details form.rename-multi button.rename,
+  a.pretty-button::before, .wiki-page .wikititle::before {
+    content: '[';
+  }
+  a.pretty-button::after, .wiki-page .wikititle::after {
+    content: ']';
+  }
+
   .fancy-settings button,
   .usertext-edit button.save,
   .usertext-edit button.cancel,
@@ -85,11 +86,14 @@
   .wiki-page-content button,
   .formtabs-content button,
   button.btn,
-  input[type=submit], .explore-header #explore-settings button,
+  input[type=submit], .multi-details .settings > button,
+  .multi-details .settings > .delete > button, .multi-details.public .settings > .share-in-sr,
+  .multi-details form.copy-multi button.copy,
+  .multi-details form.rename-multi button.rename, .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .explore-header #explore-settings button,
   #compose-message button#send, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button, .multi-details .settings > .delete.confirm-button > .confirmation > button, .profile-page .expand-summary, .res .RESshortcutside, .res .RESshortcutside.remove,
   .res .RESDashboardToggle,
   .res .RESDashboardToggle.remove, .res #alert_message > input[type=button], .res #BigEditor button {
-    color: #fff;
+    color: #fff !important;
     font-family: "Liberation Sans", Arial, sans-serif;
     padding: 2px 8px;
     width: auto;
@@ -98,7 +102,7 @@
     line-height: 1.5em;
     vertical-align: middle;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-    text-decoration: none;
+    text-decoration: none !important;
     border: none;
     text-align: center;
     margin-right: 3px;
@@ -108,25 +112,6 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3);
     border-radius: 4px;
   }
-  .fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited, .multi-details .settings > button:visited, .multi-details.public .settings > .share-in-sr:visited,
-  .multi-details form.copy-multi button.copy:visited,
-  .multi-details form.rename-multi button.rename:visited,
-  .fancy-settings button:visited,
-  .usertext-edit button.save:visited,
-  .usertext-edit button.cancel:visited,
-  .tabbedpane button:visited,
-  .flairselector button:visited,
-  .wiki-page-content button:visited,
-  .formtabs-content button:visited,
-  button.btn:visited,
-  input[type=submit]:visited, .explore-header #explore-settings button:visited,
-  #compose-message button#send:visited, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:visited, .multi-details .settings > .delete.confirm-button > .confirmation > button:visited, .profile-page .expand-summary:visited, .res .RESshortcutside:visited,
-  .res .RESDashboardToggle:visited, .res #alert_message > input[type=button]:visited, .res #BigEditor button:visited {
-    color: #fff;
-  }
-  .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, .multi-details .settings > button:hover, .multi-details.public .settings > .share-in-sr:hover,
-  .multi-details form.copy-multi button.copy:hover,
-  .multi-details form.rename-multi button.rename:hover,
   .fancy-settings button:hover,
   .usertext-edit button.save:hover,
   .usertext-edit button.cancel:hover,
@@ -135,12 +120,11 @@
   .wiki-page-content button:hover,
   .formtabs-content button:hover,
   button.btn:hover,
-  input[type=submit]:hover, .explore-header #explore-settings button:hover,
+  input[type=submit]:hover, .multi-details .settings > button:hover, .multi-details.public .settings > .share-in-sr:hover,
+  .multi-details form.copy-multi button.copy:hover,
+  .multi-details form.rename-multi button.rename:hover, .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, .explore-header #explore-settings button:hover,
   #compose-message button#send:hover, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:hover, .multi-details .settings > .delete.confirm-button > .confirmation > button:hover, .profile-page .expand-summary:hover, .res .RESshortcutside:hover,
-  .res .RESDashboardToggle:hover, .res #alert_message > input[type=button]:hover, .res #BigEditor button:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .multi-details .settings > button:focus, .multi-details.public .settings > .share-in-sr:focus,
-  .multi-details form.copy-multi button.copy:focus,
-  .multi-details form.rename-multi button.rename:focus,
-  .fancy-settings button:focus,
+  .res .RESDashboardToggle:hover, .res #alert_message > input[type=button]:hover, .res #BigEditor button:hover, .fancy-settings button:focus,
   .usertext-edit button.save:focus,
   .usertext-edit button.cancel:focus,
   .tabbedpane button:focus,
@@ -148,18 +132,16 @@
   .wiki-page-content button:focus,
   .formtabs-content button:focus,
   button.btn:focus,
-  input[type=submit]:focus, .explore-header #explore-settings button:focus,
+  input[type=submit]:focus, .multi-details .settings > button:focus, .multi-details.public .settings > .share-in-sr:focus,
+  .multi-details form.copy-multi button.copy:focus,
+  .multi-details form.rename-multi button.rename:focus, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .explore-header #explore-settings button:focus,
   #compose-message button#send:focus, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:focus, .multi-details .settings > .delete.confirm-button > .confirmation > button:focus, .profile-page .expand-summary:focus, .res .RESshortcutside:focus,
   .res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus, .res #BigEditor button:focus {
     color: #fff;
-    text-decoration: none !important;
     background: -webkit-linear-gradient(top, #e25418, #b44214);
     background: -moz-linear-gradient(top, #e25418, #b44214);
     background: linear-gradient(top, #e25418, #b44214);
   }
-  .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .multi-details .settings > button:active, .multi-details.public .settings > .share-in-sr:active,
-  .multi-details form.copy-multi button.copy:active,
-  .multi-details form.rename-multi button.rename:active,
   .fancy-settings button:active,
   .usertext-edit button.save:active,
   .usertext-edit button.cancel:active,
@@ -168,13 +150,32 @@
   .wiki-page-content button:active,
   .formtabs-content button:active,
   button.btn:active,
-  input[type=submit]:active, .explore-header #explore-settings button:active,
+  input[type=submit]:active, .multi-details .settings > button:active, .multi-details.public .settings > .share-in-sr:active,
+  .multi-details form.copy-multi button.copy:active,
+  .multi-details form.rename-multi button.rename:active, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .explore-header #explore-settings button:active,
   #compose-message button#send:active, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:active, .multi-details .settings > .delete.confirm-button > .confirmation > button:active, .profile-page .expand-summary:active, .res .RESshortcutside:active,
   .res .RESDashboardToggle:active, .res #alert_message > input[type=button]:active, .res #BigEditor button:active {
     background: -webkit-linear-gradient(top, #cb4b16, #9d3a11);
     background: -moz-linear-gradient(top, #cb4b16, #9d3a11);
     background: linear-gradient(top, #cb4b16, #9d3a11);
     box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7);
+  }
+
+  .fancy-settings button,
+  .usertext-edit button.save,
+  .usertext-edit button.cancel,
+  .tabbedpane button,
+  .flairselector button,
+  .wiki-page-content button,
+  .formtabs-content button,
+  button.btn,
+  input[type=submit], .multi-details .settings > button,
+  .multi-details .settings > .delete > button, .multi-details.public .settings > .share-in-sr,
+  .multi-details form.copy-multi button.copy,
+  .multi-details form.rename-multi button.rename {
+    display: inline-block;
+    padding-bottom: 3px;
+    text-transform: capitalize;
   }
 
   #search > input[type="submit"] {
@@ -247,68 +248,13 @@
   .res .markdownEditor .RESMacroDropdownTitle,
   .res #alert_message .buttonContainer > input[type=button] {
     color: #6b6b6b;
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 2px 6px;
     border: solid 1px #aaaaaa;
     background: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7);
     background: -moz-linear-gradient(top, #f7f7f7, #e7e7e7);
     background: linear-gradient(top, #f7f7f7, #e7e7e7);
     border-radius: 3px;
-  }
-  .expando-button.selftext.collapsed:hover, .res .toggleImage.image.expando-button.collapsedExpando:hover,
-  .res .toggleImage.video-muted.expando-button.collapsedExpando:hover, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded:hover, .res .toggleImage.image.expando-button.expanded:hover,
-  .res .toggleImage.video-muted.expando-button.expanded:hover, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop:hover, .expando-button.selftext.collapsed:focus, .res .toggleImage.image.expando-button.collapsedExpando:focus,
-  .res .toggleImage.video-muted.expando-button.collapsedExpando:focus, .expando-button.video.collapsed:focus, .expando-button.selftext.expanded:focus, .res .toggleImage.image.expando-button.expanded:focus,
-  .res .toggleImage.video-muted.expando-button.expanded:focus, .expando-button.video.expanded:focus, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:focus:hover, .menuarea .drop-choices.lightdrop:focus,
-  .wiki-page .pageactions > .wikiaction:hover,
-  .menuarea .flat-list > li > a:hover,
-  .res .commentNavSortType:hover,
-  .nav-buttons .nextprev > a:hover,
-  .menuarea .spacer .toggle .togglebutton:hover,
-  .menuarea .spacer .dropdown.lightdrop:hover,
-  .organic-listing .nextprev .arrow.prev:hover,
-  .organic-listing .nextprev .arrow.next:hover,
-  .trending-subreddits > .trending-subreddits-content li > a:hover,
-  .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active:hover,
-  .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss:hover,
-  .side form.add-sr > button.add:hover,
-  .side .subreddits > li > a:hover,
-  .side .subreddits > li > button.remove-sr:hover,
-  .side .recommend-box > .recs > .recommendations > .rec-item > a:hover,
-  .side .recommend-box > .recs > .recommendations > .rec-item > button.add:hover,
-  .profile-page .titlebox > .bottom > a[href*="/compose/"]:hover,
-  .message > .subject > .expand-btn:hover,
-  .message.noncollapsed > .entry .parent-link:hover,
-  .res .RESSubscriptionButton:hover,
-  .res #BigEditor .RESCloseButton:hover,
-  .res button.RESBigEditorPop:hover,
-  .res .markdownEditor .RESMacroDropdownTitle:hover,
-  .res #alert_message .buttonContainer > input[type=button]:hover,
-  .wiki-page .pageactions > .wikiaction:focus,
-  .menuarea .flat-list > li > a:focus,
-  .res .commentNavSortType:focus,
-  .nav-buttons .nextprev > a:focus,
-  .menuarea .spacer .toggle .togglebutton:focus,
-  .menuarea .spacer .dropdown.lightdrop:focus,
-  .organic-listing .nextprev .arrow.prev:focus,
-  .organic-listing .nextprev .arrow.next:focus,
-  .trending-subreddits > .trending-subreddits-content li > a:focus,
-  .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active:focus,
-  .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss:focus,
-  .side form.add-sr > button.add:focus,
-  .side .subreddits > li > a:focus,
-  .side .subreddits > li > button.remove-sr:focus,
-  .side .recommend-box > .recs > .recommendations > .rec-item > a:focus,
-  .side .recommend-box > .recs > .recommendations > .rec-item > button.add:focus,
-  .profile-page .titlebox > .bottom > a[href*="/compose/"]:focus,
-  .message > .subject > .expand-btn:focus,
-  .message.noncollapsed > .entry .parent-link:focus,
-  .res .RESSubscriptionButton:focus,
-  .res #BigEditor .RESCloseButton:focus,
-  .res button.RESBigEditorPop:focus,
-  .res .markdownEditor .RESMacroDropdownTitle:focus,
-  .res #alert_message .buttonContainer > input[type=button]:focus {
-    text-decoration: none;
   }
 
   .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
@@ -347,10 +293,8 @@
   .wiki-page .pageactions > .wikiaction, .menuarea .flat-list > li > a, .res .commentNavSortType {
     margin: 0;
     border-right-style: none;
+    color: #6b6b6b !important;
     border-radius: 0;
-  }
-  .wiki-page .pageactions > .wikiaction:visited, .menuarea .flat-list > li > a:visited, .res .commentNavSortType:visited {
-    color: #6b6b6b;
   }
 
   .wiki-page .pageactions > .wikiaction:first-child, .menuarea .flat-list > li:first-child > a, .res .commentNavSortType:nth-of-type(1) {
@@ -407,12 +351,10 @@
   }
 
   .submit.disabled > .morelink > a {
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.4) !important;
+    background: #cbcbcb;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2);
-    background: -webkit-linear-gradient(top, #cbcbcb, #bababa);
-    background: -moz-linear-gradient(top, #cbcbcb, #bababa);
-    background: linear-gradient(top, #cbcbcb, #bababa);
   }
   .submit.mod-override > .morelink > a {
     padding-left: 30px;
@@ -440,24 +382,6 @@
   }
   .submit.mod-override > .morelink:hover > a::before {
     display: block;
-  }
-
-  .multi-details .settings > button,
-  .multi-details .settings > .delete > button, .multi-details.public .settings > .share-in-sr,
-  .multi-details form.copy-multi button.copy,
-  .multi-details form.rename-multi button.rename,
-  .fancy-settings button,
-  .usertext-edit button.save,
-  .usertext-edit button.cancel,
-  .tabbedpane button,
-  .flairselector button,
-  .wiki-page-content button,
-  .formtabs-content button,
-  button.btn,
-  input[type=submit] {
-    display: inline-block;
-    padding-bottom: 3px;
-    text-transform: capitalize;
   }
 
   .expando-button, .res .expando-button.toggleImage.image,
@@ -508,27 +432,30 @@
     color: #111;
   }
 
-  .big-mod-buttons .pretty-button {
+  a.pretty-button {
     display: inline-block;
-    background: none;
     border: none;
     padding: 0;
     font-size: 13px;
     border-radius: 0;
   }
-  .big-mod-buttons .pretty-button::before, .big-mod-buttons .pretty-button::after {
+  a.pretty-button, a.pretty-button.neutral {
+    background: none;
+  }
+  a.pretty-button::before, a.pretty-button::after {
     color: #6b6b6b !important;
     display: inline-block;
   }
-  .big-mod-buttons .pretty-button::before {
-    content: '[';
-  }
-  .big-mod-buttons .pretty-button::after {
-    content: ']';
-  }
-  .big-mod-buttons .pretty-button.pressed {
+  a.pretty-button.pressed {
     font-weight: bold;
-    background: #FFF8DC;
+    background: #FFF8DC !important;
+  }
+  a.pretty-button[onclick*=ignore_reports] {
+    color: #2aa198;
+  }
+
+  .big-mod-buttons .pretty-button {
+    background: none;
   }
   .big-mod-buttons > span[role=radiogroup] > .pretty-button:first-child {
     color: #6c71c4;
@@ -538,9 +465,6 @@
   }
   .big-mod-buttons > span[role=radiogroup] > .pretty-button.positive {
     color: #859900;
-  }
-  .big-mod-buttons > .pretty-button {
-    color: #2aa198;
   }
 
   .comment .pretty-button:hover {
@@ -1583,6 +1507,9 @@
   .comment.noncollapsed > .entry, .message.noncollapsed > .entry {
     position: relative;
     background: #fff;
+    padding: 0;
+    display: inline-block;
+    overflow: visible;
     border-radius: 3px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
@@ -1673,10 +1600,7 @@
     position: relative;
   }
   .comment.noncollapsed > .entry {
-    padding: 0;
-    display: inline-block;
     max-width: 95%;
-    overflow: visible;
     margin: 0 2px 13px 2px;
   }
   .comment.noncollapsed > .entry > .usertext.border {
@@ -1780,9 +1704,9 @@
     border: solid 1px #aaaaaa;
     padding: 5px;
     box-sizing: padding-box;
-    background: -webkit-linear-gradient(top, #f9f9f9, #eaeaea);
-    background: -moz-linear-gradient(top, #f9f9f9, #eaeaea);
-    background: linear-gradient(top, #f9f9f9, #eaeaea);
+    background: -webkit-linear-gradient(top, #f9f9f9, #efefef);
+    background: -moz-linear-gradient(top, #f9f9f9, #efefef);
+    background: linear-gradient(top, #f9f9f9, #efefef);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   }
   .subscribers .number,
@@ -2099,12 +2023,6 @@
     line-height: 1em;
     padding: 0;
     font-weight: bold;
-  }
-  .wiki-page .wikititle::before {
-    content: '[';
-  }
-  .wiki-page .wikititle::after {
-    content: ']';
   }
   .wiki-page .pageactions {
     padding: 0;
@@ -2921,9 +2839,6 @@
     color: #111;
   }
   .message.noncollapsed > .entry {
-    display: inline-block;
-    padding: 0;
-    overflow: visible;
     margin-bottom: 10px;
     max-width: 63em;
   }
