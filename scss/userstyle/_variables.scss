@@ -1,25 +1,19 @@
 @import "../variables";
 
-// userstyles.org limit css size to ~100kb so we can't use
-// large embedded images
-//@import "embedded_images";
-$main-bg-image: 'http://i.imgur.com/l6K6XJU.jpg';
-$header-bg-image: 'http://i.imgur.com/kfumYVX.jpg';
-$icon-image: 'http://i.imgur.com/MJ7y1Zy.png';
-$res-night-bg-image: 'http://i.imgur.com/aCGpwZK.jpg';
-$logo-image: 'http://i.imgur.com/1yRy1Sk.png';
-
-$accent: $orange;
-
-$nsfw-tag-bg: $accent;
-$button-bg: $accent;
-//$res-active-element-color: lighten($accent, 50%);
+$logo-image: 'image/logo.png';
+@if env(ASSETS) == remote {
+  $main-bg-image: 'http://i.imgur.com/l6K6XJU.jpg';
+  $header-bg-image: 'http://i.imgur.com/kfumYVX.jpg';
+  $icon-image: 'http://i.imgur.com/MJ7y1Zy.png';
+  $res-night-bg-image: 'http://i.imgur.com/aCGpwZK.jpg';
+  $logo-image: 'http://i.imgur.com/1yRy1Sk.png';
+}
 
 $multireddits-bg: rgba(0, 0, 0, 0.9);
 $multireddits-grippy-bg: none;
 $multireddits-intro-bg: rgba($yellow, 0.4);
 $multireddits-intro-fg: $menu-bar-fg;
-$multireddits-selected-color: $accent;
+$multireddits-selected-color: $orange;
 $multireddits-entry-bg: $menu-bar-bg;
 $multireddits-entry-fg: $menu-bar-fg;
 $multireddits-selected-entry-bg: lighten($multireddits-entry-bg, 5%);

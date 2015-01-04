@@ -68,10 +68,10 @@ hr {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-a.pretty-button::before, .wiki-page .wikititle::before {
+a.pretty-button::before, .sidecontentbox > .title .collapse-button::before, .wiki-page .wikititle::before {
   content: '[';
 }
-a.pretty-button::after, .wiki-page .wikititle::after {
+a.pretty-button::after, .sidecontentbox > .title .collapse-button::after, .wiki-page .wikititle::after {
   content: ']';
 }
 
@@ -1351,7 +1351,7 @@ ul.report-reasons > li.report-reason {
 .md blockquote {
   border-left: solid 3px #9e9e9e;
   padding: 0.2em 0.5em;
-  background: #f0f0f0;
+  background: whitesmoke;
   color: #111;
   margin: 0.4em;
 }
@@ -1404,13 +1404,12 @@ ul.report-reasons > li.report-reason {
 .md pre > code {
   padding: 7px;
   display: block;
-  background: #f0f0f0;
+  background: whitesmoke;
   color: #111;
   overflow: auto;
 }
 .md pre > code {
-  border: solid 1px #9e9e9e;
-  border-radius: 3px;
+  border: solid 1px #e8632c;
 }
 .md ul {
   list-style-type: square;
@@ -1653,18 +1652,15 @@ ul.report-reasons > li.report-reason {
 .users-online {
   display: inline-block;
   vertical-align: top;
-  width: 145px;
+  width: 138px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
   border: solid 1px #aaaaaa;
   padding: 5px;
-  box-sizing: padding-box;
-  background: -webkit-linear-gradient(top, #f9f9f9, #efefef);
-  background: -moz-linear-gradient(top, #f9f9f9, #efefef);
-  background: linear-gradient(top, #f9f9f9, #efefef);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  box-sizing: content-box;
+  box-shadow: 0 1px 0 white, inset 0 1px 0 white;
 }
 .subscribers .number,
 .users-online .number {
@@ -1675,7 +1671,7 @@ ul.report-reasons > li.report-reason {
 .subscribers .word,
 .users-online .word {
   display: block;
-  font-size: 0.9em;
+  font-size: 13px;
   color: #6b6b6b;
 }
 
@@ -1691,19 +1687,44 @@ ul.report-reasons > li.report-reason {
   display: none;
 }
 
+.sidecontentbox > .title {
+  background: -webkit-linear-gradient(top, #e2e2e2, #d6d6d6);
+  background: -moz-linear-gradient(top, #e2e2e2, #d6d6d6);
+  background: linear-gradient(top, #e2e2e2, #d6d6d6);
+  box-shadow: inset 0 1px 0 #f4f4f4, 0 1px 1px rgba(0, 0, 0, 0.14);
+  border-radius: 3px 3px 0 0;
+}
+.sidecontentbox > .title .collapse-button,
 .sidecontentbox > .title h1 {
   color: #515151;
 }
-.sidecontentbox a.helplink {
+.sidecontentbox > .title .collapse-button {
+  float: right;
+  font: normal 13px "DejaVu Sans Mono", "Droid Sans Mono", Inconsolata, Monaco, monospace;
+  width: auto;
+  height: auto;
+  line-height: auto;
+  background: none;
+  border: none;
   margin: 0;
+}
+.sidecontentbox a.helplink {
+  margin: 10px 7px 10px 0;
+}
+.sidecontentbox > .title,
+.sidecontentbox > .content {
+  border: solid 1px #aaaaaa;
+  padding: 7px;
 }
 .sidecontentbox .content {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.2);
-  border: solid 1px rgba(0, 0, 0, 0.3);
-  padding: 7px;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 1px 1px rgba(0, 0, 0, 0.14);
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+.sidecontentbox .content > li {
+  margin: 3px 0;
 }
 
 .sidebox .spacer {
@@ -1779,7 +1800,7 @@ ul.report-reasons > li.report-reason {
 .arrow.upmod,
 .arrow.upmod:hover,
 .arrow.downmod,
-.arrow.downmod:hover, .sidecontentbox .collapse-button, .tagline .userattrs .cakeday, #mail,
+.arrow.downmod:hover, .tagline .userattrs .cakeday, #mail,
 #modmail,
 .gilded-icon::before, .icon-menu .reddit-edit::before,
 .icon-menu .reddit-edited::before,
@@ -1836,15 +1857,6 @@ ul.report-reasons > li.report-reason {
 .arrow.downmod,
 .arrow.downmod:hover {
   background-position: -80px -80px !important;
-}
-
-.sidecontentbox .collapse-button {
-  padding: 0;
-  margin: 0;
-  text-indent: -999px;
-  background-color: transparent;
-  border: none;
-  background-position: 0 -64px;
 }
 
 .tagline .userattrs .cakeday {
@@ -2518,7 +2530,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode {
   color: #d1d1d1;
-  background: #111 url("image/dark-noise.jpg") left top repeat !important;
+  background: #111 url("%%dark-noise%%") left top repeat !important;
 }
 .res.res-nightmode > .content {
   background: none !important;
@@ -3011,7 +3023,7 @@ table.diff tbody .diff_header:not([id]) {
   color: #5358ba !important;
 }
 .res.res-nightmode #BigEditor > .RESDialogSmall.BELeft {
-  background: #111 url("image/dark-noise.jpg") left top repeat;
+  background: #111 url("%%dark-noise%%") left top repeat;
   box-shadow: inset 0 1px 0 #2b2b2b;
 }
 .res.res-nightmode #BigEditor > .RESDialogSmall.BERight {

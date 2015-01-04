@@ -1,27 +1,32 @@
 COMPILER = scss
 SCSS_V330 = $(shell gem list sass --installed --version '>= 3.3.0')
 SOURCEMAP = none
-SCSS_FLAGS = --style=expanded --unix-newlines
+SCSS_FLAGS = -r ./utils/helper.rb --style=expanded --unix-newlines
 WATCH_FLAGS = $(SCSS_FLAGS) --watch
 SOURCE_DIR = scss
 OUTPUT_DIR = .
 SR_FILE = terriblename
 US_FILE = userstyle
-COMMON_SOURCES = $(wildcard scss/_*.scss) \
-					  $(wildcard scss/res/normal/*.scss) \
-					  scss/res/_stupid_fixes.scss
+COMMON_SOURCES = $(wildcard $(SOURCE_DIR)/_*.scss) \
+	$(wildcard $(SOURCE_DIR)/res/normal/*.scss) \
+	$(SOURCE_DIR)/res/_stupid_fixes.scss
 
 SR_SOURCES = $(COMMON_SOURCES) \
-				 $(wildcard scss/res/nightmode/*.scss) \
-				 scss/terriblename.scss
+	$(wildcard $(SOURCE_DIR)/res/nightmode/*.scss) \
+	$(SOURCE_DIR)/terriblename.scss
 
 US_SOURCES = $(COMMON_SOURCES) \
-				 $(wildcard scss/userstyle/*.scss) \
-				 scss/userstyle.scss
+	$(wildcard $(SOURCE_DIR)/userstyle/*.scss) \
+	$(SOURCE_DIR)/userstyle.scss
 
 ifeq "$(SCSS_V330)" "true"
 	SCSS_FLAGS += --sourcemap=$(SOURCEMAP)
 endif
+
+# $ASSETS controls the content of image variables. if it's set to `local` it will use
+# relative paths of files inside images/ directory. if it's set to `remote` it will use
+# %%image-name%% notation (for subreddit style) and images hosted on imgur (for userstyles)
+export ASSETS = remote
 
 all: $(SR_FILE).css $(US_FILE).css
 

@@ -22,31 +22,3 @@
   background: linear-gradient($definition);
 }
 
-@mixin box-with-line-num($fg, $bg) {
-  position: relative;
-  background: $bg;
-  border: solid 1px $bg;
-  @include rounded(3px);
-
-  > code {
-    margin-left: 2.8em;
-  }
-
-  $nums: '';
-  @for $i from 1 to 1000 {
-    $nums: '#{$nums}#{$i}  ';
-  }
-
-  &::before {
-    content: $nums;
-    position: absolute;
-    color: $fg;
-    left: 0;
-    top: 7px;
-    bottom: 7px;
-    width: 2.3em;
-    white-space: pre-wrap;
-    direction: rtl;
-    overflow: hidden;
-  }
-}

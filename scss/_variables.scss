@@ -37,15 +37,17 @@ $dark-green:      darken($green, 5%);
 
 $sidebar-width:   300px;
 
-// --- these images are for local test
+
 $main-bg-image: 'image/noise.jpg';
 $header-bg-image: 'image/banner.jpg';
 $icon-image: 'image/icons.png';
-
-// --- and these are for reddit css
-$main-bg-image: '%%noise%%';
-$header-bg-image: '%%banner%%';
-$icon-image: '%%icons%%';
+$res-night-bg-image: 'image/dark-noise.jpg';
+@if env(ASSETS) == remote {
+  $main-bg-image: '%%noise%%';
+  $header-bg-image: '%%banner%%';
+  $icon-image: '%%icons%%';
+  $res-night-bg-image: '%%dark-noise%%';
+}
 
 $sans-serif: 'Liberation Sans', Arial, sans-serif;
 $serif: 'Liberation Serif', 'Times New Roman', serif;
@@ -62,12 +64,12 @@ $text-fg: $main-fg;
 $toc-bg: $bright-yellow;
 $toc-level-indicator-color: rgba(0, 0, 0, 0.2);
 $text-border-color: darken($gray, 20%);
-$quote-bg: darken($text-bg, 6%);
+$quote-bg: darken($text-bg, 4%);
 $quote-fg: $text-fg;
 $quote-border-color: darken($text-border-color, 10%);
 $codeblock-bg: $quote-bg;
 $codeblock-fg: $text-fg;
-$codeblock-border-color: $quote-border-color;
+$codeblock-border-color: lighten($orange, 10%);
 $table-heading-bg: darken($text-bg, 10%);
 $table-heading-fg: lighten($main-fg, 20%);
 $table-content-bg: $text-bg;
@@ -115,6 +117,7 @@ $sponsored-tag-bg: $bright-yellow;
 $special-entry-bg: rgba($green, 0.1);
 $special-entry-fg: lighten($main-fg, 20%);
 $sidebar-fg: darken($gray, 60%);
+$sidebar-toolbox-title-bg: darken($main-bg, 3%);
 $sidebar-toolbox-bg: rgba(255, 255, 255, 0.2);
 $sidebar-toolbox-button-hover-color: rgba(0, 0, 0, 0.3);
 $nsfw-tag-bg: $orange;
@@ -178,11 +181,9 @@ $form-tab-fg: lighten($main-fg, 20%);
 $tooltip-bg: darken($bright-yellow, 10%);
 $tooltip-fg: $main-fg;
 //$stats-bg: lighten($main-bg, 6%);
-$stats-bg: lighten($main-bg, 6%);
+$stats-bg: lighten($magenta, 6%);
 
 $res-editor-toolbar-bg: $small-button-bg;
-$res-night-bg-image: 'image/dark-noise.jpg';
-//$res-night-bg-image: '%%dark-noise%%';
 $res-night-bg: $black;
 //$res-night-bg: lighten($black, 10%);
 //$res-night-bg: #1A1615;
