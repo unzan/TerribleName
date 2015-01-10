@@ -166,20 +166,19 @@
         top: 1px;
         opacity: 0.6;
       }
-
-      &::before {
-        @extend %tn-tooltip;
-        display: none;
-        content: 'Only available to moderator';
-        position: absolute;
-        font-weight: normal;
-        right: 102%;
-        top: 0;
-        font-size: $normal-font-size;
-        width: auto;
-        white-space: nowrap;
-        text-shadow: none;
-      }
+      //&::before {
+        //@extend %tn-tooltip;
+        //display: none;
+        //content: 'Only available to moderator';
+        //position: absolute;
+        //font-weight: normal;
+        //right: 102%;
+        //top: 0;
+        //font-size: $normal-font-size;
+        //width: auto;
+        //white-space: nowrap;
+        //text-shadow: none;
+      //}
     }
 
     &:hover > a {
@@ -187,9 +186,9 @@
         opacity: 1;
       }
 
-      &::before {
-        display: block;
-      }
+      //&::before {
+        //display: block;
+      //}
     }
   }
 }

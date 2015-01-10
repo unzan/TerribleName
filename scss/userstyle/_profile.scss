@@ -3,8 +3,13 @@
     background: none !important;
   }
 
+  .gold-accent.snoovatar-link,
   .server-seconds {
     @extend %tn-info-box;
+  }
+
+  .gold-accent.snoovatar-link {
+    margin: 10px 0;
   }
 
   .expand-summary {

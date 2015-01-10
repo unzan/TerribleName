@@ -1,10 +1,10 @@
 %tn-info-box {
   background: $info-box-bg;
   color: $info-box-fg;
-  border: none;
+  border: solid 1px $default-border-color;
   font-family: $sans-serif;
-  @include rounded(0);
-  @include shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+  @include rounded(3px);
+  @include shadow(0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px lighten($info-box-bg, 6%), inset 0 -1px 1px darken($info-box-bg, 8%));
 }
 
 %tn-tooltip {
@@ -33,6 +33,10 @@ input[type=password] {
   font-family: $sans-serif;
   @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.8));
   @include rounded(3px);
+
+  &:focus {
+    border-color: $input-focused-border-color !important;
+  }
 }
 
 #search input[type=text] {
