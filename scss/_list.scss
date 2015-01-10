@@ -306,7 +306,8 @@
 }
 
 .unvotable-message {
-  @extend .infobar;
+  @extend %tn-info-box;
+  font-size: $normal-font-size;
   padding: 4px 8px;
 }
 
