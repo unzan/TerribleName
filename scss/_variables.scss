@@ -138,6 +138,8 @@ $default-thumb-bg: darken($main-bg, 20%);
 $default-nsfw-thumb-bg: rgba($magenta, 0.5);
 $default-modpost-thumb-bg: rgba($green, 0.5);
 $default-text-thumb-bg: rgba($blue, 0.6);
+$removed-thumb-bg: $red;
+$removed-thumb-fg: $white;
 $flat-list-hover-bg: darken($main-bg, 11%);
 
 $flair-bg: $bright-yellow;

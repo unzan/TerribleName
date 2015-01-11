@@ -111,6 +111,7 @@
   width: 76px !important;
   padding: 2px 4px;
   position: relative;
+  overflow: visible;
   font-size: 16px;
   line-height: 1em;
   text-align: center;
@@ -158,6 +159,29 @@
     padding: 3px;
     background: $thumbnail-bg;
     @include shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  }
+}
+
+
+.link.spam {
+  background: none;
+
+  .thumbnail {
+    &::before {
+      background: $removed-thumb-bg;
+    }
+
+    &::after {
+      content: 'REMOVED';
+      position: absolute;
+      font-size: 10px;
+      background: $removed-thumb-bg;
+      color: $removed-thumb-fg;
+      top: 100%;
+      left: 4px;
+      right: 4px;
+      padding: 0 3px;
+    }
   }
 }
 

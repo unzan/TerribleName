@@ -528,18 +528,25 @@
     max-width: 520px;
   }
 
+  .roundfield input[type=text],
+  .roundfield input[type=url],
+  .roundfield textarea,
+  .linefield textarea {
+    width: 520px;
+  }
+
   .roundfield,
   .linefield {
     background: none;
     padding: 0;
+    width: 528px;
   }
-  .roundfield.info-notice,
-  .linefield.info-notice {
-    width: 520px;
+
+  form.submit {
+    display: inline-block;
   }
-  .roundfield .usertext-edit textarea,
-  .linefield .usertext-edit textarea {
-    width: 520px;
+  form.submit .roundfield.info-notice {
+    width: auto;
   }
 
   #tab-grant,
@@ -1213,6 +1220,7 @@
     width: 76px !important;
     padding: 2px 4px;
     position: relative;
+    overflow: visible;
     font-size: 16px;
     line-height: 1em;
     text-align: center;
@@ -1251,6 +1259,24 @@
     padding: 3px;
     background: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .link.spam {
+    background: none;
+  }
+  .link.spam .thumbnail::before {
+    background: #dc322f;
+  }
+  .link.spam .thumbnail::after {
+    content: 'REMOVED';
+    position: absolute;
+    font-size: 10px;
+    background: #dc322f;
+    color: #fff;
+    top: 100%;
+    left: 4px;
+    right: 4px;
+    padding: 0 3px;
   }
 
   .stickied-tagline {
@@ -1577,13 +1603,13 @@
   .comment.spam > .entry > .tagline {
     background: #f5b89f;
   }
-  .comment.spam > .entry > .tagline > time::after {
+  .comment.spam > .entry > .tagline > time:first-of-type::after {
     content: 'Spam';
     display: inline-block;
     background: #6c71c4;
     color: #fff;
     padding: 0 3px;
-    margin-left: 5px;
+    margin: 0 5px;
     border-radius: 2px;
   }
   .comment .midcol {
@@ -3205,8 +3231,8 @@
   .res .markdownEditor-wrapper + textarea#wiki_page_content,
   .res .markdownEditor-wrapper + div > textarea {
     margin: 0;
-    box-sizing: padding-box;
     min-width: 528px;
+    box-sizing: padding-box;
     border-radius: 0 0 3px 3px;
   }
   .res .markdownEditor {

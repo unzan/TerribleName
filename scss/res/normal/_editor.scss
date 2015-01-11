@@ -83,18 +83,18 @@ button.RESBigEditorPop {
   + textarea#wiki_page_content,
   + div > textarea {
     margin: 0;
-    @include vendor(box-sizing, padding-box);
-    // FIXME: the toolbar and the textbox should always have the same width
+    // FIXME: this is mainly for RES, but let's put it here.
+    // the toolbar and the textbox should always have the same width
     // but for some reason the the textbox is always shorter when it is resized
     // to its minimum width. this + 8px is a shitty workaround to fix that
     min-width: $comment-textbox-width + 8px;
+    @include vendor(box-sizing, padding-box);
     @include rounded(0 0 3px 3px);
   }
 }
 
 .markdownEditor {
   padding: 3px 3px 0 3px;
-  //margin: 2px 2px 0 2px;
 
   a.edit-btn {
     margin: 0;

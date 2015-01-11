@@ -126,13 +126,13 @@
       > .tagline {
         background: $misc-spam-tagline-bg;
 
-        > time::after {
+        > time:first-of-type::after {
           content: 'Spam';
           display: inline-block;
           background: $misc-spam-color;
           color: $misc-spam-tag-fg;
           padding: 0 3px;
-          margin-left: 5px;
+          margin: 0 5px;
           @include rounded(2px);
         }
       }

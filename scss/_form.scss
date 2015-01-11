@@ -62,17 +62,24 @@ input[type=password] {
   }
 }
 
+.roundfield input[type=text],
+.roundfield input[type=url],
+.roundfield textarea,
+.linefield textarea {
+  width: $comment-textbox-width;
+}
+
 .roundfield,
 .linefield {
   background: none;
   padding: 0;
+  width: $comment-textbox-width + 8px;
+}
 
-  &.info-notice {
-    width: $comment-textbox-width;
-  }
-
-  .usertext-edit textarea {
-    width: $comment-textbox-width;
+form.submit {
+  display: inline-block;
+  .roundfield.info-notice {
+    width: auto;
   }
 }
 
