@@ -192,11 +192,11 @@
   .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
   .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
   .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .next-suggestions > a:hover, .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
-  .nav-buttons .nextprev > a,
+  .nextprev > a[rel],
   .menuarea .spacer .toggle .togglebutton,
   .menuarea .spacer .dropdown.lightdrop,
   .organic-listing .nextprev .arrow.prev,
@@ -225,11 +225,11 @@
   .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
   .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
   .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:hover, .nav-buttons .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .next-suggestions > a:hover, .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
-  .nav-buttons .nextprev > a,
+  .nextprev > a[rel],
   .menuarea .spacer .toggle .togglebutton,
   .menuarea .spacer .dropdown.lightdrop,
   .organic-listing .nextprev .arrow.prev,
@@ -262,11 +262,11 @@
 
   .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
   .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .nav-buttons .next-suggestions > a:active, .flairselector .flairoptionpane ul > li:active, .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active.remove,
+  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .next-suggestions > a:active, .flairselector .flairoptionpane ul > li:active, .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active.remove,
   .wiki-page .pageactions > .wikiaction:active,
   .menuarea .flat-list > li > a:active,
   .res .commentNavSortType:active,
-  .nav-buttons .nextprev > a:active,
+  .nextprev > a[rel]:active,
   .menuarea .spacer .toggle .togglebutton:active,
   .menuarea .spacer .dropdown.lightdrop:active,
   .organic-listing .nextprev .arrow.prev:active,
@@ -404,7 +404,7 @@
     background: #848484;
   }
 
-  .nav-buttons .next-suggestions > a {
+  .next-suggestions > a {
     display: inline-block;
     padding: 2px 6px;
     border: solid 1px rgba(170, 170, 170, 0.6);
@@ -416,7 +416,8 @@
   .nav-buttons {
     padding: 1em 0em;
   }
-  .nav-buttons .nextprev {
+
+  .nextprev {
     color: #111;
   }
 
@@ -629,8 +630,12 @@
   }
 
   .fancy-settings {
-    margin: 10px;
+    padding: 10px;
     overflow: hidden;
+  }
+  .fancy-settings .wiki_button {
+    display: block;
+    clear: left;
   }
 
   .flairgrant .save-button,
@@ -2066,6 +2071,10 @@
   .wiki-page .wikirevisionlisting .generic-table tr:hover > td {
     background-color: #FFF5CC;
   }
+  .wiki-page .nextprev {
+    float: right;
+    margin-top: 5px;
+  }
 
   .md.wiki > .toc {
     background: #FFF5CC;
@@ -2433,6 +2442,7 @@
   }
   .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active,
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss {
+    color: #6b6b6b !important;
     text-shadow: none;
     font-size: 13px;
     display: block;
@@ -2442,6 +2452,11 @@
     line-height: 1em;
     padding: 2px 6px;
     margin: 0;
+  }
+  .explore-item .explore-sr > .explore-feedback > .fancy-toggle-button.toggle > .option.active.remove {
+    background: -webkit-linear-gradient(top, #e7e7e7, #d8d8d8);
+    background: -moz-linear-gradient(top, #e7e7e7, #d8d8d8);
+    background: linear-gradient(top, #e7e7e7, #d8d8d8);
   }
   .explore-item .explore-sr > .explore-feedback > .explore-feedback-dismiss {
     opacity: 1;
@@ -3155,15 +3170,6 @@
   .res .bottom-area > .help-toggle {
     margin-right: 10px;
   }
-  .res.wiki-page button.RESBigEditorPop {
-    position: absolute;
-    float: none;
-    right: 15px;
-    top: 36px;
-  }
-  .res.wiki-page .wiki-page-content > #editform > div > .markdownEditor > .RESCharCounter {
-    margin-right: 30px;
-  }
   .res .commentingAs,
   .res .RESMacroWrappingSpan {
     float: none;
@@ -3196,8 +3202,10 @@
     margin: 0;
     border-radius: 3px 3px 0 0;
   }
+  .res .markdownEditor-wrapper + textarea#wiki_page_content,
   .res .markdownEditor-wrapper + div > textarea {
     margin: 0;
+    box-sizing: padding-box;
     min-width: 528px;
     border-radius: 0 0 3px 3px;
   }
@@ -3322,6 +3330,30 @@
   }
   .res #BigEditor .RESCloseButton.close::before {
     background-position: 0 -32px;
+  }
+  .res.wiki-page button.RESBigEditorPop {
+    clear: none;
+    margin: 5px 0;
+  }
+  .res.wiki-page .wiki-page-content > #editform > div > .markdownEditor > .RESCharCounter {
+    margin-right: 30px;
+  }
+  .res.wiki-page .wiki-page-content > #editform .help-toggle {
+    display: block;
+    float: left;
+    margin: 5px 0 20px 0;
+  }
+  .res.wiki-page .wiki-page-content > #editform textarea#wiki_page_content {
+    resize: vertical;
+  }
+  .res.wiki-page .wiki-page-content > #editform > label[for="reason"],
+  .res.wiki-page .wiki-page-content > #editform > .livePreview {
+    display: block;
+    clear: left;
+  }
+  .res.wiki-page .wiki-page-content > #editform > .livePreview {
+    min-width: 100%;
+    width: 100%;
   }
   .res .subscription-box .subButtons {
     padding: 3px 0 !important;

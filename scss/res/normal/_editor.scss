@@ -46,19 +46,6 @@ button.RESBigEditorPop {
 }
 
 
-&.wiki-page {
-  button.RESBigEditorPop {
-    position: absolute;
-    float: none;
-    right: 15px;
-    top: 36px;
-  }
-
-  .wiki-page-content > #editform > div > .markdownEditor > .RESCharCounter {
-    margin-right: 30px;
-  }
-}
-
 .commentingAs,
 .RESMacroWrappingSpan {
   float: none;
@@ -93,8 +80,10 @@ button.RESBigEditorPop {
   margin: 0;
   @include rounded(3px 3px 0 0);
 
+  + textarea#wiki_page_content,
   + div > textarea {
     margin: 0;
+    @include vendor(box-sizing, padding-box);
     // FIXME: the toolbar and the textbox should always have the same width
     // but for some reason the the textbox is always shorter when it is resized
     // to its minimum width. this + 8px is a shitty workaround to fix that
@@ -278,3 +267,40 @@ button.RESBigEditorPop {
     }
   }
 }
+
+&.wiki-page {
+  button.RESBigEditorPop {
+    clear: none;
+    margin: 5px 0;
+  }
+
+  .wiki-page-content {
+    > #editform {
+      > div > .markdownEditor > .RESCharCounter {
+        margin-right: 30px;
+      }
+
+      .help-toggle {
+        display: block;
+        float: left;
+        margin: 5px 0 20px 0;
+      }
+
+      textarea#wiki_page_content {
+        resize: vertical;
+      }
+
+      > label[for="reason"],
+      > .livePreview {
+        display: block;
+        clear: left;
+      }
+
+      > .livePreview {
+        min-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+

@@ -304,18 +304,18 @@ input[type=submit] {
 
 .nav-buttons {
   padding: 1em 0em;
+}
 
-  .nextprev {
-    color: $main-fg;
-    > a {
-      @extend %tn-small-button;
-    }
+.nextprev {
+  color: $main-fg;
+  > a[rel] {
+    @extend %tn-small-button;
   }
+}
 
-  .next-suggestions {
-    > a {
-      @extend %tn-alt-small-button;
-    }
+.next-suggestions {
+  > a {
+    @extend %tn-alt-small-button;
   }
 }
 

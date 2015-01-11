@@ -167,9 +167,15 @@ input[type=password] {
 }
 
 .fancy-settings {
-  margin: 10px;
+  padding: 10px;
   overflow: hidden;
+
+  .wiki_button {
+    display: block;
+    clear: left;
+  }
 }
+
 
 .flairgrant,
 .fancy-settings {
