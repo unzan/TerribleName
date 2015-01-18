@@ -377,9 +377,7 @@ form.submit {
           margin-left: 4px;
           display: inline-block;
           vertical-align: middle;
-          border-left: solid 4px transparent;
-          border-right: solid 4px transparent;
-          border-top: solid 4px $small-button-fg;
+          @include triangle(bottom, 4px, $small-button-fg);
         }
       }
     }
@@ -470,6 +468,8 @@ form.submit {
 }
 
 .usertable {
+  clear: left;
+
   > .toggle.clearflairtemplates-button {
     background: none;
     padding: 0;

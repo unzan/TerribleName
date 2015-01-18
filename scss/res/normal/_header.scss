@@ -44,9 +44,7 @@
     content: '';
     position: absolute;
     top: 8px;
-    border-left: solid 4px transparent;
-    border-right: solid 4px transparent;
-    border-top: solid 4px $menu-bar-fg;
+    @include triangle(bottom, 4px, $menu-bar-fg);
   }
 }
 

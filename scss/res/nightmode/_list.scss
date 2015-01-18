@@ -37,6 +37,8 @@
 
       &.RES-keyNav-activeElement {
         background: none !important;
+        border-right-color: $res-night-active-element-color !important;
+
         .usertext > .usertext-body {
           background: none !important;
 
@@ -69,12 +71,8 @@
 
     .thumbnail {
       &::before {
-        color: $res-default-thumbnail-fg;
-        text-shadow: none;
-      }
-
-      &.default::before {
-        background-color: lighten($res-night-bg, 10%);
+        opacity: 0.6;
+        @include shadow(none);
       }
 
       img {

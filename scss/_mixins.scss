@@ -22,3 +22,12 @@
   background: linear-gradient($definition);
 }
 
+@mixin triangle($dir, $size, $color) {
+  @each $p, $n in (left, right), (right, left), (top, bottom), (bottom, top) {
+    @if $p == $dir {
+      border-#{$n}: solid $size $color;
+    } @else if $n != $dir {
+      border-#{$p}: solid $size transparent;
+    }
+  }
+}

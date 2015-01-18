@@ -378,8 +378,8 @@
     width: 19px;
     height: 19px;
     position: relative;
-    background-position: 0 0 !important;
     padding: 0 !important;
+    background-position: 0 0 !important;
   }
   .expando-button::before, .res .expando-button.toggleImage.image::before,
   .res .expando-button.toggleImage.video-muted::before {
@@ -879,6 +879,9 @@
     content: 'temp     ';
   }
 
+  .usertable {
+    clear: left;
+  }
   .usertable > .toggle.clearflairtemplates-button {
     background: none;
     padding: 0;
@@ -1087,7 +1090,8 @@
     height: 0;
     border-left: solid 4px transparent;
     border-right: solid 4px transparent;
-    border-top: solid 4px #848484;
+    border-top: solid 4px transparent;
+    border-bottom: solid 4px transparent;
   }
 
   #header-bottom-right {
@@ -1552,9 +1556,9 @@
     top: 8px;
     width: 0;
     height: 0;
+    border-right: solid 8px #fff;
     border-top: solid 8px transparent;
     border-bottom: solid 8px transparent;
-    border-right: solid 8px #fff;
   }
 
   .comment.noncollapsed > .entry > .tagline, .message.noncollapsed > .entry .tagline {

@@ -7,11 +7,6 @@ $show-line-num-in-codeblock: no;
 // - 1: use vendor prefixes for gradients. no vendor prefixes anywhere else.
 // - 2: always use vendor prefixes
 $vendor-prefixes: 1;
-
-// set to `old` to use the old circle button or any other value to use the simpler
-// squarish button
-$expando-button-style: new;
-
 $max-comment-width: 63em;
 
 // --- PALETTE ---------------------------------------------
@@ -35,6 +30,10 @@ $blue:            #268bd2;
 $cyan:            #2aa198;
 $green:           #859900;
 $dark-green:      darken($green, 5%);
+$dark-orange:     desaturate(darken($orange, 20%), 10%);
+$dark-red:        darken($red, 30%);
+$dark-blue:       #13161A;
+$dark-blue-gray:  #405666; 
 
 $sidebar-width:   300px;
 
@@ -191,21 +190,37 @@ $tooltip-fg: $main-fg;
 $stats-bg: lighten($magenta, 6%);
 
 $res-editor-toolbar-bg: $small-button-bg;
-$res-night-bg: $black;
-//$res-night-bg: lighten($black, 10%);
-//$res-night-bg: #1A1615;
-$res-night-fg: darken($gray, 10%);
-$res-dark-button-bg: lighten($res-night-bg, 40%);
-$res-dark-button-fg: $res-night-bg;
-$res-night-code-fg: lighten($inline-code-fg, 20%);
-$res-active-element-color: lighten($focus-color, 20%);
 $res-popup-bg: #5F99CF;
 $res-temp-sort-bg: rgba(0, 0, 0, 0.2);
-$res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);
 $res-current-sub-fg: lighten($sr-header-fg, 40%);
 $res-char-counter-fg: $white;
 $res-char-counter-bg: darken($main-bg, 50%);
 $res-char-counter-too-long-bg: $red;
+$res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);
+$res-active-element-color: lighten($focus-color, 20%);
+
+$res-night-bg: $dark-blue;
+$res-night-header-bg: lighten($res-night-bg, 9%);
+$res-night-menu-bar-bg: lighten($res-night-bg, 10%);
+$res-night-fg: darken($gray, 30%);
+$res-night-button-bg: lighten($res-night-bg, 16%);
+$res-night-button-fg: $res-night-fg;
+$res-night-big-button-bg: $dark-blue-gray;
+$res-night-text-bg: lighten($res-night-bg, 8%);
+$res-night-text-fg: $res-night-fg;
+$res-night-input-bg: lighten($res-night-bg, 5%);
+$res-night-input-fg: $res-night-fg;
+$res-night-code-fg: lighten($inline-code-fg, 20%);
+$res-night-comment-bg: $res-night-text-bg;
+$res-night-active-element-color: #BDD4E0;
 $res-night-spoiler-bg: lighten($res-night-bg, 25%);
 $res-night-spoiler-fg: $res-night-fg;
 $res-night-table-heading-bg: lighten($res-night-bg, 7%);
+$res-night-info-box-bg: lighten($res-night-bg, 10%);
+$res-night-info-box-fg: $res-night-fg;
+$res-night-editor-toolbar-bg: lighten($res-night-bg, 16%);
+$res-night-subscribe-bg: darken($green, 15%);
+$res-night-unsubscribe-bg: $dark-red;
+$res-night-toolbox-bg: darken($res-night-button-bg, 10%);
+
+$res-night-spam-tagline-bg: darken($misc-spam-tagline-bg, 64%);

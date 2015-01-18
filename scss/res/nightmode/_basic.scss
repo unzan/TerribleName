@@ -22,11 +22,10 @@
 }
 
 %tn-dark-text-container {
-  background: lighten($res-night-bg, 10%);
+  background-color: $res-night-text-bg !important;
+  color: $res-night-text-fg !important;
 }
 
-.subscribers,
-.users-online,
 .info-notice {
-  @extend %tn-dark-engraved-box;
+  @extend %tn-dark-info-box;
 }

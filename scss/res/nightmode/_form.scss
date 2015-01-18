@@ -1,3 +1,17 @@
+%tn-dark-toolbar {
+  border: solid 1px $res-night-bg;
+  color: $res-night-fg;
+  @include linear-gradient(top, $res-night-editor-toolbar-bg, darken($res-night-editor-toolbar-bg, 8%));
+  @include shadow(inset 0 1px 0 lighten($res-night-editor-toolbar-bg, 8%));
+}
+
+%tn-dark-info-box {
+  background: $res-night-info-box-bg;
+  color: $res-night-info-box-fg;
+  border: solid 1px darken($res-night-bg, 2%);
+  @include shadow(0 1px 2px darken($res-night-bg, 3%), inset 0 1px 0 lighten($res-night-info-box-bg, 7%));
+}
+
 form.submit.content {
   background: none !important;
 }
@@ -11,9 +25,17 @@ input[type=text],
 .usertext > .usertext-edit > div > textarea,
 .usertext-edit.viewSource > div > textarea,
 input[type=password] {
-  background: $res-night-bg !important;
-  color: darken($res-night-fg, 30%) !important;
-  border: solid 1px lighten($res-night-bg, 17%) !important;
+  background: $res-night-input-bg !important;
+  color: $res-night-input-fg !important;
+  border-color: $res-night-bg !important;
+  //border-color: darken($res-night-bg, 3%) !important;
+  //border-top-color: darken($res-night-bg, 6%) !important;
+  //border: solid 1px lighten($res-night-bg, 17%) !important;
+  @include shadow(inset 0 1px 2px darken($res-night-input-bg, 10%), 0 1px 0 lighten($res-night-bg, 13%));
+}
+
+#shortlink-text {
+  //border-style: none !important;
   @include shadow(none);
 }
 
@@ -22,7 +44,7 @@ input[type=password] {
   > li {
     > a {
       @extend %tn-dark-button;
-      color: $res-dark-button-fg !important;
+      color: $res-night-button-fg !important;
     }
 
     &.selected {
@@ -40,7 +62,7 @@ input[type=password] {
 .linkinfo,
 .action-form,
 .flat-list > .report-reasons {
-  @extend %tn-dark-raised-box;
+  @extend %tn-dark-info-box;
 }
 
 .report-reasons li {
@@ -58,7 +80,7 @@ input[type=password] {
 }
 
 .menuarea {
-  @extend %tn-dark-engraved-box;
+  //@extend %tn-dark-engraved-box;
   color: $res-night-fg;
 
   > .spacer {
@@ -68,17 +90,22 @@ input[type=password] {
     }
 
     > .drop-choices.lightdrop.inuse {
-      @extend %tn-dark-button-default;
+      background: $res-night-button-bg;
+      border: none;
+      color: $res-night-button-fg;
+      @include shadow(0 3px  5px rgba(0, 0, 0, 0.4));
+      //@extend %tn-dark-button-default;
 
       a:hover {
         text-shadow: none;
-        @include linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
-        @include shadow(inset 0 2px 2px rgba(0, 0, 0, 0.3));
+        background: darken($res-night-button-bg, 10%);
+        //@include linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+        //@include shadow(inset 0 2px 2px rgba(0, 0, 0, 0.3));
       }
     }
 
     > .dropdown.lightdrop > .selected::after {
-      border-top-color: $res-dark-button-fg;
+      border-top-color: $res-night-button-fg;
     }
   }
 }

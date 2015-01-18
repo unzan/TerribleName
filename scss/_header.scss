@@ -121,9 +121,7 @@
     margin-left: 5px;
     width: 0;
     height: 0;
-    border-left: solid 4px transparent;
-    border-right: solid 4px transparent;
-    border-top: solid 4px $sr-header-fg;
+    @include triangle(down, 4px, $sr-header-fg);
   }
 }
 
