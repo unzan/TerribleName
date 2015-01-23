@@ -116,7 +116,8 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3);
     border-radius: 4px;
   }
-  .fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited, .multi-details .settings > button:visited, .multi-details.public .settings > .share-in-sr:visited,
+  .fancy-toggle-button > .option.add:visited, .fancy-toggle-button > .option.remove:visited, .morelink a:visited, .multi-details .settings > button:visited,
+  .multi-details .settings > .delete > button:visited, .multi-details.public .settings > .share-in-sr:visited,
   .multi-details form.copy-multi button.copy:visited,
   .multi-details form.rename-multi button.rename:visited,
   .fancy-settings button:visited,
@@ -132,7 +133,8 @@
   .res .RESDashboardToggle:visited, .res #BigEditor button:visited, .res #alert_message > input[type=button]:visited {
     color: #fff;
   }
-  .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, .multi-details .settings > button:hover, .multi-details.public .settings > .share-in-sr:hover,
+  .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, .multi-details .settings > button:hover,
+  .multi-details .settings > .delete > button:hover, .multi-details.public .settings > .share-in-sr:hover,
   .multi-details form.copy-multi button.copy:hover,
   .multi-details form.rename-multi button.rename:hover,
   .fancy-settings button:hover,
@@ -145,7 +147,8 @@
   button.btn:hover,
   input[type=submit]:hover, .explore-header #explore-settings button:hover,
   #compose-message button#send:hover, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:hover, .multi-details .settings > .delete.confirm-button > .confirmation > button:hover, .profile-page .expand-summary:hover, .res .RESshortcutside:hover,
-  .res .RESDashboardToggle:hover, .res #BigEditor button:hover, .res #alert_message > input[type=button]:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .multi-details .settings > button:focus, .multi-details.public .settings > .share-in-sr:focus,
+  .res .RESDashboardToggle:hover, .res #BigEditor button:hover, .res #alert_message > input[type=button]:hover, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .multi-details .settings > button:focus,
+  .multi-details .settings > .delete > button:focus, .multi-details.public .settings > .share-in-sr:focus,
   .multi-details form.copy-multi button.copy:focus,
   .multi-details form.rename-multi button.rename:focus,
   .fancy-settings button:focus,
@@ -165,7 +168,8 @@
     background: -moz-linear-gradient(top, #e25418, #b44214);
     background: linear-gradient(top, #e25418, #b44214);
   }
-  .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .multi-details .settings > button:active, .multi-details.public .settings > .share-in-sr:active,
+  .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .multi-details .settings > button:active,
+  .multi-details .settings > .delete > button:active, .multi-details.public .settings > .share-in-sr:active,
   .multi-details form.copy-multi button.copy:active,
   .multi-details form.rename-multi button.rename:active,
   .fancy-settings button:active,
@@ -1077,6 +1081,14 @@
   }
   #header-bottom-right .separator {
     visibility: hidden;
+  }
+  #header-bottom-right .message-count {
+    background: #cb4b16;
+    font-size: 13px;
+    color: #fff;
+    vertical-align: middle;
+    padding: 1px 4px;
+    line-height: 1em;
   }
 
   .pagename {
