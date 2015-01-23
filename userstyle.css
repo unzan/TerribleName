@@ -1121,6 +1121,14 @@
   #header-bottom-right .separator {
     visibility: hidden;
   }
+  #header-bottom-right .message-count {
+    background: #cb4b16;
+    font-size: 13px;
+    color: #fff;
+    vertical-align: middle;
+    padding: 1px 4px;
+    line-height: 1em;
+  }
 
   .pagename {
     color: #b7b7b7;

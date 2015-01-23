@@ -156,6 +156,15 @@
   .separator {
     visibility: hidden;
   }
+
+  .message-count {
+    background: $new-message-count-bg;
+    font-size: $normal-font-size;
+    color: $new-message-count-fg;
+    vertical-align: middle;
+    padding: 1px 4px;
+    line-height: 1em;
+  }
 }
 
 .pagename {
