@@ -2619,6 +2619,9 @@ table.diff tbody .diff_header:not([id]) {
   background-color: #242a32 !important;
   color: #9e9e9e !important;
 }
+.res.res-nightmode > #header {
+  background: #111 url("%%banner%%") 0 0 no-repeat !important;
+}
 .res.res-nightmode > #header #sr-header-area {
   background: rgba(0, 0, 0, 0.5) !important;
   color: #848484;
@@ -2648,8 +2651,8 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .info-notice, .res.res-nightmode .infobar,
 .res.res-nightmode .linkinfo,
-.res.res-nightmode .action-form,
-.res.res-nightmode .flat-list > .report-reasons {
+.res.res-nightmode .link .action-form,
+.res.res-nightmode .link .flat-list > .report-reasons {
   background: #292f37;
   color: #9e9e9e;
   border: solid 1px #0f1114;
@@ -2685,6 +2688,10 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .report-reasons li {
   color: #9e9e9e !important;
+}
+.res.res-nightmode .comment .action-form,
+.res.res-nightmode .comment .report-reasons {
+  background: #2f3640;
 }
 .res.res-nightmode .tabpane-content,
 .res.res-nightmode .formtabs-content {
@@ -2942,7 +2949,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .linkflairlabel,
 .res.res-nightmode .flair {
-  background-color: #292f37;
+  background-color: #333b46;
   color: #9e9e9e;
   border: none;
 }

@@ -60,13 +60,20 @@ input[type=password] {
 
 .infobar,
 .linkinfo,
-.action-form,
-.flat-list > .report-reasons {
+.link .action-form,
+.link .flat-list > .report-reasons {
   @extend %tn-dark-info-box;
 }
 
 .report-reasons li {
   color: $res-night-fg !important;
+}
+
+.comment {
+  .action-form,
+  .report-reasons {
+    background: lighten($res-night-comment-bg, 5%);
+  }
 }
 
 .tabpane-content,

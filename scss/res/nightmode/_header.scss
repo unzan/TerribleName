@@ -1,6 +1,5 @@
 > #header {
-  //background: $res-night-header-bg url($res-night-header-bg-image) 0 0 no-repeat !important;
-  //background: radial-gradient(circle farthest-corner, lighten($res-night-header-bg, 20%), $res-night-header-bg) !important;
+  background: $header-bg url($header-bg-image) 0 0 no-repeat !important;
 
   #sr-header-area {
     background: $sr-header-bg !important;
