@@ -31,7 +31,17 @@
 
 .md {
   line-height: 1.5em;
+  font-size: $normal-font-size;
   max-width: none;
+
+  p,
+  li,
+  td,
+  th,
+  pre > code {
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
 
   h1,
   h2,
@@ -41,7 +51,7 @@
   h6 {
     overflow: hidden;
     line-height: 1.5em;
-    color: inherit;
+    color: inherit !important;
   }
 
   h1,
@@ -64,8 +74,16 @@
     font-size: 1.2em;
   }
 
+  h6 {
+    text-decoration: none;
+  }
+
   p {
-    margin: 0.5em 0em;
+    &,
+    &:first-child,
+    &:last-child {
+      margin: 0.5em 0em !important;
+    }
   }
 
   blockquote {
@@ -75,10 +93,15 @@
   code,
   pre {
     font-family: $monospace;
+    @include rounded(0);
   }
 
   code {
     color: $inline-code-fg;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
   }
 
   pre {
@@ -87,7 +110,7 @@
     max-width: 95%;
 
     > code {
-      padding: 7px;
+      padding: 7px !important;
       display: block;
       background: $codeblock-bg;
       color: $codeblock-fg;
@@ -125,6 +148,8 @@
     }
   } @else {
     pre {
+      background: none;
+      border: none;
       > code {
         border: solid 1px $codeblock-border-color;
       }
@@ -139,16 +164,23 @@
     list-style-type: square;
   }
 
-  a:hover {
-    text-decoration: underline;
+  hr {
+    @extend %tn-horiz-bar;
   }
 
-  a[href$="/spoiler"] {
-    background: $spoiler-bg !important;
-    color: $spoiler-bg !important;
-    text-decoration: none;
+  a {
+    @extend %tn-link; 
     &:hover {
-      color: $spoiler-fg !important;
+      text-decoration: underline;
+    }
+
+    &[href$="/spoiler"] {
+      background: $spoiler-bg !important;
+      color: $spoiler-bg !important;
+      text-decoration: none;
+      &:hover {
+        color: $spoiler-fg !important;
+      }
     }
   }
 }

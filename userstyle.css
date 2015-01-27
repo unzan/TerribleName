@@ -24,11 +24,11 @@
     font-family: "Liberation Sans", Arial, sans-serif;
   }
 
-  .thing .title, .link .tagline a,
+  .thing .title, .link .tagline a, .md a,
   a {
     color: #2177b4;
   }
-  .thing .title:visited, .link .tagline a:visited,
+  .thing .title:visited, .link .tagline a:visited, .md a:visited,
   a:visited {
     color: #5358ba;
   }
@@ -37,7 +37,7 @@
     margin: 1.5em 0em;
   }
 
-  .subscription-box .box-separator,
+  .md hr, .subscription-box .box-separator,
   hr {
     border: none;
     display: block;
@@ -1446,7 +1446,16 @@
 
   .md {
     line-height: 1.5em;
+    font-size: 13px;
     max-width: none;
+  }
+  .md p,
+  .md li,
+  .md td,
+  .md th,
+  .md pre > code {
+    font-size: inherit !important;
+    line-height: inherit !important;
   }
   .md h1,
   .md h2,
@@ -1456,7 +1465,7 @@
   .md h6 {
     overflow: hidden;
     line-height: 1.5em;
-    color: inherit;
+    color: inherit !important;
   }
   .md h1,
   .md h2 {
@@ -1474,15 +1483,23 @@
   .md h3 {
     font-size: 1.2em;
   }
-  .md p {
-    margin: 0.5em 0em;
+  .md h6 {
+    text-decoration: none;
+  }
+  .md p, .md p:first-child, .md p:last-child {
+    margin: 0.5em 0em !important;
   }
   .md code,
   .md pre {
     font-family: "DejaVu Sans Mono", "Droid Sans Mono", Inconsolata, Monaco, monospace;
+    border-radius: 0;
   }
   .md code {
     color: #b44214;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
   }
   .md pre {
     margin: 1em 0em;
@@ -1490,11 +1507,15 @@
     max-width: 95%;
   }
   .md pre > code {
-    padding: 7px;
+    padding: 7px !important;
     display: block;
     background: whitesmoke;
     color: #111;
     overflow: auto;
+  }
+  .md pre {
+    background: none;
+    border: none;
   }
   .md pre > code {
     border: solid 1px #9e9e9e;
