@@ -21,9 +21,27 @@
   }
 }
 
+%tn-quote {
+  border-left: solid 3px $quote-border-color;
+  padding: 0.2em 0.5em;
+  background: $quote-bg;
+  color: $quote-fg;
+  margin: 0.4em;
+}
+
 .md {
   line-height: 1.5em;
+  font-size: $normal-font-size;
   max-width: none;
+
+  p,
+  li,
+  td,
+  th,
+  pre > code {
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
 
   h1,
   h2,
@@ -33,7 +51,7 @@
   h6 {
     overflow: hidden;
     line-height: 1.5em;
-    color: inherit;
+    color: inherit !important;
   }
 
   h1,
@@ -56,25 +74,34 @@
     font-size: 1.2em;
   }
 
+  h6 {
+    text-decoration: none;
+  }
+
   p {
-    margin: 0.5em 0em;
+    &,
+    &:first-child,
+    &:last-child {
+      margin: 0.5em 0em !important;
+    }
   }
 
   blockquote {
-    border-left: solid 3px $quote-border-color;
-    padding: 0.2em 0.5em;
-    background: $quote-bg;
-    color: $quote-fg;
-    margin: 0.4em;
+    @extend %tn-quote;
   }
 
   code,
   pre {
     font-family: $monospace;
+    @include rounded(0);
   }
 
   code {
     color: $inline-code-fg;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
   }
 
   pre {
@@ -83,7 +110,7 @@
     max-width: 95%;
 
     > code {
-      padding: 7px;
+      padding: 7px !important;
       display: block;
       background: $codeblock-bg;
       color: $codeblock-fg;
@@ -93,13 +120,38 @@
 
   @if $show-line-num-in-codeblock == yes {
     pre {
-      @include box-with-line-num($line-num-fg, $line-num-bg);
+      position: relative;
+      background: $line-num-bg;
+      border: solid 1px $line-num-bg;
+
+      > code {
+        margin-left: 2.8em;
+      }
+
+      $nums: '';
+      @for $i from 1 to 1000 {
+        $nums: '#{$nums}#{$i}  ';
+      }
+
+      &::before {
+        content: $nums;
+        position: absolute;
+        color: $line-num-fg;
+        left: 0;
+        top: 7px;
+        bottom: 7px;
+        width: 2.3em;
+        white-space: pre-wrap;
+        direction: rtl;
+        overflow: hidden;
+      }
     }
   } @else {
     pre {
+      background: none;
+      border: none;
       > code {
         border: solid 1px $codeblock-border-color;
-        @include rounded(3px);
       }
     }
   }
@@ -112,16 +164,23 @@
     list-style-type: square;
   }
 
-  a:hover {
-    text-decoration: underline;
+  hr {
+    @extend %tn-horiz-bar;
   }
 
-  a[href$="/spoiler"] {
-    background: $spoiler-bg !important;
-    color: $spoiler-bg !important;
-    text-decoration: none;
+  a {
+    @extend %tn-link; 
     &:hover {
-      color: $spoiler-fg !important;
+      text-decoration: underline;
+    }
+
+    &[href$="/spoiler"] {
+      background: $spoiler-bg !important;
+      color: $spoiler-bg !important;
+      text-decoration: none;
+      &:hover {
+        color: $spoiler-fg !important;
+      }
     }
   }
 }
