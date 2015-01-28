@@ -632,9 +632,6 @@
   .formtabs-content {
     width: 530px;
   }
-  .formtabs-content textarea {
-    resize: vertical;
-  }
 
   .fancy-settings {
     padding: 10px;
@@ -3401,9 +3398,6 @@
     display: block;
     float: left;
     margin: 5px 0 20px 0;
-  }
-  .res.wiki-page .wiki-page-content > #editform textarea#wiki_page_content {
-    resize: vertical;
   }
   .res.wiki-page .wiki-page-content > #editform > label[for="reason"],
   .res.wiki-page .wiki-page-content > #editform > .livePreview {
