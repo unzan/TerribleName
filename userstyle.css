@@ -461,7 +461,7 @@
   }
 
   .infobar, .link .report-reasons,
-  .link .action-form, .unvotable-message, .contest-mode.infobar, .linkinfo,
+  .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
   .content.submit .info-notice, .profile-page .gold-accent.snoovatar-link,
   .profile-page .server-seconds, .message > .subject > .correspondent {
     background: #FFF5CC;
@@ -1464,18 +1464,16 @@
     line-height: 1.5em;
     color: inherit !important;
   }
-  .md h1,
-  .md h2 {
-    font-weight: normal !important;
-    border-bottom: solid 1px #b7b7b7;
-    margin: 0.5em 0em 1em 0em;
-  }
   .md h1 {
-    font-size: 1.5em;
-    border-bottom-width: 2px;
+    font-size: 1.55em;
+    font-weight: bold;
+    margin: 0.5em 0em;
   }
   .md h2 {
     font-size: 1.3em;
+    font-weight: normal !important;
+    margin: 0.5em 0em 1em 0em;
+    border-bottom: solid 1px #b7b7b7;
   }
   .md h3 {
     font-size: 1.2em;
@@ -1516,6 +1514,10 @@
   }
   .md pre > code {
     border: solid 1px #9e9e9e;
+  }
+  .md ul:last-child,
+  .md ol:last-child {
+    margin-bottom: 1em;
   }
   .md ul {
     list-style-type: square;
@@ -1687,6 +1689,10 @@
   .comment .unvotable-message {
     margin-left: 5px;
   }
+  .comment.new-comment .usertext-body {
+    border-left: none;
+    border-right: none;
+  }
 
   .comment.collapsed > .entry,
   .morerecursion > .entry {
@@ -1704,6 +1710,10 @@
   .contest-mode.infobar:hover,
   .contest-mode.infobar > strong {
     font-size: 13px;
+  }
+
+  .gold-accent.comment-visits-box {
+    margin-left: 10px;
   }
 
   .side {

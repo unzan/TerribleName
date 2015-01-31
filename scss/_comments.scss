@@ -207,6 +207,11 @@
   .unvotable-message {
     margin-left: 5px;
   }
+
+  &.new-comment .usertext-body {
+    border-left: none;
+    border-right: none;
+  }
 }
 
 .comment.collapsed,
@@ -229,4 +234,9 @@
   > strong {
     font-size: $normal-font-size;
   }
+}
+
+.gold-accent.comment-visits-box {
+  @extend %tn-info-box;
+  margin-left: 10px;
 }
