@@ -59,18 +59,6 @@
   }
 }
 
-.sidecontentbox {
-  .collapse-button {
-    @extend %tn-icon;
-    padding: 0;
-    margin: 0;
-    text-indent: -999px;
-    background-color: transparent;
-    border: none;
-    background-position: 0 -64px;
-  }
-}
-
 .tagline .userattrs .cakeday {
   @extend %tn-icon;
   background-position: -96px 0;

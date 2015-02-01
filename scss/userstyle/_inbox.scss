@@ -1,17 +1,10 @@
 .message {
   > .subject {
-    > .correspondent {
-      background: none;
-      padding: 0;
-      display: inline;
-      border: none;
+    font-size: $normal-font-size;
+    margin-bottom: 10px;
 
-      > .author {
-        margin-right: 0;
-        &::after {
-          content: ':';
-        }
-      }
+    > .correspondent {
+      @extend %tn-info-box;
     }
 
     > .expand-btn {
@@ -21,30 +14,49 @@
     }
   }
 
-  .entry.RES-keyNav-activeElement {
-    background: none !important;
+  &.collapsed {
+    &.new > .entry,
+    > .entry.RES-keyNav-activeElement {
+      background: none !important;
+      border: none;
+    }
+
+    > .entry {
+      padding: 0;
+      margin-bottom: 0;
+
+      > .tagline {
+        display: inline-block;
+        margin: 3px;
+      }
+
+      &.RES-keyNav-activeElement > .tagline {
+        @extend %tn-active-collapsed-comment-indicator;
+      }
+    }
   }
 
   &.message-parent,
   &.message-reply {
     > .entry {
       border-left: none;
-      > .noncollapsed {
+
+      &,
+      .tagline {
         color: $main-fg;
-        > .tagline {
-          color: inherit;
-        }
       }
+    }
+
+    &.recipient > .entry .head {
+      font-weight: normal;
     }
   }
 
-  &.new {
-    .entry {
-      background: none;
-      .head {
-        color: $main-fg;
-        font-weight: normal;
-      }
+  &.new > .entry {
+    border: none;
+    .head {
+      font-weight: normal;
+      color: $main-fg;
     }
   }
 
@@ -57,42 +69,71 @@
 
   &.noncollapsed {
     > .entry {
-      display: inline-block;
+      @extend %tn-comment-bubble;
+      margin-bottom: 10px;
+      max-width: $max-comment-width;
+
+      &.RES-keyNav-activeElement {
+        @extend %tn-active-comment-entry;
+      }
+
+      .parent-link {
+        @extend %tn-small-button;
+        margin: 8px;
+        display: inline-block;
+
+        &[style] {
+          color: $small-button-fg !important;
+        }
+      }
+
+      .md-container {
+        padding: 0 10px;
+
+        > .parent.rounded {
+          @extend %tn-quote;
+          border-top: none;
+          border-right: none;
+          border-bottom: none;
+          @include rounded(0);
+        }
+      }
+
+      .tagline {
+        @extend %tn-comment-tagline;
+      }
 
       .md,
       .flat-list {
         margin-left: 0;
       }
 
-      .md-container {
-        @extend %tn-comment-bubble;
-        padding: 4px 10px;
-        margin-bottom: 5px;
-        max-width: $max-comment-width;
-
-        // FIXME: this is wrong
-        overflow: visible;
+      .flat-list.buttons {
+        @extend %tn-comment-footer;
       }
+    }
 
-      > .tagline {
-        margin-bottom: 10px;
-        color: $main-fg;
-      }
+    .midcol {
+      width:  24px;
+    }
+  }
+
+  &:not(.recipient) {
+    > .entry > .tagline {
+      background: $inbox-own-message-tagline-bg;
+    }
+
+    &.noncollapsed > .entry::before {
+      border-right-color: $inbox-own-message-tagline-bg;
     }
   }
 }
 
 .messages-page {
-  .error {
-    margin: 7px 310px 7px 15px;
-  }
-
-
-  > .content {
-    > .listing {
-      > .message {
-        @extend %tn-list-entry-separator;
-      }
+  > .content > .sitetable > .message {
+    @extend %tn-list-entry-separator;
+    > .child {
+        margin-left: 20px !important;
     }
   }
 }

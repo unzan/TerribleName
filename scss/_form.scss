@@ -1,9 +1,10 @@
 %tn-info-box {
   background: $info-box-bg;
+  color: $info-box-fg;
   border: solid 1px $default-border-color;
   font-family: $sans-serif;
   @include rounded(3px);
-  @include shadow(0 1px 0 rgba(255, 255, 255, 0.7));
+  @include shadow(0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px lighten($info-box-bg, 6%), inset 0 -1px 1px darken($info-box-bg, 8%));
 }
 
 %tn-tooltip {
@@ -12,7 +13,7 @@
   background: $tooltip-bg;
   color: $tooltip-fg;
   padding: 4px 6px;
-  @include shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  @include shadow(0 3px 4px rgba(0, 0, 0, 0.2));
   @include rounded(3px);
 }
 
@@ -32,6 +33,10 @@ input[type=password] {
   font-family: $sans-serif;
   @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.8));
   @include rounded(3px);
+
+  &:focus {
+    border-color: $input-focused-border-color !important;
+  }
 }
 
 #search input[type=text] {
@@ -42,17 +47,39 @@ input[type=password] {
   @extend %tn-info-box;
 }
 
+.usertext {
+  position: relative;
+
+  .usertext-edit {
+    display: inline-block;
+    width: auto !important;
+  }
+
+  .markhelp,
+  .markhelp > table {
+    width: auto;
+    max-width: $comment-textbox-width;
+  }
+}
+
+.roundfield input[type=text],
+.roundfield input[type=url],
+.roundfield textarea,
+.linefield textarea {
+  width: $comment-textbox-width;
+}
+
 .roundfield,
 .linefield {
   background: none;
   padding: 0;
+  width: $comment-textbox-width + 8px;
+}
 
-  &.info-notice {
-    width: 520px;
-  }
-
-  .usertext-edit textarea {
-    width: 500px;
+form.submit {
+  display: inline-block;
+  .roundfield.info-notice {
+    width: auto;
   }
 }
 
@@ -134,25 +161,50 @@ input[type=password] {
 .formtabs-content,
 .login-form-side,
 .searchfacets,
+.fancy-settings .linefield,
 .searchpane.raisedbox {
   @extend %tn-form-group;
+}
+
+.formtabs-content {
+  width: $comment-textbox-width + 10px;
 }
 
 .fancy-settings {
   padding: 10px;
   overflow: hidden;
 
-  .linefield {
-    @extend .formtabs-content;
-    margin-bottom: 0.4em;
+  .wiki_button {
+    display: block;
+    clear: left;
   }
 }
 
+
 .flairgrant,
 .fancy-settings {
+  .save-button {
+    clear: left;
+  }
+
   .linefield {
+    float: left;
+    clear: left;
+    width: auto;
+    min-width: $comment-textbox-width + 24px;
+    margin: 0 0.5em 0.4em 0;
+
     .title {
       color: $link-fg;
+    }
+
+    .delete-field {
+      width: 500px;
+    }
+
+    .gray {
+      font-size: $normal-font-size;
+      color: $main-fg;
     }
 
     .linefield-content {
@@ -265,10 +317,8 @@ input[type=password] {
 .menuarea {
   color: $main-fg;
   overflow: visible;
-  margin: 15px 0 0 10px;
-  padding: 5px;
-  width: 650px;
-  position: relative;
+  margin: 15px 0 0 10px !important;
+  padding: 5px !important;
   border: none !important;
 
   &::after {
@@ -301,7 +351,7 @@ input[type=password] {
 
     .toggle .togglebutton,
     .dropdown.lightdrop {
-      @extend %tn-small-button-shadowless;
+      @extend %tn-small-button;
       font-size: 1em;
     }
 
@@ -324,9 +374,7 @@ input[type=password] {
           margin-left: 4px;
           display: inline-block;
           vertical-align: middle;
-          border-left: solid 4px transparent;
-          border-right: solid 4px transparent;
-          border-top: solid 4px $small-button-fg;
+          @include triangle(bottom, 4px, $small-button-fg);
         }
       }
     }
@@ -334,18 +382,13 @@ input[type=password] {
     > .help-hoverable {
       @extend %tn-tooltip;
       display: none;
-      left: 30%;
-      bottom: 110%;
       color: $tooltip-bg;
       width: 30em;
+      margin: 5px 0 0 -40px;
 
       &::before {
         color: $main-fg;
         content: attr(title);
-      }
-
-      &:nth-child(2) {
-        left: 10%;
       }
     }
 
@@ -365,16 +408,11 @@ input[type=password] {
         }
 
         &.error {
-          @extend %tn-engraved-box;
-          background: darken($main-bg, 14%);
-          position: absolute;
-          z-index: 4000;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          text-align: center;
+          display: inline-block;
+          background: $info-box-bg;
+          padding: 2px 5px;
           font-size: 1em;
+          margin-right: 3px;
           @include rounded(3px);
         }
       }
@@ -427,6 +465,8 @@ input[type=password] {
 }
 
 .usertable {
+  clear: left;
+
   > .toggle.clearflairtemplates-button {
     background: none;
     padding: 0;
@@ -479,18 +519,64 @@ input[type=password] {
   }
 }
 
-.action-form,
-.flat-list > .report-reasons {
-  @extend %tn-info-box;
-  border-color: $default-border-color !important;
-  padding: 8px;
+.link {
+  .report-reasons,
+  .action-form {
+    @extend %tn-info-box;
+    padding: 10px;
+    margin-top: 10px;
+  }
+}
+
+.comment {
+  .report-reasons,
+  .action-form {
+    margin: 0;
+    padding: 5px 10px 10px 10px;
+    background: $comment-footer-bg;
+    border: none;
+    max-width: 100%;
+    width: auto !important;
+    @include rounded(0 0 3px 3px);
+  }
+}
+
+ul.report-reasons > li.report-reason-title,
+.action-form > .reason-prompt {
+  font-weight: bold;
+  font-size: 1.1em;
+  display: block;
+  padding: 0 0 6px 0;
+  border-bottom: solid 3px rgba(0, 0, 0, 0.3) !important;
+  margin-bottom: 10px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.report-reasons,
+.action-form {
+  font-size: $normal-font-size;
+}
+
+.action-form > ol {
+  margin-bottom: 10px;
 }
 
 ul.report-reasons {
-  list-style: square inside;
-  font-size: $normal-font-size;
+  list-style: square outside;
+  overflow: visible;
+
+  > li.report-reason-title {
+    display: block;
+    line-height: 1em !important;
+  }
 
   > li.report-reason {
     display: list-item;
+    white-space: normal;
+    overflow: visible;
+    padding: 0;
+    margin: 0 0 3px 15px;
   }
 }

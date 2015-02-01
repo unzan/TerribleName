@@ -1,21 +1,28 @@
-.subscribers,
-.users-online {
-  width: 137px;
-}
-
 .side {
   background: none !important;
   margin: 1em 1em 1em 2em !important;
 
+  .linkinfo {
+    @extend %tn-dark-info-box;
+  }
+
   .sidecontentbox {
-    .title h1 {
-      border-bottom: none;
+    .title {
+      @extend %tn-dark-toolbar;
+      border-bottom: solid 1px darken($res-night-editor-toolbar-bg, 13%);
+      //border-bottom: none;
+
+      .collapse-button,
+      h1 {
+        color: inherit;
+        border-bottom: none;
+      }
     }
 
     .content {
-      @extend %tn-dark-engraved-box;
-      margin-top: 4px;
-      border: none;
+      border-color: $res-night-bg;
+      background: $res-night-toolbox-bg;
+      @include shadow(inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 0 lighten($res-night-bg, 8%));
     }
   }
 
@@ -41,23 +48,34 @@
 
   .icon-menu {
     a {
-      color: darken($res-night-fg, 30%);
+      $shadow: darken($res-night-toolbox-bg, 2%);
+      $bevel: lighten($res-night-toolbox-bg, 20%);
+
+      color: $res-night-fg;
       background-color: transparent;
+      border-color: transparent;
+
+      &:active,
       &:hover {
         color: $res-night-fg;
-        @include shadow(inset 0 1px 0 lighten($res-night-bg, 18%), 0 1px 1px rgba(0, 0, 0, 0.2));
+        border-color: darken($res-night-toolbox-bg, 2%);
+        @include linear-gradient(top, lighten($res-night-toolbox-bg, 10%), lighten($res-night-toolbox-bg, 4%));
       }
 
-      &:hover,
-      &:active {
-        border-color: lighten($res-night-bg, 3%);
-        @include linear-gradient(top, lighten($res-night-bg, 10%), lighten($res-night-bg, 8%));
+      &:hover {
+        @include shadow(inset 0 1px 0 $bevel, 0 1px 1px $shadow);
       }
 
       &:active {
-        @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 lighten($res-night-bg, 18%));
+        @include shadow(inset 0 1px 1px $shadow, 0 1px 0 $bevel);
       }
     }
   }
+}
+
+.subscribers,
+.users-online {
+  border-color: darken($res-night-bg, 3%);
+  @include shadow(0 1px 0 lighten($res-night-bg, 15%), inset 0 1px 0 lighten($res-night-bg, 7%));
 }
 

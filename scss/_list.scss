@@ -12,13 +12,14 @@
     @extend %tn-list-entry-separator;
   }
 
-  .usertext {
-    padding-right: 15px;
-    .md {
-      @extend %tn-raised-box;
+  &.link {
+    .usertext {
+      padding-right: 15px;
+      .md {
+        @extend %tn-simple-text-container;
+      }
     }
   }
-
 }
 
 .wiki-page,
@@ -93,49 +94,16 @@
   }
 }
 
-.wiki-page,
-.listing-page:not(.profile-page) {
-  .linklisting {
-    .link {
-      .flat-list.buttons {
-        > li.save-button > a,
-        > li > .toggle,
-        > li > .state-button,
-        > li > .flairselectbtn,
-        > li > .redditSingleClick,
-        > li > .give-gold,
-        > .report-button > .action-thing,
-        > .big-mod-buttons .pretty-button {
-          visibility: hidden;
-        }
-
-        > li.option  {
-          display: none;
-        }
-      }
-
-      &:hover {
-        .flat-list.buttons {
-          > li.save-button > a,
-          > li > .toggle,
-          > li > .state-button,
-          > li > .flairselectbtn,
-          > li > .redditSingleClick,
-          > li > .give-gold,
-          > .report-button > .action-thing,
-          > .big-mod-buttons .pretty-button {
-            visibility: visible;
-          }
-        }
-      }
-    }
+.thing {
+  .title {
+    @extend %tn-link;
   }
-}
 
-.thing.stickied {
-  a.title {
-    color: $sticky-link-fg !important;
-    font-weight: bold !important;
+  &.stickied {
+    a.title {
+      color: $sticky-link-fg !important;
+      font-weight: bold !important;
+    }
   }
 }
 
@@ -143,6 +111,7 @@
   width: 76px !important;
   padding: 2px 4px;
   position: relative;
+  overflow: visible;
   font-size: 16px;
   line-height: 1em;
   text-align: center;
@@ -153,11 +122,12 @@
     width: 40px;
     height: 40px;
     background: $default-thumb-bg;
-    color: $main-bg;
+    color: $default-thumb-fg;
     font: normal 28px $serif;
     line-height: 1.4em;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
     @include rounded(100%);
+    @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.8));
   }
 
   &.default,
@@ -189,6 +159,29 @@
     padding: 3px;
     background: $thumbnail-bg;
     @include shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  }
+}
+
+
+.link.spam {
+  background: none;
+
+  .thumbnail {
+    &::before {
+      background: $removed-thumb-bg;
+    }
+
+    &::after {
+      content: 'REMOVED';
+      position: absolute;
+      font-size: 10px;
+      background: $removed-thumb-bg;
+      color: $removed-thumb-fg;
+      top: 100%;
+      left: 4px;
+      right: 4px;
+      padding: 0 3px;
+    }
   }
 }
 
@@ -232,7 +225,6 @@
   acronym {
     display: inline-block;
     font-size: ($normal-font-size - 2);
-    //line-height: 1em;
     padding: 0 3px;
     text-align: center;
     border: none !important;
@@ -244,31 +236,29 @@
 
 .entry .flat-list.buttons > li.reported-stamp.stamp {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 6px;
+  right: 10px;
   border: none !important;
   color: $report-tag-fg;
-  padding: 2px 4px 0 4px;
-  text-transform: uppercase;
+  padding: 2px 4px;
+  font-variant: small-caps;
   font-weight: bold;
-  @include linear-gradient(top, $report-tag-bg, darken($report-tag-bg, 7%));
-  @include shadow(0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2));
+  font-size: $normal-font-size;
+  line-height: 1em;
+  background: $report-tag-bg;
   @include rounded(2px);
 }
 
 .tagline,
 .domain a,
 .entry .buttons li a,
-.entry .buttons li .redditSingleClick {
+.entry .buttons li .redditSingleClick,
+.pretty-button {
   color: $list-entry-fg;
   font-size: 13px;
 }
 
-.thing {
-  .title {
-    @extend %tn-link;
-  }
-
+.link {
   .tagline {
     margin-top: 4px;
 
@@ -340,6 +330,12 @@
 }
 
 .unvotable-message {
-  @extend .infobar;
+  @extend %tn-info-box;
+  font-size: $normal-font-size;
   padding: 4px 8px;
+}
+
+#noresults {
+  margin: 7px 15px;
+  font-style: italic;
 }

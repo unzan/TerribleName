@@ -8,18 +8,9 @@
 .titlebox {
   margin-top: 20px;
 
-  @if $subscribe-button-placement == header {
-    .subscribe-button {
-      position: absolute;
-      top: ($header-height - 40) / 2;
-      right: 10px;
-      z-index: 9000;
-    }
-  } @else {
-    .subscribe-button {
-      display: block;
-      margin-bottom: 1em;
-    }
+  .subscribe-button {
+    display: block;
+    margin-bottom: 1em;
   }
 
   form.flairtoggle {
@@ -58,6 +49,7 @@
 .linkinfo,
 .content.submit .info-notice {
   @extend %tn-info-box;
+  padding: 10px;
 }
 
 .users-online::before {
@@ -66,70 +58,96 @@
 
 .subscribers,
 .users-online {
-  @extend %tn-engraved-box;
+  $padding: 5px;
+  $border-width: 1px;
   display: inline-block;
   vertical-align: top;
-  width: 139px;
+  width: ($sidebar-width / 2) - (($padding * 2) + ($border-width * 2));
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
+  border: solid $border-width $default-border-color;
+  padding: $padding;
+  @include vendor(box-sizing, content-box);
+  @include shadow(0 1px 0 lighten($main-bg, 10%), inset 0 1px 0 lighten($main-bg, 10%));
+
   .number {
     font-size: 1.3em;
     font-weight: bold;
+    display: block;
   }
 
   .word {
-    display: none;
-  }
-
-  &::after {
     display: block;
-    font-size: 0.9em;
-    font-weight: normal;
-    text-transform: uppercase;
+    font-size: $normal-font-size;
+    color: lighten($sidebar-fg, 10%);
   }
 }
 
 .subscribers {
-  margin-right: 1px;
-  @include rounded(5px 0 0 5px);
+  @include rounded(3px 0 0 3px);
+  border-right: none;
 
-  &::after {
-    content: 'subscribers';
-  }
 }
 
 .users-online {
-  @include rounded(0 5px 5px 0);
+  @include rounded(0 3px 3px 0);
 
   &::before {
     display: none;
   }
-
-  &::after {
-    content: 'online';
-  }
 }
 
 
+// the box that contains mod tools, mod list, etc
 .sidecontentbox {
-  > .title h1 {
-    color: $sidebar-fg;
+  > .title {
+    @include linear-gradient(top, $sidebar-toolbox-title-bg, darken($sidebar-toolbox-title-bg, 5%));
+    @include shadow(inset 0 1px 0 lighten($sidebar-toolbox-title-bg, 7%), 0 1px 1px rgba(0, 0, 0, 0.14));
+    @include rounded(3px 3px 0 0);
+
+    .collapse-button,
+    h1 {
+      color: $sidebar-fg;
+    }
+
+    .collapse-button {
+      @extend %tn-bracketed;
+      float: right;
+      font: normal $normal-font-size $monospace;
+      width: auto;
+      height: auto;
+      line-height: auto;
+      background: none;
+      border: none;
+      margin: 0;
+    }
   }
 
+  // "message the moderators" link
   a.helplink {
-    margin: 0;
+    margin: 10px 7px 10px 0;
+  }
+
+  > .title,
+  > .content {
+    border: solid 1px $default-border-color;
+    padding: 7px;
   }
 
   .content {
     overflow: hidden;
     background: $sidebar-toolbox-bg;
-    border: solid 1px rgba(0, 0, 0, 0.3);
-    padding: 7px;
-    @include rounded(3px);
-    @include shadow(0 1px 0 rgba(255, 255, 255, 0.7), inset 0 1px 1px rgba(0, 0, 0, 0.14));
+    border-top: none;
+    @include rounded(0 0 3px 3px);
+    @include shadow(0 1px 0 rgba(255, 255, 255, 0.8));
+
+    > li {
+      margin: 3px 0;
+    }
   }
+
 }
 
 .sidebox {
@@ -138,7 +156,7 @@
   }
 }
 
-// ----- MOD TOOLBOX
+// mod tools
 .icon-menu {
   a {
     background: none;

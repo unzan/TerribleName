@@ -1,17 +1,17 @@
-@mixin shadow($shadows...) {
+@mixin vendor($prop, $value...) {
   @if $vendor-prefixes > 1 {
-    -webkit-box-shadow: $shadows;
-    -moz-box-shadow: $shadows;
+    -webkit-#{$prop}: $value;
+    -moz-#{$prop}: $value;
   }
-  box-shadow: $shadows;
+  #{$prop}: $value;
+}
+
+@mixin shadow($shadows...) {
+  @include vendor(box-shadow, $shadows);
 }
 
 @mixin rounded($radius) {
-  @if $vendor-prefixes > 1 {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-  }
-  border-radius: $radius;
+  @include vendor(border-radius, $radius);
 }
 
 @mixin linear-gradient($definition...) {
@@ -22,53 +22,12 @@
   background: linear-gradient($definition);
 }
 
-@mixin box-sizing($value) {
-  @if $vendor-prefixes > 1 {
-    -webkit-box-sizing: $value;
-    -moz-box-sizing: $value;
+@mixin triangle($dir, $size, $color) {
+  @each $p, $n in (left, right), (right, left), (top, bottom), (bottom, top) {
+    @if $p == $dir {
+      border-#{$n}: solid $size $color;
+    } @else if $n != $dir {
+      border-#{$p}: solid $size transparent;
+    }
   }
-  box-sizing: $value;
-}
-
-@mixin box-with-line-num($fg, $bg) {
-  position: relative;
-  background: $bg;
-  border: solid 1px $bg;
-  @include rounded(3px);
-
-  > code {
-    margin-left: 2.8em;
-  }
-
-  $nums: '';
-  @for $i from 1 to 1000 {
-    $nums: '#{$nums}#{$i}  ';
-  }
-
-  &::before {
-    content: $nums;
-    position: absolute;
-    color: $fg;
-    left: 0;
-    top: 7px;
-    bottom: 7px;
-    width: 2.3em;
-    white-space: pre-wrap;
-    direction: rtl;
-    overflow: hidden;
-  }
-}
-
-@mixin transform($definition...) {
-  @if $vendor-prefixes > 1 {
-    -webkit-transform: $definition;
-    -moz-transform: $definition;
-  }
-  transform: $definition;
-}
-
-@mixin transform-origin($definition) {
-  -webkit-transform-origin: $definition;
-  -moz-transform-origin: $definition;
-  transform-origin: $definition;
 }

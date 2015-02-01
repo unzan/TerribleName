@@ -33,6 +33,7 @@
   line-height: 1.5em;
   font-size: $normal-font-size;
   max-width: none;
+  color: inherit;
 
   p,
   li,
@@ -54,20 +55,17 @@
     color: inherit !important;
   }
 
-  h1,
-  h2 {
-    font-weight: normal !important;
-    border-bottom: solid 1px $horiz-line-color;
-    margin: 0.5em 0em 1em 0em;
-  }
-
   h1 {
-    font-size: 1.5em;
-    border-bottom-width: 2px;
+    font-size: 1.55em;
+    font-weight: bold;
+    margin: 0.5em 0em;
   }
 
   h2 {
     font-size: 1.3em;
+    font-weight: normal !important;
+    margin: 0.5em 0em 1em 0em;
+    border-bottom: solid 1px $horiz-line-color;
   }
 
   h3 {
@@ -158,6 +156,13 @@
 
   table {
     @extend %tn-markdown-table;
+  }
+
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 1em;
+    }
   }
 
   ul {

@@ -1,3 +1,21 @@
+%tn-active-comment-entry {
+  background: $comment-bg !important;
+  &::after {
+    content: '';
+    background: $res-active-element-color;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    @include rounded(0 3px 3px 0);
+  }
+}
+
+%tn-active-collapsed-comment-indicator {
+  outline: dashed 1px $res-active-element-color;
+}
+
 #REScommentNavBox {
   z-index: 9000;
 }
@@ -14,38 +32,14 @@
 }
 
 .commentNavSortType {
-  @extend %tn-small-button-shadowless;
-  margin: 0;
-  border-right-style: none;
-  display: inline-block !important;
-  @include rounded(0);
+  @extend %tn-switch-button;
 
-  &:nth-of-type(8) {
-    + span {
-      display: block !important;
-      clear: left;
-      font-size: 0;
-      text-indent: -20em;
-    }
+  &:nth-of-type(1) {
+    @extend %tn-switch-button-round-left;
   }
 
-  &:nth-of-type(-n+8) {
-    margin-bottom: 3px;
-  }
-
-  &:nth-of-type(9) {
-    margin-left: 6.8em;
-  }
-
-  &:nth-of-type(1),
-  &:nth-of-type(9) {
-    @include rounded(3px 0 0 3px);
-  }
-
-  &:nth-of-type(8),
   &:last-child {
-    @include rounded(0 3px 3px 0);
-    border-right-style: solid;
+    @extend %tn-switch-button-round-right;
   }
 }
 
@@ -58,23 +52,7 @@
 
 
 .commentarea {
-  .RES-keyNav-activeElement {
-    background: none !important;
-    .md {
-      background: none !important;
-    }
-
-    .usertext.border > .usertext-body > .md {
-      background: $highlighted-comment-bg !important;
-    }
-  }
-
   .menuarea {
-    @extend %tn-engraved-box;
-    display: inline-block;
-    min-width: 650px;
-    @include rounded(3px);
-
     > .spacer > .dropdown-title,
     #REScommentNavToggle > span:first-child {
       width: 6em;
@@ -88,37 +66,64 @@
       margin-right: 10px;
     }
   }
+}
 
-  .comment {
+.comment {
+  &.thing {
     margin-bottom: 0 !important;
     padding: 0 !important;
+  }
 
-    &.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-body > .md {
-      outline: dashed 1px $res-active-element-color;
-    }
-
-    .tagline {
-      display: block !important;
-    }
-
-    .child,
-    .showreplies {
-      border-left: none !important;
-    }
-
-    .expando-button {
-      float: none;
-      display: inline-block;
-      padding: 0 !important;
-      margin: 0em 0.3em;
-      &:hover {
-        text-decoration: none !important;
+  &.noncollapsed > .entry {
+    &.RES-keyNav-activeElement {
+      @extend %tn-active-comment-entry;
+      .md {
+        background: none !important;
       }
     }
 
+    > .tagline {
+      display: block;
+    }
   }
 
-  > .usertext > .usertext-edit textarea {
-    width: $comment-textbox-width + 10;
+  .child,
+  .showreplies {
+    border-left: none !important;
+  }
+
+  .expando-button {
+    float: none;
+    display: inline-block;
+    padding: 0 !important;
+    margin: 0em 0.3em;
+    &:hover {
+      text-decoration: none !important;
+    }
   }
 }
+
+.morerecursion,
+.morechildren,
+.comment.collapsed {
+  > .entry {
+    margin-bottom: 0.3em;
+    &.RES-keyNav-activeElement {
+      background: none !important;
+    }
+  }
+}
+
+.morerecursion .deepthread,
+.morechildren .morecomments,
+.comment.collapsed .tagline {
+  margin: 3px;
+  display: inline-block;
+}
+
+.morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
+.morechildren > .entry.RES-keyNav-activeElement > .morecomments,
+.comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
+  @extend %tn-active-collapsed-comment-indicator;
+}
+

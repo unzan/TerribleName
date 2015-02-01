@@ -1,6 +1,5 @@
 button.RESBigEditorPop,
-#BigEditor .RESCloseButton,
-.markdownEditor > a.edit-btn {
+#BigEditor .RESCloseButton {
   @extend %tn-dark-button;
 }
 
@@ -48,10 +47,45 @@ button.RESBigEditorPop,
 }
 
 .RESCharCounter {
-  @extend %tn-dark-engraved-box;
+  background-color: darken($res-night-editor-toolbar-bg, 8%);
+  //@extend %tn-dark-engraved-box;
   color: $res-night-fg;
 
   &.tooLong {
-    @include linear-gradient(top, darken($res-char-counter-too-long-bg, 10%), darken($res-char-counter-too-long-bg, 20%));
+    background-color: darken($res-char-counter-too-long-bg, 30%);
+    //@include linear-gradient(top, darken($res-char-counter-too-long-bg, 10%), darken($res-char-counter-too-long-bg, 20%));
+  }
+}
+
+.markdownEditor-wrapper {
+  @extend %tn-dark-toolbar;
+
+  + div > textarea {
+    //border-left: none !important;
+    //border-right: none !important;
+    border-top: none !important;
+    //border-top: solid 4px darken($res-night-editor-toolbar-bg, 8%) !important;
+    //border-top-color: lighten($res-night-editor-toolbar-bg, 30%) !important;
+  }
+}
+
+.commentingAs,
+.markdownEditor + .RESMacroWrappingSpan {
+  border-top-color: darken($res-night-editor-toolbar-bg, 10%);
+  @include shadow(inset 0 1px 0 lighten($res-night-editor-toolbar-bg, 8%));
+}
+
+.markdownEditor {
+  a.edit-btn {
+    background-color: transparent;
+
+    &:hover {
+      @include shadow(inset 0 1px 0 lighten($res-night-editor-toolbar-bg, 8%));
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.2);
+      @include shadow(0 1px 0 lighten($res-night-editor-toolbar-bg, 6%));
+    }
   }
 }

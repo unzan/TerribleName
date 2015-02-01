@@ -1,24 +1,12 @@
 // set this to `yes` if you want to have line number at the left of codeblock
 $show-line-num-in-codeblock: no;
 
-// set to `header` to place subscribe button on header.
-// any other value will put it at its normal place
-$subscribe-button-placement: normal;
-
 // control whether the output css is using vendor prefixes or not.
 // valid values:
 // - 0: no vendor prefixes
 // - 1: use vendor prefixes for gradients. no vendor prefixes anywhere else.
 // - 2: always use vendor prefixes
 $vendor-prefixes: 1;
-
-// set to `old` to use the old circle button or any other value to use the simpler
-// squarish button
-$expando-button-style: new;
-
-// set to `yes` to hide links under comment entry
-$hide-comment-links: no;
-
 $max-comment-width: 63em;
 
 // --- PALETTE ---------------------------------------------
@@ -29,7 +17,8 @@ $black:           #111;
 $real-black:      #000;
 $dark-brown:      #2C2928;
 $dark-gray:       #686868;
-$bright-yellow:   #FFF8DC;
+//$bright-yellow:   #FFF8DC;
+$bright-yellow:   #FFF5CC;
 
 // accents from solarized
 $yellow:          #b58900;
@@ -41,28 +30,36 @@ $blue:            #268bd2;
 $cyan:            #2aa198;
 $green:           #859900;
 $dark-green:      darken($green, 5%);
+$dark-orange:     desaturate(darken($orange, 20%), 10%);
+$dark-red:        darken($red, 30%);
+$dark-blue:       #13161A;
+$dark-blue-gray:  #405666; 
 
 $sidebar-width:   300px;
 
-// --- these images are for local test
+
 $main-bg-image: 'image/noise.jpg';
 $header-bg-image: 'image/cockkisses-banner.jpg';
 $icon-image: 'image/icons.png';
 $sr-rec-image: 'image/sr-rec-sprite.jpg';
-
-// --- and these are for reddit css
-$main-bg-image: '%%noise%%';
-$header-bg-image: '%%cockkisses-banner%%';
-$icon-image: '%%icons%%';
-$sr-rec-image: '%%sr-rec-sprite%%';
+$res-night-bg-image: 'image/dark-noise.jpg';
+@if env(ASSETS) == remote {
+  $main-bg-image: '%%noise%%';
+  $header-bg-image: '%%cockkisses-banner%%';
+  $icon-image: '%%icons%%';
+  $res-night-bg-image: '%%dark-noise%%';
+  $sr-rec-image: '%%sr-rec-sprite%%';
+}
 
 $sans-serif: 'Liberation Sans', Arial, sans-serif;
 $serif: 'Liberation Serif', 'Times New Roman', serif;
 $monospace: 'DejaVu Sans Mono', 'Droid Sans Mono', Inconsolata, Monaco, monospace;
 $normal-font-size: 13px;
 
+$accent: $orange;
 $main-bg: $gray;
 $main-fg: $black;
+$focus-color: $accent;
 
 $default-border-color: darken($main-bg, 25%);
 $thumbnail-bg: $white;
@@ -71,7 +68,7 @@ $text-fg: $main-fg;
 $toc-bg: $bright-yellow;
 $toc-level-indicator-color: rgba(0, 0, 0, 0.2);
 $text-border-color: darken($gray, 20%);
-$quote-bg: darken($text-bg, 6%);
+$quote-bg: darken($text-bg, 4%);
 $quote-fg: $text-fg;
 $quote-border-color: darken($text-border-color, 10%);
 $codeblock-bg: $quote-bg;
@@ -82,7 +79,7 @@ $table-heading-fg: lighten($main-fg, 20%);
 $table-content-bg: $text-bg;
 $table-highlight-bg: $bright-yellow;
 $table-border-color: darken($main-bg, 20%);
-$inline-code-fg: darken($orange, 5%);
+$inline-code-fg: darken($accent, 5%);
 $line-num-bg: $codeblock-border-color;
 $line-num-fg: $white;
 $diff-bg: $text-bg;
@@ -115,20 +112,21 @@ $sr-header-fg: darken($gray, 40%);
 $sr-header-bg: $header-bg;
 $sr-dropdown-bg: $black;
 $sr-dropdown-fg: $sr-header-fg;
-$sr-dropdown-selected-bg: $orange;
+$sr-dropdown-selected-bg: $focus-color;
 $sr-dropdown-selected-fg: $white;
-$dropdown-selected-bg: $orange;
+$dropdown-selected-bg: $focus-color;
 $dropdown-selected-fg: $white;
-$new-message-count-bg: $orange;
+$new-message-count-bg: $accent;
 $new-message-count-fg: $white;
 
 $sponsored-tag-bg: $bright-yellow;
 $special-entry-bg: rgba($green, 0.1);
 $special-entry-fg: lighten($main-fg, 20%);
 $sidebar-fg: darken($gray, 60%);
+$sidebar-toolbox-title-bg: darken($main-bg, 3%);
 $sidebar-toolbox-bg: rgba(255, 255, 255, 0.2);
 $sidebar-toolbox-button-hover-color: rgba(0, 0, 0, 0.3);
-$nsfw-tag-bg: $orange;
+$nsfw-tag-bg: $accent;
 $nsfw-tag-fg: $white;
 $report-tag-bg: $red;
 $report-tag-fg: $white;
@@ -138,10 +136,13 @@ $mod-tag-fg: $dark-green;
 $admin-tag-fg: $red;
 $submitter-tag-fg: $link-fg;
 $score-fg: darken($gray, 40%);
-$default-thumb-bg: rgba(0, 0, 0, 0.2);
+$default-thumb-fg: $white;
+$default-thumb-bg: darken($main-bg, 20%);
 $default-nsfw-thumb-bg: rgba($magenta, 0.5);
 $default-modpost-thumb-bg: rgba($green, 0.5);
-$default-text-thumb-bg: rgba($blue, 0.5);
+$default-text-thumb-bg: rgba($blue, 0.6);
+$removed-thumb-bg: $red;
+$removed-thumb-fg: $white;
 $flat-list-hover-bg: darken($main-bg, 11%);
 
 $flair-bg: $bright-yellow;
@@ -149,21 +150,36 @@ $flair-fg: $main-fg;
 $notice-bubble-bg: $bright-yellow;
 
 $list-entry-fg: darken($gray, 50%);
-$comment-bg: $white;
+$comment-bg: $text-bg;
+$comment-footer-bg: darken($comment-bg, 4%);
 $deleted-comment-bg: none;
-$highlighted-comment-outline-color: rgba(0, 0, 0, 0.2);
-$highlighted-comment-bg: rgba($bright-yellow, 0.4);
-$comment-textbox-width: 650px;
-$upvote-color: lighten($orange, 10%);
+
+// this one is for highlight when viewing single comment thread
+$highlighted-comment-bg: $bright-yellow;
+
+// and these two are for new comment highlight feature of gold members/moderators
+$new-comment-bg: desaturate(lighten($cyan, 50%), 20%);
+$new-comment-border-color: darken($new-comment-bg, 10%);
+
+$comment-textbox-width: 520px;
+$upvote-color: lighten($accent, 10%);
 $downvote-color: $violet;
 
+$misc-spam-color: $violet;
+$misc-remove-color: $red;
+$misc-approve-color: $green;
+$misc-ignore-color: $cyan;
+$misc-selected-bg: $bright-yellow;
+$misc-spam-tag-fg: $white;
+$misc-spam-tagline-bg: lighten($accent, 35%);
 
 $button-fg: $white;
-$button-bg: $orange;
+$button-bg: $accent;
 $button-disabled-fg: rgba(0, 0, 0, 0.4);
 $button-disabled-bg: darken($main-bg, 12%);
 $input-fg: lighten($black, 20%);
 $input-bg: $white;
+$input-focused-border-color: lighten($accent, 20%);
 $small-button-bg: lighten($gray, 5%);
 $small-button-fg: darken($gray, 50%);
 $expand-button-fg: darken($gray, 40%);
@@ -171,31 +187,42 @@ $expand-button-fg: darken($gray, 40%);
 $subscribe-bg: $green;
 $subscribe-fg: $white;
 $unsubscribe-bg: darken($main-bg, 15%);
-$unsubscribe-fg: $white;
+$unsubscribe-fg: lighten($main-fg, 30%);
 
 $box-bg: lighten($main-bg, 2%);
 $info-box-bg: $bright-yellow;
+$info-box-fg: $main-fg;
 $form-tab-bg: $box-bg;
 $form-tab-fg: lighten($main-fg, 20%);
-$tooltip-bg: darken($bright-yellow, 10%);
+$tooltip-bg: $bright-yellow;
 $tooltip-fg: $main-fg;
+//$stats-bg: lighten($main-bg, 6%);
+$stats-bg: lighten($magenta, 6%);
 
-$res-night-bg-image: 'image/dark-noise.jpg';
-$res-night-bg-image: '%%dark-noise%%';
-$res-night-bg: lighten($black, 5%);
-$res-night-bg: $black;
-$res-night-fg: darken($gray, 10%);
-$res-dark-button-bg: lighten($res-night-bg, 40%);
-$res-dark-button-fg: $res-night-bg;
-$res-night-code-fg: lighten($inline-code-fg, 20%);
-$res-active-element-color: rgba($orange, 0.5);
+$res-editor-toolbar-bg: $small-button-bg;
 $res-popup-bg: #5F99CF;
 $res-temp-sort-bg: rgba(0, 0, 0, 0.2);
-$res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);
 $res-current-sub-fg: lighten($sr-header-fg, 40%);
 $res-char-counter-fg: $white;
 $res-char-counter-bg: darken($main-bg, 50%);
 $res-char-counter-too-long-bg: $red;
+$res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);
+$res-active-element-color: lighten($focus-color, 20%);
+
+$res-night-bg: $dark-blue;
+$res-night-header-bg: lighten($res-night-bg, 9%);
+$res-night-menu-bar-bg: lighten($res-night-bg, 10%);
+$res-night-fg: darken($gray, 30%);
+$res-night-button-bg: lighten($res-night-bg, 16%);
+$res-night-button-fg: $res-night-fg;
+$res-night-big-button-bg: $dark-blue-gray;
+$res-night-text-bg: lighten($res-night-bg, 8%);
+$res-night-text-fg: $res-night-fg;
+$res-night-input-bg: lighten($res-night-bg, 5%);
+$res-night-input-fg: $res-night-fg;
+$res-night-code-fg: lighten($inline-code-fg, 20%);
+$res-night-comment-bg: $res-night-text-bg;
+$res-night-active-element-color: #BDD4E0;
 $res-night-spoiler-bg: lighten($res-night-bg, 25%);
 $res-night-spoiler-fg: $res-night-fg;
 $res-night-table-heading-bg: lighten($res-night-bg, 7%);
@@ -203,3 +230,13 @@ $res-night-table-heading-bg: lighten($res-night-bg, 7%);
 $sr-rec-bg: lighten($dark-brown, 10%);
 $sr-rec-hover-bg: $orange;
 $sr-rec-fg: $gray;
+$res-night-info-box-bg: lighten($res-night-bg, 10%);
+$res-night-info-box-fg: $res-night-fg;
+$res-night-editor-toolbar-bg: lighten($res-night-bg, 16%);
+$res-night-subscribe-bg: darken($green, 15%);
+$res-night-unsubscribe-bg: $dark-red;
+$res-night-toolbox-bg: darken($res-night-button-bg, 10%);
+
+$res-night-new-comment-bg: darken($dark-blue-gray, 7%);
+$res-night-new-comment-border-color: lighten($res-night-new-comment-bg, 6%);
+$res-night-spam-tagline-bg: darken($misc-spam-tagline-bg, 64%);

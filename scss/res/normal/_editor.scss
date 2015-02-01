@@ -1,7 +1,6 @@
-button.RESBigEditorPop,
 #BigEditor .RESCloseButton,
-.markdownEditor .RESMacroDropdownTitle,
-.markdownEditor > a.edit-btn {
+button.RESBigEditorPop,
+.markdownEditor .RESMacroDropdownTitle {
   @extend %tn-small-button;
   font-size: 0 !important;
   width: 16px;
@@ -21,8 +20,7 @@ button.RESBigEditorPop,
 }
 
 button.RESBigEditorPop,
-.markdownEditor .RESMacroDropdownTitle,
-.markdownEditor > a.edit-btn {
+.markdownEditor .RESMacroDropdownTitle {
   position: relative;
 }
 
@@ -34,7 +32,7 @@ button.RESBigEditorPop {
   min-width: 16px !important;
   padding: 2px 3px 3px 2px !important;
   clear: both;
-  @include box-sizing(content-box);
+  @include vendor(box-sizing, content-box);
 
   &::before {
     top: 3px;
@@ -48,85 +46,100 @@ button.RESBigEditorPop {
 }
 
 
-&.wiki-page {
-  button.RESBigEditorPop {
-    position: absolute;
-    float: none;
-    right: 15px;
-    top: 36px;
-    //margin: 16px 15px 0 8px;
-  }
-
-  .wiki-page-content > #editform > div > .markdownEditor > .RESCharCounter {
-    margin-right: 30px;
-  }
+.commentingAs,
+.RESMacroWrappingSpan {
+  float: none;
 }
 
 .commentingAs,
-.RESMacroWrappingSpan {
-  margin-top: 4px;
+.markdownEditor + .RESMacroWrappingSpan {
+  padding: 3px;
+  margin: 0;
+  border-top: solid 1px $default-border-color;
 }
 
-.RESMacroWrappingSpan {
-  float: right;
+.commentingAs + .RESMacroWrappingSpan {
+  position: absolute;
+  right: 0;
+  top: 22px;
+}
+
+.BERight > h3,
+.RESDialogSmall.livePreview > h3,
+.BELeft,
+.markdownEditor-wrapper {
+  @include linear-gradient(top, $res-editor-toolbar-bg, darken($res-editor-toolbar-bg, 5%));
 }
 
 .markdownEditor-wrapper {
   width: auto;
+  position: relative;
+  padding: 0;
+  border: solid 1px $default-border-color;
+  border-bottom: none;
+  margin: 0;
+  @include rounded(3px 3px 0 0);
+
+  + textarea#wiki_page_content,
+  + div > textarea {
+    margin: 0;
+    // FIXME: this is mainly for RES, but let's put it here.
+    // the toolbar and the textbox should always have the same width
+    // but for some reason the the textbox is always shorter when it is resized
+    // to its minimum width. this + 8px is a shitty workaround to fix that
+    min-width: $comment-textbox-width + 8px;
+    @include vendor(box-sizing, padding-box);
+    @include rounded(0 0 3px 3px);
+  }
 }
 
 .markdownEditor {
-  overflow: hidden;
-  padding: 2px;
+  padding: 3px 3px 0 3px;
 
-  > a.edit-btn {
-    float: left;
+  a.edit-btn {
+    margin: 0;
+    border-color: transparent;
+    background-color: transparent;
+    @include rounded(3px);
 
-    &.btn-bold::before {
-      background-position: -80px -64px;
+    &:hover,
+    &:active {
+      border-color: rgba(0, 0, 0, 0.26);
     }
 
-    &.btn-italic::before {
-      background-position: -80px -16px;
+    &:hover {
+      @include shadow(inset 0 1px 0 lighten($res-editor-toolbar-bg, 10%));
     }
 
-    &.btn-strike::before {
-      background-position: -48px -64px;
-    }
-
-    &.btn-superscript::before {
-      background-position: -32px -64px;
-    }
-
-    &.btn-link::before {
-      background-position: -64px 0;
-    }
-
-    &.btn-quote::before {
-      background-position: -64px -64px;
-    }
-
-    &.btn-code::before {
-      background-position: -80px -48px;
-    }
-    &.btn-list-unordered::before {
-      background-position: -16px -64px;
-    }
-
-    &.btn-list-ordered::before {
-      background-position: -80px 0;
-    }
-
-    &.btn-table::before {
-      background-position: 0 0;
+    &:active {
+      background-color: rgba(0, 0, 0, 0.1);
+      @include shadow(0 1px 1px lighten($res-editor-toolbar-bg, 10%));
     }
   }
 }
 
+.BERight,
 .RESDialogSmall.livePreview {
-  @extend %tn-raised-box;
-  border: solid 1px rgba(0, 0, 0, 0.2);
+  background: $text-bg;
+  color: $text-fg;
+  > h3 {
+    border-bottom-color: $default-border-color;
+    @include shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+  }
+}
+// FIXME: this is bad. live preview should not have a very limited width.
+// but if we don't limit its width to minimum textbox width, it will grow
+// wide making the toolbar to also grow wide.
+.RESDialogSmall.livePreview {
+  max-width: $comment-textbox-width;
+  border: solid 1px $default-border-color;
   margin-top: 1em;
+
+  > h3 {
+    padding: 7px;
+    height: auto;
+    @include rounded(3px 3px 0 0);
+  }
 }
 
 .usertext-edit .RESDialogSmall .md.RESDialogContents,
@@ -138,7 +151,6 @@ button.RESBigEditorPop {
   margin: 0 10px;
 }
 
-#BigPreview.md,
 .usertext-edit .RESDialogSmall .md.RESDialogContents,
 .RESDialogSmall.livePreview > .md {
   background: none !important;
@@ -146,96 +158,17 @@ button.RESBigEditorPop {
   @include shadow(none);
 }
 
-#BigEditor > .RESDialogSmall.BERight,
-.RESDialogSmall.livePreview {
-  > h3 {
-    position: static;
-    color: $table-heading-fg;
-    background: $table-heading-bg;
-    font-weight: bold;
-    margin: 0;
-    top: 0;
-    @include rounded(3px 3px 0 0);
-    @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 2px 3px rgba(0, 0, 0, 0.14));
-  }
-}
-
-#BigEditor {
-  button {
-    @extend %tn-button;
-  }
-
-  > .RESDialogSmall {
-    border: none !important;
-    @include shadow(0 3px 5px rgba(0, 0, 0, 0.3));
-
-    &.BELeft {
-      background: $main-bg url($main-bg-image) left top repeat;
-      @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7));
-
-      > h3 {
-        display: none;
-      }
-
-      // so they recently added class to the this godknowswhythereisaduplicate toolbar.
-      // i still have no idea if this is really intentional or not
-      > .markdownEditor-wrapper {
-        display: none;
-      }
-
-      > .RESDialogContents {
-        top: 10px;
-        right: 8px;
-        padding: 0;
-        padding-bottom: 100px !important;
-
-        //.commentingAs,
-        //.RESMacroWrappingSpan {
-          //margin-top: 4px;
-        //}
-      }
-    }
-
-    &.BERight {
-      > .RESDialogContents {
-        top: 40px;
-        margin: 0 !important;
-      }
-    }
-  }
-
-  .RESCloseButton {
-    @extend %tn-small-button;
-    padding-right: 4px;
-    top: 9px;
-
-    &.RESFadeButton {
-      right: 42px;
-      &::before {
-        background-position: -96px -48px;
-      }
-    }
-
-    &.close::before {
-      background-position: 0 -32px;
-    }
-  }
-}
-
 .RESCharCounter {
-  padding: 2px 8px;
+  padding: 1px 6px;
   color: $res-char-counter-fg;
   font-weight: bold;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  margin-bottom: 0 !important;
-
-  @include linear-gradient(top, $res-char-counter-bg, darken($res-char-counter-bg, 10%));
+  background: $res-char-counter-bg;
+  margin: 1px 5px 0 0 !important;
   @include rounded(3px);
-  @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.7));
 
   &.tooLong {
     color: $res-char-counter-fg;
-    @include linear-gradient(top, $res-char-counter-too-long-bg, darken($res-char-counter-too-long-bg, 10%));
+    background: $res-char-counter-too-long-bg;
   }
 
 }
@@ -261,3 +194,109 @@ button.RESBigEditorPop {
     @extend %tn-markdown-table;
   }
 }
+
+
+#BigEditor {
+  button {
+    @extend %tn-button;
+  }
+
+  > .RESDialogSmall {
+    border: none;
+    margin: 10px;
+    @include shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+
+    > .RESDialogContents {
+      margin: 0;
+    }
+
+    &.BELeft {
+      > h3 {
+        display: none;
+      }
+
+      > .RESDialogContents {
+        padding: 0 0 100px 0 !important;
+        width: 100%;
+        outline: dashed 1px blue;
+
+        > .markdownEditor-wrapper {
+          border: none;
+        }
+
+        > #BigText {
+          margin: 0;
+          padding: 5px;
+          width: 100%;
+          overflow: auto;
+          border-left: none !important;
+          border-right: none !important;
+          @include vendor(box-sizing, padding-box);
+          @include rounded(0);
+        }
+
+        > .BEFoot {
+          margin: 5px;
+        }
+      }
+    }
+
+    &.BERight {
+      > .RESDialogContents {
+        top: 40px;
+        padding: 5px 10px;
+        margin: 0 !important;
+      }
+
+    }
+  }
+
+  .RESCloseButton {
+    padding-right: 4px;
+    top: 9px;
+
+    &.RESFadeButton {
+      right: 42px;
+      &::before {
+        background-position: -96px -48px;
+      }
+    }
+
+    &.close::before {
+      background-position: 0 -32px;
+    }
+  }
+}
+
+&.wiki-page {
+  button.RESBigEditorPop {
+    clear: none;
+    margin: 5px 0;
+  }
+
+  .wiki-page-content {
+    > #editform {
+      > div > .markdownEditor > .RESCharCounter {
+        margin-right: 30px;
+      }
+
+      .help-toggle {
+        display: block;
+        float: left;
+        margin: 5px 0 20px 0;
+      }
+
+      > label[for="reason"],
+      > .livePreview {
+        display: block;
+        clear: left;
+      }
+
+      > .livePreview {
+        min-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
