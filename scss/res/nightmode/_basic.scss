@@ -29,3 +29,7 @@
 .info-notice {
   @extend %tn-dark-info-box;
 }
+
+h1 {
+  border-bottom: none;
+}

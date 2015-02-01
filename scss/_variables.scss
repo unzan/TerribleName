@@ -151,13 +151,17 @@ $list-entry-fg: darken($gray, 50%);
 $comment-bg: $text-bg;
 $comment-footer-bg: darken($comment-bg, 4%);
 $deleted-comment-bg: none;
-$highlighted-comment-outline-color: rgba(0, 0, 0, 0.2);
+
+// this one is for highlight when viewing single comment thread
 $highlighted-comment-bg: $bright-yellow;
+
+// and these two are for new comment highlight feature of gold members/moderators
+$new-comment-bg: desaturate(lighten($cyan, 50%), 20%);
+$new-comment-border-color: darken($new-comment-bg, 10%);
+
 $comment-textbox-width: 520px;
 $upvote-color: lighten($accent, 10%);
 $downvote-color: $violet;
-$new-comment-bg: desaturate(lighten($cyan, 50%), 20%);
-$new-comment-border-color: darken($new-comment-bg, 10%);
 
 $misc-spam-color: $violet;
 $misc-remove-color: $red;

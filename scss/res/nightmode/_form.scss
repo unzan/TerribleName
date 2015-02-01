@@ -14,6 +14,10 @@
 
 form.submit.content {
   background: none !important;
+
+  .info-notice {
+    background: $res-night-info-box-bg !important;
+  }
 }
 
 .side .spacer > #search input,
@@ -39,15 +43,19 @@ input[type=password] {
 .formtab.tabmenu {
   > li {
     > a {
-      @extend %tn-dark-button;
-      color: $res-night-button-fg !important;
+      @extend %tn-dark-info-box;
+      background: $res-night-info-box-bg !important;
+      color: darken($res-night-fg, 23%) !important;
+      border: none !important;
+      @include shadow(inset 0 1px 0 lighten($res-night-info-box-bg, 7%));
     }
 
     &.selected {
       > a {
-        @extend %tn-dark-button-pressed;
+        &,
         &::after {
-          display: none;
+          background: $res-night-info-box-bg;
+          color: $res-night-fg !important;
         }
       }
     }
@@ -55,6 +63,7 @@ input[type=password] {
 }
 
 .infobar,
+#searchexpando,
 .link .action-form,
 .link .flat-list > .report-reasons {
   @extend %tn-dark-info-box;
@@ -73,16 +82,19 @@ input[type=password] {
 
 .tabpane-content,
 .formtabs-content {
-  background: none;
-  border: none;
-  @include shadow(none);
+  @extend %tn-dark-info-box;
+
   .roundfield {
     background: none !important;
+  }
+
+  .infobar {
+    background: lighten($res-night-info-box-bg, 5%);
+    @include shadow(inset 0 1px 0 lighten($res-night-info-box-bg, 13%));
   }
 }
 
 .menuarea {
-  //@extend %tn-dark-engraved-box;
   color: $res-night-fg;
 
   > .spacer {
@@ -96,7 +108,6 @@ input[type=password] {
       border: none;
       color: $res-night-button-fg;
       @include shadow(0 3px  5px rgba(0, 0, 0, 0.4));
-      //@extend %tn-dark-button-default;
 
       a:hover {
         text-shadow: none;
@@ -140,4 +151,8 @@ input[type=password] {
       color: $res-night-fg;
     }
   }
+}
+
+&.moderator .tabpane-content .linefield {
+  background: none;
 }

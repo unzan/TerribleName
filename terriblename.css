@@ -1398,6 +1398,7 @@ ul.report-reasons > li.report-reason {
   line-height: 1.5em;
   font-size: 13px;
   max-width: none;
+  color: inherit;
 }
 .md p,
 .md li,
@@ -2647,6 +2648,9 @@ table.diff tbody .diff_header:not([id]) {
   background-color: #242a32 !important;
   color: #9e9e9e !important;
 }
+.res.res-nightmode h1 {
+  border-bottom: none;
+}
 .res.res-nightmode > #header {
   background: #111 url("%%banner%%") 0 0 no-repeat !important;
 }
@@ -2678,9 +2682,12 @@ table.diff tbody .diff_header:not([id]) {
   background: linear-gradient(top, #353e49, #242a32);
   box-shadow: inset 0 1px 0 #475261;
 }
-.res.res-nightmode .info-notice, .res.res-nightmode .infobar,
+.res.res-nightmode .info-notice, .res.res-nightmode .fancy-settings + .tabmenu > li > a,
+.res.res-nightmode .formtab.tabmenu > li > a, .res.res-nightmode .infobar,
+.res.res-nightmode #searchexpando,
 .res.res-nightmode .link .action-form,
-.res.res-nightmode .link .flat-list > .report-reasons, .res.res-nightmode .fancy-settings .linefield, .res.res-nightmode .side .linkinfo, .res.res-nightmode .gold-accent.comment-visits-box {
+.res.res-nightmode .link .flat-list > .report-reasons, .res.res-nightmode .tabpane-content,
+.res.res-nightmode .formtabs-content, .res.res-nightmode .fancy-settings .linefield, .res.res-nightmode .side .linkinfo, .res.res-nightmode .gold-accent.comment-visits-box {
   background: #292f37;
   color: #9e9e9e;
   border: solid 1px #0f1114;
@@ -2688,6 +2695,9 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode form.submit.content {
   background: none !important;
+}
+.res.res-nightmode form.submit.content .info-notice {
+  background: #292f37 !important;
 }
 .res.res-nightmode .side .spacer > #search input,
 .res.res-nightmode #newlink.submit .formtabs-content .roundfield-content textarea,
@@ -2708,11 +2718,16 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .fancy-settings + .tabmenu > li > a,
 .res.res-nightmode .formtab.tabmenu > li > a {
-  color: #9e9e9e !important;
+  background: #292f37 !important;
+  color: #636363 !important;
+  border: none !important;
+  box-shadow: inset 0 1px 0 #38404c;
 }
-.res.res-nightmode .fancy-settings + .tabmenu > li.selected > a::after,
+.res.res-nightmode .fancy-settings + .tabmenu > li.selected > a, .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a::after,
+.res.res-nightmode .formtab.tabmenu > li.selected > a,
 .res.res-nightmode .formtab.tabmenu > li.selected > a::after {
-  display: none;
+  background: #292f37;
+  color: #9e9e9e !important;
 }
 .res.res-nightmode .report-reasons li {
   color: #9e9e9e !important;
@@ -2721,15 +2736,14 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .comment .report-reasons {
   background: #2f3640;
 }
-.res.res-nightmode .tabpane-content,
-.res.res-nightmode .formtabs-content {
-  background: none;
-  border: none;
-  box-shadow: none;
-}
 .res.res-nightmode .tabpane-content .roundfield,
 .res.res-nightmode .formtabs-content .roundfield {
   background: none !important;
+}
+.res.res-nightmode .tabpane-content .infobar,
+.res.res-nightmode .formtabs-content .infobar {
+  background: #333b46;
+  box-shadow: inset 0 1px 0 #454f5e;
 }
 .res.res-nightmode .menuarea {
   color: #9e9e9e;
@@ -2756,9 +2770,10 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .fancy-settings .linefield .gray {
   color: #9e9e9e;
 }
+.res.res-nightmode.moderator .tabpane-content .linefield {
+  background: none;
+}
 .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
-.res.res-nightmode .fancy-settings + .tabmenu > li > a,
-.res.res-nightmode .formtab.tabmenu > li > a,
 .res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop,
 .res.res-nightmode .menuarea > .spacer > .toggle .togglebutton,
 .res.res-nightmode .commentarea .commentNavSortType,
@@ -2776,8 +2791,6 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0 1px 0 #4b5767, 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
-.res.res-nightmode .fancy-settings + .tabmenu > li > a:hover,
-.res.res-nightmode .formtab.tabmenu > li > a:hover,
 .res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop:hover,
 .res.res-nightmode .menuarea > .spacer > .toggle .togglebutton:hover,
 .res.res-nightmode .commentarea .commentNavSortType:hover,
@@ -2789,10 +2802,7 @@ table.diff tbody .diff_header:not([id]) {
   background: -moz-linear-gradient(top, #3c4552, #262c35);
   background: linear-gradient(top, #3c4552, #262c35);
 }
-.res.res-nightmode .fancy-settings + .tabmenu > li.selected > a,
-.res.res-nightmode .formtab.tabmenu > li.selected > a, .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
-.res.res-nightmode .fancy-settings + .tabmenu > li > a:active,
-.res.res-nightmode .formtab.tabmenu > li > a:active,
+.res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
 .res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop:active,
 .res.res-nightmode .menuarea > .spacer > .toggle .togglebutton:active,
 .res.res-nightmode .commentarea .commentNavSortType:active,
@@ -2989,32 +2999,44 @@ table.diff tbody .diff_header:not([id]) {
   border-top-color: black;
   box-shadow: inset 0 1px 0 #1e2229;
 }
-.res.res-nightmode .commentarea .comment.noncollapsed > .entry, .res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement {
+.res.res-nightmode .linklisting .comment.noncollapsed > .entry, .res.res-nightmode .linklisting .comment.noncollapsed > .entry.RES-keyNav-activeElement,
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry,
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement {
   background: #242a32 !important;
 }
+.res.res-nightmode .linklisting .comment.noncollapsed > .entry::before,
 .res.res-nightmode .commentarea .comment.noncollapsed > .entry::before {
   border-right-color: #242a32;
 }
+.res.res-nightmode .linklisting .comment.noncollapsed > .entry .tagline,
 .res.res-nightmode .commentarea .comment.noncollapsed > .entry .tagline {
   background: none;
   border-bottom-color: #353e49;
 }
+.res.res-nightmode .linklisting .comment.noncollapsed > .entry .flat-list.buttons,
 .res.res-nightmode .commentarea .comment.noncollapsed > .entry .flat-list.buttons {
   background: #2f3640;
   border-top-color: #353e49;
 }
-.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement .usertext-body, .res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement .usertext-body .md p {
+.res.res-nightmode .linklisting .comment.noncollapsed > .entry.RES-keyNav-activeElement .usertext-body, .res.res-nightmode .linklisting .comment.noncollapsed > .entry.RES-keyNav-activeElement .usertext-body .md p,
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement .usertext-body,
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement .usertext-body .md p {
   background: none !important;
 }
+.res.res-nightmode .linklisting .comment.noncollapsed.spam > .entry::before,
 .res.res-nightmode .commentarea .comment.noncollapsed.spam > .entry::before {
   border-right-color: #461a08;
 }
+.res.res-nightmode .linklisting .comment.noncollapsed.spam > .entry > .tagline,
 .res.res-nightmode .commentarea .comment.noncollapsed.spam > .entry > .tagline {
   background-color: #461a08;
 }
+.res.res-nightmode .linklisting .comment.noncollapsed.new-comment .usertext-body .md,
 .res.res-nightmode .commentarea .comment.noncollapsed.new-comment .usertext-body .md {
   border: none;
 }
+.res.res-nightmode .linklisting .comment.noncollapsed.new-comment .usertext-body,
+.res.res-nightmode .linklisting .comment.noncollapsed.new-comment .entry.RES-keyNav-activeElement .usertext-body,
 .res.res-nightmode .commentarea .comment.noncollapsed.new-comment .usertext-body,
 .res.res-nightmode .commentarea .comment.noncollapsed.new-comment .entry.RES-keyNav-activeElement .usertext-body {
   border-top: solid 1px #3e5363;
