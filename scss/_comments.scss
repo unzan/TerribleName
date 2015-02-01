@@ -211,6 +211,8 @@
   &.new-comment .usertext-body {
     border-left: none;
     border-right: none;
+    background: $new-comment-bg;
+    border-color: $new-comment-border-color;
   }
 }
 

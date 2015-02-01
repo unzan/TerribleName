@@ -11,7 +11,10 @@
   .comment {
     &.noncollapsed {
       > .entry {
-        background: $res-night-comment-bg;
+        &,
+        &.RES-keyNav-activeElement {
+          background: $res-night-comment-bg !important;
+        }
 
         &::before {
           border-right-color: $res-night-comment-bg;
@@ -27,17 +30,10 @@
           border-top-color: lighten($res-night-comment-bg, 8%);
         }
 
-        &.RES-keyNav-activeElement {
-          background: none !important;
-          > .usertext > .usertext-edit > .livePreview {
+        &.RES-keyNav-activeElement .usertext-body {
+          &,
+          & .md p {
             background: none !important;
-          }
-
-          > .usertext-body > .usertext-edit > .livePreview {
-            > .md,
-            > .md p {
-              background: none !important;
-            }
           }
         }
       }
@@ -51,6 +47,19 @@
           background-color: $res-night-spam-tagline-bg;
         }
       }
+
+      &.new-comment {
+        .usertext-body .md {
+          border: none;
+        }
+
+        .usertext-body,
+        .entry.RES-keyNav-activeElement .usertext-body {
+          border-top: solid 1px $res-night-new-comment-border-color;
+          border-bottom: solid 1px $res-night-new-comment-border-color;
+          background-color: $res-night-new-comment-bg !important;
+        }
+      }
     }
   }
 
@@ -60,3 +69,6 @@
   }
 }
 
+.gold-accent.comment-visits-box {
+  @extend %tn-dark-info-box;
+}

@@ -2,6 +2,10 @@
   background: none !important;
   margin: 1em 1em 1em 2em !important;
 
+  .linkinfo {
+    @extend %tn-dark-info-box;
+  }
+
   .sidecontentbox {
     .title {
       @extend %tn-dark-toolbar;
@@ -49,6 +53,7 @@
 
       color: $res-night-fg;
       background-color: transparent;
+      border-color: transparent;
 
       &:active,
       &:hover {

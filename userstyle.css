@@ -1692,6 +1692,8 @@
   .comment.new-comment .usertext-body {
     border-left: none;
     border-right: none;
+    background: #dbefee;
+    border-color: #b8dfdc;
   }
 
   .comment.collapsed > .entry,

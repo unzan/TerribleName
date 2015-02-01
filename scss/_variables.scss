@@ -156,6 +156,8 @@ $highlighted-comment-bg: $bright-yellow;
 $comment-textbox-width: 520px;
 $upvote-color: lighten($accent, 10%);
 $downvote-color: $violet;
+$new-comment-bg: desaturate(lighten($cyan, 50%), 20%);
+$new-comment-border-color: darken($new-comment-bg, 10%);
 
 $misc-spam-color: $violet;
 $misc-remove-color: $red;
@@ -225,4 +227,6 @@ $res-night-subscribe-bg: darken($green, 15%);
 $res-night-unsubscribe-bg: $dark-red;
 $res-night-toolbox-bg: darken($res-night-button-bg, 10%);
 
+$res-night-new-comment-bg: darken($dark-blue-gray, 7%);
+$res-night-new-comment-border-color: lighten($res-night-new-comment-bg, 6%);
 $res-night-spam-tagline-bg: darken($misc-spam-tagline-bg, 64%);

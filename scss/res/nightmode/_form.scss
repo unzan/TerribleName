@@ -28,14 +28,10 @@ input[type=password] {
   background: $res-night-input-bg !important;
   color: $res-night-input-fg !important;
   border-color: $res-night-bg !important;
-  //border-color: darken($res-night-bg, 3%) !important;
-  //border-top-color: darken($res-night-bg, 6%) !important;
-  //border: solid 1px lighten($res-night-bg, 17%) !important;
   @include shadow(inset 0 1px 2px darken($res-night-input-bg, 10%), 0 1px 0 lighten($res-night-bg, 13%));
 }
 
 #shortlink-text {
-  //border-style: none !important;
   @include shadow(none);
 }
 
@@ -59,7 +55,6 @@ input[type=password] {
 }
 
 .infobar,
-.linkinfo,
 .link .action-form,
 .link .flat-list > .report-reasons {
   @extend %tn-dark-info-box;
@@ -106,8 +101,6 @@ input[type=password] {
       a:hover {
         text-shadow: none;
         background: darken($res-night-button-bg, 10%);
-        //@include linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
-        //@include shadow(inset 0 2px 2px rgba(0, 0, 0, 0.3));
       }
     }
 
@@ -140,6 +133,11 @@ input[type=password] {
   }
 }
 
-&.moderator .linefield {
-  background: none !important;
+.fancy-settings {
+  .linefield {
+    @extend %tn-dark-info-box;
+    .gray {
+      color: $res-night-fg;
+    }
+  }
 }

@@ -1645,6 +1645,8 @@ ul.report-reasons > li.report-reason {
 .comment.new-comment .usertext-body {
   border-left: none;
   border-right: none;
+  background: #dbefee;
+  border-color: #b8dfdc;
 }
 
 .comment.collapsed > .entry,
@@ -2661,6 +2663,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode > #header #header-bottom-right {
   background: none !important;
 }
+.res.res-nightmode > #header #header-bottom-left > .pagename:last-child::after,
 .res.res-nightmode > #header .tabmenu {
   background: -webkit-linear-gradient(top, #292f37, #1e2229);
   background: -moz-linear-gradient(top, #292f37, #1e2229);
@@ -2676,9 +2679,8 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0 1px 0 #475261;
 }
 .res.res-nightmode .info-notice, .res.res-nightmode .infobar,
-.res.res-nightmode .linkinfo,
 .res.res-nightmode .link .action-form,
-.res.res-nightmode .link .flat-list > .report-reasons {
+.res.res-nightmode .link .flat-list > .report-reasons, .res.res-nightmode .fancy-settings .linefield, .res.res-nightmode .side .linkinfo, .res.res-nightmode .gold-accent.comment-visits-box {
   background: #292f37;
   color: #9e9e9e;
   border: solid 1px #0f1114;
@@ -2751,8 +2753,8 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li {
   border: none !important;
 }
-.res.res-nightmode.moderator .linefield {
-  background: none !important;
+.res.res-nightmode .fancy-settings .linefield .gray {
+  color: #9e9e9e;
 }
 .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
 .res.res-nightmode .fancy-settings + .tabmenu > li > a,
@@ -2896,6 +2898,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .side .icon-menu a {
   color: #9e9e9e;
   background-color: transparent;
+  border-color: transparent;
 }
 .res.res-nightmode .side .icon-menu a:active, .res.res-nightmode .side .icon-menu a:hover {
   color: #9e9e9e;
@@ -2986,8 +2989,8 @@ table.diff tbody .diff_header:not([id]) {
   border-top-color: black;
   box-shadow: inset 0 1px 0 #1e2229;
 }
-.res.res-nightmode .commentarea .comment.noncollapsed > .entry {
-  background: #242a32;
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry, .res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement {
+  background: #242a32 !important;
 }
 .res.res-nightmode .commentarea .comment.noncollapsed > .entry::before {
   border-right-color: #242a32;
@@ -3000,14 +3003,7 @@ table.diff tbody .diff_header:not([id]) {
   background: #2f3640;
   border-top-color: #353e49;
 }
-.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement {
-  background: none !important;
-}
-.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext > .usertext-edit > .livePreview {
-  background: none !important;
-}
-.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext-body > .usertext-edit > .livePreview > .md,
-.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement > .usertext-body > .usertext-edit > .livePreview > .md p {
+.res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement .usertext-body, .res.res-nightmode .commentarea .comment.noncollapsed > .entry.RES-keyNav-activeElement .usertext-body .md p {
   background: none !important;
 }
 .res.res-nightmode .commentarea .comment.noncollapsed.spam > .entry::before {
@@ -3015,6 +3011,15 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .commentarea .comment.noncollapsed.spam > .entry > .tagline {
   background-color: #461a08;
+}
+.res.res-nightmode .commentarea .comment.noncollapsed.new-comment .usertext-body .md {
+  border: none;
+}
+.res.res-nightmode .commentarea .comment.noncollapsed.new-comment .usertext-body,
+.res.res-nightmode .commentarea .comment.noncollapsed.new-comment .entry.RES-keyNav-activeElement .usertext-body {
+  border-top: solid 1px #3e5363;
+  border-bottom: solid 1px #3e5363;
+  background-color: #324450 !important;
 }
 .res.res-nightmode.wiki-page .wikititle {
   border: none !important;
