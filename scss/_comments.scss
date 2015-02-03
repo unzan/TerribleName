@@ -55,10 +55,10 @@
       content: '';
       position: absolute;
       background: darken($main-bg, 15%);
-      top: 42px;
-      left: 9px;
+      top: 46px;
+      left: 10px;
       width: 1px;
-      bottom: 8px;
+      bottom: 6px;
     }
   }
 }
@@ -108,7 +108,7 @@
 
   .midcol {
     width: 16px;
-    margin-right: 14px;
+    margin: 3px 14px 0 0;
   }
 
   .child {
@@ -133,7 +133,7 @@
     > .entry {
       @extend %tn-comment-bubble;
       max-width: 95%;
-      margin: 0 2px 13px 2px;
+      margin: 6px 2px 7px 2px;
 
       > .tagline {
         @extend %tn-comment-tagline;
@@ -187,9 +187,13 @@
 }
 
 .morerecursion .deepthread,
-.morechildren .morecomments,
+.morechildren .morecomments {
+  margin: 5px 17px !important;
+  display: inline-block;
+}
+
 .comment.collapsed .tagline {
-  margin: 5px 15px !important;
+  margin: 5px 1px !important;
   display: inline-block;
 }
 
