@@ -9,6 +9,13 @@ $show-line-num-in-codeblock: no;
 $vendor-prefixes: 1;
 $max-comment-width: 63em;
 
+// show vertical vertical line for comment level indicator.
+// valid values:
+// - child-only: only show level indicator on child comments
+// - all: show level indicator on all comments
+// - none: do not show level indicator
+$comment-level-indicator: child-only;
+
 // --- PALETTE ---------------------------------------------
 
 $white:           #fff;

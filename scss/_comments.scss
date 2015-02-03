@@ -40,16 +40,26 @@
   }
 }
 
-.nestedlisting {
-  // this is the vertical line on the left of comment
-  .thing.comment.noncollapsed::before {
-    content: '';
-    position: absolute;
-    background: darken($main-bg, 15%);
-    top: 42px;
-    left: 9px;
-    width: 1px;
-    bottom: 8px;
+@if $comment-level-indicator != none {
+  $context: null;
+  @if $comment-level-indicator == all {
+    $context: '';
+  } @else if $comment-level-indicator == child-only {
+    $context: '.child';
+  } @else {
+    @warn 'Valid values for $comment-level-indicator are: child-only, all, none';
+  }
+
+  @if $context {
+    .nestedlisting #{$context} .thing.comment.noncollapsed::before {
+      content: '';
+      position: absolute;
+      background: darken($main-bg, 15%);
+      top: 42px;
+      left: 9px;
+      width: 1px;
+      bottom: 8px;
+    }
   }
 }
 
@@ -103,6 +113,7 @@
 
   .child {
     margin-top: 0;
+    border-left: none;
     > .usertext {
       margin-left: 20px;
     }

@@ -1568,6 +1568,7 @@ ul.report-reasons > li.report-reason {
 }
 .md ul {
   list-style-type: square;
+  padding-left: 20px;
 }
 .md a:hover {
   text-decoration: underline;
@@ -1615,7 +1616,7 @@ ul.report-reasons > li.report-reason {
   margin-top: 9px;
 }
 
-.nestedlisting .thing.comment.noncollapsed::before {
+.nestedlisting .child .thing.comment.noncollapsed::before {
   content: '';
   position: absolute;
   background: #c4c4c4;
@@ -1659,6 +1660,7 @@ ul.report-reasons > li.report-reason {
 }
 .comment .child {
   margin-top: 0;
+  border-left: none;
 }
 .comment .child > .usertext {
   margin-left: 20px;
