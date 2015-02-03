@@ -1,92 +1,3 @@
-%tn-button {
-  color: $button-fg !important;
-  font-family: $sans-serif;
-  padding: 2px 8px;
-  width: auto;
-  min-width: 4em;
-  height: auto;
-  line-height: 1.5em;
-  vertical-align: middle;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-  text-decoration: none !important;
-  border: none;
-  text-align: center;
-  margin-right: 3px;
-  @include linear-gradient(top, $button-bg, darken($button-bg, 6%));
-  @include shadow(0 1px 2px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3));
-  @include rounded(4px);
-
-  &:hover,
-  &:focus {
-    color: $button-fg;
-    @include linear-gradient(top, lighten($button-bg, 5%), darken($button-bg, 5%));
-  }
-
-  &:active {
-    @include linear-gradient(top, $button-bg, darken($button-bg, 10%));
-    @include shadow(inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7));
-  }
-}
-
-%tn-default-button {
-  @extend %tn-button;
-  display: inline-block;
-  padding-bottom: 3px;
-  text-transform: capitalize;
-}
-
-%tn-button-reset {
-  padding: 0 !important;
-  min-width: 0 !important;
-  @include shadow(none);
-}
-
-%tn-small-button-default,
-%tn-small-button {
-  @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.12));
-}
-
-%tn-small-button-default,
-%tn-small-button-shadowless,
-%tn-small-button {
-  color: $small-button-fg;
-  text-decoration: none !important;
-  padding: 2px 6px;
-  border: solid 1px darken($small-button-bg, 30%);
-  @include linear-gradient(top, $small-button-bg, darken($small-button-bg, 6%));
-  @include rounded(3px);
-}
-
-
-%tn-small-button-pressed,
-%tn-small-button-shadowless:active,
-%tn-small-button:active {
-  @include linear-gradient(top, darken($small-button-bg, 3%), darken($small-button-bg, 9%));
-  @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.7));
-}
-
-%tn-switch-button {
-  @extend %tn-small-button;
-  margin: 0;
-  border-right-style: none;
-  color: $small-button-fg !important;
-  @include rounded(0);
-}
-
-%tn-switch-button-round-left {
-  @include rounded(3px 0 0 3px);
-}
-
-%tn-switch-button-round-right {
-  border-right-style: solid;
-  @include rounded(0 3px 3px 0);
-}
-
-%tn-switch-button-active {
-  @extend %tn-small-button-pressed;
-  font-weight: bold;
-}
-
 .fancy-toggle-button {
   > .option {
     &.add,
@@ -236,24 +147,6 @@ input[type=submit] {
   }
 }
 
-%tn-alt-small-button {
-  display: inline-block;
-  padding: 2px 6px;
-  border: solid 1px rgba(darken($small-button-bg, 30%), 0.6);
-  margin-right: 3px;
-  font-weight: bold;
-  color: $small-button-fg;
-
-  &:hover,
-  &:focus {
-    @extend %tn-small-button-default;
-  }
-
-  &:active {
-    @extend %tn-small-button-pressed;
-  }
-}
-
 .nav-buttons {
   padding: 1em 0em;
 }
@@ -327,5 +220,3 @@ a.pretty-button {
 .comment .pretty-button:hover {
   text-decoration: underline !important;
 }
-
-

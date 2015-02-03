@@ -16,48 +16,18 @@
  * [2]: http://commons.wikimedia.org/wiki/File:Panorama_Frankfurt_vom_Maintower_edit.jpg
  * [3]: http://de.wikipedia.org/wiki/Benutzer:Schaengel
  */
-body {
-  background: #eaeaea url("%%noise%%") left top repeat;
-  color: #111;
-  font-family: "Liberation Sans", Arial, sans-serif;
-}
-
-.thing .title, .link .tagline a, .md a,
-a {
+a, .thing .title, .link .tagline a, .md a {
   color: #2177b4;
 }
-.thing .title:visited, .link .tagline a:visited, .md a:visited,
-a:visited {
+a:visited, .thing .title:visited, .link .tagline a:visited {
   color: #5358ba;
 }
 
-hr {
-  margin: 1.5em 0em;
-}
-
-.md hr,
-hr {
+hr, .md hr {
   border: none;
   display: block;
   height: 3px;
   background: #b7b7b7;
-}
-
-.error {
-  color: #111;
-}
-
-.content {
-  overflow: hidden;
-  padding-bottom: 10px;
-}
-
-:focus {
-  outline: none;
-}
-
-::-moz-focus-inner {
-  border: none;
 }
 
 .link .usertext .md, .linklisting > .link.comment .usertext .md, .comment.noncollapsed > .entry, .wiki-page .wiki-page-content .md.wiki {
@@ -187,12 +157,12 @@ input[type=submit] {
   box-shadow: none;
 }
 
-.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando,
+.next-suggestions > a:hover, .next-suggestions > a:focus, .expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando,
 .res .selftext.collapsed.expando-button.toggleImage.video-muted,
 .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
 .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
 .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .next-suggestions > a:hover, .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .wiki-page .pageactions > .wikiaction,
 .res .commentNavSortType,
 .nextprev > a[rel],
@@ -206,12 +176,12 @@ input[type=submit] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando,
+.next-suggestions > a:hover, .next-suggestions > a:focus, .expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando,
 .res .selftext.collapsed.expando-button.toggleImage.video-muted,
 .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
 .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
 .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .next-suggestions > a:hover, .next-suggestions > a:focus, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
 .wiki-page .pageactions > .wikiaction,
 .res .commentNavSortType,
 .nextprev > a[rel],
@@ -232,9 +202,9 @@ input[type=submit] {
   border-radius: 3px;
 }
 
-.wiki-page .pageactions > .wikiaction.wikiaction-current, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
+.wiki-page .pageactions > .wikiaction.wikiaction-current, .next-suggestions > a:active, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
 .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .next-suggestions > a:active, .flairselector .flairoptionpane ul > li:active,
+.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:active,
 .wiki-page .pageactions > .wikiaction:active,
 .res .commentNavSortType:active,
 .nextprev > a[rel]:active,
@@ -269,6 +239,252 @@ input[type=submit] {
 
 .wiki-page .pageactions > .wikiaction.wikiaction-current {
   font-weight: bold;
+}
+
+.next-suggestions > a {
+  display: inline-block;
+  padding: 2px 6px;
+  border: solid 1px rgba(170, 170, 170, 0.6);
+  margin-right: 3px;
+  font-weight: bold;
+  color: #6b6b6b;
+}
+
+.infobar, .link .report-reasons,
+.link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
+.content.submit .info-notice {
+  background: #FFF5CC;
+  color: #111;
+  border: solid 1px #aaaaaa;
+  font-family: "Liberation Sans", Arial, sans-serif;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px #fffbeb, inset 0 -1px 1px #ffeda3;
+}
+
+.menuarea .spacer > .help-hoverable {
+  z-index: 3000;
+  position: absolute;
+  background: #FFF5CC;
+  color: #111;
+  padding: 4px 6px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+#search input[type=text],
+.roundfield-content > input#url,
+.pretty-form textarea,
+.pretty-form input[type=text],
+.pretty-form input[type=password],
+textarea,
+input[type=text],
+input[type=password] {
+  padding: 3px;
+  background: #fff;
+  color: #444444;
+  border: solid 1px #aaaaaa !important;
+  font-family: "Liberation Sans", Arial, sans-serif;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+}
+#search input[type=text]:focus,
+.roundfield-content > input#url:focus,
+textarea:focus,
+input[type=text]:focus,
+input[type=password]:focus {
+  border-color: #ed855a !important;
+}
+
+.flairselector,
+.tabpane-content,
+.formtabs-content,
+.login-form-side,
+.searchfacets,
+.fancy-settings .linefield,
+.searchpane.raisedbox, .res #alert_message {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  background: #efefef;
+  border: solid 1px #aaaaaa;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.last-clicked.link:not(:first-child), .link:not(:first-child), .linklisting > .comment:not(:first-child) {
+  border-top: solid 1px #bcbcbc;
+  box-shadow: inset 0 1px 0 #f7f7f7;
+}
+
+.link, .linklisting > .comment {
+  margin: 0;
+  position: relative;
+}
+.link .usertext {
+  padding-right: 15px;
+}
+
+.organic-listing .link,
+.link.promotedlink.promoted {
+  position: relative;
+  background-color: rgba(133, 153, 0, 0.1) !important;
+  color: #444444;
+  border: solid 1px rgba(0, 0, 0, 0.2) !important;
+  padding: 1.3em 0.6em 1.3em 0em;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.md table td, .res #alert_message table.commentPreview td,
+.md table th,
+.res #alert_message table.commentPreview th {
+  border-color: #b7b7b7;
+}
+.md table th, .res #alert_message table.commentPreview th {
+  background: #e6e6e6;
+  color: #444444;
+  text-shadow: 0 1px 1px white;
+  box-shadow: inset 0 1px 0 white;
+}
+.md table tbody tr, .res #alert_message table.commentPreview tbody tr {
+  background: #fff;
+}
+.md table tbody tr:hover, .res #alert_message table.commentPreview tbody tr:hover {
+  background: #FFF5CC;
+}
+
+.md blockquote {
+  border-left: solid 3px #9e9e9e;
+  padding: 0.2em 0.5em;
+  background: whitesmoke;
+  color: #111;
+  margin: 0.4em;
+}
+
+.comment.noncollapsed > .entry {
+  position: relative;
+  background: #fff;
+  padding: 0;
+  display: inline-block;
+  overflow: visible;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.comment.noncollapsed > .entry::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 8px;
+  width: 0;
+  height: 0;
+  border-right: solid 8px #fff;
+  border-top: solid 8px transparent;
+  border-bottom: solid 8px transparent;
+}
+
+.comment.noncollapsed > .entry > .tagline {
+  display: block;
+  padding: 6px 14px 6px 10px;
+  border-bottom: solid 1px #e6e6e6;
+  border-radius: 3px 3px 0 0;
+}
+
+.comment.noncollapsed > .entry .flat-list.buttons {
+  background: whitesmoke;
+  border-top: solid 1px #e6e6e6;
+  padding: 4px 12px 4px 8px;
+  border-radius: 0 0 3px 3px;
+}
+.comment.noncollapsed > .entry .flat-list.buttons li a {
+  font-weight: normal;
+}
+
+.res.res-nightmode .thing .midcol > .up.arrow, .res.res-nightmode .thing .midcol > .down.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow,
+.arrow.up,
+.arrow.up:hover,
+.arrow.down,
+.arrow.down:hover,
+.arrow.upmod,
+.arrow.upmod:hover,
+.arrow.downmod,
+.arrow.downmod:hover, .submit.mod-override > .morelink > a::after, .titlebox .leavemoderator::before,
+.titlebox form.leavecontributor-button::before, .tagline .userattrs .cakeday, #mail,
+#modmail,
+.gilded-icon::before, .icon-menu .reddit-edit::before,
+.icon-menu .reddit-edited::before,
+.icon-menu .moderator-mail::before,
+.icon-menu .reddit-moderators::before,
+.icon-menu .reddit-contributors::before,
+.icon-menu .reddit-traffic::before,
+.icon-menu .reddit-modqueue::before,
+.icon-menu .reddit-reported::before,
+.icon-menu .reddit-spam::before,
+.icon-menu .reddit-ban::before,
+.icon-menu .reddit-flair::before,
+.icon-menu .reddit-moderationlog::before,
+.icon-menu .reddit-unmoderated::before,
+.icon-menu .edit-stylesheet::before,
+.icon-menu .wikiaction-revisions::before,
+.icon-menu .wikiaction-pages::before, .res .gearIcon, .res #BigEditor .RESCloseButton::before,
+.res button.RESBigEditorPop::before,
+.res .markdownEditor .RESMacroDropdownTitle::before {
+  display: inline-block !important;
+  background-image: url("%%icons%%") !important;
+  background-repeat: no-repeat !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.res.res-nightmode .thing .midcol > .arrow,
+.arrow {
+  margin-left: 3px;
+}
+.res.res-nightmode .thing .midcol > .up.arrow, .res.res-nightmode .thing .midcol > .up.arrow:hover,
+.arrow.up,
+.arrow.up:hover {
+  background-position: -64px -80px !important;
+}
+.res.res-nightmode .thing .midcol > .upmod.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow:hover,
+.arrow.upmod,
+.arrow.upmod:hover {
+  background-position: -48px -80px !important;
+}
+.res.res-nightmode .thing .midcol > .down.arrow, .res.res-nightmode .thing .midcol > .down.arrow:hover,
+.arrow.down,
+.arrow.down:hover {
+  background-position: -96px -80px !important;
+}
+.res.res-nightmode .thing .midcol > .downmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow:hover,
+.arrow.downmod,
+.arrow.downmod:hover {
+  background-position: -80px -80px !important;
+}
+
+body {
+  background: #eaeaea url("%%noise%%") left top repeat;
+  color: #111;
+  font-family: "Liberation Sans", Arial, sans-serif;
+}
+
+hr {
+  margin: 1.5em 0em;
+}
+
+.error {
+  color: #111;
+}
+
+.content {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: none;
 }
 
 .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove {
@@ -362,15 +578,6 @@ input[type=submit] {
   background: #848484;
 }
 
-.next-suggestions > a {
-  display: inline-block;
-  padding: 2px 6px;
-  border: solid 1px rgba(170, 170, 170, 0.6);
-  margin-right: 3px;
-  font-weight: bold;
-  color: #6b6b6b;
-}
-
 .nav-buttons {
   padding: 1em 0em;
 }
@@ -416,54 +623,6 @@ a.pretty-button[onclick*=ignore_reports] {
 
 .comment .pretty-button:hover {
   text-decoration: underline !important;
-}
-
-.infobar, .link .report-reasons,
-.link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
-.content.submit .info-notice {
-  background: #FFF5CC;
-  color: #111;
-  border: solid 1px #aaaaaa;
-  font-family: "Liberation Sans", Arial, sans-serif;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px #fffbeb, inset 0 -1px 1px #ffeda3;
-}
-
-.menuarea .spacer > .help-hoverable {
-  z-index: 3000;
-  position: absolute;
-  background: #FFF5CC;
-  color: #111;
-  padding: 4px 6px;
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-}
-
-#search input[type=text],
-.roundfield-content > input#url,
-.pretty-form textarea,
-.pretty-form input[type=text],
-.pretty-form input[type=password],
-textarea,
-input[type=text],
-input[type=password] {
-  padding: 3px;
-  background: #fff;
-  color: #444444;
-  border: solid 1px #aaaaaa !important;
-  font-family: "Liberation Sans", Arial, sans-serif;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.8);
-  border-radius: 3px;
-}
-#search input[type=text]:focus,
-.roundfield-content > input#url:focus,
-.pretty-form textarea:focus,
-.pretty-form input[type=text]:focus,
-.pretty-form input[type=password]:focus,
-textarea:focus,
-input[type=text]:focus,
-input[type=password]:focus {
-  border-color: #ed855a !important;
 }
 
 #search input[type=text] {
@@ -559,21 +718,6 @@ form.submit .roundfield.info-notice {
 
 .tabpane-content {
   margin-left: 10px;
-}
-
-.flairselector,
-.tabpane-content,
-.formtabs-content,
-.login-form-side,
-.searchfacets,
-.fancy-settings .linefield,
-.searchpane.raisedbox, .res #alert_message {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14);
-  overflow: hidden;
-  background: #efefef;
-  border: solid 1px #aaaaaa;
-  padding: 10px;
-  border-radius: 3px;
 }
 
 .tabpane-content,
@@ -1104,19 +1248,6 @@ ul.report-reasons > li.report-reason {
   text-decoration: none;
 }
 
-.last-clicked.link:not(:first-child), .link:not(:first-child), .linklisting > .comment:not(:first-child) {
-  border-top: solid 1px #bcbcbc;
-  box-shadow: inset 0 1px 0 #f7f7f7;
-}
-
-.link, .linklisting > .comment {
-  margin: 0;
-  position: relative;
-}
-.link .usertext {
-  padding-right: 15px;
-}
-
 .wiki-page > .content,
 .listing-page > .content {
   overflow: visible;
@@ -1333,18 +1464,6 @@ ul.report-reasons > li.report-reason {
   display: none;
 }
 
-.organic-listing .link,
-.link.promotedlink.promoted {
-  position: relative;
-  background-color: rgba(133, 153, 0, 0.1) !important;
-  color: #444444;
-  border: solid 1px rgba(0, 0, 0, 0.2) !important;
-  padding: 1.3em 0.6em 1.3em 0em;
-  margin-bottom: 5px;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
 .link.promotedlink.promoted > .entry > .sponsored-tagline {
   bottom: 10px;
   right: -5px;
@@ -1366,32 +1485,6 @@ ul.report-reasons > li.report-reason {
 #noresults {
   margin: 7px 15px;
   font-style: italic;
-}
-
-.md table td, .res #alert_message table.commentPreview td,
-.md table th,
-.res #alert_message table.commentPreview th {
-  border-color: #b7b7b7;
-}
-.md table th, .res #alert_message table.commentPreview th {
-  background: #e6e6e6;
-  color: #444444;
-  text-shadow: 0 1px 1px white;
-  box-shadow: inset 0 1px 0 white;
-}
-.md table tbody tr, .res #alert_message table.commentPreview tbody tr {
-  background: #fff;
-}
-.md table tbody tr:hover, .res #alert_message table.commentPreview tbody tr:hover {
-  background: #FFF5CC;
-}
-
-.md blockquote {
-  border-left: solid 3px #9e9e9e;
-  padding: 0.2em 0.5em;
-  background: whitesmoke;
-  color: #111;
-  margin: 0.4em;
 }
 
 .md {
@@ -1520,44 +1613,6 @@ ul.report-reasons > li.report-reason {
 .commentarea .bottom-area > .help-toggle,
 .commentarea .bottom-area > .reddiquette {
   margin-top: 9px;
-}
-
-.comment.noncollapsed > .entry {
-  position: relative;
-  background: #fff;
-  padding: 0;
-  display: inline-block;
-  overflow: visible;
-  border-radius: 3px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-.comment.noncollapsed > .entry::before {
-  content: '';
-  position: absolute;
-  left: -8px;
-  top: 8px;
-  width: 0;
-  height: 0;
-  border-right: solid 8px #fff;
-  border-top: solid 8px transparent;
-  border-bottom: solid 8px transparent;
-}
-
-.comment.noncollapsed > .entry > .tagline {
-  display: block;
-  padding: 6px 14px 6px 10px;
-  border-bottom: solid 1px #e6e6e6;
-  border-radius: 3px 3px 0 0;
-}
-
-.comment.noncollapsed > .entry .flat-list.buttons {
-  background: whitesmoke;
-  border-top: solid 1px #e6e6e6;
-  padding: 4px 12px 4px 8px;
-  border-radius: 0 0 3px 3px;
-}
-.comment.noncollapsed > .entry .flat-list.buttons li a {
-  font-weight: normal;
 }
 
 .nestedlisting .thing.comment.noncollapsed::before {
@@ -1865,72 +1920,11 @@ ul.report-reasons > li.report-reason {
   color: #2177b4;
 }
 
-.submit.mod-override > .morelink > a::after, .titlebox .leavemoderator::before,
-.titlebox form.leavecontributor-button::before, .res.res-nightmode .thing .midcol > .up.arrow, .res.res-nightmode .thing .midcol > .down.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow,
-.arrow.up,
-.arrow.up:hover,
-.arrow.down,
-.arrow.down:hover,
-.arrow.upmod,
-.arrow.upmod:hover,
-.arrow.downmod,
-.arrow.downmod:hover, .tagline .userattrs .cakeday, #mail,
-#modmail,
-.gilded-icon::before, .icon-menu .reddit-edit::before,
-.icon-menu .reddit-edited::before,
-.icon-menu .moderator-mail::before,
-.icon-menu .reddit-moderators::before,
-.icon-menu .reddit-contributors::before,
-.icon-menu .reddit-traffic::before,
-.icon-menu .reddit-modqueue::before,
-.icon-menu .reddit-reported::before,
-.icon-menu .reddit-spam::before,
-.icon-menu .reddit-ban::before,
-.icon-menu .reddit-flair::before,
-.icon-menu .reddit-moderationlog::before,
-.icon-menu .reddit-unmoderated::before,
-.icon-menu .edit-stylesheet::before,
-.icon-menu .wikiaction-revisions::before,
-.icon-menu .wikiaction-pages::before, .res .gearIcon, .res #BigEditor .RESCloseButton::before,
-.res button.RESBigEditorPop::before,
-.res .markdownEditor .RESMacroDropdownTitle::before {
-  display: inline-block !important;
-  background-image: url("%%icons%%") !important;
-  background-repeat: no-repeat !important;
-  width: 16px !important;
-  height: 16px !important;
-}
-
 .titlebox .leavemoderator::before {
   background-position: -16px -32px;
 }
 .titlebox form.leavecontributor-button::before {
   background-position: -96px -16px;
-}
-
-.res.res-nightmode .thing .midcol > .arrow,
-.arrow {
-  margin-left: 3px;
-}
-.res.res-nightmode .thing .midcol > .up.arrow, .res.res-nightmode .thing .midcol > .up.arrow:hover,
-.arrow.up,
-.arrow.up:hover {
-  background-position: -64px -80px !important;
-}
-.res.res-nightmode .thing .midcol > .upmod.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow:hover,
-.arrow.upmod,
-.arrow.upmod:hover {
-  background-position: -48px -80px !important;
-}
-.res.res-nightmode .thing .midcol > .down.arrow, .res.res-nightmode .thing .midcol > .down.arrow:hover,
-.arrow.down,
-.arrow.down:hover {
-  background-position: -96px -80px !important;
-}
-.res.res-nightmode .thing .midcol > .downmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow:hover,
-.arrow.downmod,
-.arrow.downmod:hover {
-  background-position: -80px -80px !important;
 }
 
 .tagline .userattrs .cakeday {

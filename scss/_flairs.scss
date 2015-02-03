@@ -1,14 +1,3 @@
-%tn-flair {
-  display: inline-block;
-  font-size: $normal-font-size !important;
-  border: solid 1px rgba(0, 0, 0, 0.18);
-  line-height: 1.2em;
-  padding: 1px 4px;
-  vertical-align: middle;
-  background-color: $flair-bg;
-  color: $flair-fg;
-}
-
 .linkflairlabel,
 .flair {
   @extend %tn-flair;

@@ -1,34 +1,3 @@
-%tn-markdown-table {
-  td,
-  th {
-    border-color: $table-border-color;
-  }
-
-  th {
-    background: $table-heading-bg;
-    color: $table-heading-fg;
-    text-shadow: 0 1px 1px lighten($table-heading-bg, 20%);
-    @include shadow(inset 0 1px 0 lighten($table-heading-bg, 30%));
-  }
-
-  tbody {
-    tr {
-      background: $table-content-bg;
-      &:hover {
-        background: $table-highlight-bg;
-      }
-    }
-  }
-}
-
-%tn-quote {
-  border-left: solid 3px $quote-border-color;
-  padding: 0.2em 0.5em;
-  background: $quote-bg;
-  color: $quote-fg;
-  margin: 0.4em;
-}
-
 .md {
   line-height: 1.5em;
   font-size: $normal-font-size;

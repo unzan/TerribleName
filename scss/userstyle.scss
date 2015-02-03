@@ -3,6 +3,7 @@
 @-moz-document domain("reddit.com") {
   @import "userstyle/variables";
   @import "mixins";
+  @import "placeholders";
   @import "basic";
   @import "buttons";
   @import "form";

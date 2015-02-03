@@ -2,7 +2,7 @@ $all_selectors: ();
 @for $i from 1 to 12 {
   $selector: ();
   @for $j from 1 to $i {
-    $selector: append($selector, ".comment", space);
+    $selector: append($selector, '.comment', space);
   }
   $all_selectors: append($all_selectors, $selector, comma);
 }
