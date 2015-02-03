@@ -106,19 +106,9 @@
 .morerecursion,
 .morechildren,
 .comment.collapsed {
-  > .entry {
-    margin-bottom: 0.3em;
-    &.RES-keyNav-activeElement {
-      background: none !important;
-    }
+  > .entry.RES-keyNav-activeElement {
+    background: none !important;
   }
-}
-
-.morerecursion .deepthread,
-.morechildren .morecomments,
-.comment.collapsed .tagline {
-  margin: 3px;
-  display: inline-block;
 }
 
 .morerecursion > .entry.RES-keyNav-activeElement > .deepthread,

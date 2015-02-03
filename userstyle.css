@@ -1760,9 +1760,11 @@
     border-color: #b8dfdc;
   }
 
-  .comment.collapsed > .entry,
-  .morerecursion > .entry {
-    margin-bottom: 0.7em;
+  .morerecursion .deepthread,
+  .morechildren .morecomments,
+  .comment.collapsed .tagline {
+    margin: 5px 15px !important;
+    display: inline-block;
   }
 
   .contest-mode.infobar {
@@ -3173,21 +3175,10 @@
   .res .comment .expando-button:hover {
     text-decoration: none !important;
   }
-  .res .morerecursion > .entry,
-  .res .morechildren > .entry,
-  .res .comment.collapsed > .entry {
-    margin-bottom: 0.3em;
-  }
   .res .morerecursion > .entry.RES-keyNav-activeElement,
   .res .morechildren > .entry.RES-keyNav-activeElement,
   .res .comment.collapsed > .entry.RES-keyNav-activeElement {
     background: none !important;
-  }
-  .res .morerecursion .deepthread,
-  .res .morechildren .morecomments,
-  .res .comment.collapsed .tagline {
-    margin: 3px;
-    display: inline-block;
   }
   .res #BigEditor .RESCloseButton,
   .res button.RESBigEditorPop,

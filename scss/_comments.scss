@@ -175,11 +175,11 @@
   }
 }
 
-.comment.collapsed,
-.morerecursion {
-  > .entry {
-    margin-bottom: 0.7em;
-  }
+.morerecursion .deepthread,
+.morechildren .morecomments,
+.comment.collapsed .tagline {
+  margin: 5px 15px !important;
+  display: inline-block;
 }
 
 .contest-mode.infobar {
