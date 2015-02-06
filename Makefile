@@ -28,6 +28,7 @@ endif
 # relative paths of files inside images/ directory. if it's set to `remote` it will use
 # %%image-name%% notation (for subreddit style) and images hosted on imgur (for userstyles)
 export ASSETS = remote
+export STYLE
 
 all: $(SR_FILE).css $(US_FILE).css
 

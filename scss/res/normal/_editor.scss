@@ -225,6 +225,7 @@ button.RESBigEditorPop {
         }
 
         > #BigText {
+          @extend %tn-markdown-editor-textbox;
           margin: 0;
           padding: 5px;
           width: 100%;

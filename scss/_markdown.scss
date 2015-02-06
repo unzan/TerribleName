@@ -27,13 +27,11 @@
   h1 {
     font-size: 1.55em;
     font-weight: bold;
-    margin: 0.5em 0em;
   }
 
   h2 {
     font-size: 1.3em;
     font-weight: normal !important;
-    margin: 0.5em 0em 1em 0em;
     border-bottom: solid 1px $horiz-line-color;
   }
 
@@ -45,11 +43,23 @@
     text-decoration: none;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote,
+  pre,
+  table,
+  ul,
+  ol,
   p {
     &,
     &:first-child,
     &:last-child {
-      margin: 0.5em 0em !important;
+      margin-top: 0.5em !important;
+      margin-bottom: 0.5em !important;
     }
   }
 
@@ -65,7 +75,7 @@
 
   code {
     color: $inline-code-fg;
-    background: none;
+    background: transparent !important;
     border: none;
     padding: 0;
     margin: 0;
@@ -79,7 +89,7 @@
     > code {
       padding: 7px !important;
       display: block;
-      background: $codeblock-bg;
+      background: $codeblock-bg !important;
       color: $codeblock-fg;
       overflow: auto;
     }
@@ -125,13 +135,6 @@
 
   table {
     @extend %tn-markdown-table;
-  }
-
-  ul,
-  ol {
-    &:last-child {
-      margin-bottom: 1em;
-    }
   }
 
   ul {

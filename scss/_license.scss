@@ -1,3 +1,6 @@
+@if env(STYLE) == compact {
+/* Terrible Name Theme (https://github.com/unzan/TerribleName | https://www.reddit.com/r/TerribleName) */
+} @else {
 /*
  * Terrible Name
  *
@@ -16,4 +19,4 @@
  * [2]: http://commons.wikimedia.org/wiki/File:Panorama_Frankfurt_vom_Maintower_edit.jpg
  * [3]: http://de.wikipedia.org/wiki/Benutzer:Schaengel
  */
-
+}

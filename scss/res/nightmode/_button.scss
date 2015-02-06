@@ -1,24 +1,3 @@
-%tn-dark-button-default,
-%tn-dark-button {
-  color: $res-night-button-fg !important;
-  border: none;
-  text-shadow: 0 1px 1px darken($res-night-button-bg, 15%);
-  padding: 3px 7px;
-  @include linear-gradient(top, $res-night-button-bg, darken($res-night-button-bg, 10%));
-  @include shadow(inset 0 1px 0 lighten($res-night-button-bg, 10%), 0 1px 1px rgba(0, 0, 0, 0.3));
-
-  &:hover {
-    @include linear-gradient(top, lighten($res-night-button-bg, 3%), darken($res-night-button-bg, 7%));
-    //color: lighten($res-night-button-fg, 20%);
-  }
-}
-
-%tn-dark-button-pressed,
-%tn-dark-button:active {
-  //@include linear-gradient(top, $res-dark-button-bg
-  @include shadow(inset 0 2px 3px darken($res-night-button-bg, 20%), 0 1px 0 lighten($res-night-bg, 20%));
-}
-
 .thing {
   .expando-button {
     &.collapsed,

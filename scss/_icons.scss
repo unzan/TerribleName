@@ -15,6 +15,10 @@
   }
 }
 
+.arrow {
+  @extend %tn-vote-arrows;
+}
+
 .tagline .userattrs .cakeday {
   @extend %tn-icon;
   background-position: -96px 0;

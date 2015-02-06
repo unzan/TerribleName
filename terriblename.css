@@ -50,7 +50,7 @@ a.pretty-button::after, .sidecontentbox > .title .collapse-button::after, .wiki-
 .flair {
   display: inline-block;
   font-size: 13px !important;
-  border: solid 1px rgba(0, 0, 0, 0.18);
+  border: solid 1px #e0ce85;
   line-height: 1.2em;
   padding: 1px 4px;
   vertical-align: middle;
@@ -283,7 +283,7 @@ input[type=password] {
   background: #fff;
   color: #444444;
   border: solid 1px #aaaaaa !important;
-  font-family: "Liberation Sans", Arial, sans-serif;
+  font: normal 13px "Liberation Sans", Arial, sans-serif;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.8);
   border-radius: 3px;
 }
@@ -293,6 +293,12 @@ textarea:focus,
 input[type=text]:focus,
 input[type=password]:focus {
   border-color: #ed855a !important;
+}
+
+.usertext .usertext-edit textarea, .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents > #BigText {
+  font-size: 13px;
+  font-family: "Liberation Mono", "Droid Sans Mono", "DejaVu Sans Mono", Inconsolata, Monaco, monospace;
+  line-height: 1.4em;
 }
 
 .flairselector,
@@ -358,7 +364,7 @@ input[type=password]:focus {
   padding: 0.2em 0.5em;
   background: whitesmoke;
   color: #111;
-  margin: 0.4em;
+  margin-left: 0.5em;
 }
 
 .comment.noncollapsed > .entry {
@@ -399,15 +405,7 @@ input[type=password]:focus {
   font-weight: normal;
 }
 
-.res.res-nightmode .thing .midcol > .up.arrow, .res.res-nightmode .thing .midcol > .down.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow,
-.arrow.up,
-.arrow.up:hover,
-.arrow.down,
-.arrow.down:hover,
-.arrow.upmod,
-.arrow.upmod:hover,
-.arrow.downmod,
-.arrow.downmod:hover, .submit.mod-override > .morelink > a::after, .titlebox .leavemoderator::before,
+.up.arrow, .res.res-nightmode .thing .midcol > .up.arrow, .up.arrow:hover, .down.arrow, .res.res-nightmode .thing .midcol > .down.arrow, .down.arrow:hover, .upmod.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow, .upmod.arrow:hover, .downmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow, .downmod.arrow:hover, .submit.mod-override > .morelink > a::after, .titlebox .leavemoderator::before,
 .titlebox form.leavecontributor-button::before, .tagline .userattrs .cakeday, #mail,
 #modmail,
 .gilded-icon::before, .icon-menu .reddit-edit::before,
@@ -435,29 +433,123 @@ input[type=password]:focus {
   height: 16px !important;
 }
 
-.res.res-nightmode .thing .midcol > .arrow,
-.arrow {
+.arrow, .res.res-nightmode .thing .midcol > .arrow {
   margin-left: 3px;
 }
-.res.res-nightmode .thing .midcol > .up.arrow, .res.res-nightmode .thing .midcol > .up.arrow:hover,
-.arrow.up,
-.arrow.up:hover {
+.up.arrow, .res.res-nightmode .thing .midcol > .up.arrow, .up.arrow:hover, .res.res-nightmode .thing .midcol > .up.arrow:hover {
   background-position: -64px -80px !important;
 }
-.res.res-nightmode .thing .midcol > .upmod.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow:hover,
-.arrow.upmod,
-.arrow.upmod:hover {
+.upmod.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow, .upmod.arrow:hover, .res.res-nightmode .thing .midcol > .upmod.arrow:hover {
   background-position: -48px -80px !important;
 }
-.res.res-nightmode .thing .midcol > .down.arrow, .res.res-nightmode .thing .midcol > .down.arrow:hover,
-.arrow.down,
-.arrow.down:hover {
+.down.arrow, .res.res-nightmode .thing .midcol > .down.arrow, .down.arrow:hover, .res.res-nightmode .thing .midcol > .down.arrow:hover {
   background-position: -96px -80px !important;
 }
-.res.res-nightmode .thing .midcol > .downmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow:hover,
-.arrow.downmod,
-.arrow.downmod:hover {
+.downmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow, .downmod.arrow:hover, .res.res-nightmode .thing .midcol > .downmod.arrow:hover {
   background-position: -80px -80px !important;
+}
+
+.res .comment.noncollapsed > .entry.RES-keyNav-activeElement {
+  background: #fff !important;
+}
+.res .comment.noncollapsed > .entry.RES-keyNav-activeElement::after {
+  content: '';
+  background: #ed855a;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 0 3px 3px 0;
+}
+
+.res .morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
+.res .morechildren > .entry.RES-keyNav-activeElement > .morecomments,
+.res .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
+  outline: dashed 1px #ed855a;
+}
+
+.res.res-nightmode .flairselector.drop-choices.active > h2 {
+  background: -webkit-linear-gradient(top, #242a32, #1e2229);
+  background: -moz-linear-gradient(top, #242a32, #1e2229);
+  background: linear-gradient(top, #242a32, #1e2229);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 #3e4855;
+}
+
+.res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
+.res.res-nightmode .RESDialogSmall.livePreview > h3 {
+  border: none !important;
+  background: -webkit-linear-gradient(top, #242a32, #1e2229);
+  background: -moz-linear-gradient(top, #242a32, #1e2229);
+  background: linear-gradient(top, #242a32, #1e2229);
+  box-shadow: inset 0 1px 0 #3a434f, 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement .usertext > .usertext-body > .md {
+  background-color: #242a32 !important;
+  color: #9e9e9e !important;
+}
+
+.res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
+.res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop,
+.res.res-nightmode .menuarea > .spacer > .toggle .togglebutton,
+.res.res-nightmode .commentarea .commentNavSortType,
+.res.res-nightmode .commentarea #REScommentSubToggle,
+.res.res-nightmode.wiki-page .pageactions > .wikiaction,
+.res.res-nightmode button.RESBigEditorPop,
+.res.res-nightmode #BigEditor .RESCloseButton {
+  color: #9e9e9e !important;
+  border: none;
+  text-shadow: 0 1px 1px #15181d;
+  padding: 3px 7px;
+  background: -webkit-linear-gradient(top, #353e49, #20252c);
+  background: -moz-linear-gradient(top, #353e49, #20252c);
+  background: linear-gradient(top, #353e49, #20252c);
+  box-shadow: inset 0 1px 0 #4b5767, 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
+.res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop:hover,
+.res.res-nightmode .menuarea > .spacer > .toggle .togglebutton:hover,
+.res.res-nightmode .commentarea .commentNavSortType:hover,
+.res.res-nightmode .commentarea #REScommentSubToggle:hover,
+.res.res-nightmode.wiki-page .pageactions > .wikiaction:hover,
+.res.res-nightmode button.RESBigEditorPop:hover,
+.res.res-nightmode #BigEditor .RESCloseButton:hover {
+  background: -webkit-linear-gradient(top, #3c4552, #262c35);
+  background: -moz-linear-gradient(top, #3c4552, #262c35);
+  background: linear-gradient(top, #3c4552, #262c35);
+}
+
+.res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
+.res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop:active,
+.res.res-nightmode .menuarea > .spacer > .toggle .togglebutton:active,
+.res.res-nightmode .commentarea .commentNavSortType:active,
+.res.res-nightmode .commentarea #REScommentSubToggle:active,
+.res.res-nightmode.wiki-page .pageactions > .wikiaction:active,
+.res.res-nightmode button.RESBigEditorPop:active,
+.res.res-nightmode #BigEditor .RESCloseButton:active {
+  box-shadow: inset 0 2px 3px #0a0c0e, 0 1px 0 #3e4855;
+}
+
+.res.res-nightmode .side .sidecontentbox .title, .res.res-nightmode .markdownEditor-wrapper {
+  border: solid 1px #13161A;
+  color: #9e9e9e;
+  background: -webkit-linear-gradient(top, #353e49, #242a32);
+  background: -moz-linear-gradient(top, #353e49, #242a32);
+  background: linear-gradient(top, #353e49, #242a32);
+  box-shadow: inset 0 1px 0 #475261;
+}
+
+.res.res-nightmode .info-notice, .res.res-nightmode .fancy-settings + .tabmenu > li > a,
+.res.res-nightmode .formtab.tabmenu > li > a, .res.res-nightmode .infobar,
+.res.res-nightmode #searchexpando,
+.res.res-nightmode .link .action-form,
+.res.res-nightmode .link .flat-list > .report-reasons, .res.res-nightmode .tabpane-content,
+.res.res-nightmode .formtabs-content, .res.res-nightmode .fancy-settings .linefield, .res.res-nightmode .side .linkinfo, .res.res-nightmode .gold-accent.comment-visits-box {
+  background: #292f37;
+  color: #9e9e9e;
+  border: solid 1px #0f1114;
+  box-shadow: 0 1px 2px #0d0f11, inset 0 1px 0 #38404c;
 }
 
 body {
@@ -957,20 +1049,6 @@ form.submit .roundfield.info-notice {
 .menuarea .drop-choices.lightdrop > form {
   position: relative;
   min-width: 10em;
-}
-.menuarea .drop-choices.lightdrop > form .RES-sort-button {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.2);
-  float: none;
-  right: 2px;
-  top: 2px;
-  width: 2.3em;
-  padding: 0 3px;
-  overflow: hidden;
-  border-radius: 2px;
-}
-.menuarea .drop-choices.lightdrop > form .RES-sort-button::before {
-  content: 'temp     ';
 }
 
 .usertable {
@@ -1514,12 +1592,10 @@ ul.report-reasons > li.report-reason {
 .md h1 {
   font-size: 1.55em;
   font-weight: bold;
-  margin: 0.5em 0em;
 }
 .md h2 {
   font-size: 1.3em;
   font-weight: normal !important;
-  margin: 0.5em 0em 1em 0em;
   border-bottom: solid 1px #b7b7b7;
 }
 .md h3 {
@@ -1528,17 +1604,51 @@ ul.report-reasons > li.report-reason {
 .md h6 {
   text-decoration: none;
 }
-.md p, .md p:first-child, .md p:last-child {
-  margin: 0.5em 0em !important;
+.md h1, .md h1:first-child, .md h1:last-child,
+.md h2,
+.md h2:first-child,
+.md h2:last-child,
+.md h3,
+.md h3:first-child,
+.md h3:last-child,
+.md h4,
+.md h4:first-child,
+.md h4:last-child,
+.md h5,
+.md h5:first-child,
+.md h5:last-child,
+.md h6,
+.md h6:first-child,
+.md h6:last-child,
+.md blockquote,
+.md blockquote:first-child,
+.md blockquote:last-child,
+.md pre,
+.md pre:first-child,
+.md pre:last-child,
+.md table,
+.md table:first-child,
+.md table:last-child,
+.md ul,
+.md ul:first-child,
+.md ul:last-child,
+.md ol,
+.md ol:first-child,
+.md ol:last-child,
+.md p,
+.md p:first-child,
+.md p:last-child {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
 }
 .md code,
 .md pre {
-  font-family: "DejaVu Sans Mono", "Droid Sans Mono", Inconsolata, Monaco, monospace;
+  font-family: "Liberation Mono", "Droid Sans Mono", "DejaVu Sans Mono", Inconsolata, Monaco, monospace;
   border-radius: 0;
 }
 .md code {
   color: #b44214;
-  background: none;
+  background: transparent !important;
   border: none;
   padding: 0;
   margin: 0;
@@ -1551,7 +1661,7 @@ ul.report-reasons > li.report-reason {
 .md pre > code {
   padding: 7px !important;
   display: block;
-  background: whitesmoke;
+  background: whitesmoke !important;
   color: #111;
   overflow: auto;
 }
@@ -1560,11 +1670,7 @@ ul.report-reasons > li.report-reason {
   border: none;
 }
 .md pre > code {
-  border: solid 1px #9e9e9e;
-}
-.md ul:last-child,
-.md ol:last-child {
-  margin-bottom: 1em;
+  border: solid 1px #b7b7b7;
 }
 .md ul {
   list-style-type: square;
@@ -1837,7 +1943,7 @@ ul.report-reasons > li.report-reason {
 }
 .sidecontentbox > .title .collapse-button {
   float: right;
-  font: normal 13px "DejaVu Sans Mono", "Droid Sans Mono", Inconsolata, Monaco, monospace;
+  font: normal 13px "Liberation Mono", "Droid Sans Mono", "DejaVu Sans Mono", Inconsolata, Monaco, monospace;
   width: auto;
   height: auto;
   line-height: auto;
@@ -2315,24 +2421,6 @@ table.diff tbody .diff_header:not([id]) {
 .res .thing .tagline .author.submitter, .res .thing .tagline .author.submitter:hover {
   background-color: #2177b4 !important;
 }
-.res .comment.noncollapsed > .entry.RES-keyNav-activeElement {
-  background: #fff !important;
-}
-.res .comment.noncollapsed > .entry.RES-keyNav-activeElement::after {
-  content: '';
-  background: #ed855a;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  border-radius: 0 3px 3px 0;
-}
-.res .morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
-.res .morechildren > .entry.RES-keyNav-activeElement > .morecomments,
-.res .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
-  outline: dashed 1px #ed855a;
-}
 .res #REScommentNavBox {
   z-index: 9000;
 }
@@ -2387,6 +2475,13 @@ table.diff tbody .diff_header:not([id]) {
 .res .morechildren > .entry.RES-keyNav-activeElement,
 .res .comment.collapsed > .entry.RES-keyNav-activeElement {
   background: none !important;
+}
+.res .drop-choices .RES-sort-button {
+  font-size: 0;
+}
+.res .drop-choices .RES-sort-button::before {
+  content: 'temp';
+  font-size: 13px;
 }
 .res #BigEditor .RESCloseButton,
 .res button.RESBigEditorPop,
@@ -2621,24 +2716,6 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .error {
   color: #9e9e9e;
 }
-.res.res-nightmode .flairselector.drop-choices.active > h2 {
-  background: -webkit-linear-gradient(top, #242a32, #1e2229);
-  background: -moz-linear-gradient(top, #242a32, #1e2229);
-  background: linear-gradient(top, #242a32, #1e2229);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 #3e4855;
-}
-.res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode .nav-buttons > .nextprev > a, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
-.res.res-nightmode .RESDialogSmall.livePreview > h3 {
-  border: none !important;
-  background: -webkit-linear-gradient(top, #242a32, #1e2229);
-  background: -moz-linear-gradient(top, #242a32, #1e2229);
-  background: linear-gradient(top, #242a32, #1e2229);
-  box-shadow: inset 0 1px 0 #3a434f, 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-.res.res-nightmode #siteTable.linklisting .thing .entry .usertext > .usertext-body > .md, .res.res-nightmode #siteTable.linklisting .thing .entry.RES-keyNav-activeElement .usertext > .usertext-body > .md {
-  background-color: #242a32 !important;
-  color: #9e9e9e !important;
-}
 .res.res-nightmode h1 {
   border-bottom: none;
 }
@@ -2664,25 +2741,6 @@ table.diff tbody .diff_header:not([id]) {
   background: -moz-linear-gradient(top, #292f37, #1e2229);
   background: linear-gradient(top, #292f37, #1e2229);
   box-shadow: inset 0 1px 0 #3e4855;
-}
-.res.res-nightmode .side .sidecontentbox .title, .res.res-nightmode .markdownEditor-wrapper {
-  border: solid 1px #13161A;
-  color: #9e9e9e;
-  background: -webkit-linear-gradient(top, #353e49, #242a32);
-  background: -moz-linear-gradient(top, #353e49, #242a32);
-  background: linear-gradient(top, #353e49, #242a32);
-  box-shadow: inset 0 1px 0 #475261;
-}
-.res.res-nightmode .info-notice, .res.res-nightmode .fancy-settings + .tabmenu > li > a,
-.res.res-nightmode .formtab.tabmenu > li > a, .res.res-nightmode .infobar,
-.res.res-nightmode #searchexpando,
-.res.res-nightmode .link .action-form,
-.res.res-nightmode .link .flat-list > .report-reasons, .res.res-nightmode .tabpane-content,
-.res.res-nightmode .formtabs-content, .res.res-nightmode .fancy-settings .linefield, .res.res-nightmode .side .linkinfo, .res.res-nightmode .gold-accent.comment-visits-box {
-  background: #292f37;
-  color: #9e9e9e;
-  border: solid 1px #0f1114;
-  box-shadow: 0 1px 2px #0d0f11, inset 0 1px 0 #38404c;
 }
 .res.res-nightmode form.submit.content {
   background: none !important;
@@ -2763,45 +2821,6 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode.moderator .tabpane-content .linefield {
   background: none;
-}
-.res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
-.res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop,
-.res.res-nightmode .menuarea > .spacer > .toggle .togglebutton,
-.res.res-nightmode .commentarea .commentNavSortType,
-.res.res-nightmode .commentarea #REScommentSubToggle,
-.res.res-nightmode.wiki-page .pageactions > .wikiaction,
-.res.res-nightmode button.RESBigEditorPop,
-.res.res-nightmode #BigEditor .RESCloseButton {
-  color: #9e9e9e !important;
-  border: none;
-  text-shadow: 0 1px 1px #15181d;
-  padding: 3px 7px;
-  background: -webkit-linear-gradient(top, #353e49, #20252c);
-  background: -moz-linear-gradient(top, #353e49, #20252c);
-  background: linear-gradient(top, #353e49, #20252c);
-  box-shadow: inset 0 1px 0 #4b5767, 0 1px 1px rgba(0, 0, 0, 0.3);
-}
-.res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:hover,
-.res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop:hover,
-.res.res-nightmode .menuarea > .spacer > .toggle .togglebutton:hover,
-.res.res-nightmode .commentarea .commentNavSortType:hover,
-.res.res-nightmode .commentarea #REScommentSubToggle:hover,
-.res.res-nightmode.wiki-page .pageactions > .wikiaction:hover,
-.res.res-nightmode button.RESBigEditorPop:hover,
-.res.res-nightmode #BigEditor .RESCloseButton:hover {
-  background: -webkit-linear-gradient(top, #3c4552, #262c35);
-  background: -moz-linear-gradient(top, #3c4552, #262c35);
-  background: linear-gradient(top, #3c4552, #262c35);
-}
-.res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current,
-.res.res-nightmode .menuarea > .spacer > .dropdown.lightdrop:active,
-.res.res-nightmode .menuarea > .spacer > .toggle .togglebutton:active,
-.res.res-nightmode .commentarea .commentNavSortType:active,
-.res.res-nightmode .commentarea #REScommentSubToggle:active,
-.res.res-nightmode.wiki-page .pageactions > .wikiaction:active,
-.res.res-nightmode button.RESBigEditorPop:active,
-.res.res-nightmode #BigEditor .RESCloseButton:active {
-  box-shadow: inset 0 2px 3px #0a0c0e, 0 1px 0 #3e4855;
 }
 .res.res-nightmode .thing .expando-button.collapsed, .res.res-nightmode .thing .expando-button.collapsed:hover, .res.res-nightmode .thing .expando-button.expanded, .res.res-nightmode .thing .expando-button.expanded:hover {
   background: #292f37 !important;

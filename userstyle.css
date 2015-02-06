@@ -52,7 +52,7 @@
   .flair {
     display: inline-block;
     font-size: 13px !important;
-    border: solid 1px rgba(0, 0, 0, 0.18);
+    border: solid 1px #e0ce85;
     line-height: 1.2em;
     padding: 1px 4px;
     vertical-align: middle;
@@ -338,7 +338,7 @@
     background: #fff;
     color: #444444;
     border: solid 1px #aaaaaa !important;
-    font-family: "Liberation Sans", Arial, sans-serif;
+    font: normal 13px "Liberation Sans", Arial, sans-serif;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.8);
     border-radius: 3px;
   }
@@ -348,6 +348,12 @@
   input[type=text]:focus,
   input[type=password]:focus, .sr-interest-bar > .bubble > .query-box > .query:focus {
     border-color: #ed855a !important;
+  }
+
+  .usertext .usertext-edit textarea, .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents > #BigText {
+    font-size: 13px;
+    font-family: "Liberation Mono", "Droid Sans Mono", "DejaVu Sans Mono", Inconsolata, Monaco, monospace;
+    line-height: 1.4em;
   }
 
   .flairselector,
@@ -415,7 +421,7 @@
     padding: 0.2em 0.5em;
     background: whitesmoke;
     color: #111;
-    margin: 0.4em;
+    margin-left: 0.5em;
   }
 
   .comment.noncollapsed > .entry, .message.noncollapsed > .entry {
@@ -456,14 +462,7 @@
     font-weight: normal;
   }
 
-  .arrow.up,
-  .arrow.up:hover,
-  .arrow.down,
-  .arrow.down:hover,
-  .arrow.upmod,
-  .arrow.upmod:hover,
-  .arrow.downmod,
-  .arrow.downmod:hover, .submit.mod-override > .morelink > a::after, .titlebox .leavemoderator::before,
+  .up.arrow, .up.arrow:hover, .down.arrow, .down.arrow:hover, .upmod.arrow, .upmod.arrow:hover, .downmod.arrow, .downmod.arrow:hover, .submit.mod-override > .morelink > a::after, .titlebox .leavemoderator::before,
   .titlebox form.leavecontributor-button::before, .tagline .userattrs .cakeday, #mail,
   #modmail,
   .gilded-icon::before, .icon-menu .reddit-edit::before,
@@ -498,21 +497,37 @@
   .arrow {
     margin-left: 3px;
   }
-  .arrow.up,
-  .arrow.up:hover {
+  .up.arrow, .up.arrow:hover {
     background-position: -64px -80px !important;
   }
-  .arrow.upmod,
-  .arrow.upmod:hover {
+  .upmod.arrow, .upmod.arrow:hover {
     background-position: -48px -80px !important;
   }
-  .arrow.down,
-  .arrow.down:hover {
+  .down.arrow, .down.arrow:hover {
     background-position: -96px -80px !important;
   }
-  .arrow.downmod,
-  .arrow.downmod:hover {
+  .downmod.arrow, .downmod.arrow:hover {
     background-position: -80px -80px !important;
+  }
+
+  .message.noncollapsed > .entry.RES-keyNav-activeElement, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement {
+    background: #fff !important;
+  }
+  .message.noncollapsed > .entry.RES-keyNav-activeElement::after, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement::after {
+    content: '';
+    background: #ed855a;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .message.collapsed > .entry.RES-keyNav-activeElement > .tagline, .res .morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
+  .res .morechildren > .entry.RES-keyNav-activeElement > .morecomments,
+  .res .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
+    outline: dashed 1px #ed855a;
   }
 
   body {
@@ -1012,20 +1027,6 @@
   .menuarea .drop-choices.lightdrop > form {
     position: relative;
     min-width: 10em;
-  }
-  .menuarea .drop-choices.lightdrop > form .RES-sort-button {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.2);
-    float: none;
-    right: 2px;
-    top: 2px;
-    width: 2.3em;
-    padding: 0 3px;
-    overflow: hidden;
-    border-radius: 2px;
-  }
-  .menuarea .drop-choices.lightdrop > form .RES-sort-button::before {
-    content: 'temp     ';
   }
 
   .usertable {
@@ -1569,12 +1570,10 @@
   .md h1 {
     font-size: 1.55em;
     font-weight: bold;
-    margin: 0.5em 0em;
   }
   .md h2 {
     font-size: 1.3em;
     font-weight: normal !important;
-    margin: 0.5em 0em 1em 0em;
     border-bottom: solid 1px #b7b7b7;
   }
   .md h3 {
@@ -1583,17 +1582,51 @@
   .md h6 {
     text-decoration: none;
   }
-  .md p, .md p:first-child, .md p:last-child {
-    margin: 0.5em 0em !important;
+  .md h1, .md h1:first-child, .md h1:last-child,
+  .md h2,
+  .md h2:first-child,
+  .md h2:last-child,
+  .md h3,
+  .md h3:first-child,
+  .md h3:last-child,
+  .md h4,
+  .md h4:first-child,
+  .md h4:last-child,
+  .md h5,
+  .md h5:first-child,
+  .md h5:last-child,
+  .md h6,
+  .md h6:first-child,
+  .md h6:last-child,
+  .md blockquote,
+  .md blockquote:first-child,
+  .md blockquote:last-child,
+  .md pre,
+  .md pre:first-child,
+  .md pre:last-child,
+  .md table,
+  .md table:first-child,
+  .md table:last-child,
+  .md ul,
+  .md ul:first-child,
+  .md ul:last-child,
+  .md ol,
+  .md ol:first-child,
+  .md ol:last-child,
+  .md p,
+  .md p:first-child,
+  .md p:last-child {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
   }
   .md code,
   .md pre {
-    font-family: "DejaVu Sans Mono", "Droid Sans Mono", Inconsolata, Monaco, monospace;
+    font-family: "Liberation Mono", "Droid Sans Mono", "DejaVu Sans Mono", Inconsolata, Monaco, monospace;
     border-radius: 0;
   }
   .md code {
     color: #b44214;
-    background: none;
+    background: transparent !important;
     border: none;
     padding: 0;
     margin: 0;
@@ -1606,7 +1639,7 @@
   .md pre > code {
     padding: 7px !important;
     display: block;
-    background: whitesmoke;
+    background: whitesmoke !important;
     color: #111;
     overflow: auto;
   }
@@ -1615,11 +1648,7 @@
     border: none;
   }
   .md pre > code {
-    border: solid 1px #9e9e9e;
-  }
-  .md ul:last-child,
-  .md ol:last-child {
-    margin-bottom: 1em;
+    border: solid 1px #b7b7b7;
   }
   .md ul {
     list-style-type: square;
@@ -1892,7 +1921,7 @@
   }
   .sidecontentbox > .title .collapse-button {
     float: right;
-    font: normal 13px "DejaVu Sans Mono", "Droid Sans Mono", Inconsolata, Monaco, monospace;
+    font: normal 13px "Liberation Mono", "Droid Sans Mono", "DejaVu Sans Mono", Inconsolata, Monaco, monospace;
     width: auto;
     height: auto;
     line-height: auto;
@@ -3113,24 +3142,6 @@
   .res .thing .tagline .author.submitter, .res .thing .tagline .author.submitter:hover {
     background-color: #2177b4 !important;
   }
-  .res .message.noncollapsed > .entry.RES-keyNav-activeElement, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement {
-    background: #fff !important;
-  }
-  .res .message.noncollapsed > .entry.RES-keyNav-activeElement::after, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement::after {
-    content: '';
-    background: #ed855a;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    border-radius: 0 3px 3px 0;
-  }
-  .res .message.collapsed > .entry.RES-keyNav-activeElement > .tagline, .res .morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
-  .res .morechildren > .entry.RES-keyNav-activeElement > .morecomments,
-  .res .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
-    outline: dashed 1px #ed855a;
-  }
   .res #REScommentNavBox {
     z-index: 9000;
   }
@@ -3185,6 +3196,13 @@
   .res .morechildren > .entry.RES-keyNav-activeElement,
   .res .comment.collapsed > .entry.RES-keyNav-activeElement {
     background: none !important;
+  }
+  .res .drop-choices .RES-sort-button {
+    font-size: 0;
+  }
+  .res .drop-choices .RES-sort-button::before {
+    content: 'temp';
+    font-size: 13px;
   }
   .res #BigEditor .RESCloseButton,
   .res button.RESBigEditorPop,
