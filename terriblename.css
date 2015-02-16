@@ -728,6 +728,9 @@ a.pretty-button[onclick*=ignore_reports] {
   display: inline-block;
   width: auto !important;
 }
+.usertext .usertext-edit > .md {
+  margin: 0;
+}
 .usertext .markhelp,
 .usertext .markhelp > table {
   width: auto;
