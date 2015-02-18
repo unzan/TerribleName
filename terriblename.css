@@ -1764,8 +1764,9 @@ ul.report-reasons > li.report-reason {
   border-radius: 2px;
 }
 .comment .midcol {
+  position: absolute;
   width: 16px;
-  margin: 3px 14px 0 0;
+  top: 3px;
 }
 .comment .child {
   margin-top: 0;
@@ -1785,7 +1786,7 @@ ul.report-reasons > li.report-reason {
 }
 .comment.noncollapsed > .entry {
   max-width: 95%;
-  margin: 6px 2px 7px 2px;
+  margin: 6px 2px 7px 32px;
 }
 .comment.noncollapsed > .entry > .usertext.border {
   background: #FFF5CC;
