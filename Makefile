@@ -5,20 +5,37 @@ STYLE = expanded
 SCSS_FLAGS = -r ./utils/helper.rb --style=$(STYLE) --unix-newlines
 WATCH_FLAGS = $(SCSS_FLAGS) --watch
 SOURCE_DIR = scss
-OUTPUT_DIR = .
+OUTPUT_DIR = css
 SR_FILE = terriblename
 US_FILE = userstyle
+SR_NIGHT_FILE = terriblename-nightmode
+US_NIGHT_FILE = userstyle-nightmode
+
 COMMON_SOURCES = $(wildcard $(SOURCE_DIR)/_*.scss) \
 	$(wildcard $(SOURCE_DIR)/res/normal/*.scss) \
-	$(SOURCE_DIR)/res/_stupid_fixes.scss
+	$(SOURCE_DIR)/res/_comment_reset.scss
 
 SR_SOURCES = $(COMMON_SOURCES) \
 	$(wildcard $(SOURCE_DIR)/res/nightmode/*.scss) \
-	$(SOURCE_DIR)/terriblename.scss
+	$(SOURCE_DIR)/$(SR_FILE).scss
+
+SR_NIGHT_SOURCES = $(SOURCE_DIR)/_variables.scss \
+	$(SOURCE_DIR)/_mixins.scss \
+	$(SOURCE_DIR)/_placeholders.scss \
+	$(wildcard $(SOURCE_DIR)/res/nightmode/*.scss) \
+	$(SOURCE_DIR)/$(SR_NIGHT_FILE).scss
 
 US_SOURCES = $(COMMON_SOURCES) \
 	$(wildcard $(SOURCE_DIR)/userstyle/*.scss) \
-	$(SOURCE_DIR)/userstyle.scss
+	$(SOURCE_DIR)/$(US_FILE).scss
+
+US_NIGHT_SOURCES = $(SOURCE_DIR)/_variables.scss \
+	$(SOURCE_DIR)/userstyle/_variables.scss \
+	$(SOURCE_DIR)/_mixins.scss \
+	$(SOURCE_DIR)/_placeholders.scss \
+	$(wildcard $(SOURCE_DIR)/res/nightmode/*.scss) \
+	$(wildcard $(SOURCE_DIR)/userstyle/nightmode/*.scss) \
+	$(SOURCE_DIR)/$(US_NIGHT_FILE).scss
 
 ifeq "$(SCSS_V330)" "true"
 	SCSS_FLAGS += --sourcemap=$(SOURCEMAP)
@@ -30,13 +47,22 @@ endif
 export ASSETS = remote
 export STYLE
 
-all: $(SR_FILE).css $(US_FILE).css
+all: $(OUTPUT_DIR)/$(SR_FILE).css \
+	$(OUTPUT_DIR)/$(SR_NIGHT_FILE).css \
+	$(OUTPUT_DIR)/$(US_FILE).css \
+	$(OUTPUT_DIR)/$(US_NIGHT_FILE).css
 
-$(SR_FILE).css: $(SR_SOURCES)
+$(OUTPUT_DIR)/$(SR_FILE).css: $(SR_SOURCES)
 	$(COMPILER) $(SCSS_FLAGS) $(SOURCE_DIR)/$(SR_FILE).scss $(OUTPUT_DIR)/$(SR_FILE).css
 
-$(US_FILE).css: $(US_SOURCES)
+$(OUTPUT_DIR)/$(SR_NIGHT_FILE).css: $(SR_NIGHT_SOURCES)
+	$(COMPILER) $(SCSS_FLAGS) $(SOURCE_DIR)/$(SR_NIGHT_FILE).scss $(OUTPUT_DIR)/$(SR_NIGHT_FILE).css
+
+$(OUTPUT_DIR)/$(US_FILE).css: $(US_SOURCES)
 	$(COMPILER) $(SCSS_FLAGS) $(SOURCE_DIR)/$(US_FILE).scss $(OUTPUT_DIR)/$(US_FILE).css
+
+$(OUTPUT_DIR)/$(US_NIGHT_FILE).css: $(US_NIGHT_SOURCES)
+	$(COMPILER) $(SCSS_FLAGS) $(SOURCE_DIR)/$(US_NIGHT_FILE).scss $(OUTPUT_DIR)/$(US_NIGHT_FILE).css
 
 .PHONY: watch-all
 watch-all:
@@ -46,13 +72,25 @@ watch-all:
 watch-$(SR_FILE).css:
 	$(COMPILER) $(WATCH_FLAGS) $(SOURCE_DIR)/$(SR_FILE).scss:$(OUTPUT_DIR)/$(SR_FILE).css
 
+.PHONY: watch-$(SR_NIGHT_FILE).css
+watch-$(SR_NIGHT_FILE).css:
+	$(COMPILER) $(WATCH_FLAGS) $(SOURCE_DIR)/$(SR_NIGHT_FILE).scss:$(OUTPUT_DIR)/$(SR_NIGHT_FILE).css
+
 .PHONY: watch-$(US_FILE).css
 watch-$(US_FILE).css:
 	$(COMPILER) $(WATCH_FLAGS) $(SOURCE_DIR)/$(US_FILE).scss:$(OUTPUT_DIR)/$(US_FILE).css
 
+.PHONY: watch-$(US_NIGHT_FILE).css
+watch-$(US_NIGHT_FILE).css:
+	$(COMPILER) $(WATCH_FLAGS) $(SOURCE_DIR)/$(US_NIGHT_FILE).scss:$(OUTPUT_DIR)/$(US_NIGHT_FILE).css
+
 .PHONY: clean
 clean:
 	-rm -f $(OUTPUT_DIR)/$(SR_FILE).css \
+		$(OUTPUT_DIR)/$(SR_NIGHT_FILE).css \
 		$(OUTPUT_DIR)/$(US_FILE).css \
+		$(OUTPUT_DIR)/$(US_NIGHT_FILE).css \
 		$(OUTPUT_DIR)/$(SR_FILE).css.map \
-		$(OUTPUT_DIR)/$(US_FILE).css.map
+		$(OUTPUT_DIR)/$(SR_NIGHT_FILE).css.map \
+		$(OUTPUT_DIR)/$(US_FILE).css.map \
+		$(OUTPUT_DIR)/$(US_NIGHT_FILE).css.map

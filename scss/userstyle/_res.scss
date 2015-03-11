@@ -51,6 +51,6 @@
   }
 }
 
-.res-commentBoxes .res {
-  @import "../res/stupid_fixes";
+.res.res-commentBoxes .comments-page .nestedlisting {
+  @import "../res/comment_reset";
 }

@@ -13,7 +13,8 @@
         > a.title {
           &,
           &.loggedin {
-            color: $link-fg !important;
+            @extend %tn-alt-link;
+            //color: $link-fg !important;
           }
         }
 
@@ -38,6 +39,14 @@
       &.RES-keyNav-activeElement {
         background: none !important;
         border-right-color: $res-night-active-element-color !important;
+
+        a.title {
+          @extend %tn-alt-link;
+          //color: $res-night-link-fg !important;
+          //&:visited {
+            //color: $res-night-link-fg-visited !important;
+          //}
+        }
 
         .usertext > .usertext-body {
           background: none !important;
@@ -75,6 +84,10 @@
         @include shadow(none);
       }
 
+      &.default::before {
+        background: lighten($res-night-bg, 10%);
+      }
+
       img {
         background-color: lighten($res-night-bg, 20%);
       }
@@ -88,10 +101,17 @@
   }
 
   .tagline {
+    a:not(.author) {
+      @extend %tn-alt-link;
+    }
+
     .author {
+      color: $res-night-link-fg;
+
       &.submitter {
         &,
         &:hover {
+          color: lighten($res-night-fg, 20%) !important;
           background-color: darken($submitter-tag-fg, 10%) !important;
         }
       }
@@ -99,6 +119,7 @@
       &.admin {
         &,
         &:hover {
+          color: lighten($res-night-fg, 20%) !important;
           background-color: darken($admin-tag-fg, 10%) !important;
         }
       }
@@ -106,6 +127,7 @@
       &.moderator {
         &,
         &:hover {
+          color: lighten($res-night-fg, 20%) !important;
           background-color: darken($mod-tag-fg, 10%) !important;
         }
       }
@@ -115,4 +137,8 @@
   &.reported {
     border: none;
   }
+}
+.organic-listing .link,
+.link.promotedlink.promoted {
+  @extend %tn-dark-special-entry;
 }

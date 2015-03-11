@@ -38,10 +38,20 @@
           border-top-color: lighten($res-night-comment-bg, 8%);
         }
 
-        &.RES-keyNav-activeElement .usertext-body {
-          &,
-          & .md p {
-            background: none !important;
+        > .usertext.border {
+          background: $res-night-highlighted-comment-bg;
+        }
+
+        &.RES-keyNav-activeElement {
+          &::after {
+            background-color: $res-night-active-element-color;
+          }
+
+          .usertext-body {
+            &,
+            & .md p {
+              background: none !important;
+            }
           }
         }
       }

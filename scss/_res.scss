@@ -6,23 +6,7 @@
   @import "res/normal/comment";
   @import "res/normal/editor";
 
-  &.res-nightmode {
-    @import "res/nightmode/basic";
-    @import "res/nightmode/header";
-    @import "res/nightmode/form";
-    @import "res/nightmode/button";
-    @import "res/nightmode/sidebar";
-    @import "res/nightmode/list";
-    @import "res/nightmode/flairs";
-    @import "res/nightmode/comment";
-    @import "res/nightmode/wiki";
-    @import "res/nightmode/markdown";
-    @import "res/nightmode/editor";
-    @import "res/nightmode/footer";
+  &.res-commentBoxes .comments-page .nestedlisting {
+    @import "res/comment_reset";
   }
-}
-
-.res-commentBoxes .res,
-.res-commentBoxes.res-nightmode .res.res-nightmode {
-  @import "res/stupid_fixes";
 }

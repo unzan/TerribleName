@@ -27,3 +27,10 @@ $explore-rising-color: $green;
 $explore-comment-color: $blue;
 
 $inbox-own-message-tagline-bg: lighten($blue, 35%);
+
+$res-night-multireddits-bg: darken($res-night-bg, 1%);
+$res-night-multireddits-entry-bg: $res-night-menu-bar-bg;
+$res-night-multireddits-entry-fg: $res-night-fg;
+$res-night-multireddits-selected-color: $res-night-active-element-color;
+$res-night-multireddits-selected-entry-bg: lighten($res-night-multireddits-entry-bg, 5%);
+$res-night-multireddits-selected-entry-fg: lighten($res-night-multireddits-entry-fg, 15%);

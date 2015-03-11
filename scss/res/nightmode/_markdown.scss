@@ -1,13 +1,10 @@
 .md {
   a {
-    color: lighten($link-fg, 7%);
-    &:visited  {
-      color: lighten($link-fg-visited, 7%);
-    }
+    @extend %tn-alt-link;
   }
 
   p,
-  a,
+  a:not(.userTagLink),
   ul,
   ol,
   li,

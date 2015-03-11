@@ -48,12 +48,10 @@ button.RESBigEditorPop,
 
 .RESCharCounter {
   background-color: darken($res-night-editor-toolbar-bg, 8%);
-  //@extend %tn-dark-engraved-box;
   color: $res-night-fg;
 
   &.tooLong {
     background-color: darken($res-char-counter-too-long-bg, 30%);
-    //@include linear-gradient(top, darken($res-char-counter-too-long-bg, 10%), darken($res-char-counter-too-long-bg, 20%));
   }
 }
 
@@ -61,11 +59,7 @@ button.RESBigEditorPop,
   @extend %tn-dark-toolbar;
 
   + div > textarea {
-    //border-left: none !important;
-    //border-right: none !important;
     border-top: none !important;
-    //border-top: solid 4px darken($res-night-editor-toolbar-bg, 8%) !important;
-    //border-top-color: lighten($res-night-editor-toolbar-bg, 30%) !important;
   }
 }
 
@@ -77,7 +71,10 @@ button.RESBigEditorPop,
 
 .markdownEditor {
   a.edit-btn {
+    background-image: none;
     background-color: transparent;
+    font-size: 0;
+    text-indent: 0;
 
     &:hover {
       @include shadow(inset 0 1px 0 lighten($res-night-editor-toolbar-bg, 8%));
@@ -87,5 +84,53 @@ button.RESBigEditorPop,
       background-color: rgba(0, 0, 0, 0.2);
       @include shadow(0 1px 0 lighten($res-night-editor-toolbar-bg, 6%));
     }
+
+    // TODO: use icons with lighter color for editor toolbar in nightmode
+    //&::before {
+      //@extend %tn-icon;
+      //content: '';
+      //margin-left: 8px;
+      //margin-top: 2px;
+    //}
+
+    //&.btn-bold::before {
+      //background-position: -80px -64px;
+    //}
+
+    //&.btn-italic::before {
+      //background-position: -80px -16px;
+    //}
+
+    //&.btn-strike::before {
+      //background-position: -48px -64px;
+    //}
+
+    //&.btn-superscript::before {
+      //background-position: -32px -64px;
+    //}
+
+    //&.btn-link::before {
+      //background-position: -64px 0;
+    //}
+
+    //&.btn-quote::before {
+      //background-position: -64px -64px;
+    //}
+
+    //&.btn-code::before {
+      //background-position: -80px -48px;
+    //}
+
+    //&.btn-list-unordered::before {
+      //background-position: -16px -64px;
+    //}
+
+    //&.btn-list-ordered::before {
+      //background-position: -80px 0;
+    //}
+
+    //&.btn-table::before {
+      //background-position: 0 0;
+    //}
   }
 }

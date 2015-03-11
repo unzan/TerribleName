@@ -1,0 +1,29 @@
+.sr-interest-bar {
+  @extend %tn-dark-special-entry;
+}
+
+.organic-listing {
+  .nextprev {
+    .arrow {
+      height: auto !important;
+      line-height: 1em !important;
+      background: none !important;
+      border: none !important;
+      color: $res-night-fg !important;
+      @include shadow(none !important);
+    }
+  }
+}
+
+.trending-subreddits {
+  > .trending-subreddits-content {
+    > strong,
+    > a {
+      color: $res-night-fg;
+    }
+
+    li > a {
+      @extend %tn-dark-button;
+    }
+  }
+}

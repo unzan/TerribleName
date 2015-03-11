@@ -1,0 +1,67 @@
+body.with-listing-chooser {
+  .listing-chooser {
+    background: $res-night-multireddits-bg;
+    @include shadow(1px 0 0 lighten($res-night-bg, 8%));
+
+    .grippy {
+      border-right: solid 1px darken($res-night-bg, 4%);
+      border-left: solid 1px darken($res-night-bg, 4%) !important;
+      background: $res-night-bg url($res-night-bg-image) top left repeat;
+      @include shadow(inset 1px 0 0 lighten($res-night-bg, 10%));
+    }
+
+    li {
+      color: $res-night-multireddits-entry-fg;
+      border: none;
+      margin-bottom: 7px;
+      @include linear-gradient(top, $res-night-multireddits-entry-bg, darken($res-night-multireddits-entry-bg, 5%));
+      @include shadow(inset 0 1px 0 lighten($res-night-multireddits-entry-bg, 10%), 0 2px 2px darken($res-night-multireddits-bg, 2%));
+
+      > a {
+        color: inherit;
+      }
+
+      &.selected {
+        @include linear-gradient(top, $res-night-multireddits-selected-entry-bg, darken($res-night-multireddits-selected-entry-bg, 7%));
+
+        &::before {
+          border-left-color: $res-night-multireddits-selected-color;
+        }
+
+        a {
+          color: $res-night-multireddits-selected-entry-fg;
+        }
+      }
+    }
+
+    > .contents > .multis > .create button {
+      @extend %tn-dark-big-button;
+    }
+  }
+}
+
+.side {
+  .titlebox.multi-details {
+    .redditname {
+      background: none;
+    }
+
+    .subreddits > li {
+      > a,
+      > button.remove-sr {
+        @extend %tn-dark-button;
+      }
+
+      > button.remove-sr {
+        color: transparent !important;
+        min-width: 0.7em !important;
+        width: 0.7em !important;
+        text-shadow: none;
+      }
+    }
+
+    .delete.confirm-button > button {
+      @extend %tn-dark-big-button;
+    }
+  }
+}
