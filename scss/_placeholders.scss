@@ -53,7 +53,7 @@
   vertical-align: middle;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   text-decoration: none !important;
-  border: none !important;
+  border: none;
   text-align: center;
   margin-right: 3px;
   @include linear-gradient(top, $button-bg, darken($button-bg, 6%));
@@ -226,7 +226,7 @@
   background-color: $special-entry-bg !important;
   color: $special-entry-fg;
   border: solid 1px rgba(0, 0, 0, 0.2) !important;
-  padding: 1.3em 0.6em 1.3em 0em;
+  padding: 1.3em 0.6em 1.3em 0;
   margin-bottom: 5px;
   @include rounded(3px);
   @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.1));
@@ -365,77 +365,3 @@
   outline: dashed 1px $res-active-element-color;
 }
 
-%tn-dark-engraved-box {
-  @include linear-gradient(top, lighten($res-night-bg, 8%), lighten($res-night-bg, 5%));
-  @include shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 lighten($res-night-bg, 20%));
-}
-
-%tn-dark-raised-box {
-  border: none !important;
-  @include linear-gradient(top, lighten($res-night-bg, 8%), lighten($res-night-bg, 5%));
-  @include shadow(inset 0 1px 0 lighten($res-night-bg, 18%), 0 1px 2px rgba(0, 0, 0, 0.3));
-}
-
-%tn-dark-text-container {
-  background-color: $res-night-text-bg !important;
-  color: $res-night-text-fg !important;
-}
-
-%tn-dark-button-default,
-%tn-dark-button {
-  color: $res-night-button-fg !important;
-  border: none;
-  text-shadow: 0 1px 1px darken($res-night-button-bg, 15%);
-  padding: 3px 7px;
-  @include linear-gradient(top, $res-night-button-bg, darken($res-night-button-bg, 10%));
-  @include shadow(inset 0 1px 0 lighten($res-night-button-bg, 10%), 0 1px 1px rgba(0, 0, 0, 0.3));
-
-  &:hover {
-    @include linear-gradient(top, lighten($res-night-button-bg, 3%), darken($res-night-button-bg, 7%));
-  }
-}
-
-%tn-dark-button-pressed,
-%tn-dark-button:active {
-  @include shadow(inset 0 2px 3px darken($res-night-button-bg, 20%), 0 1px 0 lighten($res-night-bg, 20%));
-}
-
-%tn-dark-big-button {
-  &,
-  &:hover,
-  &:focus {
-    @include linear-gradient(top, $res-night-big-button-bg, darken($res-night-big-button-bg, 6%));
-  }
-
-  &:active {
-    @include linear-gradient(top, $res-night-big-button-bg, darken($res-night-big-button-bg, 10%));
-    @include shadow(inset 0 2px 3px darken($res-night-button-bg, 20%), 0 1px 0 lighten($res-night-bg, 20%));
-  }
-}
-
-%tn-dark-toolbar {
-  border: solid 1px $res-night-bg;
-  color: $res-night-fg;
-  @include linear-gradient(top, $res-night-editor-toolbar-bg, darken($res-night-editor-toolbar-bg, 8%));
-  @include shadow(inset 0 1px 0 lighten($res-night-editor-toolbar-bg, 8%));
-}
-
-%tn-dark-info-box {
-  background: $res-night-info-box-bg;
-  color: $res-night-info-box-fg;
-  border: solid 1px darken($res-night-bg, 2%);
-  @include shadow(0 1px 2px darken($res-night-bg, 3%), inset 0 1px 0 lighten($res-night-info-box-bg, 7%));
-}
-
-%tn-dark-special-entry {
-  background: $res-night-special-entry-bg !important;
-  border: none !important;
-  @include shadow(0 1px 2px darken($res-night-bg, 5%));
-}
-
-%tn-alt-link {
-  color: $res-night-link-fg !important;
-  &:visited {
-    color: $res-night-link-fg-visited !important;
-  }
-}

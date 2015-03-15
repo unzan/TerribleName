@@ -44,7 +44,7 @@
 
 .morelink {
   border: none;
-  background: none;
+  background: none !important;
   height: auto;
 
   &:hover {
@@ -87,14 +87,7 @@
   }
 }
 
-.fancy-settings button,
-.usertext-edit button.save,
-.usertext-edit button.cancel,
-.tabbedpane button,
-.flairselector button,
-.wiki-page-content button,
-.formtabs-content button,
-button.btn,
+button,
 input[type=submit] {
   @extend %tn-default-button;
 }
@@ -148,7 +141,7 @@ input[type=submit] {
 }
 
 .nav-buttons {
-  padding: 1em 0em;
+  padding: 1em 0;
 }
 
 .nextprev {

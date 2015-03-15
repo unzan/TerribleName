@@ -35,21 +35,17 @@
   }
 }
 
-.content button,
-.content input[type=submit],
-button,
-input[type=submit] {
-  @extend %tn-dark-big-button;
-  padding-bottom: 3px;
-  text-transform: capitalize;
-}
-
 .RESshortcutside,
 .RESDashboardToggle,
 .morelink a,
-.content input[type=submit],
-.content button {
+.res-nightmode button {
   @extend %tn-dark-big-button;
+}
+
+.res-nightmode button {
+  border: none;
+  padding-bottom: 3px;
+  text-transform: capitalize;
 }
 
 .submit.disabled .morelink a {
@@ -83,5 +79,15 @@ input[type=submit] {
     &.remove:active {
       @include shadow(inset 0 2px 4px rgba(0, 0, 0, 0.7), 0 1px 0 lighten($res-night-bg, 20%));
     }
+  }
+}
+
+a.pretty-button {
+  &.pressed {
+    background: lighten($res-night-bg, 20%) !important;
+  }
+
+  &[onclick*=ignore_reports] {
+    color: $res-night-fg;
   }
 }

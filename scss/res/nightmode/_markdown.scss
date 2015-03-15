@@ -4,7 +4,7 @@
   }
 
   p,
-  a:not(.userTagLink),
+  a:not(.userTagLink):not(.noKeyNav),
   ul,
   ol,
   li,

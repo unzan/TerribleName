@@ -16,6 +16,8 @@ $max-comment-width: 63em;
 // - none: do not show level indicator
 $comment-level-indicator: child-only;
 
+$res-nightmode-compatible: yes;
+
 // --- PALETTE ---------------------------------------------
 
 $white:           #fff;
@@ -249,3 +251,4 @@ $res-night-special-entry-bg: #1A242C;
 $res-night-new-comment-bg: darken($dark-blue-gray, 7%);
 $res-night-new-comment-border-color: lighten($res-night-new-comment-bg, 6%);
 $res-night-spam-tagline-bg: darken($misc-spam-tagline-bg, 64%);
+$res-night-report-tag-bg: $dark-red;

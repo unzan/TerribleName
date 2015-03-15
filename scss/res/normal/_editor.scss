@@ -197,10 +197,6 @@ button.RESBigEditorPop {
 
 
 #BigEditor {
-  button {
-    @extend %tn-button;
-  }
-
   > .RESDialogSmall {
     border: none;
     margin: 10px;

@@ -1,7 +1,7 @@
 & {
   color: $res-night-fg;
   background: $res-night-bg url($res-night-bg-image) left top repeat !important;
-  > .content {
+  .content {
     background: none !important;
   }
 }

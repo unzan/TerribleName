@@ -4,6 +4,7 @@
   @import "userstyle/variables";
   @import "mixins";
   @import "placeholders";
+  @import "res/nightmode/placeholders";
 
   .res.res-nightmode {
     @import "res/nightmode/basic";
@@ -20,5 +21,8 @@
     @import "res/nightmode/footer";
     @import "userstyle/nightmode/multireddits";
     @import "userstyle/nightmode/list";
+    @import "userstyle/nightmode/inbox";
+    @import "userstyle/nightmode/explore";
+    @import "userstyle/nightmode/profile";
   }
 }

@@ -10,3 +10,27 @@
     @import "res/comment_reset";
   }
 }
+
+@import "res/nightmode/placeholders";
+
+// a shitty workaround to get @import inside @if work
+%tn-nightmode {
+  @import "res/nightmode/basic";
+  @import "res/nightmode/header";
+  @import "res/nightmode/form";
+  @import "res/nightmode/button";
+  @import "res/nightmode/sidebar";
+  @import "res/nightmode/list";
+  @import "res/nightmode/flairs";
+  @import "res/nightmode/comment";
+  @import "res/nightmode/wiki";
+  @import "res/nightmode/markdown";
+  @import "res/nightmode/editor";
+  @import "res/nightmode/footer";
+}
+
+@if $res-nightmode-compatible == yes {
+  .res.res-nightmode {
+    @extend %tn-nightmode;
+  }
+}

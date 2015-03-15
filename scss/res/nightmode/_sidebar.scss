@@ -1,4 +1,8 @@
 .side {
+  a {
+    color: $res-night-link-fg;
+  }
+
   background: none !important;
   margin: 1em 1em 1em 2em !important;
 
@@ -7,10 +11,9 @@
   }
 
   .sidecontentbox {
-    .title {
+    > .title {
       @extend %tn-dark-toolbar;
       border-bottom: solid 1px darken($res-night-editor-toolbar-bg, 13%);
-      //border-bottom: none;
 
       .collapse-button,
       h1 {
@@ -21,7 +24,7 @@
 
     .content {
       border-color: $res-night-bg;
-      background: $res-night-toolbox-bg;
+      background: $res-night-toolbox-bg !important;
       @include shadow(inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 0 lighten($res-night-bg, 8%));
     }
   }
