@@ -1,8 +1,8 @@
 .linklisting {
   .link {
     @extend %tn-common-dark-entry;
-    padding: 1.3em 0 !important;
     background: none !important;
+    padding: 1.3em 0 !important;
 
     &:not(:first-child) {
       @extend %tn-dark-list-entry-separator;
@@ -18,19 +18,10 @@
         }
 
         .usertext > .usertext-body {
-          background: none !important;
-
+          @extend %tn-background-force-reset;
           .md p {
-            background: none !important;
+            @extend %tn-background-force-reset;
           }
-        }
-      }
-
-      &,
-      &.RES-keyNav-activeElement {
-        .usertext > .usertext-body > .md {
-          @extend %tn-dark-text-container;
-          color: $res-night-fg;
         }
       }
     }
@@ -110,5 +101,5 @@
 }
 
 .RES-keyNav-activeElement .md {
-  background: none !important;
+  @extend %tn-background-force-reset;
 }

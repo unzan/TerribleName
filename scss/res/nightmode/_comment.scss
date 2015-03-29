@@ -15,7 +15,7 @@
 }
 
 .comment {
-  background: none !important;
+  @extend %tn-background-force-reset;
 
   &.noncollapsed {
     > .entry {
@@ -23,7 +23,7 @@
       &.RES-keyNav-activeElement .usertext-body {
         &,
         & .md p {
-          background: none !important;
+          @extend %tn-background-force-reset;
         }
       }
 

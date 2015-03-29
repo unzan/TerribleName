@@ -48,10 +48,10 @@ $bright-cyan:     #BDD4E0;
 $sidebar-width:   300px;
 
 
-$main-bg-image: 'image/noise.jpg';
-$header-bg-image: 'image/banner.jpg';
-$icon-image: 'image/icons.png';
-$res-night-bg-image: 'image/dark-noise.jpg';
+$main-bg-image: '../image/noise.jpg';
+$header-bg-image: '../image/banner.jpg';
+$icon-image: '../image/icons.png';
+$res-night-bg-image: '../image/dark-noise.jpg';
 @if env(ASSETS) == remote {
   $main-bg-image: '%%noise%%';
   $header-bg-image: '%%banner%%';
@@ -107,7 +107,6 @@ $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);
 $sticky-link-fg: $dark-green;
 
-
 $header-height: 140px;
 $header-bg: $black;
 $header-fg: darken($gray, 14%);
@@ -117,7 +116,7 @@ $page-title-fg: darken($gray, 20%);
 $menu-bar-bg: $dark-brown;
 $menu-bar-fg: darken($gray, 30%);
 $sr-header-fg: darken($gray, 40%);
-$sr-header-bg: rgba(0, 0, 0, 0.5);
+$sr-header-bg: rgba(0, 0, 0, 0.8);
 $sr-dropdown-bg: $black;
 $sr-dropdown-fg: $sr-header-fg;
 $sr-dropdown-selected-bg: $focus-color;

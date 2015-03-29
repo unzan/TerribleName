@@ -1,3 +1,7 @@
+%tn-dark-background {
+  background: $res-night-bg url($res-night-bg-image) left top repeat !important;
+}
+
 %tn-dark-engraved-box {
   @include linear-gradient(top, lighten($res-night-bg, 8%), lighten($res-night-bg, 5%));
   @include shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 lighten($res-night-bg, 20%));
@@ -114,6 +118,13 @@
         &:hover {
           background-color: rgba(255, 255, 255, 0.1);
         }
+      }
+    }
+
+    &,
+    &.RES-keyNav-activeElement {
+      .usertext > .usertext-body > .md {
+        @extend %tn-dark-text-container;
       }
     }
   }

@@ -3,8 +3,11 @@
     @extend %tn-alt-link;
   }
 
+  a:not(.userTagLink):not(.noKeyNav):not(.expando-button) {
+    background: none !important;
+  }
+
   p,
-  a:not(.userTagLink):not(.noKeyNav),
   ul,
   ol,
   li,
@@ -13,8 +16,15 @@
   tbody,
   tr,
   td,
-  em {
+  em,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     background: none !important;
+    color: inherit !important;
   }
 
   pre,
@@ -25,8 +35,8 @@
   }
 
   code {
-    color: $res-night-code-fg;
     background: none !important;
+    color: $res-night-code-fg;
   }
 
   pre {
@@ -38,16 +48,6 @@
 
   hr {
     background: lighten($res-night-bg, 17%) !important;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: inherit !important;
-    background: none !important;
   }
 
   h1,

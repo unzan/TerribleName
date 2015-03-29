@@ -140,7 +140,7 @@
 
 
 .link.spam {
-  background: none;
+  @extend %tn-background-reset;
 
   .thumbnail {
     &::before {

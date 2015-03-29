@@ -1,6 +1,6 @@
 @import "../variables";
 
-$logo-image: 'image/logo.png';
+$logo-image: '../image/logo.png';
 @if env(ASSETS) == remote {
   $main-bg-image: 'http://i.imgur.com/l6K6XJU.jpg';
   $header-bg-image: 'http://i.imgur.com/kfumYVX.jpg';

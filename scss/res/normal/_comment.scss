@@ -60,7 +60,7 @@
     &.RES-keyNav-activeElement {
       @extend %tn-active-comment-entry;
       .md {
-        background: none !important;
+        @extend %tn-background-force-reset;
       }
     }
 
@@ -89,7 +89,7 @@
 .morechildren,
 .comment.collapsed {
   > .entry.RES-keyNav-activeElement {
-    background: none !important;
+    @extend %tn-background-force-reset;
   }
 }
 

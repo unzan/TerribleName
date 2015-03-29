@@ -18,11 +18,26 @@
  */
 @namespace url(http://www.w3.org/1999/xhtml);
 @-moz-document domain("reddit.com") {
+  a.pretty-button, a.pretty-button.neutral, .big-mod-buttons .pretty-button, .link.spam, .comment.noncollapsed > .entry .usertext.border > .usertext-body, .users-online::before, .sidebox .spacer {
+    background: none;
+  }
+
+  .morelink, .morelink:hover, .flairselection > .linkflair > a:hover,
+  .flairselection > .flairremove > a:hover, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement .md, .res .morerecursion > .entry.RES-keyNav-activeElement,
+  .res .morechildren > .entry.RES-keyNav-activeElement,
+  .res .comment.collapsed > .entry.RES-keyNav-activeElement, .res.res-commentBoxes .comments-page .nestedlisting .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+    background: none !important;
+  }
+
   a, .thing .title, .link .tagline a, .md a {
     color: #2177b4;
   }
   a:visited, .thing .title:visited, .link .tagline a:visited {
     color: #5358ba;
+  }
+
+  #header {
+    background: #111 url("http://i.imgur.com/kfumYVX.jpg") 0 0 no-repeat !important;
   }
 
   hr, .md hr, .subscription-box .box-separator {
@@ -32,7 +47,7 @@
     background: #b7b7b7;
   }
 
-  .link .usertext .md, .linklisting > .link.comment .usertext .md, .link.thing.subreddit .usertext .md, .comment.noncollapsed > .entry, .message.noncollapsed > .entry, .wiki-page .wiki-page-content .md.wiki {
+  .link .usertext-body .md, .linklisting > .link.comment .usertext-body .md, .link.thing.subreddit .usertext-body .md, .comment.noncollapsed > .entry, .message.noncollapsed > .entry, .wiki-page .wiki-page-content .md.wiki {
     background: #fff;
     color: #111;
     border: none;
@@ -329,12 +344,12 @@
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
   .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14);
     overflow: hidden;
     background: #efefef;
     border: solid 1px #aaaaaa;
     padding: 10px;
     border-radius: 3px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14);
   }
 
   .last-clicked.link:not(:first-child), .link:not(:first-child), .linklisting > .comment:not(:first-child), .thing.subreddit:not(:first-child), .messages-page > .content > .sitetable > .message {
@@ -348,6 +363,13 @@
   }
   .link .usertext {
     padding-right: 15px;
+  }
+  .link .usertext-edit .md {
+    background: none;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .organic-listing .link,
@@ -409,7 +431,7 @@
     border-bottom: solid 8px transparent;
   }
 
-  .comment.noncollapsed > .entry > .tagline, .message.noncollapsed > .entry .tagline {
+  .comment.noncollapsed > .entry .tagline, .message.noncollapsed > .entry .tagline {
     display: block;
     padding: 6px 14px 6px 10px;
     border-bottom: solid 1px #e6e6e6;
@@ -549,11 +571,7 @@
 
   .morelink {
     border: none;
-    background: none !important;
     height: auto;
-  }
-  .morelink:hover {
-    background: none !important;
   }
   .morelink a {
     letter-spacing: 0;
@@ -627,9 +645,6 @@
     font-size: 13px;
     border-radius: 0;
   }
-  a.pretty-button, a.pretty-button.neutral {
-    background: none;
-  }
   a.pretty-button::before, a.pretty-button::after {
     color: #6b6b6b !important;
     display: inline-block;
@@ -642,9 +657,6 @@
     color: #2aa198;
   }
 
-  .big-mod-buttons .pretty-button {
-    background: none;
-  }
   .big-mod-buttons > span[role=radiogroup] > .pretty-button:first-child {
     color: #6c71c4;
   }
@@ -854,27 +866,6 @@
     margin: 0 0.3em;
   }
 
-  .flairoptionpane ul > li > .flairremove > a,
-  .flairoptionpane ul > li > .flairremove > a.title,
-  .flairoptionpane ul > li > .linkflair > a,
-  .flairoptionpane ul > li > .linkflair > a.title,
-  .flairselection > .flairremove > a,
-  .flairselection > .flairremove > a.title,
-  .flairselection > .linkflair > a,
-  .flairselection > .linkflair > a.title {
-    padding: 0 !important;
-  }
-  .flairoptionpane ul > li > .flairremove > a:hover,
-  .flairoptionpane ul > li > .flairremove > a.title:hover,
-  .flairoptionpane ul > li > .linkflair > a:hover,
-  .flairoptionpane ul > li > .linkflair > a.title:hover,
-  .flairselection > .flairremove > a:hover,
-  .flairselection > .flairremove > a.title:hover,
-  .flairselection > .linkflair > a:hover,
-  .flairselection > .linkflair > a.title:hover {
-    background: none !important;
-  }
-
   .flairlist .flairrow .flaircell,
   .flairlist .flairrow .header {
     margin-right: 2ex;
@@ -882,10 +873,6 @@
   .flairlist .flairrow .flaircell.tagline,
   .flairlist .flairrow .header.tagline {
     width: 30ex;
-  }
-
-  .flairselection > .flairremove {
-    margin: 1em 0;
   }
 
   .clearflairtemplates-button {
@@ -957,17 +944,17 @@
     color: #111;
     content: attr(title);
   }
-  .menuarea .spacer > .toggle a {
+  .menuarea .spacer .toggle a {
     font-size: 1em;
     color: #2177b4;
   }
-  .menuarea .spacer > .toggle:hover + .help-hoverable {
+  .menuarea .spacer .toggle:hover + .help-hoverable {
     display: block;
   }
-  .menuarea .spacer > .toggle > .option.active.main {
+  .menuarea .spacer .toggle .option.active.main {
     margin-right: 4px;
   }
-  .menuarea .spacer > .toggle > .option.active.error {
+  .menuarea .spacer .toggle .option.active.error {
     display: inline-block;
     background: #FFF5CC;
     padding: 2px 5px;
@@ -1099,7 +1086,6 @@
   }
 
   #header {
-    background: #111 url("http://i.imgur.com/kfumYVX.jpg") 0 0 no-repeat;
     color: #c6c6c6;
     border-bottom: none;
     height: 140px;
@@ -1160,7 +1146,7 @@
   }
 
   #sr-header-area {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     border-bottom: none;
   }
   #sr-header-area a {
@@ -1191,12 +1177,12 @@
   }
 
   #sr-more-link {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
   }
 
   .dropdown.srdrop .selected {
-    color: #848484;
     background: none;
+    color: #848484;
     padding-right: 5px;
   }
   .dropdown.srdrop .selected::after {
@@ -1377,9 +1363,6 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
-  .link.spam {
-    background: none;
-  }
   .link.spam .thumbnail::before {
     background: #dc322f;
   }
@@ -1690,13 +1673,13 @@
   .comment.spam, .comment.spam .child {
     background-color: transparent;
   }
-  .comment.spam > .entry::before {
+  .comment.spam .entry::before {
     border-right-color: #f5b89f;
   }
-  .comment.spam > .entry > .tagline {
+  .comment.spam .entry .tagline {
     background: #f5b89f;
   }
-  .comment.spam > .entry > .tagline > time:first-of-type::after {
+  .comment.spam .entry .tagline time:first-of-type::after {
     content: 'Spam';
     display: inline-block;
     background: #6c71c4;
@@ -1730,13 +1713,10 @@
     max-width: 95%;
     margin: 6px 2px 7px 32px;
   }
-  .comment.noncollapsed > .entry > .usertext.border {
+  .comment.noncollapsed > .entry .usertext.border {
     background: #FFF5CC;
   }
-  .comment.noncollapsed > .entry > .usertext.border > .usertext-body {
-    background: none;
-  }
-  .comment.noncollapsed > .entry > .usertext > .usertext-body {
+  .comment.noncollapsed > .entry .usertext > .usertext-body {
     max-width: 63em;
     padding: 2px 14px 2px 10px;
   }
@@ -1779,7 +1759,7 @@
     font-size: 0;
   }
   .contest-mode.infobar:hover,
-  .contest-mode.infobar > strong {
+  .contest-mode.infobar strong {
     font-size: 13px;
   }
 
@@ -1833,10 +1813,6 @@
     padding: 10px;
   }
 
-  .users-online::before {
-    background: none;
-  }
-
   .subscribers,
   .users-online {
     display: inline-block;
@@ -1888,12 +1864,12 @@
     color: #515151;
   }
   .sidecontentbox > .title .collapse-button {
+    background: none;
     float: right;
     font: normal 13px "Liberation Mono", "Droid Sans Mono", "DejaVu Sans Mono", Inconsolata, Monaco, monospace;
     width: auto;
     height: auto;
     line-height: auto;
-    background: none;
     border: none;
     margin: 0;
   }
@@ -1914,10 +1890,6 @@
   }
   .sidecontentbox .content > li {
     margin: 3px 0;
-  }
-
-  .sidebox .spacer {
-    background: none;
   }
 
   .icon-menu a {
@@ -2107,8 +2079,8 @@
     padding: 0 !important;
   }
   .wiki-page .wiki-page-content .morelink:hover {
-    border: none !important;
     background: none !important;
+    border: none !important;
   }
   .wiki-page .wiki-page-content .md.wiki > .toc > ul {
     border: none;
@@ -2526,8 +2498,8 @@
 
   .explore-sr {
     margin: 0 0 5px 0;
-    border-bottom: solid 1px #0f1114;
-    box-shadow: 0 1px 0 #333b46;
+    border-bottom: solid 1px #aaaaaa;
+    box-shadow: 0 1px 0 white;
   }
   .explore-sr .explore-label {
     background: none;
@@ -3062,6 +3034,26 @@
   .res #sr-header-area a.subbarlink.RESShortcutsCurrentSub {
     color: #eaeaea !important;
   }
+  .res #srList {
+    font-size: 10px;
+    background: #111;
+    color: #848484;
+    border: none;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  }
+  .res #srList tr {
+    border: none;
+  }
+  .res #srList tr a {
+    color: #59a9e1;
+  }
+  .res #srList tr:hover {
+    color: #fff;
+    background: #cb4b16;
+  }
+  .res #srList tr:hover a {
+    color: #fff;
+  }
   .res .RESshortcutside,
   .res .RESDashboardToggle {
     font-size: 13px !important;
@@ -3149,9 +3141,6 @@
     margin-bottom: 0 !important;
     padding: 0 !important;
   }
-  .res .comment.noncollapsed > .entry.RES-keyNav-activeElement .md {
-    background: none !important;
-  }
   .res .comment.noncollapsed > .entry > .tagline {
     display: block;
   }
@@ -3168,11 +3157,6 @@
   }
   .res .comment .expando-button:hover {
     text-decoration: none !important;
-  }
-  .res .morerecursion > .entry.RES-keyNav-activeElement,
-  .res .morechildren > .entry.RES-keyNav-activeElement,
-  .res .comment.collapsed > .entry.RES-keyNav-activeElement {
-    background: none !important;
   }
   .res .drop-choices .RES-sort-button {
     font-size: 0;
@@ -3418,30 +3402,7 @@
     padding: 2px 5px;
     font-size: 10px !important;
   }
-  .res #srList {
-    font-size: 10px;
-    background: #111;
-    color: #848484;
-    border: none;
-    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
-  }
-  .res #srList tr {
-    border: none;
-  }
-  .res #srList tr a {
-    color: #59a9e1;
-  }
-  .res #srList tr:hover {
-    color: #fff;
-    background: #cb4b16;
-  }
-  .res #srList tr:hover a {
-    color: #fff;
-  }
 
-  .res.res-commentBoxes .comments-page .nestedlisting .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-    background: none !important;
-  }
   .res.res-commentBoxes .comments-page .nestedlisting .thing.comment {
     border: none !important;
     overflow: visible !important;

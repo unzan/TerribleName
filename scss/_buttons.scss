@@ -43,12 +43,12 @@
 }
 
 .morelink {
+  @extend %tn-background-force-reset;
   border: none;
-  background: none !important;
   height: auto;
 
   &:hover {
-    background: none !important;
+    @extend %tn-background-force-reset;
   }
 
   a {
@@ -171,7 +171,7 @@ a.pretty-button {
 
   &,
   &.neutral {
-    background: none;
+    @extend %tn-background-reset;
   }
 
   &::before,
@@ -192,7 +192,7 @@ a.pretty-button {
 
 .big-mod-buttons {
   .pretty-button {
-    background: none;
+    @extend %tn-background-reset;
   }
 
   > span[role=radiogroup] > .pretty-button {

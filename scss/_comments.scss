@@ -85,15 +85,15 @@
       background-color: transparent;
     }
 
-    > .entry {
+    .entry {
       &::before {
         border-right-color: $misc-spam-tagline-bg;
       }
 
-      > .tagline {
+      .tagline {
         background: $misc-spam-tagline-bg;
 
-        > time:first-of-type::after {
+        time:first-of-type::after {
           content: 'Spam';
           display: inline-block;
           background: $misc-spam-color;
@@ -136,17 +136,17 @@
       max-width: 95%;
       margin: 6px 2px 7px 32px;
 
-      > .tagline {
+      .tagline {
         @extend %tn-comment-tagline;
       }
 
-      > .usertext {
+      .usertext {
         // single comment thread. god knows why it's called .border
         &.border {
           background: $highlighted-comment-bg;
 
           > .usertext-body {
-            background: none;
+            @extend %tn-background-reset;
           }
         }
 
@@ -208,7 +208,7 @@
   font-size: 0;
 
   &:hover,
-  > strong {
+  strong {
     font-size: $normal-font-size;
   }
 }

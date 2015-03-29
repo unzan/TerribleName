@@ -4,7 +4,7 @@ button.RESBigEditorPop,
 }
 
 .usertext-edit .RESDialogSmall .md.RESDialogContents {
-  background: none !important;
+  @extend %tn-background-force-reset;
 }
 
 #BigEditor > .RESDialogSmall.BERight,

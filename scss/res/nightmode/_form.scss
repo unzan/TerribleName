@@ -1,5 +1,5 @@
 form.submit.content {
-  background: none !important;
+  @extend %tn-background-force-reset;
 
   .info-notice {
     background: $res-night-info-box-bg !important;
@@ -10,6 +10,7 @@ form.submit.content {
   background-color: transparent;
 }
 
+.content #search > input[type=text],
 .side .spacer > #search input[type=text],
 #newlink.submit .formtabs-content .roundfield-content textarea,
 #newlink.submit .formtabs-content .roundfield-content input#url,
@@ -72,7 +73,7 @@ input[type=password] {
   @extend %tn-dark-info-box;
 
   .roundfield {
-    background: none !important;
+    @extend %tn-background-force-reset;
   }
 
   .infobar {
@@ -84,7 +85,7 @@ input[type=password] {
 .menuarea {
   color: $res-night-fg;
 
-  > .spacer {
+  .spacer {
     > .dropdown.lightdrop,
     > .toggle .togglebutton {
       @extend %tn-dark-button;
@@ -104,6 +105,13 @@ input[type=password] {
 
     > .dropdown.lightdrop > .selected::after {
       border-top-color: $res-night-button-fg;
+    }
+
+    .toggle .option.active.error {
+      background: $res-night-info-box-bg;
+      a {
+        color: $res-night-link-fg;
+      }
     }
   }
 }
@@ -141,5 +149,28 @@ input[type=password] {
 }
 
 &.moderator .tabpane-content .linefield {
-  background: none;
+  @extend %tn-background-reset;
+}
+
+.login-form-side {
+  @extend %tn-dark-info-box;
+
+  label {
+    color: $res-night-fg;
+  }
+
+  .submit {
+    @extend %tn-background-reset;
+  }
+}
+
+.searchpane {
+  @extend %tn-dark-info-box;
+}
+
+.searchfacets {
+  @extend %tn-dark-info-box;
+  .title {
+    color: inherit;
+  }
 }

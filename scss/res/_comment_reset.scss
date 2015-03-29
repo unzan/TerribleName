@@ -8,7 +8,7 @@ $all_selectors: ();
 }
 
 #{$all_selectors} {
-  background: none !important;
+  @extend %tn-background-force-reset;
 }
 
 .thing.comment {

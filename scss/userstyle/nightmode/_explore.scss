@@ -18,3 +18,9 @@
     @extend %tn-dark-button-pressed;
   }
 }
+
+.explore-sr {
+  padding-bottom: 5px;
+  border-bottom-color: $res-night-bg;
+  @include shadow(0 1px 0 lighten($res-night-bg, 14%));
+}

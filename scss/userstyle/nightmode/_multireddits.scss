@@ -63,7 +63,9 @@ body.with-listing-chooser {
   > h2 {
     border-bottom-color: lighten($res-night-bg, 15%);
   }
+}
 
+.side {
   form.add-sr button.add,
   .subreddits > li > a,
   .subreddits > li > button.remove-sr,
@@ -99,6 +101,46 @@ body.with-listing-chooser {
     @extend %tn-dark-info-box;
     > button {
       @extend %tn-dark-big-button;
+    }
+  }
+}
+
+.multi-selector {
+  @extend %tn-dark-info-box;
+
+  &::before {
+    border: none !important;
+  }
+
+  &.anchor-left::after {
+    border-right-color: $res-night-info-box-bg;
+  }
+
+  &.anchor-right::after {
+    border-left-color: $res-night-info-box-bg;
+  }
+
+  a {
+    @extend %tn-alt-link;
+  }
+
+  strong {
+    color: inherit;
+  }
+
+  .multi-list {
+    label {
+      &:hover {
+        background: lighten($res-night-info-box-bg, 8%);
+      }
+    }
+
+    a {
+      @extend %tn-dark-button;
+      padding: 2px;
+      opacity: 1;
+      border: solid 1px darken($res-night-info-box-bg, 6%);
+      @include shadow(inset 0 1px 0 lighten($res-night-button-bg, 10%));
     }
   }
 }

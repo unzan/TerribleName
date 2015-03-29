@@ -23,8 +23,8 @@
       margin: 1em 0 !important;
       padding: 0 !important;
       &:hover {
-        border: none !important;
         background: none !important;
+        border: none !important;
       }
     }
 
@@ -135,10 +135,8 @@
     border-bottom: solid 2px rgba(0, 0, 0, 0.2);
   }
 
-  > ul {
-    ul {
-      border-left-color: $toc-level-indicator-color;
-    }
+  > ul ul {
+    border-left-color: $toc-level-indicator-color;
   }
 }
 

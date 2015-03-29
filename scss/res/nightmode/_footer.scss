@@ -1,7 +1,7 @@
 &.moderator .footer-parent .footer {
   // seriously? what's these bastards trying to achieve by
   // setting different footer bg for moderator?
-  background: none !important;
+  @extend %tn-background-force-reset;
 }
 
 .footer-parent {

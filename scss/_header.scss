@@ -1,5 +1,6 @@
 #header {
-  background: $header-bg url($header-bg-image) 0 0 no-repeat;
+  @extend %tn-header;
+
   color: $header-fg;
   border-bottom: none;
   height: $header-height;
@@ -111,8 +112,8 @@
 }
 
 .dropdown.srdrop .selected {
-  color: $sr-header-fg;
   background: none;
+  color: $sr-header-fg;
   padding-right: 5px;
 
   &::after {
@@ -184,7 +185,6 @@
   }
 
   &.redditname {
-
     > a {
       display: inline;
       color: inherit;

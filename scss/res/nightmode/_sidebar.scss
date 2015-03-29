@@ -1,32 +1,13 @@
 .side {
+  background: none !important;
+  margin: 1em 1em 1em 2em !important;
+
   a {
     color: $res-night-link-fg;
   }
 
-  background: none !important;
-  margin: 1em 1em 1em 2em !important;
-
   .linkinfo {
     @extend %tn-dark-info-box;
-  }
-
-  .sidecontentbox {
-    > .title {
-      @extend %tn-dark-toolbar;
-      border-bottom: solid 1px darken($res-night-editor-toolbar-bg, 13%);
-
-      .collapse-button,
-      h1 {
-        color: inherit;
-        border-bottom: none;
-      }
-    }
-
-    .content {
-      border-color: $res-night-bg;
-      background: $res-night-toolbox-bg !important;
-      @include shadow(inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 0 lighten($res-night-bg, 8%));
-    }
   }
 
   .titlebox > .bottom {
@@ -39,7 +20,7 @@
   .leavemoderator,
   .leavecontributor-button,
   .titlebox form.flairtoggle {
-    background: none !important;
+    @extend %tn-background-force-reset;
   }
 
   .sidebox {
@@ -73,6 +54,25 @@
         @include shadow(inset 0 1px 1px $shadow, 0 1px 0 $bevel);
       }
     }
+  }
+}
+
+.sidecontentbox {
+  > .title {
+    @extend %tn-dark-toolbar;
+    border-bottom: solid 1px darken($res-night-editor-toolbar-bg, 13%);
+
+    .collapse-button,
+    h1 {
+      color: inherit;
+      border-bottom: none;
+    }
+  }
+
+  .content {
+    border-color: $res-night-bg;
+    background: $res-night-toolbox-bg !important;
+    @include shadow(inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 0 lighten($res-night-bg, 8%));
   }
 }
 

@@ -246,16 +246,11 @@ form.submit {
   }
 }
 
-.flairoptionpane ul > li,
 .flairselection {
-  > .flairremove,
-  > .linkflair {
-    > a,
-    > a.title {
-      padding: 0 !important;
-      &:hover {
-        background: none !important;
-      }
+  > .linkflair,
+  > .flairremove {
+    > a:hover {
+      @extend %tn-background-force-reset;
     }
   }
 }
@@ -270,12 +265,6 @@ form.submit {
         width: 30ex;
       }
     }
-  }
-}
-
-.flairselection {
-  > .flairremove {
-    margin: 1em 0;
   }
 }
 
@@ -361,7 +350,7 @@ form.submit {
       }
     }
 
-    > .toggle {
+    .toggle {
       a {
         font-size: 1em;
         color: $link-fg;
@@ -371,7 +360,7 @@ form.submit {
         display: block;
       }
 
-      > .option.active {
+      .option.active {
         &.main {
           margin-right: 4px;
         }

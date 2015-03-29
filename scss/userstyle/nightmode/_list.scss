@@ -23,9 +23,9 @@
 
   .nextprev {
     .arrow {
+      background: none !important;
       height: auto !important;
       line-height: 1em !important;
-      background: none !important;
       border: none !important;
       @include shadow(none !important);
 

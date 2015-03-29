@@ -1,3 +1,4 @@
+.wiki,
 .thing {
   .expando-button {
     &.collapsed,
@@ -13,7 +14,7 @@
 }
 
 .nav-buttons {
-  background: none !important;
+  @extend %tn-background-force-reset;
   .nextprev {
     color: $res-night-fg;
     .separator {

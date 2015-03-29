@@ -115,10 +115,8 @@
 
 .explore-sr {
   margin: 0 0 5px 0;
-  border-bottom: solid 1px darken($res-night-bg, 2%);
-  @include shadow(0 1px 0 lighten($res-night-bg, 15%));
-  //border-bottom: solid 1px rgba(0, 0, 0, 0.3);
-  //@include shadow(0 1px 0 rgba(255, 255, 255, 0.8));
+  border-bottom: solid 1px $default-border-color;
+  @include shadow(0 1px 0 lighten($box-bg, 10%));
 
   .explore-label {
     background: none;
