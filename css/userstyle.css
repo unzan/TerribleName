@@ -80,8 +80,9 @@
   .multi-details .settings > .delete > button, .multi-details.public .settings > .share-in-sr,
   .multi-details form.copy-multi button.copy,
   .multi-details form.rename-multi button.rename, .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .explore-header #explore-settings button,
-  #compose-message button#send, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button, .multi-details .settings > .delete.confirm-button > .confirmation > button, .profile-page .expand-summary, .res .RESshortcutside,
-  .res .RESDashboardToggle, .res #alert_message > input[type=button] {
+  #compose-message button#send, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button, .multi-details .settings > .delete.confirm-button > .confirmation > button, .profile-page .expand-summary, .res .RESshortcutside, .res .RESshortcutside.remove,
+  .res .RESDashboardToggle,
+  .res .RESDashboardToggle.remove, .res #alert_message > input[type=button] {
     color: #fff !important;
     font-family: "Liberation Sans", Arial, sans-serif;
     padding: 2px 8px;
@@ -3054,8 +3055,9 @@
   .res #srList tr:hover a {
     color: #fff;
   }
-  .res .RESshortcutside,
-  .res .RESDashboardToggle {
+  .res .RESshortcutside, .res .RESshortcutside.remove,
+  .res .RESDashboardToggle,
+  .res .RESDashboardToggle.remove {
     font-size: 13px !important;
     display: inline-block !important;
     vertical-align: middle;
