@@ -80,8 +80,9 @@ a.pretty-button::after, .sidecontentbox > .title .collapse-button::after, .wiki-
 }
 
 button,
-input[type=submit], .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .res .RESshortcutside,
-.res .RESDashboardToggle, .res #alert_message > input[type=button] {
+input[type=submit], .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .res .RESshortcutside, .res .RESshortcutside.remove,
+.res .RESDashboardToggle,
+.res .RESDashboardToggle.remove, .res #alert_message > input[type=button] {
   color: #fff !important;
   font-family: "Liberation Sans", Arial, sans-serif;
   padding: 2px 8px;
@@ -2251,8 +2252,9 @@ table.diff tbody .diff_header:not([id]) {
 .res #srList tr:hover a {
   color: #fff;
 }
-.res .RESshortcutside,
-.res .RESDashboardToggle {
+.res .RESshortcutside, .res .RESshortcutside.remove,
+.res .RESDashboardToggle,
+.res .RESDashboardToggle.remove {
   font-size: 13px !important;
   display: inline-block !important;
   vertical-align: middle;
