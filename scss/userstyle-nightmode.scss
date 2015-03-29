@@ -1,0 +1,28 @@
+@import "license";
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document domain("reddit.com") {
+  @import "userstyle/variables";
+  @import "mixins";
+  @import "placeholders";
+  @import "res/nightmode/placeholders";
+
+  .res.res-nightmode {
+    @import "res/nightmode/basic";
+    @import "res/nightmode/header";
+    @import "res/nightmode/form";
+    @import "res/nightmode/button";
+    @import "res/nightmode/sidebar";
+    @import "res/nightmode/list";
+    @import "res/nightmode/flairs";
+    @import "res/nightmode/comment";
+    @import "res/nightmode/wiki";
+    @import "res/nightmode/markdown";
+    @import "res/nightmode/editor";
+    @import "res/nightmode/footer";
+    @import "userstyle/nightmode/multireddits";
+    @import "userstyle/nightmode/list";
+    @import "userstyle/nightmode/inbox";
+    @import "userstyle/nightmode/explore";
+    @import "userstyle/nightmode/profile";
+  }
+}

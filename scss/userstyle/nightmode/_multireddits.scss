@@ -1,0 +1,146 @@
+body.with-listing-chooser {
+  .listing-chooser {
+    background: $res-night-multireddits-bg;
+    @include shadow(1px 0 0 lighten($res-night-bg, 8%));
+
+    .grippy {
+      border-right: solid 1px darken($res-night-bg, 4%);
+      border-left: solid 1px darken($res-night-bg, 4%) !important;
+      background: $res-night-bg url($res-night-bg-image) top left repeat;
+      @include shadow(inset 1px 0 0 lighten($res-night-bg, 10%));
+    }
+
+    li {
+      color: $res-night-multireddits-entry-fg;
+      border: none;
+      margin-bottom: 7px;
+      @include linear-gradient(top, $res-night-multireddits-entry-bg, darken($res-night-multireddits-entry-bg, 5%));
+      @include shadow(inset 0 1px 0 lighten($res-night-multireddits-entry-bg, 10%), 0 2px 2px darken($res-night-multireddits-bg, 2%));
+
+      > a {
+        color: inherit;
+      }
+
+      &.selected {
+        @include linear-gradient(top, $res-night-multireddits-selected-entry-bg, darken($res-night-multireddits-selected-entry-bg, 7%));
+
+        &::before {
+          border-left-color: $res-night-multireddits-selected-color;
+        }
+
+        a {
+          color: $res-night-multireddits-selected-entry-fg;
+        }
+      }
+    }
+
+    .intro {
+      background: $res-night-multireddits-intro-bg;
+      border-top-color: lighten($res-night-multireddits-intro-bg, 20%);
+      border-bottom-color: lighten($res-night-multireddits-intro-bg, 20%);
+    }
+
+    > .contents > .multis > .create {
+      button {
+        @extend %tn-dark-big-button;
+      }
+
+      input[type=text] {
+        @extend %tn-dark-input;
+      }
+    }
+  }
+}
+
+.multi-details {
+  &.titlebox > .redditname {
+    background: none !important;
+    > a {
+      color: $res-night-fg;
+    }
+  }
+
+  > h2 {
+    border-bottom-color: lighten($res-night-bg, 15%);
+  }
+}
+
+.side {
+  form.add-sr button.add,
+  .subreddits > li > a,
+  .subreddits > li > button.remove-sr,
+  .recommend-box > .recs > .recommendations > .rec-item > a,
+  .recommend-box > .recs > .recommendations > .rec-item > button.add {
+    @extend %tn-dark-button;
+  }
+
+  form.add-sr button.add,
+  .subreddits > li > button.remove-sr,
+  .recommend-box > .recs > .recommendations > .rec-item > button.add {
+    color: transparent !important;
+    min-width: 0.7em !important;
+    width: 0.7em !important;
+    text-shadow: none;
+  }
+
+  .settings > button,
+  .settings > .delete > button,
+  &.public .settings > .share-in-sr,
+  form.copy-multi button.copy,
+  form.rename-multi button.rename,
+  .delete.confirm-button > button {
+    @extend %tn-dark-big-button;
+  }
+
+  form.rename-multi,
+  form.copy-multi {
+    @extend %tn-dark-info-box;
+  }
+
+  .settings > .delete.confirm-button > .confirmation {
+    @extend %tn-dark-info-box;
+    > button {
+      @extend %tn-dark-big-button;
+    }
+  }
+}
+
+.multi-selector {
+  @extend %tn-dark-info-box;
+
+  &::before {
+    border: none !important;
+  }
+
+  &.anchor-left::after {
+    border-right-color: $res-night-info-box-bg;
+  }
+
+  &.anchor-right::after {
+    border-left-color: $res-night-info-box-bg;
+  }
+
+  a {
+    @extend %tn-alt-link;
+  }
+
+  strong {
+    color: inherit;
+  }
+
+  .multi-list {
+    label {
+      &:hover {
+        background: lighten($res-night-info-box-bg, 8%);
+      }
+    }
+
+    a {
+      @extend %tn-dark-button;
+      padding: 2px;
+      opacity: 1;
+      border: solid 1px darken($res-night-info-box-bg, 6%);
+      @include shadow(inset 0 1px 0 lighten($res-night-button-bg, 10%));
+    }
+  }
+}

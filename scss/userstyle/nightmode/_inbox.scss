@@ -1,0 +1,79 @@
+.message {
+  background: none !important;
+
+  &:not(.recipient) {
+    > .entry > .tagline {
+      background: $res-night-inbox-own-message-tagline-bg;
+    }
+
+    &.noncollapsed > .entry::before {
+      border-right-color: $res-night-inbox-own-message-tagline-bg;
+    }
+  }
+
+  &.new > .entry {
+    border: none;
+    padding: 0;
+  }
+
+  > .entry {
+    &,
+    .tagline {
+      color: $res-night-fg !important;
+    }
+
+    .head {
+      color: inherit !important;
+    }
+  }
+
+  &.collapsed > .entry.RES-keyNav-activeElement > .tagline {
+    outline-color: $res-night-active-element-color;
+  }
+
+  &.noncollapsed {
+    > .entry {
+      @extend %tn-dark-comment-bubble;
+    }
+
+    .parent-link {
+      @extend %tn-dark-button;
+    }
+
+    .parent.rounded {
+      color: $res-night-fg;
+      background: lighten($res-night-comment-bg, 10%) !important;
+    }
+  }
+
+  > .subject {
+    > .correspondent {
+      @extend %tn-dark-info-box;
+      > a {
+        @extend %tn-alt-link;
+      }
+    }
+
+    > .expand-btn {
+      @extend %tn-dark-button;
+    }
+  }
+}
+
+.menuarea .flat-list {
+  > li {
+    a {
+      @extend %tn-dark-button;
+    }
+
+    &.selected > a {
+      @extend %tn-dark-button-pressed;
+    }
+  }
+}
+
+.messages-page {
+  > .content > .sitetable > .message {
+    @extend %tn-dark-list-entry-separator;
+  }
+}

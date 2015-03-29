@@ -14,64 +14,67 @@
   }
 }
 
-.linklisting,
-.commentarea {
-  .comment {
-    &.noncollapsed {
-      > .entry {
+.comment {
+  @extend %tn-background-force-reset;
+
+  &.noncollapsed {
+    > .entry {
+      @extend %tn-dark-comment-bubble;
+      &.RES-keyNav-activeElement .usertext-body {
         &,
-        &.RES-keyNav-activeElement {
-          background: $res-night-comment-bg !important;
-        }
-
-        &::before {
-          border-right-color: $res-night-comment-bg;
-        }
-
-        .tagline {
-          background: none;
-          border-bottom-color: lighten($res-night-comment-bg, 8%);
-        }
-
-        .flat-list.buttons {
-          background: lighten($res-night-comment-bg, 5%);
-          border-top-color: lighten($res-night-comment-bg, 8%);
-        }
-
-        &.RES-keyNav-activeElement .usertext-body {
-          &,
-          & .md p {
-            background: none !important;
-          }
+        & .md p {
+          @extend %tn-background-force-reset;
         }
       }
 
-      &.spam > .entry {
-        &::before {
-          border-right-color: $res-night-spam-tagline-bg;
-        }
+      > .usertext.border {
+        background: $res-night-highlighted-comment-bg;
+      }
+    }
 
-        > .tagline {
-          background-color: $res-night-spam-tagline-bg;
-        }
+    &.spam > .entry {
+      &::before {
+        border-right-color: $res-night-spam-tagline-bg;
       }
 
-      &.new-comment {
-        .usertext-body .md {
-          border: none;
-        }
+      > .tagline {
+        background-color: $res-night-spam-tagline-bg;
+      }
+    }
 
-        .usertext-body,
-        .entry.RES-keyNav-activeElement .usertext-body {
-          border-top: solid 1px $res-night-new-comment-border-color;
-          border-bottom: solid 1px $res-night-new-comment-border-color;
-          background-color: $res-night-new-comment-bg !important;
-        }
+    &.new-comment {
+      .usertext-body .md {
+        border: none;
+      }
+
+      .usertext-body,
+      .entry.RES-keyNav-activeElement .usertext-body {
+        border-top: solid 1px $res-night-new-comment-border-color;
+        border-bottom: solid 1px $res-night-new-comment-border-color;
+        background-color: $res-night-new-comment-bg !important;
       }
     }
   }
 }
 
+.morerecursion,
+.morechildren {
+  a {
+    @extend %tn-alt-link;
+  }
+}
+
+.morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
+.morechildren > .entry.RES-keyNav-activeElement > .morecomments,
+.comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
+  outline-color: $res-night-active-element-color;
+
+}
+
 .gold-accent.comment-visits-box {
   @extend %tn-dark-info-box;
+}
+
+.linklisting > .comment {
+  @extend %tn-dark-list-entry-separator;
 }

@@ -1,31 +1,11 @@
-%tn-dark-button-default,
-%tn-dark-button {
-  color: $res-night-button-fg !important;
-  border: none;
-  text-shadow: 0 1px 1px darken($res-night-button-bg, 15%);
-  padding: 3px 7px;
-  @include linear-gradient(top, $res-night-button-bg, darken($res-night-button-bg, 10%));
-  @include shadow(inset 0 1px 0 lighten($res-night-button-bg, 10%), 0 1px 1px rgba(0, 0, 0, 0.3));
-
-  &:hover {
-    @include linear-gradient(top, lighten($res-night-button-bg, 3%), darken($res-night-button-bg, 7%));
-    //color: lighten($res-night-button-fg, 20%);
-  }
-}
-
-%tn-dark-button-pressed,
-%tn-dark-button:active {
-  //@include linear-gradient(top, $res-dark-button-bg
-  @include shadow(inset 0 2px 3px darken($res-night-button-bg, 20%), 0 1px 0 lighten($res-night-bg, 20%));
-}
-
+.wiki,
 .thing {
   .expando-button {
     &.collapsed,
     &.expanded {
       &,
       &:hover {
-        background: lighten($res-night-bg, 10%) !important;
+        background: lighten($res-night-bg, 14%) !important;
         border: none !important;
         @include shadow(none !important);
       }
@@ -33,45 +13,48 @@
   }
 }
 
-.nav-buttons > .nextprev > a {
-  @extend %tn-dark-raised-box;
-  color: $res-night-fg;
-  &:active {
-    @include linear-gradient(top, lighten($res-night-bg, 20%), lighten($res-night-bg, 15%));
-    @include shadow(inset 0 2px 2px rgba(0, 0, 0, 0.4));
-  }
-}
-
 .nav-buttons {
-  > .nextprev {
+  @extend %tn-background-force-reset;
+  .nextprev {
     color: $res-night-fg;
-    > .separator {
+    .separator {
       border-left: none;
     }
-  }
-}
 
-.content button,
-.content input[type=submit],
-button,
-input[type=submit] {
-  @extend %tn-button;
-  padding-bottom: 3px;
-  text-transform: capitalize;
+    a {
+      @extend %tn-dark-button;
+      color: $res-night-fg;
+      &:active {
+        @include linear-gradient(top, lighten($res-night-bg, 20%), lighten($res-night-bg, 15%));
+        @include shadow(inset 0 2px 2px rgba(0, 0, 0, 0.4));
+      }
+    }
+  }
+
+  .next-suggestions > a {
+    @extend %tn-dark-button;
+  }
 }
 
 .RESshortcutside,
 .RESDashboardToggle,
 .morelink a,
-.content input[type=submit],
-.content button {
-  color: $button-fg;
-  @include linear-gradient(top, $res-night-big-button-bg, darken($res-night-big-button-bg, 6%));
+.res-nightmode button {
+  @extend %tn-dark-big-button;
+}
 
-  &:active {
-    @include linear-gradient(top, $res-night-big-button-bg, darken($res-night-big-button-bg, 10%));
-    @include shadow(inset 0 2px 3px darken($res-night-button-bg, 20%), 0 1px 0 lighten($res-night-bg, 20%));
-  }
+.res-nightmode button {
+  border: none;
+  padding-bottom: 3px;
+  text-transform: capitalize;
+}
+
+.submit.disabled .morelink a {
+  background: $res-night-big-button-disabled-bg;
+  color: $res-night-big-button-disabled-fg !important;
+  text-shadow: none;
+  border: solid 1px $res-night-bg !important;
+  @include shadow(inset 0 1px 2px darken($res-night-big-button-disabled-bg, 10%),0 1px 0 lighten($res-night-bg, 20%));
 }
 
 .fancy-toggle-button {
@@ -97,5 +80,15 @@ input[type=submit] {
     &.remove:active {
       @include shadow(inset 0 2px 4px rgba(0, 0, 0, 0.7), 0 1px 0 lighten($res-night-bg, 20%));
     }
+  }
+}
+
+a.pretty-button {
+  &.pressed {
+    background: lighten($res-night-bg, 20%) !important;
+  }
+
+  &[onclick*=ignore_reports] {
+    color: $res-night-fg;
   }
 }

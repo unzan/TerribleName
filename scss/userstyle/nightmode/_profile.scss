@@ -1,0 +1,12 @@
+.gold-accent.snoovatar-link,
+.server-seconds {
+  @extend %tn-dark-info-box;
+}
+
+.server-seconds em {
+  color: lighten($res-night-fg, 10%);
+}
+
+.titlebox > .bottom > a[href*="/compose/"] {
+  @extend %tn-dark-button;
+}

@@ -1,21 +1,3 @@
-%tn-active-comment-entry {
-  background: $comment-bg !important;
-  &::after {
-    content: '';
-    background: $res-active-element-color;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    @include rounded(0 3px 3px 0);
-  }
-}
-
-%tn-active-collapsed-comment-indicator {
-  outline: dashed 1px $res-active-element-color;
-}
-
 #REScommentNavBox {
   z-index: 9000;
 }
@@ -78,7 +60,7 @@
     &.RES-keyNav-activeElement {
       @extend %tn-active-comment-entry;
       .md {
-        background: none !important;
+        @extend %tn-background-force-reset;
       }
     }
 
@@ -106,19 +88,9 @@
 .morerecursion,
 .morechildren,
 .comment.collapsed {
-  > .entry {
-    margin-bottom: 0.3em;
-    &.RES-keyNav-activeElement {
-      background: none !important;
-    }
+  > .entry.RES-keyNav-activeElement {
+    @extend %tn-background-force-reset;
   }
-}
-
-.morerecursion .deepthread,
-.morechildren .morecomments,
-.comment.collapsed .tagline {
-  margin: 3px;
-  display: inline-block;
 }
 
 .morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
@@ -127,3 +99,10 @@
   @extend %tn-active-collapsed-comment-indicator;
 }
 
+.drop-choices .RES-sort-button {
+  font-size: 0;
+  &::before {
+    content: 'temp';
+    font-size: $normal-font-size;
+  }
+}

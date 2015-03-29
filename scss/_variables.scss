@@ -9,6 +9,15 @@ $show-line-num-in-codeblock: no;
 $vendor-prefixes: 1;
 $max-comment-width: 63em;
 
+// show vertical vertical line for comment level indicator.
+// valid values:
+// - child-only: only show level indicator on child comments
+// - all: show level indicator on all comments
+// - none: do not show level indicator
+$comment-level-indicator: child-only;
+
+$res-nightmode-compatible: yes;
+
 // --- PALETTE ---------------------------------------------
 
 $white:           #fff;
@@ -34,15 +43,16 @@ $dark-orange:     desaturate(darken($orange, 20%), 10%);
 $dark-red:        darken($red, 30%);
 $dark-blue:       #13161A;
 $dark-blue-gray:  #405666; 
+$bright-cyan:     #BDD4E0;
 
 $sidebar-width:   300px;
 
 
-$main-bg-image: 'image/noise.jpg';
-$header-bg-image: 'image/cockkisses-banner.jpg';
-$icon-image: 'image/icons.png';
-$sr-rec-image: 'image/sr-rec-sprite.jpg';
-$res-night-bg-image: 'image/dark-noise.jpg';
+$main-bg-image: '../image/noise.jpg';
+$header-bg-image: '../image/cockkisses-banner.jpg';
+$icon-image: '../image/icons.png';
+$sr-rec-image: '../image/sr-rec-sprite.jpg';
+$res-night-bg-image: '../image/dark-noise.jpg';
 @if env(ASSETS) == remote {
   $main-bg-image: '%%noise%%';
   $header-bg-image: '%%cockkisses-banner%%';
@@ -53,7 +63,7 @@ $res-night-bg-image: 'image/dark-noise.jpg';
 
 $sans-serif: 'Liberation Sans', Arial, sans-serif;
 $serif: 'Liberation Serif', 'Times New Roman', serif;
-$monospace: 'DejaVu Sans Mono', 'Droid Sans Mono', Inconsolata, Monaco, monospace;
+$monospace: 'Liberation Mono', 'Droid Sans Mono', 'DejaVu Sans Mono', Inconsolata, Monaco, monospace;
 $normal-font-size: 13px;
 
 $accent: $orange;
@@ -73,7 +83,7 @@ $quote-fg: $text-fg;
 $quote-border-color: darken($text-border-color, 10%);
 $codeblock-bg: $quote-bg;
 $codeblock-fg: $text-fg;
-$codeblock-border-color: $quote-border-color;
+$codeblock-border-color: $text-border-color;
 $table-heading-bg: darken($text-bg, 10%);
 $table-heading-fg: lighten($main-fg, 20%);
 $table-content-bg: $text-bg;
@@ -99,7 +109,6 @@ $link-fg: darken($blue, 7%);
 $link-fg-visited: darken($violet, 7%);
 $sticky-link-fg: $dark-green;
 
-
 $header-height: 148px;
 $header-bg: $black;
 $header-fg: darken($gray, 14%);
@@ -109,7 +118,7 @@ $page-title-fg: darken($gray, 20%);
 $menu-bar-bg: $dark-brown;
 $menu-bar-fg: darken($gray, 30%);
 $sr-header-fg: darken($gray, 40%);
-$sr-header-bg: $header-bg;
+$sr-header-bg: rgba(0, 0, 0, 0.8);
 $sr-dropdown-bg: $black;
 $sr-dropdown-fg: $sr-header-fg;
 $sr-dropdown-selected-bg: $focus-color;
@@ -147,6 +156,7 @@ $flat-list-hover-bg: darken($main-bg, 11%);
 
 $flair-bg: $bright-yellow;
 $flair-fg: $main-fg;
+$flair-border-color: desaturate(darken($flair-bg, 20%), 40%);
 $notice-bubble-bg: $bright-yellow;
 
 $list-entry-fg: darken($gray, 50%);
@@ -213,16 +223,22 @@ $res-night-bg: $dark-blue;
 $res-night-header-bg: lighten($res-night-bg, 9%);
 $res-night-menu-bar-bg: lighten($res-night-bg, 10%);
 $res-night-fg: darken($gray, 30%);
+$res-night-link-fg: darken($bright-cyan, 30%);
+$res-night-link-fg-visited: desaturate(darken($violet, 4%), 35%);
+$res-night-sticky-link-fg: $dark-green;
 $res-night-button-bg: lighten($res-night-bg, 16%);
 $res-night-button-fg: $res-night-fg;
 $res-night-big-button-bg: $dark-blue-gray;
+$res-night-big-button-disabled-fg: $res-night-fg;
+$res-night-big-button-disabled-bg: lighten($res-night-bg, 6%);
 $res-night-text-bg: lighten($res-night-bg, 8%);
 $res-night-text-fg: $res-night-fg;
 $res-night-input-bg: lighten($res-night-bg, 5%);
 $res-night-input-fg: $res-night-fg;
 $res-night-code-fg: lighten($inline-code-fg, 20%);
 $res-night-comment-bg: $res-night-text-bg;
-$res-night-active-element-color: #BDD4E0;
+$res-night-highlighted-comment-bg: darken($dark-blue-gray, 10%);
+$res-night-active-element-color: $bright-cyan;
 $res-night-spoiler-bg: lighten($res-night-bg, 25%);
 $res-night-spoiler-fg: $res-night-fg;
 $res-night-table-heading-bg: lighten($res-night-bg, 7%);
@@ -236,7 +252,8 @@ $res-night-editor-toolbar-bg: lighten($res-night-bg, 16%);
 $res-night-subscribe-bg: darken($green, 15%);
 $res-night-unsubscribe-bg: $dark-red;
 $res-night-toolbox-bg: darken($res-night-button-bg, 10%);
-
+$res-night-special-entry-bg: #1A242C;
 $res-night-new-comment-bg: darken($dark-blue-gray, 7%);
 $res-night-new-comment-border-color: lighten($res-night-new-comment-bg, 6%);
 $res-night-spam-tagline-bg: darken($misc-spam-tagline-bg, 64%);
+$res-night-report-tag-bg: $dark-red;

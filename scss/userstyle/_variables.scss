@@ -1,11 +1,11 @@
 @import "../variables";
 
-$logo-image: 'image/logo.png';
+$logo-image: '../image/logo.png';
 @if env(ASSETS) == remote {
   $main-bg-image: 'http://i.imgur.com/l6K6XJU.jpg';
   $header-bg-image: 'http://i.imgur.com/kfumYVX.jpg';
   $icon-image: 'http://i.imgur.com/MJ7y1Zy.png';
-  $res-night-bg-image: 'http://i.imgur.com/aCGpwZK.jpg';
+  $res-night-bg-image: 'http://i.imgur.com/zunAMnr.jpg';
   $logo-image: 'http://i.imgur.com/1yRy1Sk.png';
 }
 
@@ -21,9 +21,18 @@ $multireddits-selected-entry-fg: lighten($multireddits-entry-fg, 14%);
 $multireddits-title-bg: $bright-yellow;
 $multireddits-title-fg: lighten($main-fg, 20%);
 
+$inbox-own-message-tagline-bg: lighten($blue, 35%);
+
 $explore-hot-color: $orange;
 $explore-discovery-color: $violet;
 $explore-rising-color: $green;
 $explore-comment-color: $blue;
 
-$inbox-own-message-tagline-bg: lighten($blue, 35%);
+$res-night-multireddits-bg: darken($res-night-bg, 1%);
+$res-night-multireddits-intro-bg: #1C2C38;
+$res-night-multireddits-entry-bg: $res-night-menu-bar-bg;
+$res-night-multireddits-entry-fg: $res-night-fg;
+$res-night-multireddits-selected-color: $res-night-active-element-color;
+$res-night-multireddits-selected-entry-bg: lighten($res-night-multireddits-entry-bg, 5%);
+$res-night-multireddits-selected-entry-fg: lighten($res-night-multireddits-entry-fg, 15%);
+$res-night-inbox-own-message-tagline-bg: darken($dark-blue-gray, 8%);

@@ -79,10 +79,36 @@
 #RESShortcutsLeft,
 #RESShortcutsTrash {
   color: $sr-header-fg;
-  font-size: 13px;
+  font-size: $normal-font-size;
 }
 
 #sr-header-area a.subbarlink.RESShortcutsCurrentSub {
   color: $res-current-sub-fg !important;
 }
 
+// RES' My Subreddits dropdown
+> .res > #srList {
+  font-size: 10px;
+  background: $sr-dropdown-bg;
+  color: $sr-dropdown-fg;
+  border: none;
+  @include shadow(0 5px 6px rgba(0, 0, 0, 0.3));
+}
+
+#srList {
+  tr {
+    border: none;
+    a {
+      color: lighten($link-fg, 20%);
+    }
+
+    &:hover {
+      color: $sr-dropdown-selected-fg;
+      background: $sr-dropdown-selected-bg;
+
+      a {
+        color: $sr-dropdown-selected-fg;
+      }
+    }
+  }
+}

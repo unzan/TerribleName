@@ -47,7 +47,7 @@
     }
 
     > ul {
-      background: none !important;
+      @extend %tn-background-force-reset;
       ul {
         background: none !important;
         border-left-color: lighten($res-night-bg, 25%);

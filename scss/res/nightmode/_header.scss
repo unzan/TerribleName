@@ -1,29 +1,29 @@
-> #header {
-  background: $header-bg url($header-bg-image) 0 18px repeat-x !important;
-
-  #sr-header-area {
-    background: $sr-header-bg !important;
-    color: $sr-header-fg;
-  }
-
-  #header-bottom-left {
-    background: none !important;
-    .tabmenu {
-      .selected {
-        a {
-          padding-bottom: 8px !important;
-        }
-      }
-    }
-  }
-
-  #header-bottom-right {
-    background: none !important;
-  }
+#header {
+  @extend %tn-header;
 
   #header-bottom-left > .pagename:last-child::after,
   .tabmenu {
     @include linear-gradient(top, $res-night-menu-bar-bg, darken($res-night-menu-bar-bg, 5%));
     @include shadow(inset 0 1px 0 lighten($res-night-menu-bar-bg, 10%));
   }
+}
+
+#sr-header-area {
+  background: $sr-header-bg !important;
+  color: $sr-header-fg;
+}
+
+#header-bottom-left {
+  @extend %tn-background-force-reset;
+  .tabmenu {
+    .selected {
+      a {
+        padding-bottom: 8px !important;
+      }
+    }
+  }
+}
+
+#header-bottom-right {
+  @extend %tn-background-force-reset;
 }

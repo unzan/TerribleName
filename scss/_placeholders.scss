@@ -1,0 +1,388 @@
+%tn-background-reset {
+  background: none;
+}
+
+%tn-background-force-reset {
+  background: none !important;
+}
+
+%tn-link {
+  color: $link-fg;
+  &:visited {
+    color: $link-fg-visited;
+  }
+}
+
+%tn-header {
+  background: $header-bg url($header-bg-image) 0 18px repeat-x !important;
+}
+
+%tn-horiz-bar {
+  border: none;
+  display: block;
+  height: 3px;
+  background: $horiz-line-color;
+}
+
+%tn-simple-text-container {
+  background: $text-bg;
+  color: $text-fg;
+  border: none;
+  padding: 4px 15px;
+  @include rounded(3px);
+  @include shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+%tn-bracketed {
+  &::before {
+    content: '[';
+  }
+
+  &::after {
+    content: ']';
+  }
+}
+
+%tn-flair {
+  display: inline-block;
+  font-size: $normal-font-size !important;
+  border: solid 1px $flair-border-color;
+  line-height: 1.2em;
+  padding: 1px 4px;
+  vertical-align: middle;
+  background-color: $flair-bg;
+  color: $flair-fg;
+}
+
+%tn-button {
+  color: $button-fg !important;
+  font-family: $sans-serif;
+  padding: 2px 8px;
+  width: auto;
+  min-width: 4em;
+  height: auto;
+  line-height: 1.5em;
+  vertical-align: middle;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  text-decoration: none !important;
+  border: none;
+  text-align: center;
+  margin-right: 3px;
+  @include linear-gradient(top, $button-bg, darken($button-bg, 6%));
+  @include shadow(0 1px 2px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3));
+  @include rounded(4px);
+
+  &:hover,
+  &:focus {
+    color: $button-fg;
+    @include linear-gradient(top, lighten($button-bg, 5%), darken($button-bg, 5%));
+  }
+
+  &:active {
+    @include linear-gradient(top, $button-bg, darken($button-bg, 10%));
+    @include shadow(inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7));
+  }
+}
+
+%tn-default-button {
+  @extend %tn-button;
+  display: inline-block;
+  padding-bottom: 3px;
+  text-transform: capitalize;
+}
+
+%tn-button-reset {
+  padding: 0 !important;
+  min-width: 0 !important;
+  @include shadow(none);
+}
+
+%tn-small-button-default,
+%tn-small-button {
+  @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.12));
+}
+
+%tn-small-button-default,
+%tn-small-button-shadowless,
+%tn-small-button {
+  color: $small-button-fg;
+  text-decoration: none !important;
+  padding: 2px 6px;
+  border: solid 1px darken($small-button-bg, 30%);
+  @include linear-gradient(top, $small-button-bg, darken($small-button-bg, 6%));
+  @include rounded(3px);
+}
+
+
+%tn-small-button-pressed,
+%tn-small-button-shadowless:active,
+%tn-small-button:active {
+  @include linear-gradient(top, darken($small-button-bg, 3%), darken($small-button-bg, 9%));
+  @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.7));
+}
+
+%tn-switch-button {
+  @extend %tn-small-button;
+  margin: 0;
+  border-right-style: none;
+  color: $small-button-fg !important;
+  @include rounded(0);
+}
+
+%tn-switch-button-round-left {
+  @include rounded(3px 0 0 3px);
+}
+
+%tn-switch-button-round-right {
+  border-right-style: solid;
+  @include rounded(0 3px 3px 0);
+}
+
+%tn-switch-button-active {
+  @extend %tn-small-button-pressed;
+  font-weight: bold;
+}
+
+%tn-alt-small-button {
+  display: inline-block;
+  padding: 2px 6px;
+  border: solid 1px rgba(darken($small-button-bg, 30%), 0.6);
+  margin-right: 3px;
+  font-weight: bold;
+  color: $small-button-fg;
+
+  &:hover,
+  &:focus {
+    @extend %tn-small-button-default;
+  }
+
+  &:active {
+    @extend %tn-small-button-pressed;
+  }
+}
+
+%tn-info-box {
+  background: $info-box-bg;
+  color: $info-box-fg;
+  border: solid 1px $default-border-color;
+  font-family: $sans-serif;
+  @include rounded(3px);
+  @include shadow(0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px lighten($info-box-bg, 6%), inset 0 -1px 1px darken($info-box-bg, 8%));
+}
+
+%tn-tooltip {
+  z-index: 3000;
+  position: absolute;
+  background: $tooltip-bg;
+  color: $tooltip-fg;
+  padding: 4px 6px;
+  @include shadow(0 3px 4px rgba(0, 0, 0, 0.2));
+  @include rounded(3px);
+}
+
+%tn-input {
+  padding: 3px;
+  background: $input-bg;
+  color: $input-fg;
+  border: solid 1px $default-border-color !important;
+  font: normal $normal-font-size $sans-serif;
+  @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.8));
+  @include rounded(3px);
+
+  &:focus {
+    border-color: $input-focused-border-color !important;
+  }
+}
+
+%tn-markdown-editor-textbox {
+  font-size: $normal-font-size;
+  font-family: $monospace;
+  line-height: 1.4em;
+}
+
+%tn-form-group {
+  overflow: hidden;
+  background: $box-bg;
+  border: solid 1px $default-border-color;
+  padding: 10px;
+  @include rounded(3px);
+  @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14));
+}
+
+%tn-list-entry-separator {
+  border-top: solid 1px darken($main-bg, 18%);
+  @include shadow(inset 0 1px 0 lighten($main-bg, 5%));
+}
+
+%tn-list-entry {
+  margin: 0;
+  position: relative;
+
+  &.last-clicked:not(:first-child),
+  &:not(:first-child) {
+    @extend %tn-list-entry-separator;
+  }
+
+  &.link {
+    .usertext {
+      padding-right: 15px;
+    }
+
+    .usertext-body .md {
+      @extend %tn-simple-text-container;
+    }
+
+    .usertext-edit .md {
+      background: none;
+      padding: 0;
+      border: none;
+      @include rounded(0);
+      @include shadow(none);
+    }
+  }
+}
+
+%tn-special-entry {
+  position: relative;
+  background-color: $special-entry-bg !important;
+  color: $special-entry-fg;
+  border: solid 1px rgba(0, 0, 0, 0.2) !important;
+  padding: 1.3em 0.6em 1.3em 0;
+  margin-bottom: 5px;
+  @include rounded(3px);
+  @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+%tn-markdown-table {
+  td,
+  th {
+    border-color: $table-border-color;
+  }
+
+  th {
+    background: $table-heading-bg;
+    color: $table-heading-fg;
+    text-shadow: 0 1px 1px lighten($table-heading-bg, 20%);
+    @include shadow(inset 0 1px 0 lighten($table-heading-bg, 30%));
+  }
+
+  tbody {
+    tr {
+      background: $table-content-bg;
+      &:hover {
+        background: $table-highlight-bg;
+      }
+    }
+  }
+}
+
+%tn-quote {
+  border-left: solid 3px $quote-border-color;
+  padding: 0.2em 0.5em;
+  background: $quote-bg;
+  color: $quote-fg;
+  margin-left: 0.5em;
+}
+
+%tn-comment-bubble {
+  @extend %tn-simple-text-container;
+  position: relative;
+  background: $comment-bg;
+  padding: 0;
+  display: inline-block;
+  overflow: visible;
+  @include rounded(3px);
+  @include shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    @include triangle(left, 8px, $comment-bg);
+  }
+}
+
+%tn-comment-tagline {
+  display: block;
+  padding: 6px 14px 6px 10px;
+  border-bottom: solid 1px darken($comment-bg, 10%);
+  @include rounded(3px 3px 0 0);
+}
+
+%tn-comment-footer {
+  background: $comment-footer-bg;
+  border-top: solid 1px darken($comment-bg, 10%);
+  padding: 4px 12px 4px 8px;
+  @include rounded(0 0 3px 3px);
+
+  li {
+    a {
+      font-weight: normal;
+    }
+  }
+}
+
+%tn-icon {
+  display: inline-block !important;
+  background-image: url($icon-image) !important;
+  background-repeat: no-repeat !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+%tn-vote-arrows {
+  margin-left: 3px;
+
+  &.up,
+  &.down,
+  &.upmod,
+  &.downmod
+  {
+    &,
+    &:hover {
+      @extend %tn-icon;
+    }
+  }
+
+  &.up,
+  &.up:hover {
+    background-position: -64px -80px !important;
+  }
+
+  &.upmod,
+  &.upmod:hover {
+    background-position: -48px -80px !important;
+  }
+
+  &.down,
+  &.down:hover {
+    background-position: -96px -80px !important;
+  }
+
+  &.downmod,
+  &.downmod:hover {
+    background-position: -80px -80px !important;
+  }
+}
+
+%tn-active-comment-entry {
+  background: $comment-bg !important;
+  &::after {
+    content: '';
+    background: $res-active-element-color;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    @include rounded(0 3px 3px 0);
+  }
+}
+
+%tn-active-collapsed-comment-indicator {
+  outline: dashed 1px $res-active-element-color;
+}
+

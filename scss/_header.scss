@@ -1,5 +1,5 @@
 #header {
-  background: $header-bg url($header-bg-image) 0 18px repeat-x;
+  @extend %tn-header;
   color: $header-fg;
   border-bottom: none;
   height: $header-height;
@@ -111,8 +111,8 @@
 }
 
 .dropdown.srdrop .selected {
-  color: $sr-header-fg;
   background: none;
+  color: $sr-header-fg;
   padding-right: 5px;
 
   &::after {

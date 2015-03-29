@@ -1,9 +1,10 @@
 .md {
   a {
-    color: lighten($link-fg, 7%);
-    &:visited  {
-      color: lighten($link-fg-visited, 7%);
-    }
+    @extend %tn-alt-link;
+  }
+
+  a:not(.userTagLink):not(.noKeyNav):not(.expando-button) {
+    background: none !important;
   }
 
   p,
@@ -14,8 +15,16 @@
   table,
   tbody,
   tr,
-  td {
+  td,
+  em,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     background: none !important;
+    color: inherit !important;
   }
 
   pre,
@@ -26,8 +35,8 @@
   }
 
   code {
-    color: $res-night-code-fg;
     background: none !important;
+    color: $res-night-code-fg;
   }
 
   pre {
@@ -39,16 +48,6 @@
 
   hr {
     background: lighten($res-night-bg, 17%) !important;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: inherit !important;
-    background: none !important;
   }
 
   h1,

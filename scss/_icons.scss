@@ -1,12 +1,4 @@
 // res icons (including markdown editor icons) are set in file _res.scss
-%tn-icon {
-  display: inline-block !important;
-  background-image: url($icon-image) !important;
-  background-repeat: no-repeat !important;
-  width: 16px !important;
-  height: 16px !important;
-}
-
 .titlebox {
   .leavemoderator,
   form.leavecontributor-button {
@@ -23,40 +15,8 @@
   }
 }
 
-%tn-vote-arrows,
 .arrow {
-  margin-left: 3px;
-
-  &.up,
-  &.down,
-  &.upmod,
-  &.downmod
-  {
-    &,
-    &:hover {
-      @extend %tn-icon;
-    }
-  }
-
-  &.up,
-  &.up:hover {
-    background-position: -64px -80px !important;
-  }
-
-  &.upmod,
-  &.upmod:hover {
-    background-position: -48px -80px !important;
-  }
-
-  &.down,
-  &.down:hover {
-    background-position: -96px -80px !important;
-  }
-
-  &.downmod,
-  &.downmod:hover {
-    background-position: -80px -80px !important;
-  }
+  @extend %tn-vote-arrows;
 }
 
 .tagline .userattrs .cakeday {

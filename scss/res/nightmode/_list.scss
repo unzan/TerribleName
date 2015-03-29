@@ -1,58 +1,27 @@
-#siteTable.linklisting {
-  .thing {
+.linklisting {
+  .link {
+    @extend %tn-common-dark-entry;
     background: none !important;
+    padding: 1.3em 0 !important;
 
     &:not(:first-child) {
-      border-top: solid 1px darken($res-night-bg, 4%) !important;
-      @include shadow(inset 0 1px 0 lighten($res-night-bg, 8%));
+      @extend %tn-dark-list-entry-separator;
     }
 
     .entry {
-
-      > .title {
-        > a.title {
-          &,
-          &.loggedin {
-            color: $link-fg !important;
-          }
-        }
-
-        > .domain > a {
-          color: darken($res-night-fg, 30%) !important;
-        }
-      }
-
-      .flat-list.buttons > li {
-        &.reported-stamp.stamp {
-          @include shadow(none);
-        }
-
-        a,
-        .redditSingleClick {
-          &:hover {
-            background-color: lighten($res-night-bg, 5%);
-          }
-        }
-      }
-
       &.RES-keyNav-activeElement {
         background: none !important;
         border-right-color: $res-night-active-element-color !important;
 
-        .usertext > .usertext-body {
-          background: none !important;
-
-          .md p {
-            background: none !important;
-          }
+        a.title {
+          @extend %tn-alt-link;
         }
-      }
 
-      &,
-      &.RES-keyNav-activeElement {
-        .usertext > .usertext-body > .md {
-          @extend %tn-dark-text-container;
-          color: $res-night-fg;
+        .usertext > .usertext-body {
+          @extend %tn-background-force-reset;
+          .md p {
+            @extend %tn-background-force-reset;
+          }
         }
       }
     }
@@ -68,17 +37,6 @@
     .stickied-tagline {
       background: darken($sticky-tag-bg, 15%);
     }
-
-    .thumbnail {
-      &::before {
-        opacity: 0.6;
-        @include shadow(none);
-      }
-
-      img {
-        background-color: lighten($res-night-bg, 20%);
-      }
-    }
   }
 }
 
@@ -88,10 +46,17 @@
   }
 
   .tagline {
+    a:not(.author) {
+      @extend %tn-alt-link;
+    }
+
     .author {
+      color: $res-night-link-fg;
+
       &.submitter {
         &,
         &:hover {
+          color: lighten($res-night-fg, 20%) !important;
           background-color: darken($submitter-tag-fg, 10%) !important;
         }
       }
@@ -99,6 +64,7 @@
       &.admin {
         &,
         &:hover {
+          color: lighten($res-night-fg, 20%) !important;
           background-color: darken($admin-tag-fg, 10%) !important;
         }
       }
@@ -106,13 +72,34 @@
       &.moderator {
         &,
         &:hover {
+          color: lighten($res-night-fg, 20%) !important;
           background-color: darken($mod-tag-fg, 10%) !important;
         }
       }
     }
   }
 
+  &.spam,
   &.reported {
     border: none;
   }
+}
+
+.organic-listing .link,
+.promotedlink {
+  @extend %tn-dark-special-entry;
+}
+
+.promotedlink .sponsored-tagline {
+  background: lighten($res-night-special-entry-bg, 10%);
+  color: $res-night-fg;
+  @include shadow(none);
+}
+
+.entry .flat-list.buttons > li.reported-stamp.stamp {
+  background: $res-night-report-tag-bg;
+}
+
+.RES-keyNav-activeElement .md {
+  @extend %tn-background-force-reset;
 }

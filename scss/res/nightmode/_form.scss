@@ -1,26 +1,17 @@
-%tn-dark-toolbar {
-  border: solid 1px $res-night-bg;
-  color: $res-night-fg;
-  @include linear-gradient(top, $res-night-editor-toolbar-bg, darken($res-night-editor-toolbar-bg, 8%));
-  @include shadow(inset 0 1px 0 lighten($res-night-editor-toolbar-bg, 8%));
-}
-
-%tn-dark-info-box {
-  background: $res-night-info-box-bg;
-  color: $res-night-info-box-fg;
-  border: solid 1px darken($res-night-bg, 2%);
-  @include shadow(0 1px 2px darken($res-night-bg, 3%), inset 0 1px 0 lighten($res-night-info-box-bg, 7%));
-}
-
 form.submit.content {
-  background: none !important;
+  @extend %tn-background-force-reset;
 
   .info-notice {
     background: $res-night-info-box-bg !important;
   }
 }
 
-.side .spacer > #search input,
+.side .spacer > #search input[type=submit] {
+  background-color: transparent;
+}
+
+.content #search > input[type=text],
+.side .spacer > #search input[type=text],
 #newlink.submit .formtabs-content .roundfield-content textarea,
 #newlink.submit .formtabs-content .roundfield-content input#url,
 #newlink.submit .formtabs-content .roundfield-content input#sr-autocomplete,
@@ -29,14 +20,11 @@ input[type=text],
 .usertext > .usertext-edit > div > textarea,
 .usertext-edit.viewSource > div > textarea,
 input[type=password] {
-  background: $res-night-input-bg !important;
-  color: $res-night-input-fg !important;
-  border-color: $res-night-bg !important;
-  @include shadow(inset 0 1px 2px darken($res-night-input-bg, 10%), 0 1px 0 lighten($res-night-bg, 13%));
+  @extend %tn-dark-input;
 }
 
 #shortlink-text {
-  @include shadow(none);
+  @include shadow(0 1px 0 lighten($res-night-info-box-bg, 10%));
 }
 
 .fancy-settings + .tabmenu,
@@ -85,7 +73,7 @@ input[type=password] {
   @extend %tn-dark-info-box;
 
   .roundfield {
-    background: none !important;
+    @extend %tn-background-force-reset;
   }
 
   .infobar {
@@ -97,7 +85,7 @@ input[type=password] {
 .menuarea {
   color: $res-night-fg;
 
-  > .spacer {
+  .spacer {
     > .dropdown.lightdrop,
     > .toggle .togglebutton {
       @extend %tn-dark-button;
@@ -117,6 +105,13 @@ input[type=password] {
 
     > .dropdown.lightdrop > .selected::after {
       border-top-color: $res-night-button-fg;
+    }
+
+    .toggle .option.active.error {
+      background: $res-night-info-box-bg;
+      a {
+        color: $res-night-link-fg;
+      }
     }
   }
 }
@@ -154,5 +149,28 @@ input[type=password] {
 }
 
 &.moderator .tabpane-content .linefield {
-  background: none;
+  @extend %tn-background-reset;
+}
+
+.login-form-side {
+  @extend %tn-dark-info-box;
+
+  label {
+    color: $res-night-fg;
+  }
+
+  .submit {
+    @extend %tn-background-reset;
+  }
+}
+
+.searchpane {
+  @extend %tn-dark-info-box;
+}
+
+.searchfacets {
+  @extend %tn-dark-info-box;
+  .title {
+    color: inherit;
+  }
 }

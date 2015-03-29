@@ -197,10 +197,6 @@ button.RESBigEditorPop {
 
 
 #BigEditor {
-  button {
-    @extend %tn-button;
-  }
-
   > .RESDialogSmall {
     border: none;
     margin: 10px;
@@ -225,6 +221,7 @@ button.RESBigEditorPop {
         }
 
         > #BigText {
+          @extend %tn-markdown-editor-textbox;
           margin: 0;
           padding: 5px;
           width: 100%;

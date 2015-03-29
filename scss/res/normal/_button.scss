@@ -13,14 +13,11 @@
 
 .RESshortcutside,
 .RESDashboardToggle {
-  &,
-  &.remove {
-    @extend %tn-button;
-    font-size: 13px !important;
-    display: inline-block !important;
-    vertical-align: middle;
-    margin: 0 5px 0 0;
-  }
+  @extend %tn-button;
+  font-size: 13px !important;
+  display: inline-block !important;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
 }
 
 #searchexpando > .searchexpando-submit > input[type="submit"] {

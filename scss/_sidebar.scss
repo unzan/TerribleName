@@ -53,7 +53,7 @@
 }
 
 .users-online::before {
-  background: none;
+  @extend %tn-background-reset;
 }
 
 .subscribers,
@@ -114,12 +114,12 @@
 
     .collapse-button {
       @extend %tn-bracketed;
+      background: none;
       float: right;
       font: normal $normal-font-size $monospace;
       width: auto;
       height: auto;
       line-height: auto;
-      background: none;
       border: none;
       margin: 0;
     }
@@ -150,10 +150,8 @@
 
 }
 
-.sidebox {
-  .spacer {
-    background: none;
-  }
+.sidebox .spacer {
+  @extend %tn-background-reset;
 }
 
 // mod tools

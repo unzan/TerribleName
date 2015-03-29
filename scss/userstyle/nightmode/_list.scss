@@ -1,0 +1,54 @@
+.interestbar {
+  background: none !important;
+  padding: 0 !important;
+
+  .sr-interest-bar {
+    @extend %tn-dark-special-entry;
+    > .bubble {
+      > .query-box {
+        border: none;
+        > .query {
+          @extend %tn-dark-input;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+.organic-listing {
+  .link {
+    @extend %tn-common-dark-entry;
+  }
+
+  .nextprev {
+    .arrow {
+      background: none !important;
+      height: auto !important;
+      line-height: 1em !important;
+      border: none !important;
+      @include shadow(none !important);
+
+      &.prev::before {
+        border-right-color: lighten($res-night-special-entry-bg, 50%);
+      }
+
+      &.next::before {
+        border-left-color: lighten($res-night-special-entry-bg, 50%);
+      }
+    }
+  }
+}
+
+.trending-subreddits {
+  > .trending-subreddits-content {
+    > strong,
+    > a {
+      color: $res-night-fg;
+    }
+
+    li > a {
+      @extend %tn-dark-button;
+    }
+  }
+}

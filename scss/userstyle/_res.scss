@@ -25,32 +25,8 @@
     }
   }
 
-  // RES' My Subreddits dropdown
-  #srList {
-    font-size: 10px;
-    background: $sr-dropdown-bg;
-    color: $sr-dropdown-fg;
-    border: none;
-    @include shadow(0 5px 6px rgba(0, 0, 0, 0.3));
-
-    tr {
-      border: none;
-      a {
-        color: lighten($link-fg, 20%);
-      }
-
-      &:hover {
-        color: $sr-dropdown-selected-fg;
-        background: $sr-dropdown-selected-bg;
-
-        a {
-          color: $sr-dropdown-selected-fg;
-        }
-      }
-    }
-  }
 }
 
-.res-commentBoxes .res {
-  @import "../res/stupid_fixes";
+.res.res-commentBoxes .comments-page .nestedlisting {
+  @import "../res/comment_reset";
 }
