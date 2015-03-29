@@ -103,3 +103,7 @@
 .RES-keyNav-activeElement .md {
   @extend %tn-background-force-reset;
 }
+
+.nsfw-stamp acronym {
+  background: $res-night-nsfw-tag-bg;
+}

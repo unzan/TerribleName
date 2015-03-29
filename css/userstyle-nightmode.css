@@ -71,8 +71,7 @@
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 #3e4855;
   }
 
-  .res.res-nightmode .flairselector.drop-choices.active, .res.res-nightmode.wiki-page .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
-  .res.res-nightmode .RESDialogSmall.livePreview > h3 {
+  .res.res-nightmode .flairselector.drop-choices.active {
     border: none !important;
     background: -webkit-linear-gradient(top, #242a32, #1e2229);
     background: -moz-linear-gradient(top, #242a32, #1e2229);
@@ -80,7 +79,7 @@
     box-shadow: inset 0 1px 0 #3a434f, 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
-  .res.res-nightmode .linklisting .link .entry .usertext > .usertext-body > .md, .res.res-nightmode .organic-listing .link .entry .usertext > .usertext-body > .md, .res.res-nightmode .explore-item .entry .usertext > .usertext-body > .md {
+  .res.res-nightmode .linklisting .link .entry .usertext > .usertext-body > .md, .res.res-nightmode .organic-listing .link .entry .usertext > .usertext-body > .md, .res.res-nightmode .explore-item .entry .usertext > .usertext-body > .md, .res.res-nightmode .wiki-page .wiki-page-content .md.wiki, .res.res-nightmode .RESDialogSmall.livePreview {
     background-color: #242a32 !important;
     color: #9e9e9e !important;
   }
@@ -211,7 +210,8 @@
     box-shadow: inset 0 2px 3px #0a0c0e, 0 1px 0 #3e4855;
   }
 
-  .res.res-nightmode .sidecontentbox > .title, .res.res-nightmode .markdownEditor-wrapper {
+  .res.res-nightmode .sidecontentbox > .title, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
+  .res.res-nightmode .RESDialogSmall.livePreview > h3, .res.res-nightmode .markdownEditor-wrapper {
     border: solid 1px #13161A;
     color: #9e9e9e;
     background: -webkit-linear-gradient(top, #353e49, #242a32);
@@ -562,6 +562,9 @@
   .res.res-nightmode .entry .flat-list.buttons > li.reported-stamp.stamp {
     background: #621210;
   }
+  .res.res-nightmode .nsfw-stamp acronym {
+    background: #364956;
+  }
   .res.res-nightmode .linkflairlabel,
   .res.res-nightmode .flair {
     background-color: #333b46;
@@ -601,9 +604,6 @@
   .res.res-nightmode.wiki-page .wikititle {
     border: none !important;
   }
-  .res.res-nightmode.wiki-page .wiki-page-content .md.wiki {
-    color: #9e9e9e;
-  }
   .res.res-nightmode.wiki-page button.RESBigEditorPop {
     top: 40px;
   }
@@ -641,11 +641,8 @@
   .res.res-nightmode.wiki-page .wikirevisionlisting .generic-table tr:hover > td {
     background-color: #1c2026;
   }
-  .res.res-nightmode .wiki-page .wiki-page-content .md.wiki,
-  .res.res-nightmode .RESDialogSmall.livePreview {
+  .res.res-nightmode .wiki-page .wiki-page-content .md.wiki {
     border: none;
-    background: #191d23 !important;
-    color: #9e9e9e !important;
   }
   .res.res-nightmode table.diff {
     background: #13161A;
@@ -724,11 +721,6 @@
   .res.res-nightmode .md a[href$="/spoiler"]:hover {
     color: #9e9e9e !important;
   }
-  .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
-  .res.res-nightmode .RESDialogSmall.livePreview > h3 {
-    color: #9e9e9e;
-    border: none;
-  }
   .res.res-nightmode #BigEditor > .RESDialogSmall.BERight .md a,
   .res.res-nightmode #BigEditor > .RESDialogSmall.BERight #BigPreview.md a,
   .res.res-nightmode .RESDialogSmall.livePreview .md a,
@@ -752,6 +744,15 @@
   .res.res-nightmode .RESDialogSmall.livePreview .md a:visited,
   .res.res-nightmode .RESDialogSmall.livePreview #BigPreview.md a:visited {
     color: #5358ba !important;
+  }
+  .res.res-nightmode .RESDialogSmall.livePreview {
+    border-color: #13161A;
+    overflow: hidden;
+  }
+  .res.res-nightmode .RESDialogSmall.livePreview > h3 {
+    border-top: none;
+    border-left: none;
+    border-right: none;
   }
   .res.res-nightmode #BigEditor > .RESDialogSmall.BELeft {
     background: #13161A url("http://i.imgur.com/zunAMnr.jpg") left top repeat;

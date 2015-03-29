@@ -3227,6 +3227,7 @@
   .res .RESDialogSmall.livePreview > h3,
   .res .BELeft,
   .res .markdownEditor-wrapper {
+    border-radius: 3px 3px 0 0;
     background: -webkit-linear-gradient(top, #f7f7f7, #eaeaea);
     background: -moz-linear-gradient(top, #f7f7f7, #eaeaea);
     background: linear-gradient(top, #f7f7f7, #eaeaea);
@@ -3238,7 +3239,6 @@
     border: solid 1px #aaaaaa;
     border-bottom: none;
     margin: 0;
-    border-radius: 3px 3px 0 0;
   }
   .res .markdownEditor-wrapper + textarea#wiki_page_content,
   .res .markdownEditor-wrapper + div > textarea {
