@@ -87,13 +87,15 @@
 }
 
 // RES' My Subreddits dropdown
-#srList {
+> .res > #srList {
   font-size: 10px;
   background: $sr-dropdown-bg;
   color: $sr-dropdown-fg;
   border: none;
   @include shadow(0 5px 6px rgba(0, 0, 0, 0.3));
+}
 
+#srList {
   tr {
     border: none;
     a {

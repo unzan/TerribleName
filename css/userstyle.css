@@ -3034,7 +3034,7 @@
   .res #sr-header-area a.subbarlink.RESShortcutsCurrentSub {
     color: #eaeaea !important;
   }
-  .res #srList {
+  .res > .res > #srList {
     font-size: 10px;
     background: #111;
     color: #848484;
