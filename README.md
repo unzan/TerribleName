@@ -5,6 +5,36 @@ Terrible Name is a custom reddit theme written in [SCSS][].
 It's available as subreddit theme and userstyles.
 You can see a demo of subreddit theme in [/r/TerribleName][subreddit].
 
+Screenshots
+-----------
+
+[![st-front][]][sb-front]
+[![st-multi][]][sb-multi]
+[![st-comment][]][sb-comment]
+[![st-submit][]][sb-submit]  
+[![st-srsettings][]][sb-srsettings]
+[![st-flairsettings][]][sb-flairsettings]
+[![st-night-multi][]][sb-night-multi]
+[![st-night-comment][]][sb-night-comment]
+
+[sb-front]: https://i.imgur.com/Zykup1R.png "Front page"
+[sb-multi]: https://i.imgur.com/4IvLW8n.png "Multireddit page"
+[sb-comment]: https://i.imgur.com/blJWN7x.png "Comment section"
+[sb-submit]: https://i.imgur.com/CQP3E33.png "Submit form"
+[sb-srsettings]: https://i.imgur.com/F0Gn8tI.png "Subreddit settings and moderation toolbox"
+[sb-flairsettings]: https://i.imgur.com/zD5VUzB.png "Flair settings"
+[sb-night-multi]: https://i.imgur.com/t2rvzgx.png "Multireddit in RES Nightmode"
+[sb-night-comment]: https://i.imgur.com/zkn8kMI.png "Comment section in RES Nightmode"
+
+[st-front]: https://i.imgur.com/Zykup1Rs.png
+[st-multi]: https://i.imgur.com/4IvLW8ns.png
+[st-comment]: https://i.imgur.com/blJWN7xs.png
+[st-submit]: https://i.imgur.com/CQP3E33s.png
+[st-srsettings]: https://i.imgur.com/F0Gn8tIs.png
+[st-flairsettings]: https://i.imgur.com/zD5VUzBs.png
+[st-night-multi]: https://i.imgur.com/t2rvzgxs.png
+[st-night-comment]: https://i.imgur.com/zkn8kMIs.png
+
 Compiling
 -----------
 
