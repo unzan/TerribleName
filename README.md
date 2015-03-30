@@ -2,8 +2,8 @@ Terrible Name
 =============
 
 Terrible Name is a custom reddit theme written in [SCSS][].
-It's available as subreddit theme and userstyle. You can see a demo of subreddit
-theme in [/r/TerribleName][subreddit].
+It's available as subreddit theme and userstyles.
+You can see a demo of subreddit theme in [/r/TerribleName][subreddit].
 
 Compiling
 -----------
@@ -52,13 +52,23 @@ Installation
 
 4. Click **Save** button to apply.
 
+This theme is compatible with RES nightmode but
+[you have to tell RES to not disable your subreddit's stylesheet in nightmode][1]
+by adding the following link to your sidebar:
+
+    [](#/RES_SR_Config/NightModeCompatible)
+
+[1]: https://www.reddit.com/r/Enhancement/wiki/subredditstyling#wiki_res_night_mode_and_your_subreddit
+
 ### For userstyle
 
 #### Using userstyles.org
 
-- [Normal](https://userstyles.org/styles/103630/reddit-terrible-name-theme)
-- [RES Nightmode compatibility](https://userstyles.org/styles/111547/reddit-terrible-name-theme-nightmode-compatibility)
+- [Main userstyle](https://userstyles.org/styles/103630/reddit-terrible-name-theme)
+- [Additional RES nightmode support](https://userstyles.org/styles/111547/reddit-terrible-name-theme-nightmode-compatibility)
 
+The main userstyle can be used alone but to have RES nightmode support you need
+to install both of them.
 
 #### Manual installation
 
@@ -88,6 +98,6 @@ Picture used in header banner is a [photograph][photo] by
 [yusuke kamiyamane]: http://p.yusukekamiyamane.com/
 [photo]: http://commons.wikimedia.org/wiki/File:Panorama_Frankfurt_vom_Maintower_edit.jpg
 [photographer]: http://de.wikipedia.org/wiki/Benutzer:Schaengel
-[subreddit]: http://www.reddit.com/r/TerribleName
-[compiled-css]: http://www.reddit.com/r/TerribleName/about/stylesheet
-[fucking diff]: http://www.reddit.com/r/TerribleName/wiki/index?v=92fa5ffe-e878-11e3-b3f7-12313b0758c1&v2=9eb34ba6-eca3-11e3-81e8-12313d090eed
+[subreddit]: https://www.reddit.com/r/TerribleName
+[compiled-css]: https://www.reddit.com/r/TerribleName/about/stylesheet
+[fucking diff]: https://www.reddit.com/r/TerribleName/wiki/index?v=92fa5ffe-e878-11e3-b3f7-12313b0758c1&v2=9eb34ba6-eca3-11e3-81e8-12313d090eed
