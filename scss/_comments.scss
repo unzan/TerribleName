@@ -108,6 +108,7 @@
           max-width: $max-comment-width;
           > .md {
             padding: 1px 8px;
+            margin: 0;
           }
         }
 
@@ -149,27 +150,3 @@
     display: none;
   }
 }
-
-
-//.contest-mode.infobar {
-  //margin: 0 !important;
-  //font-size: 0;
-  //display: inline-block;
-  //width: auto !important;
-  //position: absolute;
-  //background: none;
-  //border: none;
-  //@include shadow(none);
-  //font-weight: bold;
-  //color: lighten($main-fg, 30%);
-  //text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
-  //top: -30px;
-  //right: 0px;
-  //white-space: nowrap;
-  //padding: 3px;
-
-  //&::before {
-    //content: 'Contest Mode';
-    //font-size: $normal-font-size;
-  //}
-//}

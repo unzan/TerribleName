@@ -1601,6 +1601,7 @@
   }
   .comment.noncollapsed > .entry > .usertext > .usertext-body > .md {
     padding: 1px 8px;
+    margin: 0;
   }
   .comment.noncollapsed > .entry .flat-list.buttons {
     display: block;
