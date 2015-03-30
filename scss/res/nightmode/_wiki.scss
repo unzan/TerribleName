@@ -3,13 +3,6 @@
     border: none !important;
   }
 
-  .wiki-page-content {
-    .md.wiki {
-      @extend %tn-dark-raised-box;
-      color: $res-night-fg;
-    }
-  }
-
   button.RESBigEditorPop {
     top: 40px;
   }
@@ -74,11 +67,9 @@
   }
 }
 
-.wiki-page .wiki-page-content .md.wiki,
-.RESDialogSmall.livePreview {
+.wiki-page .wiki-page-content .md.wiki {
+  @extend %tn-dark-text-container;
   border: none;
-  background: lighten($res-night-bg, 3%) !important;
-  color: $res-night-fg !important;
 }
 
 table.diff {

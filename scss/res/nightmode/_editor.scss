@@ -10,9 +10,7 @@ button.RESBigEditorPop,
 #BigEditor > .RESDialogSmall.BERight,
 .RESDialogSmall.livePreview {
   > h3 {
-    @extend %tn-dark-raised-box;
-    color: $res-night-fg;
-    border: none;
+    @extend %tn-dark-toolbar;
   }
 
   .md,
@@ -30,6 +28,17 @@ button.RESBigEditorPop,
         color: $link-fg-visited !important;
       }
     }
+  }
+}
+
+.RESDialogSmall.livePreview {
+  @extend %tn-dark-text-container;
+  border-color: $res-night-bg;
+  overflow: hidden;
+  > h3 {
+    border-top: none;
+    border-left: none;
+    border-right: none;
   }
 }
 

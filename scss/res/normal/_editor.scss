@@ -68,6 +68,7 @@ button.RESBigEditorPop {
 .RESDialogSmall.livePreview > h3,
 .BELeft,
 .markdownEditor-wrapper {
+  @include rounded(3px 3px 0 0);
   @include linear-gradient(top, $res-editor-toolbar-bg, darken($res-editor-toolbar-bg, 5%));
 }
 
@@ -78,7 +79,6 @@ button.RESBigEditorPop {
   border: solid 1px $default-border-color;
   border-bottom: none;
   margin: 0;
-  @include rounded(3px 3px 0 0);
 
   + textarea#wiki_page_content,
   + div > textarea {

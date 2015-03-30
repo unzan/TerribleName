@@ -226,6 +226,7 @@ $res-night-fg: darken($gray, 30%);
 $res-night-link-fg: darken($bright-cyan, 30%);
 $res-night-link-fg-visited: desaturate(darken($violet, 4%), 35%);
 $res-night-sticky-link-fg: $dark-green;
+$res-night-nsfw-tag-bg: darken($dark-blue-gray, 5%);
 $res-night-button-bg: lighten($res-night-bg, 16%);
 $res-night-button-fg: $res-night-fg;
 $res-night-big-button-bg: $dark-blue-gray;

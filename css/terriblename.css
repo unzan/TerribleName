@@ -2424,6 +2424,7 @@ table.diff tbody .diff_header:not([id]) {
 .res .RESDialogSmall.livePreview > h3,
 .res .BELeft,
 .res .markdownEditor-wrapper {
+  border-radius: 3px 3px 0 0;
   background: -webkit-linear-gradient(top, #f7f7f7, #eaeaea);
   background: -moz-linear-gradient(top, #f7f7f7, #eaeaea);
   background: linear-gradient(top, #f7f7f7, #eaeaea);
@@ -2435,7 +2436,6 @@ table.diff tbody .diff_header:not([id]) {
   border: solid 1px #aaaaaa;
   border-bottom: none;
   margin: 0;
-  border-radius: 3px 3px 0 0;
 }
 .res .markdownEditor-wrapper + textarea#wiki_page_content,
 .res .markdownEditor-wrapper + div > textarea {
@@ -2603,8 +2603,7 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 #3e4855;
 }
 
-.res.res-nightmode .flairselector.drop-choices.active, .wiki-page.res.res-nightmode .wiki-page-content .md.wiki, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
-.res.res-nightmode .RESDialogSmall.livePreview > h3 {
+.res.res-nightmode .flairselector.drop-choices.active {
   border: none !important;
   background: -webkit-linear-gradient(top, #242a32, #1e2229);
   background: -moz-linear-gradient(top, #242a32, #1e2229);
@@ -2612,7 +2611,7 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0 1px 0 #3a434f, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.res.res-nightmode .linklisting .link .entry .usertext > .usertext-body > .md {
+.res.res-nightmode .linklisting .link .entry .usertext > .usertext-body > .md, .res.res-nightmode .wiki-page .wiki-page-content .md.wiki, .res.res-nightmode .RESDialogSmall.livePreview {
   background-color: #242a32 !important;
   color: #9e9e9e !important;
 }
@@ -2688,7 +2687,8 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0 2px 3px #0a0c0e, 0 1px 0 #3e4855;
 }
 
-.res.res-nightmode .sidecontentbox > .title, .res.res-nightmode .markdownEditor-wrapper {
+.res.res-nightmode .sidecontentbox > .title, .res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
+.res.res-nightmode .RESDialogSmall.livePreview > h3, .res.res-nightmode .markdownEditor-wrapper {
   border: solid 1px #13161A;
   color: #9e9e9e;
   background: -webkit-linear-gradient(top, #353e49, #242a32);
@@ -3031,6 +3031,9 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .entry .flat-list.buttons > li.reported-stamp.stamp {
   background: #621210;
 }
+.res.res-nightmode .nsfw-stamp acronym {
+  background: #364956;
+}
 .res.res-nightmode .linkflairlabel,
 .res.res-nightmode .flair {
   background-color: #333b46;
@@ -3070,9 +3073,6 @@ table.diff tbody .diff_header:not([id]) {
 .wiki-page.res.res-nightmode .wikititle {
   border: none !important;
 }
-.wiki-page.res.res-nightmode .wiki-page-content .md.wiki {
-  color: #9e9e9e;
-}
 .wiki-page.res.res-nightmode button.RESBigEditorPop {
   top: 40px;
 }
@@ -3110,11 +3110,8 @@ table.diff tbody .diff_header:not([id]) {
 .wiki-page.res.res-nightmode .wikirevisionlisting .generic-table tr:hover > td {
   background-color: #1c2026;
 }
-.res.res-nightmode .wiki-page .wiki-page-content .md.wiki,
-.res.res-nightmode .RESDialogSmall.livePreview {
+.res.res-nightmode .wiki-page .wiki-page-content .md.wiki {
   border: none;
-  background: #191d23 !important;
-  color: #9e9e9e !important;
 }
 .res.res-nightmode table.diff {
   background: #13161A;
@@ -3193,11 +3190,6 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .md a[href$="/spoiler"]:hover {
   color: #9e9e9e !important;
 }
-.res.res-nightmode #BigEditor > .RESDialogSmall.BERight > h3,
-.res.res-nightmode .RESDialogSmall.livePreview > h3 {
-  color: #9e9e9e;
-  border: none;
-}
 .res.res-nightmode #BigEditor > .RESDialogSmall.BERight .md a,
 .res.res-nightmode #BigEditor > .RESDialogSmall.BERight #BigPreview.md a,
 .res.res-nightmode .RESDialogSmall.livePreview .md a,
@@ -3221,6 +3213,15 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .RESDialogSmall.livePreview .md a:visited,
 .res.res-nightmode .RESDialogSmall.livePreview #BigPreview.md a:visited {
   color: #5358ba !important;
+}
+.res.res-nightmode .RESDialogSmall.livePreview {
+  border-color: #13161A;
+  overflow: hidden;
+}
+.res.res-nightmode .RESDialogSmall.livePreview > h3 {
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 .res.res-nightmode #BigEditor > .RESDialogSmall.BELeft {
   background: #13161A url("%%dark-noise%%") left top repeat;
