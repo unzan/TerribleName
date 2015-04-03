@@ -41,7 +41,7 @@ input[type=password] {
     &.selected {
       > a {
         &,
-        &::after {
+        &:after {
           background: $res-night-info-box-bg;
           color: $res-night-fg !important;
         }
@@ -92,18 +92,14 @@ input[type=password] {
     }
 
     > .drop-choices.lightdrop.inuse {
-      background: $res-night-button-bg;
-      border: none;
-      color: $res-night-button-fg;
-      @include shadow(0 3px  5px rgba(0, 0, 0, 0.4));
+      @extend %tn-dark-dropdown-menu;
 
-      a:hover {
-        text-shadow: none;
-        background: darken($res-night-button-bg, 10%);
+      a {
+        @extend %tn-dark-dropdown-item;
       }
     }
 
-    > .dropdown.lightdrop > .selected::after {
+    > .dropdown.lightdrop > .selected:after {
       border-top-color: $res-night-button-fg;
     }
 

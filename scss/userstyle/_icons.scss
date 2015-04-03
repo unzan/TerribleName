@@ -1,8 +1,8 @@
 .subscription-box .sr-type-img,
 .subreddit .sr-type-img,
-.message.new > .entry .head::after,
-.trending-subreddits strong::before,
-.explore-label::before {
+.message.new > .entry .head:after,
+.trending-subreddits strong:before,
+.explore-label:before {
   @extend %tn-icon;
 }
 
@@ -33,34 +33,34 @@
 }
 
 
-.trending-subreddits strong::before {
+.trending-subreddits strong:before {
   background-position: -32px -96px;
 }
 
-.message.new > .entry .head::after {
+.message.new > .entry .head:after {
   background-position: -48px -96px;
   margin-left: 10px;
   content: '';
   vertical-align: middle;
 }
 
-.explore-label::before {
+.explore-label:before {
   content: '';
   vertical-align: middle;
 }
 
-.explore-rising .explore-label::before {
+.explore-rising .explore-label:before {
   background-position: -32px -96px;
 }
 
-.explore-hot .explore-label::before {
+.explore-hot .explore-label:before {
   background-position: -64px -96px;
 }
 
-.explore-discovery .explore-label::before {
+.explore-discovery .explore-label:before {
   background-position: -96px -96px;
 }
 
-.explore-comment .explore-label::before {
+.explore-comment .explore-label:before {
   background-position: -80px -96px;
 }

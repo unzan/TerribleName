@@ -17,15 +17,15 @@
  * [3]: http://de.wikipedia.org/wiki/Benutzer:Schaengel
  */
 @namespace url(http://www.w3.org/1999/xhtml);
-@-moz-document domain("reddit.com") {
-  a.pretty-button, a.pretty-button.neutral, .big-mod-buttons .pretty-button, .link.spam, .comment.noncollapsed > .entry .usertext.border > .usertext-body, .users-online::before, .sidebox .spacer {
+@-moz-document domain(reddit.com) {
+  a.pretty-button, a.pretty-button.neutral, .big-mod-buttons .pretty-button, .link.spam, .comment.noncollapsed > .entry .usertext.border > .usertext-body, .users-online:before, .sidebox .spacer {
     background: none;
   }
 
   .morelink, .morelink:hover, .flairselection > .linkflair > a:hover,
   .flairselection > .flairremove > a:hover, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement .md, .res .morerecursion > .entry.RES-keyNav-activeElement,
   .res .morechildren > .entry.RES-keyNav-activeElement,
-  .res .comment.collapsed > .entry.RES-keyNav-activeElement, .res.res-commentBoxes .comments-page .nestedlisting .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  .res .comment.collapsed > .entry.RES-keyNav-activeElement, .res #RESDashboardAddComponent, .res.res-commentBoxes .comments-page .nestedlisting .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
     background: none !important;
   }
 
@@ -38,6 +38,31 @@
 
   #header {
     background: #111 url("http://i.imgur.com/kfumYVX.jpg") 0 0 no-repeat !important;
+  }
+
+  #header .tabmenu > li > a, .res .redditname > a[href$="/r/Dashboard/"],
+  .res .redditname > .dashboardTab {
+    background: none;
+    display: block;
+    font-weight: normal;
+    color: #9e9e9e;
+    padding: 8px 13px;
+  }
+  #header .tabmenu > li > a:hover, .res .redditname > a[href$="/r/Dashboard/"]:hover,
+  .res .redditname > .dashboardTab:hover {
+    color: #d1d1d1;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+    background: linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+  }
+
+  #header .tabmenu > li.selected > a, .res .redditname > a[href$="/r/Dashboard/"].active,
+  .res .redditname > .dashboardTab.active {
+    color: #eaeaea;
+    border: none;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
   }
 
   hr, .md hr, .subscription-box .box-separator {
@@ -56,10 +81,10 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
-  a.pretty-button::before, .sidecontentbox > .title .collapse-button::before, .wiki-page .wikititle::before {
+  a.pretty-button:before, .sidecontentbox > .title .collapse-button:before, .wiki-page .wikititle:before {
     content: '[';
   }
-  a.pretty-button::after, .sidecontentbox > .title .collapse-button::after, .wiki-page .wikititle::after {
+  a.pretty-button:after, .sidecontentbox > .title .collapse-button:after, .wiki-page .wikititle:after {
     content: ']';
   }
 
@@ -82,7 +107,8 @@
   .multi-details form.rename-multi button.rename, .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .explore-header #explore-settings button,
   #compose-message button#send, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button, .multi-details .settings > .delete.confirm-button > .confirmation > button, .profile-page .expand-summary, .res .RESshortcutside, .res .RESshortcutside.remove,
   .res .RESDashboardToggle,
-  .res .RESDashboardToggle.remove, .res #alert_message > input[type=button] {
+  .res .RESDashboardToggle.remove, .res #alert_message > input[type=button], .res .cancelButton,
+  .res .addButton {
     color: #fff !important;
     font-family: "Liberation Sans", Arial, sans-serif;
     padding: 2px 8px;
@@ -108,13 +134,15 @@
   .multi-details form.copy-multi button.copy:hover,
   .multi-details form.rename-multi button.rename:hover, .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, .explore-header #explore-settings button:hover,
   #compose-message button#send:hover, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:hover, .multi-details .settings > .delete.confirm-button > .confirmation > button:hover, .profile-page .expand-summary:hover, .res .RESshortcutside:hover,
-  .res .RESDashboardToggle:hover, .res #alert_message > input[type=button]:hover, button:focus,
+  .res .RESDashboardToggle:hover, .res #alert_message > input[type=button]:hover, .res .cancelButton:hover,
+  .res .addButton:hover, button:focus,
   input[type=submit]:focus, .multi-details .settings > button:focus,
   .multi-details .settings > .delete > button:focus, .multi-details.public .settings > .share-in-sr:focus,
   .multi-details form.copy-multi button.copy:focus,
   .multi-details form.rename-multi button.rename:focus, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .explore-header #explore-settings button:focus,
   #compose-message button#send:focus, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:focus, .multi-details .settings > .delete.confirm-button > .confirmation > button:focus, .profile-page .expand-summary:focus, .res .RESshortcutside:focus,
-  .res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus {
+  .res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus, .res .cancelButton:focus,
+  .res .addButton:focus {
     color: #fff;
     background: -webkit-linear-gradient(top, #e25418, #b44214);
     background: -moz-linear-gradient(top, #e25418, #b44214);
@@ -126,7 +154,8 @@
   .multi-details form.copy-multi button.copy:active,
   .multi-details form.rename-multi button.rename:active, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .explore-header #explore-settings button:active,
   #compose-message button#send:active, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:active, .multi-details .settings > .delete.confirm-button > .confirmation > button:active, .profile-page .expand-summary:active, .res .RESshortcutside:active,
-  .res .RESDashboardToggle:active, .res #alert_message > input[type=button]:active {
+  .res .RESDashboardToggle:active, .res #alert_message > input[type=button]:active, .res .cancelButton:active,
+  .res .addButton:active {
     background: -webkit-linear-gradient(top, #cb4b16, #9d3a11);
     background: -moz-linear-gradient(top, #cb4b16, #9d3a11);
     background: linear-gradient(top, #cb4b16, #9d3a11);
@@ -154,10 +183,11 @@
   .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
   .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
   .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover,
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
+  .res ul.widgetSortButtons > li,
   .nextprev > a[rel],
   .menuarea .spacer .toggle .togglebutton,
   .menuarea .spacer .dropdown.lightdrop,
@@ -177,8 +207,8 @@
   .res .RESSubscriptionButton,
   .res #BigEditor .RESCloseButton,
   .res button.RESBigEditorPop,
-  .res .markdownEditor .RESMacroDropdownTitle,
-  .res #alert_message .buttonContainer > input[type=button] {
+  .res #alert_message .buttonContainer > input[type=button],
+  .res .widgetStateButtons > li:not(.updateTime) {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.12);
   }
 
@@ -187,10 +217,11 @@
   .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
   .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
   .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover,
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
+  .res ul.widgetSortButtons > li,
   .nextprev > a[rel],
   .menuarea .spacer .toggle .togglebutton,
   .menuarea .spacer .dropdown.lightdrop,
@@ -210,8 +241,8 @@
   .res .RESSubscriptionButton,
   .res #BigEditor .RESCloseButton,
   .res button.RESBigEditorPop,
-  .res .markdownEditor .RESMacroDropdownTitle,
-  .res #alert_message .buttonContainer > input[type=button] {
+  .res #alert_message .buttonContainer > input[type=button],
+  .res .widgetStateButtons > li:not(.updateTime) {
     color: #6b6b6b;
     text-decoration: none !important;
     padding: 2px 6px;
@@ -222,12 +253,13 @@
     border-radius: 3px;
   }
 
-  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .next-suggestions > a:active, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
+  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .res ul.widgetSortButtons > li.active, .next-suggestions > a:active, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
   .res .toggleImage.video-muted.expando-button.collapsed.expanded,
   .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:active, .explore-item .fancy-toggle-button.toggle > .option.active.remove,
   .wiki-page .pageactions > .wikiaction:active,
   .menuarea .flat-list > li > a:active,
   .res .commentNavSortType:active,
+  .res ul.widgetSortButtons > li:active,
   .nextprev > a[rel]:active,
   .menuarea .spacer .toggle .togglebutton:active,
   .menuarea .spacer .dropdown.lightdrop:active,
@@ -247,31 +279,31 @@
   .res .RESSubscriptionButton:active,
   .res #BigEditor .RESCloseButton:active,
   .res button.RESBigEditorPop:active,
-  .res .markdownEditor .RESMacroDropdownTitle:active,
-  .res #alert_message .buttonContainer > input[type=button]:active {
+  .res #alert_message .buttonContainer > input[type=button]:active,
+  .res .widgetStateButtons > li:active:not(.updateTime) {
     background: -webkit-linear-gradient(top, #efefef, #e0e0e0);
     background: -moz-linear-gradient(top, #efefef, #e0e0e0);
     background: linear-gradient(top, #efefef, #e0e0e0);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.7);
   }
 
-  .wiki-page .pageactions > .wikiaction, .menuarea .flat-list > li > a, .res .commentNavSortType {
+  .wiki-page .pageactions > .wikiaction, .menuarea .flat-list > li > a, .res .commentNavSortType, .res ul.widgetSortButtons > li {
     margin: 0;
     border-right-style: none;
     color: #6b6b6b !important;
     border-radius: 0;
   }
 
-  .wiki-page .pageactions > .wikiaction:first-child, .menuarea .flat-list > li:first-child > a, .res .commentNavSortType:nth-of-type(1) {
+  .wiki-page .pageactions > .wikiaction:first-child, .menuarea .flat-list > li:first-child > a, .res .commentNavSortType:nth-of-type(1), .res ul.widgetSortButtons > li:first-child {
     border-radius: 3px 0 0 3px;
   }
 
-  .wiki-page .pageactions > .wikiaction:last-child, .menuarea .flat-list > li:last-child > a, .res .commentNavSortType:last-child {
+  .wiki-page .pageactions > .wikiaction:last-child, .menuarea .flat-list > li:last-child > a, .res .commentNavSortType:last-child, .res ul.widgetSortButtons > li:last-child {
     border-right-style: solid;
     border-radius: 0 3px 3px 0;
   }
 
-  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a {
+  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .res ul.widgetSortButtons > li.active {
     font-weight: bold;
   }
 
@@ -344,7 +376,7 @@
   .fancy-settings .linefield,
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
-  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message {
+  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message, .res .RESDashboardComponent {
     overflow: hidden;
     background: #efefef;
     border: solid 1px #aaaaaa;
@@ -353,7 +385,7 @@
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14);
   }
 
-  .last-clicked.link:not(:first-child), .link:not(:first-child), .linklisting > .comment:not(:first-child), .thing.subreddit:not(:first-child), .messages-page > .content > .sitetable > .message {
+  .last-clicked.link:not(:first-child), .link:not(:first-child), .linklisting > .comment:not(:first-child), .thing.subreddit:not(:first-child), div:not(.child) > .listing > .message {
     border-top: solid 1px #bcbcbc;
     box-shadow: inset 0 1px 0 #f7f7f7;
   }
@@ -420,7 +452,7 @@
     border-radius: 3px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
-  .comment.noncollapsed > .entry::before, .message.noncollapsed > .entry::before {
+  .comment.noncollapsed > .entry:before, .message.noncollapsed > .entry:before {
     content: '';
     position: absolute;
     left: -8px;
@@ -449,31 +481,30 @@
     font-weight: normal;
   }
 
-  .up.arrow, .up.arrow:hover, .down.arrow, .down.arrow:hover, .upmod.arrow, .upmod.arrow:hover, .downmod.arrow, .downmod.arrow:hover, .submit.mod-override > .morelink > a::after, .titlebox .leavemoderator::before,
-  .titlebox form.leavecontributor-button::before, .tagline .userattrs .cakeday, #mail,
+  .up.arrow, .up.arrow:hover, .down.arrow, .down.arrow:hover, .upmod.arrow, .upmod.arrow:hover, .downmod.arrow, .downmod.arrow:hover, .submit.mod-override > .morelink > a:after, .titlebox .leavemoderator:before,
+  .titlebox form.leavecontributor-button:before, .tagline .userattrs .cakeday, #mail,
   #modmail,
-  .gilded-icon::before, .icon-menu .reddit-edit::before,
-  .icon-menu .reddit-edited::before,
-  .icon-menu .moderator-mail::before,
-  .icon-menu .reddit-moderators::before,
-  .icon-menu .reddit-contributors::before,
-  .icon-menu .reddit-traffic::before,
-  .icon-menu .reddit-modqueue::before,
-  .icon-menu .reddit-reported::before,
-  .icon-menu .reddit-spam::before,
-  .icon-menu .reddit-ban::before,
-  .icon-menu .reddit-flair::before,
-  .icon-menu .reddit-moderationlog::before,
-  .icon-menu .reddit-unmoderated::before,
-  .icon-menu .edit-stylesheet::before,
-  .icon-menu .wikiaction-revisions::before,
-  .icon-menu .wikiaction-pages::before, .subscription-box .sr-type-img,
+  .gilded-icon:before, .icon-menu .reddit-edit:before,
+  .icon-menu .reddit-edited:before,
+  .icon-menu .moderator-mail:before,
+  .icon-menu .reddit-moderators:before,
+  .icon-menu .reddit-contributors:before,
+  .icon-menu .reddit-traffic:before,
+  .icon-menu .reddit-modqueue:before,
+  .icon-menu .reddit-reported:before,
+  .icon-menu .reddit-spam:before,
+  .icon-menu .reddit-ban:before,
+  .icon-menu .reddit-flair:before,
+  .icon-menu .reddit-moderationlog:before,
+  .icon-menu .reddit-unmoderated:before,
+  .icon-menu .edit-stylesheet:before,
+  .icon-menu .wikiaction-revisions:before,
+  .icon-menu .wikiaction-pages:before, .subscription-box .sr-type-img,
   .subreddit .sr-type-img,
-  .message.new > .entry .head::after,
-  .trending-subreddits strong::before,
-  .explore-label::before, .profile-page .titlebox > .bottom > a[href*="/compose/"]::before, .res .gearIcon, .res #BigEditor .RESCloseButton::before,
-  .res button.RESBigEditorPop::before,
-  .res .markdownEditor .RESMacroDropdownTitle::before {
+  .message.new > .entry .head:after,
+  .trending-subreddits strong:before,
+  .explore-label:before, .profile-page .titlebox > .bottom > a[href*="/compose/"]:before, .res .gearIcon, .res #BigEditor .RESCloseButton:before,
+  .res button.RESBigEditorPop:before {
     display: inline-block !important;
     background-image: url("http://i.imgur.com/MJ7y1Zy.png") !important;
     background-repeat: no-repeat !important;
@@ -500,7 +531,7 @@
   .message.noncollapsed > .entry.RES-keyNav-activeElement, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement {
     background: #fff !important;
   }
-  .message.noncollapsed > .entry.RES-keyNav-activeElement::after, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement::after {
+  .message.noncollapsed > .entry.RES-keyNav-activeElement:after, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement:after {
     content: '';
     background: #ed855a;
     position: absolute;
@@ -515,6 +546,48 @@
   .res .morechildren > .entry.RES-keyNav-activeElement > .morecomments,
   .res .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
     outline: dashed 1px #ed855a;
+  }
+
+  .res #RESDashboardEditComponent ul,
+  .res .RESDashboardComponentHeader ul, .res a.widgetPath, .res .editWidget,
+  .res .addNewWidget, .res .updateButton,
+  .res .cancelButton,
+  .res .addButton, .res .backToWidgetTypes {
+    font: normal 13px "Liberation Sans", Arial, sans-serif;
+  }
+
+  .menuarea .drop-choices.lightdrop, .res .RESMacroDropdown {
+    z-index: 2000;
+    background: #f7f7f7;
+    color: #6b6b6b;
+    border: solid 1px rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .menuarea .spacer .dropdown.lightdrop > .selected:after, .res .RESMacroDropdownTitle:after {
+    content: '';
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: solid 4px transparent;
+    border-right: solid 4px transparent;
+    border-top: solid 4px #6b6b6b;
+  }
+
+  .menuarea .drop-choices.lightdrop a.choice, .res .RESMacroDropdown li > a {
+    color: inherit;
+    vertical-align: middle;
+    padding: 2px 4px;
+    border: none;
+    border-radius: 3px;
+  }
+  .menuarea .drop-choices.lightdrop a.choice:hover, .res .RESMacroDropdown li > a:hover {
+    background: #cb4b16;
+    color: #fff;
   }
 
   body {
@@ -589,13 +662,13 @@
   .submit.mod-override > .morelink > a {
     padding-left: 30px;
   }
-  .submit.mod-override > .morelink > a::after {
+  .submit.mod-override > .morelink > a:after {
     background-position: -16px -32px;
     left: 3px;
     top: 1px;
     opacity: 0.6;
   }
-  .submit.mod-override > .morelink:hover > a::after {
+  .submit.mod-override > .morelink:hover > a:after {
     opacity: 1;
   }
 
@@ -608,8 +681,8 @@
     padding: 0 !important;
     background-position: 0 0 !important;
   }
-  .expando-button::before, .res .expando-button.toggleImage.image::before,
-  .res .expando-button.toggleImage.video-muted::before {
+  .expando-button:before, .res .expando-button.toggleImage.image:before,
+  .res .expando-button.toggleImage.video-muted:before {
     content: '';
     position: absolute;
     left: 4px;
@@ -618,10 +691,10 @@
     top: 8px;
     background: #848484;
   }
-  .expando-button.selftext.collapsed::after, .res .selftext.collapsed.expando-button.toggleImage.image::after, .res .toggleImage.image.expando-button.collapsedExpando::after,
-  .res .selftext.collapsed.expando-button.toggleImage.video-muted::after,
-  .res .toggleImage.video-muted.expando-button.collapsedExpando::after, .expando-button.video.collapsed::after, .res .video.collapsed.expando-button.toggleImage.image::after,
-  .res .video.collapsed.expando-button.toggleImage.video-muted::after {
+  .expando-button.selftext.collapsed:after, .res .selftext.collapsed.expando-button.toggleImage.image:after, .res .toggleImage.image.expando-button.collapsedExpando:after,
+  .res .selftext.collapsed.expando-button.toggleImage.video-muted:after,
+  .res .toggleImage.video-muted.expando-button.collapsedExpando:after, .expando-button.video.collapsed:after, .res .video.collapsed.expando-button.toggleImage.image:after,
+  .res .video.collapsed.expando-button.toggleImage.video-muted:after {
     content: '';
     position: absolute;
     top: 4px;
@@ -646,7 +719,7 @@
     font-size: 13px;
     border-radius: 0;
   }
-  a.pretty-button::before, a.pretty-button::after {
+  a.pretty-button:before, a.pretty-button:after {
     color: #6b6b6b !important;
     display: inline-block;
   }
@@ -755,8 +828,8 @@
     background: #efefef;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
   }
-  .fancy-settings + .tabmenu > li.selected a::after,
-  .formtab.tabmenu > li.selected a::after {
+  .fancy-settings + .tabmenu > li.selected a:after,
+  .formtab.tabmenu > li.selected a:after {
     content: '';
     position: absolute;
     left: 0;
@@ -887,7 +960,7 @@
     padding: 5px !important;
     border: none !important;
   }
-  .menuarea::after {
+  .menuarea:after {
     content: '';
     display: block;
     clear: left;
@@ -924,24 +997,13 @@
     padding-right: 0;
     background: none;
   }
-  .menuarea .spacer .dropdown.lightdrop > .selected::after {
-    content: '';
-    width: 0;
-    height: 0;
-    margin-left: 4px;
-    display: inline-block;
-    vertical-align: middle;
-    border-left: solid 4px transparent;
-    border-right: solid 4px transparent;
-    border-top: solid 4px #6b6b6b;
-  }
   .menuarea .spacer > .help-hoverable {
     display: none;
     color: #FFF5CC;
     width: 30em;
     margin: 5px 0 0 -40px;
   }
-  .menuarea .spacer > .help-hoverable::before {
+  .menuarea .spacer > .help-hoverable:before {
     color: #111;
     content: attr(title);
   }
@@ -964,20 +1026,7 @@
     border-radius: 3px;
   }
   .menuarea .drop-choices.lightdrop {
-    z-index: 9000;
-    padding: 4px;
     margin-top: 6px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  }
-  .menuarea .drop-choices.lightdrop a.choice {
-    color: inherit;
-    vertical-align: middle;
-    padding: 2px 4px;
-    border-radius: 3px;
-  }
-  .menuarea .drop-choices.lightdrop a.choice:hover {
-    background: #cb4b16;
-    color: #fff;
   }
   .menuarea .drop-choices.lightdrop > form {
     position: relative;
@@ -1056,8 +1105,8 @@
     border-bottom: solid 3px rgba(0, 0, 0, 0.3) !important;
     margin-bottom: 10px;
   }
-  ul.report-reasons > li.report-reason-title::first-letter,
-  .action-form > .reason-prompt::first-letter {
+  ul.report-reasons > li.report-reason-title:first-letter,
+  .action-form > .reason-prompt:first-letter {
     text-transform: uppercase;
   }
 
@@ -1093,16 +1142,19 @@
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
-  #header #header-img-a {
+
+  #header-img-a {
     display: inline-block;
     vertical-align: middle;
     margin: 0 10px 0 20px;
   }
-  #header #header-bottom-left > .pagename:last-child::after {
+
+  #header-bottom-left > .pagename:last-child:after {
     content: '';
     height: 32px;
   }
-  #header #header-bottom-left > .pagename:last-child::after,
+
+  .pagename:last-child:after,
   #header .tabmenu {
     display: block;
     margin: 0;
@@ -1118,32 +1170,12 @@
     background: linear-gradient(top, #2C2928, #1f1d1c);
     box-shadow: inset 0 1px 0 #474240, inset 0 -1px 0 #141312;
   }
+
   #header .tabmenu > li {
     display: block;
     float: left;
     margin: 0;
     padding: 0;
-  }
-  #header .tabmenu > li > a {
-    background: none;
-    display: block;
-    font-weight: normal;
-    color: #9e9e9e;
-    padding: 8px 13px;
-  }
-  #header .tabmenu > li > a:hover {
-    color: #d1d1d1;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
-    background: linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
-  }
-  #header .tabmenu > li.selected > a {
-    color: #eaeaea;
-    border: none;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-    background: linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-    box-shadow: 0 1px 1px #312e2d, inset 0 -2px 3px rgba(0, 0, 0, 0.2);
   }
 
   #sr-header-area {
@@ -1186,7 +1218,7 @@
     color: #848484;
     padding-right: 5px;
   }
-  .dropdown.srdrop .selected::after {
+  .dropdown.srdrop .selected:after {
     content: '';
     display: inline-block;
     margin-left: 5px;
@@ -1242,7 +1274,7 @@
     font-weight: normal;
     vertical-align: middle;
   }
-  .pagename::before {
+  .pagename:before {
     content: '';
     display: inline-block;
     vertical-align: middle;
@@ -1328,7 +1360,7 @@
     line-height: 1em;
     text-align: center;
   }
-  .thumbnail::before {
+  .thumbnail:before {
     display: inline-block;
     margin-top: 5px;
     width: 40px;
@@ -1346,14 +1378,14 @@
     height: 50px;
     width: 70px;
   }
-  .thumbnail.may-blank.default::before {
+  .thumbnail.may-blank.default:before {
     content: '?';
   }
-  .thumbnail.may-blank.self::before {
+  .thumbnail.may-blank.self:before {
     content: 'T';
     background: rgba(38, 139, 210, 0.6);
   }
-  .thumbnail.may-blank.nsfw::before {
+  .thumbnail.may-blank.nsfw:before {
     content: 'X';
     background: rgba(211, 54, 130, 0.5);
   }
@@ -1364,10 +1396,10 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
-  .link.spam .thumbnail::before {
+  .link.spam .thumbnail:before {
     background: #dc322f;
   }
-  .link.spam .thumbnail::after {
+  .link.spam .thumbnail:after {
     content: 'REMOVED';
     position: absolute;
     font-size: 10px;
@@ -1380,30 +1412,26 @@
   }
 
   .stickied-tagline {
-    color: #fff !important;
-    background: #6f8000;
-    display: inline-block;
-    padding: 1px 7px;
-    border-radius: 3px;
+    color: inherit !important;
   }
 
   .userattrs .moderator {
     color: #6f8000;
   }
-  .userattrs .moderator::after {
+  .userattrs .moderator:after {
     content: 'od';
   }
   .userattrs .admin {
     color: #dc322f;
   }
-  .userattrs .admin::after {
+  .userattrs .admin:after {
     content: 'dmin';
   }
   .userattrs .submitter {
     color: #2177b4;
     font-size: 0;
   }
-  .userattrs .submitter::after {
+  .userattrs .submitter:after {
     font-size: 13px;
     content: 'OP';
   }
@@ -1458,7 +1486,7 @@
     color: #6b6b6b;
     font-weight: normal;
   }
-  .link.stickied .thumbnail.self::before {
+  .link.stickied .thumbnail.self:before {
     content: 'S';
     background: rgba(133, 153, 0, 0.5);
   }
@@ -1641,6 +1669,7 @@
   }
   .commentarea > .usertext {
     clear: both;
+    overflow: visible;
   }
   .commentarea > .usertext > .usertext-edit {
     display: inline-block;
@@ -1651,7 +1680,7 @@
     margin-top: 9px;
   }
 
-  .nestedlisting .child .thing.comment.noncollapsed::before {
+  .nestedlisting .child .thing.comment.noncollapsed:before {
     content: '';
     position: absolute;
     background: #c4c4c4;
@@ -1674,13 +1703,13 @@
   .comment.spam, .comment.spam .child {
     background-color: transparent;
   }
-  .comment.spam .entry::before {
+  .comment.spam .entry:before {
     border-right-color: #f5b89f;
   }
   .comment.spam .entry .tagline {
     background: #f5b89f;
   }
-  .comment.spam .entry .tagline time:first-of-type::after {
+  .comment.spam .entry .tagline time:first-of-type:after {
     content: 'Spam';
     display: inline-block;
     background: #6c71c4;
@@ -1849,7 +1878,7 @@
   .users-online {
     border-radius: 0 3px 3px 0;
   }
-  .users-online::before {
+  .users-online:before {
     display: none;
   }
 
@@ -1953,10 +1982,10 @@
     color: #2177b4;
   }
 
-  .titlebox .leavemoderator::before {
+  .titlebox .leavemoderator:before {
     background-position: -16px -32px;
   }
-  .titlebox form.leavecontributor-button::before {
+  .titlebox form.leavecontributor-button:before {
     background-position: -96px -16px;
   }
 
@@ -1986,75 +2015,75 @@
     background-position: -16px -32px;
   }
 
-  .gilded-icon::before {
+  .gilded-icon:before {
     background-position: 0 -48px;
   }
 
-  .icon-menu .reddit-edit::before,
-  .icon-menu .reddit-edited::before,
-  .icon-menu .moderator-mail::before,
-  .icon-menu .reddit-moderators::before,
-  .icon-menu .reddit-contributors::before,
-  .icon-menu .reddit-traffic::before,
-  .icon-menu .reddit-modqueue::before,
-  .icon-menu .reddit-reported::before,
-  .icon-menu .reddit-spam::before,
-  .icon-menu .reddit-ban::before,
-  .icon-menu .reddit-flair::before,
-  .icon-menu .reddit-moderationlog::before,
-  .icon-menu .reddit-unmoderated::before,
-  .icon-menu .edit-stylesheet::before,
-  .icon-menu .wikiaction-revisions::before,
-  .icon-menu .wikiaction-pages::before {
+  .icon-menu .reddit-edit:before,
+  .icon-menu .reddit-edited:before,
+  .icon-menu .moderator-mail:before,
+  .icon-menu .reddit-moderators:before,
+  .icon-menu .reddit-contributors:before,
+  .icon-menu .reddit-traffic:before,
+  .icon-menu .reddit-modqueue:before,
+  .icon-menu .reddit-reported:before,
+  .icon-menu .reddit-spam:before,
+  .icon-menu .reddit-ban:before,
+  .icon-menu .reddit-flair:before,
+  .icon-menu .reddit-moderationlog:before,
+  .icon-menu .reddit-unmoderated:before,
+  .icon-menu .edit-stylesheet:before,
+  .icon-menu .wikiaction-revisions:before,
+  .icon-menu .wikiaction-pages:before {
     vertical-align: middle;
     margin-right: 10px;
   }
-  .icon-menu .reddit-edit::before {
+  .icon-menu .reddit-edit:before {
     background-position: 0 -16px;
   }
-  .icon-menu .reddit-edited::before {
+  .icon-menu .reddit-edited:before {
     background-position: -48px -32px;
   }
-  .icon-menu .reddit-moderators::before {
+  .icon-menu .reddit-moderators:before {
     background-position: -16px -32px;
   }
-  .icon-menu .reddit-contributors::before {
+  .icon-menu .reddit-contributors:before {
     background-position: -96px -16px;
   }
-  .icon-menu .reddit-traffic::before {
+  .icon-menu .reddit-traffic:before {
     background-position: 0 -80px;
   }
-  .icon-menu .reddit-modqueue::before {
+  .icon-menu .reddit-modqueue:before {
     background-position: -32px -32px;
   }
-  .icon-menu .reddit-reported::before {
+  .icon-menu .reddit-reported:before {
     background-position: -32px -16px;
   }
-  .icon-menu .reddit-spam::before {
+  .icon-menu .reddit-spam:before {
     background-position: -16px 0;
   }
-  .icon-menu .reddit-ban::before {
+  .icon-menu .reddit-ban:before {
     background-position: -32px -80px;
   }
-  .icon-menu .reddit-flair::before {
+  .icon-menu .reddit-flair:before {
     background-position: -80px -32px;
   }
-  .icon-menu .reddit-moderationlog::before {
+  .icon-menu .reddit-moderationlog:before {
     background-position: -48px -16px;
   }
-  .icon-menu .reddit-unmoderated::before {
+  .icon-menu .reddit-unmoderated:before {
     background-position: -64px 0;
   }
-  .icon-menu .edit-stylesheet::before {
+  .icon-menu .edit-stylesheet:before {
     background-position: -96px -64px;
   }
-  .icon-menu .wikiaction-revisions::before {
+  .icon-menu .wikiaction-revisions:before {
     background-position: -32px 0;
   }
-  .icon-menu .wikiaction-pages::before {
+  .icon-menu .wikiaction-pages:before {
     background-position: -16px -80px;
   }
-  .icon-menu .moderator-mail::before {
+  .icon-menu .moderator-mail:before {
     margin-top: 0;
     margin-left: 0;
     background-position: -48px 0;
@@ -2136,7 +2165,7 @@
     box-shadow: inset 0 -9px 3px #fff7d6;
     border-radius: 0;
   }
-  .md.wiki > .toc::after {
+  .md.wiki > .toc:after {
     content: '';
     position: absolute;
     height: 2px;
@@ -2149,7 +2178,7 @@
     border-right: solid 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   }
-  .md.wiki > .toc::before {
+  .md.wiki > .toc:before {
     content: 'CONTENTS';
     font-weight: bold;
     display: block;
@@ -2229,35 +2258,35 @@
     background-position: -80px -96px;
   }
 
-  .trending-subreddits strong::before {
+  .trending-subreddits strong:before {
     background-position: -32px -96px;
   }
 
-  .message.new > .entry .head::after {
+  .message.new > .entry .head:after {
     background-position: -48px -96px;
     margin-left: 10px;
     content: '';
     vertical-align: middle;
   }
 
-  .explore-label::before {
+  .explore-label:before {
     content: '';
     vertical-align: middle;
   }
 
-  .explore-rising .explore-label::before {
+  .explore-rising .explore-label:before {
     background-position: -32px -96px;
   }
 
-  .explore-hot .explore-label::before {
+  .explore-hot .explore-label:before {
     background-position: -64px -96px;
   }
 
-  .explore-discovery .explore-label::before {
+  .explore-discovery .explore-label:before {
     background-position: -96px -96px;
   }
 
-  .explore-comment .explore-label::before {
+  .explore-comment .explore-label:before {
     background-position: -80px -96px;
   }
 
@@ -2269,7 +2298,7 @@
   .sidebox.holiday_shopping > .morelink > a {
     color: #fff;
   }
-  .sidebox.holiday_shopping > .morelink > a::before {
+  .sidebox.holiday_shopping > .morelink > a:before {
     position: absolute;
     left: 12px;
     top: 2px;
@@ -2314,7 +2343,7 @@
     width: 20px;
     height: 20px;
   }
-  .organic-listing .nextprev .arrow::before {
+  .organic-listing .nextprev .arrow:before {
     content: '';
     position: absolute;
     width: 0;
@@ -2328,14 +2357,14 @@
     border-right: none;
     border-radius: 3px 0 0 3px;
   }
-  .organic-listing .nextprev .arrow.prev::before {
+  .organic-listing .nextprev .arrow.prev:before {
     border-right: solid 5px #6b6b6b;
   }
   .organic-listing .nextprev .arrow.next {
     border-left: none;
     border-radius: 0 3px 3px 0;
   }
-  .organic-listing .nextprev .arrow.next::before {
+  .organic-listing .nextprev .arrow.next:before {
     border-left: solid 5px #6b6b6b;
   }
   .organic-listing .link .title {
@@ -2345,7 +2374,7 @@
   .sr-interest-bar > .bubble {
     background: none;
   }
-  .sr-interest-bar > .bubble::after {
+  .sr-interest-bar > .bubble:after {
     display: none;
   }
   .sr-interest-bar > .bubble > .caption > .subscribe {
@@ -2422,7 +2451,7 @@
     padding: 2px 5px 10px 20px;
     margin-bottom: 5px;
   }
-  .explore-item::before {
+  .explore-item:before {
     content: '';
     position: absolute;
     left: 3px;
@@ -2431,7 +2460,7 @@
     width: 8px;
     background: #dc322f;
   }
-  .explore-item.explore-comment::before {
+  .explore-item.explore-comment:before {
     background: #268bd2;
   }
   .explore-item.explore-comment > .comment {
@@ -2449,13 +2478,13 @@
     color: #6b6b6b;
     font-size: 13px;
   }
-  .explore-item.explore-rising::before {
+  .explore-item.explore-rising:before {
     background: #859900;
   }
-  .explore-item.explore-hot::before {
+  .explore-item.explore-hot:before {
     background: #cb4b16;
   }
-  .explore-item.explore-discovery::before {
+  .explore-item.explore-discovery:before {
     background: #6c71c4;
   }
   .explore-item .thing {
@@ -2488,7 +2517,7 @@
     text-indent: 0;
     width: 0.8em;
   }
-  .explore-item .explore-feedback-dismiss::before {
+  .explore-item .explore-feedback-dismiss:before {
     content: '\2715';
     margin-right: 4em;
   }
@@ -2548,7 +2577,7 @@
     border-right: solid 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.9);
   }
-  body.with-listing-chooser .listing-chooser .grippy::before, body.with-listing-chooser .listing-chooser .grippy::after {
+  body.with-listing-chooser .listing-chooser .grippy:before, body.with-listing-chooser .listing-chooser .grippy:after {
     display: none !important;
   }
   body.with-listing-chooser .listing-chooser .intro {
@@ -2579,7 +2608,7 @@
     background: linear-gradient(top, #393534, #2c2928);
     box-shadow: inset 0 1px 0 #5f5856, 0 2px 2px rgba(0, 0, 0, 0.4);
   }
-  body.with-listing-chooser .listing-chooser li.selected::before {
+  body.with-listing-chooser .listing-chooser li.selected:before {
     border-left-color: #cb4b16;
   }
   body.with-listing-chooser .listing-chooser li > a {
@@ -2664,7 +2693,7 @@
     margin: 3px 0 0 0;
     float: left;
   }
-  .multi-details .settings > .delete.confirm-button > .confirmation > .prompt::first-letter {
+  .multi-details .settings > .delete.confirm-button > .confirmation > .prompt:first-letter {
     text-transform: uppercase;
   }
   .multi-details .settings > .delete.confirm-button > .confirmation > button {
@@ -2719,7 +2748,7 @@
     color: transparent;
     text-indent: 0;
   }
-  .side .subreddits > li > button.remove-sr::before {
+  .side .subreddits > li > button.remove-sr:before {
     color: #6b6b6b;
     display: inline-block;
     content: '\2715';
@@ -2763,21 +2792,21 @@
     width: 1em;
     text-indent: 0;
   }
-  .side form.add-sr button.add::before, .side form.add-sr button.add::after,
-  .side .recommend-box > .recs > .recommendations > .rec-item button.add::before,
-  .side .recommend-box > .recs > .recommendations > .rec-item button.add::after {
+  .side form.add-sr button.add:before, .side form.add-sr button.add:after,
+  .side .recommend-box > .recs > .recommendations > .rec-item button.add:before,
+  .side .recommend-box > .recs > .recommendations > .rec-item button.add:after {
     content: '';
     background: #848484;
   }
-  .side form.add-sr button.add::before,
-  .side .recommend-box > .recs > .recommendations > .rec-item button.add::before {
+  .side form.add-sr button.add:before,
+  .side .recommend-box > .recs > .recommendations > .rec-item button.add:before {
     top: 6px;
     bottom: 6px;
     left: 10px;
     width: 3px;
   }
-  .side form.add-sr button.add::after,
-  .side .recommend-box > .recs > .recommendations > .rec-item button.add::after {
+  .side form.add-sr button.add:after,
+  .side .recommend-box > .recs > .recommendations > .rec-item button.add:after {
     left: 6px;
     right: 6px;
     top: 10px;
@@ -2814,11 +2843,11 @@
     position: relative;
     border-radius: 0 3px 3px 0;
   }
-  .side form.add-sr button.add::after, .side form.add-sr button.add::before,
-  .side .subreddits > li > button.remove-sr::after,
-  .side .subreddits > li > button.remove-sr::before,
-  .side .recommend-box > .recs > .recommendations > .rec-item > button.add::after,
-  .side .recommend-box > .recs > .recommendations > .rec-item > button.add::before {
+  .side form.add-sr button.add:after, .side form.add-sr button.add:before,
+  .side .subreddits > li > button.remove-sr:after,
+  .side .subreddits > li > button.remove-sr:before,
+  .side .recommend-box > .recs > .recommendations > .rec-item > button.add:after,
+  .side .recommend-box > .recs > .recommendations > .rec-item > button.add:before {
     position: absolute;
   }
   .side form.add-sr button.add {
@@ -2843,11 +2872,11 @@
     border-radius: 4px;
   }
 
-  .hover-bubble.multi-add-notice.anchor-right::after {
+  .hover-bubble.multi-add-notice.anchor-right:after {
     border-left-color: #FFF5CC;
     right: -17px;
   }
-  .hover-bubble.multi-add-notice.anchor-right::before {
+  .hover-bubble.multi-add-notice.anchor-right:before {
     border-left-color: rgba(0, 0, 0, 0.3);
     right: -18px;
   }
@@ -2867,7 +2896,7 @@
   .profile-page .titlebox > .bottom > a[href*="/compose/"] {
     font-size: 13px;
   }
-  .profile-page .titlebox > .bottom > a[href*="/compose/"]::before {
+  .profile-page .titlebox > .bottom > a[href*="/compose/"]:before {
     content: '';
     vertical-align: middle;
     margin-right: 6px;
@@ -2950,11 +2979,11 @@
   .message:not(.recipient) > .entry > .tagline {
     background: #b8daf2;
   }
-  .message:not(.recipient).noncollapsed > .entry::before {
+  .message:not(.recipient).noncollapsed > .entry:before {
     border-right-color: #b8daf2;
   }
 
-  .messages-page > .content > .sitetable > .message > .child {
+  div:not(.child) > .listing > .message > .child {
     margin-left: 20px !important;
   }
 
@@ -3163,13 +3192,12 @@
   .res .drop-choices .RES-sort-button {
     font-size: 0;
   }
-  .res .drop-choices .RES-sort-button::before {
+  .res .drop-choices .RES-sort-button:before {
     content: 'temp';
     font-size: 13px;
   }
   .res #BigEditor .RESCloseButton,
-  .res button.RESBigEditorPop,
-  .res .markdownEditor .RESMacroDropdownTitle {
+  .res button.RESBigEditorPop {
     font-size: 0 !important;
     width: 16px;
     height: 16px;
@@ -3178,16 +3206,14 @@
     text-indent: -100px;
     margin-right: 2px;
   }
-  .res #BigEditor .RESCloseButton::before,
-  .res button.RESBigEditorPop::before,
-  .res .markdownEditor .RESMacroDropdownTitle::before {
+  .res #BigEditor .RESCloseButton:before,
+  .res button.RESBigEditorPop:before {
     content: '';
     position: absolute;
     left: 5px;
     top: 2px;
   }
-  .res button.RESBigEditorPop,
-  .res .markdownEditor .RESMacroDropdownTitle {
+  .res button.RESBigEditorPop {
     position: relative;
   }
   .res button.RESBigEditorPop {
@@ -3200,7 +3226,7 @@
     clear: both;
     box-sizing: content-box;
   }
-  .res button.RESBigEditorPop::before {
+  .res button.RESBigEditorPop:before {
     top: 3px;
     left: 3px;
     background-position: -16px -48px;
@@ -3220,7 +3246,7 @@
   }
   .res .commentingAs + .RESMacroWrappingSpan {
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 22px;
   }
   .res .BERight > h3,
@@ -3363,10 +3389,10 @@
   .res #BigEditor .RESCloseButton.RESFadeButton {
     right: 42px;
   }
-  .res #BigEditor .RESCloseButton.RESFadeButton::before {
+  .res #BigEditor .RESCloseButton.RESFadeButton:before {
     background-position: -96px -48px;
   }
-  .res #BigEditor .RESCloseButton.close::before {
+  .res #BigEditor .RESCloseButton.close:before {
     background-position: 0 -32px;
   }
   .res.wiki-page button.RESBigEditorPop {
@@ -3390,6 +3416,193 @@
     min-width: 100%;
     width: 100%;
   }
+  .res #RESAccountSwitcherDropdown .addAccount, .res #RESPrefsDropdown .toggleButton .toggleOn,
+  .res #RESPrefsDropdown .toggleButton .toggleOff {
+    color: #9e9e9e;
+    border: none;
+    vertical-align: middle;
+    background: -webkit-linear-gradient(top, #4c4745, #3c3837);
+    background: -moz-linear-gradient(top, #4c4745, #3c3837);
+    background: linear-gradient(top, #4c4745, #3c3837);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.6);
+  }
+  .res #RESAccountSwitcherDropdown .addAccount:active, .res #RESPrefsDropdown .toggleButton .toggleOn:active,
+  .res #RESPrefsDropdown .toggleButton .toggleOff:active,
+  .res #RESPrefsDropdown .toggleButton:not(.enabled) .toggleOff,
+  .res #RESPrefsDropdown .toggleButton.enabled .toggleOn {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.9), 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  .res .RESDropdownList {
+    color: #9e9e9e;
+    border: none;
+    padding: 7px 0;
+    margin-top: 4px;
+    z-index: 90 !important;
+    background: -webkit-linear-gradient(bottom, #312e2d 97%, #1c1a19);
+    background: -moz-linear-gradient(bottom, #312e2d 97%, #1c1a19);
+    background: linear-gradient(bottom, #312e2d 97%, #1c1a19);
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  .res .RESDropdownList li {
+    border: none;
+    color: inherit;
+  }
+  .res .RESDropdownList li:hover {
+    color: #fff;
+    background: #cb4b16;
+  }
+  .res .RESDropdownList li a,
+  .res .RESDropdownList li a:hover {
+    color: inherit;
+    background: none;
+  }
+  .res #RESAccountSwitcherDropdown .addAccount {
+    margin: 8px 8px 0 8px;
+  }
+  .res #RESPrefsDropdown {
+    margin-right: 10px;
+  }
+  .res #RESPrefsDropdown #RESSearchMenuItem {
+    background-color: transparent;
+    border: none;
+  }
+  .res #RESPrefsDropdown .toggleButton:before {
+    display: none;
+  }
+  .res #RESPrefsDropdown .toggleButton .toggleOn,
+  .res #RESPrefsDropdown .toggleButton .toggleOff {
+    line-height: 1em;
+  }
+  .res #RESPrefsDropdown .toggleButton .toggleOn {
+    border-radius: 3px 0 0 3px;
+  }
+  .res #RESPrefsDropdown .toggleButton .toggleOff {
+    border-radius: 0 3px 3px 0;
+  }
+  .res #RESPrefsDropdown .toggleButton:not(.enabled) .toggleOff {
+    color: #dc322f;
+  }
+  .res #RESPrefsDropdown .toggleButton.enabled .toggleOn {
+    color: #9bb300;
+  }
+  .res .RESMacroDropdownTitle {
+    color: #6b6b6b;
+    position: relative;
+    padding: 1px 6px 2px 6px;
+    background: none;
+    border: solid 1px transparent;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+  }
+  .res .RESMacroDropdownTitle.openMacro {
+    z-index: 2001;
+    background: #f7f7f7;
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+  .res .RESMacroDropdown {
+    top: 93% !important;
+    left: auto !important;
+    right: 0 !important;
+    min-width: 120px;
+    max-width: 300px;
+    border-radius: 3px 0 3px 3px;
+  }
+  .res .redditname > a[href$="/r/Dashboard/"],
+  .res .redditname > .dashboardTab {
+    border: none;
+    float: left;
+    opacity: 1;
+  }
+  .res .RESDashboardComponent {
+    padding: 0;
+  }
+  .res .RESDashboardComponent input[type=text] {
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+  .res #RESDashboardEditComponent {
+    border-color: #aaaaaa;
+  }
+  .res #RESDashboardEditComponent,
+  .res .RESDashboardComponentHeader {
+    overflow: hidden;
+    vertical-align: middle;
+    border-bottom: solid 1px #aaaaaa;
+    background: -webkit-linear-gradient(top, #e7e7e7, #e0e0e0);
+    background: -moz-linear-gradient(top, #e7e7e7, #e0e0e0);
+    background: linear-gradient(top, #e7e7e7, #e0e0e0);
+    box-shadow: inset 0 1px 0 #efefef, 0 2px 4px #c9c9c9;
+    border-radius: 3px 3px 0 0;
+  }
+  .res #RESDashboardEditComponent ul > li,
+  .res .RESDashboardComponentHeader ul > li {
+    height: auto;
+  }
+  .res a.widgetPath {
+    margin: 4px 10px 0 6px;
+    width: auto;
+    padding: 2px 6px;
+    border: solid 1px #aaaaaa;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(top, #FFF5CC, #ffeb99);
+    background: -moz-linear-gradient(top, #FFF5CC, #ffeb99);
+    background: linear-gradient(top, #FFF5CC, #ffeb99);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 #efefef;
+  }
+  .res .widgetStateButtons {
+    float: right;
+  }
+  .res .widgetStateButtons > li {
+    width: auto !important;
+  }
+  .res .widgetStateButtons > li.updateTime {
+    color: #111;
+  }
+  .res .widgetStateButtons > li.minimize {
+    font-size: 13px;
+  }
+  .res .widgetStateButtons > li.editButton:before {
+    content: 'Edit';
+  }
+  .res .widgetStateButtons > li.refresh > div {
+    display: none;
+  }
+  .res .widgetStateButtons > li.refresh:before {
+    content: 'Refresh';
+  }
+  .res .editWidget,
+  .res .addNewWidget {
+    margin-top: 5px;
+  }
+  .res .updateButton,
+  .res .cancelButton,
+  .res .addButton {
+    margin: 0 2px;
+    line-height: 1.5em !important;
+    text-transform: lowercase;
+  }
+  .res .cancelButton {
+    width: 4em !important;
+  }
+  .res #RESDashboardAddComponent {
+    border: none;
+    box-shadow: none;
+  }
+  .res #RESDashboardAddComponent > div {
+    height: auto !important;
+  }
+  .res #addUser {
+    height: auto;
+  }
+  .res .backToWidgetTypes {
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+  }
+  .res .editRedditForm {
+    margin-top: 3px;
+  }
   .res .subscription-box .subButtons {
     padding: 3px 0 !important;
   }
@@ -3408,5 +3621,20 @@
   .res.res-commentBoxes .comments-page .nestedlisting .thing.comment {
     border: none !important;
     overflow: visible !important;
+  }
+}
+@-moz-document regexp("https?://([^.]+\\.)?reddit\\.com/r/[Dd]ashboard([/#?].*)?") {
+  .redditname {
+    position: absolute;
+    z-index: 100;
+    left: 10px;
+    top: 109px;
+  }
+  .redditname:before {
+    display: none;
+  }
+
+  #viewImagesButton {
+    margin-left: 360px;
   }
 }

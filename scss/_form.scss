@@ -101,7 +101,7 @@ form.submit {
         font-size: 14px;
         background: $form-tab-bg;
         @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7));
-        &::after {
+        &:after {
           content: '';
           position: absolute;
           left: 0;
@@ -279,7 +279,7 @@ form.submit {
   padding: 5px !important;
   border: none !important;
 
-  &::after {
+  &:after {
     content: '';
     display: block;
     clear: left;
@@ -320,20 +320,11 @@ form.submit {
 
     .dropdown.lightdrop {
       > .selected {
+        @extend %tn-dropdown-triangle;
         text-decoration: none;
         color: inherit;
         padding-right: 0;
         background: none;
-
-        &::after {
-          content: '';
-          width: 0;
-          height: 0;
-          margin-left: 4px;
-          display: inline-block;
-          vertical-align: middle;
-          @include triangle(bottom, 4px, $small-button-fg);
-        }
       }
     }
 
@@ -344,7 +335,7 @@ form.submit {
       width: 30em;
       margin: 5px 0 0 -40px;
 
-      &::before {
+      &:before {
         color: $main-fg;
         content: attr(title);
       }
@@ -378,22 +369,11 @@ form.submit {
   }
 
   .drop-choices.lightdrop {
-    @extend %tn-small-button-default;
-    z-index: 9000;
-    padding: 4px;
+    @extend %tn-dropdown-menu;
     margin-top: 6px;
-    @include shadow(0 2px 2px rgba(0, 0, 0, 0.2));
 
     a.choice {
-      color: inherit;
-      vertical-align: middle;
-      padding: 2px 4px;
-      @include rounded(3px);
-
-      &:hover {
-        background: $dropdown-selected-bg;
-        color: $dropdown-selected-fg;
-      }
+      @extend %tn-dropdown-item;
     }
 
     > form {
@@ -488,7 +468,7 @@ ul.report-reasons > li.report-reason-title,
   padding: 0 0 6px 0;
   border-bottom: solid 3px rgba(0, 0, 0, 0.3) !important;
   margin-bottom: 10px;
-  &::first-letter {
+  &:first-letter {
     text-transform: uppercase;
   }
 }

@@ -1,0 +1,14 @@
+.redditname {
+  position: absolute;
+  z-index: 100;
+  left: 10px;
+  top: $header-height - 31px;
+
+  &:before {
+    display: none;
+  }
+}
+
+#viewImagesButton {
+  margin-left: 360px;
+}

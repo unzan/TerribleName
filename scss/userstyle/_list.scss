@@ -19,7 +19,7 @@
         height: 20px;
       }
 
-      &::before {
+      &:before {
         content: '';
         position: absolute;
         width: 0;
@@ -33,7 +33,7 @@
       &.prev {
         border-right: none;
         @include rounded(3px 0 0 3px);
-        &::before {
+        &:before {
           border-right: solid 5px $small-button-fg;
           //content: '\25c2';
         }
@@ -42,7 +42,7 @@
       &.next {
         border-left: none;
         @include rounded(0 3px 3px 0);
-        &::before {
+        &:before {
           border-left: solid 5px $small-button-fg;
           //content: '\25b8';
         }
@@ -63,7 +63,7 @@
   > .bubble {
     background: none;
 
-    &::after {
+    &:after {
       display: none;
     }
 

@@ -70,7 +70,7 @@
   &.mod-override > .morelink {
     > a {
       padding-left: 30px;
-      &::after {
+      &:after {
         @extend %tn-icon;
         background-position: -16px -32px;
         left: 3px;
@@ -80,7 +80,7 @@
     }
 
     &:hover > a {
-      &::after {
+      &:after {
         opacity: 1;
       }
     }
@@ -101,7 +101,7 @@ input[type=submit] {
   padding: 0 !important;
   background-position: 0 0 !important;
 
-  &::before {
+  &:before {
     content: '';
     position: absolute;
     left: 4px;
@@ -119,7 +119,7 @@ input[type=submit] {
         @extend %tn-small-button-default;
       }
 
-      &::after {
+      &:after {
         content: '';
         position: absolute;
         top: 4px;
@@ -174,8 +174,8 @@ a.pretty-button {
     @extend %tn-background-reset;
   }
 
-  &::before,
-  &::after {
+  &:before,
+  &:after {
     color: $list-entry-fg !important;
     display: inline-block;
   }

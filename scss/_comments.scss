@@ -25,6 +25,7 @@
 
   > .usertext {
     clear: both;
+    overflow: visible;
 
     > .usertext-edit {
       display: inline-block;
@@ -51,7 +52,7 @@
   }
 
   @if $context {
-    .nestedlisting #{$context} .thing.comment.noncollapsed::before {
+    .nestedlisting #{$context} .thing.comment.noncollapsed:before {
       content: '';
       position: absolute;
       background: darken($main-bg, 15%);
@@ -86,14 +87,14 @@
     }
 
     .entry {
-      &::before {
+      &:before {
         border-right-color: $misc-spam-tagline-bg;
       }
 
       .tagline {
         background: $misc-spam-tagline-bg;
 
-        time:first-of-type::after {
+        time:first-of-type:after {
           content: 'Spam';
           display: inline-block;
           background: $misc-spam-color;

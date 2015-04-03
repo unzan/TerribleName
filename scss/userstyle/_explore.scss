@@ -23,7 +23,7 @@
   padding: 2px 5px 10px 20px;
   margin-bottom: 5px;
 
-  &::before {
+  &:before {
     content: '';
     position: absolute;
     left: 3px;
@@ -34,7 +34,7 @@
   }
   
   &.explore-comment {
-    &::before {
+    &:before {
       background: $explore-comment-color;
     }
 
@@ -55,15 +55,15 @@
     }
   }
 
-  &.explore-rising::before {
+  &.explore-rising:before {
     background: $explore-rising-color;
   }
 
-  &.explore-hot::before {
+  &.explore-hot:before {
     background: $explore-hot-color;
   }
 
-  &.explore-discovery::before {
+  &.explore-discovery:before {
     background: $explore-discovery-color;
   }
 
@@ -101,7 +101,7 @@
     text-indent: 0;
     width: 0.8em;
 
-    &::before {
+    &:before {
       content: '\2715';
       margin-right: 4em;
     }

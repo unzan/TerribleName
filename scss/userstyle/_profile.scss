@@ -27,7 +27,7 @@
         @extend %tn-small-button;
         font-size: 13px;
 
-        &::before {
+        &:before {
           @extend %tn-icon;
           content: '';
           vertical-align: middle;

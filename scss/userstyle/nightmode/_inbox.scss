@@ -72,8 +72,6 @@
   }
 }
 
-.messages-page {
-  > .content > .sitetable > .message {
-    @extend %tn-dark-list-entry-separator;
-  }
+div:not(.child) > .listing > .message {
+  @extend %tn-dark-list-entry-separator;
 }

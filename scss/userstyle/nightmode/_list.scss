@@ -29,11 +29,11 @@
       border: none !important;
       @include shadow(none !important);
 
-      &.prev::before {
+      &.prev:before {
         border-right-color: lighten($res-night-special-entry-bg, 50%);
       }
 
-      &.next::before {
+      &.next:before {
         border-left-color: lighten($res-night-special-entry-bg, 50%);
       }
     }

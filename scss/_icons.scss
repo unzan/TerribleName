@@ -2,15 +2,15 @@
 .titlebox {
   .leavemoderator,
   form.leavecontributor-button {
-    &::before {
+    &:before {
       @extend %tn-icon;
     }
   }
 
-  .leavemoderator::before {
+  .leavemoderator:before {
     background-position: -16px -32px;
   }
-  form.leavecontributor-button::before {
+  form.leavecontributor-button:before {
     background-position: -96px -16px;
   }
 }
@@ -26,7 +26,7 @@
 
 #mail,
 #modmail,
-.gilded-icon::before {
+.gilded-icon:before {
   @extend %tn-icon;
 }
 
@@ -57,7 +57,7 @@
   }
 }
 
-.gilded-icon::before {
+.gilded-icon:before {
   background-position: 0 -48px;
 }
 
@@ -78,74 +78,74 @@
   .edit-stylesheet,
   .wikiaction-revisions,
   .wikiaction-pages {
-    &::before {
+    &:before {
       @extend %tn-icon;
       vertical-align: middle;
       margin-right: 10px;
     }
   }
 
-  .reddit-edit::before {
+  .reddit-edit:before {
     background-position: 0 -16px;
   }
 
-  .reddit-edited::before {
+  .reddit-edited:before {
     background-position: -48px -32px;
   }
 
-  .reddit-moderators::before {
+  .reddit-moderators:before {
     background-position: -16px -32px;
   }
 
-  .reddit-contributors::before {
+  .reddit-contributors:before {
     background-position: -96px -16px;
   }
 
-  .reddit-traffic::before {
+  .reddit-traffic:before {
     background-position: 0 -80px;
   }
 
-  .reddit-modqueue::before {
+  .reddit-modqueue:before {
     background-position: -32px -32px;
   }
 
-  .reddit-reported::before {
+  .reddit-reported:before {
     background-position: -32px -16px;
   }
 
-  .reddit-spam::before {
+  .reddit-spam:before {
     background-position: -16px 0;
   }
 
-  .reddit-ban::before {
+  .reddit-ban:before {
     background-position: -32px -80px;
   }
 
-  .reddit-flair::before {
+  .reddit-flair:before {
     background-position: -80px -32px;
   }
 
-  .reddit-moderationlog::before {
+  .reddit-moderationlog:before {
     background-position: -48px -16px;
   }
 
-  .reddit-unmoderated::before {
+  .reddit-unmoderated:before {
     background-position: -64px 0;
   }
 
-  .edit-stylesheet::before {
+  .edit-stylesheet:before {
     background-position: -96px -64px;
   }
 
-  .wikiaction-revisions::before {
+  .wikiaction-revisions:before {
     background-position: -32px 0;
   }
 
-  .wikiaction-pages::before {
+  .wikiaction-pages:before {
     background-position: -16px -80px;
   }
 
-  .moderator-mail::before {
+  .moderator-mail:before {
     margin-top: 0;
     margin-left: 0;
     background-position: -48px 0;

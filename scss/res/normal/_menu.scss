@@ -1,0 +1,121 @@
+%tn-menu-button {
+  color: $menu-fg;
+  border: none;
+  vertical-align: middle;
+  @include linear-gradient(top, lighten($menu-bg, 10%), lighten($menu-bg, 4%));
+  @include rounded(3px);
+  @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.6));
+}
+
+%tn-menu-button:active,
+%tn-menu-button-pressed {
+  @include shadow(inset 0 1px 2px rgba(0, 0, 0, 0.9), 0 1px 0 rgba(255, 255, 255, 0.2));
+}
+
+.RESDropdownList {
+  color: $menu-fg;
+  border: none;
+  padding: 7px 0;
+  margin-top: 4px;
+  z-index: 90 !important;
+  @include linear-gradient(bottom, $menu-bg 97%, darken($menu-bg, 8%));
+  @include rounded(0 0 3px 3px);
+  @include shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+
+  li {
+    border: none;
+    color: inherit;
+
+    &:hover {
+      color: $menu-item-focused-fg;
+      background: $menu-item-focused-bg;
+    }
+
+    a,
+    a:hover {
+      color: inherit;
+      background: none;
+    }
+  }
+}
+
+#RESAccountSwitcherDropdown {
+  .addAccount {
+    @extend %tn-menu-button;
+    margin: 8px 8px 0 8px;
+  }
+}
+
+#RESPrefsDropdown {
+  margin-right: 10px;
+
+  #RESSearchMenuItem {
+    background-color: transparent;
+    border: none;
+  }
+
+  .toggleButton {
+    &:before {
+      display: none;
+    }
+
+    .toggleOn,
+    .toggleOff {
+      @extend %tn-menu-button;
+      line-height: 1em;
+    }
+
+    .toggleOn {
+      @include rounded(3px 0 0 3px);
+    }
+
+    .toggleOff {
+      @include rounded(0 3px 3px 0);
+    }
+
+    &:not(.enabled) {
+      .toggleOff {
+        @extend %tn-menu-button-pressed;
+        color: $menu-disabled-fg;
+      }
+    }
+
+    &.enabled {
+      .toggleOn {
+        @extend %tn-menu-button-pressed;
+        color: $menu-enabled-fg;
+      }
+    }
+  }
+}
+
+.RESMacroDropdownTitle {
+  @extend %tn-dropdown-triangle;
+  color: $dropdown-menu-fg;
+  position: relative;
+  padding: 1px 6px 2px 6px;
+  background: none;
+  border: solid 1px transparent;
+  border-bottom: none;
+  @include rounded(3px 3px 0 0);
+
+  &.openMacro {
+    z-index: 2001;
+    background: $dropdown-menu-bg;
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.RESMacroDropdown {
+  @extend %tn-dropdown-menu;
+  top: 93% !important;
+  left: auto !important;
+  right: 0 !important;
+  min-width: 120px;
+  max-width: 300px;
+  @include rounded(3px 0 3px 3px);
+
+  li > a {
+    @extend %tn-dropdown-item;
+  }
+}

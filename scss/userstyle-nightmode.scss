@@ -1,8 +1,9 @@
 @import "license";
+@import "userstyle/variables";
+@import "mixins";
+
 @namespace url(http://www.w3.org/1999/xhtml);
-@-moz-document domain("reddit.com") {
-  @import "userstyle/variables";
-  @import "mixins";
+@-moz-document domain(reddit.com) {
   @import "placeholders";
   @import "res/nightmode/placeholders";
 
@@ -19,10 +20,12 @@
     @import "res/nightmode/markdown";
     @import "res/nightmode/editor";
     @import "res/nightmode/footer";
+    @import "res/nightmode/menu";
     @import "userstyle/nightmode/multireddits";
     @import "userstyle/nightmode/list";
     @import "userstyle/nightmode/inbox";
     @import "userstyle/nightmode/explore";
     @import "userstyle/nightmode/profile";
+    @import "userstyle/nightmode/dashboard";
   }
 }

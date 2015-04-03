@@ -1,6 +1,5 @@
 #BigEditor .RESCloseButton,
-button.RESBigEditorPop,
-.markdownEditor .RESMacroDropdownTitle {
+button.RESBigEditorPop {
   @extend %tn-small-button;
   font-size: 0 !important;
   width: 16px;
@@ -10,7 +9,7 @@ button.RESBigEditorPop,
   text-indent: -100px;
   margin-right: 2px;
 
-  &::before {
+  &:before {
     @extend %tn-icon;
     content: '';
     position: absolute;
@@ -19,8 +18,7 @@ button.RESBigEditorPop,
   }
 }
 
-button.RESBigEditorPop,
-.markdownEditor .RESMacroDropdownTitle {
+button.RESBigEditorPop {
   position: relative;
 }
 
@@ -34,7 +32,7 @@ button.RESBigEditorPop {
   clear: both;
   @include vendor(box-sizing, content-box);
 
-  &::before {
+  &:before {
     top: 3px;
     left: 3px;
     background-position: -16px -48px;
@@ -60,7 +58,7 @@ button.RESBigEditorPop {
 
 .commentingAs + .RESMacroWrappingSpan {
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 22px;
 }
 
@@ -254,12 +252,12 @@ button.RESBigEditorPop {
 
     &.RESFadeButton {
       right: 42px;
-      &::before {
+      &:before {
         background-position: -96px -48px;
       }
     }
 
-    &.close::before {
+    &.close:before {
       background-position: 0 -32px;
     }
   }
@@ -296,4 +294,3 @@ button.RESBigEditorPop {
     }
   }
 }
-

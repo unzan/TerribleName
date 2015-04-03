@@ -92,7 +92,7 @@
   line-height: 1em;
   text-align: center;
 
-  &::before {
+  &:before {
     display: inline-block;
     margin-top: 5px;
     width: 40px;
@@ -115,16 +115,16 @@
   }
 
   &.may-blank {
-    &.default::before {
+    &.default:before {
       content: '?';
     }
 
-    &.self::before {
+    &.self:before {
       content: 'T';
       background: $default-text-thumb-bg;
     }
 
-    &.nsfw::before {
+    &.nsfw:before {
       content: 'X';
       background: $default-nsfw-thumb-bg;
     }
@@ -143,11 +143,11 @@
   @extend %tn-background-reset;
 
   .thumbnail {
-    &::before {
+    &:before {
       background: $removed-thumb-bg;
     }
 
-    &::after {
+    &:after {
       content: 'REMOVED';
       position: absolute;
       font-size: 10px;
@@ -162,24 +162,20 @@
 }
 
 .stickied-tagline {
-  color: $sticky-tag-fg !important;
-  background: $sticky-tag-bg;
-  display: inline-block;
-  padding: 1px 7px;
-  @include rounded(3px);
+  color: inherit !important;
 }
 
 .userattrs {
   .moderator {
     color: $mod-tag-fg;
-    &::after {
+    &:after {
       content: 'od';
     }
   }
 
   .admin {
     color: $admin-tag-fg;
-    &::after {
+    &:after {
       content: 'dmin';
     }
   }
@@ -187,7 +183,7 @@
   .submitter {
     color: $submitter-tag-fg;
     font-size: 0;
-    &::after {
+    &:after {
       font-size: $normal-font-size;
       content: 'OP';
     }
@@ -255,7 +251,7 @@
     }
 
     .thumbnail.self {
-      &::before {
+      &:before {
         content: 'S';
         background: $default-modpost-thumb-bg;
       }

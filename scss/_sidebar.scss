@@ -52,7 +52,7 @@
   padding: 10px;
 }
 
-.users-online::before {
+.users-online:before {
   @extend %tn-background-reset;
 }
 
@@ -94,7 +94,7 @@
 .users-online {
   @include rounded(0 3px 3px 0);
 
-  &::before {
+  &:before {
     display: none;
   }
 }

@@ -34,8 +34,8 @@ body.with-listing-chooser {
       border-right: solid 1px rgba(0, 0, 0, 0.2);
       @include shadow(inset 1px 0 0 rgba(255, 255, 255, 0.9));
 
-      &::before,
-      &::after {
+      &:before,
+      &:after {
         // can't find a good icon to replace the sidebar toggler so we'll hide it temporarily
         display: none !important;
       }
@@ -67,7 +67,7 @@ body.with-listing-chooser {
         @include linear-gradient(top, $multireddits-selected-entry-bg, darken($multireddits-selected-entry-bg, 5%));
         @include shadow(inset 0 1px 0 lighten($multireddits-selected-entry-bg, 14%), 0 2px 2px rgba(0, 0, 0, 0.4));
 
-        &::before {
+        &:before {
           border-left-color: $multireddits-selected-color;
         }
       }
@@ -181,7 +181,7 @@ body.with-listing-chooser {
           margin: 3px 0 0 0;
           float: left;
 
-          &::first-letter {
+          &:first-letter {
             text-transform: uppercase;
           }
         }
@@ -245,7 +245,7 @@ body.with-listing-chooser {
         display: inline-block;
         color: transparent;
         text-indent: 0;
-        &::before {
+        &:before {
           color: $small-button-fg;
           display: inline-block;
           content: '\2715';
@@ -303,20 +303,20 @@ body.with-listing-chooser {
       width: 1em;
       text-indent: 0;
 
-      &::before,
-      &::after {
+      &:before,
+      &:after {
         content: '';
         background: lighten($small-button-fg, 10%);
       }
 
-      &::before {
+      &:before {
         top: 6px;
         bottom: 6px;
         left: 10px;
         width: 3px;
       }
 
-      &::after {
+      &:after {
         left: 6px;
         right: 6px;
         top: 10px;
@@ -361,8 +361,8 @@ body.with-listing-chooser {
     position: relative;
     @include rounded(0 3px 3px 0);
 
-    &::after,
-    &::before {
+    &:after,
+    &:before {
       position: absolute;
     }
   }
@@ -398,12 +398,12 @@ body.with-listing-chooser {
 .hover-bubble.multi-add-notice {
   @extend %tn-bubble;
 
-  &.anchor-right::after {
+  &.anchor-right:after {
     border-left-color: $notice-bubble-bg;
     right: -17px;
   }
 
-  &.anchor-right::before {
+  &.anchor-right:before {
     border-left-color: rgba(0, 0, 0, 0.3);
     right: -18px;
   }
