@@ -7,7 +7,7 @@
 .sidebox.holiday_shopping > .morelink > a {
   color: $button-fg;
 
-  &::before {
+  &:before {
     position: absolute;
     left: 12px;
     top: 2px;

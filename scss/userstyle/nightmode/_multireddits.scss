@@ -24,7 +24,7 @@ body.with-listing-chooser {
       &.selected {
         @include linear-gradient(top, $res-night-multireddits-selected-entry-bg, darken($res-night-multireddits-selected-entry-bg, 7%));
 
-        &::before {
+        &:before {
           border-left-color: $res-night-multireddits-selected-color;
         }
 
@@ -108,15 +108,15 @@ body.with-listing-chooser {
 .multi-selector {
   @extend %tn-dark-info-box;
 
-  &::before {
+  &:before {
     border: none !important;
   }
 
-  &.anchor-left::after {
+  &.anchor-left:after {
     border-right-color: $res-night-info-box-bg;
   }
 
-  &.anchor-right::after {
+  &.anchor-right:after {
     border-left-color: $res-night-info-box-bg;
   }
 

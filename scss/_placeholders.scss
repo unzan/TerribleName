@@ -17,6 +17,26 @@
   background: $header-bg url($header-bg-image) 0 18px repeat-x !important;
 }
 
+%tn-menu-bar-item {
+  background: none;
+  display: block;
+  font-weight: normal;
+  color: $menu-bar-fg;
+  padding: 8px 13px;
+
+  &:hover {
+    color: lighten($menu-bar-fg, 20%);
+    @include linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+  }
+}
+
+%tn-menu-bar-item-active {
+  color: lighten($menu-bar-fg, 30%);
+  border: none;
+  @include linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+  // @include shadow(0 1px 1px lighten($menu-bar-bg, 2%), inset 0 -2px 3px rgba(0, 0, 0, 0.2));
+}
+
 %tn-horiz-bar {
   border: none;
   display: block;
@@ -34,11 +54,11 @@
 }
 
 %tn-bracketed {
-  &::before {
+  &:before {
     content: '[';
   }
 
-  &::after {
+  &:after {
     content: ']';
   }
 }
@@ -294,7 +314,7 @@
   @include rounded(3px);
   @include shadow(0 1px 2px rgba(0, 0, 0, 0.2));
 
-  &::before {
+  &:before {
     content: '';
     position: absolute;
     left: -8px;
@@ -370,7 +390,7 @@
 
 %tn-active-comment-entry {
   background: $comment-bg !important;
-  &::after {
+  &:after {
     content: '';
     background: $res-active-element-color;
     position: absolute;
@@ -386,3 +406,41 @@
   outline: dashed 1px $res-active-element-color;
 }
 
+%tn-font-reset {
+  font: normal $normal-font-size $sans-serif;
+}
+
+%tn-dropdown-menu {
+  z-index: 2000;
+  background: $dropdown-menu-bg;
+  color: $dropdown-menu-fg;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  padding: 4px;
+  @include rounded(3px);
+  @include shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+%tn-dropdown-triangle {
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    @include triangle(bottom, 4px, $small-button-fg);
+  }
+}
+
+%tn-dropdown-item {
+  color: inherit;
+  vertical-align: middle;
+  padding: 2px 4px;
+  border: none;
+  @include rounded(3px);
+
+  &:hover {
+    background: $dropdown-item-focused-bg;
+    color: $dropdown-item-focused-fg;
+  }
+}

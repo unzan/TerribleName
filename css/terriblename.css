@@ -16,7 +16,7 @@
  * [2]: http://commons.wikimedia.org/wiki/File:Panorama_Frankfurt_vom_Maintower_edit.jpg
  * [3]: http://de.wikipedia.org/wiki/Benutzer:Schaengel
  */
-a.pretty-button, a.pretty-button.neutral, .big-mod-buttons .pretty-button, .link.spam, .comment.noncollapsed > .entry .usertext.border > .usertext-body, .users-online::before, .sidebox .spacer, .moderator.res.res-nightmode .tabpane-content .linefield, .res.res-nightmode .login-form-side .submit {
+a.pretty-button, a.pretty-button.neutral, .big-mod-buttons .pretty-button, .link.spam, .comment.noncollapsed > .entry .usertext.border > .usertext-body, .users-online:before, .sidebox .spacer, .moderator.res.res-nightmode .tabpane-content .linefield, .res.res-nightmode .login-form-side .submit {
   background: none;
 }
 
@@ -44,6 +44,28 @@ a:visited, .thing .title:visited, .link .tagline a:visited {
   background: #111 url("%%cockkisses-banner%%") 0 18px repeat-x !important;
 }
 
+#header .tabmenu > li > a {
+  background: none;
+  display: block;
+  font-weight: normal;
+  color: #9e9e9e;
+  padding: 8px 13px;
+}
+#header .tabmenu > li > a:hover {
+  color: #d1d1d1;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+  background: linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
+}
+
+#header .tabmenu > li.selected > a {
+  color: #eaeaea;
+  border: none;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+}
+
 hr, .md hr {
   border: none;
   display: block;
@@ -60,10 +82,10 @@ hr, .md hr {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-a.pretty-button::before, .sidecontentbox > .title .collapse-button::before, .wiki-page .wikititle::before {
+a.pretty-button:before, .sidecontentbox > .title .collapse-button:before, .wiki-page .wikititle:before {
   content: '[';
 }
-a.pretty-button::after, .sidecontentbox > .title .collapse-button::after, .wiki-page .wikititle::after {
+a.pretty-button:after, .sidecontentbox > .title .collapse-button:after, .wiki-page .wikititle:after {
   content: ']';
 }
 
@@ -139,7 +161,7 @@ input[type=submit] {
 .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
 .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
 .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover,
 .wiki-page .pageactions > .wikiaction,
 .res .commentNavSortType,
 .nextprev > a[rel],
@@ -148,7 +170,6 @@ input[type=submit] {
 .res .RESSubscriptionButton,
 .res #BigEditor .RESCloseButton,
 .res button.RESBigEditorPop,
-.res .markdownEditor .RESMacroDropdownTitle,
 .res #alert_message .buttonContainer > input[type=button] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.12);
 }
@@ -158,7 +179,7 @@ input[type=submit] {
 .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
 .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
 .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover, .menuarea .drop-choices.lightdrop,
+.res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover,
 .wiki-page .pageactions > .wikiaction,
 .res .commentNavSortType,
 .nextprev > a[rel],
@@ -167,7 +188,6 @@ input[type=submit] {
 .res .RESSubscriptionButton,
 .res #BigEditor .RESCloseButton,
 .res button.RESBigEditorPop,
-.res .markdownEditor .RESMacroDropdownTitle,
 .res #alert_message .buttonContainer > input[type=button] {
   color: #6b6b6b;
   text-decoration: none !important;
@@ -190,7 +210,6 @@ input[type=submit] {
 .res .RESSubscriptionButton:active,
 .res #BigEditor .RESCloseButton:active,
 .res button.RESBigEditorPop:active,
-.res .markdownEditor .RESMacroDropdownTitle:active,
 .res #alert_message .buttonContainer > input[type=button]:active {
   background: -webkit-linear-gradient(top, #efefef, #e0e0e0);
   background: -moz-linear-gradient(top, #efefef, #e0e0e0);
@@ -360,7 +379,7 @@ input[type=password]:focus {
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.comment.noncollapsed > .entry::before {
+.comment.noncollapsed > .entry:before {
   content: '';
   position: absolute;
   left: -8px;
@@ -389,27 +408,26 @@ input[type=password]:focus {
   font-weight: normal;
 }
 
-.up.arrow, .res.res-nightmode .thing .midcol > .up.arrow, .up.arrow:hover, .down.arrow, .res.res-nightmode .thing .midcol > .down.arrow, .down.arrow:hover, .upmod.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow, .upmod.arrow:hover, .downmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow, .downmod.arrow:hover, .submit.mod-override > .morelink > a::after, .titlebox .leavemoderator::before,
-.titlebox form.leavecontributor-button::before, .tagline .userattrs .cakeday, #mail,
+.up.arrow, .res.res-nightmode .thing .midcol > .up.arrow, .up.arrow:hover, .down.arrow, .res.res-nightmode .thing .midcol > .down.arrow, .down.arrow:hover, .upmod.arrow, .res.res-nightmode .thing .midcol > .upmod.arrow, .upmod.arrow:hover, .downmod.arrow, .res.res-nightmode .thing .midcol > .downmod.arrow, .downmod.arrow:hover, .submit.mod-override > .morelink > a:after, .titlebox .leavemoderator:before,
+.titlebox form.leavecontributor-button:before, .tagline .userattrs .cakeday, #mail,
 #modmail,
-.gilded-icon::before, .icon-menu .reddit-edit::before,
-.icon-menu .reddit-edited::before,
-.icon-menu .moderator-mail::before,
-.icon-menu .reddit-moderators::before,
-.icon-menu .reddit-contributors::before,
-.icon-menu .reddit-traffic::before,
-.icon-menu .reddit-modqueue::before,
-.icon-menu .reddit-reported::before,
-.icon-menu .reddit-spam::before,
-.icon-menu .reddit-ban::before,
-.icon-menu .reddit-flair::before,
-.icon-menu .reddit-moderationlog::before,
-.icon-menu .reddit-unmoderated::before,
-.icon-menu .edit-stylesheet::before,
-.icon-menu .wikiaction-revisions::before,
-.icon-menu .wikiaction-pages::before, .res .gearIcon, .res #BigEditor .RESCloseButton::before,
-.res button.RESBigEditorPop::before,
-.res .markdownEditor .RESMacroDropdownTitle::before {
+.gilded-icon:before, .icon-menu .reddit-edit:before,
+.icon-menu .reddit-edited:before,
+.icon-menu .moderator-mail:before,
+.icon-menu .reddit-moderators:before,
+.icon-menu .reddit-contributors:before,
+.icon-menu .reddit-traffic:before,
+.icon-menu .reddit-modqueue:before,
+.icon-menu .reddit-reported:before,
+.icon-menu .reddit-spam:before,
+.icon-menu .reddit-ban:before,
+.icon-menu .reddit-flair:before,
+.icon-menu .reddit-moderationlog:before,
+.icon-menu .reddit-unmoderated:before,
+.icon-menu .edit-stylesheet:before,
+.icon-menu .wikiaction-revisions:before,
+.icon-menu .wikiaction-pages:before, .res .gearIcon, .res #BigEditor .RESCloseButton:before,
+.res button.RESBigEditorPop:before {
   display: inline-block !important;
   background-image: url("%%icons%%") !important;
   background-repeat: no-repeat !important;
@@ -436,7 +454,7 @@ input[type=password]:focus {
 .res .comment.noncollapsed > .entry.RES-keyNav-activeElement {
   background: #fff !important;
 }
-.res .comment.noncollapsed > .entry.RES-keyNav-activeElement::after {
+.res .comment.noncollapsed > .entry.RES-keyNav-activeElement:after {
   content: '';
   background: #ed855a;
   position: absolute;
@@ -451,6 +469,40 @@ input[type=password]:focus {
 .res .morechildren > .entry.RES-keyNav-activeElement > .morecomments,
 .res .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
   outline: dashed 1px #ed855a;
+}
+
+.menuarea .drop-choices.lightdrop {
+  z-index: 2000;
+  background: #f7f7f7;
+  color: #6b6b6b;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  padding: 4px;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menuarea .spacer .dropdown.lightdrop > .selected:after {
+  content: '';
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  border-left: solid 4px transparent;
+  border-right: solid 4px transparent;
+  border-top: solid 4px #6b6b6b;
+}
+
+.menuarea .drop-choices.lightdrop a.choice {
+  color: inherit;
+  vertical-align: middle;
+  padding: 2px 4px;
+  border: none;
+  border-radius: 3px;
+}
+.menuarea .drop-choices.lightdrop a.choice:hover {
+  background: #cb4b16;
+  color: #fff;
 }
 
 body {
@@ -525,13 +577,13 @@ hr {
 .submit.mod-override > .morelink > a {
   padding-left: 30px;
 }
-.submit.mod-override > .morelink > a::after {
+.submit.mod-override > .morelink > a:after {
   background-position: -16px -32px;
   left: 3px;
   top: 1px;
   opacity: 0.6;
 }
-.submit.mod-override > .morelink:hover > a::after {
+.submit.mod-override > .morelink:hover > a:after {
   opacity: 1;
 }
 
@@ -544,8 +596,8 @@ hr {
   padding: 0 !important;
   background-position: 0 0 !important;
 }
-.expando-button::before, .res .expando-button.toggleImage.image::before,
-.res .expando-button.toggleImage.video-muted::before {
+.expando-button:before, .res .expando-button.toggleImage.image:before,
+.res .expando-button.toggleImage.video-muted:before {
   content: '';
   position: absolute;
   left: 4px;
@@ -554,10 +606,10 @@ hr {
   top: 8px;
   background: #848484;
 }
-.expando-button.selftext.collapsed::after, .res .selftext.collapsed.expando-button.toggleImage.image::after, .res .toggleImage.image.expando-button.collapsedExpando::after,
-.res .selftext.collapsed.expando-button.toggleImage.video-muted::after,
-.res .toggleImage.video-muted.expando-button.collapsedExpando::after, .expando-button.video.collapsed::after, .res .video.collapsed.expando-button.toggleImage.image::after,
-.res .video.collapsed.expando-button.toggleImage.video-muted::after {
+.expando-button.selftext.collapsed:after, .res .selftext.collapsed.expando-button.toggleImage.image:after, .res .toggleImage.image.expando-button.collapsedExpando:after,
+.res .selftext.collapsed.expando-button.toggleImage.video-muted:after,
+.res .toggleImage.video-muted.expando-button.collapsedExpando:after, .expando-button.video.collapsed:after, .res .video.collapsed.expando-button.toggleImage.image:after,
+.res .video.collapsed.expando-button.toggleImage.video-muted:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -582,7 +634,7 @@ a.pretty-button {
   font-size: 13px;
   border-radius: 0;
 }
-a.pretty-button::before, a.pretty-button::after {
+a.pretty-button:before, a.pretty-button:after {
   color: #6b6b6b !important;
   display: inline-block;
 }
@@ -691,8 +743,8 @@ form.submit .roundfield.info-notice {
   background: #efefef;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
-.fancy-settings + .tabmenu > li.selected a::after,
-.formtab.tabmenu > li.selected a::after {
+.fancy-settings + .tabmenu > li.selected a:after,
+.formtab.tabmenu > li.selected a:after {
   content: '';
   position: absolute;
   left: 0;
@@ -823,7 +875,7 @@ form.submit .roundfield.info-notice {
   padding: 5px !important;
   border: none !important;
 }
-.menuarea::after {
+.menuarea:after {
   content: '';
   display: block;
   clear: left;
@@ -860,24 +912,13 @@ form.submit .roundfield.info-notice {
   padding-right: 0;
   background: none;
 }
-.menuarea .spacer .dropdown.lightdrop > .selected::after {
-  content: '';
-  width: 0;
-  height: 0;
-  margin-left: 4px;
-  display: inline-block;
-  vertical-align: middle;
-  border-left: solid 4px transparent;
-  border-right: solid 4px transparent;
-  border-top: solid 4px #6b6b6b;
-}
 .menuarea .spacer > .help-hoverable {
   display: none;
   color: #FFF5CC;
   width: 30em;
   margin: 5px 0 0 -40px;
 }
-.menuarea .spacer > .help-hoverable::before {
+.menuarea .spacer > .help-hoverable:before {
   color: #111;
   content: attr(title);
 }
@@ -900,20 +941,7 @@ form.submit .roundfield.info-notice {
   border-radius: 3px;
 }
 .menuarea .drop-choices.lightdrop {
-  z-index: 9000;
-  padding: 4px;
   margin-top: 6px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
-.menuarea .drop-choices.lightdrop a.choice {
-  color: inherit;
-  vertical-align: middle;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-.menuarea .drop-choices.lightdrop a.choice:hover {
-  background: #cb4b16;
-  color: #fff;
 }
 .menuarea .drop-choices.lightdrop > form {
   position: relative;
@@ -992,8 +1020,8 @@ ul.report-reasons > li.report-reason-title,
   border-bottom: solid 3px rgba(0, 0, 0, 0.3) !important;
   margin-bottom: 10px;
 }
-ul.report-reasons > li.report-reason-title::first-letter,
-.action-form > .reason-prompt::first-letter {
+ul.report-reasons > li.report-reason-title:first-letter,
+.action-form > .reason-prompt:first-letter {
   text-transform: uppercase;
 }
 
@@ -1029,16 +1057,19 @@ ul.report-reasons > li.report-reason {
   position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
-#header #header-img-a {
+
+#header-img-a {
   display: inline-block;
   vertical-align: middle;
   margin: 0 10px 0 20px;
 }
-#header #header-bottom-left > .pagename:last-child::after {
+
+#header-bottom-left > .pagename:last-child:after {
   content: '';
   height: 32px;
 }
-#header #header-bottom-left > .pagename:last-child::after,
+
+.pagename:last-child:after,
 #header .tabmenu {
   display: block;
   margin: 0;
@@ -1054,32 +1085,12 @@ ul.report-reasons > li.report-reason {
   background: linear-gradient(top, #2C2928, #1f1d1c);
   box-shadow: inset 0 1px 0 #474240, inset 0 -1px 0 #141312;
 }
+
 #header .tabmenu > li {
   display: block;
   float: left;
   margin: 0;
   padding: 0;
-}
-#header .tabmenu > li > a {
-  background: none;
-  display: block;
-  font-weight: normal;
-  color: #9e9e9e;
-  padding: 8px 13px;
-}
-#header .tabmenu > li > a:hover {
-  color: #d1d1d1;
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
-  background: linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
-}
-#header .tabmenu > li.selected > a {
-  color: #eaeaea;
-  border: none;
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-  background: linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-  box-shadow: 0 1px 1px #312e2d, inset 0 -2px 3px rgba(0, 0, 0, 0.2);
 }
 
 #sr-header-area {
@@ -1122,7 +1133,7 @@ ul.report-reasons > li.report-reason {
   color: #848484;
   padding-right: 5px;
 }
-.dropdown.srdrop .selected::after {
+.dropdown.srdrop .selected:after {
   content: '';
   display: inline-block;
   margin-left: 5px;
@@ -1178,7 +1189,7 @@ ul.report-reasons > li.report-reason {
   font-weight: normal;
   vertical-align: middle;
 }
-.pagename::before {
+.pagename:before {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -1278,7 +1289,7 @@ ul.report-reasons > li.report-reason {
   line-height: 1em;
   text-align: center;
 }
-.thumbnail::before {
+.thumbnail:before {
   display: inline-block;
   margin-top: 5px;
   width: 40px;
@@ -1296,14 +1307,14 @@ ul.report-reasons > li.report-reason {
   height: 50px;
   width: 70px;
 }
-.thumbnail.may-blank.default::before {
+.thumbnail.may-blank.default:before {
   content: '?';
 }
-.thumbnail.may-blank.self::before {
+.thumbnail.may-blank.self:before {
   content: 'T';
   background: rgba(38, 139, 210, 0.6);
 }
-.thumbnail.may-blank.nsfw::before {
+.thumbnail.may-blank.nsfw:before {
   content: 'X';
   background: rgba(211, 54, 130, 0.5);
 }
@@ -1314,10 +1325,10 @@ ul.report-reasons > li.report-reason {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.link.spam .thumbnail::before {
+.link.spam .thumbnail:before {
   background: #dc322f;
 }
-.link.spam .thumbnail::after {
+.link.spam .thumbnail:after {
   content: 'REMOVED';
   position: absolute;
   font-size: 10px;
@@ -1330,30 +1341,26 @@ ul.report-reasons > li.report-reason {
 }
 
 .stickied-tagline {
-  color: #fff !important;
-  background: #6f8000;
-  display: inline-block;
-  padding: 1px 7px;
-  border-radius: 3px;
+  color: inherit !important;
 }
 
 .userattrs .moderator {
   color: #6f8000;
 }
-.userattrs .moderator::after {
+.userattrs .moderator:after {
   content: 'od';
 }
 .userattrs .admin {
   color: #dc322f;
 }
-.userattrs .admin::after {
+.userattrs .admin:after {
   content: 'dmin';
 }
 .userattrs .submitter {
   color: #2177b4;
   font-size: 0;
 }
-.userattrs .submitter::after {
+.userattrs .submitter:after {
   font-size: 13px;
   content: 'OP';
 }
@@ -1408,7 +1415,7 @@ ul.report-reasons > li.report-reason {
   color: #6b6b6b;
   font-weight: normal;
 }
-.link.stickied .thumbnail.self::before {
+.link.stickied .thumbnail.self:before {
   content: 'S';
   background: rgba(133, 153, 0, 0.5);
 }
@@ -1591,6 +1598,7 @@ ul.report-reasons > li.report-reason {
 }
 .commentarea > .usertext {
   clear: both;
+  overflow: visible;
 }
 .commentarea > .usertext > .usertext-edit {
   display: inline-block;
@@ -1601,7 +1609,7 @@ ul.report-reasons > li.report-reason {
   margin-top: 9px;
 }
 
-.nestedlisting .child .thing.comment.noncollapsed::before {
+.nestedlisting .child .thing.comment.noncollapsed:before {
   content: '';
   position: absolute;
   background: #c4c4c4;
@@ -1624,13 +1632,13 @@ ul.report-reasons > li.report-reason {
 .comment.spam, .comment.spam .child {
   background-color: transparent;
 }
-.comment.spam .entry::before {
+.comment.spam .entry:before {
   border-right-color: #f5b89f;
 }
 .comment.spam .entry .tagline {
   background: #f5b89f;
 }
-.comment.spam .entry .tagline time:first-of-type::after {
+.comment.spam .entry .tagline time:first-of-type:after {
   content: 'Spam';
   display: inline-block;
   background: #6c71c4;
@@ -1799,7 +1807,7 @@ ul.report-reasons > li.report-reason {
 .users-online {
   border-radius: 0 3px 3px 0;
 }
-.users-online::before {
+.users-online:before {
   display: none;
 }
 
@@ -1903,10 +1911,10 @@ ul.report-reasons > li.report-reason {
   color: #2177b4;
 }
 
-.titlebox .leavemoderator::before {
+.titlebox .leavemoderator:before {
   background-position: -16px -32px;
 }
-.titlebox form.leavecontributor-button::before {
+.titlebox form.leavecontributor-button:before {
   background-position: -96px -16px;
 }
 
@@ -1936,75 +1944,75 @@ ul.report-reasons > li.report-reason {
   background-position: -16px -32px;
 }
 
-.gilded-icon::before {
+.gilded-icon:before {
   background-position: 0 -48px;
 }
 
-.icon-menu .reddit-edit::before,
-.icon-menu .reddit-edited::before,
-.icon-menu .moderator-mail::before,
-.icon-menu .reddit-moderators::before,
-.icon-menu .reddit-contributors::before,
-.icon-menu .reddit-traffic::before,
-.icon-menu .reddit-modqueue::before,
-.icon-menu .reddit-reported::before,
-.icon-menu .reddit-spam::before,
-.icon-menu .reddit-ban::before,
-.icon-menu .reddit-flair::before,
-.icon-menu .reddit-moderationlog::before,
-.icon-menu .reddit-unmoderated::before,
-.icon-menu .edit-stylesheet::before,
-.icon-menu .wikiaction-revisions::before,
-.icon-menu .wikiaction-pages::before {
+.icon-menu .reddit-edit:before,
+.icon-menu .reddit-edited:before,
+.icon-menu .moderator-mail:before,
+.icon-menu .reddit-moderators:before,
+.icon-menu .reddit-contributors:before,
+.icon-menu .reddit-traffic:before,
+.icon-menu .reddit-modqueue:before,
+.icon-menu .reddit-reported:before,
+.icon-menu .reddit-spam:before,
+.icon-menu .reddit-ban:before,
+.icon-menu .reddit-flair:before,
+.icon-menu .reddit-moderationlog:before,
+.icon-menu .reddit-unmoderated:before,
+.icon-menu .edit-stylesheet:before,
+.icon-menu .wikiaction-revisions:before,
+.icon-menu .wikiaction-pages:before {
   vertical-align: middle;
   margin-right: 10px;
 }
-.icon-menu .reddit-edit::before {
+.icon-menu .reddit-edit:before {
   background-position: 0 -16px;
 }
-.icon-menu .reddit-edited::before {
+.icon-menu .reddit-edited:before {
   background-position: -48px -32px;
 }
-.icon-menu .reddit-moderators::before {
+.icon-menu .reddit-moderators:before {
   background-position: -16px -32px;
 }
-.icon-menu .reddit-contributors::before {
+.icon-menu .reddit-contributors:before {
   background-position: -96px -16px;
 }
-.icon-menu .reddit-traffic::before {
+.icon-menu .reddit-traffic:before {
   background-position: 0 -80px;
 }
-.icon-menu .reddit-modqueue::before {
+.icon-menu .reddit-modqueue:before {
   background-position: -32px -32px;
 }
-.icon-menu .reddit-reported::before {
+.icon-menu .reddit-reported:before {
   background-position: -32px -16px;
 }
-.icon-menu .reddit-spam::before {
+.icon-menu .reddit-spam:before {
   background-position: -16px 0;
 }
-.icon-menu .reddit-ban::before {
+.icon-menu .reddit-ban:before {
   background-position: -32px -80px;
 }
-.icon-menu .reddit-flair::before {
+.icon-menu .reddit-flair:before {
   background-position: -80px -32px;
 }
-.icon-menu .reddit-moderationlog::before {
+.icon-menu .reddit-moderationlog:before {
   background-position: -48px -16px;
 }
-.icon-menu .reddit-unmoderated::before {
+.icon-menu .reddit-unmoderated:before {
   background-position: -64px 0;
 }
-.icon-menu .edit-stylesheet::before {
+.icon-menu .edit-stylesheet:before {
   background-position: -96px -64px;
 }
-.icon-menu .wikiaction-revisions::before {
+.icon-menu .wikiaction-revisions:before {
   background-position: -32px 0;
 }
-.icon-menu .wikiaction-pages::before {
+.icon-menu .wikiaction-pages:before {
   background-position: -16px -80px;
 }
-.icon-menu .moderator-mail::before {
+.icon-menu .moderator-mail:before {
   margin-top: 0;
   margin-left: 0;
   background-position: -48px 0;
@@ -2086,7 +2094,7 @@ ul.report-reasons > li.report-reason {
   box-shadow: inset 0 -9px 3px #fff7d6;
   border-radius: 0;
 }
-.md.wiki > .toc::after {
+.md.wiki > .toc:after {
   content: '';
   position: absolute;
   height: 2px;
@@ -2099,7 +2107,7 @@ ul.report-reasons > li.report-reason {
   border-right: solid 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-.md.wiki > .toc::before {
+.md.wiki > .toc:before {
   content: 'CONTENTS';
   font-weight: bold;
   display: block;
@@ -2360,13 +2368,12 @@ table.diff tbody .diff_header:not([id]) {
 .res .drop-choices .RES-sort-button {
   font-size: 0;
 }
-.res .drop-choices .RES-sort-button::before {
+.res .drop-choices .RES-sort-button:before {
   content: 'temp';
   font-size: 13px;
 }
 .res #BigEditor .RESCloseButton,
-.res button.RESBigEditorPop,
-.res .markdownEditor .RESMacroDropdownTitle {
+.res button.RESBigEditorPop {
   font-size: 0 !important;
   width: 16px;
   height: 16px;
@@ -2375,16 +2382,14 @@ table.diff tbody .diff_header:not([id]) {
   text-indent: -100px;
   margin-right: 2px;
 }
-.res #BigEditor .RESCloseButton::before,
-.res button.RESBigEditorPop::before,
-.res .markdownEditor .RESMacroDropdownTitle::before {
+.res #BigEditor .RESCloseButton:before,
+.res button.RESBigEditorPop:before {
   content: '';
   position: absolute;
   left: 5px;
   top: 2px;
 }
-.res button.RESBigEditorPop,
-.res .markdownEditor .RESMacroDropdownTitle {
+.res button.RESBigEditorPop {
   position: relative;
 }
 .res button.RESBigEditorPop {
@@ -2397,7 +2402,7 @@ table.diff tbody .diff_header:not([id]) {
   clear: both;
   box-sizing: content-box;
 }
-.res button.RESBigEditorPop::before {
+.res button.RESBigEditorPop:before {
   top: 3px;
   left: 3px;
   background-position: -16px -48px;
@@ -2417,7 +2422,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res .commentingAs + .RESMacroWrappingSpan {
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 22px;
 }
 .res .BERight > h3,
@@ -2560,10 +2565,10 @@ table.diff tbody .diff_header:not([id]) {
 .res #BigEditor .RESCloseButton.RESFadeButton {
   right: 42px;
 }
-.res #BigEditor .RESCloseButton.RESFadeButton::before {
+.res #BigEditor .RESCloseButton.RESFadeButton:before {
   background-position: -96px -48px;
 }
-.res #BigEditor .RESCloseButton.close::before {
+.res #BigEditor .RESCloseButton.close:before {
   background-position: 0 -32px;
 }
 .res.wiki-page button.RESBigEditorPop {
@@ -2757,11 +2762,11 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .linklisting .link .entry .flat-list.buttons > .big-mod-buttons .pretty-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.res.res-nightmode .linklisting .link .thumbnail::before {
+.res.res-nightmode .linklisting .link .thumbnail:before {
   opacity: 0.6;
   box-shadow: none;
 }
-.res.res-nightmode .linklisting .link .thumbnail.default::before {
+.res.res-nightmode .linklisting .link .thumbnail.default:before {
   background: #333b46;
 }
 .res.res-nightmode .linklisting .link .thumbnail img {
@@ -2771,10 +2776,10 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .comment.noncollapsed > .entry, .res.res-nightmode .comment.noncollapsed > .RES-keyNav-activeElement.entry {
   background: #242a32 !important;
 }
-.res.res-nightmode .comment.noncollapsed > .RES-keyNav-activeElement.entry::after {
+.res.res-nightmode .comment.noncollapsed > .RES-keyNav-activeElement.entry:after {
   background-color: #BDD4E0;
 }
-.res.res-nightmode .comment.noncollapsed > .entry::before {
+.res.res-nightmode .comment.noncollapsed > .entry:before {
   border-right-color: #242a32;
 }
 .res.res-nightmode .comment.noncollapsed > .entry .tagline {
@@ -2789,6 +2794,17 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .linklisting .link:not(:first-child), .res.res-nightmode .linklisting > .comment {
   border-top: solid 1px #0a0c0e !important;
   box-shadow: inset 0 1px 0 #242a32;
+}
+
+.res.res-nightmode .menuarea .spacer > .drop-choices.lightdrop.inuse {
+  background: #353e49;
+  border: none;
+  color: #9e9e9e;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.res.res-nightmode .menuarea .spacer > .drop-choices.lightdrop.inuse a:hover {
+  background: #20252c;
 }
 
 .res.res-nightmode {
@@ -2830,9 +2846,9 @@ table.diff tbody .diff_header:not([id]) {
   border: none !important;
   box-shadow: inset 0 1px 0 #38404c;
 }
-.res.res-nightmode .fancy-settings + .tabmenu > li.selected > a, .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a::after,
+.res.res-nightmode .fancy-settings + .tabmenu > li.selected > a, .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a:after,
 .res.res-nightmode .formtab.tabmenu > li.selected > a,
-.res.res-nightmode .formtab.tabmenu > li.selected > a::after {
+.res.res-nightmode .formtab.tabmenu > li.selected > a:after {
   background: #292f37;
   color: #9e9e9e !important;
 }
@@ -2851,17 +2867,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .menuarea {
   color: #9e9e9e;
 }
-.res.res-nightmode .menuarea .spacer > .drop-choices.lightdrop.inuse {
-  background: #353e49;
-  border: none;
-  color: #9e9e9e;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-}
-.res.res-nightmode .menuarea .spacer > .drop-choices.lightdrop.inuse a:hover {
-  text-shadow: none;
-  background: #20252c;
-}
-.res.res-nightmode .menuarea .spacer > .dropdown.lightdrop > .selected::after {
+.res.res-nightmode .menuarea .spacer > .dropdown.lightdrop > .selected:after {
   border-top-color: #9e9e9e;
 }
 .res.res-nightmode .menuarea .spacer .toggle .option.active.error {
@@ -3040,7 +3046,7 @@ table.diff tbody .diff_header:not([id]) {
   color: #9e9e9e;
   border: none;
 }
-.res.res-nightmode .nestedlisting .thing.comment.noncollapsed::before {
+.res.res-nightmode .nestedlisting .thing.comment.noncollapsed:before {
   background: #242a32;
 }
 .res.res-nightmode .commentarea {
@@ -3050,7 +3056,7 @@ table.diff tbody .diff_header:not([id]) {
 .res.res-nightmode .comment.noncollapsed > .entry > .usertext.border {
   background: #2c3c47;
 }
-.res.res-nightmode .comment.noncollapsed.spam > .entry::before {
+.res.res-nightmode .comment.noncollapsed.spam > .entry:before {
   border-right-color: #461a08;
 }
 .res.res-nightmode .comment.noncollapsed.spam > .entry > .tagline {

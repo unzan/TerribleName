@@ -1,0 +1,78 @@
+#dashboardContents {
+  @extend %tn-background-reset;
+}
+
+.RESDashboardAddComponent {
+  @extend %tn-background-reset;
+}
+
+.RESDashboardComponent {
+  background: lighten($res-night-bg, 3%);
+  border: none;
+  @include shadow(0 1px 2px darken($res-night-bg, 5%));
+}
+
+#RESDashboardEditComponent {
+  border-color: darken($res-night-dashboard-widget-header-bg, 10%);
+}
+
+#RESDashboardEditComponent,
+.RESDashboardComponentHeader {
+  background-color: transparent !important;
+  border-bottom-color: darken($res-night-dashboard-widget-header-bg, 10%);
+  @include linear-gradient(top, $res-night-dashboard-widget-header-bg, darken($res-night-dashboard-widget-header-bg, 6%));
+  @include shadow(0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 lighten($res-night-dashboard-widget-header-bg, 10%));
+}
+
+a.widgetPath {
+  background: darken($res-night-dashboard-widget-header-bg, 10%);
+  color: $res-night-fg;
+  border: none;
+  @include shadow(none);
+}
+
+ul.widgetSortButtons {
+  > li {
+    @extend %tn-dark-button;
+    border-top: solid 1px $res-night-bg;
+    border-bottom: solid 1px $res-night-bg;
+
+    &:first-child {
+      border-left: solid 1px $res-night-bg;
+    }
+
+    &:last-child {
+      border-right: solid 1px $res-night-bg;
+    }
+
+    &.active,
+    &.active:hover {
+      @extend %tn-dark-button-pressed;
+    }
+  }
+}
+
+.widgetStateButtons {
+  > li {
+    &:not(.updateTime) {
+      @extend %tn-dark-button;
+      border: solid 1px $res-night-bg;
+    }
+
+    &.updateTime,
+    &.updateTime:hover {
+      color: inherit !important;
+      background: none;
+    }
+  }
+}
+
+.updateButton,
+.cancelButton,
+.addButton {
+  @extend %tn-dark-big-button;
+}
+
+.backToWidgetTypes {
+  color: $res-night-fg;
+}

@@ -1,0 +1,49 @@
+%tn-dark-menu-button {
+  @include linear-gradient(top, lighten($res-night-menu-bg, 10%), lighten($res-night-menu-bg, 4%));
+}
+
+.RESDropdownList {
+  @include linear-gradient(bottom, $res-night-menu-bg 97%, darken($res-night-menu-bg, 8%));
+
+  li {
+    background: none;
+
+    &:hover {
+      background: $res-night-menu-item-focused-bg;
+    }
+
+    a,
+    a:hover {
+      background: none !important;
+    }
+  }
+}
+
+#RESAccountSwitcherDropdown .addAccount {
+  @extend %tn-dark-menu-button;
+}
+
+#RESPrefsDropdown {
+  .toggleButton {
+    .toggleOn,
+    .toggleOff {
+      @extend %tn-dark-menu-button;
+    }
+  }
+}
+
+.RESMacroWrappingSpan {
+  > .RESMacroDropdownTitle {
+    border: none;
+    &.openMacro {
+      background: $res-night-dropdown-menu-bg;
+    }
+  }
+
+  > .RESMacroDropdown {
+    @extend %tn-dark-dropdown-menu;
+    li > a {
+      @extend %tn-dark-dropdown-item;
+    }
+  }
+}

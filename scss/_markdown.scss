@@ -110,7 +110,7 @@
         $nums: '#{$nums}#{$i}  ';
       }
 
-      &::before {
+      &:before {
         content: $nums;
         position: absolute;
         color: $line-num-fg;

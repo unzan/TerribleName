@@ -1,5 +1,5 @@
 .nestedlisting {
-  .thing.comment.noncollapsed::before {
+  .thing.comment.noncollapsed:before {
     background: lighten($res-night-bg, 8%);
   }
 }
@@ -33,7 +33,7 @@
     }
 
     &.spam > .entry {
-      &::before {
+      &:before {
         border-right-color: $res-night-spam-tagline-bg;
       }
 

@@ -17,8 +17,8 @@
  * [3]: http://de.wikipedia.org/wiki/Benutzer:Schaengel
  */
 @namespace url(http://www.w3.org/1999/xhtml);
-@-moz-document domain("reddit.com") {
-  .res.res-nightmode.moderator .tabpane-content .linefield, .res.res-nightmode .login-form-side .submit {
+@-moz-document domain(reddit.com) {
+  .res.res-nightmode.moderator .tabpane-content .linefield, .res.res-nightmode .login-form-side .submit, .res.res-nightmode #dashboardContents, .res.res-nightmode .RESDashboardAddComponent {
     background: none;
   }
 
@@ -106,7 +106,9 @@
   .res.res-nightmode .menuarea .flat-list > li a,
   .res.res-nightmode .explore-item .fancy-toggle-button.toggle > .option.active,
   .res.res-nightmode .explore-item .explore-feedback-dismiss,
-  .res.res-nightmode .titlebox > .bottom > a[href*="/compose/"] {
+  .res.res-nightmode .titlebox > .bottom > a[href*="/compose/"],
+  .res.res-nightmode ul.widgetSortButtons > li,
+  .res.res-nightmode .widgetStateButtons > li:not(.updateTime) {
     color: #9e9e9e !important;
     border: none;
     text-shadow: 0 1px 1px #15181d;
@@ -138,13 +140,15 @@
   .res.res-nightmode .menuarea .flat-list > li a:hover,
   .res.res-nightmode .explore-item .fancy-toggle-button.toggle > .option.active:hover,
   .res.res-nightmode .explore-item .explore-feedback-dismiss:hover,
-  .res.res-nightmode .titlebox > .bottom > a[href*="/compose/"]:hover {
+  .res.res-nightmode .titlebox > .bottom > a[href*="/compose/"]:hover,
+  .res.res-nightmode ul.widgetSortButtons > li:hover,
+  .res.res-nightmode .widgetStateButtons > li:hover:not(.updateTime) {
     background: -webkit-linear-gradient(top, #3c4552, #262c35);
     background: -moz-linear-gradient(top, #3c4552, #262c35);
     background: linear-gradient(top, #3c4552, #262c35);
   }
 
-  .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current, .res.res-nightmode .menuarea .flat-list > li.selected > a, .res.res-nightmode .explore-item .fancy-toggle-button.toggle > .option.remove,
+  .res.res-nightmode .flairselector.drop-choices.active .flairoptionpane ul > li:active, .res.res-nightmode.wiki-page .pageactions > .wikiaction.wikiaction-current, .res.res-nightmode .menuarea .flat-list > li.selected > a, .res.res-nightmode .explore-item .fancy-toggle-button.toggle > .option.remove, .res.res-nightmode ul.widgetSortButtons > li.active, .res.res-nightmode ul.widgetSortButtons > li.active:hover,
   .res.res-nightmode .menuarea .spacer > .dropdown.lightdrop:active,
   .res.res-nightmode .menuarea .spacer > .toggle .togglebutton:active,
   .res.res-nightmode .nav-buttons .nextprev a:active,
@@ -166,7 +170,9 @@
   .res.res-nightmode .menuarea .flat-list > li a:active,
   .res.res-nightmode .explore-item .fancy-toggle-button.toggle > .option.active:active,
   .res.res-nightmode .explore-item .explore-feedback-dismiss:active,
-  .res.res-nightmode .titlebox > .bottom > a[href*="/compose/"]:active {
+  .res.res-nightmode .titlebox > .bottom > a[href*="/compose/"]:active,
+  .res.res-nightmode ul.widgetSortButtons > li:active,
+  .res.res-nightmode .widgetStateButtons > li:active:not(.updateTime) {
     box-shadow: inset 0 2px 3px #0a0c0e, 0 1px 0 #3e4855;
   }
 
@@ -177,21 +183,27 @@
   .res.res-nightmode .side .settings > .delete > button, .res.res-nightmode .side.public .settings > .share-in-sr,
   .res.res-nightmode .side form.copy-multi button.copy,
   .res.res-nightmode .side form.rename-multi button.rename,
-  .res.res-nightmode .side .delete.confirm-button > button, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button, .res.res-nightmode #explore-settings button, .res.res-nightmode .RESshortcutside:hover,
+  .res.res-nightmode .side .delete.confirm-button > button, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button, .res.res-nightmode #explore-settings button, .res.res-nightmode .updateButton,
+  .res.res-nightmode .cancelButton,
+  .res.res-nightmode .addButton, .res.res-nightmode .RESshortcutside:hover,
   .res.res-nightmode .RESDashboardToggle:hover,
   .res.res-nightmode .morelink a:hover,
   .res.res-nightmode .res-nightmode button:hover, .res.res-nightmode body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:hover, .res.res-nightmode .side .settings > button:hover,
   .res.res-nightmode .side .settings > .delete > button:hover, .res.res-nightmode .side.public .settings > .share-in-sr:hover,
   .res.res-nightmode .side form.copy-multi button.copy:hover,
   .res.res-nightmode .side form.rename-multi button.rename:hover,
-  .res.res-nightmode .side .delete.confirm-button > button:hover, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:hover, .res.res-nightmode #explore-settings button:hover, .res.res-nightmode .RESshortcutside:focus,
+  .res.res-nightmode .side .delete.confirm-button > button:hover, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:hover, .res.res-nightmode #explore-settings button:hover, .res.res-nightmode .updateButton:hover,
+  .res.res-nightmode .cancelButton:hover,
+  .res.res-nightmode .addButton:hover, .res.res-nightmode .RESshortcutside:focus,
   .res.res-nightmode .RESDashboardToggle:focus,
   .res.res-nightmode .morelink a:focus,
   .res.res-nightmode .res-nightmode button:focus, .res.res-nightmode body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:focus, .res.res-nightmode .side .settings > button:focus,
   .res.res-nightmode .side .settings > .delete > button:focus, .res.res-nightmode .side.public .settings > .share-in-sr:focus,
   .res.res-nightmode .side form.copy-multi button.copy:focus,
   .res.res-nightmode .side form.rename-multi button.rename:focus,
-  .res.res-nightmode .side .delete.confirm-button > button:focus, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:focus, .res.res-nightmode #explore-settings button:focus {
+  .res.res-nightmode .side .delete.confirm-button > button:focus, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:focus, .res.res-nightmode #explore-settings button:focus, .res.res-nightmode .updateButton:focus,
+  .res.res-nightmode .cancelButton:focus,
+  .res.res-nightmode .addButton:focus {
     background: -webkit-linear-gradient(top, #405666, #344653);
     background: -moz-linear-gradient(top, #405666, #344653);
     background: linear-gradient(top, #405666, #344653);
@@ -203,7 +215,9 @@
   .res.res-nightmode .side .settings > .delete > button:active, .res.res-nightmode .side.public .settings > .share-in-sr:active,
   .res.res-nightmode .side form.copy-multi button.copy:active,
   .res.res-nightmode .side form.rename-multi button.rename:active,
-  .res.res-nightmode .side .delete.confirm-button > button:active, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:active, .res.res-nightmode #explore-settings button:active {
+  .res.res-nightmode .side .delete.confirm-button > button:active, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:active, .res.res-nightmode #explore-settings button:active, .res.res-nightmode .updateButton:active,
+  .res.res-nightmode .cancelButton:active,
+  .res.res-nightmode .addButton:active {
     background: -webkit-linear-gradient(top, #405666, #2c3c47);
     background: -moz-linear-gradient(top, #405666, #2c3c47);
     background: linear-gradient(top, #405666, #2c3c47);
@@ -288,11 +302,11 @@
   .res.res-nightmode .explore-item .entry .flat-list.buttons > .big-mod-buttons .pretty-button:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
-  .res.res-nightmode .linklisting .link .thumbnail::before, .res.res-nightmode .organic-listing .link .thumbnail::before, .res.res-nightmode .explore-item .thumbnail::before {
+  .res.res-nightmode .linklisting .link .thumbnail:before, .res.res-nightmode .organic-listing .link .thumbnail:before, .res.res-nightmode .explore-item .thumbnail:before {
     opacity: 0.6;
     box-shadow: none;
   }
-  .res.res-nightmode .linklisting .link .thumbnail.default::before, .res.res-nightmode .organic-listing .link .thumbnail.default::before, .res.res-nightmode .explore-item .thumbnail.default::before {
+  .res.res-nightmode .linklisting .link .thumbnail.default:before, .res.res-nightmode .organic-listing .link .thumbnail.default:before, .res.res-nightmode .explore-item .thumbnail.default:before {
     background: #333b46;
   }
   .res.res-nightmode .linklisting .link .thumbnail img, .res.res-nightmode .organic-listing .link .thumbnail img, .res.res-nightmode .explore-item .thumbnail img {
@@ -302,10 +316,10 @@
   .res.res-nightmode .comment.noncollapsed > .entry, .res.res-nightmode .message.noncollapsed > .entry, .res.res-nightmode .comment.noncollapsed > .RES-keyNav-activeElement.entry, .res.res-nightmode .message.noncollapsed > .RES-keyNav-activeElement.entry {
     background: #242a32 !important;
   }
-  .res.res-nightmode .comment.noncollapsed > .RES-keyNav-activeElement.entry::after, .res.res-nightmode .message.noncollapsed > .RES-keyNav-activeElement.entry::after {
+  .res.res-nightmode .comment.noncollapsed > .RES-keyNav-activeElement.entry:after, .res.res-nightmode .message.noncollapsed > .RES-keyNav-activeElement.entry:after {
     background-color: #BDD4E0;
   }
-  .res.res-nightmode .comment.noncollapsed > .entry::before, .res.res-nightmode .message.noncollapsed > .entry::before {
+  .res.res-nightmode .comment.noncollapsed > .entry:before, .res.res-nightmode .message.noncollapsed > .entry:before {
     border-right-color: #242a32;
   }
   .res.res-nightmode .comment.noncollapsed > .entry .tagline, .res.res-nightmode .message.noncollapsed > .entry .tagline {
@@ -317,9 +331,20 @@
     border-top-color: #353e49;
   }
 
-  .res.res-nightmode .linklisting .link:not(:first-child), .res.res-nightmode .linklisting > .comment, .res.res-nightmode .messages-page > .content > .sitetable > .message {
+  .res.res-nightmode .linklisting .link:not(:first-child), .res.res-nightmode .linklisting > .comment, .res.res-nightmode div:not(.child) > .listing > .message {
     border-top: solid 1px #0a0c0e !important;
     box-shadow: inset 0 1px 0 #242a32;
+  }
+
+  .res.res-nightmode .menuarea .spacer > .drop-choices.lightdrop.inuse, .res.res-nightmode .RESMacroWrappingSpan > .RESMacroDropdown {
+    background: #353e49;
+    border: none;
+    color: #9e9e9e;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .res.res-nightmode .menuarea .spacer > .drop-choices.lightdrop.inuse a:hover, .res.res-nightmode .RESMacroWrappingSpan > .RESMacroDropdown li > a:hover {
+    background: #20252c;
   }
 
   .res.res-nightmode {
@@ -361,9 +386,9 @@
     border: none !important;
     box-shadow: inset 0 1px 0 #38404c;
   }
-  .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a, .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a::after,
+  .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a, .res.res-nightmode .fancy-settings + .tabmenu > li.selected > a:after,
   .res.res-nightmode .formtab.tabmenu > li.selected > a,
-  .res.res-nightmode .formtab.tabmenu > li.selected > a::after {
+  .res.res-nightmode .formtab.tabmenu > li.selected > a:after {
     background: #292f37;
     color: #9e9e9e !important;
   }
@@ -382,17 +407,7 @@
   .res.res-nightmode .menuarea {
     color: #9e9e9e;
   }
-  .res.res-nightmode .menuarea .spacer > .drop-choices.lightdrop.inuse {
-    background: #353e49;
-    border: none;
-    color: #9e9e9e;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-  }
-  .res.res-nightmode .menuarea .spacer > .drop-choices.lightdrop.inuse a:hover {
-    text-shadow: none;
-    background: #20252c;
-  }
-  .res.res-nightmode .menuarea .spacer > .dropdown.lightdrop > .selected::after {
+  .res.res-nightmode .menuarea .spacer > .dropdown.lightdrop > .selected:after {
     border-top-color: #9e9e9e;
   }
   .res.res-nightmode .menuarea .spacer .toggle .option.active.error {
@@ -571,7 +586,7 @@
     color: #9e9e9e;
     border: none;
   }
-  .res.res-nightmode .nestedlisting .thing.comment.noncollapsed::before {
+  .res.res-nightmode .nestedlisting .thing.comment.noncollapsed:before {
     background: #242a32;
   }
   .res.res-nightmode .commentarea {
@@ -581,7 +596,7 @@
   .res.res-nightmode .comment.noncollapsed > .entry > .usertext.border {
     background: #2c3c47;
   }
-  .res.res-nightmode .comment.noncollapsed.spam > .entry::before {
+  .res.res-nightmode .comment.noncollapsed.spam > .entry:before {
     border-right-color: #461a08;
   }
   .res.res-nightmode .comment.noncollapsed.spam > .entry > .tagline {
@@ -793,6 +808,33 @@
     border-bottom: solid 1px #0a0c0e !important;
     box-shadow: inset 0 1px 0 #242a32, 0 1px 0 #242a32;
   }
+  .res.res-nightmode #RESAccountSwitcherDropdown .addAccount, .res.res-nightmode #RESPrefsDropdown .toggleButton .toggleOn,
+  .res.res-nightmode #RESPrefsDropdown .toggleButton .toggleOff {
+    background: -webkit-linear-gradient(top, #424d5b, #353e49);
+    background: -moz-linear-gradient(top, #424d5b, #353e49);
+    background: linear-gradient(top, #424d5b, #353e49);
+  }
+  .res.res-nightmode .RESDropdownList {
+    background: -webkit-linear-gradient(bottom, #2d343d 97%, #1c2026);
+    background: -moz-linear-gradient(bottom, #2d343d 97%, #1c2026);
+    background: linear-gradient(bottom, #2d343d 97%, #1c2026);
+  }
+  .res.res-nightmode .RESDropdownList li {
+    background: none;
+  }
+  .res.res-nightmode .RESDropdownList li:hover {
+    background: #3c4552;
+  }
+  .res.res-nightmode .RESDropdownList li a,
+  .res.res-nightmode .RESDropdownList li a:hover {
+    background: none !important;
+  }
+  .res.res-nightmode .RESMacroWrappingSpan > .RESMacroDropdownTitle {
+    border: none;
+  }
+  .res.res-nightmode .RESMacroWrappingSpan > .RESMacroDropdownTitle.openMacro {
+    background: #353e49;
+  }
   .res.res-nightmode body.with-listing-chooser .listing-chooser {
     background: #111417;
     box-shadow: 1px 0 0 #242a32;
@@ -820,7 +862,7 @@
     background: -moz-linear-gradient(top, #333b46, #242a32);
     background: linear-gradient(top, #333b46, #242a32);
   }
-  .res.res-nightmode body.with-listing-chooser .listing-chooser li.selected::before {
+  .res.res-nightmode body.with-listing-chooser .listing-chooser li.selected:before {
     border-left-color: #BDD4E0;
   }
   .res.res-nightmode body.with-listing-chooser .listing-chooser li.selected a {
@@ -848,13 +890,13 @@
     width: 0.7em !important;
     text-shadow: none;
   }
-  .res.res-nightmode .multi-selector::before {
+  .res.res-nightmode .multi-selector:before {
     border: none !important;
   }
-  .res.res-nightmode .multi-selector.anchor-left::after {
+  .res.res-nightmode .multi-selector.anchor-left:after {
     border-right-color: #292f37;
   }
-  .res.res-nightmode .multi-selector.anchor-right::after {
+  .res.res-nightmode .multi-selector.anchor-right:after {
     border-left-color: #292f37;
   }
   .res.res-nightmode .multi-selector strong {
@@ -886,10 +928,10 @@
     border: none !important;
     box-shadow: none !important;
   }
-  .res.res-nightmode .organic-listing .nextprev .arrow.prev::before {
+  .res.res-nightmode .organic-listing .nextprev .arrow.prev:before {
     border-right-color: #8ba5ba;
   }
-  .res.res-nightmode .organic-listing .nextprev .arrow.next::before {
+  .res.res-nightmode .organic-listing .nextprev .arrow.next:before {
     border-left-color: #8ba5ba;
   }
   .res.res-nightmode .trending-subreddits > .trending-subreddits-content > strong,
@@ -939,5 +981,48 @@
   }
   .res.res-nightmode .server-seconds em {
     color: #b7b7b7;
+  }
+  .res.res-nightmode .RESDashboardComponent {
+    background: #191d23;
+    border: none;
+    box-shadow: 0 1px 2px #080a0b;
+  }
+  .res.res-nightmode #RESDashboardEditComponent {
+    border-color: #20252c;
+  }
+  .res.res-nightmode #RESDashboardEditComponent,
+  .res.res-nightmode .RESDashboardComponentHeader {
+    background-color: transparent !important;
+    border-bottom-color: #20252c;
+    background: -webkit-linear-gradient(top, #353e49, #292f37);
+    background: -moz-linear-gradient(top, #353e49, #292f37);
+    background: linear-gradient(top, #353e49, #292f37);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 #4b5767;
+  }
+  .res.res-nightmode a.widgetPath {
+    background: #20252c;
+    color: #9e9e9e;
+    border: none;
+    box-shadow: none;
+  }
+  .res.res-nightmode ul.widgetSortButtons > li {
+    border-top: solid 1px #13161A;
+    border-bottom: solid 1px #13161A;
+  }
+  .res.res-nightmode ul.widgetSortButtons > li:first-child {
+    border-left: solid 1px #13161A;
+  }
+  .res.res-nightmode ul.widgetSortButtons > li:last-child {
+    border-right: solid 1px #13161A;
+  }
+  .res.res-nightmode .widgetStateButtons > li:not(.updateTime) {
+    border: solid 1px #13161A;
+  }
+  .res.res-nightmode .widgetStateButtons > li.updateTime, .res.res-nightmode .widgetStateButtons > li.updateTime:hover {
+    color: inherit !important;
+    background: none;
+  }
+  .res.res-nightmode .backToWidgetTypes {
+    color: #9e9e9e;
   }
 }

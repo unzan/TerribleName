@@ -130,12 +130,12 @@
   }
 
   .thumbnail {
-    &::before {
+    &:before {
       opacity: 0.6;
       @include shadow(none);
     }
 
-    &.default::before {
+    &.default:before {
       background: lighten($res-night-bg, 15%);
     }
 
@@ -151,11 +151,11 @@
     background: $res-night-comment-bg !important;
   }
 
-  &.RES-keyNav-activeElement::after {
+  &.RES-keyNav-activeElement:after {
     background-color: $res-night-active-element-color;
   }
 
-  &::before {
+  &:before {
     border-right-color: $res-night-comment-bg;
   }
 
@@ -173,4 +173,17 @@
 %tn-dark-list-entry-separator {
   border-top: solid 1px darken($res-night-bg, 4%) !important;
   @include shadow(inset 0 1px 0 lighten($res-night-bg, 8%));
+}
+
+%tn-dark-dropdown-menu {
+  background: $res-night-dropdown-menu-bg;
+  border: none;
+  color: $res-night-dropdown-menu-fg;
+  @include shadow(0 3px  5px rgba(0, 0, 0, 0.4));
+}
+
+%tn-dark-dropdown-item {
+  &:hover {
+    background: $res-night-dropdown-item-focused-bg;
+  }
 }

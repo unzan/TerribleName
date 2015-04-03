@@ -101,7 +101,7 @@
 
 .drop-choices .RES-sort-button {
   font-size: 0;
-  &::before {
+  &:before {
     content: 'temp';
     font-size: $normal-font-size;
   }

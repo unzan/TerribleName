@@ -123,17 +123,18 @@
       background: $inbox-own-message-tagline-bg;
     }
 
-    &.noncollapsed > .entry::before {
+    &.noncollapsed > .entry:before {
       border-right-color: $inbox-own-message-tagline-bg;
     }
   }
 }
 
-.messages-page {
-  > .content > .sitetable > .message {
-    @extend %tn-list-entry-separator;
-    > .child {
-        margin-left: 20px !important;
-    }
+// we use div:not(.child) so the rules will apply to RES message widget in
+// dashboard too without having to add specific selector for messages
+// in that page
+div:not(.child) > .listing > .message {
+  @extend %tn-list-entry-separator;
+  > .child {
+      margin-left: 20px !important;
   }
 }

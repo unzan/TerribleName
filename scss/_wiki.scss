@@ -113,7 +113,7 @@
   @include shadow(inset 0 -9px 3px lighten($toc-bg, 2%));
   @include rounded(0);
 
-  &::after {
+  &:after {
     content: '';
     position: absolute;
     height: 2px;
@@ -127,7 +127,7 @@
     @include shadow(0 1px 1px rgba(0, 0, 0, 0.2));
   }
 
-  &::before {
+  &:before {
     content: 'CONTENTS';
     font-weight: bold;
     display: block;

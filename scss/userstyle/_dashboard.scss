@@ -1,0 +1,166 @@
+.redditname {
+  > a[href$="/r/Dashboard/"],
+  > .dashboardTab {
+    @extend %tn-menu-bar-item;
+    border: none;
+    float: left;
+    opacity: 1;
+
+    &.active {
+      @extend %tn-menu-bar-item-active;
+    }
+  }
+}
+
+.RESDashboardComponent {
+  @extend %tn-form-group;
+  padding: 0;
+
+  input[type=text] {
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+}
+
+
+#RESDashboardEditComponent {
+  border-color: $default-border-color;
+}
+
+#RESDashboardEditComponent,
+.RESDashboardComponentHeader {
+  overflow: hidden;
+  vertical-align: middle;
+  border-bottom: solid 1px $default-border-color;
+  @include linear-gradient(top, $dashboard-widget-header-bg, darken($dashboard-widget-header-bg, 3%));
+  @include shadow(inset 0 1px 0 $box-bg, 0 2px 4px darken($box-bg, 15%));
+  @include rounded(3px 3px 0 0);
+
+  ul {
+    @extend %tn-font-reset;
+    > li {
+      height: auto;
+    }
+  }
+}
+
+a.widgetPath {
+  @extend %tn-font-reset;
+  margin: 4px 10px 0 6px;
+  width: auto;
+  padding: 2px 6px;
+  border: solid 1px $default-border-color;
+  @include rounded(3px);
+  @include linear-gradient(top, $dashboard-widget-title-bg, darken($dashboard-widget-title-bg, 10%));
+  @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 $box-bg);
+}
+
+ul.widgetSortButtons {
+  > li {
+    @extend %tn-switch-button;
+
+    &:first-child {
+      @extend %tn-switch-button-round-left;
+    }
+
+    &:last-child {
+      @extend %tn-switch-button-round-right;
+    }
+
+    &.active {
+      @extend %tn-switch-button-active;
+    }
+  }
+}
+
+.widgetStateButtons {
+  float: right;
+  // position: absolute;
+  // right: 3px;
+  // top: 3px;
+
+  > li {
+    width: auto !important;
+
+    &:not(.updateTime) {
+      @extend %tn-small-button;
+    }
+
+    &.updateTime {
+      color: $main-fg;
+    }
+
+    &.minimize {
+      font-size: $normal-font-size;
+      // &:before {
+      //   content: '\2212';
+      //   font-size: $normal-font-size;
+      // }
+    }
+
+    &.editButton {
+      &:before {
+        content: 'Edit';
+      }
+    }
+
+    &.refresh {
+      > div {
+        display: none;
+      }
+
+      &:before {
+        content: 'Refresh';
+      }
+    }
+  }
+}
+
+.editWidget,
+.addNewWidget {
+  margin-top: 5px;
+  @extend %tn-font-reset;
+}
+
+.cancelButton,
+.addButton {
+  @extend %tn-button;
+}
+
+.updateButton,
+.cancelButton,
+.addButton {
+  @extend %tn-font-reset;
+  margin: 0 2px;
+  line-height: 1.5em !important;
+  text-transform: lowercase;
+}
+
+.cancelButton {
+  width: 4em !important;
+}
+
+#RESDashboardAddComponent {
+  @extend %tn-background-force-reset;
+  border: none;
+  @include shadow(none);
+
+  > div {
+    height: auto !important;
+  }
+
+}
+
+#addUser {
+  height: auto;
+}
+
+.backToWidgetTypes {
+  @extend %tn-font-reset;
+  margin: 0 6px 0 0;
+  vertical-align: middle;
+}
+
+.editRedditForm {
+  margin-top: 3px;
+}
