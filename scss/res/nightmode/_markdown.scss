@@ -1,10 +1,17 @@
+.thing .md {
+  a:not(.userTagLink):not(.noKeyNav):not(.expando-button) {
+    background: none !important;
+  }
+
+  em {
+    background: none !important;
+    color: inherit;
+  }
+}
+
 .md {
   a {
     @extend %tn-alt-link;
-  }
-
-  a:not(.userTagLink):not(.noKeyNav):not(.expando-button) {
-    background: none !important;
   }
 
   p,
@@ -16,7 +23,6 @@
   tbody,
   tr,
   td,
-  em,
   h1,
   h2,
   h3,

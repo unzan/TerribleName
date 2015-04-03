@@ -80,3 +80,10 @@
     }
   }
 }
+
+.res-nightmode .side .md h3 + ul a {
+  background-color: lighten($res-night-bg, 4%);
+  &:hover {
+    background-color: lighten($res-night-bg, 8%);
+  }
+}

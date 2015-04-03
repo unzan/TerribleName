@@ -266,3 +266,13 @@ $res-night-new-comment-bg: darken($dark-blue-gray, 7%);
 $res-night-new-comment-border-color: lighten($res-night-new-comment-bg, 6%);
 $res-night-spam-tagline-bg: darken($misc-spam-tagline-bg, 64%);
 $res-night-report-tag-bg: $dark-red;
+
+$menu-bg: lighten($menu-bar-bg, 2%);
+$menu-fg: $menu-bar-fg;
+$menu-item-focused-fg: $sr-dropdown-selected-fg;
+$menu-item-focused-bg: $sr-dropdown-selected-bg;
+$menu-enabled-fg: lighten($green, 5%);
+$menu-disabled-fg: $red;
+$res-night-menu-bg: lighten($res-night-menu-bar-bg, 2%);
+$res-night-menu-item-focused-bg: lighten($res-night-menu-bg, 7%);
+

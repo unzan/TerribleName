@@ -5,6 +5,7 @@
   @import "res/normal/list";
   @import "res/normal/comment";
   @import "res/normal/editor";
+  @import "res/normal/menu";
 
   &.res-commentBoxes .comments-page .nestedlisting {
     @import "res/comment_reset";
@@ -27,6 +28,7 @@
   @import "res/nightmode/markdown";
   @import "res/nightmode/editor";
   @import "res/nightmode/footer";
+  @import "res/nightmode/menu";
 }
 
 @if $res-nightmode-compatible == yes {
