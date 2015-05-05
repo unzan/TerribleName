@@ -122,9 +122,9 @@ $sr-dropdown-selected-fg: $white;
 $new-message-count-bg: $accent;
 $new-message-count-fg: $white;
 
-$sponsored-tag-bg: $bright-yellow;
 $special-entry-bg: #1A242C;
 $special-entry-fg: $main-fg;
+$sponsored-tag-bg: lighten($special-entry-bg, 10%);
 $sidebar-fg: $main-fg;
 $sidebar-toolbox-title-bg: darken($main-bg, 3%);
 $sidebar-toolbox-bg: lighten($main-bg, 6%);
@@ -237,7 +237,6 @@ $res-night-dropdown-menu-bg: $res-night-button-bg;
 $res-night-dropdown-menu-fg: $res-night-button-fg;
 $res-night-dropdown-item-focused-bg: darken($res-night-button-bg, 10%);
 $res-night-dropdown-item-focused-fg: $res-night-button-fg;
-$sponsored-tag-bg: $bright-yellow;
 $res-night-text-bg: lighten($res-night-bg, 8%);
 $res-night-text-fg: $res-night-fg;
 $res-night-input-bg: lighten($res-night-bg, 5%);
