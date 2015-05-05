@@ -1,11 +1,11 @@
 .footer {
-  border-top: solid 1px rgba(0, 0, 0, 0.2);
-  border-bottom: solid 1px rgba(255, 255, 255, 0.7);
+  border-top: solid 1px darken($main-bg, 4%);
+  border-bottom: solid 1px darken($main-bg, 4%);
   border-left: none;
   border-right: none;
   overflow: hidden;
   padding: 2em 0;
-  @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 -1px 0 rgba(0, 0, 0, 0.2));
+  @include shadow(inset 0 1px 0 lighten($main-bg, 8%), 0 1px 0 lighten($main-bg, 8%));
 
   &.rounded {
     @include rounded(0);

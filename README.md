@@ -1,9 +1,7 @@
-Terrible Name
-=============
+Terrible Name: Dark Version
+==========================
 
-Terrible Name is a custom reddit theme written in [SCSS][].
-It's available as subreddit theme and userstyles.
-You can see a demo of subreddit theme in [/r/TerribleName][subreddit].
+This is dark only version of Terrible Name.
 
 Screenshots
 -----------

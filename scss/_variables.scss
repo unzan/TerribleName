@@ -117,7 +117,7 @@ $sr-header-fg: darken($gray, 40%);
 $sr-header-bg: rgba(0, 0, 0, 0.8);
 $sr-dropdown-bg: $black;
 $sr-dropdown-fg: $sr-header-fg;
-$sr-dropdown-selected-bg: $focus-color;
+$sr-dropdown-selected-bg: $dark-blue-gray;
 $sr-dropdown-selected-fg: $white;
 $new-message-count-bg: $accent;
 $new-message-count-fg: $white;
@@ -162,8 +162,8 @@ $deleted-comment-bg: none;
 $highlighted-comment-bg: $bright-yellow;
 
 // and these two are for new comment highlight feature of gold members/moderators
-$new-comment-bg: desaturate(lighten($cyan, 50%), 20%);
-$new-comment-border-color: darken($new-comment-bg, 10%);
+$new-comment-bg: darken($dark-blue-gray, 7%);
+$new-comment-border-color: lighten($new-comment-bg, 6%);
 
 $comment-textbox-width: 520px;
 $upvote-color: lighten($accent, 10%);
