@@ -2,18 +2,18 @@
 
 $logo-image: '../image/logo.png';
 @if env(ASSETS) == remote {
-  $main-bg-image: 'http://i.imgur.com/l6K6XJU.jpg';
+  $main-bg-image: 'http://i.imgur.com/zunAMnr.jpg';
   $header-bg-image: 'http://i.imgur.com/kfumYVX.jpg';
   $icon-image: 'http://i.imgur.com/MJ7y1Zy.png';
   $res-night-bg-image: 'http://i.imgur.com/zunAMnr.jpg';
   $logo-image: 'http://i.imgur.com/1yRy1Sk.png';
 }
 
-$multireddits-bg: rgba(0, 0, 0, 0.9);
+$multireddits-bg: darken($main-bg, 1%);
 $multireddits-grippy-bg: none;
-$multireddits-intro-bg: rgba($yellow, 0.4);
+$multireddits-intro-bg: #1C2C38;
 $multireddits-intro-fg: $menu-bar-fg;
-$multireddits-selected-color: $orange;
+$multireddits-selected-color: $focus-color;
 $multireddits-entry-bg: $menu-bar-bg;
 $multireddits-entry-fg: $menu-bar-fg;
 $multireddits-selected-entry-bg: lighten($multireddits-entry-bg, 5%);
@@ -31,7 +31,7 @@ $explore-comment-color: $blue;
 $menu-bg: lighten($menu-bar-bg, 2%);
 $menu-fg: $menu-bar-fg;
 $menu-item-focused-fg: $sr-dropdown-selected-fg;
-$menu-item-focused-bg: $sr-dropdown-selected-bg;
+$menu-item-focused-bg: lighten($menu-bg, 7%);
 $menu-enabled-fg: lighten($green, 5%);
 $menu-disabled-fg: $red;
 

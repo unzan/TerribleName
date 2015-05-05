@@ -29,15 +29,16 @@
     background: none !important;
   }
 
-  a, .thing .title, .link .tagline a, .md a {
-    color: #2177b4;
+  a, .thing .title, .tagline a, .md a, .morerecursion a,
+  .morechildren a, .hover-bubble.multi-selector a {
+    color: #5590af;
   }
-  a:visited, .thing .title:visited, .link .tagline a:visited {
-    color: #5358ba;
+  a:visited, .thing .title:visited, .hover-bubble.multi-selector a:visited {
+    color: #858697;
   }
 
   #header {
-    background: #111 url("http://i.imgur.com/kfumYVX.jpg") 0 0 no-repeat !important;
+    background: #262c35 url("http://i.imgur.com/kfumYVX.jpg") 0 0 no-repeat !important;
   }
 
   #header .tabmenu > li > a, .res .redditname > a[href$="/r/Dashboard/"],
@@ -69,12 +70,12 @@
     border: none;
     display: block;
     height: 3px;
-    background: #b7b7b7;
+    background: black;
   }
 
   .link .usertext-body .md, .linklisting > .link.comment .usertext-body .md, .link.thing.subreddit .usertext-body .md, .comment.noncollapsed > .entry, .message.noncollapsed > .entry, .wiki-page .wiki-page-content .md.wiki {
-    background: #fff;
-    color: #111;
+    background: #242a32;
+    color: #9e9e9e;
     border: none;
     padding: 4px 15px;
     border-radius: 3px;
@@ -92,12 +93,12 @@
   .flair {
     display: inline-block;
     font-size: 13px !important;
-    border: solid 1px #e0ce85;
+    border: none;
     line-height: 1.2em;
     padding: 1px 4px;
     vertical-align: middle;
-    background-color: #FFF5CC;
-    color: #111;
+    background-color: #333b46;
+    color: #9e9e9e;
   }
 
   button,
@@ -122,9 +123,9 @@
     border: none;
     text-align: center;
     margin-right: 3px;
-    background: -webkit-linear-gradient(top, #cb4b16, #af4113);
-    background: -moz-linear-gradient(top, #cb4b16, #af4113);
-    background: linear-gradient(top, #cb4b16, #af4113);
+    background: -webkit-linear-gradient(top, #405666, #344653);
+    background: -moz-linear-gradient(top, #405666, #344653);
+    background: linear-gradient(top, #405666, #344653);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3);
     border-radius: 4px;
   }
@@ -144,9 +145,9 @@
   .res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus, .res .cancelButton:focus,
   .res .addButton:focus {
     color: #fff;
-    background: -webkit-linear-gradient(top, #e25418, #b44214);
-    background: -moz-linear-gradient(top, #e25418, #b44214);
-    background: linear-gradient(top, #e25418, #b44214);
+    background: -webkit-linear-gradient(top, #486173, #384b59);
+    background: -moz-linear-gradient(top, #486173, #384b59);
+    background: linear-gradient(top, #486173, #384b59);
   }
   button:active,
   input[type=submit]:active, .multi-details .settings > button:active,
@@ -156,10 +157,10 @@
   #compose-message button#send:active, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:active, .multi-details .settings > .delete.confirm-button > .confirmation > button:active, .profile-page .expand-summary:active, .res .RESshortcutside:active,
   .res .RESDashboardToggle:active, .res #alert_message > input[type=button]:active, .res .cancelButton:active,
   .res .addButton:active {
-    background: -webkit-linear-gradient(top, #cb4b16, #9d3a11);
-    background: -moz-linear-gradient(top, #cb4b16, #9d3a11);
-    background: linear-gradient(top, #cb4b16, #9d3a11);
-    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7);
+    background: -webkit-linear-gradient(top, #405666, #2c3c47);
+    background: -moz-linear-gradient(top, #405666, #2c3c47);
+    background: linear-gradient(top, #405666, #2c3c47);
+    box-shadow: inset 0 2px 3px #192127, 0 1px 0 #3e4855;
   }
 
   button,
@@ -178,21 +179,15 @@
     box-shadow: none;
   }
 
-  .next-suggestions > a:hover, .next-suggestions > a:focus, .expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando,
-  .res .selftext.collapsed.expando-button.toggleImage.video-muted,
-  .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
-  .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
-  .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover,
+  .flairselector .flairoptionpane ul > li:hover,
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
   .res ul.widgetSortButtons > li,
-  .nextprev > a[rel],
+  .nav-buttons a,
+  .nav-buttons a:hover,
   .menuarea .spacer .toggle .togglebutton,
   .menuarea .spacer .dropdown.lightdrop,
-  .organic-listing .nextprev .arrow.prev,
-  .organic-listing .nextprev .arrow.next,
   .trending-subreddits > .trending-subreddits-content li > a,
   .explore-item .fancy-toggle-button.toggle > .option.active,
   .explore-item .explore-feedback-dismiss,
@@ -201,6 +196,7 @@
   .side .subreddits > li > button.remove-sr,
   .side .recommend-box > .recs > .recommendations > .rec-item > a,
   .side .recommend-box > .recs > .recommendations > .rec-item > button.add,
+  .hover-bubble.multi-selector .multi-list a,
   .profile-page .titlebox > .bottom > a[href*="/compose/"],
   .message > .subject > .expand-btn,
   .message.noncollapsed > .entry .parent-link,
@@ -209,24 +205,18 @@
   .res button.RESBigEditorPop,
   .res #alert_message .buttonContainer > input[type=button],
   .res .widgetStateButtons > li:not(.updateTime) {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 1px 0 #4b5767, 0 1px 1px rgba(0, 0, 0, 0.3);
   }
 
-  .next-suggestions > a:hover, .next-suggestions > a:focus, .expando-button.selftext.collapsed, .res .selftext.collapsed.expando-button.toggleImage.image, .res .toggleImage.image.expando-button.collapsedExpando,
-  .res .selftext.collapsed.expando-button.toggleImage.video-muted,
-  .res .toggleImage.video-muted.expando-button.collapsedExpando, .expando-button.selftext.collapsed:hover, .expando-button.video.collapsed, .res .video.collapsed.expando-button.toggleImage.image,
-  .res .video.collapsed.expando-button.toggleImage.video-muted, .expando-button.video.collapsed:hover, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
-  .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:hover,
+  .flairselector .flairoptionpane ul > li:hover,
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
   .res ul.widgetSortButtons > li,
-  .nextprev > a[rel],
+  .nav-buttons a,
+  .nav-buttons a:hover,
   .menuarea .spacer .toggle .togglebutton,
   .menuarea .spacer .dropdown.lightdrop,
-  .organic-listing .nextprev .arrow.prev,
-  .organic-listing .nextprev .arrow.next,
   .trending-subreddits > .trending-subreddits-content li > a,
   .explore-item .fancy-toggle-button.toggle > .option.active,
   .explore-item .explore-feedback-dismiss,
@@ -235,6 +225,7 @@
   .side .subreddits > li > button.remove-sr,
   .side .recommend-box > .recs > .recommendations > .rec-item > a,
   .side .recommend-box > .recs > .recommendations > .rec-item > button.add,
+  .hover-bubble.multi-selector .multi-list a,
   .profile-page .titlebox > .bottom > a[href*="/compose/"],
   .message > .subject > .expand-btn,
   .message.noncollapsed > .entry .parent-link,
@@ -243,28 +234,25 @@
   .res button.RESBigEditorPop,
   .res #alert_message .buttonContainer > input[type=button],
   .res .widgetStateButtons > li:not(.updateTime) {
-    color: #6b6b6b;
+    color: #9e9e9e;
     text-decoration: none !important;
-    padding: 2px 6px;
-    border: solid 1px #aaaaaa;
-    background: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7);
-    background: -moz-linear-gradient(top, #f7f7f7, #e7e7e7);
-    background: linear-gradient(top, #f7f7f7, #e7e7e7);
+    text-shadow: 0 1px 1px #15181d;
+    padding: 3px 7px;
+    border: none;
+    background: -webkit-linear-gradient(top, #353e49, #20252c);
+    background: -moz-linear-gradient(top, #353e49, #20252c);
+    background: linear-gradient(top, #353e49, #20252c);
     border-radius: 3px;
   }
 
-  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .res ul.widgetSortButtons > li.active, .next-suggestions > a:active, .expando-button.selftext.expanded, .res .toggleImage.image.expando-button.collapsed.expanded, .res .toggleImage.image.expando-button.expanded,
-  .res .toggleImage.video-muted.expando-button.collapsed.expanded,
-  .res .toggleImage.video-muted.expando-button.expanded, .expando-button.selftext.expanded:hover, .expando-button.video.expanded, .expando-button.video.expanded:hover, .flairselector .flairoptionpane ul > li:active, .explore-item .fancy-toggle-button.toggle > .option.active.remove,
+  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .res ul.widgetSortButtons > li.active, .flairselector .flairoptionpane ul > li:active, .explore-item .fancy-toggle-button.toggle > .option.active.remove,
   .wiki-page .pageactions > .wikiaction:active,
   .menuarea .flat-list > li > a:active,
   .res .commentNavSortType:active,
   .res ul.widgetSortButtons > li:active,
-  .nextprev > a[rel]:active,
+  .nav-buttons a:active,
   .menuarea .spacer .toggle .togglebutton:active,
   .menuarea .spacer .dropdown.lightdrop:active,
-  .organic-listing .nextprev .arrow.prev:active,
-  .organic-listing .nextprev .arrow.next:active,
   .trending-subreddits > .trending-subreddits-content li > a:active,
   .explore-item .fancy-toggle-button.toggle > .option.active:active,
   .explore-item .explore-feedback-dismiss:active,
@@ -273,6 +261,7 @@
   .side .subreddits > li > button.remove-sr:active,
   .side .recommend-box > .recs > .recommendations > .rec-item > a:active,
   .side .recommend-box > .recs > .recommendations > .rec-item > button.add:active,
+  .hover-bubble.multi-selector .multi-list a:active,
   .profile-page .titlebox > .bottom > a[href*="/compose/"]:active,
   .message > .subject > .expand-btn:active,
   .message.noncollapsed > .entry .parent-link:active,
@@ -281,16 +270,16 @@
   .res button.RESBigEditorPop:active,
   .res #alert_message .buttonContainer > input[type=button]:active,
   .res .widgetStateButtons > li:active:not(.updateTime) {
-    background: -webkit-linear-gradient(top, #efefef, #e0e0e0);
-    background: -moz-linear-gradient(top, #efefef, #e0e0e0);
-    background: linear-gradient(top, #efefef, #e0e0e0);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.7);
+    background: -webkit-linear-gradient(top, #2f3640, #22272f);
+    background: -moz-linear-gradient(top, #2f3640, #22272f);
+    background: linear-gradient(top, #2f3640, #22272f);
+    box-shadow: inset 0 2px 3px #0a0c0e, 0 1px 0 #3e4855;
   }
 
   .wiki-page .pageactions > .wikiaction, .menuarea .flat-list > li > a, .res .commentNavSortType, .res ul.widgetSortButtons > li {
     margin: 0;
     border-right-style: none;
-    color: #6b6b6b !important;
+    color: #9e9e9e !important;
     border-radius: 0;
   }
 
@@ -299,7 +288,6 @@
   }
 
   .wiki-page .pageactions > .wikiaction:last-child, .menuarea .flat-list > li:last-child > a, .res .commentNavSortType:last-child, .res ul.widgetSortButtons > li:last-child {
-    border-right-style: solid;
     border-radius: 0 3px 3px 0;
   }
 
@@ -307,32 +295,31 @@
     font-weight: bold;
   }
 
-  .next-suggestions > a {
-    display: inline-block;
-    padding: 2px 6px;
-    border: solid 1px rgba(170, 170, 170, 0.6);
-    margin-right: 3px;
-    font-weight: bold;
-    color: #6b6b6b;
-  }
-
-  .infobar, .link .report-reasons,
+  .flairselector,
+  .tabpane-content,
+  .formtabs-content,
+  .login-form-side,
+  .searchfacets,
+  .fancy-settings .linefield,
+  .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
+  .multi-details form.copy-multi,
+  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message, .res .RESDashboardComponent, .infobar, .link .report-reasons,
   .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
-  .content.submit .info-notice, .profile-page .gold-accent.snoovatar-link,
+  .content.submit .info-notice, .hover-bubble.multi-selector, .profile-page .gold-accent.snoovatar-link,
   .profile-page .server-seconds, .message > .subject > .correspondent {
-    background: #FFF5CC;
-    color: #111;
-    border: solid 1px #aaaaaa;
+    background: #292f37;
+    color: #9e9e9e;
+    border: solid 1px #0f1114;
     font-family: "Liberation Sans", Arial, sans-serif;
     border-radius: 3px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px #fffbeb, inset 0 -1px 1px #ffeda3;
+    box-shadow: 0 1px 2px #0d0f11, inset 0 1px 0 #38404c;
   }
 
   .menuarea .spacer > .help-hoverable {
     z-index: 3000;
     position: absolute;
     background: #FFF5CC;
-    color: #111;
+    color: #9e9e9e;
     padding: 4px 6px;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
@@ -345,21 +332,14 @@
   .pretty-form input[type=password],
   textarea,
   input[type=text],
-  input[type=password], .sr-interest-bar > .bubble > .query-box > .query {
+  input[type=password], .sr-interest-bar > .bubble > .query-box > .query, body.with-listing-chooser .listing-chooser > .contents > .multis > .create input[type=text], .hover-bubble.multi-selector .create-multi input[type=text] {
     padding: 3px;
-    background: #fff;
-    color: #444444;
-    border: solid 1px #aaaaaa !important;
+    background: #1e2229;
+    color: #9e9e9e;
+    border: solid 1px #13161A !important;
     font: normal 13px "Liberation Sans", Arial, sans-serif;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.8);
     border-radius: 3px;
-  }
-  #search input[type=text]:focus,
-  .roundfield-content > input#url:focus,
-  textarea:focus,
-  input[type=text]:focus,
-  input[type=password]:focus, .sr-interest-bar > .bubble > .query-box > .query:focus {
-    border-color: #ed855a !important;
+    box-shadow: inset 0 1px 2px #15181d, 0 1px 0 rgba(255, 255, 255, 0.13);
   }
 
   .usertext .usertext-edit textarea, .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents > #BigText {
@@ -378,16 +358,12 @@
   .multi-details form.copy-multi,
   .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message, .res .RESDashboardComponent {
     overflow: hidden;
-    background: #efefef;
-    border: solid 1px #aaaaaa;
     padding: 10px;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.14);
   }
 
-  .last-clicked.link:not(:first-child), .link:not(:first-child), .linklisting > .comment:not(:first-child), .thing.subreddit:not(:first-child), div:not(.child) > .listing > .message {
-    border-top: solid 1px #bcbcbc;
-    box-shadow: inset 0 1px 0 #f7f7f7;
+  .last-clicked.link:not(:first-child), .link:not(:first-child), .linklisting > .comment:not(:first-child), .thing.subreddit:not(:first-child), .commentarea, div:not(.child) > .listing > .message {
+    border-top: solid 1px #0a0c0e;
+    box-shadow: inset 0 1px 0 #242a32;
   }
 
   .link, .linklisting > .comment, .thing.subreddit {
@@ -408,28 +384,28 @@
   .organic-listing .link,
   .promotedlink, .sr-interest-bar {
     position: relative;
-    background-color: rgba(133, 153, 0, 0.1) !important;
-    color: #444444;
-    border: solid 1px rgba(0, 0, 0, 0.2) !important;
+    background-color: #1A242C !important;
+    color: #9e9e9e;
+    border: none !important;
     padding: 1.3em 0.6em 1.3em 0;
     margin-bottom: 5px;
     border-radius: 3px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px #080a0b;
   }
 
   .md table td, .res #alert_message table.commentPreview td,
   .md table th,
   .res #alert_message table.commentPreview th {
-    border-color: #b7b7b7;
+    border-color: black;
   }
   .md table th, .res #alert_message table.commentPreview th {
-    background: #e6e6e6;
-    color: #444444;
-    text-shadow: 0 1px 1px white;
-    box-shadow: inset 0 1px 0 white;
+    background: #0f1114;
+    color: #d1d1d1;
+    text-shadow: 0 1px 1px #3a434f;
+    box-shadow: inset 0 1px 0 #4f5c6d;
   }
   .md table tbody tr, .res #alert_message table.commentPreview tbody tr {
-    background: #fff;
+    background: #242a32;
   }
   .md table tbody tr:hover, .res #alert_message table.commentPreview tbody tr:hover {
     background: #FFF5CC;
@@ -438,14 +414,14 @@
   .md blockquote, .message.noncollapsed > .entry .md-container > .parent.rounded {
     border-left: solid 3px #9e9e9e;
     padding: 0.2em 0.5em;
-    background: whitesmoke;
-    color: #111;
+    background: #1c2026;
+    color: #9e9e9e;
     margin-left: 0.5em;
   }
 
   .comment.noncollapsed > .entry, .message.noncollapsed > .entry {
     position: relative;
-    background: #fff;
+    background: #242a32;
     padding: 0;
     display: inline-block;
     overflow: visible;
@@ -459,7 +435,7 @@
     top: 8px;
     width: 0;
     height: 0;
-    border-right: solid 8px #fff;
+    border-right: solid 8px #242a32;
     border-top: solid 8px transparent;
     border-bottom: solid 8px transparent;
   }
@@ -467,13 +443,13 @@
   .comment.noncollapsed > .entry .tagline, .message.noncollapsed > .entry .tagline {
     display: block;
     padding: 6px 14px 6px 10px;
-    border-bottom: solid 1px #e6e6e6;
+    border-bottom: solid 1px #353e49;
     border-radius: 3px 3px 0 0;
   }
 
   .comment.noncollapsed > .entry .flat-list.buttons, .message.noncollapsed > .entry .flat-list.buttons {
-    background: whitesmoke;
-    border-top: solid 1px #e6e6e6;
+    background: #2f3640;
+    border-top: solid 1px #3a434f;
     padding: 4px 12px 4px 8px;
     border-radius: 0 0 3px 3px;
   }
@@ -529,11 +505,11 @@
   }
 
   .message.noncollapsed > .entry.RES-keyNav-activeElement, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement {
-    background: #fff !important;
+    background: #242a32 !important;
   }
   .message.noncollapsed > .entry.RES-keyNav-activeElement:after, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement:after {
     content: '';
-    background: #ed855a;
+    background: #BDD4E0;
     position: absolute;
     right: 0;
     top: 0;
@@ -545,7 +521,7 @@
   .message.collapsed > .entry.RES-keyNav-activeElement > .tagline, .res .morerecursion > .entry.RES-keyNav-activeElement > .deepthread,
   .res .morechildren > .entry.RES-keyNav-activeElement > .morecomments,
   .res .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
-    outline: dashed 1px #ed855a;
+    outline: dashed 1px #BDD4E0;
   }
 
   .res #RESDashboardEditComponent ul,
@@ -558,12 +534,12 @@
 
   .menuarea .drop-choices.lightdrop, .res .RESMacroDropdown {
     z-index: 2000;
-    background: #f7f7f7;
-    color: #6b6b6b;
-    border: solid 1px rgba(0, 0, 0, 0.3);
+    background: #353e49;
+    color: #9e9e9e;
+    border: none;
     padding: 4px;
     border-radius: 3px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
   }
 
   .menuarea .spacer .dropdown.lightdrop > .selected:after, .res .RESMacroDropdownTitle:after {
@@ -575,7 +551,7 @@
     vertical-align: middle;
     border-left: solid 4px transparent;
     border-right: solid 4px transparent;
-    border-top: solid 4px #6b6b6b;
+    border-top: solid 4px #9e9e9e;
   }
 
   .menuarea .drop-choices.lightdrop a.choice, .res .RESMacroDropdown li > a {
@@ -586,13 +562,25 @@
     border-radius: 3px;
   }
   .menuarea .drop-choices.lightdrop a.choice:hover, .res .RESMacroDropdown li > a:hover {
-    background: #cb4b16;
-    color: #fff;
+    background: #20252c;
+    color: #9e9e9e;
+  }
+
+  .sidecontentbox > .title, .res .BERight > h3,
+  .res .RESDialogSmall.livePreview > h3,
+  .res .BELeft,
+  .res .markdownEditor-wrapper {
+    border: solid 1px #13161A;
+    color: #9e9e9e;
+    background: -webkit-linear-gradient(top, #353e49, #242a32);
+    background: -moz-linear-gradient(top, #353e49, #242a32);
+    background: linear-gradient(top, #353e49, #242a32);
+    box-shadow: inset 0 1px 0 #475261;
   }
 
   body {
-    background: #eaeaea url("http://i.imgur.com/l6K6XJU.jpg") left top repeat;
-    color: #111;
+    background: #13161A url("http://i.imgur.com/zunAMnr.jpg") left top repeat;
+    color: #9e9e9e;
     font-family: "Liberation Sans", Arial, sans-serif;
   }
 
@@ -601,7 +589,7 @@
   }
 
   .error {
-    color: #111;
+    color: #9e9e9e;
   }
 
   .content {
@@ -626,17 +614,17 @@
     vertical-align: middle;
   }
   .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.add:hover {
-    background: -webkit-linear-gradient(top, #859900, #6a7a00);
-    background: -moz-linear-gradient(top, #859900, #6a7a00);
-    background: linear-gradient(top, #859900, #6a7a00);
+    background: -webkit-linear-gradient(top, #859900, #6f8000);
+    background: -moz-linear-gradient(top, #859900, #6f8000);
+    background: linear-gradient(top, #859900, #6f8000);
   }
   .fancy-toggle-button > .option.remove, .fancy-toggle-button > .option.remove:hover, .fancy-toggle-button > .option.remove:focus, .fancy-toggle-button > .option.remove:active {
-    background: -webkit-linear-gradient(top, #c4c4c4, #b4b4b4);
-    background: -moz-linear-gradient(top, #c4c4c4, #b4b4b4);
-    background: linear-gradient(top, #c4c4c4, #b4b4b4);
+    background: -webkit-linear-gradient(top, #621210, #4c0e0d);
+    background: -moz-linear-gradient(top, #621210, #4c0e0d);
+    background: linear-gradient(top, #621210, #4c0e0d);
   }
   .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove, .fancy-toggle-button > .option.remove:active {
-    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7), 0 1px 0 #3e4855;
   }
 
   .nub {
@@ -655,7 +643,7 @@
 
   .submit.disabled > .morelink > a {
     color: rgba(0, 0, 0, 0.4) !important;
-    background: #cbcbcb;
+    background: black;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2);
   }
@@ -672,17 +660,18 @@
     opacity: 1;
   }
 
-  .expando-button, .res .expando-button.toggleImage.image,
-  .res .expando-button.toggleImage.video-muted {
+  .expando-button {
     cursor: pointer;
-    width: 19px;
-    height: 19px;
+    width: 19px !important;
+    height: 19px !important;
     position: relative;
     padding: 0 !important;
+    background-image: none !important;
     background-position: 0 0 !important;
+    background-color: #313943 !important;
+    border-radius: 3px;
   }
-  .expando-button:before, .res .expando-button.toggleImage.image:before,
-  .res .expando-button.toggleImage.video-muted:before {
+  .expando-button:before {
     content: '';
     position: absolute;
     left: 4px;
@@ -691,10 +680,7 @@
     top: 8px;
     background: #848484;
   }
-  .expando-button.selftext.collapsed:after, .res .selftext.collapsed.expando-button.toggleImage.image:after, .res .toggleImage.image.expando-button.collapsedExpando:after,
-  .res .selftext.collapsed.expando-button.toggleImage.video-muted:after,
-  .res .toggleImage.video-muted.expando-button.collapsedExpando:after, .expando-button.video.collapsed:after, .res .video.collapsed.expando-button.toggleImage.image:after,
-  .res .video.collapsed.expando-button.toggleImage.video-muted:after {
+  .expando-button.collapsedExpando.collapsed:after, .expando-button.selftext.collapsed:after, .expando-button.video.collapsed:after {
     content: '';
     position: absolute;
     top: 4px;
@@ -708,10 +694,6 @@
     padding: 1em 0;
   }
 
-  .nextprev {
-    color: #111;
-  }
-
   a.pretty-button {
     display: inline-block;
     border: none;
@@ -720,7 +702,7 @@
     border-radius: 0;
   }
   a.pretty-button:before, a.pretty-button:after {
-    color: #6b6b6b !important;
+    color: #aaaaaa !important;
     display: inline-block;
   }
   a.pretty-button.pressed {
@@ -799,7 +781,6 @@
   .fancy-settings + .tabmenu,
   .formtab.tabmenu {
     padding: 0;
-    font-size: 14px;
   }
   .fancy-settings + .tabmenu > li,
   .formtab.tabmenu > li {
@@ -810,23 +791,20 @@
   .fancy-settings + .tabmenu > li a,
   .formtab.tabmenu > li a {
     display: block;
+    font-size: 14px !important;
     padding: 3px 17px;
     position: relative;
     margin-right: 3px;
-    color: #444444 !important;
-    border-left: solid 1px #aaaaaa !important;
-    border-right: solid 1px #aaaaaa !important;
-    border-top: solid 1px #aaaaaa !important;
-    border-bottom: none !important;
-    background: #e0e0e0;
-    font-size: 14px;
+    color: #777777;
+    border: none !important;
+    background: #20252c;
     border-radius: 3px 3px 0 0;
   }
   .fancy-settings + .tabmenu > li.selected a,
   .formtab.tabmenu > li.selected a {
-    font-size: 14px;
-    background: #efefef;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    background: #292f37;
+    color: #9e9e9e;
+    box-shadow: inset 0 1px 0 #38404c;
   }
   .fancy-settings + .tabmenu > li.selected a:after,
   .formtab.tabmenu > li.selected a:after {
@@ -836,7 +814,7 @@
     right: 0;
     top: 100%;
     height: 2px;
-    background: #efefef;
+    background: #292f37;
   }
 
   .tabpane-content {
@@ -851,6 +829,10 @@
 
   .formtabs-content {
     width: 530px;
+  }
+  .formtabs-content .infobar {
+    background: #333b46;
+    box-shadow: inset 0 1px 0 #454f5e;
   }
 
   .fancy-settings {
@@ -876,7 +858,7 @@
   }
   .flairgrant .linefield .title,
   .fancy-settings .linefield .title {
-    color: #2177b4;
+    color: #5590af;
   }
   .flairgrant .linefield .delete-field,
   .fancy-settings .linefield .delete-field {
@@ -885,7 +867,7 @@
   .flairgrant .linefield .gray,
   .fancy-settings .linefield .gray {
     font-size: 13px;
-    color: #111;
+    color: #9e9e9e;
   }
   .flairgrant .linefield .linefield-content,
   .fancy-settings .linefield .linefield-content {
@@ -912,7 +894,7 @@
   }
   .flairselector > h2 {
     background: rgba(0, 0, 0, 0.14);
-    color: #444444;
+    color: #d1d1d1;
     text-transform: capitalize;
     padding: 4px;
     margin-bottom: 10px;
@@ -954,7 +936,7 @@
   }
 
   .menuarea {
-    color: #111;
+    color: #9e9e9e;
     overflow: visible;
     margin: 15px 0 0 10px !important;
     padding: 5px !important;
@@ -1004,12 +986,12 @@
     margin: 5px 0 0 -40px;
   }
   .menuarea .spacer > .help-hoverable:before {
-    color: #111;
+    color: #9e9e9e;
     content: attr(title);
   }
   .menuarea .spacer .toggle a {
     font-size: 1em;
-    color: #2177b4;
+    color: #5590af;
   }
   .menuarea .spacer .toggle:hover + .help-hoverable {
     display: block;
@@ -1019,7 +1001,7 @@
   }
   .menuarea .spacer .toggle .option.active.error {
     display: inline-block;
-    background: #FFF5CC;
+    background: #292f37;
     padding: 2px 5px;
     font-size: 1em;
     margin-right: 3px;
@@ -1073,7 +1055,7 @@
   .searchfacets > .title {
     margin: 0;
     padding-bottom: 6px;
-    border-bottom: solid 3px #b7b7b7;
+    border-bottom: solid 3px black;
   }
   .searchfacets > .list {
     margin-top: 10px;
@@ -1089,7 +1071,7 @@
   .comment .action-form {
     margin: 0;
     padding: 5px 10px 10px 10px;
-    background: whitesmoke;
+    background: #2f3640;
     border: none;
     max-width: 100%;
     width: auto !important;
@@ -1160,15 +1142,15 @@
     margin: 0;
     padding-left: 6px;
     overflow: hidden;
-    text-shadow: 0 1px 0 #040404;
+    text-shadow: 0 1px 0 #080a0b;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: -webkit-linear-gradient(top, #2C2928, #1f1d1c);
-    background: -moz-linear-gradient(top, #2C2928, #1f1d1c);
-    background: linear-gradient(top, #2C2928, #1f1d1c);
-    box-shadow: inset 0 1px 0 #474240, inset 0 -1px 0 #141312;
+    background: -webkit-linear-gradient(top, #292f37, #1e2229);
+    background: -moz-linear-gradient(top, #292f37, #1e2229);
+    background: linear-gradient(top, #292f37, #1e2229);
+    box-shadow: inset 0 1px 0 #3e4855;
   }
 
   #header .tabmenu > li {
@@ -1203,7 +1185,7 @@
   }
   #sr-header-area .drop-choices.srdrop a.choice:hover {
     color: #fff !important;
-    background: #cb4b16 !important;
+    background: #BDD4E0 !important;
   }
   #sr-header-area .drop-choices.srdrop a.choice.bottom-option {
     border-top: solid 1px #202020;
@@ -1258,7 +1240,7 @@
     visibility: hidden;
   }
   #header-bottom-right .message-count {
-    background: #cb4b16;
+    background: #405666;
     font-size: 13px;
     color: #fff;
     vertical-align: middle;
@@ -1304,7 +1286,7 @@
     overflow: visible;
   }
   .link a.author {
-    color: #2177b4;
+    color: #5590af;
   }
   .link a.author.admin {
     color: #dc322f;
@@ -1333,7 +1315,7 @@
   .link .flat-list.buttons a:hover,
   .link .flat-list.buttons .redditSingleClick:hover {
     text-decoration: none;
-    background: #cecece;
+    background: rgba(255, 255, 255, 0.1);
   }
   .link .flat-list.buttons > li {
     display: inline-block;
@@ -1365,13 +1347,13 @@
     margin-top: 5px;
     width: 40px;
     height: 40px;
-    background: #b7b7b7;
+    background: black;
     color: #fff;
     font: normal 28px "Liberation Serif", "Times New Roman", serif;
     line-height: 1.4em;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
     border-radius: 100%;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.8);
   }
   .thumbnail.default, .thumbnail.self, .thumbnail.nsfw {
     background: none;
@@ -1380,6 +1362,7 @@
   }
   .thumbnail.may-blank.default:before {
     content: '?';
+    background: #333b46;
   }
   .thumbnail.may-blank.self:before {
     content: 'T';
@@ -1392,7 +1375,7 @@
   .thumbnail img {
     display: block;
     padding: 3px;
-    background: #fff;
+    background: #3e4855;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
@@ -1428,7 +1411,7 @@
     content: 'dmin';
   }
   .userattrs .submitter {
-    color: #2177b4;
+    color: #5590af;
     font-size: 0;
   }
   .userattrs .submitter:after {
@@ -1446,7 +1429,7 @@
     padding: 0 3px;
     text-align: center;
     border: none !important;
-    background: #cb4b16;
+    background: #405666;
     color: #fff;
     border-radius: 2px;
   }
@@ -1471,8 +1454,12 @@
   .entry .buttons li a,
   .entry .buttons li .redditSingleClick,
   .pretty-button {
-    color: #6b6b6b;
+    color: #aaaaaa;
     font-size: 13px;
+  }
+
+  .tagline .score {
+    color: inherit;
   }
 
   .link .tagline {
@@ -1483,7 +1470,7 @@
     vertical-align: middle;
   }
   .link.stickied a.title {
-    color: #6b6b6b;
+    color: #aaaaaa;
     font-weight: normal;
   }
   .link.stickied .thumbnail.self:before {
@@ -1553,7 +1540,7 @@
   .md h2 {
     font-size: 1.3em;
     font-weight: normal !important;
-    border-bottom: solid 1px #b7b7b7;
+    border-bottom: solid 1px black;
   }
   .md h3 {
     font-size: 1.2em;
@@ -1604,7 +1591,7 @@
     border-radius: 0;
   }
   .md code {
-    color: #b44214;
+    color: #364956;
     background: transparent !important;
     border: none;
     padding: 0;
@@ -1618,8 +1605,8 @@
   .md pre > code {
     padding: 7px !important;
     display: block;
-    background: whitesmoke !important;
-    color: #111;
+    background: #1c2026 !important;
+    color: #9e9e9e;
     overflow: auto;
   }
   .md pre {
@@ -1646,18 +1633,16 @@
   }
 
   .commentarea {
-    border-top: solid 1px rgba(0, 0, 0, 0.2);
     padding-top: 10px;
     position: relative;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
   }
   .commentarea > .infobar {
     margin-bottom: 15px;
     margin-left: 10px;
-    border-left: solid 4px #cca400;
+    border-left: solid 4px black;
   }
   .commentarea .menuarea {
-    color: #111;
+    color: #9e9e9e;
   }
   .commentarea .menuarea + .nestedlisting {
     clear: both;
@@ -1683,7 +1668,7 @@
   .nestedlisting .child .thing.comment.noncollapsed:before {
     content: '';
     position: absolute;
-    background: #c4c4c4;
+    background: #242a32;
     top: 46px;
     left: 10px;
     width: 1px;
@@ -1704,10 +1689,10 @@
     background-color: transparent;
   }
   .comment.spam .entry:before {
-    border-right-color: #f5b89f;
+    border-right-color: #99afbf;
   }
   .comment.spam .entry .tagline {
-    background: #f5b89f;
+    background: #99afbf;
   }
   .comment.spam .entry .tagline time:first-of-type:after {
     content: 'Spam';
@@ -1799,7 +1784,7 @@
 
   .side {
     background: none;
-    color: #515151;
+    color: #9e9e9e;
     width: 300px;
     margin: 1em 1em 1em 2em;
   }
@@ -1817,7 +1802,7 @@
   .titlebox form.toggle,
   .titlebox .leavemoderator {
     background: none;
-    color: #515151;
+    color: #9e9e9e;
   }
   .titlebox > .bottom,
   .titlebox > .usertext,
@@ -1845,6 +1830,7 @@
 
   .subscribers,
   .users-online {
+    color: #9e9e9e;
     display: inline-block;
     vertical-align: top;
     width: 138px;
@@ -1852,10 +1838,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
-    border: solid 1px #aaaaaa;
+    border: solid 1px #0d0f11;
     padding: 5px;
     box-sizing: content-box;
-    box-shadow: 0 1px 0 white, inset 0 1px 0 white;
+    box-shadow: 0 1px 0 #333b46, inset 0 1px 0 #22272f;
   }
   .subscribers .number,
   .users-online .number {
@@ -1867,7 +1853,7 @@
   .users-online .word {
     display: block;
     font-size: 13px;
-    color: #6b6b6b;
+    color: #b7b7b7;
   }
 
   .subscribers {
@@ -1883,15 +1869,12 @@
   }
 
   .sidecontentbox > .title {
-    background: -webkit-linear-gradient(top, #e2e2e2, #d6d6d6);
-    background: -moz-linear-gradient(top, #e2e2e2, #d6d6d6);
-    background: linear-gradient(top, #e2e2e2, #d6d6d6);
-    box-shadow: inset 0 1px 0 #f4f4f4, 0 1px 1px rgba(0, 0, 0, 0.14);
+    border-bottom-color: #191d23;
     border-radius: 3px 3px 0 0;
   }
   .sidecontentbox > .title .collapse-button,
   .sidecontentbox > .title h1 {
-    color: #515151;
+    color: inherit;
   }
   .sidecontentbox > .title .collapse-button {
     background: none;
@@ -1908,15 +1891,15 @@
   }
   .sidecontentbox > .title,
   .sidecontentbox > .content {
-    border: solid 1px #aaaaaa;
+    border: solid 1px #13161A;
     padding: 7px;
   }
   .sidecontentbox .content {
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.2);
+    background: #20252c;
     border-top: none;
     border-radius: 0 0 3px 3px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 0 #242a32;
   }
   .sidecontentbox .content > li {
     margin: 3px 0;
@@ -1930,27 +1913,29 @@
     border-color: transparent;
     border-width: 1px;
     border-style: solid;
-    color: #6b6b6b;
     border-radius: 3px;
   }
-  .icon-menu a:visited {
-    color: #6b6b6b;
+  .icon-menu a, .icon-menu a:active, .icon-menu a:hover, .icon-menu a:visited {
+    color: #9e9e9e;
   }
   .icon-menu a:active, .icon-menu a:hover {
-    border-color: #aaaaaa;
+    border-color: #1c2026;
+    background: -webkit-linear-gradient(top, #353e49, #292f37);
+    background: -moz-linear-gradient(top, #353e49, #292f37);
+    background: linear-gradient(top, #353e49, #292f37);
   }
   .icon-menu a:hover {
     text-decoration: none;
-    background: -webkit-linear-gradient(top, #f2f2f2, #e7e7e7);
-    background: -moz-linear-gradient(top, #f2f2f2, #e7e7e7);
-    background: linear-gradient(top, #f2f2f2, #e7e7e7);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.13);
+    background: -webkit-linear-gradient(top, #313943, #292f37);
+    background: -moz-linear-gradient(top, #313943, #292f37);
+    background: linear-gradient(top, #313943, #292f37);
+    box-shadow: inset 0 1px 0 #4b5767, 0 1px 1px #1c2026;
   }
   .icon-menu a:active {
-    background: -webkit-linear-gradient(top, #f2f2f2, #e2e2e2);
-    background: -moz-linear-gradient(top, #f2f2f2, #e2e2e2);
-    background: linear-gradient(top, #f2f2f2, #e2e2e2);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.8);
+    background: -webkit-linear-gradient(top, #313943, #242a32);
+    background: -moz-linear-gradient(top, #313943, #242a32);
+    background: linear-gradient(top, #313943, #242a32);
+    box-shadow: inset 0 1px 1px #1c2026, 0 1px 0 #4b5767;
   }
 
   .footer {
@@ -1976,10 +1961,10 @@
   }
 
   .bottommenu a {
-    color: #2177b4;
+    color: #5590af;
   }
   .bottommenu a.updated {
-    color: #2177b4;
+    color: #5590af;
   }
 
   .titlebox .leavemoderator:before {
@@ -2141,7 +2126,7 @@
   }
   .wiki-page .wikirevisionlisting .generic-table tr td {
     padding: 5px;
-    border: solid 1px #b7b7b7;
+    border: solid 1px black;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
   }
   .wiki-page .wikirevisionlisting .generic-table tr td > input[type=radio] {
@@ -2191,8 +2176,8 @@
 
   table.diff {
     width: 100%;
-    background: #fff;
-    border: solid 1px #b7b7b7;
+    background: #242a32;
+    border: solid 1px black;
     margin-bottom: 1em;
   }
   table.diff tbody,
@@ -2208,10 +2193,10 @@
   }
   table.diff .diff_header,
   table.diff .diff_next {
-    background: #e6e6e6;
-    color: #444444;
+    background: #0f1114;
+    color: #d1d1d1;
     border: none;
-    border: solid 1px #b7b7b7;
+    border: solid 1px black;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
   }
   table.diff th.diff_header {
@@ -2231,7 +2216,7 @@
     text-align: right;
   }
   table.diff tbody .diff_header:not([id]) {
-    color: #9d9d9d;
+    color: white;
   }
 
   .subscription-box .sr-type-img,
@@ -2333,15 +2318,17 @@
     min-width: 0;
     text-align: center;
     vertical-align: middle;
-  }
-  .organic-listing .nextprev .arrow.prev, .organic-listing .nextprev .arrow.next {
+    border: none !important;
     position: relative;
+    background: none;
+    height: auto;
+    line-height: 1em;
     margin: 0;
     overflow: hidden;
     white-space: nowrap;
     text-indent: -900px;
-    width: 20px;
-    height: 20px;
+    width: 8px;
+    box-shadow: none;
   }
   .organic-listing .nextprev .arrow:before {
     content: '';
@@ -2355,17 +2342,15 @@
   }
   .organic-listing .nextprev .arrow.prev {
     border-right: none;
-    border-radius: 3px 0 0 3px;
   }
   .organic-listing .nextprev .arrow.prev:before {
-    border-right: solid 5px #6b6b6b;
+    border-right: solid 5px #40586c;
   }
   .organic-listing .nextprev .arrow.next {
     border-left: none;
-    border-radius: 0 3px 3px 0;
   }
   .organic-listing .nextprev .arrow.next:before {
-    border-left: solid 5px #6b6b6b;
+    border-left: solid 5px #40586c;
   }
   .organic-listing .link .title {
     max-width: 93%;
@@ -2400,10 +2385,10 @@
     padding-bottom: 3px;
   }
   .trending-subreddits > .trending-subreddits-content > strong {
-    color: #111;
+    color: #9e9e9e;
   }
   .trending-subreddits > .trending-subreddits-content > .comments {
-    color: #6b6b6b;
+    color: #aaaaaa;
   }
 
   .menuarea .flat-list {
@@ -2464,18 +2449,18 @@
     background: #268bd2;
   }
   .explore-item.explore-comment > .comment {
-    color: #444444;
+    color: #d1d1d1;
   }
   .explore-item.explore-comment > .comment > .md {
     font-size: 13px;
   }
   .explore-item.explore-comment > .comment > .comment-fade {
-    background: -webkit-linear-gradient(top, rgba(239, 239, 239, 0), #efefef);
-    background: -moz-linear-gradient(top, rgba(239, 239, 239, 0), #efefef);
-    background: linear-gradient(top, rgba(239, 239, 239, 0), #efefef);
+    background: -webkit-linear-gradient(top, rgba(41, 47, 55, 0), #292f37);
+    background: -moz-linear-gradient(top, rgba(41, 47, 55, 0), #292f37);
+    background: linear-gradient(top, rgba(41, 47, 55, 0), #292f37);
   }
   .explore-item.explore-comment > .comment-link {
-    color: #6b6b6b;
+    color: #aaaaaa;
     font-size: 13px;
   }
   .explore-item.explore-rising:before {
@@ -2496,7 +2481,7 @@
   }
   .explore-item .fancy-toggle-button.toggle > .option.active,
   .explore-item .explore-feedback-dismiss {
-    color: #6b6b6b !important;
+    color: #9e9e9e !important;
     text-shadow: none;
     font-size: 13px;
     display: block;
@@ -2508,9 +2493,9 @@
     margin: 0;
   }
   .explore-item .fancy-toggle-button.toggle > .option.active.remove {
-    background: -webkit-linear-gradient(top, #e7e7e7, #d8d8d8);
-    background: -moz-linear-gradient(top, #e7e7e7, #d8d8d8);
-    background: linear-gradient(top, #e7e7e7, #d8d8d8);
+    background: -webkit-linear-gradient(top, #292f37, #1c2026);
+    background: -moz-linear-gradient(top, #292f37, #1c2026);
+    background: linear-gradient(top, #292f37, #1c2026);
   }
   .explore-item .explore-feedback-dismiss {
     opacity: 1;
@@ -2528,8 +2513,8 @@
 
   .explore-sr {
     margin: 0 0 5px 0;
-    border-bottom: solid 1px #aaaaaa;
-    box-shadow: 0 1px 0 white;
+    border-bottom: solid 1px black;
+    box-shadow: 0 1px 0 #3e4855;
   }
   .explore-sr .explore-label {
     background: none;
@@ -2546,7 +2531,7 @@
 
   .explore-sr-details {
     font-size: inherit;
-    color: #5e5e5e;
+    color: #eaeaea;
   }
 
   body.with-listing-chooser #header .tabmenu {
@@ -2566,26 +2551,27 @@
   }
   body.with-listing-chooser .listing-chooser {
     top: 140px;
-    background: rgba(0, 0, 0, 0.9);
+    background: #111417;
     padding-right: 0;
-    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 0 0 #242a32;
   }
   body.with-listing-chooser .listing-chooser .grippy {
-    background: #eaeaea url("http://i.imgur.com/l6K6XJU.jpg") top left repeat;
+    background: #13161A url("http://i.imgur.com/zunAMnr.jpg") top left repeat;
     border-left: none;
     width: 10px;
-    border-right: solid 1px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.9);
+    border-right: solid 1px #0a0c0e;
+    border-left: solid 1px #0a0c0e;
+    box-shadow: inset 1px 0 0 #292f37;
   }
   body.with-listing-chooser .listing-chooser .grippy:before, body.with-listing-chooser .listing-chooser .grippy:after {
     display: none !important;
   }
   body.with-listing-chooser .listing-chooser .intro {
-    border-top: solid 3px rgba(232, 176, 0, 0.4);
-    border-bottom: solid 3px rgba(232, 176, 0, 0.4);
+    border-top: solid 3px #2d475a;
+    border-bottom: solid 3px #2d475a;
     padding: 10px 0;
     color: #9e9e9e;
-    background: rgba(181, 137, 0, 0.4);
+    background: #1C2C38;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.4);
   }
   body.with-listing-chooser .listing-chooser .intro > p {
@@ -2593,23 +2579,23 @@
   }
   body.with-listing-chooser .listing-chooser li {
     color: #9e9e9e;
-    border: solid 1px #111010;
+    border: solid 1px #13161a;
     margin-bottom: 5px;
-    background: -webkit-linear-gradient(top, #2C2928, #1f1d1c);
-    background: -moz-linear-gradient(top, #2C2928, #1f1d1c);
-    background: linear-gradient(top, #2C2928, #1f1d1c);
-    box-shadow: inset 0 1px 0 #514c4a, 0 2px 2px rgba(0, 0, 0, 0.4);
+    background: -webkit-linear-gradient(top, #292f37, #1e2229);
+    background: -moz-linear-gradient(top, #292f37, #1e2229);
+    background: linear-gradient(top, #292f37, #1e2229);
+    box-shadow: inset 0 1px 0 #3e4855, 0 2px 2px #0d0f11;
   }
   body.with-listing-chooser .listing-chooser li.selected {
     margin-right: 0;
     color: #c1c1c1;
-    background: -webkit-linear-gradient(top, #393534, #2c2928);
-    background: -moz-linear-gradient(top, #393534, #2c2928);
-    background: linear-gradient(top, #393534, #2c2928);
-    box-shadow: inset 0 1px 0 #5f5856, 0 2px 2px rgba(0, 0, 0, 0.4);
+    background: -webkit-linear-gradient(top, #333b46, #292f37);
+    background: -moz-linear-gradient(top, #333b46, #292f37);
+    background: linear-gradient(top, #333b46, #292f37);
+    box-shadow: inset 0 1px 0 #515e6f, 0 2px 2px rgba(0, 0, 0, 0.4);
   }
   body.with-listing-chooser .listing-chooser li.selected:before {
-    border-left-color: #cb4b16;
+    border-left-color: #BDD4E0;
   }
   body.with-listing-chooser .listing-chooser li > a {
     color: inherit;
@@ -2626,24 +2612,20 @@
     padding-bottom: 9px;
   }
   body.with-listing-chooser .listing-chooser > .contents > .multis > .create input[type=text] {
-    width: 93px;
-    border: none !important;
+    width: 90px;
     padding: 2px;
     margin-bottom: 8px;
-    border-radius: 3px;
-    box-shadow: none;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7);
   }
   body.with-listing-chooser .listing-chooser > .contents > .multis > .create button {
     opacity: 1;
   }
   body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:active {
-    box-shadow: inset 0 2px 2px #6f290c, 0 1px 0 #57514f;
+    box-shadow: inset 0 2px 2px #192127, 0 1px 0 #4b5767;
   }
 
   .multi-details > h1 > a,
   .multi-details > h2 > a {
-    color: #444444;
+    color: #d1d1d1;
   }
   .multi-details > h1 {
     display: block !important;
@@ -2656,7 +2638,7 @@
     font-weight: normal;
     margin-bottom: 14px;
     padding-bottom: 8px;
-    border-bottom: solid 3px #b7b7b7;
+    border-bottom: solid 3px black;
   }
   .multi-details .settings > button,
   .multi-details .settings > .delete > button, .multi-details.public .settings > .share-in-sr,
@@ -2745,11 +2727,11 @@
     overflow: hidden;
     width: 0.7em;
     display: inline-block;
-    color: transparent;
+    color: transparent !important;
     text-indent: 0;
   }
   .side .subreddits > li > button.remove-sr:before {
-    color: #6b6b6b;
+    color: #9e9e9e;
     display: inline-block;
     content: '\2715';
     left: 4px;
@@ -2796,7 +2778,7 @@
   .side .recommend-box > .recs > .recommendations > .rec-item button.add:before,
   .side .recommend-box > .recs > .recommendations > .rec-item button.add:after {
     content: '';
-    background: #848484;
+    background: #b7b7b7;
   }
   .side form.add-sr button.add:before,
   .side .recommend-box > .recs > .recommendations > .rec-item button.add:before {
@@ -2823,7 +2805,6 @@
     margin: 0 !important;
     text-shadow: none;
     min-width: 0;
-    border: solid 1px #aaaaaa;
     box-sizing: content-box;
   }
   .side form.add-sr input.sr-name,
@@ -2851,17 +2832,39 @@
     position: absolute;
   }
   .side form.add-sr button.add {
-    color: transparent;
+    color: transparent !important;
   }
 
   .subscription-box .title {
-    color: #515151;
+    color: #9e9e9e;
   }
   .subscription-box .box-separator {
     margin: 6px 0 8px 0;
   }
   .subscription-box li {
     margin-bottom: 4px !important;
+  }
+
+  .hover-bubble.multi-selector:before {
+    border: none !important;
+  }
+  .hover-bubble.multi-selector.anchor-left:after {
+    border-right-color: #292f37;
+  }
+  .hover-bubble.multi-selector.anchor-right:after {
+    border-left-color: #292f37;
+  }
+  .hover-bubble.multi-selector strong {
+    color: inherit;
+  }
+  .hover-bubble.multi-selector .multi-list label:hover {
+    background: #3a434f;
+  }
+  .hover-bubble.multi-selector .multi-list a {
+    padding: 2px;
+    opacity: 1;
+    border: solid 1px #1c2026;
+    box-shadow: inset 0 1px 0 #4b5767;
   }
 
   .hover-bubble.multi-add-notice {
@@ -2931,7 +2934,7 @@
   .message.message-parent > .entry,
   .message.message-parent > .entry .tagline, .message.message-reply > .entry,
   .message.message-reply > .entry .tagline {
-    color: #111;
+    color: #9e9e9e;
   }
   .message.message-parent.recipient > .entry .head, .message.message-reply.recipient > .entry .head {
     font-weight: normal;
@@ -2941,13 +2944,13 @@
   }
   .message.new > .entry .head {
     font-weight: normal;
-    color: #111;
+    color: #9e9e9e;
   }
   .message.collapsed {
     font-size: 13px;
   }
   .message.collapsed .head {
-    color: #111;
+    color: #9e9e9e;
   }
   .message.noncollapsed > .entry {
     margin-bottom: 10px;
@@ -2958,7 +2961,7 @@
     display: inline-block;
   }
   .message.noncollapsed > .entry .parent-link[style] {
-    color: #6b6b6b !important;
+    color: #9e9e9e !important;
   }
   .message.noncollapsed > .entry .md-container {
     padding: 0 10px;
@@ -3075,14 +3078,17 @@
     border: none;
   }
   .res #srList tr a {
-    color: #59a9e1;
+    color: #9abdd0;
   }
   .res #srList tr:hover {
     color: #fff;
-    background: #cb4b16;
+    background: #BDD4E0;
   }
   .res #srList tr:hover a {
     color: #fff;
+  }
+  .res .expando-button.toggleImage.image, .res .expando-button.toggleImage.image.collapsedExpando, .res .expando-button.toggleImage.image.collapsed.expanded, .res .expando-button.toggleImage.image.expanded, .res .expando-button.toggleImage.video-muted, .res .expando-button.toggleImage.video-muted.collapsedExpando, .res .expando-button.toggleImage.video-muted.collapsed.expanded, .res .expando-button.toggleImage.video-muted.expanded {
+    background-image: none !important;
   }
   .res .RESshortcutside, .res .RESshortcutside.remove,
   .res .RESDashboardToggle,
@@ -3095,9 +3101,9 @@
   .res #searchexpando > .searchexpando-submit > input[type="submit"] {
     width: auto !important;
     height: auto !important;
-    background: -webkit-linear-gradient(top, #cb4b16, #af4113);
-    background: -moz-linear-gradient(top, #cb4b16, #af4113);
-    background: linear-gradient(top, #cb4b16, #af4113);
+    background: -webkit-linear-gradient(top, #405666, #344653);
+    background: -moz-linear-gradient(top, #405666, #344653);
+    background: linear-gradient(top, #405666, #344653);
   }
   .res .subButtons {
     padding: 1em 0 !important;
@@ -3123,10 +3129,10 @@
   }
   .res .thing.subreddit .entry.RES-keyNav-activeElement, .res .thing.link .entry.RES-keyNav-activeElement {
     background: none !important;
-    border-right-color: #ed855a;
+    border-right-color: #BDD4E0;
   }
   .res .thing .title.imgScanned.visited {
-    color: #5358ba;
+    color: #858697;
   }
   .res .thing .tagline .author.moderator, .res .thing .tagline .author.submitter, .res .thing .tagline .author.admin {
     vertical-align: middle;
@@ -3134,13 +3140,13 @@
     border-radius: 2px;
   }
   .res .thing .tagline .author.moderator, .res .thing .tagline .author.moderator:hover {
-    background-color: #6f8000 !important;
+    background-color: #424d00 !important;
   }
   .res .thing .tagline .author.admin, .res .thing .tagline .author.admin:hover {
-    background-color: #dc322f !important;
+    background-color: #b9221f !important;
   }
   .res .thing .tagline .author.submitter, .res .thing .tagline .author.submitter:hover {
-    background-color: #2177b4 !important;
+    background-color: #43748e !important;
   }
   .res #REScommentNavBox {
     z-index: 9000;
@@ -3155,7 +3161,7 @@
     display: none;
   }
   .res .RESSubscriptionButton.unsubscribe {
-    color: #6b6b6b !important;
+    color: #9e9e9e !important;
   }
   .res .commentarea .menuarea > .spacer > .dropdown-title,
   .res .commentarea .menuarea #REScommentNavToggle > span:first-child {
@@ -3179,8 +3185,7 @@
   .res .comment .showreplies {
     border-left: none !important;
   }
-  .res .comment .expando-button, .res .comment .expando-button.toggleImage.image,
-  .res .comment .expando-button.toggleImage.video-muted {
+  .res .comment .expando-button {
     float: none;
     display: inline-block;
     padding: 0 !important;
@@ -3242,7 +3247,8 @@
   .res .markdownEditor + .RESMacroWrappingSpan {
     padding: 3px;
     margin: 0;
-    border-top: solid 1px #aaaaaa;
+    border-top: solid 1px #20252c;
+    box-shadow: inset 0 1px 0 #475261;
   }
   .res .commentingAs + .RESMacroWrappingSpan {
     position: absolute;
@@ -3254,15 +3260,11 @@
   .res .BELeft,
   .res .markdownEditor-wrapper {
     border-radius: 3px 3px 0 0;
-    background: -webkit-linear-gradient(top, #f7f7f7, #eaeaea);
-    background: -moz-linear-gradient(top, #f7f7f7, #eaeaea);
-    background: linear-gradient(top, #f7f7f7, #eaeaea);
   }
   .res .markdownEditor-wrapper {
     width: auto;
     position: relative;
     padding: 0;
-    border: solid 1px #aaaaaa;
     border-bottom: none;
     margin: 0;
   }
@@ -3286,25 +3288,25 @@
     border-color: rgba(0, 0, 0, 0.26);
   }
   .res .markdownEditor a.edit-btn:hover {
-    box-shadow: inset 0 1px 0 white;
+    box-shadow: inset 0 1px 0 #4b5767;
   }
   .res .markdownEditor a.edit-btn:active {
     background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 1px white;
+    box-shadow: 0 1px 1px #4b5767;
   }
   .res .BERight,
   .res .RESDialogSmall.livePreview {
-    background: #fff;
-    color: #111;
+    background: #242a32;
+    color: #9e9e9e;
   }
   .res .BERight > h3,
   .res .RESDialogSmall.livePreview > h3 {
-    border-bottom-color: #aaaaaa;
+    border-bottom-color: black;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   }
   .res .RESDialogSmall.livePreview {
     max-width: 520px;
-    border: solid 1px #aaaaaa;
+    border: solid 1px black;
     margin-top: 1em;
   }
   .res .RESDialogSmall.livePreview > h3 {
@@ -3329,13 +3331,13 @@
     padding: 1px 6px;
     color: #fff;
     font-weight: bold;
-    background: #6b6b6b;
+    background: #242a32;
     margin: 1px 5px 0 0 !important;
     border-radius: 3px;
   }
   .res .RESCharCounter.tooLong {
     color: #fff;
-    background: #dc322f;
+    background: #621210;
   }
   .res #alert_message .buttonContainer > input[type=button] {
     font-size: 13px;
@@ -3421,9 +3423,9 @@
     color: #9e9e9e;
     border: none;
     vertical-align: middle;
-    background: -webkit-linear-gradient(top, #4c4745, #3c3837);
-    background: -moz-linear-gradient(top, #4c4745, #3c3837);
-    background: linear-gradient(top, #4c4745, #3c3837);
+    background: -webkit-linear-gradient(top, #424d5b, #353e49);
+    background: -moz-linear-gradient(top, #424d5b, #353e49);
+    background: linear-gradient(top, #424d5b, #353e49);
     border-radius: 3px;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.6);
   }
@@ -3439,9 +3441,9 @@
     padding: 7px 0;
     margin-top: 4px;
     z-index: 90 !important;
-    background: -webkit-linear-gradient(bottom, #312e2d 97%, #1c1a19);
-    background: -moz-linear-gradient(bottom, #312e2d 97%, #1c1a19);
-    background: linear-gradient(bottom, #312e2d 97%, #1c1a19);
+    background: -webkit-linear-gradient(bottom, #2d343d 97%, #1c2026);
+    background: -moz-linear-gradient(bottom, #2d343d 97%, #1c2026);
+    background: linear-gradient(bottom, #2d343d 97%, #1c2026);
     border-radius: 0 0 3px 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
@@ -3451,7 +3453,7 @@
   }
   .res .RESDropdownList li:hover {
     color: #fff;
-    background: #cb4b16;
+    background: #3c4552;
   }
   .res .RESDropdownList li a,
   .res .RESDropdownList li a:hover {
@@ -3488,7 +3490,7 @@
     color: #9bb300;
   }
   .res .RESMacroDropdownTitle {
-    color: #6b6b6b;
+    color: #9e9e9e;
     position: relative;
     padding: 1px 6px 2px 6px;
     background: none;
@@ -3498,7 +3500,7 @@
   }
   .res .RESMacroDropdownTitle.openMacro {
     z-index: 2001;
-    background: #f7f7f7;
+    background: #353e49;
     border-color: rgba(0, 0, 0, 0.3);
   }
   .res .RESMacroDropdown {
@@ -3523,17 +3525,17 @@
     margin: 0 3px;
   }
   .res #RESDashboardEditComponent {
-    border-color: #aaaaaa;
+    border-color: black;
   }
   .res #RESDashboardEditComponent,
   .res .RESDashboardComponentHeader {
     overflow: hidden;
     vertical-align: middle;
-    border-bottom: solid 1px #aaaaaa;
-    background: -webkit-linear-gradient(top, #e7e7e7, #e0e0e0);
-    background: -moz-linear-gradient(top, #e7e7e7, #e0e0e0);
-    background: linear-gradient(top, #e7e7e7, #e0e0e0);
-    box-shadow: inset 0 1px 0 #efefef, 0 2px 4px #c9c9c9;
+    border-bottom: solid 1px black;
+    background: -webkit-linear-gradient(top, #22272f, #1c2026);
+    background: -moz-linear-gradient(top, #22272f, #1c2026);
+    background: linear-gradient(top, #22272f, #1c2026);
+    box-shadow: inset 0 1px 0 #292f37, 0 2px 4px #080a0b;
     border-radius: 3px 3px 0 0;
   }
   .res #RESDashboardEditComponent ul > li,
@@ -3544,12 +3546,12 @@
     margin: 4px 10px 0 6px;
     width: auto;
     padding: 2px 6px;
-    border: solid 1px #aaaaaa;
+    border: solid 1px black;
     border-radius: 3px;
     background: -webkit-linear-gradient(top, #FFF5CC, #ffeb99);
     background: -moz-linear-gradient(top, #FFF5CC, #ffeb99);
     background: linear-gradient(top, #FFF5CC, #ffeb99);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 #efefef;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 #292f37;
   }
   .res .widgetStateButtons {
     float: right;
@@ -3558,7 +3560,7 @@
     width: auto !important;
   }
   .res .widgetStateButtons > li.updateTime {
-    color: #111;
+    color: #9e9e9e;
   }
   .res .widgetStateButtons > li.minimize {
     font-size: 13px;
@@ -3621,20 +3623,5 @@
   .res.res-commentBoxes .comments-page .nestedlisting .thing.comment {
     border: none !important;
     overflow: visible !important;
-  }
-}
-@-moz-document regexp("https?://([^.]+\\.)?reddit\\.com/r/[Dd]ashboard([/#?].*)?") {
-  .redditname {
-    position: absolute;
-    z-index: 100;
-    left: 10px;
-    top: 109px;
-  }
-  .redditname:before {
-    display: none;
-  }
-
-  #viewImagesButton {
-    margin-left: 360px;
   }
 }

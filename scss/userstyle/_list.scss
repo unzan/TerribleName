@@ -5,19 +5,17 @@
       min-width: 0;
       text-align: center;
       vertical-align: middle;
-
-      &.prev,
-      &.next {
-        @extend %tn-small-button;
-        //height: auto !important;
-        position: relative;
-        margin: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        text-indent: -900px;
-        width: 20px;
-        height: 20px;
-      }
+      border: none !important;
+      position: relative;
+      background: none;
+      height: auto;
+      line-height: 1em;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-indent: -900px;
+      width: 8px;
+      @include shadow(none);
 
       &:before {
         content: '';
@@ -32,19 +30,15 @@
 
       &.prev {
         border-right: none;
-        @include rounded(3px 0 0 3px);
         &:before {
-          border-right: solid 5px $small-button-fg;
-          //content: '\25c2';
+          border-right: solid 5px lighten($special-entry-bg, 20%);
         }
       }
 
       &.next {
         border-left: none;
-        @include rounded(0 3px 3px 0);
         &:before {
-          border-left: solid 5px $small-button-fg;
-          //content: '\25b8';
+          border-left: solid 5px lighten($special-entry-bg, 20%);
         }
       }
     }

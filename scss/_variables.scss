@@ -16,8 +16,6 @@ $max-comment-width: 63em;
 // - none: do not show level indicator
 $comment-level-indicator: child-only;
 
-$res-nightmode-compatible: yes;
-
 // --- PALETTE ---------------------------------------------
 
 $white:           #fff;
@@ -48,12 +46,12 @@ $bright-cyan:     #BDD4E0;
 $sidebar-width:   300px;
 
 
-$main-bg-image: '../image/noise.jpg';
+$main-bg-image: '../image/dark-noise.jpg';
 $header-bg-image: '../image/banner.jpg';
 $icon-image: '../image/icons.png';
 $res-night-bg-image: '../image/dark-noise.jpg';
 @if env(ASSETS) == remote {
-  $main-bg-image: '%%noise%%';
+  $main-bg-image: '%%dark-noise%%';
   $header-bg-image: '%%banner%%';
   $icon-image: '%%icons%%';
   $res-night-bg-image: '%%dark-noise%%';
@@ -64,14 +62,14 @@ $serif: 'Liberation Serif', 'Times New Roman', serif;
 $monospace: 'Liberation Mono', 'Droid Sans Mono', 'DejaVu Sans Mono', Inconsolata, Monaco, monospace;
 $normal-font-size: 13px;
 
-$accent: $orange;
-$main-bg: $gray;
-$main-fg: $black;
-$focus-color: $accent;
+$accent: $dark-blue-gray;
+$main-bg: $dark-blue;
+$main-fg: darken($gray, 30%);
+$focus-color: $bright-cyan;
 
 $default-border-color: darken($main-bg, 25%);
-$thumbnail-bg: $white;
-$text-bg: $white;
+$thumbnail-bg: lighten($main-bg, 20%);
+$text-bg: lighten($main-bg, 8%);
 $text-fg: $main-fg;
 $toc-bg: $bright-yellow;
 $toc-level-indicator-color: rgba(0, 0, 0, 0.2);
@@ -103,17 +101,17 @@ $raised-box-bg: $white;
 $raised-box-fg: $main-fg;
 $flair-selection-hover-bg: none;
 
-$link-fg: darken($blue, 7%);
-$link-fg-visited: darken($violet, 7%);
+$link-fg: darken($bright-cyan, 30%);
+$link-fg-visited: desaturate(darken($violet, 4%), 35%);
 $sticky-link-fg: $dark-green;
 
 $header-height: 140px;
-$header-bg: $black;
+$header-bg: lighten($main-bg, 9%);
 $header-fg: darken($gray, 14%);
 $page-title-height: $header-height - 51px;
 $page-title-fg: darken($gray, 20%);
 
-$menu-bar-bg: $dark-brown;
+$menu-bar-bg: lighten($main-bg, 10%);
 $menu-bar-fg: darken($gray, 30%);
 $sr-header-fg: darken($gray, 40%);
 $sr-header-bg: rgba(0, 0, 0, 0.8);
@@ -124,17 +122,12 @@ $sr-dropdown-selected-fg: $white;
 $new-message-count-bg: $accent;
 $new-message-count-fg: $white;
 
-$dropdown-menu-bg: lighten($gray, 5%);
-$dropdown-menu-fg: darken($gray, 50%);
-$dropdown-item-focused-bg: $focus-color;
-$dropdown-item-focused-fg: $white;
-
 $sponsored-tag-bg: $bright-yellow;
-$special-entry-bg: rgba($green, 0.1);
-$special-entry-fg: lighten($main-fg, 20%);
-$sidebar-fg: darken($gray, 60%);
+$special-entry-bg: #1A242C;
+$special-entry-fg: $main-fg;
+$sidebar-fg: $main-fg;
 $sidebar-toolbox-title-bg: darken($main-bg, 3%);
-$sidebar-toolbox-bg: rgba(255, 255, 255, 0.2);
+$sidebar-toolbox-bg: lighten($main-bg, 6%);
 $sidebar-toolbox-button-hover-color: rgba(0, 0, 0, 0.3);
 $nsfw-tag-bg: $accent;
 $nsfw-tag-fg: $white;
@@ -153,16 +146,16 @@ $default-modpost-thumb-bg: rgba($green, 0.5);
 $default-text-thumb-bg: rgba($blue, 0.6);
 $removed-thumb-bg: $red;
 $removed-thumb-fg: $white;
-$flat-list-hover-bg: darken($main-bg, 11%);
+$flat-list-hover-bg: rgba(255, 255, 255, 0.1);
 
-$flair-bg: $bright-yellow;
+$flair-bg: lighten($main-bg, 15%);
 $flair-fg: $main-fg;
 $flair-border-color: desaturate(darken($flair-bg, 20%), 40%);
 $notice-bubble-bg: $bright-yellow;
 
-$list-entry-fg: darken($gray, 50%);
+$list-entry-fg: lighten($main-fg, 5%);
 $comment-bg: $text-bg;
-$comment-footer-bg: darken($comment-bg, 4%);
+$comment-footer-bg: lighten($comment-bg, 5%);
 $deleted-comment-bg: none;
 
 // this one is for highlight when viewing single comment thread
@@ -188,23 +181,30 @@ $button-fg: $white;
 $button-bg: $accent;
 $button-disabled-fg: rgba(0, 0, 0, 0.4);
 $button-disabled-bg: darken($main-bg, 12%);
-$input-fg: lighten($black, 20%);
-$input-bg: $white;
-$input-focused-border-color: lighten($accent, 20%);
-$small-button-bg: lighten($gray, 5%);
-$small-button-fg: darken($gray, 50%);
+$input-fg: $main-fg;
+$input-bg: lighten($main-bg, 5%);
+$input-focused-border-color: $focus-color;
+$small-button-bg: lighten($main-bg, 16%);
+$small-button-fg: $main-fg;
 $expand-button-fg: darken($gray, 40%);
+
+$dropdown-menu-bg: $small-button-bg;
+$dropdown-menu-fg: $small-button-fg;
+$dropdown-item-focused-bg: darken($dropdown-menu-bg, 10%);
+$dropdown-item-focused-fg: $dropdown-menu-fg;
 
 $subscribe-bg: $green;
 $subscribe-fg: $white;
-$unsubscribe-bg: darken($main-bg, 15%);
+$unsubscribe-bg: $dark-red;
 $unsubscribe-fg: lighten($main-fg, 30%);
 
-$box-bg: lighten($main-bg, 2%);
-$info-box-bg: $bright-yellow;
+$box-bg: lighten($main-bg, 10%);
+$info-box-bg: $box-bg;
 $info-box-fg: $main-fg;
-$form-tab-bg: $box-bg;
-$form-tab-fg: lighten($main-fg, 20%);
+$form-tab-bg: darken($info-box-bg, 2%);
+$form-tab-fg: darken($info-box-fg, 15%);
+$form-tab-selected-bg: $info-box-bg;
+$form-tab-selected-fg: $info-box-fg;
 $tooltip-bg: $bright-yellow;
 $tooltip-fg: $main-fg;
 //$stats-bg: lighten($main-bg, 6%);
@@ -215,10 +215,10 @@ $res-popup-bg: #5F99CF;
 $res-temp-sort-bg: rgba(0, 0, 0, 0.2);
 $res-current-sub-fg: lighten($sr-header-fg, 40%);
 $res-char-counter-fg: $white;
-$res-char-counter-bg: darken($main-bg, 50%);
-$res-char-counter-too-long-bg: $red;
+$res-char-counter-bg: darken($res-editor-toolbar-bg, 8%);
+$res-char-counter-too-long-bg: $dark-red;
 $res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);
-$res-active-element-color: lighten($focus-color, 20%);
+$res-active-element-color: $focus-color;
 
 $res-night-bg: $dark-blue;
 $res-night-header-bg: lighten($res-night-bg, 9%);

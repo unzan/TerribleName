@@ -43,21 +43,21 @@
       &.moderator {
         &,
         &:hover {
-          background-color: $mod-tag-fg !important;
+          background-color: darken($mod-tag-fg, 10%) !important;
         }
       }
 
       &.admin {
         &,
         &:hover {
-          background-color: $admin-tag-fg !important;
+          background-color: darken($admin-tag-fg, 10%) !important;
         }
       }
 
       &.submitter {
         &,
         &:hover {
-          background-color: $submitter-tag-fg !important;
+          background-color: darken($submitter-tag-fg, 10%) !important;
         }
       }
     }

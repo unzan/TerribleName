@@ -1,15 +1,26 @@
-.expando-button.toggleImage.image,
-.expando-button.toggleImage.video-muted {
-  @extend .expando-button;
-  &.collapsedExpando {
-    @extend .expando-button.selftext.collapsed;
-  }
-
-  &.collapsed.expanded,
-  &.expanded {
-    @extend .expando-button.selftext.expanded;
+.expando-button.toggleImage {
+  &.image,
+  &.video-muted {
+    &,
+    &.collapsedExpando,
+    &.collapsed.expanded,
+    &.expanded {
+      background-image: none !important;
+    }
   }
 }
+// .expando-button.toggleImage.image,
+// .expando-button.toggleImage.video-muted {
+//   @extend .expando-button;
+//   &.collapsedExpando {
+//     @extend .expando-button.selftext.collapsed;
+//   }
+
+//   &.collapsed.expanded,
+//   &.expanded {
+//     @extend .expando-button.selftext.expanded;
+//   }
+// }
 
 .RESshortcutside,
 .RESDashboardToggle {

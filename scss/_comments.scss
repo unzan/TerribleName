@@ -1,8 +1,7 @@
 .commentarea {
-  border-top: solid 1px rgba(0, 0, 0, 0.2);
+  @extend %tn-list-entry-separator;
   padding-top: 10px;
   position: relative;
-  @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7));
 
   > .infobar {
     margin-bottom: 15px;
@@ -55,7 +54,7 @@
     .nestedlisting #{$context} .thing.comment.noncollapsed:before {
       content: '';
       position: absolute;
-      background: darken($main-bg, 15%);
+      background: lighten($main-bg, 8%);
       top: 46px;
       left: 10px;
       width: 1px;
@@ -192,6 +191,13 @@
 .morechildren .morecomments {
   margin: 5px 17px !important;
   display: inline-block;
+}
+
+.morerecursion,
+.morechildren {
+  a {
+    @extend %tn-link;
+  }
 }
 
 .comment.collapsed .tagline {

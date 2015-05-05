@@ -60,6 +60,7 @@
 .users-online {
   $padding: 5px;
   $border-width: 1px;
+  color: $main-fg;
   display: inline-block;
   vertical-align: top;
   width: ($sidebar-width / 2) - (($padding * 2) + ($border-width * 2));
@@ -67,10 +68,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
-  border: solid $border-width $default-border-color;
+  border: solid $border-width darken($main-bg, 3%);
   padding: $padding;
   @include vendor(box-sizing, content-box);
-  @include shadow(0 1px 0 lighten($main-bg, 10%), inset 0 1px 0 lighten($main-bg, 10%));
+  @include shadow(0 1px 0 lighten($main-bg, 15%), inset 0 1px 0 lighten($main-bg, 7%));
 
   .number {
     font-size: 1.3em;
@@ -103,13 +104,15 @@
 // the box that contains mod tools, mod list, etc
 .sidecontentbox {
   > .title {
-    @include linear-gradient(top, $sidebar-toolbox-title-bg, darken($sidebar-toolbox-title-bg, 5%));
-    @include shadow(inset 0 1px 0 lighten($sidebar-toolbox-title-bg, 7%), 0 1px 1px rgba(0, 0, 0, 0.14));
+    @extend %tn-toolbar;
+    border-bottom-color: darken($res-editor-toolbar-bg, 13%);
     @include rounded(3px 3px 0 0);
+    // @include linear-gradient(top, $sidebar-toolbox-title-bg, darken($sidebar-toolbox-title-bg, 5%));
+    // @include shadow(inset 0 1px 0 lighten($sidebar-toolbox-title-bg, 7%), 0 1px 1px rgba(0, 0, 0, 0.14));
 
     .collapse-button,
     h1 {
-      color: $sidebar-fg;
+      color: inherit;
     }
 
     .collapse-button {
@@ -132,7 +135,7 @@
 
   > .title,
   > .content {
-    border: solid 1px $default-border-color;
+    border: solid 1px $main-bg;
     padding: 7px;
   }
 
@@ -141,7 +144,7 @@
     background: $sidebar-toolbox-bg;
     border-top: none;
     @include rounded(0 0 3px 3px);
-    @include shadow(0 1px 0 rgba(255, 255, 255, 0.8));
+    @include shadow(inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 0 lighten($main-bg, 8%));
 
     > li {
       margin: 3px 0;
@@ -157,6 +160,9 @@
 // mod tools
 .icon-menu {
   a {
+    $shadow: darken($sidebar-toolbox-bg, 2%);
+    $bevel: lighten($sidebar-toolbox-bg, 20%);
+
     background: none;
     display: block;
     padding: 3px 6px;
@@ -164,27 +170,30 @@
     border-color: transparent;
     border-width: 1px;
     border-style: solid;
-    color: $small-button-fg;
     @include rounded(3px);
 
+    &,
+    &:active,
+    &:hover,
     &:visited {
-      color: $small-button-fg;
+      color: $main-fg;
     }
 
     &:active,
     &:hover {
-      border-color: darken($small-button-bg, 30%);
+      border-color: darken($sidebar-toolbox-bg, 2%);
+      @include linear-gradient(top, lighten($sidebar-toolbox-bg, 10%), lighten($sidebar-toolbox-bg, 4%));
     }
 
     &:hover {
       text-decoration: none;
       @include linear-gradient(top, darken($small-button-bg, 2%), darken($small-button-bg, 6%));
-      @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.13));
+      @include shadow(inset 0 1px 0 $bevel, 0 1px 1px $shadow);
     }
 
     &:active {
       @include linear-gradient(top, darken($small-button-bg, 2%), darken($small-button-bg, 8%));
-      @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.8));
+      @include shadow(inset 0 1px 1px $shadow, 0 1px 0 $bevel);
     }
   }
 }

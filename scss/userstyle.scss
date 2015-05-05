@@ -27,10 +27,3 @@
   @import "userstyle/inbox";
   @import "userstyle/res";
 }
-
-// RES doesn't add anything to <body> or <html> to indicate that this is
-// a dashboard page so we have to fix the position of the menu bar items
-// using the ugly way
-@-moz-document regexp("https?://([^.]+\\.)?reddit\\.com/r/[Dd]ashboard([/#?].*)?") {
-  @import "userstyle/dashboard_fix";
-}

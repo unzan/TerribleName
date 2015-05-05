@@ -74,7 +74,6 @@ form.submit {
 .fancy-settings + .tabmenu,
 .formtab.tabmenu {
   padding: 0;
-  font-size: 14px;
 
   > li {
     display: block;
@@ -83,24 +82,22 @@ form.submit {
 
     a {
       display: block;
+      font-size: $normal-font-size + 1px !important;
       padding: 3px 17px;
       position: relative;
       margin-right: 3px;
-      color: $form-tab-fg !important;
-      border-left: solid 1px $default-border-color !important;
-      border-right: solid 1px $default-border-color !important;
-      border-top: solid 1px $default-border-color !important;
-      border-bottom: none !important;
-      background: darken($form-tab-bg, 6%);
-      font-size: 14px;
+      color: $form-tab-fg;
+      border: none !important;
+      background: darken($form-tab-bg, 2%);
       @include rounded(3px 3px 0 0);
     }
 
     &.selected {
       a {
-        font-size: 14px;
-        background: $form-tab-bg;
-        @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7));
+        background: $form-tab-selected-bg;
+        color: $form-tab-selected-fg;
+        @include shadow(inset 0 1px 0 lighten($form-tab-selected-bg, 7%));
+
         &:after {
           content: '';
           position: absolute;
@@ -108,7 +105,7 @@ form.submit {
           right: 0;
           top: 100%;
           height: 2px;
-          background: $form-tab-bg;
+          background: $form-tab-selected-bg;
         }
       }
     }
@@ -137,6 +134,11 @@ form.submit {
 
 .formtabs-content {
   width: $comment-textbox-width + 10px;
+
+  .infobar {
+    background: lighten($info-box-bg, 5%);
+    @include shadow(inset 0 1px 0 lighten($info-box-bg, 13%));
+  }
 }
 
 .fancy-settings {

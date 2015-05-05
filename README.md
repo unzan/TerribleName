@@ -8,12 +8,6 @@ You can see a demo of subreddit theme in [/r/TerribleName][subreddit].
 Screenshots
 -----------
 
-[![st-front][]][sb-front]
-[![st-multi][]][sb-multi]
-[![st-comment][]][sb-comment]
-[![st-submit][]][sb-submit]  
-[![st-srsettings][]][sb-srsettings]
-[![st-flairsettings][]][sb-flairsettings]
 [![st-night-multi][]][sb-night-multi]
 [![st-night-comment][]][sb-night-comment]
 
@@ -82,41 +76,15 @@ Installation
 
 4. Click **Save** button to apply.
 
-This theme is compatible with RES nightmode but
-[you have to tell RES to not disable your subreddit's stylesheet in nightmode][1]
-by adding the following link to your sidebar:
-
-    [](#/RES_SR_Config/NightModeCompatible)
-
-[1]: https://www.reddit.com/r/Enhancement/wiki/subredditstyling#wiki_res_night_mode_and_your_subreddit
-
 ### For userstyle
 
-#### Using userstyles.org
-
-- [Main userstyle](https://userstyles.org/styles/103630/reddit-terrible-name-theme)
-- [Additional RES nightmode support](https://userstyles.org/styles/111547/reddit-terrible-name-theme-nightmode-compatibility)
-
-The main userstyle can be used alone but to have RES nightmode support you need
-to install both of them.
-
-#### Manual installation
-
 Create a blank style with Stylish and put the content of `css/userstyle.css` into
-the editor box then click **Save**. If you want nightmode compatibility, you'll
-need to create another blank style and copy the content of
-`css/userstyle-nightmode.css` into it.
+the editor box then click **Save**.
 
 Known Issues
 ------------
 
-1. Some wiki diffs might overlap with sidebar when the browser's window is too
-   small ([for example][fucking diff]).
-
-2. RES active entry indicator overlapped with "sponsored link" label in
-   list of promoted links page.
-
-3. Doesn't work with RES pinned header feature.
+*TODO*
 
 ***
 
