@@ -2,8 +2,8 @@
 @import "userstyle/variables";
 @import "mixins";
 
-@namespace url(http://www.w3.org/1999/xhtml);
-@-moz-document domain(reddit.com) {
+// @namespace url(http://www.w3.org/1999/xhtml);
+// @-moz-document domain(reddit.com) {
   @import "placeholders";
   @import "basic";
   @import "buttons";
@@ -26,4 +26,4 @@
   @import "userstyle/profile";
   @import "userstyle/inbox";
   @import "userstyle/res";
-}
+// }

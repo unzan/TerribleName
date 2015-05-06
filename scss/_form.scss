@@ -336,6 +336,7 @@ form.submit {
       color: $tooltip-bg;
       width: 30em;
       margin: 5px 0 0 -40px;
+      border: solid 1px lighten($tooltip-bg, 10%);
 
       &:before {
         color: $main-fg;

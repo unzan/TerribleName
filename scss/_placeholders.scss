@@ -196,7 +196,7 @@
   background: $tooltip-bg;
   color: $tooltip-fg;
   padding: 4px 6px;
-  @include shadow(0 3px 4px rgba(0, 0, 0, 0.2));
+  @include shadow(0 3px 4px rgba(0, 0, 0, 0.5));
   @include rounded(3px);
 }
 

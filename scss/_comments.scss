@@ -85,7 +85,7 @@
       background-color: transparent;
     }
 
-    .entry {
+    > .entry {
       &:before {
         border-right-color: $misc-spam-tagline-bg;
       }
