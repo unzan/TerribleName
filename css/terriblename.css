@@ -318,19 +318,17 @@ input[type=password] {
 .md table td, .res #alert_message table.commentPreview td,
 .md table th,
 .res #alert_message table.commentPreview th {
-  border-color: black;
+  border-color: #6b6b6b;
 }
 .md table th, .res #alert_message table.commentPreview th {
-  background: #0f1114;
+  background: #3a434f;
   color: #d1d1d1;
-  text-shadow: 0 1px 1px #3a434f;
-  box-shadow: inset 0 1px 0 #4f5c6d;
 }
 .md table tbody tr, .res #alert_message table.commentPreview tbody tr {
   background: #242a32;
 }
 .md table tbody tr:hover, .res #alert_message table.commentPreview tbody tr:hover {
-  background: #FFF5CC;
+  background: #30414d;
 }
 
 .md blockquote {
@@ -1371,7 +1369,9 @@ ul.report-reasons > li.report-reason {
 .tagline a.author.submitter {
   color: #5590af;
 }
-.tagline .score {
+
+.tagline .score,
+.reddit-link .score {
   color: inherit;
 }
 
@@ -1451,7 +1451,7 @@ ul.report-reasons > li.report-reason {
 .md h2 {
   font-size: 1.3em;
   font-weight: normal !important;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
 }
 .md h3 {
   font-size: 1.2em;
@@ -1496,16 +1496,19 @@ ul.report-reasons > li.report-reason {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+.md del {
+  color: #6b6b6b;
+}
 .md code,
 .md pre {
   font-family: "Liberation Mono", "Droid Sans Mono", "DejaVu Sans Mono", Inconsolata, Monaco, monospace;
   border-radius: 0;
 }
 .md code {
-  color: #364956;
-  background: transparent !important;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.2) !important;
   border: none;
-  padding: 0;
+  padding: 0 4px;
   margin: 0;
 }
 .md pre {
@@ -1525,7 +1528,7 @@ ul.report-reasons > li.report-reason {
   border: none;
 }
 .md pre > code {
-  border: solid 1px #b7b7b7;
+  border: solid 1px #6b6b6b;
 }
 .md ul {
   list-style-type: square;
@@ -2037,14 +2040,14 @@ ul.report-reasons > li.report-reason {
 }
 .wiki-page .wikirevisionlisting .generic-table tr td {
   padding: 5px;
-  border: solid 1px black;
+  border: solid 1px #6b6b6b;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 .wiki-page .wikirevisionlisting .generic-table tr td > input[type=radio] {
   margin: 0 3px;
 }
 .wiki-page .wikirevisionlisting .generic-table tr:hover > td {
-  background-color: #FFF5CC;
+  background-color: #30414d;
 }
 .wiki-page .nextprev {
   float: right;
@@ -2088,7 +2091,7 @@ ul.report-reasons > li.report-reason {
 table.diff {
   width: 100%;
   background: #242a32;
-  border: solid 1px black;
+  border: solid 1px #6b6b6b;
   margin-bottom: 1em;
 }
 table.diff tbody,
@@ -2104,10 +2107,10 @@ table.diff .diff_next {
 }
 table.diff .diff_header,
 table.diff .diff_next {
-  background: #0f1114;
+  background: #3a434f;
   color: #d1d1d1;
   border: none;
-  border: solid 1px black;
+  border: solid 1px #6b6b6b;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 table.diff th.diff_header {
