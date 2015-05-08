@@ -197,29 +197,33 @@ form.submit {
 
 .flairselector {
   min-width: 250px !important;
-  padding: 6px !important;
-  @include shadow(inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 4px 6px rgba(0, 0, 0, 0.2));
+  padding: 0 !important;
+  border: none !important;
 
   &.drop-choices.active {
     border-color: rgba(0, 0, 0, 0.3);
   }
 
   > h2 {
-    background: $engraved-box-bg;
-    color: $popup-title-fg;
+    @extend %tn-toolbar;
+    margin: 0;
+    padding: 7px;
     text-transform: capitalize;
-    padding: 4px;
-    margin-bottom: 10px;
-    @include rounded(3px);
-    @include shadow(inset 0 1px 1px rgba(0, 0, 0, 0.17), 0 1px 0 rgba(255, 255, 255, 0.8));
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    @include rounded(3px 3px 0 0);
   }
 
   > form {
-    padding: 4px;
-    border-top-color: rgba(0, 0, 0, 0.3);
+    padding: 6px;
+    border-top-color: lighten($info-box-bg, 7%);
   }
 
   .flairoptionpane {
+    padding: 5px;
+    @include shadow(inset 0 2px 2px darken($info-box-bg, 5%));
+
     ul {
       padding-bottom: 4px;
       > li {
@@ -230,12 +234,25 @@ form.submit {
         @include rounded(3px);
 
         &:hover {
-          @extend %tn-small-button-default;
+          border-color: darken($info-box-bg, 5%);
+          @include linear-gradient(top, lighten($info-box-bg, 5%), lighten($info-box-bg, 2%));
+          @include shadow(inset 0 1px 0 lighten($info-box-bg, 10%), 0 1px 2px darken($info-box-bg, 6%));
+
+          .linkflairlabel,
+          .flair {
+            background-color: lighten($flair-bg, 6%);
+          }
         }
 
         &:active {
-          @extend %tn-small-button-pressed;
+          @include shadow(inset 0 1px 1px darken($info-box-bg, 6%), 0 1px 0 lighten($info-box-bg, 10%));
         }
+
+        a {
+          color: $link-fg !important;
+          background: none !important;
+        }
+
       }
     }
   }

@@ -182,7 +182,6 @@
     &:active,
     &:hover {
       border-color: darken($sidebar-toolbox-bg, 2%);
-      @include linear-gradient(top, lighten($sidebar-toolbox-bg, 10%), lighten($sidebar-toolbox-bg, 4%));
     }
 
     &:hover {

@@ -151,7 +151,12 @@
   }
 
   a {
-    @extend %tn-link; 
+    color: $link-fg;
+
+    &:visited {
+      color: saturate($link-fg-visited, 10%) !important;
+    }
+
     &:hover {
       text-decoration: underline;
     }

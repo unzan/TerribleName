@@ -63,8 +63,7 @@
   &.disabled > .morelink > a {
     color: $button-disabled-fg !important;
     background: $button-disabled-bg;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
-    @include shadow(0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2));
+    @include shadow(inset 0 1px 2px darken($button-disabled-bg, 10%), 0 1px 0 lighten($main-bg, 20%));
   }
 
   &.mod-override > .morelink {
@@ -129,6 +128,10 @@ input[type=submit] {
       }
     }
   }
+
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 
 .nav-buttons {
@@ -145,40 +148,27 @@ input[type=submit] {
   @extend %tn-button-reset;
 }
 
-a.pretty-button {
-  @extend %tn-bracketed;
-  display: inline-block;
-  border: none;
-  padding: 0;
-  font-size: $normal-font-size;
-  @include rounded(0);
+.pretty-button {
+  &.neutral,
+  &.positive,
+  &.negative {
+    @extend %tn-small-button;
+    border: solid 1px $main-bg;
+    padding: 2px 5px;
+    margin: 0 1px;
+    vertical-align: middle;
 
-  &,
-  &.neutral {
-    @extend %tn-background-reset;
+    &.pressed {
+      @extend %tn-small-button-pressed;
+    }
   }
 
-  &:before,
-  &:after {
-    color: $list-entry-fg !important;
-    display: inline-block;
-  }
-
-  &.pressed {
-    font-weight: bold;
-    background: $misc-selected-bg !important;
-  }
-
-  &[onclick*=ignore_reports] {
+  &.neutral[onclick*=ignore_reports] {
     color: $misc-ignore-color;
   }
 }
 
 .big-mod-buttons {
-  .pretty-button {
-    @extend %tn-background-reset;
-  }
-
   > span[role=radiogroup] > .pretty-button {
     &:first-child {
       color: $misc-spam-color;
@@ -192,8 +182,4 @@ a.pretty-button {
       color: $misc-approve-color;
     }
   }
-}
-
-.comment .pretty-button:hover {
-  text-decoration: underline !important;
 }

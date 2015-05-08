@@ -18,7 +18,7 @@
  */
 @namespace url(http://www.w3.org/1999/xhtml);
 @-moz-document domain(reddit.com) {
-  a.pretty-button, a.pretty-button.neutral, .big-mod-buttons .pretty-button, .link.spam, .comment.noncollapsed > .entry .usertext.border > .usertext-body, .users-online:before, .sidebox .spacer {
+  .link.spam, .comment.noncollapsed > .entry .usertext.border > .usertext-body, .users-online:before, .sidebox .spacer {
     background: none;
   }
 
@@ -29,7 +29,7 @@
     background: none !important;
   }
 
-  a, .thing .title, .tagline a, .md a, .morerecursion a,
+  a, .thing .title, .morerecursion a,
   .morechildren a, .hover-bubble.multi-selector a {
     color: #5590af;
   }
@@ -70,7 +70,7 @@
     border: none;
     display: block;
     height: 3px;
-    background: black;
+    background: rgba(255, 255, 255, 0.2);
   }
 
   .link .usertext-body .md, .linklisting > .link.comment .usertext-body .md, .link.thing.subreddit .usertext-body .md, .comment.noncollapsed > .entry, .message.noncollapsed > .entry, .wiki-page .wiki-page-content .md.wiki {
@@ -82,10 +82,10 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
-  a.pretty-button:before, .sidecontentbox > .title .collapse-button:before, .wiki-page .wikititle:before {
+  .sidecontentbox > .title .collapse-button:before, .wiki-page .wikititle:before {
     content: '[';
   }
-  a.pretty-button:after, .sidecontentbox > .title .collapse-button:after, .wiki-page .wikititle:after {
+  .sidecontentbox > .title .collapse-button:after, .wiki-page .wikititle:after {
     content: ']';
   }
 
@@ -179,13 +179,15 @@
     box-shadow: none;
   }
 
-  .flairselector .flairoptionpane ul > li:hover,
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
   .res ul.widgetSortButtons > li,
   .nav-buttons a,
   .nav-buttons a:hover,
+  .pretty-button.neutral,
+  .pretty-button.positive,
+  .pretty-button.negative,
   .menuarea .spacer .toggle .togglebutton,
   .menuarea .spacer .dropdown.lightdrop,
   .trending-subreddits > .trending-subreddits-content li > a,
@@ -208,13 +210,15 @@
     box-shadow: inset 0 1px 0 #4b5767, 0 1px 1px rgba(0, 0, 0, 0.3);
   }
 
-  .flairselector .flairoptionpane ul > li:hover,
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
   .res ul.widgetSortButtons > li,
   .nav-buttons a,
   .nav-buttons a:hover,
+  .pretty-button.neutral,
+  .pretty-button.positive,
+  .pretty-button.negative,
   .menuarea .spacer .toggle .togglebutton,
   .menuarea .spacer .dropdown.lightdrop,
   .trending-subreddits > .trending-subreddits-content li > a,
@@ -245,12 +249,15 @@
     border-radius: 3px;
   }
 
-  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .res ul.widgetSortButtons > li.active, .flairselector .flairoptionpane ul > li:active, .explore-item .fancy-toggle-button.toggle > .option.active.remove,
+  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .res ul.widgetSortButtons > li.active, .pretty-button.neutral.pressed, .pretty-button.positive.pressed, .pretty-button.negative.pressed, .explore-item .fancy-toggle-button.toggle > .option.active.remove,
   .wiki-page .pageactions > .wikiaction:active,
   .menuarea .flat-list > li > a:active,
   .res .commentNavSortType:active,
   .res ul.widgetSortButtons > li:active,
   .nav-buttons a:active,
+  .pretty-button.neutral:active,
+  .pretty-button.positive:active,
+  .pretty-button.negative:active,
   .menuarea .spacer .toggle .togglebutton:active,
   .menuarea .spacer .dropdown.lightdrop:active,
   .trending-subreddits > .trending-subreddits-content li > a:active,
@@ -564,7 +571,7 @@
     color: #9e9e9e;
   }
 
-  .sidecontentbox > .title, .res .BERight > h3,
+  .flairselector > h2, .sidecontentbox > .title, .res .BERight > h3,
   .res .RESDialogSmall.livePreview > h3,
   .res .BELeft,
   .res .markdownEditor-wrapper {
@@ -612,9 +619,9 @@
     vertical-align: middle;
   }
   .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.add:hover {
-    background: -webkit-linear-gradient(top, #859900, #6f8000);
-    background: -moz-linear-gradient(top, #859900, #6f8000);
-    background: linear-gradient(top, #859900, #6f8000);
+    background: -webkit-linear-gradient(top, #627000, #4b5700);
+    background: -moz-linear-gradient(top, #627000, #4b5700);
+    background: linear-gradient(top, #627000, #4b5700);
   }
   .fancy-toggle-button > .option.remove, .fancy-toggle-button > .option.remove:hover, .fancy-toggle-button > .option.remove:focus, .fancy-toggle-button > .option.remove:active {
     background: -webkit-linear-gradient(top, #621210, #4c0e0d);
@@ -640,10 +647,9 @@
   }
 
   .submit.disabled > .morelink > a {
-    color: rgba(0, 0, 0, 0.4) !important;
-    background: black;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #9e9e9e !important;
+    background: #20252c;
+    box-shadow: inset 0 1px 2px #0a0c0e, 0 1px 0 #3e4855;
   }
   .submit.mod-override > .morelink > a {
     padding-left: 30px;
@@ -687,27 +693,21 @@
     left: 8px;
     background: #848484;
   }
+  .expando-button:hover {
+    text-decoration: none !important;
+  }
 
   .nav-buttons {
     padding: 1em 0;
   }
 
-  a.pretty-button {
-    display: inline-block;
-    border: none;
-    padding: 0;
-    font-size: 13px;
-    border-radius: 0;
+  .pretty-button.neutral, .pretty-button.positive, .pretty-button.negative {
+    border: solid 1px #13161A;
+    padding: 2px 5px;
+    margin: 0 1px;
+    vertical-align: middle;
   }
-  a.pretty-button:before, a.pretty-button:after {
-    color: #aaaaaa !important;
-    display: inline-block;
-  }
-  a.pretty-button.pressed {
-    font-weight: bold;
-    background: rgba(255, 255, 255, 0.2) !important;
-  }
-  a.pretty-button[onclick*=ignore_reports] {
+  .pretty-button.neutral[onclick*=ignore_reports] {
     color: #2aa198;
   }
 
@@ -719,10 +719,6 @@
   }
   .big-mod-buttons > span[role=radiogroup] > .pretty-button.positive {
     color: #859900;
-  }
-
-  .comment .pretty-button:hover {
-    text-decoration: underline !important;
   }
 
   #search input[type=text] {
@@ -884,24 +880,28 @@
 
   .flairselector {
     min-width: 250px !important;
-    padding: 6px !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 0 !important;
+    border: none !important;
   }
   .flairselector.drop-choices.active {
     border-color: rgba(0, 0, 0, 0.3);
   }
   .flairselector > h2 {
-    background: rgba(0, 0, 0, 0.14);
-    color: #d1d1d1;
+    margin: 0;
+    padding: 7px;
     text-transform: capitalize;
-    padding: 4px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.17), 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 3px 3px 0 0;
   }
   .flairselector > form {
-    padding: 4px;
-    border-top-color: rgba(0, 0, 0, 0.3);
+    padding: 6px;
+    border-top-color: #38404c;
+  }
+  .flairselector .flairoptionpane {
+    padding: 5px;
+    box-shadow: inset 0 2px 2px #1e2229;
   }
   .flairselector .flairoptionpane ul {
     padding-bottom: 4px;
@@ -912,6 +912,24 @@
     display: inline-block;
     line-height: 1.2em;
     border-radius: 3px;
+  }
+  .flairselector .flairoptionpane ul > li:hover {
+    border-color: #1e2229;
+    background: -webkit-linear-gradient(top, #333b46, #2d343d);
+    background: -moz-linear-gradient(top, #333b46, #2d343d);
+    background: linear-gradient(top, #333b46, #2d343d);
+    box-shadow: inset 0 1px 0 #3e4855, 0 1px 2px #1c2026;
+  }
+  .flairselector .flairoptionpane ul > li:hover .linkflairlabel,
+  .flairselector .flairoptionpane ul > li:hover .flair {
+    background-color: #404a58;
+  }
+  .flairselector .flairoptionpane ul > li:active {
+    box-shadow: inset 0 1px 1px #1c2026, 0 1px 0 #3e4855;
+  }
+  .flairselector .flairoptionpane ul > li a {
+    color: #5590af !important;
+    background: none !important;
   }
   .flairselector .customizer,
   .flairselector button {
@@ -1054,7 +1072,7 @@
   .searchfacets > .title {
     margin: 0;
     padding-bottom: 6px;
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.2);
   }
   .searchfacets > .list {
     margin-top: 10px;
@@ -1451,6 +1469,9 @@
     font-size: 13px;
   }
 
+  .tagline a {
+    color: #5590af;
+  }
   .tagline a.author.admin {
     color: #dc322f;
   }
@@ -1625,6 +1646,12 @@
     list-style-type: square;
     padding-left: 20px;
   }
+  .md a {
+    color: #5590af;
+  }
+  .md a:visited {
+    color: #7a7ca2 !important;
+  }
   .md a:hover {
     text-decoration: underline;
   }
@@ -1644,7 +1671,6 @@
   .commentarea > .infobar {
     margin-bottom: 15px;
     margin-left: 10px;
-    border-left: solid 4px black;
   }
   .commentarea .menuarea {
     color: #9e9e9e;
@@ -1734,7 +1760,7 @@
     margin: 6px 2px 7px 32px;
   }
   .comment.noncollapsed > .entry .usertext.border {
-    background: #FFF5CC;
+    background: #2c3c47;
   }
   .comment.noncollapsed > .entry .usertext > .usertext-body {
     max-width: 63em;
@@ -1925,9 +1951,6 @@
   }
   .icon-menu a:active, .icon-menu a:hover {
     border-color: #1c2026;
-    background: -webkit-linear-gradient(top, #353e49, #292f37);
-    background: -moz-linear-gradient(top, #353e49, #292f37);
-    background: linear-gradient(top, #353e49, #292f37);
   }
   .icon-menu a:hover {
     text-decoration: none;
@@ -2643,7 +2666,7 @@
     font-weight: normal;
     margin-bottom: 14px;
     padding-bottom: 8px;
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.2);
   }
   .multi-details .settings > button,
   .multi-details .settings > .delete > button, .multi-details.public .settings > .share-in-sr,

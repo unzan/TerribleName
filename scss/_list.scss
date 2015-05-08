@@ -226,7 +226,7 @@
 
 .tagline {
   a {
-    @extend %tn-link;
+    color: $link-fg;
 
     &.author {
       &.admin {

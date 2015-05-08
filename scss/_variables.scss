@@ -93,7 +93,7 @@ $diff-add-bg: rgba($green, 0.3);
 $diff-sub-bg: rgba($red, 0.3);
 $spoiler-bg: $black;
 $spoiler-fg: $white;
-$horiz-line-color: darken($main-bg, 20%);
+$horiz-line-color: rgba(255, 255, 255, 0.2);
 
 $engraved-box-bg: rgba(0, 0, 0, 0.14);
 $popup-title-fg: lighten($main-fg, 20%);
@@ -159,7 +159,7 @@ $comment-footer-bg: lighten($comment-bg, 5%);
 $deleted-comment-bg: none;
 
 // this one is for highlight when viewing single comment thread
-$highlighted-comment-bg: $bright-yellow;
+$highlighted-comment-bg: darken($dark-blue-gray, 10%);
 
 // and these two are for new comment highlight feature of gold members/moderators
 $new-comment-bg: darken($dark-blue-gray, 7%);
@@ -179,8 +179,8 @@ $misc-spam-tagline-bg: $dark-red;
 
 $button-fg: $white;
 $button-bg: $accent;
-$button-disabled-fg: rgba(0, 0, 0, 0.4);
-$button-disabled-bg: darken($main-bg, 12%);
+$button-disabled-fg: $main-fg;
+$button-disabled-bg: lighten($main-bg, 6%);
 $input-fg: $main-fg;
 $input-bg: lighten($main-bg, 5%);
 $input-focused-border-color: $focus-color;
@@ -193,7 +193,7 @@ $dropdown-menu-fg: $small-button-fg;
 $dropdown-item-focused-bg: darken($dropdown-menu-bg, 10%);
 $dropdown-item-focused-fg: $dropdown-menu-fg;
 
-$subscribe-bg: $green;
+$subscribe-bg: darken($green, 8%);
 $subscribe-fg: $white;
 $unsubscribe-bg: $dark-red;
 $unsubscribe-fg: lighten($main-fg, 30%);
