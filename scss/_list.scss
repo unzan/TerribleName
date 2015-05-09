@@ -38,7 +38,8 @@
       padding: 2px 5px !important;
       font-weight: bold;
       @include rounded(3px);
-      &:hover {
+
+      &:not(.pretty-button):hover {
         text-decoration: none;
         background: $flat-list-hover-bg;
       }
@@ -215,13 +216,20 @@
   @include rounded(2px);
 }
 
+.domain {
+  &,
+  & a {
+    @extend %tn-font-reset;
+    color: darken($list-entry-fg, 15%);
+  }
+}
+
 .tagline,
-.domain a,
 .entry .buttons li a,
 .entry .buttons li .redditSingleClick,
 .pretty-button {
+  @extend %tn-font-reset;
   color: $list-entry-fg;
-  font-size: 13px;
 }
 
 .tagline {
@@ -310,4 +318,8 @@
 #noresults {
   margin: 7px 15px;
   font-style: italic;
+}
+
+.subreddit .usertext-body .md {
+  @extend %tn-simple-text-container;
 }

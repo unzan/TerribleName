@@ -13,6 +13,10 @@ input[type=password] {
   padding: 6px;
 }
 
+#previoussearch input[type=text] {
+  color: $input-fg !important;
+}
+
 .infobar {
   @extend %tn-info-box;
 }
@@ -500,6 +504,11 @@ ul.report-reasons > li.report-reason-title,
 
 .action-form > ol {
   margin-bottom: 10px;
+}
+
+.action-form input:disabled {
+  background: $input-bg;
+  opacity: 0.7;
 }
 
 ul.report-reasons {

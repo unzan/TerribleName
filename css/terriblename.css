@@ -68,7 +68,7 @@ hr, .md hr {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.link .usertext-body .md, .linklisting > .link.comment .usertext-body .md, .comment.noncollapsed > .entry, .wiki-page .wiki-page-content .md.wiki {
+.link .usertext-body .md, .linklisting > .link.comment .usertext-body .md, .comment.noncollapsed > .entry, .subreddit .usertext-body .md, .wiki-page .wiki-page-content .md.wiki {
   background: #242a32;
   color: #9e9e9e;
   border: none;
@@ -322,19 +322,20 @@ input[type=password] {
   box-shadow: 0 1px 2px #080a0b;
 }
 
-.md table td, .res #alert_message table.commentPreview td,
+.md table td, .wiki-page .wikirevisionlisting .generic-table td, .res #alert_message table.commentPreview td,
 .md table th,
+.wiki-page .wikirevisionlisting .generic-table th,
 .res #alert_message table.commentPreview th {
-  border-color: #6b6b6b;
+  border-color: #4b5767;
 }
-.md table th, .res #alert_message table.commentPreview th {
+.md table th, .wiki-page .wikirevisionlisting .generic-table th, .res #alert_message table.commentPreview th {
   background: #3a434f;
   color: #d1d1d1;
 }
-.md table tbody tr, .res #alert_message table.commentPreview tbody tr {
+.md table tbody tr, .wiki-page .wikirevisionlisting .generic-table tbody tr, .res #alert_message table.commentPreview tbody tr {
   background: #242a32;
 }
-.md table tbody tr:hover, .res #alert_message table.commentPreview tbody tr:hover {
+.md table tbody tr:hover, .wiki-page .wikirevisionlisting .generic-table tbody tr:hover, .res #alert_message table.commentPreview tbody tr:hover {
   background: #30414d;
 }
 
@@ -445,6 +446,13 @@ input[type=password] {
 .res .morechildren > .entry.RES-keyNav-activeElement > .morecomments,
 .res .comment.collapsed > .entry.RES-keyNav-activeElement > .tagline {
   outline: dashed 1px #BDD4E0;
+}
+
+.domain, .domain a, .tagline,
+.entry .buttons li a,
+.entry .buttons li .redditSingleClick,
+.pretty-button {
+  font: normal 13px "Liberation Sans", Arial, sans-serif;
 }
 
 .menuarea .drop-choices.lightdrop {
@@ -633,6 +641,10 @@ hr {
 
 #search input[type=text] {
   padding: 6px;
+}
+
+#previoussearch input[type=text] {
+  color: #9e9e9e !important;
 }
 
 .usertext {
@@ -1028,6 +1040,11 @@ ul.report-reasons > li.report-reason-title:first-letter,
   margin-bottom: 10px;
 }
 
+.action-form input:disabled {
+  background: #1e2229;
+  opacity: 0.7;
+}
+
 ul.report-reasons {
   list-style: square outside;
   overflow: visible;
@@ -1233,8 +1250,8 @@ ul.report-reasons > li.report-reason {
   font-weight: bold;
   border-radius: 3px;
 }
-.link .flat-list.buttons a:hover,
-.link .flat-list.buttons .redditSingleClick:hover {
+.link .flat-list.buttons a:not(.pretty-button):hover,
+.link .flat-list.buttons .redditSingleClick:not(.pretty-button):hover {
   text-decoration: none;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -1370,13 +1387,15 @@ ul.report-reasons > li.report-reason {
   border-radius: 2px;
 }
 
+.domain, .domain a {
+  color: #848484;
+}
+
 .tagline,
-.domain a,
 .entry .buttons li a,
 .entry .buttons li .redditSingleClick,
 .pretty-button {
   color: #aaaaaa;
-  font-size: 13px;
 }
 
 .tagline a {
@@ -1548,9 +1567,6 @@ ul.report-reasons > li.report-reason {
 .md pre {
   background: none;
   border: none;
-}
-.md pre > code {
-  border: solid 1px #6b6b6b;
 }
 .md ul {
   list-style-type: square;
@@ -1761,7 +1777,7 @@ ul.report-reasons > li.report-reason {
 .titlebox > .bottom {
   margin-top: 1em;
   padding-top: 1em;
-  border-top: solid 3px rgba(0, 0, 0, 0.2);
+  border-top: solid 3px rgba(255, 255, 255, 0.2);
 }
 
 .linkinfo,
@@ -2035,6 +2051,9 @@ ul.report-reasons > li.report-reason {
   background: none !important;
   border: none !important;
 }
+.wiki-page .wiki-page-content .description h2 {
+  color: inherit;
+}
 .wiki-page .wiki-page-content .md.wiki > .toc > ul {
   border: none;
   padding: 10px;
@@ -2062,16 +2081,11 @@ ul.report-reasons > li.report-reason {
 .wiki-page .wikirevisionlisting {
   margin-bottom: 1em;
 }
-.wiki-page .wikirevisionlisting .generic-table tr td {
+.wiki-page .wikirevisionlisting .generic-table td {
+  border-style: solid;
+  border-width: 1px;
+  color: #9e9e9e;
   padding: 5px;
-  border: solid 1px #6b6b6b;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
-}
-.wiki-page .wikirevisionlisting .generic-table tr td > input[type=radio] {
-  margin: 0 3px;
-}
-.wiki-page .wikirevisionlisting .generic-table tr:hover > td {
-  background-color: #30414d;
 }
 .wiki-page .nextprev {
   float: right;
@@ -2079,43 +2093,28 @@ ul.report-reasons > li.report-reason {
 }
 
 .md.wiki > .toc {
-  background: #FFF5CC;
+  background: #313943;
   float: right;
   padding: 8px;
   margin: 10px 0 10px 10px;
-  border: solid 1px rgba(0, 0, 0, 0.2);
   position: relative;
-  box-shadow: inset 0 -9px 3px #fff7d6;
   border-radius: 0;
-}
-.md.wiki > .toc:after {
-  content: '';
-  position: absolute;
-  height: 2px;
-  background: #f0d875;
-  bottom: -3px;
-  left: 0;
-  right: 0;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
-  border-left: solid 1px rgba(0, 0, 0, 0.2);
-  border-right: solid 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 .md.wiki > .toc:before {
   content: 'CONTENTS';
   font-weight: bold;
   display: block;
   padding-bottom: 3px;
-  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+  border-bottom: solid 2px #475261;
 }
 .md.wiki > .toc > ul ul {
-  border-left-color: rgba(0, 0, 0, 0.2);
+  border-left-color: #4f5c6d !important;
 }
 
 table.diff {
   width: 100%;
-  background: #242a32;
-  border: solid 1px #6b6b6b;
+  background: #13161A;
+  border: solid 1px #4b5767;
   margin-bottom: 1em;
 }
 table.diff tbody,
@@ -2133,9 +2132,7 @@ table.diff .diff_header,
 table.diff .diff_next {
   background: #3a434f;
   color: #d1d1d1;
-  border: none;
-  border: solid 1px #6b6b6b;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border: solid 1px #2f3640;
 }
 table.diff th.diff_header {
   padding: 4px;
