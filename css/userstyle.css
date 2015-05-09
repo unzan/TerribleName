@@ -25,7 +25,7 @@
   .morelink, .morelink:hover, .flairselection > .linkflair > a:hover,
   .flairselection > .flairremove > a:hover, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement .md, .res .morerecursion > .entry.RES-keyNav-activeElement,
   .res .morechildren > .entry.RES-keyNav-activeElement,
-  .res .comment.collapsed > .entry.RES-keyNav-activeElement, .res #RESDashboardAddComponent, .res.res-commentBoxes .comments-page .nestedlisting .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  .res .comment.collapsed > .entry.RES-keyNav-activeElement, .res.res-commentBoxes .comments-page .nestedlisting .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
     background: none !important;
   }
 
@@ -41,24 +41,21 @@
     background: #262c35 url("http://i.imgur.com/kfumYVX.jpg") 0 0 no-repeat !important;
   }
 
-  #header .tabmenu > li > a, .res .redditname > a[href$="/r/Dashboard/"],
-  .res .redditname > .dashboardTab {
+  #header .tabmenu > li > a {
     background: none;
     display: block;
     font-weight: normal;
     color: #9e9e9e;
     padding: 8px 13px;
   }
-  #header .tabmenu > li > a:hover, .res .redditname > a[href$="/r/Dashboard/"]:hover,
-  .res .redditname > .dashboardTab:hover {
+  #header .tabmenu > li > a:hover {
     color: #d1d1d1;
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
     background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
     background: linear-gradient(top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28));
   }
 
-  #header .tabmenu > li.selected > a, .res .redditname > a[href$="/r/Dashboard/"].active,
-  .res .redditname > .dashboardTab.active {
+  #header .tabmenu > li.selected > a {
     color: #eaeaea;
     border: none;
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
@@ -108,8 +105,7 @@
   .multi-details form.rename-multi button.rename, .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .explore-header #explore-settings button,
   #compose-message button#send, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button, .multi-details .settings > .delete.confirm-button > .confirmation > button, .profile-page .expand-summary, .res .RESshortcutside, .res .RESshortcutside.remove,
   .res .RESDashboardToggle,
-  .res .RESDashboardToggle.remove, .res #alert_message > input[type=button], .res .cancelButton,
-  .res .addButton {
+  .res .RESDashboardToggle.remove, .res #alert_message > input[type=button] {
     color: #fff !important;
     font-family: "Liberation Sans", Arial, sans-serif;
     padding: 2px 8px;
@@ -135,15 +131,13 @@
   .multi-details form.copy-multi button.copy:hover,
   .multi-details form.rename-multi button.rename:hover, .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, .explore-header #explore-settings button:hover,
   #compose-message button#send:hover, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:hover, .multi-details .settings > .delete.confirm-button > .confirmation > button:hover, .profile-page .expand-summary:hover, .res .RESshortcutside:hover,
-  .res .RESDashboardToggle:hover, .res #alert_message > input[type=button]:hover, .res .cancelButton:hover,
-  .res .addButton:hover, button:focus,
+  .res .RESDashboardToggle:hover, .res #alert_message > input[type=button]:hover, button:focus,
   input[type=submit]:focus, .multi-details .settings > button:focus,
   .multi-details .settings > .delete > button:focus, .multi-details.public .settings > .share-in-sr:focus,
   .multi-details form.copy-multi button.copy:focus,
   .multi-details form.rename-multi button.rename:focus, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .explore-header #explore-settings button:focus,
   #compose-message button#send:focus, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:focus, .multi-details .settings > .delete.confirm-button > .confirmation > button:focus, .profile-page .expand-summary:focus, .res .RESshortcutside:focus,
-  .res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus, .res .cancelButton:focus,
-  .res .addButton:focus {
+  .res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus {
     color: #fff;
     background: -webkit-linear-gradient(top, #486173, #384b59);
     background: -moz-linear-gradient(top, #486173, #384b59);
@@ -155,8 +149,7 @@
   .multi-details form.copy-multi button.copy:active,
   .multi-details form.rename-multi button.rename:active, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .explore-header #explore-settings button:active,
   #compose-message button#send:active, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:active, .multi-details .settings > .delete.confirm-button > .confirmation > button:active, .profile-page .expand-summary:active, .res .RESshortcutside:active,
-  .res .RESDashboardToggle:active, .res #alert_message > input[type=button]:active, .res .cancelButton:active,
-  .res .addButton:active {
+  .res .RESDashboardToggle:active, .res #alert_message > input[type=button]:active {
     background: -webkit-linear-gradient(top, #405666, #2c3c47);
     background: -moz-linear-gradient(top, #405666, #2c3c47);
     background: linear-gradient(top, #405666, #2c3c47);
@@ -182,7 +175,6 @@
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
-  .res ul.widgetSortButtons > li,
   .nav-buttons a,
   .nav-buttons a:hover,
   .pretty-button.neutral,
@@ -205,15 +197,13 @@
   .res .RESSubscriptionButton,
   .res #BigEditor .RESCloseButton,
   .res button.RESBigEditorPop,
-  .res #alert_message .buttonContainer > input[type=button],
-  .res .widgetStateButtons > li:not(.updateTime) {
+  .res #alert_message .buttonContainer > input[type=button] {
     box-shadow: inset 0 1px 0 #4b5767, 0 1px 1px rgba(0, 0, 0, 0.3);
   }
 
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
   .res .commentNavSortType,
-  .res ul.widgetSortButtons > li,
   .nav-buttons a,
   .nav-buttons a:hover,
   .pretty-button.neutral,
@@ -236,8 +226,7 @@
   .res .RESSubscriptionButton,
   .res #BigEditor .RESCloseButton,
   .res button.RESBigEditorPop,
-  .res #alert_message .buttonContainer > input[type=button],
-  .res .widgetStateButtons > li:not(.updateTime) {
+  .res #alert_message .buttonContainer > input[type=button] {
     color: #9e9e9e;
     text-decoration: none !important;
     text-shadow: 0 1px 1px #15181d;
@@ -249,11 +238,10 @@
     border-radius: 3px;
   }
 
-  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .res ul.widgetSortButtons > li.active, .pretty-button.neutral.pressed, .pretty-button.positive.pressed, .pretty-button.negative.pressed, .explore-item .fancy-toggle-button.toggle > .option.active.remove,
+  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .pretty-button.neutral.pressed, .pretty-button.positive.pressed, .pretty-button.negative.pressed, .explore-item .fancy-toggle-button.toggle > .option.active.remove,
   .wiki-page .pageactions > .wikiaction:active,
   .menuarea .flat-list > li > a:active,
   .res .commentNavSortType:active,
-  .res ul.widgetSortButtons > li:active,
   .nav-buttons a:active,
   .pretty-button.neutral:active,
   .pretty-button.positive:active,
@@ -275,30 +263,29 @@
   .res .RESSubscriptionButton:active,
   .res #BigEditor .RESCloseButton:active,
   .res button.RESBigEditorPop:active,
-  .res #alert_message .buttonContainer > input[type=button]:active,
-  .res .widgetStateButtons > li:active:not(.updateTime) {
+  .res #alert_message .buttonContainer > input[type=button]:active {
     background: -webkit-linear-gradient(top, #2f3640, #22272f);
     background: -moz-linear-gradient(top, #2f3640, #22272f);
     background: linear-gradient(top, #2f3640, #22272f);
     box-shadow: inset 0 2px 3px #0a0c0e, 0 1px 0 #3e4855;
   }
 
-  .wiki-page .pageactions > .wikiaction, .menuarea .flat-list > li > a, .res .commentNavSortType, .res ul.widgetSortButtons > li {
+  .wiki-page .pageactions > .wikiaction, .menuarea .flat-list > li > a, .res .commentNavSortType {
     margin: 0;
     border-right-style: none;
     color: #9e9e9e !important;
     border-radius: 0;
   }
 
-  .wiki-page .pageactions > .wikiaction:first-child, .menuarea .flat-list > li:first-child > a, .res .commentNavSortType:nth-of-type(1), .res ul.widgetSortButtons > li:first-child {
+  .wiki-page .pageactions > .wikiaction:first-child, .menuarea .flat-list > li:first-child > a, .res .commentNavSortType:nth-of-type(1) {
     border-radius: 3px 0 0 3px;
   }
 
-  .wiki-page .pageactions > .wikiaction:last-child, .menuarea .flat-list > li:last-child > a, .res .commentNavSortType:last-child, .res ul.widgetSortButtons > li:last-child {
+  .wiki-page .pageactions > .wikiaction:last-child, .menuarea .flat-list > li:last-child > a, .res .commentNavSortType:last-child {
     border-radius: 0 3px 3px 0;
   }
 
-  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .res ul.widgetSortButtons > li.active {
+  .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a {
     font-weight: bold;
   }
 
@@ -310,7 +297,7 @@
   .fancy-settings .linefield,
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
-  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message, .res .RESDashboardComponent, .infobar, .link .report-reasons,
+  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message, .infobar, .link .report-reasons,
   .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
   .content.submit .info-notice, .hover-bubble.multi-selector, .profile-page .gold-accent.snoovatar-link,
   .profile-page .server-seconds, .message > .subject > .correspondent {
@@ -363,7 +350,7 @@
   .fancy-settings .linefield,
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
-  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message, .res .RESDashboardComponent {
+  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message {
     overflow: hidden;
     padding: 10px;
   }
@@ -533,11 +520,7 @@
   .domain, .domain a, .tagline,
   .entry .buttons li a,
   .entry .buttons li .redditSingleClick,
-  .pretty-button, .res #RESDashboardEditComponent ul,
-  .res .RESDashboardComponentHeader ul, .res a.widgetPath, .res .editWidget,
-  .res .addNewWidget, .res .updateButton,
-  .res .cancelButton,
-  .res .addButton, .res .backToWidgetTypes {
+  .pretty-button {
     font: normal 13px "Liberation Sans", Arial, sans-serif;
   }
 
@@ -3523,100 +3506,6 @@
     min-width: 120px;
     max-width: 300px;
     border-radius: 3px 0 3px 3px;
-  }
-  .res .redditname > a[href$="/r/Dashboard/"],
-  .res .redditname > .dashboardTab {
-    border: none;
-    float: left;
-    opacity: 1;
-  }
-  .res .RESDashboardComponent {
-    padding: 0;
-  }
-  .res .RESDashboardComponent input[type=text] {
-    vertical-align: middle;
-    margin: 0 3px;
-  }
-  .res #RESDashboardEditComponent {
-    border-color: black;
-  }
-  .res #RESDashboardEditComponent,
-  .res .RESDashboardComponentHeader {
-    overflow: hidden;
-    vertical-align: middle;
-    border-bottom: solid 1px black;
-    background: -webkit-linear-gradient(top, #22272f, #1c2026);
-    background: -moz-linear-gradient(top, #22272f, #1c2026);
-    background: linear-gradient(top, #22272f, #1c2026);
-    box-shadow: inset 0 1px 0 #292f37, 0 2px 4px #080a0b;
-    border-radius: 3px 3px 0 0;
-  }
-  .res #RESDashboardEditComponent ul > li,
-  .res .RESDashboardComponentHeader ul > li {
-    height: auto;
-  }
-  .res a.widgetPath {
-    margin: 4px 10px 0 6px;
-    width: auto;
-    padding: 2px 6px;
-    border: solid 1px black;
-    border-radius: 3px;
-    background: -webkit-linear-gradient(top, #FFF5CC, #ffeb99);
-    background: -moz-linear-gradient(top, #FFF5CC, #ffeb99);
-    background: linear-gradient(top, #FFF5CC, #ffeb99);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 #292f37;
-  }
-  .res .widgetStateButtons {
-    float: right;
-  }
-  .res .widgetStateButtons > li {
-    width: auto !important;
-  }
-  .res .widgetStateButtons > li.updateTime {
-    color: #9e9e9e;
-  }
-  .res .widgetStateButtons > li.minimize {
-    font-size: 13px;
-  }
-  .res .widgetStateButtons > li.editButton:before {
-    content: 'Edit';
-  }
-  .res .widgetStateButtons > li.refresh > div {
-    display: none;
-  }
-  .res .widgetStateButtons > li.refresh:before {
-    content: 'Refresh';
-  }
-  .res .editWidget,
-  .res .addNewWidget {
-    margin-top: 5px;
-  }
-  .res .updateButton,
-  .res .cancelButton,
-  .res .addButton {
-    margin: 0 2px;
-    line-height: 1.5em !important;
-    text-transform: lowercase;
-  }
-  .res .cancelButton {
-    width: 4em !important;
-  }
-  .res #RESDashboardAddComponent {
-    border: none;
-    box-shadow: none;
-  }
-  .res #RESDashboardAddComponent > div {
-    height: auto !important;
-  }
-  .res #addUser {
-    height: auto;
-  }
-  .res .backToWidgetTypes {
-    margin: 0 6px 0 0;
-    vertical-align: middle;
-  }
-  .res .editRedditForm {
-    margin-top: 3px;
   }
   .res .subscription-box .subButtons {
     padding: 3px 0 !important;
