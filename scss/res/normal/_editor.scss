@@ -123,10 +123,20 @@ button.RESBigEditorPop {
   background: $text-bg;
   color: $text-fg;
   > h3 {
-    border-bottom-color: $default-border-color;
+    border-bottom-color: $main-bg;
     @include shadow(0 1px 1px rgba(0, 0, 0, 0.15));
   }
 }
+
+.RESDialogSmall.livePreview {
+  border-color: $main-bg !important;
+  > h3 {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+}
+
 // FIXME: this is bad. live preview should not have a very limited width.
 // but if we don't limit its width to minimum textbox width, it will grow
 // wide making the toolbar to also grow wide.

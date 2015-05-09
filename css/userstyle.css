@@ -3297,8 +3297,16 @@
   }
   .res .BERight > h3,
   .res .RESDialogSmall.livePreview > h3 {
-    border-bottom-color: black;
+    border-bottom-color: #13161A;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  }
+  .res .RESDialogSmall.livePreview {
+    border-color: #13161A !important;
+  }
+  .res .RESDialogSmall.livePreview > h3 {
+    border-top: none;
+    border-left: none;
+    border-right: none;
   }
   .res .RESDialogSmall.livePreview {
     max-width: 520px;
