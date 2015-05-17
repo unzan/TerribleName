@@ -296,7 +296,7 @@
   .fancy-settings .linefield,
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
-  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message, .infobar, .link .report-reasons,
+  .multi-details .settings > .delete.confirm-button > .confirmation, #compose-message, .res #alert_message, .infobar, .link .report-reasons,
   .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
   .content.submit .info-notice, .hover-bubble.multi-selector, .profile-page .gold-accent.snoovatar-link,
   .profile-page .server-seconds, .message > .subject > .correspondent {
@@ -349,7 +349,7 @@
   .fancy-settings .linefield,
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
-  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message {
+  .multi-details .settings > .delete.confirm-button > .confirmation, #compose-message, .res #alert_message {
     overflow: hidden;
     padding: 10px;
   }
@@ -2989,6 +2989,18 @@
 
   div:not(.child) > .listing > .message > .child {
     margin-left: 20px !important;
+  }
+
+  .compose-page > .content > h1 {
+    margin: 10px 10px 3px 10px;
+  }
+
+  #compose-message {
+    margin: 10px;
+    display: inline-block;
+  }
+  #compose-message .roundfield {
+    width: auto !important;
   }
 
   .res #header-bottom-right.res-navTop {
