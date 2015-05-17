@@ -376,7 +376,7 @@
   .fancy-settings .linefield,
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
-  .multi-details .settings > .delete.confirm-button > .confirmation, .res #alert_message, .res .RESDashboardComponent {
+  .multi-details .settings > .delete.confirm-button > .confirmation, #compose-message, .res #alert_message, .res .RESDashboardComponent {
     overflow: hidden;
     background: #efefef;
     border: solid 1px #aaaaaa;
@@ -2985,6 +2985,18 @@
 
   div:not(.child) > .listing > .message > .child {
     margin-left: 20px !important;
+  }
+
+  .compose-page > .content > h1 {
+    margin: 10px 10px 3px 10px;
+  }
+
+  #compose-message {
+    margin: 10px;
+    display: inline-block;
+  }
+  #compose-message .roundfield {
+    width: auto !important;
   }
 
   .res #header-bottom-right.res-navTop {

@@ -75,3 +75,15 @@
 div:not(.child) > .listing > .message {
   @extend %tn-dark-list-entry-separator;
 }
+
+#compose-message {
+  @extend %tn-dark-info-box;
+
+  .roundfield {
+    background: none;
+  }
+
+  #send {
+    @extend %tn-dark-big-button;
+  }
+}

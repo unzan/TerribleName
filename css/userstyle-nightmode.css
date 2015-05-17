@@ -183,7 +183,7 @@
   .res.res-nightmode .side .settings > .delete > button, .res.res-nightmode .side.public .settings > .share-in-sr,
   .res.res-nightmode .side form.copy-multi button.copy,
   .res.res-nightmode .side form.rename-multi button.rename,
-  .res.res-nightmode .side .delete.confirm-button > button, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button, .res.res-nightmode #explore-settings button, .res.res-nightmode .updateButton,
+  .res.res-nightmode .side .delete.confirm-button > button, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button, .res.res-nightmode #compose-message #send, .res.res-nightmode #explore-settings button, .res.res-nightmode .updateButton,
   .res.res-nightmode .cancelButton,
   .res.res-nightmode .addButton, .res.res-nightmode .RESshortcutside:hover,
   .res.res-nightmode .RESDashboardToggle:hover,
@@ -192,7 +192,7 @@
   .res.res-nightmode .side .settings > .delete > button:hover, .res.res-nightmode .side.public .settings > .share-in-sr:hover,
   .res.res-nightmode .side form.copy-multi button.copy:hover,
   .res.res-nightmode .side form.rename-multi button.rename:hover,
-  .res.res-nightmode .side .delete.confirm-button > button:hover, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:hover, .res.res-nightmode #explore-settings button:hover, .res.res-nightmode .updateButton:hover,
+  .res.res-nightmode .side .delete.confirm-button > button:hover, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:hover, .res.res-nightmode #compose-message #send:hover, .res.res-nightmode #explore-settings button:hover, .res.res-nightmode .updateButton:hover,
   .res.res-nightmode .cancelButton:hover,
   .res.res-nightmode .addButton:hover, .res.res-nightmode .RESshortcutside:focus,
   .res.res-nightmode .RESDashboardToggle:focus,
@@ -201,7 +201,7 @@
   .res.res-nightmode .side .settings > .delete > button:focus, .res.res-nightmode .side.public .settings > .share-in-sr:focus,
   .res.res-nightmode .side form.copy-multi button.copy:focus,
   .res.res-nightmode .side form.rename-multi button.rename:focus,
-  .res.res-nightmode .side .delete.confirm-button > button:focus, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:focus, .res.res-nightmode #explore-settings button:focus, .res.res-nightmode .updateButton:focus,
+  .res.res-nightmode .side .delete.confirm-button > button:focus, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:focus, .res.res-nightmode #compose-message #send:focus, .res.res-nightmode #explore-settings button:focus, .res.res-nightmode .updateButton:focus,
   .res.res-nightmode .cancelButton:focus,
   .res.res-nightmode .addButton:focus {
     background: -webkit-linear-gradient(top, #405666, #344653);
@@ -215,7 +215,7 @@
   .res.res-nightmode .side .settings > .delete > button:active, .res.res-nightmode .side.public .settings > .share-in-sr:active,
   .res.res-nightmode .side form.copy-multi button.copy:active,
   .res.res-nightmode .side form.rename-multi button.rename:active,
-  .res.res-nightmode .side .delete.confirm-button > button:active, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:active, .res.res-nightmode #explore-settings button:active, .res.res-nightmode .updateButton:active,
+  .res.res-nightmode .side .delete.confirm-button > button:active, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation > button:active, .res.res-nightmode #compose-message #send:active, .res.res-nightmode #explore-settings button:active, .res.res-nightmode .updateButton:active,
   .res.res-nightmode .cancelButton:active,
   .res.res-nightmode .addButton:active {
     background: -webkit-linear-gradient(top, #405666, #2c3c47);
@@ -256,7 +256,7 @@
   .res.res-nightmode .link .action-form,
   .res.res-nightmode .link .flat-list > .report-reasons, .res.res-nightmode .tabpane-content,
   .res.res-nightmode .formtabs-content, .res.res-nightmode .fancy-settings .linefield, .res.res-nightmode .login-form-side, .res.res-nightmode .searchpane, .res.res-nightmode .searchfacets, .res.res-nightmode .side .linkinfo, .res.res-nightmode .gold-accent.comment-visits-box, .res.res-nightmode .side form.rename-multi,
-  .res.res-nightmode .side form.copy-multi, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation, .res.res-nightmode .multi-selector, .res.res-nightmode .message > .subject > .correspondent, .res.res-nightmode .gold-accent.snoovatar-link,
+  .res.res-nightmode .side form.copy-multi, .res.res-nightmode .side .settings > .delete.confirm-button > .confirmation, .res.res-nightmode .multi-selector, .res.res-nightmode .message > .subject > .correspondent, .res.res-nightmode #compose-message, .res.res-nightmode .gold-accent.snoovatar-link,
   .res.res-nightmode .server-seconds {
     background: #292f37;
     color: #9e9e9e;
@@ -964,6 +964,9 @@
   .res.res-nightmode .message.noncollapsed .parent.rounded {
     color: #9e9e9e;
     background: #3a434f !important;
+  }
+  .res.res-nightmode #compose-message .roundfield {
+    background: none;
   }
   .res.res-nightmode .explore-item {
     background: #242a32;
