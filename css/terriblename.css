@@ -27,11 +27,10 @@
   background: none !important;
 }
 
-a, .thing .title, .morerecursion a,
-.morechildren a {
+a, .thing .title, .md h1 a {
   color: #5590af;
 }
-a:visited, .thing .title:visited {
+a:visited, .thing .title:visited, .md h1 a:visited {
   color: #858697;
 }
 
@@ -1687,6 +1686,7 @@ ul.report-reasons > li.report-reason {
 }
 .comment.noncollapsed > .entry .usertext.border {
   background: #2c3c47;
+  color: #c4c4c4;
 }
 .comment.noncollapsed > .entry .usertext > .usertext-body {
   max-width: 63em;
@@ -1715,6 +1715,11 @@ ul.report-reasons > li.report-reason {
 .morechildren .morecomments {
   margin: 5px 17px !important;
   display: inline-block;
+}
+
+.morerecursion a,
+.morechildren a {
+  color: #5590af !important;
 }
 
 .comment.collapsed .tagline {

@@ -160,6 +160,7 @@ $deleted-comment-bg: none;
 
 // this one is for highlight when viewing single comment thread
 $highlighted-comment-bg: darken($dark-blue-gray, 10%);
+$highlighted-comment-fg: lighten($text-fg, 15%);
 
 // and these two are for new comment highlight feature of gold members/moderators
 $new-comment-bg: darken($dark-blue-gray, 7%);

@@ -143,6 +143,7 @@
         // single comment thread. god knows why it's called .border
         &.border {
           background: $highlighted-comment-bg;
+          color: $highlighted-comment-fg;
 
           > .usertext-body {
             @extend %tn-background-reset;
@@ -195,7 +196,7 @@
 .morerecursion,
 .morechildren {
   a {
-    @extend %tn-link;
+    color: $link-fg !important;
   }
 }
 

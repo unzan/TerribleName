@@ -29,11 +29,10 @@
     background: none !important;
   }
 
-  a, .thing .title, .morerecursion a,
-  .morechildren a, .hover-bubble.multi-selector a {
+  a, .thing .title, .md h1 a, .hover-bubble.multi-selector a {
     color: #5590af;
   }
-  a:visited, .thing .title:visited, .hover-bubble.multi-selector a:visited {
+  a:visited, .thing .title:visited, .md h1 a:visited, .hover-bubble.multi-selector a:visited {
     color: #858697;
   }
 
@@ -1756,6 +1755,7 @@
   }
   .comment.noncollapsed > .entry .usertext.border {
     background: #2c3c47;
+    color: #c4c4c4;
   }
   .comment.noncollapsed > .entry .usertext > .usertext-body {
     max-width: 63em;
@@ -1784,6 +1784,11 @@
   .morechildren .morecomments {
     margin: 5px 17px !important;
     display: inline-block;
+  }
+
+  .morerecursion a,
+  .morechildren a {
+    color: #5590af !important;
   }
 
   .comment.collapsed .tagline {

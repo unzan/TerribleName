@@ -27,6 +27,9 @@
   h1 {
     font-size: 1.55em;
     font-weight: bold;
+    a {
+      @extend %tn-link;
+    }
   }
 
   h2 {
