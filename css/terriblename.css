@@ -272,6 +272,11 @@ input[type=password] {
   box-shadow: inset 0 1px 2px #15181d, 0 1px 0 rgba(255, 255, 255, 0.13);
 }
 
+.res .viewSource textarea[readonly] {
+  background: #333b46;
+  color: #8e8e8e;
+}
+
 .usertext .usertext-edit textarea, .res #BigEditor > .RESDialogSmall.BELeft > .RESDialogContents > #BigText {
   font-size: 13px;
   font-family: "Liberation Mono", "Droid Sans Mono", "DejaVu Sans Mono", Inconsolata, Monaco, monospace;
@@ -2369,6 +2374,9 @@ table.diff tbody .diff_header:not([id]) {
 .res .drop-choices .RES-sort-button:before {
   content: 'temp';
   font-size: 13px;
+}
+.res .viewSource .bottom-area {
+  margin: 5px 0;
 }
 .res #BigEditor .RESCloseButton,
 .res button.RESBigEditorPop {

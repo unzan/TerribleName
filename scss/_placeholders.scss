@@ -210,6 +210,11 @@
   @include shadow(inset 0 1px 2px darken($input-bg, 4%), 0 1px 0 rgba(255, 255, 255, 0.13));
 }
 
+%tn-disabled-input {
+  background: lighten($input-bg, 10%);
+  color: darken($input-fg, 6%);
+}
+
 %tn-markdown-editor-textbox {
   font-size: $normal-font-size;
   font-family: $monospace;

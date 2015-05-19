@@ -106,3 +106,13 @@
     font-size: $normal-font-size;
   }
 }
+
+.viewSource {
+  textarea[readonly] {
+    @extend %tn-disabled-input;
+  }
+
+  .bottom-area {
+    margin: 5px 0;
+  }
+}
