@@ -1362,7 +1362,7 @@ ul.report-reasons > li.report-reason {
 }
 
 .nsfw-stamp {
-  border: none;
+  border: none !important;
   margin: 0 4px 0 0;
 }
 .nsfw-stamp acronym {
