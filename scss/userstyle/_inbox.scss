@@ -138,3 +138,19 @@ div:not(.child) > .listing > .message {
       margin-left: 20px !important;
   }
 }
+
+.compose-page > .content {
+  > h1 {
+    margin: 10px 10px 3px 10px;
+  }
+}
+
+#compose-message {
+  @extend %tn-form-group;
+  margin: 10px;
+  display: inline-block;
+
+  .roundfield {
+    width: auto !important;
+  }
+}
