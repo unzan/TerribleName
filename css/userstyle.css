@@ -29,10 +29,10 @@
     background: none !important;
   }
 
-  a, .thing .title, .md h1 a, .hover-bubble.multi-selector a {
+  a, .thing .title, .md h1 a, .hover-bubble.multi-selector a, .gold-bubble p.buy-gold a {
     color: #5590af;
   }
-  a:visited, .thing .title:visited, .md h1 a:visited, .hover-bubble.multi-selector a:visited {
+  a:visited, .thing .title:visited, .md h1 a:visited, .hover-bubble.multi-selector a:visited, .gold-bubble p.buy-gold a:visited {
     color: #858697;
   }
 
@@ -102,7 +102,7 @@
   .multi-details .settings > .delete > button, .multi-details.public .settings > .share-in-sr,
   .multi-details form.copy-multi button.copy,
   .multi-details form.rename-multi button.rename, .fancy-toggle-button > .option.add, .fancy-toggle-button > .option.remove, .morelink a, .explore-header #explore-settings button,
-  #compose-message button#send, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button, .multi-details .settings > .delete.confirm-button > .confirmation > button, .profile-page .expand-summary, .c-btn, .res .RESshortcutside, .res .RESshortcutside.remove,
+  #compose-message button#send, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button, .multi-details .settings > .delete.confirm-button > .confirmation > button, .profile-page .expand-summary, .c-btn, .goldvertisement .inner a, .res .RESshortcutside, .res .RESshortcutside.remove,
   .res .RESDashboardToggle,
   .res .RESDashboardToggle.remove, .res #alert_message > input[type=button] {
     color: #fff !important;
@@ -129,13 +129,13 @@
   .multi-details .settings > .delete > button:hover, .multi-details.public .settings > .share-in-sr:hover,
   .multi-details form.copy-multi button.copy:hover,
   .multi-details form.rename-multi button.rename:hover, .fancy-toggle-button > .option.add:hover, .fancy-toggle-button > .option.remove:hover, .morelink a:hover, .explore-header #explore-settings button:hover,
-  #compose-message button#send:hover, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:hover, .multi-details .settings > .delete.confirm-button > .confirmation > button:hover, .profile-page .expand-summary:hover, .c-btn:hover, .res .RESshortcutside:hover,
+  #compose-message button#send:hover, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:hover, .multi-details .settings > .delete.confirm-button > .confirmation > button:hover, .profile-page .expand-summary:hover, .c-btn:hover, .goldvertisement .inner a:hover, .res .RESshortcutside:hover,
   .res .RESDashboardToggle:hover, .res #alert_message > input[type=button]:hover, button:focus,
   input[type=submit]:focus, .multi-details .settings > button:focus,
   .multi-details .settings > .delete > button:focus, .multi-details.public .settings > .share-in-sr:focus,
   .multi-details form.copy-multi button.copy:focus,
   .multi-details form.rename-multi button.rename:focus, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .explore-header #explore-settings button:focus,
-  #compose-message button#send:focus, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:focus, .multi-details .settings > .delete.confirm-button > .confirmation > button:focus, .profile-page .expand-summary:focus, .c-btn:focus, .res .RESshortcutside:focus,
+  #compose-message button#send:focus, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:focus, .multi-details .settings > .delete.confirm-button > .confirmation > button:focus, .profile-page .expand-summary:focus, .c-btn:focus, .goldvertisement .inner a:focus, .res .RESshortcutside:focus,
   .res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus {
     color: #fff;
     background: -webkit-linear-gradient(top, #486173, #384b59);
@@ -147,7 +147,7 @@
   .multi-details .settings > .delete > button:active, .multi-details.public .settings > .share-in-sr:active,
   .multi-details form.copy-multi button.copy:active,
   .multi-details form.rename-multi button.rename:active, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .explore-header #explore-settings button:active,
-  #compose-message button#send:active, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:active, .multi-details .settings > .delete.confirm-button > .confirmation > button:active, .profile-page .expand-summary:active, .c-btn:active, .res .RESshortcutside:active,
+  #compose-message button#send:active, body.with-listing-chooser .listing-chooser > .contents > .multis > .create button:active, .multi-details .settings > .delete.confirm-button > .confirmation > button:active, .profile-page .expand-summary:active, .c-btn:active, .goldvertisement .inner a:active, .res .RESshortcutside:active,
   .res .RESDashboardToggle:active, .res #alert_message > input[type=button]:active {
     background: -webkit-linear-gradient(top, #405666, #2c3c47);
     background: -moz-linear-gradient(top, #405666, #2c3c47);
@@ -299,7 +299,7 @@
   .multi-details .settings > .delete.confirm-button > .confirmation, #compose-message, .modal-content, .res #alert_message, .infobar, .link .report-reasons,
   .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
   .content.submit .info-notice, .hover-bubble.multi-selector, .profile-page .gold-accent.snoovatar-link,
-  .profile-page .server-seconds, .message > .subject > .correspondent {
+  .profile-page .server-seconds, .message > .subject > .correspondent, .gold-bubble {
     background: #292f37;
     color: #9e9e9e;
     border: solid 1px #0f1114;
@@ -524,7 +524,7 @@
   .domain, .domain a, .tagline,
   .entry .buttons li a,
   .entry .buttons li .redditSingleClick,
-  .pretty-button {
+  .pretty-button, .goldvertisement, .gold-bubble {
     font: normal 13px "Liberation Sans", Arial, sans-serif;
   }
 
@@ -3030,6 +3030,51 @@
 
   .login-disclaimer {
     color: #8c8c8c;
+  }
+
+  .goldvertisement {
+    background: #1e2229;
+    color: #9e9e9e;
+    border-color: #0d0f11;
+    box-shadow: inset 0 1px 0 #333b46;
+    border-radius: 3px;
+  }
+  .goldvertisement .inner {
+    border: none;
+  }
+
+  .goldvertisement .progress .bar,
+  .gold-bubble div.history .progress .bar {
+    background: #171b20;
+    border-color: #111417;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px #111417, 0 1px 0 #313943;
+  }
+  .goldvertisement .progress .bar span,
+  .gold-bubble div.history .progress .bar span {
+    background: -webkit-linear-gradient(top, #4b83a0, #2a4a5a);
+    background: -moz-linear-gradient(top, #4b83a0, #2a4a5a);
+    background: linear-gradient(top, #4b83a0, #2a4a5a);
+    border-radius: 0;
+    box-shadow: inset 0 1px 0 #669bb7;
+  }
+  .goldvertisement .progress p,
+  .gold-bubble div.history .progress p {
+    color: #9e9e9e;
+    font-weight: normal;
+  }
+
+  .gold-bubble:before {
+    border: none !important;
+  }
+  .gold-bubble.anchor-top-centered:after {
+    border-bottom-color: #292f37;
+    top: -17px;
+  }
+  .gold-bubble div.history {
+    border-top-color: #191d23;
+    box-shadow: inset 0 1px 0 #38404c;
   }
 
   .res #header-bottom-right.res-navTop {

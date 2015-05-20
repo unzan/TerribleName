@@ -1,0 +1,73 @@
+.goldvertisement {
+  @extend %tn-font-reset;
+  background: $gold-ad-bg;
+  color: $gold-ad-fg;
+  border-color: darken($main-bg, 3%);
+  @include shadow(inset 0 1px 0 lighten($gold-ad-bg, 10%));
+  @include rounded(3px);
+
+  .inner {
+    border: none;
+
+    a {
+      @extend %tn-button;
+    }
+  }
+}
+
+.goldvertisement,
+.gold-bubble div.history {
+  .progress {
+    .bar {
+      background: $gold-progress-bg;
+      border-color: $gold-progress-border-color;
+      overflow: hidden;
+      @include rounded(3px);
+      @include shadow(inset 0 1px 1px darken($gold-progress-bg, 3%), 0 1px 0 lighten($gold-ad-bg, 9%));
+
+      span {
+        @include linear-gradient(top, $gold-progress-fill-bg, darken($gold-progress-fill-bg, 20%));
+        @include rounded(0);
+        @include shadow(inset 0 1px 0 lighten($gold-progress-fill-bg, 10%));
+      }
+    }
+
+    p {
+      color: $gold-ad-fg;
+      font-weight: normal;
+    }
+  }
+}
+
+.gold-bubble {
+  @extend %tn-info-box;
+  @extend %tn-font-reset;
+
+  &:before {
+    border: none !important;
+  }
+
+  &.anchor-top-centered:after {
+    border-bottom-color: $info-box-bg;
+    top: -17px;
+  }
+
+  div.history {
+    border-top-color: darken($info-box-bg, 7%);
+    @include shadow(inset 0 1px 0 lighten($info-box-bg, 7%));
+  }
+
+  p.buy-gold {
+    a {
+      @extend %tn-link;
+    }
+  }
+}
+
+// .gold-accent {
+//   @extend %tn-info-box;
+//   th {
+//     @extend %tn-font-reset;
+//     color: inherit;
+//   }
+// }

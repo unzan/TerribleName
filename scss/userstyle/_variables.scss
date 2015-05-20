@@ -21,6 +21,13 @@ $multireddits-selected-entry-fg: lighten($multireddits-entry-fg, 14%);
 $multireddits-title-bg: $bright-yellow;
 $multireddits-title-fg: lighten($main-fg, 20%);
 
+$gold-ad-bg: lighten($main-bg, 5%);
+$gold-ad-fg: $menu-bar-fg;
+$gold-progress-bg: darken($gold-ad-bg, 3%);
+$gold-progress-fg: $link-fg;
+$gold-progress-fill-bg: darken($bright-cyan, 35%);
+$gold-progress-border-color: darken($gold-ad-bg, 6%);
+
 $inbox-own-message-tagline-bg: darken($dark-blue-gray, 8%);
 
 $explore-hot-color: $orange;
