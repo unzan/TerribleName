@@ -28,15 +28,15 @@ body.with-listing-chooser {
 
 .front-page {
   #header-img-a {
-    @extend .pagename;
+    @extend %tn-page-title;
     margin: 0 0 0 17px;
 
     &::after {
-      content: 'front page';
+      content: '';
     }
   }
 
-  #header-img {
+  img#header-img {
     vertical-align: middle;
     margin: 0 20px 6px 0;
   }

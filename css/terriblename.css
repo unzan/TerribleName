@@ -505,6 +505,22 @@ input[type=password] {
   box-shadow: inset 0 1px 0 #475261;
 }
 
+.pagename {
+  color: #b7b7b7;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-variant: normal;
+  font-size: 2.9em;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.pagename:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 89px;
+  width: 3px;
+}
+
 body {
   background: #13161A url("%%dark-noise%%") left top repeat;
   color: #9e9e9e;
@@ -1196,21 +1212,6 @@ ul.report-reasons > li.report-reason {
   line-height: 1em;
 }
 
-.pagename {
-  color: #b7b7b7;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  font-variant: normal;
-  font-size: 2.9em;
-  font-weight: normal;
-  vertical-align: middle;
-}
-.pagename:before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  height: 89px;
-  width: 3px;
-}
 .pagename.redditname > a {
   display: inline;
   color: inherit;

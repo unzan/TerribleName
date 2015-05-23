@@ -153,30 +153,15 @@
 }
 
 .pagename {
-  color: $page-title-fg;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  font-variant: normal;
-  font-size: 2.9em;
-  font-weight: normal;
-  vertical-align: middle;
+  @extend %tn-page-title;
 
-  &:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: $page-title-height;
-    width: 3px;
-  }
+  &.redditname > a {
+    display: inline;
+    color: inherit;
 
-  &.redditname {
-    > a {
-      display: inline;
-      color: inherit;
-
-      &:hover {
-        color: lighten($page-title-fg, 20%);
-        text-decoration: none;
-      }
+    &:hover {
+      color: lighten($page-title-fg, 20%);
+      text-decoration: none;
     }
   }
 }
