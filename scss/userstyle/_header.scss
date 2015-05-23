@@ -9,11 +9,11 @@
 }
 
 #header-img-a {
-  max-width: 300px;
   overflow: hidden;
   > #header-img {
     max-height: $page-title-height !important;
     width: auto !important;
+    max-width: 300px !important;
   }
 }
 
@@ -26,3 +26,18 @@ body.with-listing-chooser {
   }
 }
 
+.front-page {
+  #header-img-a {
+    @extend .pagename;
+    margin: 0 0 0 17px;
+
+    &::after {
+      content: 'front page';
+    }
+  }
+
+  #header-img {
+    vertical-align: middle;
+    margin: 0 20px 6px 0;
+  }
+}
