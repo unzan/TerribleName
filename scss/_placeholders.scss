@@ -444,3 +444,21 @@
     color: $dropdown-item-focused-fg;
   }
 }
+
+%tn-page-title {
+  color: $page-title-fg;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-variant: normal;
+  font-size: 2.9em;
+  font-weight: normal;
+  vertical-align: middle;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: $page-title-height;
+    width: 3px;
+  }
+}
+

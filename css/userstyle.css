@@ -590,6 +590,22 @@
     color: #fff;
   }
 
+  .pagename, .front-page #header-img-a {
+    color: #b7b7b7;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-variant: normal;
+    font-size: 2.9em;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+  .pagename:before, .front-page #header-img-a:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 89px;
+    width: 3px;
+  }
+
   body {
     background: #eaeaea url("http://i.imgur.com/l6K6XJU.jpg") left top repeat;
     color: #111;
@@ -1149,12 +1165,12 @@
     margin: 0 10px 0 20px;
   }
 
-  #header-bottom-left > .pagename:last-child:after, .front-page #header-bottom-left > #header-img-a:last-child:after {
+  #header-bottom-left > .pagename:last-child:after {
     content: '';
     height: 32px;
   }
 
-  .pagename:last-child:after, .front-page #header-img-a:last-child:after,
+  .pagename:last-child:after,
   #header .tabmenu {
     display: block;
     margin: 0;
@@ -1266,26 +1282,11 @@
     line-height: 1em;
   }
 
-  .pagename, .front-page #header-img-a {
-    color: #b7b7b7;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    font-variant: normal;
-    font-size: 2.9em;
-    font-weight: normal;
-    vertical-align: middle;
-  }
-  .pagename:before, .front-page #header-img-a:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: 89px;
-    width: 3px;
-  }
-  .pagename.redditname > a, .front-page .redditname#header-img-a > a {
+  .pagename.redditname > a {
     display: inline;
     color: inherit;
   }
-  .pagename.redditname > a:hover, .front-page .redditname#header-img-a > a:hover {
+  .pagename.redditname > a:hover {
     color: #eaeaea;
     text-decoration: none;
   }
@@ -2321,7 +2322,7 @@
     max-width: 300px !important;
   }
 
-  body.with-listing-chooser #header .pagename, body.with-listing-chooser #header .front-page #header-img-a, .front-page body.with-listing-chooser #header #header-img-a {
+  body.with-listing-chooser #header .pagename {
     position: static;
     margin-left: 0;
   }
@@ -2330,9 +2331,9 @@
     margin: 0 0 0 17px;
   }
   .front-page #header-img-a::after {
-    content: 'front page';
+    content: '';
   }
-  .front-page #header-img {
+  .front-page img#header-img {
     vertical-align: middle;
     margin: 0 20px 6px 0;
   }
