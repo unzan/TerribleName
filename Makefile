@@ -8,7 +8,6 @@ SOURCE_DIR = scss
 OUTPUT_DIR = css
 SR_FILE = terriblename
 US_FILE = userstyle
-US_NIGHT_FILE = userstyle-nightmode
 
 COMMON_SOURCES := $(wildcard $(SOURCE_DIR)/_*.scss) \
 	$(wildcard $(SOURCE_DIR)/res/normal/*.scss) \
@@ -33,8 +32,7 @@ export ASSETS = remote
 export STYLE
 
 all: $(OUTPUT_DIR)/$(SR_FILE).css \
-	$(OUTPUT_DIR)/$(US_FILE).css \
-	$(OUTPUT_DIR)/$(US_NIGHT_FILE).css
+	$(OUTPUT_DIR)/$(US_FILE).css
 
 $(OUTPUT_DIR)/$(SR_FILE).css: $(SR_SOURCES)
 	$(COMPILER) $(SCSS_FLAGS) $(SOURCE_DIR)/$(SR_FILE).scss $(OUTPUT_DIR)/$(SR_FILE).css
