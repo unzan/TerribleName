@@ -57,7 +57,7 @@
       &.submitter {
         &,
         &:hover {
-          background-color: darken($submitter-tag-fg, 10%) !important;
+          background-color: darken($submitter-tag-fg, 20%) !important;
         }
       }
     }

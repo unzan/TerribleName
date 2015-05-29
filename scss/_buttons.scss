@@ -142,6 +142,10 @@ input[type=submit] {
       @extend %tn-small-button;
     }
   }
+
+  .separator {
+    border-left: none;
+  }
 }
 
 #search > input[type="submit"] {

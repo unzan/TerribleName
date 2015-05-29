@@ -707,6 +707,9 @@
   .nav-buttons {
     padding: 1em 0;
   }
+  .nav-buttons .separator {
+    border-left: none;
+  }
 
   .pretty-button.neutral, .pretty-button.positive, .pretty-button.negative {
     border: solid 1px #13161A;
@@ -3245,7 +3248,7 @@
     background-color: #b9221f !important;
   }
   .res .thing .tagline .author.submitter, .res .thing .tagline .author.submitter:hover {
-    background-color: #43748e !important;
+    background-color: #32586c !important;
   }
   .res #REScommentNavBox {
     z-index: 9000;
