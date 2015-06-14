@@ -69,7 +69,7 @@ $focus-color: $bright-cyan;
 
 $default-border-color: darken($main-bg, 25%);
 $thumbnail-bg: lighten($main-bg, 20%);
-$text-bg: lighten($main-bg, 8%);
+$text-bg: lighten($main-bg, 6%);
 $text-fg: $main-fg;
 $toc-bg: lighten($text-bg, 6%);
 $toc-level-indicator-color: lighten($toc-bg, 14%);
@@ -137,6 +137,7 @@ $sticky-tag-bg: $dark-green;
 $sticky-tag-fg: $white;
 $mod-tag-fg: $dark-green;
 $admin-tag-fg: $red;
+$alum-tag-fg: $violet;
 $submitter-tag-fg: $link-fg;
 $score-fg: darken($gray, 40%);
 $default-thumb-fg: $white;

@@ -23,7 +23,7 @@
   }
 
   .morelink, .morelink:hover, .flairselection > .linkflair > a:hover,
-  .flairselection > .flairremove > a:hover, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement .md, .res .morerecursion > .entry.RES-keyNav-activeElement,
+  .flairselection > .flairremove > a:hover, .tooltip-inner, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement .md, .res .morerecursion > .entry.RES-keyNav-activeElement,
   .res .morechildren > .entry.RES-keyNav-activeElement,
   .res .comment.collapsed > .entry.RES-keyNav-activeElement, .res.res-commentBoxes .comments-page .nestedlisting .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res.res-commentBoxes .comments-page .nestedlisting .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
     background: none !important;
@@ -70,12 +70,11 @@
   }
 
   .link .usertext-body .md, .linklisting > .link.comment .usertext-body .md, .link.thing.subreddit .usertext-body .md, .comment.noncollapsed > .entry, .message.noncollapsed > .entry, .subreddit .usertext-body .md, .wiki-page .wiki-page-content .md.wiki {
-    background: #242a32;
+    background: #20252c;
     color: #9e9e9e;
     border: none;
     padding: 4px 15px;
     border-radius: 3px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   .sidecontentbox > .title .collapse-button:before, .wiki-page .wikititle:before {
@@ -173,6 +172,7 @@
 
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
+  .read-next .read-next-button,
   .res .commentNavSortType,
   .nav-buttons a,
   .nav-buttons a:hover,
@@ -202,6 +202,7 @@
 
   .wiki-page .pageactions > .wikiaction,
   .menuarea .flat-list > li > a,
+  .read-next .read-next-button,
   .res .commentNavSortType,
   .nav-buttons a,
   .nav-buttons a:hover,
@@ -240,6 +241,7 @@
   .wiki-page .pageactions > .wikiaction.wikiaction-current, .menuarea .flat-list > li.selected > a, .pretty-button.neutral.pressed, .pretty-button.positive.pressed, .pretty-button.negative.pressed, .explore-item .fancy-toggle-button.toggle > .option.active.remove,
   .wiki-page .pageactions > .wikiaction:active,
   .menuarea .flat-list > li > a:active,
+  .read-next .read-next-button:active,
   .res .commentNavSortType:active,
   .nav-buttons a:active,
   .pretty-button.neutral:active,
@@ -269,18 +271,18 @@
     box-shadow: inset 0 2px 3px #0a0c0e, 0 1px 0 #3e4855;
   }
 
-  .wiki-page .pageactions > .wikiaction, .menuarea .flat-list > li > a, .res .commentNavSortType {
+  .wiki-page .pageactions > .wikiaction, .menuarea .flat-list > li > a, .read-next .read-next-button, .res .commentNavSortType {
     margin: 0;
     border-right-style: none;
     color: #9e9e9e !important;
     border-radius: 0;
   }
 
-  .wiki-page .pageactions > .wikiaction:first-child, .menuarea .flat-list > li:first-child > a, .res .commentNavSortType:nth-of-type(1) {
+  .wiki-page .pageactions > .wikiaction:first-child, .menuarea .flat-list > li:first-child > a, .read-next .read-next-button.prev, .res .commentNavSortType:nth-of-type(1) {
     border-radius: 3px 0 0 3px;
   }
 
-  .wiki-page .pageactions > .wikiaction:last-child, .menuarea .flat-list > li:last-child > a, .res .commentNavSortType:last-child {
+  .wiki-page .pageactions > .wikiaction:last-child, .menuarea .flat-list > li:last-child > a, .read-next .read-next-button.next, .res .commentNavSortType:last-child {
     border-radius: 0 3px 3px 0;
   }
 
@@ -296,10 +298,11 @@
   .fancy-settings .linefield,
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
-  .multi-details .settings > .delete.confirm-button > .confirmation, #compose-message, .modal-content, .res #alert_message, .infobar, .link .report-reasons,
+  .multi-details .settings > .delete.confirm-button > .confirmation, #compose-message, .post-sharing,
+  .modal-content, .res #alert_message, .infobar, .link .report-reasons,
   .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
   .content.submit .info-notice, .hover-bubble.multi-selector, .profile-page .gold-accent.snoovatar-link,
-  .profile-page .server-seconds, .message > .subject > .correspondent, .gold-bubble {
+  .profile-page .server-seconds, .message > .subject > .correspondent, .read-next, .gold-bubble {
     background: #292f37;
     color: #9e9e9e;
     border: solid 1px #0f1114;
@@ -308,7 +311,7 @@
     box-shadow: 0 1px 2px #0d0f11, inset 0 1px 0 #38404c;
   }
 
-  .menuarea .spacer > .help-hoverable {
+  .menuarea .spacer > .help-hoverable, .hover-bubble.multi-add-notice, .c-tooltip {
     z-index: 3000;
     position: absolute;
     background: #30414d;
@@ -354,7 +357,8 @@
   .fancy-settings .linefield,
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
-  .multi-details .settings > .delete.confirm-button > .confirmation, #compose-message, .modal-content, .res #alert_message {
+  .multi-details .settings > .delete.confirm-button > .confirmation, #compose-message, .post-sharing,
+  .modal-content, .res #alert_message {
     overflow: hidden;
     padding: 10px;
   }
@@ -395,14 +399,14 @@
   .md table th,
   .wiki-page .wikirevisionlisting .generic-table th,
   .res #alert_message table.commentPreview th {
-    border-color: #4b5767;
+    border-color: #475261;
   }
   .md table th, .wiki-page .wikirevisionlisting .generic-table th, .res #alert_message table.commentPreview th {
-    background: #3a434f;
+    background: #353e49;
     color: #d1d1d1;
   }
   .md table tbody tr, .wiki-page .wikirevisionlisting .generic-table tbody tr, .res #alert_message table.commentPreview tbody tr {
-    background: #242a32;
+    background: #20252c;
   }
   .md table tbody tr:hover, .wiki-page .wikirevisionlisting .generic-table tbody tr:hover, .res #alert_message table.commentPreview tbody tr:hover {
     background: #30414d;
@@ -411,19 +415,18 @@
   .md blockquote, .message.noncollapsed > .entry .md-container > .parent.rounded {
     border-left: solid 3px #9e9e9e;
     padding: 0.2em 0.5em;
-    background: #1c2026;
+    background: #171b20;
     color: #9e9e9e;
     margin-left: 0.5em;
   }
 
   .comment.noncollapsed > .entry, .message.noncollapsed > .entry {
     position: relative;
-    background: #242a32;
+    background: #20252c;
     padding: 0;
     display: inline-block;
     overflow: visible;
     border-radius: 3px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
   .comment.noncollapsed > .entry:before, .message.noncollapsed > .entry:before {
     content: '';
@@ -432,7 +435,7 @@
     top: 8px;
     width: 0;
     height: 0;
-    border-right: solid 8px #242a32;
+    border-right: solid 8px #20252c;
     border-top: solid 8px transparent;
     border-bottom: solid 8px transparent;
   }
@@ -440,13 +443,13 @@
   .comment.noncollapsed > .entry .tagline, .message.noncollapsed > .entry .tagline {
     display: block;
     padding: 6px 14px 6px 10px;
-    border-bottom: solid 1px #353e49;
+    border-bottom: solid 1px #313943;
     border-radius: 3px 3px 0 0;
   }
 
   .comment.noncollapsed > .entry .flat-list.buttons, .message.noncollapsed > .entry .flat-list.buttons {
-    background: #2f3640;
-    border-top: solid 1px #3a434f;
+    background: #2b313a;
+    border-top: solid 1px #353e49;
     padding: 4px 12px 4px 8px;
     border-radius: 0 0 3px 3px;
   }
@@ -502,7 +505,7 @@
   }
 
   .message.noncollapsed > .entry.RES-keyNav-activeElement, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement {
-    background: #242a32 !important;
+    background: #20252c !important;
   }
   .message.noncollapsed > .entry.RES-keyNav-activeElement:after, .res .comment.noncollapsed > .entry.RES-keyNav-activeElement:after {
     content: '';
@@ -562,7 +565,7 @@
     color: #9e9e9e;
   }
 
-  .flairselector > h2, .sidecontentbox > .title, .res .BERight > h3,
+  .flairselector > h2, .sidecontentbox > .title, .read-next .read-next-header, .res .BERight > h3,
   .res .RESDialogSmall.livePreview > h3,
   .res .BELeft,
   .res .markdownEditor-wrapper {
@@ -1098,11 +1101,13 @@
     margin-top: 10px;
   }
 
+  .message .report-reasons,
+  .message .action-form,
   .comment .report-reasons,
   .comment .action-form {
     margin: 0;
     padding: 5px 10px 10px 10px;
-    background: #2f3640;
+    background: #2b313a;
     border: none;
     max-width: 100%;
     width: auto !important;
@@ -1425,13 +1430,25 @@
   .userattrs .admin:after {
     content: 'dmin';
   }
-  .userattrs .submitter {
-    color: #5590af;
+  .userattrs .submitter,
+  .userattrs .alum {
     font-size: 0;
   }
-  .userattrs .submitter:after {
+  .userattrs .submitter:after,
+  .userattrs .alum:after {
     font-size: 13px;
+  }
+  .userattrs .submitter {
+    color: #5590af;
+  }
+  .userattrs .submitter:after {
     content: 'OP';
+  }
+  .userattrs .alum {
+    color: #6c71c4;
+  }
+  .userattrs .alum:after {
+    content: 'Alum';
   }
 
   .nsfw-stamp {
@@ -1487,6 +1504,9 @@
   .tagline a.author.submitter {
     color: #5590af;
   }
+  .tagline a.author.alum {
+    color: #6c71c4;
+  }
 
   .tagline .score,
   .reddit-link .score {
@@ -1515,6 +1535,10 @@
   }
   .organic-listing > .help {
     display: none;
+  }
+
+  .organic-listing .link .md {
+    border: solid 1px #23313c;
   }
 
   .promotedlink .sponsored-tagline {
@@ -1637,7 +1661,7 @@
   .md pre > code {
     padding: 7px !important;
     display: block;
-    background: #1c2026 !important;
+    background: #171b20 !important;
     color: #9e9e9e;
     overflow: auto;
   }
@@ -1801,7 +1825,7 @@
   }
 
   .comment.collapsed .tagline {
-    margin: 5px 1px !important;
+    margin: 5px 1px 5px 40px !important;
     display: inline-block;
   }
 
@@ -1973,6 +1997,10 @@
     background: -moz-linear-gradient(top, #313943, #242a32);
     background: linear-gradient(top, #313943, #242a32);
     box-shadow: inset 0 1px 1px #1c2026, 0 1px 0 #4b5767;
+  }
+
+  .footer-parent {
+    background-image: none;
   }
 
   .footer {
@@ -2176,7 +2204,7 @@
   }
 
   .md.wiki > .toc {
-    background: #313943;
+    background: #2d343d;
     float: right;
     padding: 8px;
     margin: 10px 0 10px 10px;
@@ -2188,16 +2216,16 @@
     font-weight: bold;
     display: block;
     padding-bottom: 3px;
-    border-bottom: solid 2px #475261;
+    border-bottom: solid 2px #424d5b;
   }
   .md.wiki > .toc > ul ul {
-    border-left-color: #4f5c6d !important;
+    border-left-color: #4b5767 !important;
   }
 
   table.diff {
     width: 100%;
     background: #13161A;
-    border: solid 1px #4b5767;
+    border: solid 1px #475261;
     margin-bottom: 1em;
   }
   table.diff tbody,
@@ -2213,9 +2241,9 @@
   }
   table.diff .diff_header,
   table.diff .diff_next {
-    background: #3a434f;
+    background: #353e49;
     color: #d1d1d1;
-    border: solid 1px #2f3640;
+    border: solid 1px #2b313a;
   }
   table.diff th.diff_header {
     padding: 4px;
@@ -2900,6 +2928,18 @@
     z-index: 88 !important;
   }
 
+  .hover-bubble.multi-add-notice {
+    border-color: #445b6c;
+  }
+  .hover-bubble.multi-add-notice.anchor-right:after {
+    border-left-color: #30414d;
+    right: -17px;
+  }
+  .hover-bubble.multi-add-notice.anchor-right:before {
+    border-left-color: #445b6c;
+    right: -18px;
+  }
+
   .profile-page .RES-keyNav-activeElement {
     background: none !important;
   }
@@ -3034,8 +3074,12 @@
   .c-btn {
     padding: 6px;
   }
+  .c-btn.active, .c-btn:active {
+    border-bottom: none !important;
+    margin-top: 0 !important;
+  }
 
-  .c-form-control:focus {
+  .c-form-control, .c-form-control:focus {
     box-shadow: inset 0 1px 2px #15181d, 0 1px 0 rgba(255, 255, 255, 0.13);
   }
 
@@ -3045,6 +3089,83 @@
 
   .login-disclaimer {
     color: #8c8c8c;
+  }
+
+  .post-sharing {
+    overflow: visible;
+    margin-bottom: 5px;
+  }
+  .post-sharing .post-sharing-label {
+    color: #9e9e9e;
+  }
+  .post-sharing .post-sharing-buttons {
+    padding-bottom: 4px;
+  }
+  .post-sharing .post-sharing-buttons .c-btn:focus {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  }
+  .post-sharing .post-sharing-buttons .c-btn:active {
+    box-shadow: inset 0 2px 3px #192127, 0 1px 0 #3e4855;
+  }
+
+  .tooltip-inner {
+    color: inherit !important;
+    border: none !important;
+  }
+
+  .tooltip-arrow {
+    border-top-color: #30414d !important;
+  }
+
+  .beta-hint,
+  .beta-link {
+    position: static !important;
+  }
+
+  .beta-hint {
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .beta-link {
+    margin-left: 0 !important;
+  }
+
+  #beta-help {
+    background: #2B3835;
+    color: #9e9e9e;
+    border-color: #415550;
+  }
+  #beta-help:before, #beta-help:after {
+    display: none;
+  }
+
+  .read-next .read-next-header {
+    border: none;
+    padding-bottom: 4px;
+    border-radius: 3px 3px 0 0;
+  }
+  .read-next .read-next-header-title {
+    margin-left: 45px;
+    top: 0;
+  }
+  .read-next .read-next-nav-right {
+    top: 7px;
+  }
+  .read-next .read-next-button {
+    padding: 2px;
+    border: solid 1px #13161A;
+  }
+  .read-next .read-next-button.prev {
+    border-right: none;
+  }
+  .read-next .read-next-list {
+    border-top: solid 1px #13161A;
+    box-shadow: inset 0 1px 2px #191d23;
+  }
+  .read-next .read-next-meta, .read-next .read-next-meta > .score {
+    color: #9e9e9e;
   }
 
   .goldvertisement {
@@ -3401,7 +3522,7 @@
   }
   .res .BERight,
   .res .RESDialogSmall.livePreview {
-    background: #242a32;
+    background: #20252c;
     color: #9e9e9e;
   }
   .res .BERight > h3,

@@ -432,24 +432,17 @@ body.with-listing-chooser {
   z-index: 88 !important;
 }
 
-// %tn-bubble {
-//   background: $notice-bubble-bg;
-//   border: solid 1px rgba(0, 0, 0, 0.3);
-//   padding: 10px 15px;
-//   @include shadow(0 3px 5px rgba(0, 0, 0, 0.14));
-//   @include rounded(4px);
-// }
+.hover-bubble.multi-add-notice {
+  @extend %tn-tooltip;
+  border-color: lighten($tooltip-bg, 10%);
 
-// .hover-bubble.multi-add-notice {
-//   @extend %tn-bubble;
+  &.anchor-right:after {
+    border-left-color: $tooltip-bg;
+    right: -17px;
+  }
 
-//   &.anchor-right:after {
-//     border-left-color: $notice-bubble-bg;
-//     right: -17px;
-//   }
-
-//   &.anchor-right:before {
-//     border-left-color: rgba(0, 0, 0, 0.3);
-//     right: -18px;
-//   }
-// }
+  &.anchor-right:before {
+    border-left-color: lighten($tooltip-bg, 10%);
+    right: -18px;
+  }
+}

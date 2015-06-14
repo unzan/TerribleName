@@ -175,12 +175,25 @@
     }
   }
 
-  .submitter {
-    color: $submitter-tag-fg;
+  .submitter,
+  .alum {
     font-size: 0;
     &:after {
       font-size: $normal-font-size;
+    }
+  }
+
+  .submitter {
+    color: $submitter-tag-fg;
+    &:after {
       content: 'OP';
+    }
+  }
+
+  .alum {
+    color: $alum-tag-fg;
+    &:after {
+      content: 'Alum';
     }
   }
 }
@@ -248,6 +261,10 @@
       &.submitter {
         color: $submitter-tag-fg;
       }
+
+      &.alum {
+        color: $alum-tag-fg;
+      }
     }
   }
 }
@@ -296,6 +313,11 @@
 .organic-listing .link,
 .promotedlink {
   @extend %tn-special-entry;
+}
+
+.organic-listing .link .md {
+  border: solid 1px lighten($special-entry-bg, 5%);
+  // @include shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
 
 .promotedlink .sponsored-tagline {
