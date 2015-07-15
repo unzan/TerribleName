@@ -6,6 +6,7 @@
  * Author: unzan (https://github.com/unzan)
  * Contributor: - David Davis (https://github.com/daviddavis)
  *              - matheod (https://github.com/matheod)
+ *              - Scellow (https://github.com/Scellow)
  * License: WTFPL
  *
  * Default icons provided with this theme are part of the Fugue Icon Set
@@ -2341,13 +2342,18 @@ table.diff tbody .diff_header:not([id]) {
   border-radius: 2px;
 }
 .res .thing .tagline .author.moderator, .res .thing .tagline .author.moderator:hover {
-  background-color: #424d00 !important;
+  background-color: #434d00 !important;
 }
 .res .thing .tagline .author.admin, .res .thing .tagline .author.admin:hover {
   background-color: #b9221f !important;
 }
 .res .thing .tagline .author.submitter, .res .thing .tagline .author.submitter:hover {
   background-color: #32586c !important;
+}
+.res .NERPageMarker,
+.res #progressIndicator {
+  background-color: #242a32;
+  border-color: #111417;
 }
 .res #REScommentNavBox {
   z-index: 9000;

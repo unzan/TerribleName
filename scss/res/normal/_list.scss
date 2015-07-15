@@ -63,3 +63,9 @@
     }
   }
 }
+
+.NERPageMarker,
+#progressIndicator {
+  background-color: $res-never-ending-bg;
+  border-color: $res-never-ending-border-color;
+}

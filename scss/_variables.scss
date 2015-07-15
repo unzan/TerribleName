@@ -221,6 +221,8 @@ $res-char-counter-bg: darken($res-editor-toolbar-bg, 8%);
 $res-char-counter-too-long-bg: $dark-red;
 $res-default-thumbnail-fg: rgba(255, 255, 255, 0.3);
 $res-active-element-color: $focus-color;
+$res-never-ending-bg: lighten($main-bg, 8%);
+$res-never-ending-border-color: darken($main-bg, 1%);
 
 $res-night-bg: $dark-blue;
 $res-night-header-bg: lighten($res-night-bg, 9%);
