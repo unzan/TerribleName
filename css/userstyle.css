@@ -144,9 +144,9 @@
   .res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus, .res .cancelButton:focus,
   .res .addButton:focus {
     color: #fff;
-    background: -webkit-linear-gradient(top, #e25418, #b44214);
-    background: -moz-linear-gradient(top, #e25418, #b44214);
-    background: linear-gradient(top, #e25418, #b44214);
+    background: -webkit-linear-gradient(top, #e25418, #b44314);
+    background: -moz-linear-gradient(top, #e25418, #b44314);
+    background: linear-gradient(top, #e25418, #b44314);
   }
   button:active,
   input[type=submit]:active, .multi-details .settings > button:active,
@@ -316,7 +316,7 @@
     color: #6b6b6b;
   }
 
-  .infobar, .link .report-reasons,
+  .infobar, .infobar:not(.reddit-infobar), .link .report-reasons,
   .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
   .content.submit .info-notice, .profile-page .gold-accent.snoovatar-link,
   .profile-page .server-seconds, .message > .subject > .correspondent {
@@ -1605,7 +1605,7 @@
     border-radius: 0;
   }
   .md code {
-    color: #b44214;
+    color: #b44314;
     background: transparent !important;
     border: none;
     padding: 0;
@@ -2916,6 +2916,12 @@
     background-position: -32px -48px;
   }
 
+  .message {
+    position: relative;
+  }
+  .message .tagline {
+    color: #111;
+  }
   .message > .subject {
     font-size: 13px;
     margin-bottom: 10px;
@@ -2938,11 +2944,7 @@
     margin: 3px;
   }
   .message.message-parent > .entry, .message.message-reply > .entry {
-    border-left: none;
-  }
-  .message.message-parent > .entry,
-  .message.message-parent > .entry .tagline, .message.message-reply > .entry,
-  .message.message-reply > .entry .tagline {
+    border-left: none !important;
     color: #111;
   }
   .message.message-parent.recipient > .entry .head, .message.message-reply.recipient > .entry .head {
@@ -2962,7 +2964,8 @@
     color: #111;
   }
   .message.noncollapsed > .entry {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     max-width: 63em;
   }
   .message.noncollapsed > .entry .parent-link {
@@ -2993,6 +2996,12 @@
   }
   .message:not(.recipient).noncollapsed > .entry:before {
     border-right-color: #b8daf2;
+  }
+  .message.threaded .child {
+    margin-left: 0;
+    padding-left: 20px;
+    position: relative;
+    border-left: dashed 1px #b7b7b7;
   }
 
   div:not(.child) > .listing > .message > .child {

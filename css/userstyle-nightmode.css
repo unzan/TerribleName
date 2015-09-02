@@ -468,9 +468,9 @@
     box-shadow: inset 0 1px 2px #0a0c0e, 0 1px 0 #3e4855;
   }
   .res.res-nightmode .fancy-toggle-button > .option.add, .res.res-nightmode .fancy-toggle-button > .option.add:hover, .res.res-nightmode .fancy-toggle-button > .option.add:active {
-    background: -webkit-linear-gradient(top, #424d00, #2c3300);
-    background: -moz-linear-gradient(top, #424d00, #2c3300);
-    background: linear-gradient(top, #424d00, #2c3300);
+    background: -webkit-linear-gradient(top, #434d00, #2c3300);
+    background: -moz-linear-gradient(top, #434d00, #2c3300);
+    background: linear-gradient(top, #434d00, #2c3300);
   }
   .res.res-nightmode .fancy-toggle-button > .option.remove, .res.res-nightmode .fancy-toggle-button > .option.remove:hover, .res.res-nightmode .fancy-toggle-button > .option.remove:active {
     background: -webkit-linear-gradient(top, #621210, #4c0e0d);
@@ -564,7 +564,7 @@
   }
   .res.res-nightmode .thing .tagline .author.moderator, .res.res-nightmode .thing .tagline .author.moderator:hover {
     color: #d1d1d1 !important;
-    background-color: #424d00 !important;
+    background-color: #434d00 !important;
   }
   .res.res-nightmode .thing.spam, .res.res-nightmode .thing.reported {
     border: none;

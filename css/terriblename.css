@@ -130,9 +130,9 @@ input[type=submit]:hover, .fancy-toggle-button > .option.add:hover, .fancy-toggl
 input[type=submit]:focus, .fancy-toggle-button > .option.add:focus, .fancy-toggle-button > .option.remove:focus, .morelink a:focus, .res .RESshortcutside:focus,
 .res .RESDashboardToggle:focus, .res #alert_message > input[type=button]:focus {
   color: #fff;
-  background: -webkit-linear-gradient(top, #e25418, #b44214);
-  background: -moz-linear-gradient(top, #e25418, #b44214);
-  background: linear-gradient(top, #e25418, #b44214);
+  background: -webkit-linear-gradient(top, #e25418, #b44314);
+  background: -moz-linear-gradient(top, #e25418, #b44314);
+  background: linear-gradient(top, #e25418, #b44314);
 }
 button:active,
 input[type=submit]:active, .fancy-toggle-button > .option.add:active, .fancy-toggle-button > .option.remove:active, .morelink a:active, .res .RESshortcutside:active,
@@ -246,7 +246,7 @@ input[type=submit] {
   color: #6b6b6b;
 }
 
-.infobar, .link .report-reasons,
+.infobar, .infobar:not(.reddit-infobar), .link .report-reasons,
 .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
 .content.submit .info-notice {
   background: #FFF5CC;
@@ -1520,7 +1520,7 @@ ul.report-reasons > li.report-reason {
   border-radius: 0;
 }
 .md code {
-  color: #b44214;
+  color: #b44314;
   background: transparent !important;
   border: none;
   padding: 0;
@@ -2915,9 +2915,9 @@ table.diff tbody .diff_header:not([id]) {
   box-shadow: inset 0 1px 2px #0a0c0e, 0 1px 0 #3e4855;
 }
 .res.res-nightmode .fancy-toggle-button > .option.add, .res.res-nightmode .fancy-toggle-button > .option.add:hover, .res.res-nightmode .fancy-toggle-button > .option.add:active {
-  background: -webkit-linear-gradient(top, #424d00, #2c3300);
-  background: -moz-linear-gradient(top, #424d00, #2c3300);
-  background: linear-gradient(top, #424d00, #2c3300);
+  background: -webkit-linear-gradient(top, #434d00, #2c3300);
+  background: -moz-linear-gradient(top, #434d00, #2c3300);
+  background: linear-gradient(top, #434d00, #2c3300);
 }
 .res.res-nightmode .fancy-toggle-button > .option.remove, .res.res-nightmode .fancy-toggle-button > .option.remove:hover, .res.res-nightmode .fancy-toggle-button > .option.remove:active {
   background: -webkit-linear-gradient(top, #621210, #4c0e0d);
@@ -3011,7 +3011,7 @@ table.diff tbody .diff_header:not([id]) {
 }
 .res.res-nightmode .thing .tagline .author.moderator, .res.res-nightmode .thing .tagline .author.moderator:hover {
   color: #d1d1d1 !important;
-  background-color: #424d00 !important;
+  background-color: #434d00 !important;
 }
 .res.res-nightmode .thing.spam, .res.res-nightmode .thing.reported {
   border: none;
