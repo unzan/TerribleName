@@ -234,7 +234,7 @@ input[type=submit] {
 .login-form-side,
 .searchfacets,
 .fancy-settings .linefield,
-.searchpane.raisedbox, .res #alert_message, .infobar, .link .report-reasons,
+.searchpane.raisedbox, .res #alert_message, .infobar, .infobar:not(.reddit-infobar), .link .report-reasons,
 .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
 .content.submit .info-notice {
   background: #292f37;

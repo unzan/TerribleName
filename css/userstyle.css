@@ -300,7 +300,7 @@
   .searchpane.raisedbox, .explore-item, .multi-details form.rename-multi,
   .multi-details form.copy-multi,
   .multi-details .settings > .delete.confirm-button > .confirmation, #compose-message, .post-sharing,
-  .modal-content, .res #alert_message, .infobar, .link .report-reasons,
+  .modal-content, .res #alert_message, .infobar, .infobar:not(.reddit-infobar), .link .report-reasons,
   .link .action-form, .unvotable-message, .contest-mode.infobar, .gold-accent.comment-visits-box, .linkinfo,
   .content.submit .info-notice, .hover-bubble.multi-selector, .profile-page .gold-accent.snoovatar-link,
   .profile-page .server-seconds, .message > .subject > .correspondent, .read-next, .gold-bubble {
@@ -2968,6 +2968,12 @@
     color: #9e9e9e !important;
   }
 
+  .message {
+    position: relative;
+  }
+  .message .tagline {
+    color: #9e9e9e;
+  }
   .message > .subject {
     font-size: 13px;
     margin-bottom: 10px;
@@ -2990,11 +2996,7 @@
     margin: 3px;
   }
   .message.message-parent > .entry, .message.message-reply > .entry {
-    border-left: none;
-  }
-  .message.message-parent > .entry,
-  .message.message-parent > .entry .tagline, .message.message-reply > .entry,
-  .message.message-reply > .entry .tagline {
+    border-left: none !important;
     color: #9e9e9e;
   }
   .message.message-parent.recipient > .entry .head, .message.message-reply.recipient > .entry .head {
@@ -3015,7 +3017,8 @@
     color: #9e9e9e;
   }
   .message.noncollapsed > .entry {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     max-width: 63em;
   }
   .message.noncollapsed > .entry .parent-link {
@@ -3046,6 +3049,12 @@
   }
   .message:not(.recipient).noncollapsed > .entry:before {
     border-right-color: #30414d;
+  }
+  .message.threaded .child {
+    margin-left: 0;
+    padding-left: 20px;
+    position: relative;
+    border-left: dashed 1px #3e4855;
   }
 
   div:not(.child) > .listing > .message > .child {

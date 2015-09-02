@@ -18,7 +18,10 @@ input[type=password] {
 }
 
 .infobar {
-  @extend %tn-info-box;
+  &,
+  &:not(.reddit-infobar) {
+    @extend %tn-info-box;
+  }
 }
 
 .usertext {
